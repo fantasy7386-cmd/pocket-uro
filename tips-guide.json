@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-04-06",
+  "updated": "2026-04-19",
   "total_sections": 13,
   "total_subsections": 59,
   "sections": [
@@ -18,7 +18,7 @@
         {
           "id": "tg_01_02",
           "title": "Hematuria — MOIST mnemonic",
-          "markdown": "- **M**alignancy\n- **O**thers\n- **I**nfection\n- **S**tone\n- **T**rauma"
+          "markdown": "- **M**alignancy\n- **O**thers\n- **I**nfection\n- **S**tone\n- **T**rauma\n\nHITTERS\nHematological\nInfection\nTumor\nTrauma\nExercise\nRenal disorder\nStones"
         },
         {
           "id": "tg_01_03",
