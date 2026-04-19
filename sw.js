@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v0.3.0';
+const CACHE_VERSION = 'pocket-uro-v1.0.0';
 
 const CORE_ASSETS = [
   './',
@@ -9,6 +9,7 @@ const CORE_ASSETS = [
   './icon-192.png?v=3',
   './icon-512.png?v=3',
   './apple-touch-icon.png?v=3',
+  './lib/marked.min.js?v=3',
 ];
 
 self.addEventListener('install', (event) => {
@@ -29,13 +30,19 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
 
-  // Passthrough for GitHub API (never cache auth'd writes or token-bearing requests)
+  // Passthrough for GitHub API
   if (/\.githubusercontent\.com$|^api\.github\.com$|^github\.com$/.test(url.hostname)) {
     return;
   }
@@ -45,6 +52,14 @@ self.addEventListener('fetch', (event) => {
       url.pathname.includes('/images/textbook/') &&
       url.pathname.endsWith('.webp')) {
     event.respondWith(cacheFirst(request));
+    return;
+  }
+
+  // Cache-first for lazy-loaded chapter JSONs
+  if (url.origin === location.origin &&
+      url.pathname.includes('/textbook-data/') &&
+      url.pathname.endsWith('.json')) {
+    event.respondWith(staleWhileRevalidate(request));
     return;
   }
 
