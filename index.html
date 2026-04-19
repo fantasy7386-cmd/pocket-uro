@@ -146,20 +146,95 @@
       height: var(--header-height);
       background: var(--c-surface);
       border-bottom: 1px solid var(--c-border);
-      display: flex; align-items: center;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
       padding: 0 8px;
       gap: 4px;
     }
     .app-header h1 {
-      font-size: 17px; font-weight: 600; flex: 1; text-align: center;
+      font-size: 16px; font-weight: 600; text-align: center;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      padding: 0 4px;
+    }
+    .app-header .parent-link {
+      display: flex; align-items: center; gap: 2px;
+      color: var(--c-info);
+      font-size: 15px;
+      text-decoration: none;
+      padding: 8px 6px;
+      border-radius: 8px;
+      min-height: var(--tap-target);
+      max-width: 100%;
+      overflow: hidden;
+      justify-self: start;
+    }
+    .app-header .parent-link.hidden { visibility: hidden; pointer-events: none; }
+    .app-header .parent-link:active { background: rgba(0,0,0,.06); }
+    .app-header .parent-link .chev {
+      font-size: 22px; font-weight: 600; line-height: 1;
+      flex-shrink: 0;
+    }
+    .app-header .parent-link .label {
       overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
-    .app-header .icon-btn {
+    .app-header .more-btn {
       width: var(--tap-target); height: var(--tap-target);
       border-radius: 50%; font-size: 20px;
       display: flex; align-items: center; justify-content: center;
+      justify-self: end;
+      position: relative;
     }
-    .app-header .icon-btn:active { background: rgba(0,0,0,.06); }
+    .app-header .more-btn:active { background: rgba(0,0,0,.06); }
+    .app-header .more-btn .dot-badge {
+      position: absolute; top: 6px; right: 4px;
+      width: 16px; height: 16px;
+      background: var(--c-danger); color: #fff;
+      border-radius: 8px; font-size: 10px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .more-menu {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + var(--header-height) + 6px);
+      right: 8px;
+      min-width: 220px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      z-index: 500;
+      overflow: hidden;
+    }
+    .more-menu.hidden { display: none; }
+    .more-menu a, .more-menu button {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      text-align: left;
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--c-text);
+      font-size: 15px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--c-border);
+      cursor: pointer;
+    }
+    .more-menu a:last-child, .more-menu button:last-child { border-bottom: none; }
+    .more-menu a:active, .more-menu button:active { background: var(--c-surface-alt); }
+    .more-menu .icon {
+      font-size: 18px; width: 24px; text-align: center; flex-shrink: 0;
+    }
+    .more-menu .badge-inline {
+      margin-left: auto;
+      font-size: 11px; padding: 2px 8px;
+      background: var(--c-danger); color: #fff;
+      border-radius: 8px; font-weight: 700;
+    }
+    .more-menu-backdrop {
+      position: fixed; inset: 0; z-index: 499;
+      background: transparent;
+    }
+    .more-menu-backdrop.hidden { display: none; }
 
     #view {
       max-width: var(--max-width);
@@ -884,12 +959,22 @@
   <!-- ============ App shell ============ -->
   <div id="app" hidden>
     <header class="app-header" id="app-header" hidden>
-      <button class="icon-btn" id="btn-back" aria-label="back">←</button>
+      <a class="parent-link hidden" id="btn-parent" href="#/">
+        <span class="chev">‹</span><span class="label"></span>
+      </a>
       <h1 id="app-title">Pocket URO</h1>
-      <button class="icon-btn" id="btn-theme" aria-label="theme">🌙</button>
-      <button class="icon-btn" id="btn-sync" aria-label="sync" style="position:relative">🔄</button>
-      <button class="icon-btn" id="btn-home" aria-label="home">🏠</button>
+      <button class="more-btn" id="btn-more" aria-label="more" aria-haspopup="true">⋯</button>
     </header>
+    <div class="more-menu-backdrop hidden" id="more-backdrop"></div>
+    <nav class="more-menu hidden" id="more-menu" role="menu">
+      <a href="#/" role="menuitem"><span class="icon">🏠</span>Home</a>
+      <a href="#/search" role="menuitem"><span class="icon">🔍</span>Search</a>
+      <a href="#/favorites" role="menuitem"><span class="icon">⭐</span>Favorites <span id="more-fav-count" style="margin-left:auto;color:var(--c-text-muted);font-size:12px"></span></a>
+      <a href="#/hjh" role="menuitem"><span class="icon">💡</span>HJH only</a>
+      <a href="#/quiz" role="menuitem"><span class="icon">📝</span>Quiz</a>
+      <a href="#/sync" role="menuitem"><span class="icon">⚙</span>Settings <span id="more-sync-badge" class="badge-inline" style="display:none"></span></a>
+      <button id="more-theme" role="menuitem"><span class="icon" id="more-theme-icon">🌙</span><span id="more-theme-label">Theme: auto</span></button>
+    </nav>
     <div class="update-banner hidden" id="update-banner">
       <span>New version available</span>
       <button id="btn-update-reload">Reload</button>
@@ -1681,20 +1766,36 @@
   /* ======================================================
      Header controls
   ====================================================== */
-  el('btn-back').addEventListener('click', () => {
-    if (!confirmLeave()) return;
+  /* Parent-link ("< Parent Title") navigation — iOS-style */
+  el('btn-parent').addEventListener('click', (e) => {
+    if (!confirmLeave()) { e.preventDefault(); return; }
     clearEditorDirty();
-    if (history.length > 1) history.back();
-    else navigate('#/');
+    // Let the href navigate naturally
   });
-  el('btn-home').addEventListener('click', () => {
-    if (!confirmLeave()) return;
-    clearEditorDirty();
-    navigate('#/');
+
+  /* More menu — hosts Home / Search / Favorites / HJH / Quiz / Settings / Theme */
+  function closeMoreMenu() {
+    el('more-menu').classList.add('hidden');
+    el('more-backdrop').classList.add('hidden');
+  }
+  function openMoreMenu() {
+    updateMoreThemeLabel();
+    updateMoreCounts();
+    el('more-menu').classList.remove('hidden');
+    el('more-backdrop').classList.remove('hidden');
+  }
+  el('btn-more').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const hidden = el('more-menu').classList.contains('hidden');
+    if (hidden) openMoreMenu(); else closeMoreMenu();
   });
-  el('btn-sync').addEventListener('click', () => navigate('#/sync'));
-  el('btn-theme').addEventListener('click', () => {
-    // Cycle light → dark → auto → light
+  el('more-backdrop').addEventListener('click', closeMoreMenu);
+  el('more-menu').addEventListener('click', (e) => {
+    // Close menu after any click inside (links will navigate on their own)
+    setTimeout(closeMoreMenu, 0);
+  });
+  el('more-theme').addEventListener('click', (e) => {
+    e.preventDefault();
     const order = ['light', 'dark', 'auto'];
     const now = currentTheme();
     const next = order[(order.indexOf(now) + 1) % order.length];
@@ -1703,16 +1804,51 @@
     showToast(labels[next]);
   });
 
-  function setHeader(title) {
-    el('app-title').textContent = title || 'Pocket URO';
-    updateSyncBadge();
+  function updateMoreThemeLabel() {
+    const icon = el('more-theme-icon');
+    const lbl  = el('more-theme-label');
+    const now = currentTheme();
+    if (icon) icon.textContent = now === 'dark' ? '☀️' : now === 'auto' ? '🤖' : '🌙';
+    if (lbl)  lbl.textContent  = 'Theme: ' + now;
   }
-  function updateSyncBadge() {
-    const btn = el('btn-sync');
-    if (!btn) return;
+  function updateMoreCounts() {
+    const favC = el('more-fav-count');
+    if (favC) favC.textContent = state.favorites.length ? '(' + state.favorites.length + ')' : '';
+    const syncB = el('more-sync-badge');
     const n = dirtyDatasets().length;
-    btn.innerHTML = '⚙' + (n > 0 ? '<span class="sync-badge">' + n + '</span>' : '');
+    if (syncB) {
+      if (n > 0) { syncB.style.display = ''; syncB.textContent = n + ' unsynced'; }
+      else       { syncB.style.display = 'none'; }
+    }
+    // Also reflect unsynced count as a red dot on the header More button
+    const moreBtn = el('btn-more');
+    if (moreBtn) {
+      const existing = moreBtn.querySelector('.dot-badge');
+      if (n > 0) {
+        if (existing) existing.textContent = n;
+        else moreBtn.insertAdjacentHTML('beforeend', '<span class="dot-badge">' + n + '</span>');
+      } else if (existing) {
+        existing.remove();
+      }
+    }
   }
+
+  /* setHeader(title, parent?) — parent = { label, href } or null for root pages */
+  function setHeader(title, parent) {
+    el('app-title').textContent = title || 'Pocket URO';
+    const pl = el('btn-parent');
+    if (parent && parent.label) {
+      pl.classList.remove('hidden');
+      pl.querySelector('.label').textContent = parent.label;
+      pl.setAttribute('href', parent.href || '#/');
+    } else {
+      pl.classList.add('hidden');
+      pl.setAttribute('href', '#/');
+    }
+    updateMoreCounts();
+  }
+  // Back-compat: keep updateSyncBadge name as an alias so older calls don't break
+  function updateSyncBadge() { updateMoreCounts(); }
 
   /* Lightbox / slide zoom */
   // Close on hashchange so navigating away dismisses the lightbox cleanly
@@ -1773,7 +1909,14 @@
       const dx = t.clientX - x0;
       const dy = Math.abs(t.clientY - y0);
       if (dx > 80 && dy < 60) {
-        if (location.hash && location.hash !== '#/' && location.hash !== '#') {
+        // Prefer parent-link (iOS navigation stack semantics); fall back to history.back
+        const pl = el('btn-parent');
+        if (pl && !pl.classList.contains('hidden')) {
+          if (!confirmLeave()) { x0 = null; return; }
+          clearEditorDirty();
+          const href = pl.getAttribute('href') || '#/';
+          location.hash = href;
+        } else if (location.hash && location.hash !== '#/' && location.hash !== '#') {
           if (history.length > 1) history.back();
           else navigate('#/');
         }
@@ -1804,7 +1947,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.4.4 · Preview-as-viewer actually hides admin sections now</div>
+        <div class="brand-tag" id="brand-tag">v3.0 · iOS-style Navigation Stack · parent-link + More menu</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1850,7 +1993,7 @@
   }
 
   function renderNotFound() {
-    setHeader('Not Found');
+    setHeader('Not Found', { label: 'Home', href: '#/' });
     viewEl().innerHTML = `
       <div class="placeholder">
         <div class="big">🤔</div>
@@ -1874,7 +2017,7 @@
   }
 
   function renderEducationCategories(accent) {
-    setHeader('Patient Education');
+    setHeader('Patient Education', { label: 'Home', href: '#/' });
     const admin = isAdmin();
     const cats = state.data.categories;
     viewEl().innerHTML = `
@@ -1903,12 +2046,11 @@
   function renderEducationArticles(catId, accent) {
     const cat = state.data.categories.find(c => c.id === catId);
     if (!cat) return renderNotFound();
-    setHeader(cat.name_en);
+    setHeader(cat.name_en, { label: 'Patient Education', href: '#/education' });
     const articles = cat.articles.map(id => state.data.articles.find(a => a.id === id)).filter(Boolean);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/education">← All categories</a>
         <h2 style="font-size:20px;margin-bottom:4px">${esc(cat.name_en)}</h2>
         <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${esc(cat.name_zh)} · ${articles.length} articles</div>
         <div class="list-section">
@@ -1952,15 +2094,14 @@
   function renderArticle(artId, accent, highlight) {
     const a = state.data.articles.find(x => x.id === artId);
     if (!a) return renderNotFound();
-    setHeader(a.title);
-    const fav = isFav('education', a.id);
     const cat = state.data.categories.find(c => c.id === a.category);
+    setHeader(a.title, { label: cat ? cat.name_en : 'Articles', href: '#/education/c/' + a.category });
+    const fav = isFav('education', a.id);
     const bodyHTML = highlight ? highlightText(a.text || '', highlight) : esc(a.text || '');
     const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/education/c/${esc(a.category)}">← ${esc(cat ? cat.name_en : 'Back')}</a>
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">
           <h2 style="flex:1;font-size:22px;line-height:1.3">${titleHTML}</h2>
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
@@ -2009,7 +2150,7 @@
       a = state.data.articles.find(x => x.id === artId);
       if (!a) return renderNotFound();
     }
-    setHeader(isNew ? 'New article' : 'Edit article');
+    setHeader(isNew ? 'New article' : 'Edit', { label: isNew ? 'Articles' : (a.title || 'Article'), href: isNew ? '#/education' : ('#/education/a/' + a.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2089,7 +2230,7 @@
   }
 
   function renderNotesList(accent) {
-    setHeader('PPu Notes');
+    setHeader('PPu Notes', { label: 'Home', href: '#/' });
     const admin = isAdmin();
     const sections = state.notes.sections;
     const lastIdx = sections.length - 1;
@@ -2170,7 +2311,7 @@
   function renderNoteDetail(sid, accent) {
     const s = state.notes.sections.find(x => x.id === sid);
     if (!s) return renderNotFound();
-    setHeader(s.full_title);
+    setHeader(s.full_title, { label: 'PPu Notes', href: '#/notes' });
     const fav = isFav('notes', sid);
     let body = '';
     for (const sub of s.subsections) {
@@ -2187,7 +2328,6 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/notes">← All sections</a>
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
           <h2 style="flex:1;font-size:21px;line-height:1.3">${esc(s.full_title)}</h2>
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(sid)}" data-fav-title="${escAttr(s.full_title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
@@ -2219,7 +2359,7 @@
       if (!orig) return renderNotFound();
       section = JSON.parse(JSON.stringify(orig));
     }
-    setHeader(isNew ? 'New section' : 'Edit section');
+    setHeader(isNew ? 'New section' : 'Edit', { label: isNew ? 'PPu Notes' : (section.full_title || 'Section'), href: isNew ? '#/notes' : ('#/notes/s/' + section.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2372,7 +2512,7 @@
   }
 
   function renderTipsList(accent) {
-    setHeader('Tips & Guide');
+    setHeader('Tips & Guide', { label: 'Home', href: '#/' });
     const dirty = state.sources.tips === 'local';
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2397,13 +2537,12 @@
   function renderTipsChapter(chapterId, accent) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return renderNotFound();
-    setHeader(chapter.full_title);
+    setHeader(chapter.full_title, { label: 'Tips & Guide', href: '#/tips' });
     const admin = isAdmin();
     const subs = chapter.subsections || [];
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/tips">← All chapters</a>
         <h2 style="font-size:20px;margin-bottom:12px">${esc(chapter.full_title)}</h2>
         <div class="list-section">
           ${subs.map((sub, i) => `
@@ -2432,13 +2571,12 @@
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     const sub = chapter && chapter.subsections.find(x => x.id === subId);
     if (!chapter || !sub) return renderNotFound();
-    setHeader(sub.title);
+    setHeader(sub.title, { label: chapter.title, href: '#/tips/s/' + chapterId });
     const admin = isAdmin();
     const fav = isFav('tips', subId);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/tips/s/${esc(chapterId)}">← ${esc(chapter.title)}</a>
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
           <h2 style="flex:1;font-size:20px;line-height:1.3">${esc(sub.title)}</h2>
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(subId)}" data-fav-title="${escAttr(sub.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
@@ -2478,7 +2616,7 @@
       if (!orig) return renderNotFound();
       sub = JSON.parse(JSON.stringify(orig));
     }
-    setHeader(isNew ? 'New subsection' : 'Edit subsection');
+    setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? chapter.title : (sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2598,7 +2736,7 @@
   }
 
   function renderTextbookHome(accent) {
-    setHeader('Textbook Knowledge');
+    setHeader('Textbook Knowledge', { label: 'Home', href: '#/' });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2635,11 +2773,10 @@
   function renderTbChapter(tbId, accent) {
     const ch = state.tb[tbId];
     if (!ch) return renderNotFound();
-    setHeader((ch.icon ? ch.icon + ' ' : '') + ch.title);
+    setHeader((ch.icon ? ch.icon + ' ' : '') + ch.title, { label: 'Textbook', href: '#/textbook' });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/textbook">← All chapters</a>
         <h2 style="font-size:21px;margin-bottom:12px">${esc(ch.icon || '')} ${esc(ch.number)}. ${esc(ch.title)}</h2>
         <div class="list-section">
           ${(ch.sections || []).map((s, i) => `
@@ -2660,13 +2797,12 @@
     const ch = state.tb[tbId];
     const sec = ch && ch.sections && ch.sections[secIdx];
     if (!sec) return renderNotFound();
-    setHeader(sec.title);
+    setHeader(sec.title, { label: ch.title, href: '#/textbook/c/' + tbId });
     const admin = isAdmin();
     const dirty = state.sources.tb[tbId] === 'local';
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/textbook/c/${esc(tbId)}">← ${esc(ch.title)}</a>
         <h2 style="font-size:20px;margin-bottom:4px">${esc(sec.title)}</h2>
         ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
         <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${(sec.topics || []).length} topics · from ${esc(sec.source_file || '')}</div>
@@ -2730,7 +2866,7 @@
     const found = findTopic(tbId, topicId);
     if (!found) return renderNotFound();
     const { ch, sec, secIdx, topic } = found;
-    setHeader(topic.title);
+    setHeader(topic.title, { label: sec.title, href: '#/textbook/c/' + tbId + '/s/' + secIdx });
     const fav = isFav('textbook', topicId);
     const admin = isAdmin();
 
@@ -2783,7 +2919,6 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <a class="back-btn" href="#/textbook/c/${esc(tbId)}/s/${secIdx}">← ${esc(sec.title)}</a>
         <div class="topic-header">
           <div class="title">${esc(topic.title)}</div>
           <div class="badges">${badges.join('')}</div>
@@ -2909,7 +3044,7 @@
     const found = findTopic(tbId, topicId);
     if (!found) return renderNotFound();
     const { topic } = found;
-    setHeader('Edit notes · ' + topic.title);
+    setHeader('Edit notes', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2964,7 +3099,7 @@
     const slides = (found.topic.slides || []).filter(s => !s.hidden);
     const s = slides[slideIdx];
     if (!s) return renderNotFound();
-    setHeader('Edit OCR · slide ' + (slideIdx + 1));
+    setHeader('Edit OCR · slide ' + (slideIdx + 1), { label: found.topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -3007,7 +3142,7 @@
     const ch = state.tb[tbId];
     const sec = ch && ch.sections && ch.sections[secIdx];
     if (!sec) return renderNotFound();
-    setHeader('New text-only topic');
+    setHeader('New topic', { label: sec.title, href: '#/textbook/c/' + tbId + '/s/' + secIdx });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -3048,7 +3183,7 @@
     const found = findTopic(tbId, topicId);
     if (!found || found.topic.type !== 'text_only') return renderNotFound();
     const { topic } = found;
-    setHeader('Edit text · ' + topic.title);
+    setHeader('Edit content', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -3128,10 +3263,9 @@
      Favorites view
   ====================================================== */
   function renderFavorites() {
-    setHeader('⭐ Favorites');
+    setHeader('⭐ Favorites', { label: 'Home', href: '#/' });
     if (!state.favorites.length) {
       viewEl().innerHTML = `
-        <a class="back-btn" href="#/">← Home</a>
         <div class="placeholder">
           <div class="big">⭐</div>
           <strong>No favorites yet</strong>
@@ -3144,7 +3278,7 @@
       grouped[f.module] = grouped[f.module] || [];
       grouped[f.module].push(f);
     });
-    let html = '<a class="back-btn" href="#/">← Home</a>';
+    let html = '';
     for (const mod of MODULES) {
       const items = grouped[mod.id] || [];
       if (!items.length) continue;
@@ -3207,7 +3341,7 @@
      Global search
   ====================================================== */
   function renderSearch(q, onlyModule) {
-    setHeader('Search');
+    setHeader('Search', { label: 'Home', href: '#/' });
     const only = onlyModule || '';
     const filterChips = MODULES.map(m => `
       <button class="search-filter-chip ${only === m.id ? 'active' : ''}" style="--chip-accent:${m.accent}" onclick="window.__setSearchFilter('${m.id}')">
@@ -3226,7 +3360,6 @@
     ` : '';
 
     viewEl().innerHTML = `
-      <a class="back-btn" href="#/">← Home</a>
       <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
       <div class="search-filters">${filterChips}</div>
       ${loadAllBar}
@@ -3399,7 +3532,7 @@
      HJH browse (cross-chapter)
   ====================================================== */
   function renderHJHBrowse() {
-    setHeader('💡 HJH · all chapters');
+    setHeader('💡 HJH · all chapters', { label: 'Home', href: '#/' });
     const unloaded = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
     const rows = [];
     for (const tbId of Object.keys(state.tb)) {
@@ -3426,7 +3559,6 @@
       return a.label.localeCompare(b.label);
     });
     viewEl().innerHTML = `
-      <a class="back-btn" href="#/">← Home</a>
       <div style="padding:12px;background:linear-gradient(135deg,var(--c-hjh-bg-start),var(--c-hjh-bg-end));border-radius:var(--radius);margin-bottom:12px">
         <h2 style="font-size:20px;color:var(--c-hjh-fg);margin-bottom:4px">💡 HJH slides</h2>
         <div style="font-size:13px;color:var(--c-hjh-fg);opacity:.85">${rows.length} HJH slide${rows.length===1?'':'s'} from ${Object.keys(state.tb).length}/${TB_CHAPTER_IDS.length} loaded chapter${Object.keys(state.tb).length===1?'':'s'}</div>
@@ -3459,7 +3591,7 @@
   ====================================================== */
   const QUIZ_STATE = { queue: [], idx: 0, seen: 0 };
   function renderQuiz() {
-    setHeader('📝 Quiz · exam slides');
+    setHeader('📝 Quiz · exam slides', { label: 'Home', href: '#/' });
     // Collect all slides with has_exam_question from loaded chapters
     const all = [];
     for (const tbId of Object.keys(state.tb)) {
@@ -3479,7 +3611,6 @@
     }
     if (!all.length) {
       viewEl().innerHTML = `
-        <a class="back-btn" href="#/">← Home</a>
         <div class="placeholder">
           <div class="big">📝</div>
           <strong>No exam slides in loaded chapters</strong>
@@ -3497,7 +3628,6 @@
     const cur = QUIZ_STATE.queue[QUIZ_STATE.idx];
     if (!cur) {
       viewEl().innerHTML = `
-        <a class="back-btn" href="#/">← Home</a>
         <div class="placeholder">
           <div class="big">🎉</div>
           <strong>Quiz complete</strong>
@@ -3509,7 +3639,6 @@
     const s = cur.slide;
     const isHJH = isHJHSlide(s);
     viewEl().innerHTML = `
-      <a class="back-btn" href="#/">← Home</a>
       <div style="margin-bottom:8px;font-size:13px;color:var(--c-text-muted);display:flex;justify-content:space-between">
         <span>${QUIZ_STATE.idx + 1} / ${QUIZ_STATE.queue.length}</span>
         <span>${esc(cur.ch.title)} · ${esc(cur.topic.title)}</span>
@@ -3595,11 +3724,10 @@
     const adminCode    = isAdminCode();
     const isPreviewing = adminCode && !admin;
     const isRealView   = !adminCode;
-    setHeader(admin ? 'Settings · Sync' : 'Settings');
+    setHeader(admin ? 'Settings · Sync' : 'Settings', { label: 'Home', href: '#/' });
     const dirty = dirtyDatasets();
     const hasToken = !!localStorage.getItem(LS.TOKEN);
     viewEl().innerHTML = `
-      <a class="back-btn" href="#/">← Home</a>
       <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
       ${isRealView ? `
         <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
