@@ -618,7 +618,37 @@
       font-size: 14px; z-index: 500;
       box-shadow: 0 4px 12px rgba(0,0,0,.2);
       max-width: 90%;
+      display: flex; align-items: center; gap: 12px;
     }
+    .toast .toast-action {
+      padding: 4px 12px;
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: .5px;
+      cursor: pointer;
+    }
+    .toast .toast-action:active { background: rgba(255,255,255,.35); }
+    .note-item-row {
+      display: flex; gap: 4px; margin-bottom: 4px;
+      align-items: center;
+    }
+    .note-item-row input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      background: var(--c-surface);
+      font-size: var(--font-read);
+    }
+    .note-item-row .item-del {
+      color: var(--c-danger);
+      padding: 6px 10px;
+      font-size: 14px;
+      opacity: .6;
+    }
+    .note-item-row .item-del:active { opacity: 1; }
     .toast.hidden { display: none; }
     .toast.success { background: var(--c-success); }
     .toast.error { background: var(--c-danger); }
@@ -964,14 +994,56 @@
   }
   function escAttr(s) { return esc(s); }
 
-  function showToast(msg, kind) {
+  function showToast(msg, kind, opts) {
     const t = toastEl();
     t.className = 'toast ' + (kind || '');
-    t.textContent = msg;
+    opts = opts || {};
+    const action = opts.action;
+    if (action) {
+      t.innerHTML = '<span></span><button class="toast-action">' + esc(action.label) + '</button>';
+      t.firstChild.textContent = msg;
+      t.querySelector('.toast-action').onclick = () => {
+        try { action.onClick(); } finally { t.classList.add('hidden'); }
+      };
+    } else {
+      t.textContent = msg;
+    }
     t.classList.remove('hidden');
     clearTimeout(showToast._t);
-    showToast._t = setTimeout(() => t.classList.add('hidden'), 2600);
+    showToast._t = setTimeout(() => t.classList.add('hidden'), opts.duration || 2600);
   }
+
+  /* Undo framework — snapshot whole dataset, restore on demand */
+  const _undo = { snapshot: null, dataset: null, timer: null };
+  function deleteWithUndo(dataset, label, mutateFn) {
+    const src = dataset === 'data'  ? state.data
+              : dataset === 'notes' ? state.notes
+              : dataset === 'tips'  ? state.tips
+              : state.tb[dataset];
+    const snap = JSON.parse(JSON.stringify(src));
+    mutateFn();
+    markDirty(dataset);
+    clearTimeout(_undo.timer);
+    _undo.snapshot = snap;
+    _undo.dataset = dataset;
+    _undo.timer = setTimeout(() => { _undo.snapshot = null; _undo.dataset = null; }, 5500);
+    showToast(label, null, {
+      duration: 5000,
+      action: { label: 'UNDO', onClick: () => __undoDelete() },
+    });
+  }
+  function __undoDelete() {
+    if (!_undo.snapshot) return;
+    const ds = _undo.dataset;
+    if (ds === 'data')       { state.data = _undo.snapshot; localStorage.setItem(LS.DATA, JSON.stringify(state.data)); }
+    else if (ds === 'notes') { state.notes = _undo.snapshot; localStorage.setItem(LS.NOTES, JSON.stringify(state.notes)); }
+    else if (ds === 'tips')  { state.tips = _undo.snapshot; localStorage.setItem(LS.TIPS, JSON.stringify(state.tips)); }
+    else if (ds && ds.startsWith('tb_')) { state.tb[ds] = _undo.snapshot; localStorage.setItem(LS.TB_PREFIX + ds, JSON.stringify(state.tb[ds])); }
+    _undo.snapshot = null; _undo.dataset = null;
+    showToast('Restored', 'success');
+    router();
+  }
+  window.__undoDelete = __undoDelete;
 
   function toTerms(query) {
     if (!query) return [];
@@ -1511,7 +1583,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.1 · offline download · filters · thumbnails · HJH/quiz mode</div>
+        <div class="brand-tag" id="brand-tag">v2.2 · undo · sync preview · line-item notes editor</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1696,14 +1768,12 @@
     const a = state.data.articles.find(x => x.id === artId);
     if (!a) return;
     if (!confirm('Delete article "' + a.title + '"?')) return;
-    // Remove from articles
-    state.data.articles = state.data.articles.filter(x => x.id !== artId);
-    // Remove from category's article list
-    const cat = state.data.categories.find(c => c.id === a.category);
-    if (cat) cat.articles = cat.articles.filter(id => id !== artId);
-    state.data.total_articles = state.data.articles.length;
-    markDirty('data');
-    showToast('Article deleted', 'success');
+    deleteWithUndo('data', 'Deleted: ' + a.title, () => {
+      state.data.articles = state.data.articles.filter(x => x.id !== artId);
+      const cat = state.data.categories.find(c => c.id === a.category);
+      if (cat) { cat.articles = cat.articles.filter(id => id !== artId); cat.count = cat.articles.length; }
+      state.data.total_articles = state.data.articles.length;
+    });
     navigate('#/education/c/' + a.category);
   };
 
@@ -1848,9 +1918,10 @@
     if (state.notes.sections.length <= 1) { alert('Cannot delete last section'); return; }
     const s = state.notes.sections[idx];
     if (!confirm('Delete section "' + s.number + '. ' + s.title + '"?')) return;
-    state.notes.sections.splice(idx, 1);
-    renumberNotes();
-    markDirty('notes');
+    deleteWithUndo('notes', 'Deleted: ' + s.full_title, () => {
+      state.notes.sections.splice(idx, 1);
+      renumberNotes();
+    });
     router();
   };
 
@@ -1952,6 +2023,8 @@
   }
 
   function noteSubBlockHTML(sub, i) {
+    const items = sub.items || [];
+    const itemsHTML = items.map((it, j) => noteItemRowHTML(i, j, it)).join('');
     return `
       <div class="subsection-block" data-sub-idx="${i}">
         <span class="sub-idx">Sub ${i + 1}</span>
@@ -1961,11 +2034,23 @@
           <input type="text" class="ne-sub-title" value="${escAttr(sub.title || '')}" placeholder="1. 某子章節">
         </div>
         <div class="edit-field" style="margin-bottom:0">
-          <label>Items (one per line)</label>
-          <textarea class="ne-sub-items" style="min-height:120px">${esc((sub.items || []).join('\n'))}</textarea>
+          <label>Items (${items.length})</label>
+          <div class="ne-items" data-sub-idx="${i}">
+            ${itemsHTML}
+          </div>
+          <button class="insert-btn" style="margin-top:4px" onclick="window.__addNoteItem(${i})">＋ add item</button>
         </div>
       </div>
       <button class="insert-btn" onclick="window.__insertNoteSubAfter(${i})">＋ insert after</button>
+    `;
+  }
+
+  function noteItemRowHTML(subIdx, itemIdx, itemText) {
+    return `
+      <div class="note-item-row" data-item-idx="${itemIdx}">
+        <input type="text" class="ne-item-input" value="${escAttr(itemText)}" placeholder="item ${itemIdx + 1}">
+        <button class="item-del" onclick="window.__delNoteItem(${subIdx}, ${itemIdx})">✕</button>
+      </div>
     `;
   }
 
@@ -1974,12 +2059,31 @@
     const subs = [];
     blocks.forEach(b => {
       const title = b.querySelector('.ne-sub-title').value.trim();
-      const itemsRaw = b.querySelector('.ne-sub-items').value;
-      const items = itemsRaw.split('\n').map(s => s.trim()).filter(Boolean);
+      const items = [];
+      b.querySelectorAll('.note-item-row .ne-item-input').forEach(inp => {
+        const v = inp.value.trim();
+        if (v) items.push(v);
+      });
       subs.push({ title, items });
     });
     return subs;
   }
+
+  window.__addNoteItem = function(subIdx) {
+    const subs = collectNoteSubs();
+    subs[subIdx].items.push('');
+    renderNoteSubsBlocks(subs);
+    // Focus the new input
+    setTimeout(() => {
+      const rows = document.querySelectorAll(`#ne-subs .subsection-block[data-sub-idx="${subIdx}"] .ne-item-input`);
+      if (rows.length) rows[rows.length - 1].focus();
+    }, 0);
+  };
+  window.__delNoteItem = function(subIdx, itemIdx) {
+    const subs = collectNoteSubs();
+    subs[subIdx].items.splice(itemIdx, 1);
+    renderNoteSubsBlocks(subs);
+  };
 
   window.__addNoteSub = function() {
     const subs = collectNoteSubs();
@@ -2122,10 +2226,12 @@
   window.__deleteTipsSub = function(chapterId, subId) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return;
-    if (!confirm('Delete this subsection?')) return;
-    chapter.subsections = chapter.subsections.filter(x => x.id !== subId);
-    markDirty('tips');
-    showToast('Deleted', 'success');
+    const sub = chapter.subsections.find(x => x.id === subId);
+    if (!sub) return;
+    if (!confirm('Delete "' + sub.title + '"?')) return;
+    deleteWithUndo('tips', 'Deleted: ' + sub.title, () => {
+      chapter.subsections = chapter.subsections.filter(x => x.id !== subId);
+    });
     navigate('#/tips/s/' + chapterId);
   };
 
@@ -2461,9 +2567,9 @@
     const found = findTopic(tbId, topicId);
     if (!found) return;
     if (!confirm('Delete topic "' + found.topic.title + '"?')) return;
-    found.sec.topics = found.sec.topics.filter(t => t.id !== topicId);
-    markDirty(tbId);
-    showToast('Deleted', 'success');
+    deleteWithUndo(tbId, 'Deleted: ' + found.topic.title, () => {
+      found.sec.topics = found.sec.topics.filter(t => t.id !== topicId);
+    });
     navigate('#/textbook/c/' + tbId + '/s/' + found.secIdx);
   };
 
@@ -3174,13 +3280,24 @@
         </div>
       </div>
       <div class="sync-panel">
-        <h3>Pending changes</h3>
+        <h3>Pending changes (preview)</h3>
         ${dirty.length === 0 ? '<div style="font-size:13px;color:var(--c-text-muted)">No local edits waiting to sync.</div>' : `
           <ul class="dirty-list">
-            ${dirty.map(d => `<li><strong>${esc(d.label)}</strong> → <code>${esc(d.path)}</code></li>`).join('')}
+            ${dirty.map(d => {
+              const obj = d.id === 'data' ? state.data : d.id === 'notes' ? state.notes : d.id === 'tips' ? state.tips : state.tb[d.id];
+              let bytes = 0;
+              try {
+                const clone = JSON.parse(JSON.stringify(obj));
+                delete clone._updated_at;
+                bytes = new Blob([JSON.stringify(clone, null, 2)]).size;
+              } catch {}
+              const kb = bytes > 0 ? (bytes / 1024).toFixed(1) + ' KB' : '?';
+              return `<li><strong>${esc(d.label)}</strong> → <code>${esc(d.path)}</code> <span style="color:var(--c-text-muted)">(${kb})</span></li>`;
+            }).join('')}
           </ul>
-          <div class="action-bar" style="margin:0">
-            <button class="btn btn-success btn-block" onclick="window.__syncAll()">Sync all (${dirty.length}) to GitHub</button>
+          <div class="action-bar" style="margin:0;gap:8px">
+            <button class="btn btn-secondary" onclick="window.__discardLocal()" style="flex:0 0 auto">Discard local</button>
+            <button class="btn btn-success" style="flex:1" onclick="window.__syncAll()">Sync ${dirty.length} file${dirty.length === 1 ? '' : 's'} → GitHub</button>
           </div>
         `}
       </div>
@@ -3224,6 +3341,29 @@
   };
   window.__syncAll = async function() {
     await syncAll();
+  };
+  window.__discardLocal = async function() {
+    const dirty = dirtyDatasets();
+    if (!dirty.length) return;
+    if (!confirm('Discard ' + dirty.length + ' local change(s) and reload from server? This cannot be undone.')) return;
+    for (const d of dirty) {
+      if (d.id === 'data')       { localStorage.removeItem(LS.DATA); state.sources.data = 'server'; }
+      else if (d.id === 'notes') { localStorage.removeItem(LS.NOTES); state.sources.notes = 'server'; }
+      else if (d.id === 'tips')  { localStorage.removeItem(LS.TIPS); state.sources.tips = 'server'; }
+      else if (d.id.startsWith('tb_')) {
+        localStorage.removeItem(LS.TB_PREFIX + d.id);
+        state.sources.tb[d.id] = 'server';
+        delete state.tb[d.id];
+      }
+    }
+    // Reload fresh from server
+    try {
+      await loadCore();
+      showToast('Reloaded from server', 'success');
+    } catch (e) {
+      showToast('Reload failed: ' + e.message, 'error');
+    }
+    router();
   };
   window.__downloadAll = async function() {
     const btn = el('btn-download-all');
