@@ -876,7 +876,7 @@
   <div class="gate" id="gate">
     <h1>Pocket URO</h1>
     <p>Urology reference · residents only</p>
-    <input type="text" id="gate-input" placeholder="員編" autocapitalize="characters" autocomplete="off">
+    <input type="text" id="gate-input" placeholder="員編" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="text">
     <button id="gate-submit">進入</button>
     <div class="error" id="gate-error"></div>
   </div>
@@ -939,7 +939,11 @@
     { id: 'tips',      name: 'Tips & Guide',      icon: '📙', accent: '#e67e22' },
     { id: 'textbook',  name: 'Textbook',          icon: '📕', accent: '#8e44ad' },
   ];
-  const SUBMISSION_URL = '';
+  const SUBMISSION_URL_DEFAULT = '';
+  const LS_SUBMISSION_KEY = 'puro_submission_url';
+  function submissionUrl() {
+    return localStorage.getItem(LS_SUBMISSION_KEY) || SUBMISSION_URL_DEFAULT;
+  }
 
   /* ======================================================
      State
@@ -1007,22 +1011,26 @@
   /* ======================================================
      Haptic feedback (iOS PWA + Android)
   ====================================================== */
+  // Detect haptic support. iOS Safari doesn't implement navigator.vibrate, so this is
+  // a pure no-op on iPhone / iPad — the Web Vibration API is Android / desktop only.
+  const _hapticSupported = ('vibrate' in navigator) && typeof navigator.vibrate === 'function';
   function haptic(kind) {
+    if (!_hapticSupported) return;
     try {
-      if (navigator.vibrate) {
-        if (kind === 'light') navigator.vibrate(8);
-        else if (kind === 'medium') navigator.vibrate(15);
-        else if (kind === 'error') navigator.vibrate([20, 40, 20]);
-        else if (kind === 'success') navigator.vibrate([8, 30, 8]);
-        else navigator.vibrate(8);
-      }
+      if (kind === 'light') navigator.vibrate(8);
+      else if (kind === 'medium') navigator.vibrate(15);
+      else if (kind === 'error') navigator.vibrate([20, 40, 20]);
+      else if (kind === 'success') navigator.vibrate([8, 30, 8]);
+      else navigator.vibrate(8);
     } catch {}
   }
-  // Global listener: light haptic on any button tap
-  document.addEventListener('click', (e) => {
-    const b = e.target.closest('button, .module-card, .list-card, .fav-btn, .kw-tag');
-    if (b) haptic('light');
-  }, true);
+  // Only install the global listener if the API exists — saves a tick per click on iOS.
+  if (_hapticSupported) {
+    document.addEventListener('click', (e) => {
+      const b = e.target.closest('button, .module-card, .list-card, .fav-btn, .kw-tag');
+      if (b) haptic('light');
+    }, true);
+  }
 
   /* ======================================================
      DOM helpers
@@ -1057,6 +1065,49 @@
     clearTimeout(showToast._t);
     showToast._t = setTimeout(() => t.classList.add('hidden'), opts.duration || 2600);
   }
+
+  /* ======================================================
+     Editor dirty flag + unsaved-changes guard
+  ====================================================== */
+  let _editorDirty = false;
+  let _lastHash = location.hash;
+  let _navGuard = false;
+
+  function markEditorDirty() { _editorDirty = true; }
+  function clearEditorDirty() { _editorDirty = false; }
+  window.markEditorDirty  = markEditorDirty;
+  window.clearEditorDirty = clearEditorDirty;
+
+  function confirmLeave() {
+    if (!_editorDirty) return true;
+    return confirm('有未儲存變更，確定離開？');
+  }
+
+  window.__cancelEdit = function() {
+    if (confirmLeave()) {
+      clearEditorDirty();
+      history.back();
+    }
+  };
+
+  window.addEventListener('beforeunload', (e) => {
+    if (_editorDirty) {
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
+
+  // Guard hashchange: if leaving an edit screen with unsaved changes and user declines,
+  // revert the hash to the previous value (causes a second hashchange we need to skip).
+  window.addEventListener('hashchange', () => {
+    if (_navGuard) { _navGuard = false; _lastHash = location.hash; return; }
+    if (_editorDirty && location.hash !== _lastHash && !confirmLeave()) {
+      _navGuard = true;
+      location.hash = _lastHash;
+      return;
+    }
+    _lastHash = location.hash;
+  });
 
   /* Undo framework — snapshot whole dataset, restore on demand */
   const _undo = { snapshot: null, dataset: null, timer: null };
@@ -1413,6 +1464,8 @@
       return;
     }
     const today = new Date().toISOString().slice(0, 10);
+    const succeeded = [];
+    const failed = [];
     for (const d of dirty) {
       try {
         let payload;
@@ -1420,22 +1473,28 @@
         else if (d.id === 'notes') payload = state.notes;
         else if (d.id === 'tips')  payload = state.tips;
         else if (d.id.startsWith('tb_')) payload = state.tb[d.id];
-        // Strip transient fields before push
         const clone = JSON.parse(JSON.stringify(payload));
         delete clone._updated_at;
         await ghPutFile(d.path, clone, 'Update ' + d.label + ' ' + today);
-        // Clear local override
+        // Clear local override for this one
         if (d.id === 'data')       { localStorage.removeItem(LS.DATA);    state.sources.data = 'server'; }
         else if (d.id === 'notes') { localStorage.removeItem(LS.NOTES);   state.sources.notes = 'server'; }
         else if (d.id === 'tips')  { localStorage.removeItem(LS.TIPS);    state.sources.tips = 'server'; }
         else if (d.id.startsWith('tb_')) { localStorage.removeItem(LS.TB_PREFIX + d.id); state.sources.tb[d.id] = 'server'; }
         delete payload._updated_at;
+        succeeded.push(d.label);
       } catch (e) {
-        showToast('Sync failed: ' + d.label + ' — ' + e.message, 'error');
-        return;
+        failed.push({ label: d.label, error: e.message });
+        // Continue trying remaining files instead of aborting
       }
     }
-    showToast('Synced ' + dirty.length + ' file(s) ✓', 'success');
+    if (failed.length === 0) {
+      showToast('Synced ' + succeeded.length + ' file(s) ✓', 'success');
+    } else if (succeeded.length === 0) {
+      showToast('Sync failed: ' + failed[0].error, 'error', { duration: 5000 });
+    } else {
+      showToast('Partial: ' + succeeded.length + ' synced, ' + failed.length + ' failed', 'error', { duration: 5000 });
+    }
     router();
   }
 
@@ -1601,9 +1660,9 @@
       if (module === 'sync') return renderSyncPanel();
       if (module === 'hjh') return renderHJHBrowse();
       if (module === 'quiz') return renderQuiz();
-      if (module === 'education') return routeEducation(parts.slice(1));
+      if (module === 'education') return routeEducation(parts.slice(1), query);
       if (module === 'notes') return routeNotes(parts.slice(1));
-      if (module === 'tips') return routeTips(parts.slice(1));
+      if (module === 'tips') return routeTips(parts.slice(1), query);
       if (module === 'textbook') return routeTextbook(parts.slice(1), query);
       renderNotFound();
     } catch (e) {
@@ -1618,10 +1677,16 @@
      Header controls
   ====================================================== */
   el('btn-back').addEventListener('click', () => {
+    if (!confirmLeave()) return;
+    clearEditorDirty();
     if (history.length > 1) history.back();
     else navigate('#/');
   });
-  el('btn-home').addEventListener('click', () => navigate('#/'));
+  el('btn-home').addEventListener('click', () => {
+    if (!confirmLeave()) return;
+    clearEditorDirty();
+    navigate('#/');
+  });
   el('btn-sync').addEventListener('click', () => navigate('#/sync'));
   el('btn-theme').addEventListener('click', () => {
     // Cycle light → dark → auto → light
@@ -1734,7 +1799,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.3 · Markdown toolbar · B/I/list/table/link · Cmd+B shortcut</div>
+        <div class="brand-tag" id="brand-tag">v2.4 · unsaved warning · text-only edit · search debounce · partial sync</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1768,7 +1833,7 @@
         </div>
         ${isAdminCode() ? `<button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Preview as viewer' : 'Back to admin'}</button>` : ''}
       </div>
-      ${SUBMISSION_URL ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${SUBMISSION_URL}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
+      ${submissionUrl() ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${escAttr(submissionUrl())}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
     `;
     const input = el('home-search');
     input.addEventListener('keydown', e => {
@@ -1792,12 +1857,13 @@
   /* ======================================================
      Patient Education
   ====================================================== */
-  function routeEducation(parts) {
+  function routeEducation(parts, query) {
     const accent = '#2980b9';
+    query = query || {};
     if (!parts.length) return renderEducationCategories(accent);
     if (parts[0] === 'c' && parts[1]) return renderEducationArticles(parts[1], accent);
     if (parts[0] === 'a' && parts[1] && parts[2] === 'edit') return renderArticleEdit(parts[1], false, accent);
-    if (parts[0] === 'a' && parts[1]) return renderArticle(parts[1], accent);
+    if (parts[0] === 'a' && parts[1]) return renderArticle(parts[1], accent, query.q || '');
     if (parts[0] === 'new') return renderArticleEdit(null, true, accent, parts[1]);
     renderNotFound();
   }
@@ -1878,18 +1944,20 @@
     });
   }
 
-  function renderArticle(artId, accent) {
+  function renderArticle(artId, accent, highlight) {
     const a = state.data.articles.find(x => x.id === artId);
     if (!a) return renderNotFound();
     setHeader(a.title);
     const fav = isFav('education', a.id);
     const cat = state.data.categories.find(c => c.id === a.category);
+    const bodyHTML = highlight ? highlightText(a.text || '', highlight) : esc(a.text || '');
+    const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
         <a class="back-btn" href="#/education/c/${esc(a.category)}">← ${esc(cat ? cat.name_en : 'Back')}</a>
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">
-          <h2 style="flex:1;font-size:22px;line-height:1.3">${esc(a.title)}</h2>
+          <h2 style="flex:1;font-size:22px;line-height:1.3">${titleHTML}</h2>
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
         </div>
         <div class="article-meta-row">
@@ -1897,7 +1965,7 @@
           ${a.pages ? `<span>${a.pages} pages</span>` : ''}
           <span>${(a.text || '').length.toLocaleString()} chars</span>
         </div>
-        <div class="article-body">${esc(a.text || '')}</div>
+        <div class="article-body">${bodyHTML}</div>
         ${a.keywords && a.keywords.length ? `
           <div class="article-keywords">
             ${a.keywords.map(k => `<a class="kw-tag" href="#/search?q=${encodeURIComponent(k)}" style="cursor:pointer">${esc(k)}</a>`).join('')}
@@ -1943,28 +2011,28 @@
         <h2 style="font-size:20px;margin-bottom:12px">${isNew ? 'New article' : 'Edit: ' + esc(a.title)}</h2>
         <div class="edit-field">
           <label>Title</label>
-          <input type="text" id="ed-title" value="${escAttr(a.title)}" placeholder="Article title">
+          <input type="text" id="ed-title" value="${escAttr(a.title)}" placeholder="Article title" oninput="markEditorDirty()">
         </div>
         <div class="edit-field">
           <label>Category</label>
-          <select id="ed-category">
+          <select id="ed-category" onchange="markEditorDirty()">
             ${state.data.categories.map(c => `<option value="${esc(c.id)}" ${c.id === a.category ? 'selected' : ''}>${esc(c.name_en)} / ${esc(c.name_zh)}</option>`).join('')}
           </select>
         </div>
         <div class="edit-field">
           <label>Content</label>
-          <textarea id="ed-text" class="plain" style="min-height:300px">${esc(a.text || '')}</textarea>
+          <textarea id="ed-text" class="plain" style="min-height:300px" oninput="markEditorDirty()">${esc(a.text || '')}</textarea>
         </div>
         <div class="edit-field">
           <label>Keywords (comma separated)</label>
-          <input type="text" id="ed-keywords" value="${escAttr((a.keywords || []).join(', '))}" placeholder="keyword1, keyword2">
+          <input type="text" id="ed-keywords" value="${escAttr((a.keywords || []).join(', '))}" placeholder="keyword1, keyword2" oninput="markEditorDirty()">
         </div>
         <div class="edit-field">
           <label>Source URL (original reference, optional)</label>
-          <input type="url" id="ed-source" value="${escAttr(a.pdf_url || '')}" placeholder="https://...">
+          <input type="url" id="ed-source" value="${escAttr(a.pdf_url || '')}" placeholder="https://..." oninput="markEditorDirty()">
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="location.hash='#/education/a/${esc(a.id)}'">Cancel</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveArticle('${esc(a.id)}', ${isNew})">Save</button>
         </div>
       </div>
@@ -1978,6 +2046,7 @@
     const keywords = el('ed-keywords').value.split(',').map(s => s.trim()).filter(Boolean);
     const pdf_url = el('ed-source').value.trim();
     if (!title) { showToast('Title required', 'error'); return; }
+    clearEditorDirty();
     if (isNew) {
       const newArt = { id: artId, title, category: categoryId, text, keywords, related: [], pdf_url, pages: null, filename: '' };
       state.data.articles.push(newArt);
@@ -2152,14 +2221,14 @@
         <h2 style="font-size:19px;margin-bottom:12px">${isNew ? 'New section' : 'Edit: ' + esc(section.title)}</h2>
         <div class="edit-field">
           <label>Section title</label>
-          <input type="text" id="ne-title" value="${escAttr(section.title)}" placeholder="e.g. LUTS、排尿機轉">
+          <input type="text" id="ne-title" value="${escAttr(section.title)}" placeholder="e.g. LUTS、排尿機轉" oninput="markEditorDirty()">
         </div>
         <div class="edit-field">
           <label>Subsections</label>
           <div id="ne-subs"></div>
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="history.back()">Cancel</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveNote('${esc(section.id)}', ${isNew}, ${section._insertAfter !== undefined ? section._insertAfter : 'null'})">Save</button>
         </div>
       </div>
@@ -2182,7 +2251,7 @@
         <button class="sub-delete" onclick="window.__delNoteSub(${i})">✕</button>
         <div class="edit-field" style="margin-bottom:8px">
           <label>Title</label>
-          <input type="text" class="ne-sub-title" value="${escAttr(sub.title || '')}" placeholder="1. 某子章節">
+          <input type="text" class="ne-sub-title" value="${escAttr(sub.title || '')}" placeholder="1. 某子章節" oninput="markEditorDirty()">
         </div>
         <div class="edit-field" style="margin-bottom:0">
           <label>Items (${items.length})</label>
@@ -2199,7 +2268,7 @@
   function noteItemRowHTML(subIdx, itemIdx, itemText) {
     return `
       <div class="note-item-row" data-item-idx="${itemIdx}">
-        <input type="text" class="ne-item-input" value="${escAttr(itemText)}" placeholder="item ${itemIdx + 1}">
+        <input type="text" class="ne-item-input" value="${escAttr(itemText)}" placeholder="item ${itemIdx + 1}" oninput="markEditorDirty()">
         <button class="item-del" onclick="window.__delNoteItem(${subIdx}, ${itemIdx})">✕</button>
       </div>
     `;
@@ -2258,6 +2327,7 @@
     const title = el('ne-title').value.trim();
     const subs = collectNoteSubs();
     if (!title) { showToast('Title required', 'error'); return; }
+    clearEditorDirty();
     if (isNew) {
       const newSection = {
         id: sid, number: '', title, full_title: title, subsections: subs,
@@ -2282,13 +2352,17 @@
   /* ======================================================
      Tips & Guide
   ====================================================== */
-  function routeTips(parts) {
+  function routeTips(parts, query) {
     const accent = '#e67e22';
+    query = query || {};
     if (!parts.length) return renderTipsList(accent);
     if (parts[0] === 's' && parts[1]) return renderTipsChapter(parts[1], accent);
     if (parts[0] === 'sub' && parts[1] && parts[2]) return renderTipsSub(parts[1], parts[2], accent);
     if (parts[0] === 'edit' && parts[1] && parts[2]) return renderTipsEdit(parts[1], parts[2], false, accent);
-    if (parts[0] === 'new' && parts[1]) return renderTipsEdit(parts[1], null, true, accent);
+    if (parts[0] === 'new' && parts[1]) {
+      const after = query.after !== undefined ? parseInt(query.after) : -1;
+      return renderTipsEdit(parts[1], null, true, accent, after);
+    }
     renderNotFound();
   }
 
@@ -2320,13 +2394,14 @@
     if (!chapter) return renderNotFound();
     setHeader(chapter.full_title);
     const admin = isAdmin();
+    const subs = chapter.subsections || [];
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
         <a class="back-btn" href="#/tips">← All chapters</a>
         <h2 style="font-size:20px;margin-bottom:12px">${esc(chapter.full_title)}</h2>
         <div class="list-section">
-          ${(chapter.subsections || []).map(sub => `
+          ${subs.map((sub, i) => `
             <a class="list-card" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
               <div style="flex:1;min-width:0">
                 <div class="title">${esc(sub.title)}</div>
@@ -2335,11 +2410,12 @@
               <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(sub.title)}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
               <span class="chevron">›</span>
             </a>
+            ${admin ? `<button class="insert-btn" onclick="location.hash='#/tips/new/${esc(chapterId)}?after=${i}'">＋ insert subsection after</button>` : ''}
           `).join('')}
         </div>
         ${admin ? `
           <div class="action-bar">
-            <button class="btn btn-success btn-block" onclick="location.hash='#/tips/new/${esc(chapterId)}'">+ New subsection</button>
+            <button class="btn btn-success btn-block" onclick="location.hash='#/tips/new/${esc(chapterId)}'">+ New subsection at end</button>
           </div>
         ` : ''}
       </div>
@@ -2386,12 +2462,12 @@
     navigate('#/tips/s/' + chapterId);
   };
 
-  function renderTipsEdit(chapterId, subId, isNew, accent) {
+  function renderTipsEdit(chapterId, subId, isNew, accent, insertAfterIdx) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return renderNotFound();
     let sub;
     if (isNew) {
-      sub = { id: 'tg_' + chapterId.replace('tg_', '') + '_' + Date.now(), title: '', markdown: '' };
+      sub = { id: 'tg_' + chapterId.replace('tg_', '') + '_' + Date.now(), title: '', markdown: '', _insertAfter: (insertAfterIdx !== undefined ? insertAfterIdx : -1) };
     } else {
       const orig = chapter.subsections.find(x => x.id === subId);
       if (!orig) return renderNotFound();
@@ -2415,7 +2491,7 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate()">${esc(sub.markdown || '')}</textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();">${esc(sub.markdown || '')}</textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
@@ -2423,8 +2499,8 @@
           </div>
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="history.back()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew})">Save</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew},${sub._insertAfter !== undefined ? sub._insertAfter : 'null'})">Save</button>
         </div>
       </div>
     `;
@@ -2449,14 +2525,20 @@
     if (pv) pv.innerHTML = renderMd(md);
   };
 
-  window.__saveTips = function(chapterId, subId, isNew) {
+  window.__saveTips = function(chapterId, subId, isNew, insertAfter) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return showToast('Chapter not found', 'error');
     const title = el('te-title').value.trim();
     const md = el('te-md').value;
     if (!title) return showToast('Title required', 'error');
+    clearEditorDirty();
     if (isNew) {
-      chapter.subsections.push({ id: subId, title, markdown: md });
+      const newSub = { id: subId, title, markdown: md };
+      if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < chapter.subsections.length) {
+        chapter.subsections.splice(insertAfter + 1, 0, newSub);
+      } else {
+        chapter.subsections.push(newSub);
+      }
     } else {
       const s = chapter.subsections.find(x => x.id === subId);
       if (!s) return showToast('Not found', 'error');
@@ -2502,6 +2584,10 @@
     if (parts[0] === 'new-text' && parts[1] && parts[2] !== undefined) {
       await loadChapter(parts[1]);
       return renderTbNewTextTopic(parts[1], parseInt(parts[2]), accent);
+    }
+    if (parts[0] === 'edit-text' && parts[1] && parts[2]) {
+      await loadChapter(parts[1]);
+      return renderTbEditTextTopic(parts[1], parts[2], accent);
     }
     renderNotFound();
   }
@@ -2703,8 +2789,11 @@
         <div id="tb-content">${content}</div>
         ${admin ? `
           <div class="action-bar">
+            ${topic.type === 'text_only'
+              ? `<button class="btn btn-primary" onclick="location.hash='#/textbook/edit-text/${esc(tbId)}/${esc(topicId)}'">Edit content</button>`
+              : `<button class="btn btn-secondary" onclick="window.__ocrEditPrompt('${esc(tbId)}','${esc(topicId)}')">Edit OCR</button>`
+            }
             <button class="btn btn-primary" onclick="location.hash='#/textbook/edit-notes/${esc(tbId)}/${esc(topicId)}'">Edit notes</button>
-            ${topic.type !== 'text_only' ? `<button class="btn btn-secondary" onclick="window.__ocrEditPrompt('${esc(tbId)}','${esc(topicId)}')">Edit OCR</button>` : ''}
             <button class="btn btn-danger" onclick="window.__deleteTopic('${esc(tbId)}','${esc(topicId)}')">Delete topic</button>
           </div>
         ` : ''}
@@ -2829,7 +2918,7 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate()" placeholder="Add guideline updates, personal annotations, etc.">${esc(topic.notes || '')}</textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="Add guideline updates, personal annotations, etc.">${esc(topic.notes || '')}</textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
@@ -2837,7 +2926,7 @@
           </div>
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="history.back()">Cancel</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-danger" onclick="window.__clearNotes('${esc(tbId)}','${esc(topicId)}')">Clear</button>
           <button class="btn btn-success" onclick="window.__saveTopicNotes('${esc(tbId)}','${esc(topicId)}')">Save</button>
         </div>
@@ -2851,6 +2940,7 @@
     if (!found) return;
     found.topic.notes = el('te-md').value;
     markDirty(tbId);
+    clearEditorDirty();
     showToast('Saved locally ✓', 'success');
     navigate('#/textbook/t/' + tbId + '/' + topicId);
   };
@@ -2880,7 +2970,7 @@
         </div>
         <div class="edit-field">
           <label>Caption lines (one per line)</label>
-          <textarea id="ocr-text" style="min-height:200px">${esc((s.text || []).join('\n'))}</textarea>
+          <textarea id="ocr-text" style="min-height:200px" oninput="markEditorDirty()">${esc((s.text || []).join('\n'))}</textarea>
         </div>
         <div class="slide-controls" style="margin-bottom:12px">
           <button class="btn btn-secondary" onclick="location.hash='#/textbook/edit-ocr/${esc(tbId)}/${esc(topicId)}/${Math.max(0, slideIdx - 1)}'" ${slideIdx === 0 ? 'disabled' : ''}>← Prev slide</button>
@@ -2888,7 +2978,7 @@
           <button class="btn btn-secondary" onclick="location.hash='#/textbook/edit-ocr/${esc(tbId)}/${esc(topicId)}/${Math.min(slides.length - 1, slideIdx + 1)}'" ${slideIdx === slides.length - 1 ? 'disabled' : ''}>Next slide →</button>
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="history.back()">Done</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Done</button>
           <button class="btn btn-success" onclick="window.__saveOCR('${esc(tbId)}','${esc(topicId)}',${slideIdx})">Save this slide</button>
         </div>
       </div>
@@ -2904,6 +2994,7 @@
     const lines = el('ocr-text').value.split('\n').map(s => s.trim()).filter(Boolean);
     target.text = lines;
     markDirty(tbId);
+    clearEditorDirty();
     showToast('Slide OCR saved ✓', 'success');
   };
 
@@ -2918,10 +3009,10 @@
         <h2 style="font-size:19px;margin-bottom:12px">New topic in ${esc(sec.title)}</h2>
         <div class="edit-field">
           <label>Topic title</label>
-          <input type="text" id="tb-new-title" placeholder="e.g. 2026 guideline update">
+          <input type="text" id="tb-new-title" placeholder="e.g. 2026 guideline update" oninput="markEditorDirty()">
         </div>
         <div class="edit-field">
-          <label><input type="checkbox" id="tb-new-exam"> Has exam questions</label>
+          <label><input type="checkbox" id="tb-new-exam" onchange="markEditorDirty()"> Has exam questions</label>
         </div>
         <div class="edit-field">
           <label>Markdown content</label>
@@ -2932,7 +3023,7 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate()" placeholder="# New guideline&#10;&#10;Body text..."></textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="# New guideline&#10;&#10;Body text..."></textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
@@ -2940,13 +3031,70 @@
           </div>
         </div>
         <div class="action-bar action-bar-sticky">
-          <button class="btn btn-secondary" onclick="history.back()">Cancel</button>
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveNewTextTopic('${esc(tbId)}',${secIdx})">Add</button>
         </div>
       </div>
     `;
     window.__mdUpdate();
   }
+
+  function renderTbEditTextTopic(tbId, topicId, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found || found.topic.type !== 'text_only') return renderNotFound();
+    const { topic } = found;
+    setHeader('Edit text · ' + topic.title);
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">Edit text-only topic</h2>
+        <div class="edit-field">
+          <label>Topic title</label>
+          <input type="text" id="tb-edit-title" value="${escAttr(topic.title)}" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label><input type="checkbox" id="tb-edit-exam" ${topic.has_exam_questions ? 'checked' : ''} onchange="markEditorDirty()"> Has exam questions</label>
+        </div>
+        <div class="edit-field">
+          <label>Markdown content</label>
+          ${mdToolbarHTML()}
+          <div class="md-tabs">
+            <button class="active" onclick="window.__mdTab('edit')">Edit</button>
+            <button onclick="window.__mdTab('preview')">Preview</button>
+          </div>
+          <div class="md-editor">
+            <div class="md-pane" id="mdp-edit">
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty()">${esc(topic.markdown_content || '')}</textarea>
+            </div>
+            <div class="md-pane hidden" id="mdp-preview">
+              <div class="md-preview markdown-body" id="te-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveEditTextTopic('${esc(tbId)}','${esc(topicId)}')">Save</button>
+        </div>
+      </div>
+    `;
+    window.__mdUpdate();
+  }
+
+  window.__saveEditTextTopic = function(tbId, topicId) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return showToast('Topic not found', 'error');
+    const title = el('tb-edit-title').value.trim();
+    const md = el('te-md').value;
+    const exam = el('tb-edit-exam').checked;
+    if (!title) return showToast('Title required', 'error');
+    found.topic.title = title;
+    found.topic.markdown_content = md;
+    found.topic.has_exam_questions = !!exam;
+    markDirty(tbId);
+    clearEditorDirty();
+    showToast('Saved ✓', 'success');
+    navigate('#/textbook/t/' + tbId + '/' + topicId);
+  };
 
   window.__saveNewTextTopic = function(tbId, secIdx) {
     const ch = state.tb[tbId];
@@ -2956,6 +3104,7 @@
     const md = el('te-md').value;
     const exam = el('tb-new-exam').checked;
     if (!title) return showToast('Title required', 'error');
+    clearEditorDirty();
     const topic = {
       id: 't_extra_' + Date.now(),
       type: 'text_only',
@@ -3079,14 +3228,18 @@
       <div id="search-results"></div>
     `;
     const input = el('search-input');
+    let searchTimer = null;
     input.addEventListener('input', () => {
-      const v = input.value.trim();
-      const params = [];
-      if (v) params.push('q=' + encodeURIComponent(v));
-      if (only) params.push('only=' + only);
-      const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
-      if (location.hash !== hash) location.replace(hash);
-      doSearch(v, only);
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        const v = input.value.trim();
+        const params = [];
+        if (v) params.push('q=' + encodeURIComponent(v));
+        if (only) params.push('only=' + only);
+        const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
+        if (location.hash !== hash) location.replace(hash);
+        doSearch(v, only);
+      }, 220);
     });
     doSearch(q, only);
   }
@@ -3125,11 +3278,16 @@
       education: [], notes: [], tips: [], textbook: [],
     };
 
-    // Patient Ed
+    // Patient Ed — carry query into article page so highlights persist
     for (const a of state.data.articles) {
       const hay = a.title + ' ' + (a.text || '') + ' ' + (a.keywords || []).join(' ');
       if (matchAllTerms(hay, terms)) {
-        results.education.push({ id: a.id, title: a.title, preview: previewAround(a.text || '', terms), href: '#/education/a/' + a.id });
+        results.education.push({
+          id: a.id,
+          title: a.title,
+          preview: previewAround(a.text || '', terms),
+          href: '#/education/a/' + a.id + '?q=' + encodeURIComponent(q),
+        });
       }
     }
     // PPu Notes
@@ -3456,6 +3614,29 @@
         `}
       </div>
       <div class="sync-panel">
+        <h3>Data · Reload from server</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Force-refetch <code>data.json</code>, <code>teaching-notes.json</code>, <code>tips-guide.json</code> from GitHub. Textbook chapter JSONs reload on next visit.
+          ${dirty.length ? '<br><strong style="color:var(--c-warning)">⚠ You have ' + dirty.length + ' unsynced edits — reload will discard them.</strong>' : ''}
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-secondary btn-block" onclick="window.__reloadFromServer()">🔄 Reload from server</button>
+        </div>
+      </div>
+      <div class="sync-panel">
+        <h3>Submission form URL (optional)</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          If set, Home shows a "📝 Suggest content" link pointing here (for residents to suggest additions without editing).
+        </div>
+        <div class="edit-field" style="margin-bottom:8px">
+          <input type="url" id="submission-url-input" value="${escAttr(submissionUrl())}" placeholder="https://forms.gle/...">
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-secondary" onclick="window.__saveSubmissionUrl()">Save URL</button>
+          ${submissionUrl() ? `<button class="btn btn-danger" onclick="window.__clearSubmissionUrl()">Clear</button>` : ''}
+        </div>
+      </div>
+      <div class="sync-panel">
         <h3>Offline · Download all chapters</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
           Pre-fetch all 12 chapter JSONs + WebP render images (~155 MB) so the app works fully offline.
@@ -3519,6 +3700,48 @@
     }
     router();
   };
+  window.__reloadFromServer = async function() {
+    const dirty = dirtyDatasets();
+    if (dirty.length && !confirm('You have ' + dirty.length + ' unsynced edit(s). Reload will discard them. Continue?')) return;
+    // Clear all local overrides
+    localStorage.removeItem(LS.DATA);
+    localStorage.removeItem(LS.NOTES);
+    localStorage.removeItem(LS.TIPS);
+    for (const tbId of TB_CHAPTER_IDS) {
+      localStorage.removeItem(LS.TB_PREFIX + tbId);
+    }
+    // Reset state
+    state.sources.data = 'server';
+    state.sources.notes = 'server';
+    state.sources.tips = 'server';
+    state.sources.tb = {};
+    state.tb = {};
+    // Reload core
+    try {
+      await loadCore();
+      showToast('Reloaded from server ✓', 'success');
+    } catch (e) {
+      showToast('Reload failed: ' + e.message, 'error');
+    }
+    router();
+  };
+
+  window.__saveSubmissionUrl = function() {
+    const url = (el('submission-url-input').value || '').trim();
+    if (url && !/^https?:\/\//i.test(url)) {
+      return showToast('URL must start with http:// or https://', 'error');
+    }
+    if (url) localStorage.setItem(LS_SUBMISSION_KEY, url);
+    else     localStorage.removeItem(LS_SUBMISSION_KEY);
+    showToast('Submission URL saved', 'success');
+    router();
+  };
+  window.__clearSubmissionUrl = function() {
+    localStorage.removeItem(LS_SUBMISSION_KEY);
+    showToast('Cleared', 'success');
+    router();
+  };
+
   window.__downloadAll = async function() {
     const btn = el('btn-download-all');
     const bar = el('dl-progress-bar');
@@ -3526,12 +3749,13 @@
     const status = el('dl-status');
     btn.disabled = true;
     box.style.display = 'block';
-    // Phase 1: Load all chapter JSONs
+    // Phase 1: Load all chapter JSONs — track failures
     status.textContent = 'Loading chapter metadata…';
     const toLoad = TB_CHAPTER_IDS.filter(id => !state.tb[id]);
+    let jsonFail = 0;
     for (let i = 0; i < toLoad.length; i++) {
-      try { await loadChapter(toLoad[i]); } catch {}
-      const pct = ((i + 1) / (toLoad.length || 1)) * 20;  // JSONs = first 20%
+      try { await loadChapter(toLoad[i]); } catch { jsonFail++; }
+      const pct = ((i + 1) / (toLoad.length || 1)) * 20;
       bar.style.width = pct + '%';
     }
     // Phase 2: Collect all slide images
@@ -3548,21 +3772,27 @@
       }
     }
     status.textContent = 'Caching ' + images.length + ' slide images…';
-    // Phase 3: Parallel fetch in batches of 16 to hit SW cache-first logic
+    // Phase 3: Parallel fetch in batches — track ok vs fail
     const BATCH = 16;
-    let done = 0;
+    let done = 0, imgOk = 0, imgFail = 0;
     for (let i = 0; i < images.length; i += BATCH) {
       const batch = images.slice(i, i + BATCH);
-      await Promise.all(batch.map(url => fetch(url).catch(() => null)));
+      const results = await Promise.all(batch.map(url =>
+        fetch(url).then(r => r.ok ? 'ok' : 'fail').catch(() => 'fail')
+      ));
+      results.forEach(r => { if (r === 'ok') imgOk++; else imgFail++; });
       done += batch.length;
       const pct = 20 + (done / images.length) * 80;
       bar.style.width = pct + '%';
       status.textContent = 'Cached ' + done + ' / ' + images.length + ' images…';
     }
     bar.style.width = '100%';
-    status.textContent = '✓ All ' + images.length + ' slides + ' + TB_CHAPTER_IDS.length + ' chapters cached. App now works offline.';
-    haptic('success');
-    showToast('Offline cache complete', 'success');
+    const summary = '✓ ' + imgOk + ' images cached' +
+      (imgFail ? ' · ⚠ ' + imgFail + ' failed' : '') +
+      (jsonFail ? ' · ⚠ ' + jsonFail + ' chapter JSONs failed' : '');
+    status.textContent = summary + '. App offline-ready.';
+    if (imgFail + jsonFail === 0) showToast('Offline cache complete', 'success');
+    else showToast('Cache partial — ' + (imgFail + jsonFail) + ' failures', 'error', { duration: 4000 });
     btn.disabled = false;
     btn.textContent = '✓ Done — redownload';
   };
