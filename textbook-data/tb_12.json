@@ -339,7 +339,7 @@
         {
           "id": "t03",
           "title": "輸尿管外傷：分級、修復原則與術式",
-          "slide_count": 21,
+          "slide_count": 22,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -602,16 +602,7 @@
               "slide_image": "images/textbook/ch12_trauma/render/ss22.webp",
               "hidden": false,
               "ocr_text": "Benign ureteral stricture\nmanagement\nOPTIMAL THERAPY FOR BENIGN URETERAL STRICTURES*\nAssess length, renal function\nStricture is <2 cm and >20% function\nStricture is >2 cm\nDistal ureter\nMiddle ureter\nProximal ureter\nMoiety is >20%\nMoiety is <20%+\nAnterior incision或 Anterior incision或 Lateral incision或\nballoon dilatation\nballoon dilatation\nballoon\nditatatior\nOpen or\nlaparoscopic repair\nLaparoscopic\nnephrectomy\n*Consider balloon if transplant on immunosuppression.\ntPediatric patients and select patients with renal insufticiency may warrant repalr.\n•<2cm 且>20% function => endoscopy或氣球擴張，放較粗的DBJ至少g週\n•>2cm =repair or Nx (看是否>20% function)"
-            }
-          ]
-        },
-        {
-          "id": "t04",
-          "title": "外生殖器外傷（Penile / Testicular / Skin Loss）",
-          "slide_count": 14,
-          "has_exam_questions": true,
-          "has_hjh_content": false,
-          "slides": [
+            },
             {
               "slide_num": 44,
               "text": [
@@ -624,7 +615,16 @@
               "slide_image": "images/textbook/ch12_trauma/render/ss23.webp",
               "hidden": false,
               "ocr_text": "Open/Lapa ureter repair選擇\n•先看defect長度，看有哪些選擇，ex: 7cm就不能選UNC\n•再依照位置做最後決定\nTechnique\nUreteroureterostomy\nDefect length (cm)\n2-3\nUreteroneocystostomy(UNC)\n4-5\npsaos hitch\n6-10\nBoari flap\n12-15\nRenal descensus\nTransureteroureterostomy\nlleal Ureteral Substitution\nAutotransplantation\n5-8\n不限\n不限\n不限\nCampbell-Walsh Urology, 11, p1575"
-            },
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "外生殖器外傷（Penile / Testicular / Skin Loss）",
+          "slide_count": 14,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
             {
               "slide_num": 45,
               "text": [
@@ -833,16 +833,7 @@
               "hidden": false,
               "slide_image": "images/textbook/ch12_trauma/render/ss35.webp",
               "ocr_text": "Question\n•以下有關penile fracture / penetrating injury 何者為非？\na) penile shaft最薄是在 ventro-lateral side, penile fracture\n最容易發生在 suspensory ligament 最遠端\nb) Penile fracture 有40%合併尿道損傷\nPenile fracture repair在7天以內都不太會影響功能與外\n觀\nd) Surgical repair 有5%的機會產生 陰莖彎曲(penile\ncurvature)\nConservative treatment 有10%的機會產生 陰莖彎曲\n(penile curvature)\nAns:B, 20%\nCampbell 11th edition Chap. 101 p. 2379-2382"
-            }
-          ]
-        },
-        {
-          "id": "t05",
-          "title": "膀胱外傷：Cystography 與治療",
-          "slide_count": 8,
-          "has_exam_questions": true,
-          "has_hjh_content": false,
-          "slides": [
+            },
             {
               "slide_num": 58,
               "text": [
@@ -860,7 +851,16 @@
               "hidden": false,
               "slide_image": "images/textbook/ch12_trauma/render/ss36.webp",
               "ocr_text": "Question\n•有關testicular injury，何者為非？\na) 受傷陰囊的外觀（腫脹與淤青）跟 testicular injury 的嚴\n重度成正比\nb）大部分的 testicular injury 是鈍器傷(blunt injury)\nC）越早修補 testicular rupture 對賀爾蒙功能與生育都有\n幫助\n畢丸超音波正常可是臨床懷疑 testicular rupture,還是\n需要 scrotum exploration\ne）超音波可以用來判斷睪丸的完整度與血液共應的程度\nAns: A\nCampbell 11th edition Chap. 101 p. 2382-2384"
-            },
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "膀胱外傷：Cystography 與治療",
+          "slide_count": 7,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
             {
               "slide_num": 59,
               "text": [
