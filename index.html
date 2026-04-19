@@ -1947,7 +1947,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.2 · Move slide to another topic — proper fix for misfiled data</div>
+        <div class="brand-tag" id="brand-tag">v3.3 · PPT-hidden slides now shown as 補充 · searchable · always visible</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2830,12 +2830,19 @@
     if (t.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
     if (t.has_hjh_content) badges.push('<span class="topic-badge hjh">HJH</span>');
     if (isText) badges.push('<span class="topic-badge text-only">📄 Text</span>');
-    const meta = isText ? ((t.markdown_content || '').length + ' chars') : ((t.slide_count || (t.slides ? t.slides.length : 0)) + ' slides');
+    let meta;
+    if (isText) {
+      meta = (t.markdown_content || '').length + ' chars';
+    } else {
+      const all = t.slides || [];
+      const hiddenCount = all.filter(s => s.hidden).length;
+      meta = all.length + ' slides' + (hiddenCount ? ` · ${hiddenCount}📎 補充` : '');
+    }
     const cardClass = t.has_hjh_content ? 'list-card hjh' : 'list-card';
 
-    // Mini thumbnail from first visible slide
-    const visible = (t.slides || []).filter(s => !s.hidden);
-    const firstSlide = visible[0];
+    // Mini thumbnail from first non-hidden slide (fallback to first of any)
+    const all = t.slides || [];
+    const firstSlide = all.find(s => !s.hidden) || all[0];
     const thumbHTML = (!isText && firstSlide && firstSlide.slide_image)
       ? `<img class="topic-thumb" src="${escAttr(firstSlide.slide_image)}" alt="" loading="lazy">`
       : (isText ? '<div class="topic-thumb" style="display:flex;align-items:center;justify-content:center;font-size:18px">📄</div>' : '');
@@ -2875,10 +2882,8 @@
     const admin = isAdmin();
 
     let content = '';
-    // Admin can see/edit hidden slides; viewer only non-hidden
-    const visibleSlides = admin
-      ? (topic.slides || [])
-      : (topic.slides || []).filter(s => !s.hidden);
+    // All slides visible (including PPT-hidden, badged as supplementary)
+    const visibleSlides = (topic.slides || []);
     if (topic.type === 'text_only') {
       const md = topic.markdown_content || '';
       let rendered = renderMd(md);
@@ -2983,15 +2988,16 @@
     const isHidden = !!s.hidden;
     const admin = isAdmin();
     return `
-      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : isHidden ? 'style="box-shadow:0 0 0 3px var(--c-text-muted);opacity:.7"' : ''}>
-        <div class="slide-frame" style="position:relative">
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
+        <div class="slide-frame" style="position:relative${isHidden ? ';opacity:.82' : ''}">
           <div style="position:absolute;top:8px;left:8px;z-index:2;display:flex;gap:4px;flex-wrap:wrap">
             ${isHJH  ? '<span class="topic-badge hjh"  style="font-size:12px;padding:3px 10px">HJH</span>' : ''}
             ${isExam ? '<span class="topic-badge exam" style="font-size:12px;padding:3px 10px">📝 Exam</span>' : ''}
-            ${isHidden ? '<span class="topic-badge" style="font-size:12px;padding:3px 10px;background:var(--c-text-muted);color:#fff">HIDDEN</span>' : ''}
+            ${isHidden ? '<span class="topic-badge" style="font-size:11px;padding:3px 10px;background:rgba(44,62,80,.75);color:#fff">📎 補充 (PPT-hidden)</span>' : ''}
           </div>
           <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))} · ${idx + 1}/${slides.length}')">
         </div>
+        ${isHidden ? '<div style="font-size:11px;color:var(--c-text-muted);padding:6px 10px;background:var(--c-surface-alt);border-radius:var(--radius-sm);margin-top:6px;line-height:1.5">📎 這張是原 PPT 隱藏投影片（授課時略過）。內容仍是有效知識，重要性可能較低、屬補充資料。</div>' : ''}
         <div class="slide-controls">
           <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
           <div class="slide-counter">
@@ -3004,7 +3010,7 @@
           <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
             <button class="btn btn-primary" style="flex:1 1 180px;min-height:unset;padding:8px 12px;font-size:13px" onclick="location.hash='#/textbook/move/${esc(tbId)}/${esc(topicId)}/${idx}'">📂 Move to another topic…</button>
             <button class="btn btn-secondary" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark as exam'}</button>
-            <button class="btn ${isHidden ? 'btn-success' : 'btn-ghost'}" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '👁 Unhide' : '🙈 Hide'}</button>
+            <button class="btn btn-ghost" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '∅ Unmark supplementary' : '📎 Mark supplementary'}</button>
           </div>
         ` : ''}
         ${(s.text && s.text.length) ? `
@@ -3026,12 +3032,11 @@
   function bindSlideViewer(tbId, topicId, initialIdx, highlight) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    // Admin users see all slides (including hidden, so they can unhide them);
-    // viewers only see non-hidden.
-    const admin = isAdmin();
-    const slides = admin
-      ? (found.topic.slides || [])
-      : (found.topic.slides || []).filter(s => !s.hidden);
+    // All slides visible to everyone; hidden=true slides get a "補充 · PPT-hidden"
+    // visual badge so readers know they were skipped in original lecture but still
+    // contain knowledge. Filter removed per user policy: knowledge should be
+    // accessible, not suppressed.
+    const slides = (found.topic.slides || []);
     let idx = Math.max(0, Math.min(initialIdx || 0, slides.length - 1));
     highlight = highlight || '';
 
@@ -3249,23 +3254,19 @@
   window.__toggleSlideHidden = function(tbId, topicId, slideIdx) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    const admin = isAdmin();
-    const slides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
-    const target = slides[slideIdx];
+    const target = (found.topic.slides || [])[slideIdx];
     if (!target) return;
     const wasHidden = !!target.hidden;
     target.hidden = !wasHidden;
     markDirty(tbId);
-    showToast(wasHidden ? 'Slide unhidden' : 'Slide hidden (will disappear for viewers after sync)', 'success');
+    showToast(wasHidden ? 'Slide unmarked (primary)' : 'Marked as supplementary (📎 badge shown)', 'success');
     router();
   };
 
   window.__toggleSlideExam = function(tbId, topicId, slideIdx) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    const admin = isAdmin();
-    const slides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
-    const target = slides[slideIdx];
+    const target = (found.topic.slides || [])[slideIdx];
     if (!target) return;
     target.has_exam_question = !target.has_exam_question;
     markDirty(tbId);
@@ -3596,7 +3597,10 @@
         }
       }
     }
-    // Textbook (loaded chapters only) — per-slide granularity + AND-term matching
+    // Textbook (loaded chapters only) — per-slide granularity + AND-term matching.
+    // Hidden (PPT-skipped) slides ARE included — knowledge points shouldn't be
+    // excluded from search just because they were skipped in lecture; they get a
+    // 補充 tag in result title.
     for (const tbId of Object.keys(state.tb)) {
       const ch = state.tb[tbId];
       for (const sec of (ch.sections || [])) {
@@ -3604,24 +3608,24 @@
           let preview = '';
           let matchedSlideIdx = -1;
           let matched = false;
+          let matchedIsHidden = false;
 
-          // Topic-level text
           const topicHay = t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '');
           if (matchAllTerms(topicHay, terms)) {
             matched = true;
             preview = previewAround(topicHay, terms);
           }
 
-          // Per-slide (find FIRST slide where ALL terms match)
           if (t.type !== 'text_only') {
-            const visible = (t.slides || []).filter(s => !s.hidden);
-            for (let si = 0; si < visible.length; si++) {
-              const s = visible[si];
+            const slidesAll = t.slides || [];
+            for (let si = 0; si < slidesAll.length; si++) {
+              const s = slidesAll[si];
               const slideHay = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
               if (matchAllTerms(slideHay, terms)) {
                 matched = true;
                 if (matchedSlideIdx === -1) {
                   matchedSlideIdx = si;
+                  matchedIsHidden = !!s.hidden;
                   preview = previewAround(slideHay, terms);
                 }
               }
@@ -3631,9 +3635,10 @@
           if (matched) {
             let title = ch.number + '. ' + ch.title + ' › ' + t.title;
             if (matchedSlideIdx >= 0) {
-              const s = (t.slides || []).filter(x => !x.hidden)[matchedSlideIdx];
-              const slideTag = s && isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
-              title += ` — slide ${matchedSlideIdx + 1}${slideTag}`;
+              const s = (t.slides || [])[matchedSlideIdx];
+              const hjhTag = s && isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
+              const hidTag = matchedIsHidden ? ' <span class="topic-badge" style="font-size:10px;padding:1px 5px;background:rgba(44,62,80,.6);color:#fff">📎 補充</span>' : '';
+              title += ` — slide ${matchedSlideIdx + 1}${hjhTag}${hidTag}`;
             }
             const params = [];
             if (matchedSlideIdx >= 0) params.push('slide=' + matchedSlideIdx);
