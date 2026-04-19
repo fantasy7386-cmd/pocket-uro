@@ -736,6 +736,13 @@
     return esc(text).replace(new RegExp(safe, 'gi'), m => '<mark class="highlight">' + m + '</mark>');
   }
 
+  function isHJHSlide(s) {
+    return typeof s.slide_num === 'string' && /^HJH/i.test(s.slide_num);
+  }
+  function hjhSlideLabels(slides) {
+    return slides.filter(isHJHSlide).map(s => String(s.slide_num).replace(/^HJH-?/i, ''));
+  }
+
   function previewAround(text, query, radius = 80) {
     if (!text || !query) return '';
     const low = text.toLowerCase();
@@ -1085,7 +1092,7 @@
       if (module === 'education') return routeEducation(parts.slice(1));
       if (module === 'notes') return routeNotes(parts.slice(1));
       if (module === 'tips') return routeTips(parts.slice(1));
-      if (module === 'textbook') return routeTextbook(parts.slice(1));
+      if (module === 'textbook') return routeTextbook(parts.slice(1), query);
       renderNotFound();
     } catch (e) {
       viewEl().innerHTML = '<div class="placeholder"><div class="big">⚠️</div><strong>Error</strong><small>' + esc(e.message) + '</small></div>';
@@ -1161,7 +1168,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.3 · code-based admin · share code URO</div>
+        <div class="brand-tag">v1.4 · HJH slide-level · search jumps to matching slide</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1862,8 +1869,9 @@
   ====================================================== */
   const TB_CHAPTER_IDS = ['tb_01','tb_02','tb_03','tb_04','tb_05','tb_06','tb_07','tb_08','tb_09','tb_10','tb_11','tb_12'];
 
-  async function routeTextbook(parts) {
+  async function routeTextbook(parts, query) {
     const accent = '#8e44ad';
+    query = query || {};
     if (!parts.length) return renderTextbookHome(accent);
     if (parts[0] === 'c' && parts[1]) {
       await loadChapter(parts[1]);
@@ -1872,7 +1880,11 @@
     }
     if (parts[0] === 't' && parts[1] && parts[2]) {
       await loadChapter(parts[1]);
-      return renderTbTopic(parts[1], parts[2], accent);
+      const opts = {
+        slideIdx: query.slide !== undefined ? parseInt(query.slide) : 0,
+        highlight: query.q || '',
+      };
+      return renderTbTopic(parts[1], parts[2], accent, opts);
     }
     if (parts[0] === 'edit-notes' && parts[1] && parts[2]) {
       await loadChapter(parts[1]);
@@ -2006,7 +2018,10 @@
     return null;
   }
 
-  function renderTbTopic(tbId, topicId, accent) {
+  function renderTbTopic(tbId, topicId, accent, opts) {
+    opts = opts || {};
+    const initialSlideIdx = Math.max(0, opts.slideIdx || 0);
+    const highlight = opts.highlight || '';
     const found = findTopic(tbId, topicId);
     if (!found) return renderNotFound();
     const { ch, sec, secIdx, topic } = found;
@@ -2015,23 +2030,38 @@
     const admin = isAdmin();
 
     let content = '';
+    const visibleSlides = (topic.slides || []).filter(s => !s.hidden);
     if (topic.type === 'text_only') {
-      content = `<div class="markdown-body">${renderMd(topic.markdown_content || '')}</div>`;
+      const md = topic.markdown_content || '';
+      let rendered = renderMd(md);
+      if (highlight) {
+        // Naive highlight inside rendered HTML — wrap text matches
+        const safe = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        rendered = rendered.replace(new RegExp('(?![^<]*>)(' + safe + ')', 'gi'), '<mark class="highlight">$1</mark>');
+      }
+      content = `<div class="markdown-body">${rendered}</div>`;
     } else {
-      // Slides viewer, with visible slides only
-      const slides = (topic.slides || []).filter(s => !s.hidden);
-      if (!slides.length) {
+      if (!visibleSlides.length) {
         content = '<div class="placeholder"><div class="big">📄</div><strong>No visible slides</strong></div>';
       } else {
-        content = renderSlideViewerHTML(tbId, topicId, slides, 0);
+        const startIdx = Math.min(initialSlideIdx, visibleSlides.length - 1);
+        content = renderSlideViewerHTML(tbId, topicId, visibleSlides, startIdx, highlight);
       }
-      // attach via DOM below after innerHTML set
     }
 
     const badges = [];
     if (topic.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
     if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">HJH</span>');
     if (topic.type === 'text_only') badges.push('<span class="topic-badge text-only">📄 Text</span>');
+
+    // HJH slide summary for quick navigation
+    const hjhLabels = hjhSlideLabels(visibleSlides);
+    const hjhSummary = hjhLabels.length ? `
+      <div style="margin-bottom:10px;padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:12px;color:#8b5a00">
+        <strong>HJH slides in this topic:</strong>
+        ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="display:inline-block;margin:0 4px;padding:2px 8px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none">${esc(String(s.slide_num))}</a>` : '').join('')}
+      </div>
+    ` : '';
 
     const notesHTML = topic.notes ? `
       <div class="topic-notes">
@@ -2050,6 +2080,7 @@
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="textbook" data-fav-id="${esc(topicId)}" data-fav-title="${escAttr(topic.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
         </div>
         ${notesHTML}
+        ${hjhSummary}
         <div id="tb-content">${content}</div>
         ${admin ? `
           <div class="action-bar">
@@ -2061,7 +2092,7 @@
       </div>
     `;
 
-    if (topic.type !== 'text_only') bindSlideViewer(tbId, topicId);
+    if (topic.type !== 'text_only') bindSlideViewer(tbId, topicId, initialSlideIdx, highlight);
     bindFavButtons();
   }
 
@@ -2087,29 +2118,35 @@
     navigate('#/textbook/edit-ocr/' + tbId + '/' + topicId + '/' + idx);
   };
 
-  function renderSlideViewerHTML(tbId, topicId, slides, idx) {
+  function renderSlideViewerHTML(tbId, topicId, slides, idx, highlight) {
     const s = slides[idx];
-    const textLines = (s.text || []).map(t => esc(t)).join('</li><li>');
-    const ocrFull = s.ocr_text ? esc(s.ocr_text) : '';
+    highlight = highlight || '';
+    const textLines = (s.text || []).map(t => highlight ? highlightText(t, highlight) : esc(t)).join('</li><li>');
+    const ocrFull = s.ocr_text ? (highlight ? highlightText(s.ocr_text, highlight) : esc(s.ocr_text)) : '';
+    const isHJH = isHJHSlide(s);
     return `
-      <div class="slide-viewer">
-        <div class="slide-frame">
-          <img src="${escAttr(s.slide_image || '')}" alt="slide ${s.slide_num}" loading="eager">
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px #f1c40f"' : ''}>
+        <div class="slide-frame" style="position:relative">
+          ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
+          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager">
         </div>
         <div class="slide-controls">
           <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
-          <div class="slide-counter"><span id="tb-slide-index">${idx + 1}</span> / ${slides.length}</div>
+          <div class="slide-counter">
+            <span id="tb-slide-index">${idx + 1}</span> / ${slides.length}
+            · <span style="color:${isHJH ? '#8b5a00' : 'var(--c-text-muted)'};font-weight:${isHJH ? '700' : 'normal'}">#${esc(String(s.slide_num))}</span>
+          </div>
           <button onclick="window.__slideNext()" ${idx === slides.length - 1 ? 'disabled' : ''}>Next →</button>
         </div>
         ${(s.text && s.text.length) ? `
-          <div class="slide-ocr">
-            <div class="ocr-label">Captions</div>
+          <div class="slide-ocr" ${isHJH ? 'style="background:#fffbe6;border-color:#f0d986"' : ''}>
+            <div class="ocr-label">${isHJH ? 'HJH · ' : ''}Captions</div>
             <ul><li>${textLines}</li></ul>
           </div>
         ` : ''}
         ${ocrFull ? `
-          <details class="slide-ocr" style="margin-top:8px">
-            <summary class="ocr-label" style="cursor:pointer">Raw OCR (full)</summary>
+          <details class="slide-ocr" style="margin-top:8px" ${highlight ? 'open' : ''}>
+            <summary class="ocr-label" style="cursor:pointer">Raw OCR (full)${highlight ? ' — matches below' : ''}</summary>
             <div style="white-space:pre-wrap;margin-top:6px;font-size:13px;color:var(--c-text-muted)">${ocrFull}</div>
           </details>
         ` : ''}
@@ -2117,14 +2154,15 @@
     `;
   }
 
-  function bindSlideViewer(tbId, topicId) {
+  function bindSlideViewer(tbId, topicId, initialIdx, highlight) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
     const slides = (found.topic.slides || []).filter(s => !s.hidden);
-    let idx = 0;
+    let idx = Math.max(0, Math.min(initialIdx || 0, slides.length - 1));
+    highlight = highlight || '';
 
     function rerender() {
-      el('tb-content').innerHTML = renderSlideViewerHTML(tbId, topicId, slides, idx);
+      el('tb-content').innerHTML = renderSlideViewerHTML(tbId, topicId, slides, idx, highlight);
       // Swipe gesture
       const frame = el('tb-content').querySelector('.slide-frame');
       if (frame) attachSwipe(frame);
@@ -2435,24 +2473,51 @@
         }
       }
     }
-    // Textbook (loaded chapters only)
+    // Textbook (loaded chapters only) — per-slide granularity for slide-based topics
     for (const tbId of Object.keys(state.tb)) {
       const ch = state.tb[tbId];
       for (const sec of (ch.sections || [])) {
         for (const t of (sec.topics || [])) {
-          let hay = t.title;
-          if (t.type === 'text_only') hay += ' ' + (t.markdown_content || '');
-          if (t.notes) hay += ' ' + t.notes;
-          for (const s of (t.slides || [])) {
-            hay += ' ' + (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
+          let preview = '';
+          let matchedSlideIdx = -1;
+          let matched = false;
+
+          // Check topic-level text (title, notes, text_only content)
+          const topicHay = (t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '')).toLowerCase();
+          if (topicHay.includes(query)) {
+            matched = true;
+            preview = previewAround(t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || ''), q);
           }
-          if (hay.toLowerCase().includes(query)) {
-            results.textbook.push({
-              id: t.id,
-              title: ch.number + '. ' + ch.title + ' › ' + t.title,
-              preview: previewAround(hay, q),
-              href: '#/textbook/t/' + tbId + '/' + t.id,
-            });
+
+          // Check per-slide — find FIRST matching slide
+          if (t.type !== 'text_only') {
+            const visible = (t.slides || []).filter(s => !s.hidden);
+            for (let si = 0; si < visible.length; si++) {
+              const s = visible[si];
+              const slideHay = ((s.text || []).join(' ') + ' ' + (s.ocr_text || '')).toLowerCase();
+              if (slideHay.includes(query)) {
+                matched = true;
+                if (matchedSlideIdx === -1) {
+                  matchedSlideIdx = si;
+                  const slideText = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
+                  preview = previewAround(slideText, q);
+                }
+              }
+            }
+          }
+
+          if (matched) {
+            let title = ch.number + '. ' + ch.title + ' › ' + t.title;
+            if (matchedSlideIdx >= 0) {
+              const s = (t.slides || []).filter(x => !x.hidden)[matchedSlideIdx];
+              const slideTag = s && isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
+              title += ` — slide ${matchedSlideIdx + 1}${slideTag}`;
+            }
+            const params = [];
+            if (matchedSlideIdx >= 0) params.push('slide=' + matchedSlideIdx);
+            params.push('q=' + encodeURIComponent(q));
+            const href = '#/textbook/t/' + tbId + '/' + t.id + '?' + params.join('&');
+            results.textbook.push({ id: t.id + ':' + matchedSlideIdx, title, preview, href });
           }
         }
       }
