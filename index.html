@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket URO</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Pocket URO">
+  <meta name="theme-color" content="#1a1a2e">
+
+  <style>
+    :root {
+      --c-patient-ed: #2980b9;
+      --c-ppu-notes: #27ae60;
+      --c-tips: #e67e22;
+      --c-textbook: #8e44ad;
+      --c-bg: #f5f5f7;
+      --c-surface: #ffffff;
+      --c-text: #2c3e50;
+      --c-text-muted: #7f8c8d;
+      --c-border: #e5e5ea;
+      --c-header: #1a1a2e;
+      --c-danger: #e74c3c;
+      --radius: 12px;
+      --tap-target: 44px;
+      --max-width: 800px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
+                   sans-serif;
+      background: var(--c-bg);
+      color: var(--c-text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    body {
+      min-height: 100vh;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    button { font: inherit; cursor: pointer; }
+    input  { font: inherit; }
+
+    /* -------- Access gate -------- */
+    .gate {
+      position: fixed;
+      inset: 0;
+      background: var(--c-header);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .gate.hidden { display: none; }
+    .gate h1 { font-size: 32px; margin-bottom: 6px; font-weight: 700; }
+    .gate p { color: #9aa0b4; margin-bottom: 28px; font-size: 14px; }
+    .gate input {
+      font-size: 18px;
+      padding: 14px 16px;
+      border: none;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 280px;
+      margin-bottom: 12px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .gate button {
+      font-size: 16px;
+      padding: 14px 36px;
+      border: none;
+      border-radius: var(--radius);
+      background: var(--c-danger);
+      color: #fff;
+      min-width: 160px;
+      font-weight: 600;
+    }
+    .gate .error {
+      color: #ff8a80;
+      font-size: 14px;
+      margin-top: 16px;
+      min-height: 20px;
+    }
+
+    /* -------- App shell -------- */
+    #app {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px;
+    }
+    #app[hidden] { display: none; }
+
+    /* -------- Header -------- */
+    .view-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0 16px;
+      border-bottom: 1px solid var(--c-border);
+      margin-bottom: 16px;
+    }
+    .view-header h1 { font-size: 20px; font-weight: 700; }
+    .back-btn {
+      width: var(--tap-target);
+      height: var(--tap-target);
+      border: none;
+      background: transparent;
+      font-size: 22px;
+      border-radius: 50%;
+      color: var(--c-text);
+    }
+    .back-btn:active { background: rgba(0,0,0,.06); }
+
+    .module-view .view-header {
+      border-bottom: 4px solid var(--accent, var(--c-border));
+    }
+
+    /* -------- Home -------- */
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 4px 0 16px;
+    }
+    .brand-name { font-size: 28px; font-weight: 700; }
+    .brand-tag  { font-size: 13px; color: var(--c-text-muted); }
+
+    .search-bar {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      font-size: 16px;
+      background: var(--c-surface);
+      margin-bottom: 16px;
+    }
+    .search-bar:disabled { color: var(--c-text-muted); }
+
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 768px) { .home-grid { gap: 16px; } }
+
+    .module-card {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      border-left: 6px solid var(--accent, #333);
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      border-top: 1px solid var(--c-border);
+      border-right: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border);
+      transition: transform .1s ease;
+    }
+    .module-card:active { transform: scale(.98); }
+    .module-card .icon { font-size: 24px; }
+    .module-card .name { font-size: 16px; font-weight: 600; margin-top: 10px; color: var(--c-text); }
+    .module-card .count { font-size: 12px; color: var(--c-text-muted); margin-top: 2px; }
+
+    .home-footer {
+      margin-top: 20px;
+      text-align: center;
+      color: var(--c-text-muted);
+      font-size: 12px;
+      padding: 8px 0;
+    }
+
+    /* -------- Placeholder -------- */
+    .placeholder {
+      padding: 48px 20px;
+      text-align: center;
+      color: var(--c-text-muted);
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--c-border);
+    }
+    .placeholder .big { font-size: 40px; margin-bottom: 12px; }
+    .placeholder strong { color: var(--c-text); display: block; margin-bottom: 6px; font-size: 18px; }
+    .placeholder small { font-size: 13px; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Access gate ============ -->
+  <div class="gate" id="gate">
+    <h1>Pocket URO</h1>
+    <p>Urology reference · residents only</p>
+    <input type="text" id="gate-input" placeholder="員編" autocapitalize="characters" autocomplete="off">
+    <button id="gate-submit">進入</button>
+    <div class="error" id="gate-error"></div>
+  </div>
+
+  <!-- ============ App shell ============ -->
+  <div id="app" hidden>
+    <div id="view"></div>
+  </div>
+
+  <script>
+  'use strict';
+
+  /* ======= Config ======= */
+  const VALID_CODES = ['ADMIN', '123944', 'Y08594'];
+  const MODULES = [
+    { id: 'education', name: 'Patient Education', icon: '📘', accent: '#2980b9' },
+    { id: 'notes',     name: 'PPu Notes',         icon: '📗', accent: '#27ae60' },
+    { id: 'tips',      name: 'Tips & Guide',      icon: '📙', accent: '#e67e22' },
+    { id: 'textbook',  name: 'Textbook',          icon: '📕', accent: '#8e44ad' },
+  ];
+
+  /* ======= Access gate ======= */
+  const gateEl      = document.getElementById('gate');
+  const gateInput   = document.getElementById('gate-input');
+  const gateBtn     = document.getElementById('gate-submit');
+  const gateError   = document.getElementById('gate-error');
+  const appEl       = document.getElementById('app');
+
+  function tryShowApp() {
+    const saved = localStorage.getItem('ppu_access_code');
+    if (saved && VALID_CODES.includes(saved)) {
+      openApp();
+      return true;
+    }
+    return false;
+  }
+
+  function openApp() {
+    gateEl.classList.add('hidden');
+    appEl.hidden = false;
+    router();
+  }
+
+  function submitCode() {
+    const code = gateInput.value.trim().toUpperCase();
+    if (VALID_CODES.includes(code)) {
+      localStorage.setItem('ppu_access_code', code);
+      openApp();
+    } else {
+      gateError.textContent = '員編無效';
+    }
+  }
+
+  gateBtn.addEventListener('click', submitCode);
+  gateInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitCode(); });
+
+  /* ======= Router ======= */
+  function router() {
+    const view = document.getElementById('view');
+    const hash = location.hash || '#/';
+
+    if (hash === '#/' || hash === '#') {
+      view.innerHTML = renderHome();
+      return;
+    }
+
+    const moduleId = hash.replace('#/', '').split('/')[0];
+    const mod = MODULES.find(m => m.id === moduleId);
+    view.innerHTML = mod ? renderModulePlaceholder(mod) : renderNotFound();
+  }
+
+  function renderHome() {
+    return `
+      <div class="brand">
+        <div class="brand-name">Pocket URO</div>
+        <div class="brand-tag">v0.1 · scaffold</div>
+      </div>
+      <input class="search-bar" placeholder="Search all modules…" disabled>
+      <div class="home-grid">
+        ${MODULES.map(m => `
+          <a class="module-card" style="--accent:${m.accent}" href="#/${m.id}">
+            <div class="icon">${m.icon}</div>
+            <div>
+              <div class="name">${m.name}</div>
+              <div class="count">— coming soon —</div>
+            </div>
+          </a>
+        `).join('')}
+      </div>
+      <div class="home-footer">P0 scaffold · modules pending</div>
+    `;
+  }
+
+  function renderModulePlaceholder(mod) {
+    return `
+      <div class="module-view" style="--accent:${mod.accent}">
+        <div class="view-header">
+          <button class="back-btn" onclick="location.hash='#/'">←</button>
+          <h1>${mod.name}</h1>
+        </div>
+        <div class="placeholder">
+          <div class="big">${mod.icon}</div>
+          <strong>${mod.name}</strong>
+          <small>Module implementation pending (P1–P4).</small>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNotFound() {
+    return `
+      <div class="view-header">
+        <button class="back-btn" onclick="location.hash='#/'">←</button>
+        <h1>Not Found</h1>
+      </div>
+      <div class="placeholder">
+        <div class="big">🤔</div>
+        <strong>Page not found</strong>
+        <small><a href="#/">Go home</a></small>
+      </div>
+    `;
+  }
+
+  window.addEventListener('hashchange', router);
+
+  /* ======= Service Worker ======= */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .catch(err => console.warn('[Pocket URO] SW registration failed', err));
+    });
+  }
+
+  /* ======= ?reset escape hatch ======= */
+  if (new URLSearchParams(location.search).has('reset')) {
+    Promise.all([
+      caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
+      'serviceWorker' in navigator
+        ? navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister())))
+        : Promise.resolve(),
+    ]).finally(() => {
+      localStorage.clear();
+      location.replace(location.pathname);
+    });
+  } else {
+    /* ======= Boot ======= */
+    if (!tryShowApp()) {
+      /* gate remains visible */
+      gateInput.focus();
+    }
+  }
+  </script>
+</body>
+</html>
