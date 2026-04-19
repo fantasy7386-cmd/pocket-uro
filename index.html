@@ -662,7 +662,11 @@
   /* ======================================================
      Config
   ====================================================== */
-  const VALID_CODES = ['ADMIN', '123944', 'Y08594'];
+  // Admin codes: full editing + sync permissions
+  const ADMIN_CODES = ['ADMIN', '123944', 'Y08594'];
+  // Viewer codes: share with residents / other users — read-only, cannot escalate
+  const VIEWER_CODES = ['URO'];
+  const VALID_CODES = [...ADMIN_CODES, ...VIEWER_CODES];
   const GH_REPO = 'fantasy7386-cmd/pocket-uro';
   const LS = {
     ACCESS: 'puro_access_code',
@@ -777,26 +781,29 @@
   /* ======================================================
      Admin detection
   ====================================================== */
-  function isAdmin() {
-    if (localStorage.getItem(LS.ADMIN) === 'on') return true;
-    if (localStorage.getItem(LS.TOKEN)) return true;
-    return (localStorage.getItem(LS.ACCESS) || '').toUpperCase() === 'ADMIN';
+  function currentCode() {
+    return (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
   }
-  function setAdminMode(on) {
-    if (on) localStorage.setItem(LS.ADMIN, 'on');
-    else    localStorage.removeItem(LS.ADMIN);
-    router();
+  function isAdminCode() {
+    return ADMIN_CODES.includes(currentCode());
+  }
+  function isAdmin() {
+    // Admin code users can temporarily preview as viewer (LS.ADMIN === 'off'),
+    // but viewer codes can never escalate. Only admin codes / GH token grant admin.
+    if (isAdminCode() && localStorage.getItem(LS.ADMIN) === 'off') return false;
+    if (isAdminCode()) return true;
+    if (localStorage.getItem(LS.TOKEN)) return true;
+    return false;
   }
   window.__toggleAdmin = function() {
-    const now = isAdmin();
-    // Turn off admin: clear both code-based path (by removing access override) and toggle
-    if (now) {
-      setAdminMode(false);
-      // If admin came via ADMIN code, downgrade by not clearing code (user still authenticated)
-      // but remove explicit admin override
+    // Only admin-code users may toggle. Viewers' button is not rendered.
+    if (!isAdminCode()) return;
+    if (localStorage.getItem(LS.ADMIN) === 'off') {
+      localStorage.removeItem(LS.ADMIN);
     } else {
-      setAdminMode(true);
+      localStorage.setItem(LS.ADMIN, 'off');
     }
+    router();
   };
 
   /* ======================================================
@@ -1154,7 +1161,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.2 · admin toggle · role visible</div>
+        <div class="brand-tag">v1.3 · code-based admin · share code URO</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1176,12 +1183,13 @@
       </div>
       <div style="margin-top:10px;padding:12px 14px;background:${admin ? '#fff5d6' : '#eef4fa'};border:1px solid ${admin ? '#f0d986' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
         <div style="font-size:13px">
-          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (editing enabled)' : 'Viewer (read-only)'}</strong>
+          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
           <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
-            ${admin ? 'Edit / Delete / +New buttons appear in every module.' : 'Tap the button to turn on admin mode.'}
+            Code: <code>${esc(currentCode())}</code> ·
+            ${isAdminCode() ? (admin ? 'Your code grants admin. Edit / +New / Delete enabled.' : 'Preview as viewer — tap to restore admin.') : 'Shared code — read-only, cannot enable editing.'}
           </div>
         </div>
-        <button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Switch to viewer' : 'Enable admin'}</button>
+        ${isAdminCode() ? `<button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Preview as viewer' : 'Back to admin'}</button>` : ''}
       </div>
       ${SUBMISSION_URL ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${SUBMISSION_URL}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
     `;
@@ -2487,14 +2495,19 @@
       <a class="back-btn" href="#/">← Home</a>
       <h2 style="font-size:22px;margin-bottom:12px">Sync to GitHub</h2>
       <div class="sync-panel">
-        <h3>Role / Admin mode</h3>
+        <h3>Role</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Authenticated code: <strong><code>${esc(currentCode())}</code></strong>
+          <span style="padding:1px 8px;background:${isAdminCode() ? '#fff5d6' : '#eef4fa'};color:${isAdminCode() ? '#8b5a00' : 'var(--c-text-muted)'};border-radius:8px;font-size:11px;margin-left:4px">${isAdminCode() ? 'admin code' : 'viewer code'}</span>
+          <br>
           Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer'}</strong>.
-          ${isAdmin() ? 'Edit buttons appear across all modules.' : 'No edit buttons will show until you enable admin.'}
+          ${isAdminCode() ? (isAdmin() ? 'All edit/sync buttons enabled.' : 'Previewing as viewer.') : 'Shared code — cannot enable editing from this device.'}
         </div>
-        <div class="action-bar" style="margin:0">
-          <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Switch to viewer' : 'Enable admin mode'}</button>
-        </div>
+        ${isAdminCode() ? `
+          <div class="action-bar" style="margin:0">
+            <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Preview as viewer' : 'Back to admin'}</button>
+          </div>
+        ` : ''}
       </div>
       <div class="sync-panel">
         <h3>GitHub Personal Access Token</h3>
