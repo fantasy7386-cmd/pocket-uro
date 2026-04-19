@@ -1947,7 +1947,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.0 · iOS-style Navigation Stack · parent-link + More menu</div>
+        <div class="brand-tag" id="brand-tag">v3.1 · slide-level exam badge + Hide/Unhide for misfiled slides</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2871,7 +2871,10 @@
     const admin = isAdmin();
 
     let content = '';
-    const visibleSlides = (topic.slides || []).filter(s => !s.hidden);
+    // Admin can see/edit hidden slides; viewer only non-hidden
+    const visibleSlides = admin
+      ? (topic.slides || [])
+      : (topic.slides || []).filter(s => !s.hidden);
     if (topic.type === 'text_only') {
       const md = topic.markdown_content || '';
       let rendered = renderMd(md);
@@ -2972,23 +2975,36 @@
     const textLines = (s.text || []).map(t => highlight ? highlightText(t, highlight) : esc(t)).join('</li><li>');
     const ocrFull = s.ocr_text ? (highlight ? highlightText(s.ocr_text, highlight) : esc(s.ocr_text)) : '';
     const isHJH = isHJHSlide(s);
+    const isExam = !!s.has_exam_question;
+    const isHidden = !!s.hidden;
+    const admin = isAdmin();
     return `
-      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px #f1c40f"' : ''}>
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : isHidden ? 'style="box-shadow:0 0 0 3px var(--c-text-muted);opacity:.7"' : ''}>
         <div class="slide-frame" style="position:relative">
-          ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
+          <div style="position:absolute;top:8px;left:8px;z-index:2;display:flex;gap:4px;flex-wrap:wrap">
+            ${isHJH  ? '<span class="topic-badge hjh"  style="font-size:12px;padding:3px 10px">HJH</span>' : ''}
+            ${isExam ? '<span class="topic-badge exam" style="font-size:12px;padding:3px 10px">📝 Exam</span>' : ''}
+            ${isHidden ? '<span class="topic-badge" style="font-size:12px;padding:3px 10px;background:var(--c-text-muted);color:#fff">HIDDEN</span>' : ''}
+          </div>
           <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))} · ${idx + 1}/${slides.length}')">
         </div>
         <div class="slide-controls">
           <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
           <div class="slide-counter">
             <span id="tb-slide-index">${idx + 1}</span> / ${slides.length}
-            · <span style="color:${isHJH ? '#8b5a00' : 'var(--c-text-muted)'};font-weight:${isHJH ? '700' : 'normal'}">#${esc(String(s.slide_num))}</span>
+            · <span style="color:${isHJH ? 'var(--c-hjh-fg)' : 'var(--c-text-muted)'};font-weight:${isHJH ? '700' : 'normal'}">#${esc(String(s.slide_num))}</span>
           </div>
           <button onclick="window.__slideNext()" ${idx === slides.length - 1 ? 'disabled' : ''}>Next →</button>
         </div>
+        ${admin ? `
+          <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+            <button class="btn ${isHidden ? 'btn-success' : 'btn-danger'}" style="flex:1;min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '👁 Unhide slide' : '🙈 Hide this slide (misfiled?)'}</button>
+            <button class="btn btn-secondary" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark as exam'}</button>
+          </div>
+        ` : ''}
         ${(s.text && s.text.length) ? `
-          <div class="slide-ocr" ${isHJH ? 'style="background:#fffbe6;border-color:#f0d986"' : ''}>
-            <div class="ocr-label">${isHJH ? 'HJH · ' : ''}Captions</div>
+          <div class="slide-ocr" ${isHJH ? 'style="background:var(--c-hjh-card-bg);border-color:var(--c-hjh-border)"' : ''}>
+            <div class="ocr-label">${isHJH ? 'HJH · ' : ''}${isExam ? 'Exam · ' : ''}Captions</div>
             <ul><li>${textLines}</li></ul>
           </div>
         ` : ''}
@@ -3005,7 +3021,12 @@
   function bindSlideViewer(tbId, topicId, initialIdx, highlight) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    const slides = (found.topic.slides || []).filter(s => !s.hidden);
+    // Admin users see all slides (including hidden, so they can unhide them);
+    // viewers only see non-hidden.
+    const admin = isAdmin();
+    const slides = admin
+      ? (found.topic.slides || [])
+      : (found.topic.slides || []).filter(s => !s.hidden);
     let idx = Math.max(0, Math.min(initialIdx || 0, slides.length - 1));
     highlight = highlight || '';
 
@@ -3124,6 +3145,33 @@
       </div>
     `;
   }
+
+  window.__toggleSlideHidden = function(tbId, topicId, slideIdx) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const admin = isAdmin();
+    const slides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
+    const target = slides[slideIdx];
+    if (!target) return;
+    const wasHidden = !!target.hidden;
+    target.hidden = !wasHidden;
+    markDirty(tbId);
+    showToast(wasHidden ? 'Slide unhidden' : 'Slide hidden (will disappear for viewers after sync)', 'success');
+    router();
+  };
+
+  window.__toggleSlideExam = function(tbId, topicId, slideIdx) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const admin = isAdmin();
+    const slides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
+    const target = slides[slideIdx];
+    if (!target) return;
+    target.has_exam_question = !target.has_exam_question;
+    markDirty(tbId);
+    showToast(target.has_exam_question ? 'Marked as exam slide' : 'Unmarked', 'success');
+    router();
+  };
 
   window.__saveOCR = function(tbId, topicId, slideIdx) {
     const found = findTopic(tbId, topicId);
