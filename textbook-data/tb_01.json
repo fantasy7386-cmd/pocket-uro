@@ -684,7 +684,7 @@
         {
           "id": "t05",
           "title": "RIRS",
-          "slide_count": 2,
+          "slide_count": 3,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -723,6 +723,31 @@
               "slide_image": "images/textbook/ch01_stone/render/s1_s37.webp",
               "hidden": false,
               "ocr_text": "RIRS概論\n•作法：先置放ureteral access sheath，再走軟弍輸尿管鏡，可以合併雷射和stone\nbasket來清除腎臟內的石頭\n•需要全身麻醉來控制呼吸\n•Ureteral access sheath:\n•長度：成人36-55cm，成人男性可選45-55cm，成人女性可選36cm\n•粗細(内徑/外徑)：成人男性可選12/14，成人女性可選11/13\n•腎結石<2cm較適合\n•缺點：手術時間較長\nIntra-renal pressure較高的情況下較易sepsis(>30 mmHg/ 45 cmH20）\n打碎石頭時有粉塵或傷到腎臟流血容易看不清楚\nureteral access sheath的complication(ureter stricture, rupture)"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Ureteroscopy related",
+                "complication and management",
+                "Perforation",
+                "False passage",
+                "Mucosa tear",
+                "Ureteral bleeding",
+                "Intussusception, avulsion",
+                "Adjacent structure damage",
+                "Risk factors association with higher complication rates",
+                "Longer surgery times",
+                "Treatment of renal calculi",
+                "Surgeon inexperience",
+                "Previous irradiation",
+                "Management",
+                "放DBJ閃人",
+                "放不過去做 PCN+antegrade"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "Ureteroscopy related\ncomplication and management\n•Perforation\n•False passage\n•Mucosa tear\nWreteral bleeding\nalntussusception, avulsion\n•Adjacent structure damage\n•Risk factors association with higher complication rates\n•Longer surgery times\n•Treatment of renal calculi\n•Surgeon inexperience\n•Previous irradiation\n•Management\n•放DBJ閃人\n•放不過去做 PCNtantegrade"
             }
           ]
         },
@@ -1018,10 +1043,25 @@
         {
           "id": "t08",
           "title": "輸尿管結石",
-          "slide_count": 9,
+          "slide_count": 10,
           "has_exam_questions": true,
           "has_hjh_content": false,
           "slides": [
+            {
+              "slide_num": 43,
+              "text": [
+                "Benign ureteral stricture management",
+                "<2cm且>20% function => endoscopy或氣球擴張, 放較粗的DBJ至少8週",
+                ">2cm => repair or Nx (看是否>20% function)",
+                "Anterior incision或balloon dilatation",
+                "Anterior incision或balloon dilatation",
+                "Lateral incision或balloon dilatation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Benign ureteral stricture\nmanagement\nOPTIMAL THERAPY FOR BENIGN URETERAL STRICTURES*\nAssess length, renal function\nStricture is <2 cm and >20% function\nStricture is >2 cm\nDistal ureter\nMiddle ureter\nProximal ureter\nMoiety is >20%\nMoiety is <20%+\nAnterior incision或 Anterior incision或 Lateral incision或\nballoon dilatation\nballoon dilatation\nballoon\nditatatior\nOpen or\nlaparoscopic repair\nLaparoscopic\nnephrectomy\n*Consider balloon if transplant on immunosuppression.\ntPediatric patients and select patients with renal insufticiency may warrant repalr.\n•<2cm 且>20% function => endoscopy或氣球擴張，放較粗的DBJ至少g週\n•>2cm =repair or Nx (看是否>20% function)"
+            },
             {
               "slide_num": 53,
               "text": [
