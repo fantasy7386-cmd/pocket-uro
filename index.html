@@ -667,6 +667,7 @@
   const LS = {
     ACCESS: 'puro_access_code',
     TOKEN: 'puro_gh_token',
+    ADMIN: 'puro_admin_mode',      // 'on' | 'off' (user toggle override)
     FAVS: 'puro_favorites',
     DATA: 'puro_data_json',        // local override for Patient Ed
     NOTES: 'puro_notes_json',      // local override for PPu Notes
@@ -777,9 +778,26 @@
      Admin detection
   ====================================================== */
   function isAdmin() {
+    if (localStorage.getItem(LS.ADMIN) === 'on') return true;
     if (localStorage.getItem(LS.TOKEN)) return true;
     return (localStorage.getItem(LS.ACCESS) || '').toUpperCase() === 'ADMIN';
   }
+  function setAdminMode(on) {
+    if (on) localStorage.setItem(LS.ADMIN, 'on');
+    else    localStorage.removeItem(LS.ADMIN);
+    router();
+  }
+  window.__toggleAdmin = function() {
+    const now = isAdmin();
+    // Turn off admin: clear both code-based path (by removing access override) and toggle
+    if (now) {
+      setAdminMode(false);
+      // If admin came via ADMIN code, downgrade by not clearing code (user still authenticated)
+      // but remove explicit admin override
+    } else {
+      setAdminMode(true);
+    }
+  };
 
   /* ======================================================
      Favorites
@@ -1136,7 +1154,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.1 · HJH + edge-swipe + sync-always-visible</div>
+        <div class="brand-tag">v1.2 · admin toggle · role visible</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1153,9 +1171,17 @@
       <div class="home-actions">
         <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
         <div style="display:flex;gap:6px;align-items:center">
-          ${admin ? '<span class="admin-tag">ADMIN</span>' : ''}
           ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
         </div>
+      </div>
+      <div style="margin-top:10px;padding:12px 14px;background:${admin ? '#fff5d6' : '#eef4fa'};border:1px solid ${admin ? '#f0d986' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div style="font-size:13px">
+          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (editing enabled)' : 'Viewer (read-only)'}</strong>
+          <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
+            ${admin ? 'Edit / Delete / +New buttons appear in every module.' : 'Tap the button to turn on admin mode.'}
+          </div>
+        </div>
+        <button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Switch to viewer' : 'Enable admin'}</button>
       </div>
       ${SUBMISSION_URL ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${SUBMISSION_URL}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
     `;
@@ -1946,7 +1972,7 @@
     const isText = t.type === 'text_only';
     const badges = [];
     if (t.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
-    if (t.has_hjh_content) badges.push('<span class="topic-badge hjh">💛 HJH</span>');
+    if (t.has_hjh_content) badges.push('<span class="topic-badge hjh">HJH</span>');
     if (isText) badges.push('<span class="topic-badge text-only">📄 Text</span>');
     const meta = isText ? ((t.markdown_content || '').length + ' chars') : ((t.slide_count || (t.slides ? t.slides.length : 0)) + ' slides');
     const cardClass = t.has_hjh_content ? 'list-card hjh' : 'list-card';
@@ -1996,7 +2022,7 @@
 
     const badges = [];
     if (topic.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
-    if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">💛 HJH</span>');
+    if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">HJH</span>');
     if (topic.type === 'text_only') badges.push('<span class="topic-badge text-only">📄 Text</span>');
 
     const notesHTML = topic.notes ? `
@@ -2460,6 +2486,16 @@
     viewEl().innerHTML = `
       <a class="back-btn" href="#/">← Home</a>
       <h2 style="font-size:22px;margin-bottom:12px">Sync to GitHub</h2>
+      <div class="sync-panel">
+        <h3>Role / Admin mode</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer'}</strong>.
+          ${isAdmin() ? 'Edit buttons appear across all modules.' : 'No edit buttons will show until you enable admin.'}
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Switch to viewer' : 'Enable admin mode'}</button>
+        </div>
+      </div>
       <div class="sync-panel">
         <h3>GitHub Personal Access Token</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
