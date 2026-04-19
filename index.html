@@ -939,10 +939,15 @@
     { id: 'tips',      name: 'Tips & Guide',      icon: '📙', accent: '#e67e22' },
     { id: 'textbook',  name: 'Textbook',          icon: '📕', accent: '#8e44ad' },
   ];
-  const SUBMISSION_URL_DEFAULT = '';
+  // Default built-in mailto channel. Per-device Settings override takes priority.
+  const SUBMISSION_URL_DEFAULT =
+    'mailto:fantasy7386@gmail.com?subject=Pocket%20URO%20建議&body=姓名：%0A單位：%0A類別（Patient%20Ed%20/%20PPu%20Notes%20/%20Tips%20/%20Textbook）：%0A標題：%0A建議內容：%0A參考資料：';
   const LS_SUBMISSION_KEY = 'puro_submission_url';
   function submissionUrl() {
-    return localStorage.getItem(LS_SUBMISSION_KEY) || SUBMISSION_URL_DEFAULT;
+    const v = localStorage.getItem(LS_SUBMISSION_KEY);
+    // Empty string in localStorage = user explicitly cleared; treat as disabled
+    if (v === '') return '';
+    return v || SUBMISSION_URL_DEFAULT;
   }
 
   /* ======================================================
@@ -1799,7 +1804,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.4.1 · submission URL accepts mailto: / tel:</div>
+        <div class="brand-tag" id="brand-tag">v2.4.2 · built-in mailto default · submission always ready</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3626,18 +3631,19 @@
       <div class="sync-panel">
         <h3>Submission form URL (optional)</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
-          If set, Home shows a "📝 Suggest content" link pointing here (for residents to suggest additions without editing).
+          Home's <strong>📝 Suggest content</strong> link points here.
+          Built-in default is a <code>mailto:</code> to the project admin — override below if you want a different target on this device.
         </div>
         <div class="edit-field" style="margin-bottom:8px">
           <input type="text" id="submission-url-input" value="${escAttr(submissionUrl())}" placeholder="https://forms.gle/… or mailto:you@x.com?subject=…" inputmode="url" autocapitalize="off" autocorrect="off">
         </div>
         <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:8px;line-height:1.5">
-          Accepts <code>https://</code> form URLs or <code>mailto:</code> / <code>tel:</code>.<br>
-          Example: <code>mailto:you@example.com?subject=Pocket%20URO%20建議&body=類別：%0A標題：%0A內容：</code>
+          Accepts <code>https://</code> form URLs or <code>mailto:</code> / <code>tel:</code>.
         </div>
         <div class="action-bar" style="margin:0">
           <button class="btn btn-secondary" onclick="window.__saveSubmissionUrl()">Save URL</button>
-          ${submissionUrl() ? `<button class="btn btn-danger" onclick="window.__clearSubmissionUrl()">Clear</button>` : ''}
+          <button class="btn btn-ghost" onclick="window.__resetSubmissionUrl()">Reset to default</button>
+          <button class="btn btn-danger" onclick="window.__clearSubmissionUrl()">Hide link</button>
         </div>
       </div>
       <div class="sync-panel">
@@ -3740,9 +3746,17 @@
     showToast('Submission URL saved', 'success');
     router();
   };
-  window.__clearSubmissionUrl = function() {
+  window.__resetSubmissionUrl = function() {
     localStorage.removeItem(LS_SUBMISSION_KEY);
-    showToast('Cleared', 'success');
+    showToast('Reset to built-in default', 'success');
+    router();
+  };
+  window.__clearSubmissionUrl = function() {
+    // Distinct from default: empty string = "explicitly disabled on this device"
+    // so Home won't show the link even though the built-in default exists.
+    if (!confirm('Hide the Suggest-content link on this device? (Default is a mailto: to the project admin. Choosing OK hides it; leave blank to use default.)')) return;
+    localStorage.setItem(LS_SUBMISSION_KEY, '');
+    showToast('Submission link hidden on this device', 'success');
     router();
   };
 
