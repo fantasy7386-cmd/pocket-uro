@@ -1804,7 +1804,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.4.2 · built-in mailto default · submission always ready</div>
+        <div class="brand-tag" id="brand-tag">v2.4.3 · viewer-aware Settings — admin-only sections hidden for URO code</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3549,13 +3549,59 @@
   /* ======================================================
      Sync panel
   ====================================================== */
+  function adminSyncSectionsHTML(hasToken, dirty) {
+    const dirtyList = dirty.length === 0
+      ? '<div style="font-size:13px;color:var(--c-text-muted)">No local edits waiting to sync.</div>'
+      : `
+          <ul class="dirty-list">
+            ${dirty.map(d => {
+              const obj = d.id === 'data' ? state.data : d.id === 'notes' ? state.notes : d.id === 'tips' ? state.tips : state.tb[d.id];
+              let bytes = 0;
+              try {
+                const clone = JSON.parse(JSON.stringify(obj));
+                delete clone._updated_at;
+                bytes = new Blob([JSON.stringify(clone, null, 2)]).size;
+              } catch {}
+              const kb = bytes > 0 ? (bytes / 1024).toFixed(1) + ' KB' : '?';
+              return `<li><strong>${esc(d.label)}</strong> → <code>${esc(d.path)}</code> <span style="color:var(--c-text-muted)">(${kb})</span></li>`;
+            }).join('')}
+          </ul>
+          <div class="action-bar" style="margin:0;gap:8px">
+            <button class="btn btn-secondary" onclick="window.__discardLocal()" style="flex:0 0 auto">Discard local</button>
+            <button class="btn btn-success" style="flex:1" onclick="window.__syncAll()">Sync ${dirty.length} file${dirty.length === 1 ? '' : 's'} → GitHub</button>
+          </div>
+        `;
+    return `
+      <div class="sync-panel">
+        <h3>GitHub Personal Access Token</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          ${hasToken ? 'Token is set in localStorage (this device only).' : 'No token saved yet. You will be prompted on first sync.'}
+        </div>
+        <div class="action-bar" style="margin:0">
+          ${hasToken ? '<button class="btn btn-danger" onclick="window.__clearToken()">Remove token</button>' : ''}
+          <button class="btn btn-secondary" onclick="window.__setToken()">${hasToken ? 'Replace token' : 'Set token'}</button>
+        </div>
+      </div>
+      <div class="sync-panel">
+        <h3>Pending changes (preview)</h3>
+        ${dirtyList}
+      </div>
+    `;
+  }
+
   function renderSyncPanel() {
-    setHeader('Sync');
+    const adminView = isAdminCode();
+    setHeader(adminView ? 'Settings · Sync' : 'Settings');
     const dirty = dirtyDatasets();
     const hasToken = !!localStorage.getItem(LS.TOKEN);
     viewEl().innerHTML = `
       <a class="back-btn" href="#/">← Home</a>
-      <h2 style="font-size:22px;margin-bottom:12px">Sync to GitHub</h2>
+      <h2 style="font-size:22px;margin-bottom:12px">${adminView ? 'Sync to GitHub' : 'Settings'}</h2>
+      ${!adminView ? `
+        <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
+          You're signed in with a viewer code (<code>${esc(currentCode())}</code>). Admin-only settings (GitHub token, sync, submission URL) are hidden.
+        </div>
+      ` : ''}
       <div class="sync-panel">
         <h3>Appearance</h3>
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
@@ -3586,38 +3632,7 @@
           </div>
         ` : ''}
       </div>
-      <div class="sync-panel">
-        <h3>GitHub Personal Access Token</h3>
-        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
-          ${hasToken ? 'Token is set in localStorage (this device only).' : 'No token saved yet. You will be prompted on first sync.'}
-        </div>
-        <div class="action-bar" style="margin:0">
-          ${hasToken ? '<button class="btn btn-danger" onclick="window.__clearToken()">Remove token</button>' : ''}
-          <button class="btn btn-secondary" onclick="window.__setToken()">${hasToken ? 'Replace token' : 'Set token'}</button>
-        </div>
-      </div>
-      <div class="sync-panel">
-        <h3>Pending changes (preview)</h3>
-        ${dirty.length === 0 ? '<div style="font-size:13px;color:var(--c-text-muted)">No local edits waiting to sync.</div>' : `
-          <ul class="dirty-list">
-            ${dirty.map(d => {
-              const obj = d.id === 'data' ? state.data : d.id === 'notes' ? state.notes : d.id === 'tips' ? state.tips : state.tb[d.id];
-              let bytes = 0;
-              try {
-                const clone = JSON.parse(JSON.stringify(obj));
-                delete clone._updated_at;
-                bytes = new Blob([JSON.stringify(clone, null, 2)]).size;
-              } catch {}
-              const kb = bytes > 0 ? (bytes / 1024).toFixed(1) + ' KB' : '?';
-              return `<li><strong>${esc(d.label)}</strong> → <code>${esc(d.path)}</code> <span style="color:var(--c-text-muted)">(${kb})</span></li>`;
-            }).join('')}
-          </ul>
-          <div class="action-bar" style="margin:0;gap:8px">
-            <button class="btn btn-secondary" onclick="window.__discardLocal()" style="flex:0 0 auto">Discard local</button>
-            <button class="btn btn-success" style="flex:1" onclick="window.__syncAll()">Sync ${dirty.length} file${dirty.length === 1 ? '' : 's'} → GitHub</button>
-          </div>
-        `}
-      </div>
+      ${adminView ? adminSyncSectionsHTML(hasToken, dirty) : ''}
       <div class="sync-panel">
         <h3>Data · Reload from server</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -3628,6 +3643,7 @@
           <button class="btn btn-secondary btn-block" onclick="window.__reloadFromServer()">🔄 Reload from server</button>
         </div>
       </div>
+      ${adminView ? `
       <div class="sync-panel">
         <h3>Submission form URL (optional)</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -3646,6 +3662,7 @@
           <button class="btn btn-danger" onclick="window.__clearSubmissionUrl()">Hide link</button>
         </div>
       </div>
+      ` : ''}
       <div class="sync-panel">
         <h3>Offline · Download all chapters</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -3658,6 +3675,7 @@
         <div class="dl-progress" id="dl-progress" style="display:none"><div class="dl-progress-bar" id="dl-progress-bar"></div></div>
         <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px"></div>
       </div>
+      ${adminView ? `
       <div class="sync-panel">
         <h3>Export JSON (offline backup)</h3>
         <div class="action-bar" style="margin:0;flex-wrap:wrap">
@@ -3667,6 +3685,7 @@
           ${Object.keys(state.tb).map(tbId => `<button class="btn btn-secondary" onclick="window.__exportJSON('${esc(tbId)}')">📕 ${esc(tbId)}</button>`).join('')}
         </div>
       </div>
+      ` : ''}
     `;
   }
 
