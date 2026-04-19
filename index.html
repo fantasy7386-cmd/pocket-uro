@@ -728,12 +728,28 @@
     showToast._t = setTimeout(() => t.classList.add('hidden'), 2600);
   }
 
+  function toTerms(query) {
+    if (!query) return [];
+    const arr = Array.isArray(query) ? query : String(query).trim().split(/\s+/);
+    return arr.map(t => String(t).trim()).filter(Boolean);
+  }
+
+  function matchAllTerms(text, terms) {
+    if (!terms || !terms.length) return false;
+    const low = (text || '').toLowerCase();
+    return terms.every(t => low.includes(String(t).toLowerCase()));
+  }
+
   function highlightText(text, query) {
     if (!query) return esc(text);
-    const q = query.trim();
-    if (q.length < 1) return esc(text);
-    const safe = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return esc(text).replace(new RegExp(safe, 'gi'), m => '<mark class="highlight">' + m + '</mark>');
+    const terms = toTerms(query);
+    if (!terms.length) return esc(text);
+    let out = esc(text);
+    for (const t of terms) {
+      const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp(escaped, 'gi'), m => '<mark class="highlight">' + m + '</mark>');
+    }
+    return out;
   }
 
   function isHJHSlide(s) {
@@ -745,15 +761,21 @@
 
   function previewAround(text, query, radius = 80) {
     if (!text || !query) return '';
+    const terms = toTerms(query);
+    if (!terms.length) return '';
     const low = text.toLowerCase();
-    const i = low.indexOf(query.toLowerCase());
-    if (i < 0) return '';
-    const from = Math.max(0, i - radius);
-    const to = Math.min(text.length, i + query.length + radius);
+    let bestIdx = -1, bestTerm = null;
+    for (const t of terms) {
+      const idx = low.indexOf(t.toLowerCase());
+      if (idx >= 0 && (bestIdx === -1 || idx < bestIdx)) { bestIdx = idx; bestTerm = t; }
+    }
+    if (bestIdx < 0) return '';
+    const from = Math.max(0, bestIdx - radius);
+    const to = Math.min(text.length, bestIdx + bestTerm.length + radius);
     let snippet = text.slice(from, to);
     if (from > 0) snippet = '…' + snippet;
     if (to < text.length) snippet = snippet + '…';
-    return highlightText(snippet, query);
+    return highlightText(snippet, terms);
   }
 
   /* ======================================================
@@ -1168,7 +1190,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.5 · AND-term search · collapsible HJH summary</div>
+        <div class="brand-tag">v1.5.1 · search fix · AND-term · collapsible HJH</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">

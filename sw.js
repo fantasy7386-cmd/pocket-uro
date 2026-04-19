@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v1.5.0';
+const CACHE_VERSION = 'pocket-uro-v1.5.1';
 
 const CORE_ASSETS = [
   './',
