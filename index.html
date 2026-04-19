@@ -1168,7 +1168,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.4 · HJH slide-level · search jumps to matching slide</div>
+        <div class="brand-tag">v1.5 · AND-term search · collapsible HJH summary</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2057,10 +2057,15 @@
     // HJH slide summary for quick navigation
     const hjhLabels = hjhSlideLabels(visibleSlides);
     const hjhSummary = hjhLabels.length ? `
-      <div style="margin-bottom:10px;padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:12px;color:#8b5a00">
-        <strong>HJH slides in this topic:</strong>
-        ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="display:inline-block;margin:0 4px;padding:2px 8px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none">${esc(String(s.slide_num))}</a>` : '').join('')}
-      </div>
+      <details class="hjh-summary" style="margin-bottom:10px">
+        <summary style="padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:13px;color:#8b5a00;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
+          <span><strong>${hjhLabels.length} HJH slide${hjhLabels.length > 1 ? 's' : ''}</strong> in this topic</span>
+          <span style="font-size:11px;opacity:.7">tap to show ▸</span>
+        </summary>
+        <div style="padding:8px 4px;display:flex;flex-wrap:wrap;gap:6px">
+          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="padding:4px 10px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none;font-size:12px">${esc(String(s.slide_num))}</a>` : '').join('')}
+        </div>
+      </details>
     ` : '';
 
     const notesHTML = topic.notes ? `
@@ -2438,42 +2443,42 @@
     const host = el('search-results');
     if (!host) return;
     if (!q || q.length < 2) {
-      host.innerHTML = '<div class="placeholder"><div class="big">🔎</div><strong>Type 2+ characters to search</strong><small>Searches across all four modules</small></div>';
+      host.innerHTML = '<div class="placeholder"><div class="big">🔎</div><strong>Type 2+ characters to search</strong><small>Multi-word query = AND match (all words must appear)</small></div>';
       return;
     }
-    const query = q.toLowerCase();
+    const terms = toTerms(q);
     const results = {
       education: [], notes: [], tips: [], textbook: [],
     };
 
     // Patient Ed
     for (const a of state.data.articles) {
-      const hay = (a.title + ' ' + (a.text || '') + ' ' + (a.keywords || []).join(' ')).toLowerCase();
-      if (hay.includes(query)) {
-        results.education.push({ id: a.id, title: a.title, preview: previewAround(a.text || '', q), href: '#/education/a/' + a.id });
+      const hay = a.title + ' ' + (a.text || '') + ' ' + (a.keywords || []).join(' ');
+      if (matchAllTerms(hay, terms)) {
+        results.education.push({ id: a.id, title: a.title, preview: previewAround(a.text || '', terms), href: '#/education/a/' + a.id });
       }
     }
     // PPu Notes
     for (const s of state.notes.sections) {
       const flat = s.full_title + ' ' + (s.subsections || []).map(sub => sub.title + ' ' + (sub.items || []).join(' ')).join(' ');
-      if (flat.toLowerCase().includes(query)) {
-        results.notes.push({ id: s.id, title: s.full_title, preview: previewAround(flat, q), href: '#/notes/s/' + s.id });
+      if (matchAllTerms(flat, terms)) {
+        results.notes.push({ id: s.id, title: s.full_title, preview: previewAround(flat, terms), href: '#/notes/s/' + s.id });
       }
     }
     // Tips & Guide
     for (const chapter of state.tips.sections) {
       for (const sub of (chapter.subsections || [])) {
-        const hay = (sub.title + ' ' + (sub.markdown || '')).toLowerCase();
-        if (hay.includes(query)) {
+        const hay = sub.title + ' ' + (sub.markdown || '');
+        if (matchAllTerms(hay, terms)) {
           results.tips.push({
             id: sub.id, title: chapter.number + '. ' + chapter.title + ' › ' + sub.title,
-            preview: previewAround(sub.markdown || '', q),
+            preview: previewAround(sub.markdown || '', terms),
             href: '#/tips/sub/' + chapter.id + '/' + sub.id,
           });
         }
       }
     }
-    // Textbook (loaded chapters only) — per-slide granularity for slide-based topics
+    // Textbook (loaded chapters only) — per-slide granularity + AND-term matching
     for (const tbId of Object.keys(state.tb)) {
       const ch = state.tb[tbId];
       for (const sec of (ch.sections || [])) {
@@ -2482,25 +2487,24 @@
           let matchedSlideIdx = -1;
           let matched = false;
 
-          // Check topic-level text (title, notes, text_only content)
-          const topicHay = (t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '')).toLowerCase();
-          if (topicHay.includes(query)) {
+          // Topic-level text
+          const topicHay = t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '');
+          if (matchAllTerms(topicHay, terms)) {
             matched = true;
-            preview = previewAround(t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || ''), q);
+            preview = previewAround(topicHay, terms);
           }
 
-          // Check per-slide — find FIRST matching slide
+          // Per-slide (find FIRST slide where ALL terms match)
           if (t.type !== 'text_only') {
             const visible = (t.slides || []).filter(s => !s.hidden);
             for (let si = 0; si < visible.length; si++) {
               const s = visible[si];
-              const slideHay = ((s.text || []).join(' ') + ' ' + (s.ocr_text || '')).toLowerCase();
-              if (slideHay.includes(query)) {
+              const slideHay = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
+              if (matchAllTerms(slideHay, terms)) {
                 matched = true;
                 if (matchedSlideIdx === -1) {
                   matchedSlideIdx = si;
-                  const slideText = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
-                  preview = previewAround(slideText, q);
+                  preview = previewAround(slideHay, terms);
                 }
               }
             }
