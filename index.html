@@ -236,7 +236,7 @@
   const appEl       = document.getElementById('app');
 
   function tryShowApp() {
-    const saved = localStorage.getItem('ppu_access_code');
+    const saved = localStorage.getItem('puro_access_code');
     if (saved && VALID_CODES.includes(saved)) {
       openApp();
       return true;
@@ -253,7 +253,7 @@
   function submitCode() {
     const code = gateInput.value.trim().toUpperCase();
     if (VALID_CODES.includes(code)) {
-      localStorage.setItem('ppu_access_code', code);
+      localStorage.setItem('puro_access_code', code);
       openApp();
     } else {
       gateError.textContent = '員編無效';
