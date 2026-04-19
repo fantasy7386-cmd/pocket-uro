@@ -1947,7 +1947,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.1 · slide-level exam badge + Hide/Unhide for misfiled slides</div>
+        <div class="brand-tag" id="brand-tag">v3.2 · Move slide to another topic — proper fix for misfiled data</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2732,6 +2732,10 @@
       await loadChapter(parts[1]);
       return renderTbEditTextTopic(parts[1], parts[2], accent);
     }
+    if (parts[0] === 'move' && parts[1] && parts[2] && parts[3] !== undefined) {
+      await loadChapter(parts[1]);
+      return renderTbMoveSlide(parts[1], parts[2], parseInt(parts[3]), accent);
+    }
     renderNotFound();
   }
 
@@ -2998,8 +3002,9 @@
         </div>
         ${admin ? `
           <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
-            <button class="btn ${isHidden ? 'btn-success' : 'btn-danger'}" style="flex:1;min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '👁 Unhide slide' : '🙈 Hide this slide (misfiled?)'}</button>
+            <button class="btn btn-primary" style="flex:1 1 180px;min-height:unset;padding:8px 12px;font-size:13px" onclick="location.hash='#/textbook/move/${esc(tbId)}/${esc(topicId)}/${idx}'">📂 Move to another topic…</button>
             <button class="btn btn-secondary" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark as exam'}</button>
+            <button class="btn ${isHidden ? 'btn-success' : 'btn-ghost'}" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '👁 Unhide' : '🙈 Hide'}</button>
           </div>
         ` : ''}
         ${(s.text && s.text.length) ? `
@@ -3145,6 +3150,101 @@
       </div>
     `;
   }
+
+  function renderTbMoveSlide(tbId, topicId, slideIdx, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found || !isAdmin()) return renderNotFound();
+    const admin = true;
+    // Use full slides array (admin sees hidden) so index is stable from viewer
+    const srcSlides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
+    const slide = srcSlides[slideIdx];
+    if (!slide) return renderNotFound();
+
+    const ch = found.ch;
+    const allTopics = [];
+    (ch.sections || []).forEach((sec, si) => {
+      (sec.topics || []).forEach((t, ti) => {
+        if (t.id !== topicId) allTopics.push({ sec, t, si, ti });
+      });
+    });
+
+    setHeader('Move slide', { label: found.topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
+
+    const textPreview = (slide.text || []).slice(0, 3).map(esc).join(' · ');
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:18px;margin-bottom:8px">📂 Move slide to another topic</h2>
+        <div class="slide-viewer" style="padding:8px">
+          <div class="slide-frame" style="max-height:220px">
+            <img src="${escAttr(slide.slide_image || '')}" alt="" style="max-height:220px" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(slide.slide_num))}')">
+          </div>
+          <div style="margin-top:8px;font-size:13px">
+            <strong>#${esc(String(slide.slide_num))}</strong>${isHJHSlide(slide) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 6px">HJH</span>' : ''}${slide.has_exam_question ? ' <span class="topic-badge exam" style="font-size:10px;padding:1px 6px">📝 Exam</span>' : ''}
+          </div>
+          <div style="margin-top:6px;font-size:12px;color:var(--c-text-muted);line-height:1.5">
+            ${textPreview || '<em>(no captions)</em>'}
+          </div>
+          <div style="margin-top:8px;padding:8px 10px;background:var(--c-surface-alt);border-radius:var(--radius-sm);font-size:12px">
+            <strong>Currently in:</strong> ${esc(found.sec.title)} › ${esc(found.topic.title)}
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <input type="text" id="move-filter" class="search-bar" placeholder="Filter topics by title…" autocomplete="off" style="margin-bottom:4px">
+          <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:8px">Tap a topic to move the slide there (slide appended to end; you can reorder later if needed).</div>
+          <div id="move-list" class="list-section"></div>
+        </div>
+      </div>
+    `;
+    renderMoveListInto(tbId, topicId, slideIdx, allTopics);
+    const filt = el('move-filter');
+    if (filt) {
+      filt.addEventListener('input', () => {
+        const q = filt.value.trim().toLowerCase();
+        const filtered = q ? allTopics.filter(o => o.t.title.toLowerCase().includes(q) || o.sec.title.toLowerCase().includes(q)) : allTopics;
+        renderMoveListInto(tbId, topicId, slideIdx, filtered);
+      });
+    }
+  }
+
+  function renderMoveListInto(tbId, topicId, slideIdx, topics) {
+    const host = el('move-list');
+    if (!host) return;
+    if (!topics.length) { host.innerHTML = '<div class="placeholder" style="padding:20px"><small>No topics match filter</small></div>'; return; }
+    host.innerHTML = topics.map(o => `
+      <a class="list-card" href="#" onclick="event.preventDefault(); window.__confirmMoveSlide('${esc(tbId)}','${esc(topicId)}',${slideIdx},'${esc(o.t.id)}')">
+        <div style="flex:1;min-width:0">
+          <div class="title">${esc(o.t.title)}${o.t.has_hjh_content ? ' <span class="topic-badge hjh" style="font-size:9px;padding:1px 5px">HJH</span>' : ''}</div>
+          <div class="meta">${esc(o.sec.title)} · ${(o.t.slides || []).length} slides</div>
+        </div>
+        <span class="chevron">→</span>
+      </a>
+    `).join('');
+  }
+
+  window.__confirmMoveSlide = function(tbId, topicId, slideIdx, targetTopicId) {
+    const src = findTopic(tbId, topicId);
+    const target = findTopic(tbId, targetTopicId);
+    if (!src || !target) return showToast('Topic not found', 'error');
+    const srcArr = src.topic.slides || [];
+    const slide = srcArr[slideIdx];
+    if (!slide) return showToast('Slide not found', 'error');
+    if (!confirm('Move slide #' + slide.slide_num + ' to "' + target.topic.title + '"?\n\n(Slide appends to end of target topic. Reversible — you can move back anytime.)')) return;
+    srcArr.splice(slideIdx, 1);
+    target.topic.slides = target.topic.slides || [];
+    target.topic.slides.push(slide);
+    // Keep slide_count metadata in sync (used by topic list meta)
+    src.topic.slide_count = srcArr.length;
+    target.topic.slide_count = target.topic.slides.length;
+    markDirty(tbId);
+    showToast('Moved to: ' + target.topic.title, 'success');
+    // Return to source topic (if it still has slides) else its section
+    if (srcArr.length > 0) {
+      navigate('#/textbook/t/' + tbId + '/' + topicId);
+    } else {
+      navigate('#/textbook/c/' + tbId + '/s/' + src.secIdx);
+    }
+  };
 
   window.__toggleSlideHidden = function(tbId, topicId, slideIdx) {
     const found = findTopic(tbId, topicId);
