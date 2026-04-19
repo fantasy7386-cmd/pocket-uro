@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v2.0.0';
+const CACHE_VERSION = 'pocket-uro-v2.1.0';
 
 const CORE_ASSETS = [
   './',
@@ -10,6 +10,9 @@ const CORE_ASSETS = [
   './icon-512.png?v=3',
   './apple-touch-icon.png?v=3',
   './lib/marked.min.js?v=3',
+  './data.json',
+  './teaching-notes.json',
+  './tips-guide.json',
 ];
 
 self.addEventListener('install', (event) => {

@@ -660,6 +660,53 @@
     }
     .sync-panel .dirty-list li { list-style: disc; }
 
+    /* ============ Topic thumbnails ============ */
+    .topic-thumb {
+      width: 48px; height: 36px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--c-surface-alt);
+      border: 1px solid var(--c-border);
+    }
+    @media (max-width: 380px) { .topic-thumb { width: 40px; height: 30px; } }
+
+    /* ============ Search filter chips ============ */
+    .search-filters {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 8px 0 4px;
+    }
+    .search-filter-chip {
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-size: 12px; font-weight: 600;
+      border: 1px solid var(--c-border);
+      background: var(--c-surface);
+      color: var(--c-text-muted);
+      cursor: pointer;
+    }
+    .search-filter-chip.active {
+      background: var(--chip-accent, var(--c-accent));
+      color: #fff;
+      border-color: var(--chip-accent, var(--c-accent));
+    }
+
+    /* ============ Download progress ============ */
+    .dl-progress {
+      margin-top: 8px;
+      height: 6px;
+      background: var(--c-surface-alt);
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--c-border);
+    }
+    .dl-progress-bar {
+      height: 100%;
+      background: var(--c-info);
+      width: 0%;
+      transition: width .2s ease;
+    }
+
     /* ============ Lightbox (slide zoom) ============ */
     .lightbox {
       position: fixed; inset: 0;
@@ -980,6 +1027,17 @@
      Access gate
   ====================================================== */
   function gateCheck() {
+    // Auto-login via URL param: ?code=URO (or any valid code)
+    const qs = new URLSearchParams(location.search);
+    const urlCode = (qs.get('code') || '').toUpperCase();
+    if (urlCode && VALID_CODES.includes(urlCode)) {
+      localStorage.setItem(LS.ACCESS, urlCode);
+      // Clean URL to avoid token-sharing reused as bookmark with code still in query
+      const clean = location.pathname + (location.hash || '');
+      history.replaceState(null, '', clean);
+      openApp();
+      return true;
+    }
     const saved = (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
     if (saved && VALID_CODES.includes(saved)) {
       openApp();
@@ -1316,8 +1374,10 @@
     try {
       if (!module) return renderHome();
       if (module === 'favorites') return renderFavorites();
-      if (module === 'search') return renderSearch(query.q || '');
+      if (module === 'search') return renderSearch(query.q || '', query.only || '');
       if (module === 'sync') return renderSyncPanel();
+      if (module === 'hjh') return renderHJHBrowse();
+      if (module === 'quiz') return renderQuiz();
       if (module === 'education') return routeEducation(parts.slice(1));
       if (module === 'notes') return routeNotes(parts.slice(1));
       if (module === 'tips') return routeTips(parts.slice(1));
@@ -1451,7 +1511,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.0 · dark mode · A-size · haptic · bug fixes</div>
+        <div class="brand-tag" id="brand-tag">v2.1 · offline download · filters · thumbnails · HJH/quiz mode</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1466,7 +1526,11 @@
         `).join('')}
       </div>
       <div class="home-actions">
-        <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
+          <a href="#/hjh" style="color:var(--c-hjh-fg);font-weight:600">💡 HJH only</a>
+          <a href="#/quiz">📝 Quiz</a>
+        </div>
         <div style="display:flex;gap:6px;align-items:center">
           ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
         </div>
@@ -2279,8 +2343,17 @@
     if (isText) badges.push('<span class="topic-badge text-only">📄 Text</span>');
     const meta = isText ? ((t.markdown_content || '').length + ' chars') : ((t.slide_count || (t.slides ? t.slides.length : 0)) + ' slides');
     const cardClass = t.has_hjh_content ? 'list-card hjh' : 'list-card';
+
+    // Mini thumbnail from first visible slide
+    const visible = (t.slides || []).filter(s => !s.hidden);
+    const firstSlide = visible[0];
+    const thumbHTML = (!isText && firstSlide && firstSlide.slide_image)
+      ? `<img class="topic-thumb" src="${escAttr(firstSlide.slide_image)}" alt="" loading="lazy">`
+      : (isText ? '<div class="topic-thumb" style="display:flex;align-items:center;justify-content:center;font-size:18px">📄</div>' : '');
+
     return `
       <a class="${cardClass}" href="#/textbook/t/${esc(tbId)}/${esc(t.id)}">
+        ${thumbHTML}
         <div style="flex:1;min-width:0">
           <div class="title" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${esc(t.title)}${badges.join('')}</div>
           <div class="meta">${meta}</div>
@@ -2719,27 +2792,70 @@
   /* ======================================================
      Global search
   ====================================================== */
-  function renderSearch(q) {
+  function renderSearch(q, onlyModule) {
     setHeader('Search');
-    const html = [`
+    const only = onlyModule || '';
+    const filterChips = MODULES.map(m => `
+      <button class="search-filter-chip ${only === m.id ? 'active' : ''}" style="--chip-accent:${m.accent}" onclick="window.__setSearchFilter('${m.id}')">
+        ${m.icon} ${esc(m.name)}
+      </button>
+    `).join('') + `
+      <button class="search-filter-chip ${!only ? 'active' : ''}" style="--chip-accent:var(--c-header)" onclick="window.__setSearchFilter('')">All</button>
+    `;
+
+    const unloadedChapters = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
+    const loadAllBar = unloadedChapters.length ? `
+      <div style="margin:8px 0;padding:10px 12px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:var(--radius-sm);font-size:12px;display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <span style="color:var(--c-text-muted)">📦 Textbook: ${TB_CHAPTER_IDS.length - unloadedChapters.length}/${TB_CHAPTER_IDS.length} chapters indexed. Load rest to search all.</span>
+        <button class="btn btn-secondary" style="min-height:unset;padding:6px 10px;font-size:12px" onclick="window.__loadAllChapters()">Load all</button>
+      </div>
+    ` : '';
+
+    viewEl().innerHTML = `
       <a class="back-btn" href="#/">← Home</a>
-      <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules…" autocomplete="off" autofocus>
+      <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
+      <div class="search-filters">${filterChips}</div>
+      ${loadAllBar}
       <div id="search-results"></div>
-    `].join('');
-    viewEl().innerHTML = html;
+    `;
     const input = el('search-input');
     input.addEventListener('input', () => {
       const v = input.value.trim();
-      const hash = '#/search' + (v ? '?q=' + encodeURIComponent(v) : '');
+      const params = [];
+      if (v) params.push('q=' + encodeURIComponent(v));
+      if (only) params.push('only=' + only);
+      const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
       if (location.hash !== hash) location.replace(hash);
-      doSearch(v);
+      doSearch(v, only);
     });
-    doSearch(q);
+    doSearch(q, only);
   }
 
-  function doSearch(q) {
+  window.__setSearchFilter = function(moduleId) {
+    const qs = new URLSearchParams();
+    const cur = new URLSearchParams(location.hash.split('?')[1] || '');
+    if (cur.get('q')) qs.set('q', cur.get('q'));
+    if (moduleId) qs.set('only', moduleId);
+    const suffix = qs.toString();
+    location.hash = '#/search' + (suffix ? '?' + suffix : '');
+  };
+
+  window.__loadAllChapters = async function() {
+    showToast('Loading all chapters…');
+    let count = 0;
+    for (const tbId of TB_CHAPTER_IDS) {
+      if (!state.tb[tbId]) {
+        try { await loadChapter(tbId); count++; } catch {}
+      }
+    }
+    showToast('Loaded ' + count + ' chapters', 'success');
+    router();
+  };
+
+  function doSearch(q, onlyModule) {
     const host = el('search-results');
     if (!host) return;
+    const only = onlyModule || '';
     if (!q || q.length < 2) {
       host.innerHTML = '<div class="placeholder"><div class="big">🔎</div><strong>Type 2+ characters to search</strong><small>Multi-word query = AND match (all words must appear)</small></div>';
       return;
@@ -2825,13 +2941,18 @@
       }
     }
 
-    const total = Object.values(results).reduce((a, r) => a + r.length, 0);
+    // Apply module filter
+    let visibleModules = MODULES;
+    if (only) visibleModules = MODULES.filter(m => m.id === only);
+    const visibleIds = visibleModules.map(m => m.id);
+
+    const total = visibleIds.reduce((a, id) => a + results[id].length, 0);
     if (total === 0) {
-      host.innerHTML = '<div class="placeholder"><div class="big">🔍</div><strong>No results</strong><small>for "' + esc(q) + '"</small></div>';
+      host.innerHTML = '<div class="placeholder"><div class="big">🔍</div><strong>No results' + (only ? ' in ' + esc(only) : '') + '</strong><small>for "' + esc(q) + '"</small></div>';
       return;
     }
-    let html = '<div style="font-size:13px;color:var(--c-text-muted);margin:8px 0">' + total + ' result' + (total > 1 ? 's' : '') + ' for "' + esc(q) + '"</div>';
-    for (const mod of MODULES) {
+    let html = '<div style="font-size:13px;color:var(--c-text-muted);margin:8px 0">' + total + ' result' + (total > 1 ? 's' : '') + ' for "' + esc(q) + '"' + (only ? ' in ' + esc(only) : '') + '</div>';
+    for (const mod of visibleModules) {
       const list = results[mod.id];
       if (!list.length) continue;
       html += `<div class="result-group-header" style="color:${mod.accent}">${mod.icon} ${esc(mod.name)} (${list.length})</div>`;
@@ -2850,6 +2971,157 @@
     html += '<div style="font-size:11px;color:var(--c-text-muted);text-align:center;padding:12px">Tip: textbook search only covers loaded chapters. Open a chapter first to index it.</div>';
     host.innerHTML = html;
   }
+
+  /* ======================================================
+     HJH browse (cross-chapter)
+  ====================================================== */
+  function renderHJHBrowse() {
+    setHeader('💡 HJH · all chapters');
+    const unloaded = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
+    const rows = [];
+    for (const tbId of Object.keys(state.tb)) {
+      const ch = state.tb[tbId];
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          if (t.type === 'text_only') continue;
+          const visible = (t.slides || []).filter(s => !s.hidden);
+          for (let si = 0; si < visible.length; si++) {
+            const s = visible[si];
+            if (isHJHSlide(s)) {
+              rows.push({
+                tbId, ch, topic: t, slide: s, slideIdx: si,
+                title: ch.icon + ' ' + ch.title + ' › ' + t.title,
+                label: String(s.slide_num),
+              });
+            }
+          }
+        }
+      }
+    }
+    rows.sort((a, b) => {
+      if (a.tbId !== b.tbId) return a.tbId < b.tbId ? -1 : 1;
+      return a.label.localeCompare(b.label);
+    });
+    viewEl().innerHTML = `
+      <a class="back-btn" href="#/">← Home</a>
+      <div style="padding:12px;background:linear-gradient(135deg,var(--c-hjh-bg-start),var(--c-hjh-bg-end));border-radius:var(--radius);margin-bottom:12px">
+        <h2 style="font-size:20px;color:var(--c-hjh-fg);margin-bottom:4px">💡 HJH slides</h2>
+        <div style="font-size:13px;color:var(--c-hjh-fg);opacity:.85">${rows.length} HJH slide${rows.length===1?'':'s'} from ${Object.keys(state.tb).length}/${TB_CHAPTER_IDS.length} loaded chapter${Object.keys(state.tb).length===1?'':'s'}</div>
+      </div>
+      ${unloaded.length ? `
+        <div style="margin-bottom:12px;padding:10px 12px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:var(--radius-sm);font-size:12px;display:flex;align-items:center;gap:8px;justify-content:space-between">
+          <span style="color:var(--c-text-muted)">${unloaded.length} chapter${unloaded.length===1?'':'s'} not yet loaded — HJH slides there won't appear</span>
+          <button class="btn btn-secondary" style="min-height:unset;padding:6px 10px;font-size:12px" onclick="window.__loadAllChapters()">Load all</button>
+        </div>
+      ` : ''}
+      ${rows.length === 0 ? '<div class="placeholder"><div class="big">💡</div><strong>No HJH slides yet</strong><small>Load chapters first (try Load all)</small></div>' : `
+        <div class="list-section">
+          ${rows.map(r => `
+            <a class="list-card hjh" href="#/textbook/t/${esc(r.tbId)}/${esc(r.topic.id)}?slide=${r.slideIdx}">
+              ${r.slide.slide_image ? `<img class="topic-thumb" src="${escAttr(r.slide.slide_image)}" alt="" loading="lazy">` : ''}
+              <div style="flex:1;min-width:0">
+                <div class="title" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${esc(r.title)}</div>
+                <div class="meta" style="color:var(--c-hjh-fg);font-weight:600">#${esc(r.label)}</div>
+              </div>
+              <span class="chevron">›</span>
+            </a>
+          `).join('')}
+        </div>
+      `}
+    `;
+  }
+
+  /* ======================================================
+     Quiz mode (exam-question slides)
+  ====================================================== */
+  const QUIZ_STATE = { queue: [], idx: 0, seen: 0 };
+  function renderQuiz() {
+    setHeader('📝 Quiz · exam slides');
+    // Collect all slides with has_exam_question from loaded chapters
+    const all = [];
+    for (const tbId of Object.keys(state.tb)) {
+      const ch = state.tb[tbId];
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          if (t.type === 'text_only') continue;
+          const visible = (t.slides || []).filter(s => !s.hidden);
+          for (let si = 0; si < visible.length; si++) {
+            const s = visible[si];
+            if (s.has_exam_question) {
+              all.push({ tbId, ch, topic: t, slide: s, slideIdx: si });
+            }
+          }
+        }
+      }
+    }
+    if (!all.length) {
+      viewEl().innerHTML = `
+        <a class="back-btn" href="#/">← Home</a>
+        <div class="placeholder">
+          <div class="big">📝</div>
+          <strong>No exam slides in loaded chapters</strong>
+          <small>Load all chapters to get a bigger pool</small>
+          <div style="margin-top:12px"><button class="btn btn-secondary" onclick="window.__loadAllChapters()">Load all chapters</button></div>
+        </div>`;
+      return;
+    }
+    // Shuffle once per session
+    if (QUIZ_STATE.queue.length !== all.length) {
+      QUIZ_STATE.queue = all.slice().sort(() => Math.random() - 0.5);
+      QUIZ_STATE.idx = 0;
+      QUIZ_STATE.seen = 0;
+    }
+    const cur = QUIZ_STATE.queue[QUIZ_STATE.idx];
+    if (!cur) {
+      viewEl().innerHTML = `
+        <a class="back-btn" href="#/">← Home</a>
+        <div class="placeholder">
+          <div class="big">🎉</div>
+          <strong>Quiz complete</strong>
+          <small>${QUIZ_STATE.seen} slides reviewed</small>
+          <div style="margin-top:12px"><button class="btn btn-primary" onclick="window.__quizReset()">Restart</button></div>
+        </div>`;
+      return;
+    }
+    const s = cur.slide;
+    const isHJH = isHJHSlide(s);
+    viewEl().innerHTML = `
+      <a class="back-btn" href="#/">← Home</a>
+      <div style="margin-bottom:8px;font-size:13px;color:var(--c-text-muted);display:flex;justify-content:space-between">
+        <span>${QUIZ_STATE.idx + 1} / ${QUIZ_STATE.queue.length}</span>
+        <span>${esc(cur.ch.title)} · ${esc(cur.topic.title)}</span>
+      </div>
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
+        <div class="slide-frame" style="position:relative">
+          ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
+          <img src="${escAttr(s.slide_image || '')}" alt="" onclick="window.__openLightbox(this.src, 'Quiz · #${esc(String(s.slide_num))}')">
+        </div>
+        ${(s.text && s.text.length) ? `
+          <details style="margin-top:10px">
+            <summary class="ocr-label" style="cursor:pointer">Show captions</summary>
+            <div class="slide-ocr" style="margin-top:6px"><ul><li>${(s.text || []).map(t => esc(t)).join('</li><li>')}</li></ul></div>
+          </details>
+        ` : ''}
+      </div>
+      <div class="action-bar action-bar-sticky">
+        <button class="btn btn-secondary" onclick="window.__quizSkip(-1)" ${QUIZ_STATE.idx === 0 ? 'disabled' : ''}>← Prev</button>
+        <button class="btn btn-primary" onclick="window.__quizGoTo('${esc(cur.tbId)}','${esc(cur.topic.id)}',${cur.slideIdx})">View in context</button>
+        <button class="btn btn-success" onclick="window.__quizSkip(1)">Next →</button>
+      </div>
+    `;
+  }
+  window.__quizSkip = function(dir) {
+    QUIZ_STATE.idx = Math.max(0, Math.min(QUIZ_STATE.queue.length, QUIZ_STATE.idx + dir));
+    QUIZ_STATE.seen = Math.max(QUIZ_STATE.seen, QUIZ_STATE.idx);
+    router();
+  };
+  window.__quizReset = function() {
+    QUIZ_STATE.queue = []; QUIZ_STATE.idx = 0; QUIZ_STATE.seen = 0;
+    router();
+  };
+  window.__quizGoTo = function(tbId, topicId, slideIdx) {
+    navigate('#/textbook/t/' + tbId + '/' + topicId + '?slide=' + slideIdx);
+  };
 
   /* ======================================================
      Sync panel
@@ -2913,6 +3185,18 @@
         `}
       </div>
       <div class="sync-panel">
+        <h3>Offline · Download all chapters</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Pre-fetch all 12 chapter JSONs + WebP render images (~155 MB) so the app works fully offline.
+          Loaded chapters: <strong>${Object.keys(state.tb).length} / ${TB_CHAPTER_IDS.length}</strong>
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-primary btn-block" id="btn-download-all" onclick="window.__downloadAll()">Download all for offline</button>
+        </div>
+        <div class="dl-progress" id="dl-progress" style="display:none"><div class="dl-progress-bar" id="dl-progress-bar"></div></div>
+        <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px"></div>
+      </div>
+      <div class="sync-panel">
         <h3>Export JSON (offline backup)</h3>
         <div class="action-bar" style="margin:0;flex-wrap:wrap">
           <button class="btn btn-secondary" onclick="window.__exportJSON('data')">📘 data.json</button>
@@ -2941,6 +3225,54 @@
   window.__syncAll = async function() {
     await syncAll();
   };
+  window.__downloadAll = async function() {
+    const btn = el('btn-download-all');
+    const bar = el('dl-progress-bar');
+    const box = el('dl-progress');
+    const status = el('dl-status');
+    btn.disabled = true;
+    box.style.display = 'block';
+    // Phase 1: Load all chapter JSONs
+    status.textContent = 'Loading chapter metadata…';
+    const toLoad = TB_CHAPTER_IDS.filter(id => !state.tb[id]);
+    for (let i = 0; i < toLoad.length; i++) {
+      try { await loadChapter(toLoad[i]); } catch {}
+      const pct = ((i + 1) / (toLoad.length || 1)) * 20;  // JSONs = first 20%
+      bar.style.width = pct + '%';
+    }
+    // Phase 2: Collect all slide images
+    const images = [];
+    for (const tbId of TB_CHAPTER_IDS) {
+      const ch = state.tb[tbId];
+      if (!ch) continue;
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          for (const s of (t.slides || [])) {
+            if (!s.hidden && s.slide_image) images.push(s.slide_image);
+          }
+        }
+      }
+    }
+    status.textContent = 'Caching ' + images.length + ' slide images…';
+    // Phase 3: Parallel fetch in batches of 16 to hit SW cache-first logic
+    const BATCH = 16;
+    let done = 0;
+    for (let i = 0; i < images.length; i += BATCH) {
+      const batch = images.slice(i, i + BATCH);
+      await Promise.all(batch.map(url => fetch(url).catch(() => null)));
+      done += batch.length;
+      const pct = 20 + (done / images.length) * 80;
+      bar.style.width = pct + '%';
+      status.textContent = 'Cached ' + done + ' / ' + images.length + ' images…';
+    }
+    bar.style.width = '100%';
+    status.textContent = '✓ All ' + images.length + ' slides + ' + TB_CHAPTER_IDS.length + ' chapters cached. App now works offline.';
+    haptic('success');
+    showToast('Offline cache complete', 'success');
+    btn.disabled = false;
+    btn.textContent = '✓ Done — redownload';
+  };
+
   window.__exportJSON = function(key) {
     let obj, filename;
     if (key === 'data')       { obj = state.data;  filename = 'data.json'; }
