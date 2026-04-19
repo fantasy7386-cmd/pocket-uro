@@ -1,0 +1,2195 @@
+{
+  "id": "tb_08",
+  "number": "VIII",
+  "title": "男性生殖",
+  "icon": "♂️",
+  "sections": [
+    {
+      "id": "tb_08_01",
+      "title": "不孕與性腺低下",
+      "source_file": "7-1 不孕與性腺低下(2022).pptx",
+      "total_slides": 59,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "男性生殖解剖",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "principal cells: 數量較多 absorptive and secretive",
+                "basal cells: derived from macrophages and precursors of principal cells",
+                "From caput to cauda",
+                "the height of the epithelium ↓ stereocilia ↓",
+                "diameter of the ductus and lumen ↑",
+                "Artery supply:",
+                "頭, 體: testicular artery  頭的血管最豐富",
+                "尾: deferential artery",
+                "Lymphatic:",
+                "頭, 體->preaortic nodes; 尾-> external iliac nodes",
+                "Nerve:",
+                "hypogastric plexus and pelvic plexus yield the intermediate and inferior spermatic nerves",
+                "Echo: normal RI值 0.55",
+                "12 - 20 efferent ductules and passes into the largest portion of epididymis, the caput.",
+                "Epididymis anatomy",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s02.webp",
+              "hidden": false,
+              "ocr_text": "Epididymis anatomy\n•principal cells:數量較多 absorptive and\nsecretive\n• basal cells: derived from macrophages and\nprecursors of principal cells\n•From caput to cauda\n• the height of the epithelium I stereocilia 小\n• diameter of the ductus and lumen 个\n• Artery supply:\n•頭，體：testicular artery 頭的血管最豐富\n•尾：deferential artery\n•Lymphatic:\n•頭，體->preaortic nodes;尾-＞external iliac\nnodes\n• Nerve:\n• hypogastric plexus and pelvic plexus yield the\nintermediate and inferior spermatic nerves\n•Echo: normal RI值 0.55\nEpididymis\nInitial segments\nCaput\nCorpus\nNarrow\nClear cell's\nPrincipal cells\nBasal cells\nFlow\nCauda\nVas\ndeferens\n12 -20 efferent ductules and passes\ninto the largest portion of\nepididymis, the caput.\nVas (ductus) deferens\nHead os\ntpdidyms.\nferent duxtule\nOty ot codigmis\n5\nFail of epididymis\nLioaentous remnant\nof proxessus vaginalis\nStraghs tubue (tubuli recto\nSeminiterous tubule\nVisceral laver\n- Turica albuginea\nPanetal yer\nTunixd albogines"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "vas deferens travels posteriorly along the spermatic cord, behind the vessels in the cord. enters the pelvis lateral to the epigastric vessels",
+                "30 and 35 cm in length",
+                "lumen of the vas deferens : 0.2 - 0.7 mm",
+                "Vas anatomy",
+                "outer adventitia connective tissue layer : blood vessels and small nerves",
+                "Within this connective tissue layer:  smooth muscle cells (縱環縱)",
+                "tall, thin columnar cells (Principal cells, pencil cells, and mitochondria-rich cells), basal cells",
+                "muscular layer progressively decreases from proximal to distal",
+                "Artery supply: deferential artery",
+                "Lymphatic: external and internal iliac nodes",
+                "Nerve: presacral nerve from the hypogastric nerve",
+                "海氏三角",
+                "從上往下看",
+                "從後往前看",
+                "左邊internal ring"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s03.webp",
+              "hidden": false,
+              "ocr_text": "Vas anatomy\n• vas deferens travels posteriorly along the\nspermatic cord, behind the vessels in the\ncord. enters the pelvis lateral to the\nepigastric vessels\n•30 and 35 cm in length\n•lumen of the vas deferens : 0.2 -0.7mm\n• outer adventitia connective tissue layer :\nblood vessels and small nerves\n• Within this connective tissue laver: smooth\nmuscle cells (縱環縱）\n• tall, thin columnar cells (Principal cells, pencil\ncells, and mitochondria-rich cells), basal cells\n• muscular layer progressively decreases from\nproximal to distal\n• Artery supply: deferential artery\n• Lymphatic: external and internal iliac nodes\n• Nerve: presacral nerve from the hypogastric\nherve\nAnterior superor llac spine\nlopubic tract\nTesticular vessels\nExtornal iac artory\nRoctus abdominis muscte\n海氏三角\ninguinal tnangle\nSupericial inguinal rig\nDuctus dolerens\n左邊internal ring\n從上往下看\nUrinary\nbladder\nDuctus deferens\nSeminal gland\nAmulo\nductus deferens\nDuct of\nseminal giand\nEjaculatory duct\nProstate gland\nProstatcvrethr\n從後往前看\nBulbo-urethral glands\nUrogenital diaphragm"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "3 to 4 mL, 5 to 7 cm in length and 1.5 cm in width.",
+                "三層: mucous membrane; (middle) collagenous; (outer) muscle layers: 80% of the wall thickness",
+                "artery: superior vesical artery-> vesiculodeferential artery;  internal iliac artery and inferior vesical artery",
+                "Vein: vesiculodeferential veins and inferior vesical plexus to pelvic venous plexus",
+                "Lymph: internal iliac nodes",
+                "Nerve: parasympathetic > pelvic plexus",
+                "sympathetic > hypogastric nerves and the superior lumbar nerves",
+                "seminal fluid佔80% of the semen, 其他來自prostate secretions, sperm",
+                "semenogelin I, a 52-kD protein => coagulating semen, seminal vesicle secretions may promote sperm motility, increase stability of sperm chromatin, and suppress immune activity in the female reproductive tract.",
+                "alkaline and contain fructose => provide nutrient energy for the sperm",
+                "Acidic ejaculate (pH <7.2) is associated with blockage or absence of seminal vesicles",
+                "Seminal vesicle anatomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s04.webp",
+              "hidden": false,
+              "ocr_text": "Seminal vesicle anatomy\n• 3to 4ml, 5to 7cm in length and 1.5 cm in width.\nSeminal vesicle\nSuperior portion covered by\nperitoneum (rectovesical pouch)\n•三層：mucous membrane; (middle) collagenous;\n(outer) muscle layers: 80% of the wall thickness\nPosterior view\nUreter\nOblique superior to the prostate\nUrinary\nbladder\n• artery: superior vesical artery-> vesiculodeferential\nartery; internal iliac artery and inferior vesical artery\nDuctus (Vas) ceferens\nJoins the vas deferens\n& fomms ejaculatory duct\n• Vein: vesiculodeferential veins and inferior vesical\nplexus to pelvic venous plexus\nSeminal gland\nAmpulla of\nductus deferens\nDuct of\nseminal gland\nEiaculatory duct\nProstrate oland\nProstatic urethra\n• Lymph:internal iliac nodes\n• Nerve: parasympathetic > pelvic plexus\nElongated structure between bladder &\nBulbo-urethral alands\nUGD\nrectum\n• sympathetic > hypogastric nerves and the superior\nlumbar nerves\n• seminal fiui石80% of the semen， 其他來自prostate secretions, sperm\n• semenogelin l, a 52-kD protein => coagulating semen, seminal vesicle\nsecretions may promote sperm motility, increase stability of sperm\nchromatin, and suppress immune activity in the female reproductive tract.\n• alkaline and contain fructose => provide nutrient energy for the sperm\n• Acidic ejaculate (pH <7.2) is associated with blockage or absence of seminal\nvesicles"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Ejaculatory Ducts anatomy",
+                "continuation of SV, except that the outer circular muscle layer does not extend into the ducts",
+                "extraprostatic portion; the middle intraprostatic segment; and a short distal segment",
+                "no valvelike, muscular “sphincter” at the ejaculatory duct orifice"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s05.webp",
+              "hidden": false,
+              "ocr_text": "Ejaculatory Ducts anatomy\n•continuation of SV, except that the outer circular\nmuscle layer does not extend into the ducts\n•extraprostatic portion; the middle intraprostatic\nsegment; and a short distal segment\n•no valvelike, muscular \"sphincterr at the\nejaculatory duct orifice"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "HPG axis",
+                "Spermatogenesis",
+                "@Inhibin, FSH, LH, T都是negative feedback",
+                "@只有T和PRL可以作用在hypothalamus",
+                "Inhibin 主要是抑制 FSH，而不直接抑制 LH",
+                "primary spermatocyte (進入減數分裂之前）",
+                "secondary: 1st分裂結束",
+                "Spermatic: 2nd 分裂結束"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s06.webp",
+              "hidden": false,
+              "ocr_text": "-ve\nHYPOTHALAMUS\n-ve\nHPG axis\n@lnhibin, FSH， LH，T都是negative feedback\n@只有T和PRL可以作用在hypothalamus\nANTERIOR\nPITUITARY\nGGLAND\n-ve\nLH\nFSH\nTESTIS\nIIntersticil cells\nSaminiferous eubules\nLLeydig cells)\n(sertoli cells\ninhibin 主要是抑制 FSH，而不直接抑制 LH\n•- Testosterone\nSperm\nInhibin\nepudibyni's\nciaye\nmttatian)\nSpermatogenesis\nprimary spermatocvte （進人減數分裂之前）\nsecondary: 1st分裂結束\nSpermatic: 2nd 分裂結束\nLumen\nSertoli cell\n9days\nSpermatoxon\nChan-morle)\n-Spermald\n^iA reiotd\nden\nSecondary spcrmatocyte ( 46)\nPrimary speraroye (46>\n1st meiote dwmn\nSpermatogonia\nBasal laminane\nFig. 12.2 Spermatogenesis in the seminiferous tubules of the tesuls."
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Spermatozoa",
+                "structure",
+                "＠Head: Nucleus在head, acrosomal cap裡面有很多lytic enzyme幫助溶解oocyte的細胞膜",
+                "＠Middle piece: 有許多mitochondria提供能量給tail擺動 (non-intron DNA)",
+                "＠Tail(9+2): 包含principal 和end piece",
+                "若失去acrosomal head->Globozoospermia",
+                "@spematozoa進到陰道後會完成最後maturation(capacitation), 之後和oocyte外面的zona pellucida結合, 之後ZP3啟動activation(Acrosomal Reaction/AR), head的lytic enzyme釋放溶開細胞膜, nucleus進入oocyte的cytoplasm完成受孕",
+                "Fertilization"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s07.webp",
+              "hidden": false,
+              "ocr_text": "Spermatozoa\nstructure\n@Head: Nucleus在head, acrosomal cap\n裡面有很多lytic enzyme 幫助溶解\noocyte的細胞膜\n@Middle piece： 有許多mitochondria提\n供能量給tail擺動 (non-intron DNA)\n@Tail(9+2)：包含principal 和end piece\n若失去acrosomalhead->Globoz0ospermia\nFertilization\n@spematozoa進到陰道後會完成\n最俊maturation(capacitation)，之\n後和oocyte外面的zona pellucida\n結合，之後zP3啟動\nactivation(Acrosomal\nReaction/ AR),head的lytic enzyme\n釋放溶開細胞膜,nucleus進人\noocyte的cytoplasm完成受孕\nCROET\n/Head\nPlasma membrane\nAcrosomal cap\nNucleus\nMiddle piece:\nProximal centniole-\nMitochondria\nMicrotubules\nTail\nPrincipal piece\nTail: gsld\nEnd piece\nFig. 12.3 Spermatozoa\nAcrosome intact sperm\nZP-binding\nZP-induced AR\nZP-penetration\nOolemma fusion\nIntravitelline processing"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "bulbourethral gland",
+                "0.1mL",
+                "0.1mL",
+                "0.5mL",
+                "2mL",
+                "Component",
+                "of semen",
+                "volume: 1.5-5mL",
+                "PH< 7.2",
+                "鹼性"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s08.webp",
+              "hidden": false,
+              "ocr_text": "Component\nof semen\nvolume: 1.5-5mL\nbulbourethral gland\njore-eaculate, saic acict 0.1ml\ngaactose, muCus)\nSecretion\nrrom the lestss.\n2.5%,\n0.1mL\n(speratozoa\n200 mlon- 500 miion\npor cacutator)\nPH<7.2\nDrastate socretion\n10-30%\n0.5mL\nmos.acd prospoatase, anic,\nspernine. fibrinalysin,\nprostate spectc antgen, .)\nSecretion from the\nseminal vesicles.\n2mL\n65-75 9\narostaalandirs. amino acids.\ntctose, avare, eruymes, riavins,\n鹼性 pxotcins. wtarin C"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "Infertility：初步與進階評估",
+          "slide_count": 10,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 9,
+              "text": [
+                "Infertility",
+                "定義：沒有避孕的一對夫妻在正常且持續有性行為的條件下持續一年仍然無法實現自發性懷孕",
+                "@健康的夫妻懷孕率一個月25%, 六個月75%, 一年90%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s09.webp",
+              "hidden": false,
+              "ocr_text": "Infertility\n定義：沒有避孕的一對夫妻在正常且持續有性行為的條件\n下持續一年仍然無法實現自發性懷孕\n回健康的夫妻懷孕率一個月25%，六個月75%，一年90%"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Infertility 初步的評估",
+                "History – TICS",
+                "Physical examination",
+                "Hormone",
+                "Semen analysis",
+                "女方去婦產科評估"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s10.webp",
+              "hidden": false,
+              "ocr_text": "Infertility 初步的評估\n•History - TICs\n• Physical examination\n•Hormone\n•Semen analysis\n•女方去婦產科評估"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Hx for Infertility",
+                "Reproductive history: TICS",
+                "Toxins(Drug/RT/環境毒物) - Drug(高血壓藥、精神科用藥、止痛藥、抗生素、化療藥、攝護腺肥大用藥)；RT、環境毒物(高溫、環境毒素)",
+                "Infectious and inflammatory disease - STD、virus(Mumps)、特殊bacteria(TB)",
+                "Childhood history - UDT、torsion、hernia開過刀、其他遺傳疾病史",
+                "Sexual history - 病患配偶病史及年紀、性行為的頻率與方式、評估是否有壓力存在、甚至有無特殊癖好的性行為進行方式，如特殊潤滑劑與口水均也可能會影響精子功能"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s11.webp",
+              "hidden": false,
+              "ocr_text": "Hx for Infertility\n• Reproductive history: TICS\n• Toxins(Drug/RT/環境毒物）-Drug(高血壓藥、精神科用藥、止痛藥、\n抗生素、花療藥、攝護腺肥大角藥）；RT、環境毒物(高溫、環境毒\n•Infectious and inflammatory disease -STD 、virus(Mumps)、特殊\nbacteria(TB)\n•Childhood history -UDT、torsion、hernia開過刀、其他遺傳疾病史\n•sexual history -病患配偶病史及年紀、性行為的頻率與方式、評估\n爾處台尕焉焦司龍審毫餐權李勢額的性行為進行方式，奴特殊潤"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "PE for infertility",
+                "General: 第二性徵, Tanner stage of puberty for boy",
+                "Penis",
+                "Testis: size/consistency(Prader or Caliper/Seager orchidometer)",
+                "正常長度3-5公分",
+                "正常大小15-25cc",
+                "兩邊大小差異不超過2cc",
+                "Epididymis: swelling or not",
+                "Vas: 有沒有摸到 vas(check CFTR gene if CBAVD)若單側(CUAVD)沒有考慮掃renal echo (70-80%合併renal agenesis)有無varicocele (clinical/subclinical)",
+                "DRE: central cyst, ejaculatory duct cyst",
+                "Tanner stage"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s12.webp",
+              "hidden": false,
+              "ocr_text": "PE for infertility\n•General: 第二性徵， Tanner stage of puberty\nfor boy\n•Penis\n• Testis: size/consistency(Prader or\nCaliper/Seager orchidometer)\n•正常長度3-5公分\n•正常大小15-25cc\n•兩邊大小差異不超過2cC\n•Epididymis: swelling or not\n•Vas:有沒有摸到 vas(check CFTR gene if\nCBAVD)若單側(CUAVD)沒有考慮掃renal\necho 170-80%合併renal agenesis)有無\nvaricocele (clinical/subclinical)\n•DRE: central cyst, ejaculatory duct cyst\nTanner stage\n3\n4\n1\nIV\n1\n6\nV\nN\n5\n9'\ns -T+\ng't<"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Hormone evaluation",
+                "FSH: 影響Spermatogenesis",
+                "LH: 影響Testosterone production",
+                "Testosterone",
+                "+/- Estrogen/Prolactin(也可以一開始就抽方便跑survey流程但Campbell不建議initial survey就做)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s13.webp",
+              "hidden": false,
+              "ocr_text": "Hormone evaluation\n•FSH:影響Spermatogenesis\n•LH:影響Testosterone production\n• Testosterone\n•+/-Estrogen/Prolactin(也可以一開始就抽方便跑survey流程但\nCampbell不建議initial survey就做）"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "Semen analysis(要做兩套間隔四週)",
+                "Low volume (<1.5ml)",
+                "Cause: Retrograde ejaculation, Ejaculatory duct obstruction, failure of emission(SSRI, neuropathy)",
+                "Acidic(pH<7.2)",
+                "Ejaculatory duct/SV obstruction (only prostate fluid)",
+                "CBAVD/SV agenesis(only prostate fluid) (CBAVD還是有SV和ejaculatory duct但SV常常發育不良）",
+                "3000 RPM, 15分鐘, 光學顯微鏡200倍之下檢視"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s14.webp",
+              "hidden": false,
+              "ocr_text": "semen analvsis(要做兩套間隔四週）\n• Low volume (<1.5ml)\n• Cause: Retrograde ejaculation, Ejaculatory duct obstruction, failure of\nemission(SSRl, neuropathy)\n•Acidic(pH<7.2)\n• Ejaculatory duct/sV obstruction (only prostate fluid)\n• CBAVD/SV agenesis(only prostate fluid) (CBAVD還是有SV和ejaculatory\nduct但sV常常發育不良）\nTable 2: Lower reference limits (5th centiles and their 95% CIs) for semen characteristics\n3000 RPM, 15分鐘，光學顯微鏡200倍之下檢視\nParameter\nSemen volume (ml)\nTotal sperm number (109/ejaculate)\nSperm concentration (105/mL)\nTotal motility (PR + NP)\nProgressive motility (PR, %)\nvitality (live spermatozoa, %)\nSperm morphology (normal forms, %)\nOther consensus threshold values\nH\nPeroxidase-positive leukocytes (109/mL)\n≤1.0"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "Progressive motility",
+                "Non-Progressive motility",
+                "Immotile sperm",
+                "活精子比例"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s15.webp",
+              "hidden": false,
+              "ocr_text": "Parameter 6l ed WHo\nLower reference limit\nSemen volume\nSemen conc x 10°/ml\nTotal sperm no. x 10° /ejac\nTM(PR+NP) %\nPROo Progressive motility\nNP% Non-Progressive motility\nIM%\nImmotile sperm\nVitality % 活精子比例\nNormal forms %\nLeucocytes\ntted\nsthed\nsth centile data (95% CD  sth centile data (95%CD\n＞1.4 ml\n>1.5 ml\n＞16 million\n≥39 million\n≥42%\n≥30%\n1%\n20%\n≥54%\n≥4.0%\n1-2x 10%ml\n≥15 million\n≥39 million\n≥40%\n≥32%\n1%\n22%\n≥ 58%\n≥4%\n1x 10%ml\nWHO 2021\nWHO 2010"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Abnormal semen analysis terminology",
+                "Oligozoospermia: < 15 million spermatozoa (1500萬)/ml",
+                "Asthenozoospermia: <40% total motility或< 32% progressive motility",
+                "Teratozoospermia: < 4% normal forms",
+                "Oligo-astheno-teratozoospermia (OAT)",
+                "all three anomalies occur simultaneously",
+                "Azoospermia: 0 spermatozoa/ml"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s16.webp",
+              "hidden": false,
+              "ocr_text": "Abnormal semen analysis terminology\n•Oligozoospermia: ≤ 15 million spermatozoa (1500萬)/ml\n•Asthenozoospermia ≤40% total motility或< 32% progressive\nmotility\n• Teratozoospermia:≤ 4% normal forms\n• Oligo-astheno-teratozoospermia (OAT)\n• all three anomalies occur simultaneously\n• Azoospermia: 0 spermatozoa/ml"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Infertility 進階評估",
+                "Hormone:",
+                "=>Estrogen/E2, Prolactin: if T/LH/FSH異常, hyperprolactinemia會抑制GnRH繼而造成hypogonadism, 若有驗到prolactin升高要重複驗(因為是個浮動很大的檢測)",
+                "Chromosome/gene test:",
+                "=>Karyotype test: if azoospermia或oligozoospermia<1000萬/mL",
+                "=>Y microdeletion test: if azoospermia或oligozoospermia< 500萬/mL,  Y microdeletion只會傳給兒子不會傳給女兒(AZFa: Sertoli cell only, AZFb: maturation arrest, AZFc: severe oligozoospermia",
+                "(AZF gene @ Yq11)",
+                "=>CFTR gene: if CBAVD",
+                "Sperm test",
+                "=>Post-orgasm urine analysis: if semen<1mL, if suspect retrograde ejaculation",
+                "=>驗spem裡面的Antisperm antibody(MAR test): if asthenozoospermia",
+                "Image:",
+                "=>TRUSP: if suspect ejaculatory duct obstruction(>2.3mm) or SV obstruction(>1.5cm), ejaculatory duct central cyst",
+                "=>Scrotal echo: to r/o testicular dysgenisis, testis ca, varicocele",
+                "ejaculatory duct central cyst",
+                "ejaculatory duct obstruction, >1.5cm",
+                "Antisperm antibodies: associated withvasectomy, testis trauma, orchitis, cryptorchidism, testis cancer, and varicocele (Seen after varicocelectomy)",
+                "AZF gene: Yq11",
+                "SRY gene: Yp11.3",
+                "Androgen receptor: @Xq11-12"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s17.webp",
+              "hidden": false,
+              "ocr_text": "Infertility 進階評估\n• Hormone:\n=>Estrogen/E2,Prolactin:if T/LH/FSH異常，hyperprolactinemia會\n抑制GnRH繼而造成hypogonadism，若有驗到prolactin升高要重\n複驗(因為是個浮動很大的檢測\n• Chromosome/ gene test:\n=>Karyotype test: if az00spermia 或oligoz0ospermia<1000萬/ml\n=>Y microdeletion test: if azoospermia 或oligozoospermia< 500萬\n/ml， Y microdeletion只會傳給兒子不會傳給女兒(AzFa: Sertoli\ncell only, AZFb: maturation arrest, AZFc: severe oligozoospermia\n(AZF gene @ Yq11)\n=>CFTR gene: if CBAVD\n•Sperm test\n=>Post-orgasm urine analysis: if semen<1mL, if suspect retrograde\neiaculation\n=>驗spem裡面的Antisperm antibody(MAR test):if\nasthenozoospermia\nAntisperm antibodies: associated withvasectomy,\ntestis trauma, orchitis, cryptorchidism, testis cancer,\nand varicocele (Seen after varicocelectomy)\n• lmage:\n=>TRUSP: if suspect ejaculatory duct obstruction(>2.3mm) or sv\nobstruction(>1.5cm), ejaculatory duct central cyst\n=>Scrotal echo: to rlo testicular dysgenisis, testis ca, varicocele\nAZF gene: Yq11\nSRY gene: Yp11.3\nAndrogen receptor: @Xg11-12\n™M\n6.3cm\nejaculatory duct obstruction, >1.5cr\nleft\nsem. Vesicle\nejaculatory duct central cyst"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "Infertility survey流程",
+                "(Nature review 2005)",
+                "除了Azoospermia的其他精液異常",
+                "先抽T/LH/FSH/E/PRL, 方便之後走流程",
+                "有Azoospermia就走Azoospermia的流程",
+                "DNA fragmentation assay: SCSA, TUNEL, Comet assay, SCD test"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s18.webp",
+              "hidden": false,
+              "ocr_text": "Infertility survey流程\n(Nature review 2005)\nHistory\nPhysical examination\nSemen analysis x 2\nNormal\nAbnormal\nFemale evaluation\nHormone evaluati\n生抽IAHFSH/FIPRI\n之後走流程\nEliminate gonadotoxins\nAbnormal\nNormal\nFurther evaluation based\non semen analysis\n有Az0ospernia就走Azoospermia的流程\nNot Improved\nImproved\nTreat\nfemale factor\n除了AzooSpermia\n的其他精液異常\nAzoospermia\nTreat\nfemale factor\nUnexplained infertility:\nAntisperm antibodies\nSperm chromatin structure\nSperm penetration or hemizona assay\nDNA fragmentation assay: SCSA, TUNEL, Comet assay, SCD test"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "Azoospermia（OA vs NOA）",
+          "slide_count": 14,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 19,
+              "text": [
+                "除了Azoospermia的其他精液異常survey",
+                "Endocrine evaluation",
+                "hyper hypo",
+                "<1000萬",
+                "<500萬",
+                "ex: antiandrogen",
+                "做MRI r/o pituitary tumor",
+                "Motility<10%可考慮electron microscopy去看sperm tail的ultrastructural defect",
+                "MAR test"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s19.webp",
+              "hidden": false,
+              "ocr_text": "除了Az0ospermia的其他精液異常survey\nPredominant semen abnormality\nVolume\nLow/absent\nLow volume\nevaluation\n(Figure 2)\nHigh\nSemen\nprocessing\nI\nRue out incomplete collection\nand short abstinence penod\nPostejaculatory urinalysis\nPositive\nNegative\nRetrograde ejaculation\nTransretal\nuitrasonography\nAbnormal\nNommal\nSeminal vesicle\naspiration\nFailure of\nemission\nPositive\nEjaculatory duct\nobstruction\nLow motility\nqiotitity<10%可考慮etectron ricrostopy\n去看spefm taileyultrastructural detect\nAntisperm\nWBC\nantibodies\nassay\nTAR test\nOligospermia\nPositive\nNegative\nPositive\nSteroids,\n1, IVF-ICSI\nSemen culture\nantibiotics\n中\nEndocrine evaluation\nRx infection\nRx varicocele\nEndocrine evaluation\nNegative\nGenetic evaluation:\nY deletions*500萬\nkaryotype\n<1000萬\nNegative\nEndocrine evaluation\nCondition\nNormal\nT\nNormal\nPrimary testis failure hyper hypo\nLow\nHypogonadotropic hypogonadism\nLow\nHyperprolactinerfgMRI T/o pituitary tumorow\nAndrogen resistance ex: antiandrogen High\nPoor morphology\nVaricocele?\nExposures?\nNegative\nRepeat\nmorphology\n3-4 months\nVaricocele?\nHyperviscous\nSemen processing\nIUI\nFSH\nNormal\nHigh\nLow\nLow/normal\nHigh\nLH\nNormal\nNormal/high\nLow\nLow\nHigh\nVaricocele\nligation\nYes\nNo\nConsider\n, IVF\nPRL\nNormal\nNormal\nNormal\nHigh\nNormal"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "Azoospermia algorithm+etiology(Clinics 2013)",
+                "Hypo hypo",
+                "Hyperprolactinemia",
+                "Primary testis failure",
+                "Androgen resistance",
+                "Primary testis failure",
+                "Microdeletion/Karyotype test: Klinefelter, microY deletion, Male XX",
+                "check CFTR gene",
+                "Scrotal echo",
+                "已經確定是AZFa(SCO)或AZFb deletion(Maturation arrest)不建議testis bx",
+                "local握毛筆, 參考北榮流程",
+                "高度懷疑OA可以直接當OA治療不bx (96%)",
+                "Semen PH<7.2",
+                "ex: neuropathy, 服用SSRI",
+                "intratesticular obstruction",
+                "most common",
+                "SV>1.5cm, ejaculatory duct>2.3mm, ejaculatory/midline cyst",
+                "Campbell: <1mL"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s20.webp",
+              "hidden": false,
+              "ocr_text": "Azoospermia algorithmtetiology (Clinics 2013)\n已經確定是AZFa(SCO）或AZFb\ndeletion(Maturation arrest)不\n建議testis bx\nAzoospermia\n(two sperm analyses with pellet examinaton)\nVasa absent\nVasa\npresent\nCongenital bilateral absence\nof the vas deferens\ncheck CFTR gene\nNormal-volume ejaculate\nLaw-voume ejaculate\nCampbell: <1m\nRule out incomplete collection\nand short abstinence period\nTesticular long axis\n4.6 cm or less\nTesioular long axis grcater\nthan 4.6 cm\nFSH < 7.6 mlU/ml\n高度懷疑OA可以直接當0A治療不bx (B6%\nPostejaculatory urinalysis\nPositive\nNegative\nFSH Low\nFSH High\nnoral盡望   婴照条流程\nNormal\nAbnormal\nRetrograde ejaculation\nTransretal\nuitrasonography\nHypo hypo\nHyperprolactinemia\nPrimary testis failure\nAndrogen resistance\nObstruction\n(vasography)\nPrimary\ntesticular failure\nSV$1.5cm, ejacplatoryrarct-2gman,\nejacularary/iattne.cysT\nSeminal vesicle\naspiration\nFailure of\nemission\nPositive\nex:neuropathy,\n服用SSRI\n-Primary testis failure\nVaricocele Scrotal echo\n• Undescended testes\n• Testicular torsion\nVasal obstruction\n• Mumps orchitis\nEpididymal obstruction\nGonadotoxins and Medications\n• intratesticular obstruction\nGenetic disosrders Microdeletion/Karyotype test: Klinefelter, microY deletion, Male\nldiopathic\nmost caxmon\njaculatory duct\nobstruction\nSemen PH<T.z"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "Testis biopsy",
+                "Normal",
+                "OA",
+                "Scrotal exploration and micro-anastomosis",
+                "MESA or TESE or TESA + ICSI",
+                "Hypo-spermato-genesis or LMA",
+                "AZFc deletion",
+                "No AZFc deletion",
+                "HCG or Clomiphene",
+                "Dx MD-TESE",
+                "Tx MD-TESE",
+                "SCO syndrome or EMA",
+                "No AZFc deletion",
+                "Dx MD-TESE",
+                "Hypo-spermato-genesis or LMA",
+                "SCO",
+                "AID",
+                "SCO: Sertoli cell only syndrome",
+                "北榮testis biopsy流程",
+                "local握毛筆",
+                "@在不孕男性的初步評估中，不該使用Testis biopsy",
+                "@切片下觀察到的造精功能可能只是局部的, 所以無法確立無精症的原因為造精功能低下或是阻塞",
+                "@50%的NOA患者可能仍可發現精子並且使用來進行 ICSI",
+                "@Campbell testis bx indication: normal size and consistency, palpable vasa deferentia, normal serum follicle-stimulating hormone (FSH) levels, and a negative serum antisperm antibody assay",
+                "@Campbell說兩邊都要bx"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s21.webp",
+              "hidden": false,
+              "ocr_text": "北榮testis biopsyi\n流程\n@Campbell testis bx indication: normal size and\nconsistency, palpable vasa deferentia, normal\nserum follicle-stimulating hormone (FSH) levels,\nand a negative serum antisperm antibody assay\n@campbell說兩邊都要bx\nTestis biopsy\nlocal握毛筆\nNormal\nHypo-spermato-\ngenesis or LMA\nSCO svndrome\nor EMVA\nOA\nNo AZFC\ndeletion\nAZFC\ndeletion\nNo AZFC\ndeletion\nScrotal\nexploration\nand micro-\nanastomosis\nESA or\nTESE Or\nTESA + ICSI\nHCG or\nClomiphene\nDx MD-TESE\nDx MD-TESE\n@在不孕男性的初步評估中，不該使用Testis biopsy\n回切片下觀察到的造精功能可能只是局部的，所以無法確\n立無精症的原因為造精功能低下或是阻塞\n@50%的NOA患者可能仍可發現精子並且使用來進行 IcS1\nTx MD-TESE\nHypo-\nspermato-\ngenesis or LMA\nSCO\nAID\nSCO: Sertoli cell only syndrome"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "1. MESA 顯微副睪取精:",
+                "副睪精蟲活動力好,可取得大量精蟲,但NOA無法使用MESA取精",
+                "2. PESA 經皮穿刺副睪取精:",
+                "可局麻,副睪精蟲活動力好,但穿刺可能造成血腫、疼痛及血管受傷",
+                "3. TESA 經皮睪丸精蟲抽吸:",
+                "可局麻,但取得量少,且睪丸精蟲可能未成熟或活動力差",
+                "4. TESE 睪丸取精:",
+                "唯一建議用於NOA的取精手術,需要麻醉及顯微技巧"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s22.webp",
+              "hidden": false,
+              "ocr_text": "1. MESA 顯微副睪取精：\n副睪精蟲活動力好,可取得大量精蟲,但NOA無法使用MESA取精\n2. PESA 經皮穿刺副睪取精：\n可局麻,副睪精蟲活動力好,但穿刺可能造成血腫、疼痛及血管受傷\n3.TESA 經皮睪丸精蟲抽吸：\n可局麻,但取得量少,且睪丸精蟲可能末成熟或活動力差\n4. TESE 睪丸取精：\n唯一建議用於NOA的取精手術,需要麻醉及顯微技巧\nTABLE 67.4 Surgical Techniques for Sperm Retrieval\nADVANTAGES\nMESA\n(microsurgical\nepididymal sperm\naspiration)\nPESA\n(percutaneous\nepididymal sperm\naspiration)\nMicrosurgical procedure allows lower complication rate\nEpididymal sperm has better motility than testicular\nsperm\nLarge number of sperm can be harvested for\ncryopreservation of multiple vials in a single\nprocedure\nNo microsurgical skill required\nLocal anesthesia\nEpididymal sperm has better motility than testicular\nsperm\nTESA (testicular\nsperm aspiration)\nNo microsurgical skill required\nLocal anesthesia\nCan be used for obstructive azoospermia\nTESE (testicular\nsperm extraction)\nLow complication rate if performed microsurgically\nPreferred technique for nonobstructive azoospermia\nDISADVANTAGES\nRequires anesthesia and microsurgical skills\nNot indicated for nonobstructive azoospermia\nComplications include hematoma, pain, and vascular\ninjury to testes and obstruction of the epididymis\nVariable success in obtaining sperm\nSmall quantity of sperm obtained than with MESA\nNot indicated in nonobstructive azoospermia\n1mmature or immotile testicular sperm\nSmall quantity of sperm obtained\nPoor results in nonobstructive azoospermia\nComplications include hematoma, pain, and vascular\ninjury to testes and epididymis\nRequires anesthesia DNA microsurgical skills"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Azoospermia etiology",
+                "(Clinics 2013)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s23.webp",
+              "hidden": false,
+              "ocr_text": "Azoospermia etiology\n(Clinics 2013)\nAzoospermia\nPretesticular\n(secondary testicular failure)\nTesticular\n(primary testicular failure)\nPost-testicular\nEndocrine disorders\nIntrinsic disorders\nEjaculatory\ndysfunction\nObstruction of the\nreproductive tract\nHypogonadotropic Hypogonadism\n• Hyperprolactinemia\n• Androgen resistance\nVaricocele\nI• Undescended testes\n• Testicular torsion\n• Mumps orchitis\nGonadotoxins and Medications\nGenetic disosrders\n• ldiopathic\nRetrograde\nejaculation\nAbsence of the vasa deferentia\nVasal obstruction\nEpididymal obstruction\nEjaculatory duct obstruction\nFrequently correctable\nGenerally irreversible\n(exception varicocele)\nFrequently correctable"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Sertoli cell",
+                "Leydig cell(1-5%)",
+                "Spermatogonium",
+                "Spermatocyte (分primary:before first meiotic, secondary: before second meiotic",
+                "Spermatid",
+                "Spermatozoon (a)",
+                "間質細胞大概佔了10-20%",
+                "Testis biopsy: normal spermatogenesis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s24.webp",
+              "hidden": false,
+              "ocr_text": "Testis biopsy:normal spermatogenesis\n1.Sertoli cell\n4.Spermatocyte （分\nprimary:before first\nmeiotic, secondary:\nbefore second meiotic\n5.Spermatid\n6.Spermatozoon (a)\n間質細胞大概佔了10-20%"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "正常",
+                "造精低常",
+                "(hypospermatogenesis)",
+                "成熟中斷",
+                "(maturation arrest)",
+                "Sertoli cell-only",
+                "Sperm(+)",
+                "睪丸切片病理分類",
+                "Sperm(-)",
+                "NOA"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s25.webp",
+              "hidden": false,
+              "ocr_text": "睪丸切片病理分類\nNOA\n正常\n造精低常\n(hypospermatogenesis)\n成熟中斷\n(maturation arrest)\nSertoli cell-only\nSperm(+)\nSperm(-)"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "問 – 要不要做Testicular biopsy ?",
+                "考試問要不要做 Testis biopsy ?",
+                "通常題幹會給history, PE finding (testicular size), FSH level, 即可初步判定OA, guideline建議不用再做",
+                "不進行Testicular biopsy 說法 (建議回答這個)",
+                "直接判定OA – 依據病史(例如有感染病史)，合併正常大小睪丸及正常FSH血清值，即可高度懷疑OA",
+                "Testicular biopsy 常只是看到Focal情況，不一定能代表全部情形",
+                "進行Testicular biopsy 說法",
+                "排除可能合併存在的abnormal spermatogenesis 或Intratesticular obstruction情形",
+                "在病患同意的條件下同時可進行TESE"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s26.webp",
+              "hidden": false,
+              "ocr_text": "問一要不要做Testicular biopsy ?\n•考試問要不要做 Testis biopsy ?\n••通當題幹會給history, PE finding (testicular size), FSHlevel,\n即可初步判定OA,guideline建議不用再做\n•不進行Testicular biopsy 說法（建議回答這個）\n•直接判定OA一依據病史(例如有感染病史），合併正常大小睪丸\n及正常FSH血清值，即可高度懷疑OA\n•Testicular biopsy 常只是看到Focal情況，不一定能代表全部情形\n•進行Testicular biopsy 說法\n•排除可能合併存在的abnormal spermatogenesis 或Intratesticular\nobstruction情形\n•在病患同意的條件下同時可進行TESE"
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "阻塞性無精症 (OA) 概論",
+                "Normal sperm production + mechanical blockage",
+                "佔azoospermia 15% (絕大多數都是NOA)",
+                "Frequently at the epididymal level\u000b(Epi 30-67% >vas 30% > intratesticular 15% > EJ duct 1-3%)",
+                "At least one testis volume > 15ml"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s27.webp",
+              "hidden": false,
+              "ocr_text": "阻塞性無精症 (0A)概論\n• Normal sperm production + mechanical blockage\n•佔az00spermia 15%（絕大多數都是NOA)\n• Frequently at the epididymal level\n(Epi 30-67% >vas 30% >intratesticular 15%＞ EJ duct 1-3%)\n• At least one testis volume > 15ml"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Etiology: Congenital (cystic fibrosis, Young syndrome), Infection (gonococcal, chlamydial), Trauma",
+                "Abnormal PE: enlarged and hard epididymis",
+                "Semen: normal ejaculate volume",
+                "Diagnosis: scrotal sonography, fine needle aspiration(EAU不建議)",
+                "Treatment:",
+                "Epidydimo-vasotomy: 如果是acquired epididymal obstruction且伴侶卵巢功能正常, 接完3到6個月會通",
+                "PESA: percutaneous epididymal sperm aspiration,local做,取的量較MESA少",
+                "MESA: microsurgical epididymal sperm aspiration, 麻醉做",
+                "TESA: testicular sperm aspiration, local做, 取的量較TESE少, 取出的精子immature且immobile",
+                "TESE/mTESE: testicular sperm extraction",
+                "Epididymal obstruction (30-67%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s28.webp",
+              "hidden": false,
+              "ocr_text": "Epididymal obstruction (30-67%)\n• Etiology: Congenital (cystic fibrosis, Young syndrome), Infection (gonococcal,\nchlamydial), Trauma\n• Abnormal PE: enlarged and hard epididymis\n• Semen: normal ejaculate volume\n•Diagnosis: scrotal sonography, fine needle aspiration(EAU不建議）\n•Treatment:\nEpidvdimo-vasotomy:如果是acquired epididymal obstruction且伴侶卵巢功能正\n常，接完3到6個月會通\nPESA: percutaneous epididymal sperm aspiration,local做，取的量較MESA少\nMESA: microsurgical epididymal sperm aspiration,麻醉做\nTESA:testicularsperm aspiration,1ocal做，取的量較TESE少，取出的精子 immature\nHimmobile\nTESE/ mTESE: testicular sperm extraction"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "Etiology: Congenital (CBAVD/CUAVD/cystic fibrosis), Trauma, previous surgery (vasectomy, herniorrhaphy)",
+                "Abnormal PE: absent vas, vas摸到nodule代表可能那裡塞住",
+                "Semen: normal ejaculate volume, possible acidic (if SV agenesis)",
+                "Diagnosis: Vasography(目前很少用, 因為其他檢驗像TRUSP,MRI都可提供很好的影像學, 做vasography時, 液體不可以往epididymis側打(逆向）=> 會破壞epididymal tubules)",
+                "Treatment:",
+                "Post-vasectomy或“Vas塞在scrotal region且距離不長且vas品質ok(切開擠出水狀)“ ->切掉塞住的地方+Vaso-vasotomy, 可考慮同時做TESE來冷凍保存精子",
+                "Vas塞在scrotal region且距離不長但vas品質不好(切開擠出膏狀東西 )->切掉塞住的地方+Epididymo-vasotomy, 可考慮同時做TESE來冷凍保存精子",
+                "Vas塞在inguinal region或阻塞距離很長->PESA, MESA, TESA, TESE",
+                "Vas deferens obstruction (30%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s29.webp",
+              "hidden": false,
+              "ocr_text": "Vas deferens obstruction (30%)\n•Etiology: Congenital (CBAVD/CUAVD/cystic filbrosis), Trauma, previous surgery\n(vasectomy, herniorrhaphy)\n•Abnormal PE: absent vas, vas摸到nodule代表可能那裡塞佳\n• Semen: normal ejaculate volume, possible acidic (if sV agenesis)\n•Diagnasis: Vasography(目前很少用，因為其他檢驗像TRUSP,MRI都可提供很好的\n影像學，做vasography時，液體不可以往epididymis側打(逆向）二＞會破壞\nepididymal tubules)\n•Treatment:\nPost-vasectomy或“Vas塞在scrotal region旦距離不長且vas品質ok(切開擠出水狀\n〞->切掉塞住的地方+Vaso-vasotomy可考慮同時做TESE來冷凍保存精子\nVas塞在scrotalregion且距離不長但vas品質不好(切開擠出膏狀東西）>切掉塞住\n的地方+Epididymno-vasotomy,可考慮同時做TESE來冷凍保存精子\nVas塞在inguinal region或阻塞距離很長->PESA, MESA, TESA, TESE"
+            },
+            {
+              "slide_num": 30,
+              "text": [
+                "Intratesticular obstruction (15%)",
+                "Etiology: Congenital, Infection, Trauma",
+                "Abnormal PE: nil",
+                "Semen: normal ejaculate volume",
+                "Diagnosis: Testis biopsy (懷疑OA, 做testis biopsy 可能的好處之一,但一般不建議)",
+                "Treatment: TESE/mTESE",
+                "Ejaculatory duct obstruction (1-3%):",
+                "Etiology: Congenital (Mullerian duct cyst or ejaculatory duct cyst), Post-inflammatory (urethritis/prostatitis)",
+                "Abnormal PE: DRE摸到central cyst",
+                "Semen: Decreased volume, acidic (pH <7.2 due to decreased seminal fructose)（因為SV fluid過不去）",
+                "Diagnosis: TRUSP -> dilated SV, AP > 1.5 cm with or without central cyst",
+                "Treatment: Transurethral resection/unroofing of the ejaculatory duct cyst",
+                "MESA, TESE/mTESE"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s30.webp",
+              "hidden": false,
+              "ocr_text": "• Intratesticular obstruction (15%)\n• Etiology: Congenital, Infection, Trauma\n• Abnormal PE:nil\n• Semen:normal eiaculate volume\n•Diagnosis: Testis biopsy (懷疑口A，做testis biopsy 可能的好處之一，但一\n般礻建議）\n• Treatment: TESE/mTESE\n• Ejaculatory duct obstruction (1-3%):\n• Etiology: Congenital (Mullerian duct cyst or ejaculatory duct cyst), Post-\ninflammatory (urethritis/prostatitis)\n• Abnormal PE: DRE摸到central cyst\n•Semen: Decreased volume, acidic (pH <7.2 due to decreased seminal\nfructose）（因為SV fluid過不去）\n• Diagnosis: TRUSP-> dilated SV, AP > 1.5 cm with or without central cyst\n•Treatment: Transurethral resection/ unroofing of the ejaculatory duct\ncyst\nMESA, TESE/m TESE"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "非阻塞性無精症 (NOA) 概論",
+                "兩大成因:",
+                "-> Hormone abnormality: Hypogonadism(Hypohypo, HyperHypo, androgen resistance), Hyperprolactinemia",
+                "->Primary testicular failure:",
+                "Primary testicular failure也會造成HyperHypo",
+                "General的治療: Lifestyle modification(減少喝酒, 減少泡熱水澡), 補充Vit E, Zinc, Folic acid(可增加sperm concentration)",
+                "Microdeletion/Karyotype test: Klinefelter, microY deletion, Male XX",
+                "Most common, 60%",
+                "35%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s31.webp",
+              "hidden": false,
+              "ocr_text": "非阻塞性無精症 (NOA)概論\n•兩大成因：\n-> Hormone abnormality: Hypogonadism(Hypohypo, HyperHypo,\nandrogen resistance), Hyperprolactinemia\n->Primary testicular failure:\n•\n•\nVaricocele 35%\nUndescended testes\nTesticular torsion\nMumps orchitis\nGonadotoxins and Medications\nGenetic disosrders Microdeletion/Karvotype test: Klinefelter, microY deletion, Male\nldiopathic Most commdf, 60%\n• Primary testicular failure也會造成HyperHypo\n•General的治療： Lifestyle maglfication(減少喝酒，減少泡熱水澡)，補\n充Vit E, Zinc, Folic acid(可增加sperm concentration)"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "治療可改變的因素: varicocelectomy, 避免gonadotoxin, medication, infection",
+                "主要治療: TESE/mTESE(成功率約50%) + Assisted conception",
+                "Artificial insemination by donor(AID, 別人捐精) + Assisted conception",
+                "Assisted conception:",
+                "->IUI(intrauterine insemination): 直接把精子植入子宮",
+                "->IVF(in vitro fertilization): 體外受精, 把精子和卵子放到培養皿中培養, 2-3",
+                "天後受精卵植入子宮",
+                "->ICSI(Intracytoplasmic sperm injection): IVF的進階版, 只要單一隻精子, 把",
+                "精子直接在體外注射進卵子裡面(穿透zona pellucida), 再植入子宮, 受孕",
+                "率 28-40%, 但造成sex chromosome異常的機會是常人的3倍",
+                "TESE 的成功取精率(高至低)：",
+                "Cryptorchidism (74%)> AZFc (70%)> Klinefelter (68%) >",
+                "Post-C/T (53%) > Mature arrest (40%) > Sertoli cell only (30%) > AZFa, AZFb  (0%)",
+                "(隱 C 克   化 成熟   賽 ab  =陰吸客 花成熟 塞A逼)",
+                "NOA的Primary testicular failure treatment"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s32.webp",
+              "hidden": false,
+              "ocr_text": "NOA的Primary testicular failure\ntreatment\n•治療可改變的因素：varicocelectory，避免gonadotoxin,medication，\ninfection\n•主要治療：TESE/mTESE（成功率約50%)+ Assisted conception\nArtiticial insemination by donor(A1D, 別人捐精)+ Assisted\nconception\n• Assisted conception:\n-sU(intrauterine insemination)：直接把精子植入子宫\n-≥VF(in vitro fertilization)：體外受精，把精子和卵子放到培養四中培養,2-3\n天後受精卵植人子宮\n- csl(ntracytoplasmic sperm injection)：IVF的進階版，只要單一隻精子，把\n精子直接在體外注射進卵子裡面(穿透z0na pellucida)，再植人子宫，受孕\n率28-40%，但造成sex chromosome異常的機會是常人的3倍\n•TESE 的成功取精率(高至低）：\nCryptorchidism (74%)> AZFC (70%)>Klinefelter (68%)>\nPost-C/T (53%) > Mature arrest (40%) > Sertoli cell only (30%) > AZFa, AZFb (0%)\n䧟~士仁出孰害"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "Varicocele",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 33,
+              "text": [
+                "Varicocele",
+                "定義: Spermatic cord的pampiniform plexus dilation",
+                "Left predominant, 青少年比成人常見, 高瘦青少年較常見(gene related)",
+                "11-15% of the general population, 35% of men with primary infertility(最常造成男性不孕的已知原因, idiopathic還是最多)",
+                "佔了26% 男性不孕症主因",
+                "成因: 1.Internal spermatic vein(gonadal v.)沒有靜脈valve, 導致靜脈血易回流造成pampiniform plexus dilation 2.Left gonadal v.注入left renal vein接近90度, 血流阻力較大(所以left predominant) 3. Nutcracker phenomenom(Lt renal v.被aorta和SMA壓迫)4.後腹腔有腫瘤壓到gonadal v.(只有右側varicocele要小心)",
+                "造成testis傷害的病理機制: pampiniform plexus因為dilation喪失了熱交換機制所以無法使testis降溫, 繼而影響精子與睪固酮的製造, 另外回流不好也會缺氧並造成代謝物(prostaglandin)堆積, 造成oxidative stress上升, 精子DNA fragmentation, apoptosis",
+                "S/S: scrotal pain/heaviness, 坐下躺下會減緩, spermatic cord摸到bag of worms",
+                "Image: Confirmed by scrotal color Duplex(Dopplar紅轉藍+venous diameter>3.5 or 3.0cm)",
+                "Grade:",
+                "Subclinical: not detected on PE; found by US",
+                "grade1: palpable during Valsalva maneuver",
+                "grade2: palpable without Valsalva maneuver",
+                "grade3: visible"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s33.webp",
+              "hidden": false,
+              "ocr_text": "Varicocele\n•定義：Spermatic cord的pampiniform plexus dilation\n•Left predominant,青少年比成人常見，高瘦青少年較常見(gene related)\n•11-15% of the general population, 35% of men with primary infertility(最常造成男性不孕\n的己知原因，idiopathic還是最多）\n•佔了26% 男性不孕症主因\n•成因：1.lnternal spermatic vein(gonadal v)沒有靜脈valve,導致靜脈血易回流造成\npampiniform plexus dilation 2.Left gonacalv 注 入left renal vein接近90度，血流阻力較大\n（所以left predominant) 3. Nutcracker phenomenom(Lt renalv.被aorta和SMA壓迫）4. 後腹\n腔有腫瘤壓到gonadal v-(只有右側varicocele要小心）\n•造成testis傷害的病理機制：pampiniform plexus因為dilation喪失了熱交換機制所以無\n法使testis降溫，繼而影響精子與睪固酮的製造，另外回流不好也會缺氧並造成代謝物\n(prostaglandin)堆積，造成oxidative stress上升，精子DNA fragmentation, apopto sis\n• S/S: scrotal pain/heaviness， 坐下躺下會減緩，\nspermatic cord摸到bag of worms\nlettronalvein\n•Image: Confirmed by scrotal color Duplex (Dopplar紅轉\n藍+venous diameter>3.5 or 3.0cm)\nLeft internal\nspermaticvein\n• Grade:\n• Subclinical: not detected on PE; found by Us\nNo valves\n• grade1: palpable during Valsalva maneuver\n•gradez: palpable without Valsalva maneuver\n- Plexus pampiniformis\n•grade3:visible"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Varicocele treatment - varicocelectomy",
+                "Operation indication(TUA 2020)",
+                "青少年: 1.會痛 2.≥grade 1合併患側比對側小20%或2ml",
+                "成人: 1.會痛 2.嘗試生育的男性且符合全部四項(1)≥grade 1 (2)符合不孕定義 (3)女方無可治療的不孕情形 (4)≥1次的精液檢查異常",
+                "Operation method",
+                "Microscopic subinguinal approach: 併發症最少,成功率最高",
+                "Others: Malmar(subinguinal), Ivanissevich(inguinal), Palomo(high retroperitoneal), laparoscopic",
+                "學齡前適合用inguinal approach",
+                "開刀可以幫助spermatogenesis (especially late maturation arrest), 可在開刀的三個月後精液檢查看是否進步",
+                "Complication: hydrocele(最常見), injury of testis a., recurrence"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s34.webp",
+              "hidden": false,
+              "ocr_text": "Varicocele treatment - varicocelectomy\n• Operation indication(TUA 2020)\n•青少年：1.會痛 2.2grade 1合併患側比對側小20%或2ml\n•菜拿是嘉薄多募露告喜盤最朱晕德念会證只還临器選量翼幣合\nOperation method\n• Microscopic subinguinal approach: 併發症最少,成功率最高\nOthers: Malmar(subinguinal), Ivanissevich(inguinal), Palomo(high\nretroperitoneal), laparoscopic\n•學齡前適谷用inguinal approach\nspecially late maturation arrest)，可在\n• Complication： hydrocele（最常見),injury of testis a., recurrence"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "Varicocele 做完microsurgery療效",
+                "可以讓50% azoospermia + palpable varicoceles 的病人恢復射精有精子",
+                "可以改善精液品質 還可以改善睪固酮濃度",
+                "results in significant improvement in semen analysis in 60% to 80% of men.",
+                "Reported pregnancy rates after varicocelectomy vary from 20% to 60%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s35.webp",
+              "hidden": false,
+              "ocr_text": "Varicocele 做完microsurgery療效\n•可以讓50% azoospermia + palpable varicoceles 的病人\n恢復射精有精子\n•可以改善精液品質 還可以改善睪固酮濃度\n•results in significant improvement in semen analysis\nin 60% to 80% of men.\nReported pregnancy rates after varicocelectomy vary\nfrom 20% to 60%"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Vasectomy & Vasovasotomy",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 36,
+              "text": [
+                "HypoHypo:",
+                "Consider MRI to r/o pituitary tumor if 頭痛視力模糊神經異常",
+                "->先HCG(=LH)3-6個月, check sperm, 沒效加上rFSH (=FSH)",
+                "->hMG (LH+FSH activity) 3-6個月, check sperm",
+                "->SERMs (clomiphene) 3-6個月, check sperm",
+                "->if failed, mTESE/TESE + Assisted conception",
+                "HyperHypo: 治療同primary testicular failure",
+                "Androgen resistance: 排除antiandrogen drug, anabolic steroid use",
+                "Hyperprolactinemia:",
+                "Consider MRI to r/o pituitary tumor",
+                "Dopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)",
+                "NOA的hormone abnormality treatment",
+                "(針對生育功能)",
+                "hCG (1500~2000 IU) SC, 2~3 times/week",
+                "FSH (75U) or rhFSH (100~150U) SC, 2~3 times/week",
+                "Onset of spermatogenesis: 3~6 months"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s36.webp",
+              "hidden": false,
+              "ocr_text": "NOA的hormone abnormality treatment\n（針對生育功能）\n• HypoHypo:\nConsider MRl to r/o pituitary tumor if 頭痛視力模糊神經異常\n-二先HCG(=LH)3-6個月，check sperm， 沒效加上rFSH(=FSH)\n-二hG (LH+FSH activity) 3-5個月，check sperm\n-SSERMS (clomiphene） 3-6個月，Check sperm\n-sif failed, mTESE/TESE + Assisted conception\nI •hcG (1500~2000 1U) SC, 2~3 times/week\n•FSH (75U)or rhFSH (100~150U) SC, 2~3 times/ week\n• Onset of spermatogenesis: 3~6 months\n• HyperHypo：治療同primary testicular failure\n• Androgen resistance：排除antiandrogen drug, anabolic steroid use\n• Hyperprolactinemia:\nconsider MRI to r/o pituitary tumor\nDopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)"
+            },
+            {
+              "slide_num": 37,
+              "text": [
+                "Vasectomy and Vasovasotomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s37.webp",
+              "hidden": false,
+              "ocr_text": "Vasectomy and\nVasovasotomy"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Vasectomy",
+                "No-scalpel (or Li) technique is associated with the lowest risks of bleeding and infection",
+                "Most effective occlusion technique: fascial interposition",
+                "Open ended vasectomy可以減少post-vasectomy pain, 也可以增加之後重接的成功率",
+                "Should be considered irreversible before operation",
+                "手術後約8-16週且射精20-25次之後進行sperm analysis, 若沒有sperm才能進行不避孕的性行為(Oxford建議驗兩次, 16週和20週)",
+                "open ended vasectomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s38.webp",
+              "hidden": false,
+              "ocr_text": "Vasectomy\n• No-scalpel (or Li) technique is\nassociated with the lowest risks of\nbleeding and infection\n• Most effective occlusion technique:\nfascial interposition\n• Open ended vasectomy可以減少post-\nvasectomy pain， 也可以增加之後重接\n的成功率\n• Should be considered irreversible\nbefore operation\n•手術後約8-16週且射精20-25次之後\n進行sperm analysis，若沒有sperm才能\n進行不避孕的性行為(0xford建 議驗兩\n次，16週和20週）\nFascia sutured over\none vasal end\nSegment of vas removed\nTesticular end of\nvas (left open)\nFascial interposition\nAbdominal end of\nvas (closed)\nTied off with\na stitch (ligation)\nThermal iniury\nto lumen\n(mucosal cautery)\nOpening in\nscrotal skin\nopen ended vasectomy"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Vasectomy complication",
+                "Hematoma: 最常見, 0.09% to 29%",
+                "Chronic scrotal pain: 0.9%-15%, 與obstruction/sperm extravasation有關, 與infection/hematoma無關, 先保守治療至少3個月=>沒效可以spermatic cord block, excision of granuloma",
+                "Other complication: vasectomy failure(early 1/200, late 1/2000), infection, sperm granuloma, Fournier gangrene, traumatic fistula/scrotal sinus",
+                "術後併發症多寡與surgeon volume and experience最有關係"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s39.webp",
+              "hidden": false,
+              "ocr_text": "Vasectomy complication\n•Hematoma:最常見,0.09% t0 29%\n•Chronic scrotal pain: 0.9%-15%，與obstruction/sperm extravasation有\n關，與infection/hematoma無關，先保守治療至少了個月=>沒效可以\nspermatic cord block, excision of granuloma\n• Other complication: vasectomy failure(early 1/200, late 1/2000),\ninfection, sperm granuloma, Fournier gangrene, traumatic\nfistula/scrotal sinus\n•術後併發症多寡與surgeon volume and experience最有關係"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "Vaso-vasotomy(vasectomy reversal)",
+                "Re-anastomosis用non-absorbable sutures",
+                "需要大約18 months才能精液中看到精子",
+                "Longer durations being associated with poorer outcomes",
+                "女性伴侶<35y, 可以考慮vasectomy reversal, >35y建議直接TESE/TESA/MESA/PESA+ICSI.",
+                "Vasectomy reversal後可能會偵測到antisperm antibodies(60% to 80%)",
+                "Sperm agglutinating antibodies: 50% to 60%",
+                "Sperm immobilizing  antibodies: 20% to 30%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s40.webp",
+              "hidden": false,
+              "ocr_text": "Vaso-vasotomy(vasectomy reversal)\n• Re-anastomosis 用non-absorbable sutures\n•需要大約18 months才能精液中看到精子\n• Longer durations being associated with poorer outcomes\n•女性伴侶<35V，可以考慮vasectomy reversal, >35x建議直接\nTESE/TESA/MESA/PESA+ICSI.\n•Vasectomy reversal後可能會偵測到antisperm antibodies(60% to 80%)\n• Sperm agglutinating antibodies: 50% to 60%\n•Sperm immobilizing antibodies: 20% to 30%\nTable 12.6 Patency and pregnancy rates following vasectomy reversal\nover time\nPost-vasectomy\n≤3y\n3-8y\n9-14y\n≥15y\nPatency rate (%)\n97\n88\n79\n71\nPregnancy rate (%)\n76\n53\n44\n30\nData sourced from Balker Ar. Thomas AlIr Fuchs EF. et al. Resules of 1.469 microsurpical vas\nectomy reverssls by the Vasovasostomy Seudy Group.JUro/ 1991:145:505-11."
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "watery, copious或可以看到精子就做VV",
+                "如果scant/toothpaste like 且測不到sperm就做VE"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s41.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 67.2 Relationship Between Gross Appearance of Vasal Fluid and Microscopic Findings\nAPPEARANCE OF VASAL FLUID\nCopious, crystal clear, watery\nCopious, cloudy thin, water\nsoluble\nINTRAOPERATIVE\nEVALUATION OF ASPIRATE\nNo sperm\nSperm with tails, including short\ntalls, motile or nonmotile\nRECOMMENDED\nSURGICAL PROCEDURE\nVasovasostomy\nVasovasostomy\nCopious, creamy yellow, water\ninsoluble\nMany sperm heads, often with\nacrosome visible, scattered\nthroughout the slide\nVasovasostomy\nCopious, thick white toothpaste-\nlike, water insoluble\nScant white thin fluid\nScant fluid, no granuloma at\nvasectomy site\nScant fluid, granuloma present at\nvasectomy site\nNo sperm or sperm heads\nNo sperm or sperm heads\nNo sperm or sperm heads\nBarbotage fluid reveals sperm,\nusually with tails, often motile\nVasoepididymostomy\nVasoepididymostomy\nVasoepididymostomy\nVasovasostomy\nAny fluid\nFluid with occasional grapelike\nclusters of sperm heads\nVasoepididymostomy\nwatery, copious或可以看到精子就做vV\n如果scant/toothpaste like 且測不到sperm就做VE"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Pre-op and op technique",
+                "術前評估",
+                "Hx: op hx, vasectomy hx",
+                "PE: 睪丸大小質地, 副睪質地, sperm granuloma, vasal gap, previous scar",
+                "Lab: Semen analysis, antisperm ab, FSH, PSA",
+                "Microsurgical techniques outcome最好(scrotal vs inguinal approach, 懷疑是hernia或orchiopexy時傷到可用inguinal approach)",
+                "Anastomotic Techniques: Keys to Success",
+                "Accurate mucosa-to-mucosa approximation",
+                "Leakproof anastomosis",
+                "Tension-free anastomosis",
+                "Good blood supply",
+                "Healthy mucosa and muscularis",
+                "Good atraumatic anastomotic technique"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s42.webp",
+              "hidden": false,
+              "ocr_text": "Pre-op and op technique\n1.術前評估\nHx:op hx, vasectomy hx\nPE：睪丸大小質地，副睪質地,sperm granuloma, vasal gap, previous scar\nLab: Semen analysis, antisperm ab, FSH, PSA\n1. Microsurgical techniques outcome最好(scrotal vs inguinal approach,懷疑是\nhernia或orchiopexy時傷到可用inguinal approach)\n1. Anastomotic Techniques: Keys to Success\nAccurate mucosa-to-mucosa approximation\nLeakproof anastomosis\nTension-free anastomosis\n-\nGood blood supply\nHealthy mucosa and muscularis\nGood atraumatic anastomotic technique"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "Hypogonadism（分類/Klinefelter/Kallmann/LOH/TRT）",
+          "slide_count": 17,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 43,
+              "text": [
+                "Hypogonadism",
+                "Hypohypo",
+                "Hyperhypo",
+                "LOH(Late onset hypogonadism)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s43.webp",
+              "hidden": false,
+              "ocr_text": "Hypogonadism\nHypohypo\nHyperhypo\nLOH(Late onset hypogonadism)"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "Hypergonadotropic hypogonadism (Primary)",
+                "Congenital or developmental disorders (Klinefelter 最常見, DSD等先天性線發育異常少見)",
+                "Acquired disorders",
+                "Drug-induced (eg Methotrexate, 化療, ketoconazole)",
+                "Localized problems (testis trauma, autoimmune, mumps orchitis….等)",
+                "Systemic diseases/conditions (HIV, lymphoma, aging, metabolic syndrome, SCI 等, 這些在HPG axis與testis 都會有影響)",
+                "Hypogonadotropic hypogonadism (Secondary)",
+                "Congenital or developmental disorders",
+                "鐵沉積症(Haemochromatosis)最常見, 其他像Kallmann, pituitary deficiency等",
+                "Acquired disorders",
+                "Drug-induced (opioid, Testosterone, Estrogen, progesterone, prolactin…)",
+                "Localised problems (Traumatic brain injury, pituitary/hypothalamus tumor 等)",
+                "Systemic diseases/conditions (HIV, lymphoma, Cushing, aging, metabolic syndrome, SCI 等, 這些在HPG axis與testis 都會有影響)",
+                "Androgen resistance/decreased testosterone bioactivity",
+                "Congenital or developmental disorders",
+                "Aromatase deficiency, androgen insensitivity, 5AR deficiency等",
+                "Acquired disorders",
+                "Drug-induced (antiandrogen, Drug-induced ER blockade, Tamoxifen, Clomiphene, aromatase inhibitor)",
+                "Localised problems (Coeliac disease)",
+                "Hypogonadism 分類 (EAU)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s44.webp",
+              "hidden": false,
+              "ocr_text": "Hypogonadism 分類 (EAU)\n• Hypergonadotropic hypogonadism (Primary)\n•Congenital or developmental disorders (Klinefelter最常見，DSD等先天性線發育異常少見）\n• Acquired disorders\n•Drug-induced (eg Methotrexate， 化療，ketoconazole)\n• Localized problems (testis trauma, autoimmune,mumps orchitis.. 等）\n•Systemic diseases/ conditions (HIV,lymphoma, aging, metabolic syndrome, sCl等，這些\n在HPG axis與testis 都會有影響）\n• Hypogonadotropic hypogonadism (Secondary)\n• Congenital or developmental disorders\n•鐵沉積症(Haernochromatosis)最常見，其他像Kallmann, pituitary deficiency等\n• Acquired disorders\n• Drug-induced (opioid, Testosterone, Estrogen, progesterone, prolactin..)\n•Localised problems (Traumatic brain injury, pituitary/hypothalamus tumor 等）\n•Systemic diseases/ conditions (HIV, lymphoma, Cushing, aging, metabolic syndrome, SCI\n等，這些在HPG axis與testis 都會有影響）\n• Androgen resistance/decreased testosterone bioactivity\n• Congenital or developmental disorders\n•Aromatase deficiency, androgen insensitivity, 5AR deficiency等\n• Acquired disorders\n• Drug-induced (antiandrogen, Drug-induced ER blockade, Tamoxifen, clomiphene,\naromatase inhibitor)\n• Localised problems (Coeliac disease)"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "性別決定（Sex Determination）",
+                "人類的性別是由基因決定的，關鍵基因為：",
+                "SRY基因（位於Y染色體短臂）：其產物含有HMG box（能夠使DNA彎曲），進而改變基因表現，誘導睪丸形成 → 男性表徵。",
+                "DAX1基因（核荷爾蒙受體）：可抑制SRY下游誘導睪丸分化的基因。",
+                "WNT4基因：主要表現在卵巢，具有“抗睪丸（antitestis）”功能。",
+                "過去認為女性性別為“預設路徑”（即未表現SRY），但如今已知WNT4、DAX1等基因能主動誘導女性性腺發育。",
+                "46XX male, X染色體上沒有SRY gene, 沒有germ cell,無法產生精子(但有testis)",
+                "AZF gene: Yq11",
+                "SRY gene: Yp11.3",
+                "Androgen receptor: @Xq11-12"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s45.webp",
+              "hidden": false,
+              "ocr_text": "AZF gene: Yq11\nSRY gene: Yp11.3\nAndrogen receptor: @Xg11-12\n性別決定( Sex Determination）\n•人類的性別是由基因決定的，關鍵基因為：\n。SRY基因（位於Y染色體短臂）：其產物含有HMG box（能夠使\nDNA彎曲），進而改變基因表現，誘導睪丸形成一，男性表徵。\n•DAX1基因（核荷爾蒙受體）：可抑制SRY下游誘導睪丸分化的基因。\n•WNT4基因：主要表現在卵巢，具有“抗睪丸(antitestis）”功能。\n。過去認為女性性別為“預設路徑”（即未表現SRY） ，但如今已知\nWNT4、DAX1等基因能主動誘導女性性腺發育。\n46xX male, X染色體上沒有SRY gene,沒有gerrn cell,無法產生精子(但有\ntestis)"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "Haemochromatosis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s46.webp",
+              "hidden": false,
+              "ocr_text": "Haemochromatosis\nADvI$04\n+Fe\nTEVENED\nPit uitary gland\nThyroid and\nparathyroid gland\nAdrenal gland\nHeart and\nCirculat ion\nLiver\nPancre as\n一\nTestis\nOvary"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "Kallmann syndrome （hypo hypo)",
+                "Kallmann syndrome related gene mutation: ANOS1, CHD7, FGF8, FGFR1, PROK2, or PROKR2 gene",
+                "10%會GNRHR or KAL1 gene mutation",
+                "Absent or incomplete pubertal development",
+                "Testicular size markedly reduced, sometimes with cryptorchidism",
+                "Underdevelopment of penis, prostate, absent or sparse pubic, axillary hair, lack of beard growth",
+                "Anosmia(失去嗅覺): hypoplasia of the olfactory bulbs",
+                "Other anomalies, ipsilateral renal aplasia, cleft lip",
+                "治療",
+                "hCG主要補充LH功能，促進睪固酮分泌。",
+                "hMG主要補充FSH功能，促進精子生成。",
+                "Fertile (可育）eunuch(閹人) syndrome",
+                "- 屬於partial hypo hypo",
+                "- 睪固酮低下 (LH分泌少導致leydig cell分泌睪固酮下降）",
+                "- 但保有生育功能 (FSH分泌正常使sertoli cell仍能產生精子）",
+                "- 睪丸切片組織：睪丸體積中等或稍小，有精子，但間質細胞萎縮",
+                "有人認為是較輕微的Kallmann syndrome"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s47.webp",
+              "hidden": false,
+              "ocr_text": "Kallmann syndrome ( hypo hypo)\n•Kallmann syndrome related gene mutation:\nANOS1, CHDZ, FGF8, FGFR1, PROKZ, Or PROKR2 gene\n• 10%會GNRHR or KAL1 gene mutation\n• Absent or incomplete pubertal development\n•Testicular size markedly reduced, sometimes with cryptorchidism\n• Underdevelopment of penis, prostate, absent or sparse pubic, axillary hair,\nlack of beard growth\n• Anosmia(失去嗅覺)：hypoplasia of the olfactory bulbs\n•Other anomalies, ipsilateral renal aplasia, cleft lip\n•治療\n•hCG主要補充LH功能，促進睪固酮分泌。\n• hMG主要補充FSH功能，促進精子生成。\nFertile（可育）eunuch(聞人）syndrome\n- 屬於partial hypo hypo\n-睪固酮低下 （LH分泌少導致leydig cell分泌睪固酮下降）\n-但保有生育功能(FSH分泌正常使sertoli cell仍能產生精子）\n- 睪丸切片組織：睪丸體積中等或稍小，有精子 ，但間質細胞萎縮\n有人認為是較輕微的Kallmann syndrome"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Klinefelter syndrome (Hyper Hypo)",
+                "Sex chromosome: 47XXY",
+                "External genitalia: small testis(seminiferous tubule dysgenesis), small penis",
+                "Other features: Tall, gynecomastia, mild mental retardness,  poor beard growth, osteoporosis",
+                "Lab: Testosterone↓FSH↑LH↑",
+                "Estrogen↑",
+                "幾乎都會不孕, 乳癌機會是一般人20倍"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s48.webp",
+              "hidden": false,
+              "ocr_text": "Klinefelter syndrome (Hyper Hypo)\n• Sex chromosome: 47×xY\n•External genitalia: small\ntestis(seminiferous tubule\ndysgenesis), small penis\n• Other features: Tall, gynecomastia,\nmild mental retardness, poor\nbeard growth, osteoporosis\n• Lab: Testosterone 山FSH LH个\nEstrogen个\n•幾老馨會不孕，乳癌機會是一般\nTall stature\nSlightly feminized\nphysique\nmildly impaired 1Q\n（15 points less\nthan average)\nTendency to lose -\nchest hairs\nFrontal baldness\nabsent\nPoor beard growth\nDooooDo:\nBreast developmenl\n(in 30% of cases)\nOsteoporosis\nFemale-type\npubic hair\npattern\nSmall testes"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "Late Onset Hypogonadism",
+                "因為ageing, obesity和慢性疾病導致testosterone分泌缺乏，所引起的臨床上的症候, 機制包含hyperhypo和hypohypo, 下診斷前須排除organic etiology",
+                "Campbell支持hyperhypo: Circulating LH concentrations do not decline as men age, suggesting that reduced testosterone results from primary gonadal hypofunction rather than hypothalamic-pituitary levels.",
+                "EAU支持hypohypo: Evidence has documented that several associated diseases and chronic co-morbidity can interfere with the HPG axis leading to development of primary hypogonadism or, more frequently, secondary hypogonadism in adulthood, thus significantly influencing the physiological age-dependent decline of testosterone"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s49.webp",
+              "hidden": false,
+              "ocr_text": "Late Onset Hypogonadism\norganic etiology\n• Campbell支持hyperhypo: Circulating LH concentrations do not decline\nas men age, suggesting that reduced testosterone results from primary\nsonadal hypofunction rather than hypothalamic-pituitary levels.\n•EAU支持hypohypo: Evidence has documented that several associated\ndiseases and chronic co-morbidity can interfere with the HPG axis\nleading to development of primary hypogonadism or, more frequently,\nsecondary hypogonadism in aduithood, thus significantly influencing\nthe physiological age-dependent decline of testosterone"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "Hypogonadism survey and treatment",
+                "(EAU 2021)",
+                "if total T在borderline低值或合併可能改變SHBG濃度的疾病",
+                "頭痛視力模糊",
+                "ADAM scale",
+                "@共十點,最重要的兩點（性慾降低、勃起功能異常）",
+                "@其他: 工作表現差、晚餐後瞌睡、悲傷（悶悶不樂）、運動能力衰退、元氣（活力）、耐力（力量）、身高變矮、樂趣減少 (功課被動，原來矮了)",
+                "@性慾降低 or 勃起功能異常 or 或其他任三項 → 可以診斷hypo",
+                "Aging Male Symptom scale",
+                "@17個問題, ≥27分可診斷LOH",
+                "T和PRL都至少測兩次(EAU)",
+                "(EAU)",
+                "->Total T normal: >350 ng/dl (3.5ng/mL, 12 nmol/L)",
+                "->Total T borderline: 230-350 ng/dl(8-12 nmol/L)",
+                "->Total T low: <230 ng/dl (2.3ng/mL, 8 nmol/L)",
+                "->Free T low: <6.5ng/dL",
+                "->T bound to albumin (54% to 68%)",
+                "->T bound to SHBG (30% to 44%)",
+                "->Free T (0.5% to 3%)",
+                "->Bioavailable T = Free T + albumin-bound T",
+                "Hx: Hypogonadism基本症狀(Low libido, ED, osteoporosis, low mood/vigour, fatigue, hot flushes), pituitary相關(頭痛視力模糊)",
+                "相關量表: ADAM scale (2021 EAU不建議只用問卷screening, specificity只有60%), Aging Male Symptom (AMS) scale",
+                "PE: BMI, sign of hypoT(Increased body fat, loss of body hair), external genitalia, DRE"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s50.webp",
+              "hidden": false,
+              "ocr_text": "Hypogonadism\nsurvey and\ntreatment\n(EAU 2021)\niftotal T在borderline低值或合\n併可能改變SHBG濃度的疾病\n->Tbound to albumin (54%\nto 68%)\n->Tbound to SHBG (30% to\n44%\n->Free T (0.5% to 3%)\n->Bioavailable T=Free T+\nalbumin-bound T\nCheck symptoms and signs\nsuggestive for hypogonadism\n•Hx:Hypogonadism基本症狀(Low libido, ED,\nosteoporosis, low mood/vigour, fatigue, hot\nflushes), pituitary相關(頭痛視力模糊）\n•相關量表：ADAM scale (2021 EAU不建議只用\n問卷screening, specificity只有60%), Aging\nMale Symptom (AMS) scale\n•PE: BMl, sign of hypoT(lncreased body fat, loss\nof body hair), external genitalia, DRE\nT和PRL都至少測兩次(EAU)\nMeasure fasting and morning (7-11 am) totalT頭痛視力模糊\n(consider PRL measurement if low desire or other sugg estive symptoms are present)\n(consider SHBG and free-T calculation when indicated)\n(consider LH when T deficiency pathophysiology must be investigated)\nTT<12nm\nhypogonadism\npossible\nTT>12nM/\nreduced CFT\nhypogonadism\npossible\nTT>12nM\nhypogonadism\nunlikely\n•ADAM scale\n@共十點，最重要的兩點（性\n慾降低、勃起功能異常）\n@其他：工作表現差、晚餐\n後瞌睡、悲傷（悶悶不樂\n、運動能力衰退、元氣（活\n力）、耐力（力量）、身高\n變矮、樂趣減少（功課被動\n，原來矮了）\n回性慾隆低。r執起功熊異常\nor或其他任三項乡可以診\n斷hypo\nRepeat TT\nmeasurements\nalong with LH\nPRL+/-SHBG CFT\n•Aging Male Symptom\nscale\n@17個問題，≥27分可診斷\nLOH\n(EAU\n->Total T normal: >350 ng/dl\n(3.5ng/ ml, 12 nmol/L)\n->Total T borderline: 230-\n350 ng/dl(8-12 nmol/L)\n->Total T low: <230 ng/dl\n(2.3ng/mL, 8 nmol/L)\n->Free T low: <6.5ng/dL\nTT<12nM\n(reduced cFT)\nand LH elevated\nTT <12nM\n(reduced cFT)\nand LH reduced/\ninappropriate\nnormal\nSecondary\nhypogonadism\nPrimary\nhypogonadism\nCheck for drugs and substances that can interfere\nwith T production/action.\nCheck for concomitant metabolic disease: obesity/\nmetabolic syndrome/ diabetes"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "補充testosterone的indication就是Total T <12nM (3.5ng/mL)且有hypogonadism的症狀",
+                "找hyperhypo的原因, 可治療就治療",
+                "找hypohypo的原因, 可治療就治療",
+                "Before TRT: DRE/PSA, CBC, LFT, lipid profile, UFR/PVR/IPSS, CV condition(CAD?CHF?)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s51.webp",
+              "hidden": false,
+              "ocr_text": "Primary\nhypogonadism\n找hyperhypo的原因，\n可治療就治療\nCheck for drugs and substances that can interfere\nwith T production/action.\nCheck for concomitant metabolic disease: obesity/\nmetabolic syndrome/dia betes\n找hypohypo的原因，\n可治療就治療\nTT<8nM\nTT< 6nM/\nelevated PRL\nHeadache/ visual\ndisturban ces\nPerform\npituitary\nMRI\nPossible\nspecific\ntherapy\nInvestigate if drugs or substances that may interfere with\nhypothalamic-pituitary axis can be eliminated.\nSuggest modifying potential interfering conditions obesity /underweight\nor other metab olic disturban ces\nFertility\ndesired\nRule out testo sterone therapy possible contraindications\nBefore'FRT: DRE/PSA, €BE,\nLFT, lipid profile,\nUFR/PVR/IPSS, CV\nTestosterone therapy\ntrial\ncondition (CAD?CHF?)\nGonadotropin\ntherapy\n補充testosterone的indication就是TotalT <12nM\n(3.5ng/mL)且 有hypogonadism的症狀"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "AMS scale"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s52.webp",
+              "hidden": false,
+              "ocr_text": "AMS scale\nAMS Questionnaire\nWhich of the following symptoms apply to you at this time? Please mark the appropriate box for each\nsymptom. For symptoms that do not apply. please mark “none.\"\nNone Mild Moderate, Severe\n4\nExtremely\nsevere\n5\nSymptoms\nScore =\n1. Decline in your feeling of general well-being\n(general state of health, subjective feeling)...\n2. Joint pain and muscular ache (lower back\npain, joint pain, pain in a limb, general back ache).\n3. Excessive swreating (unexpected/sudden\nepisodes of sweating, hot fiushes independent\nof strain aaaadaaaaaaa\n4. Sleep problems (difficulty in falling asleep,\nditficulty in sleeping through, waking up earty\nand feeling tired, poor sleep, sleeplessness)•\n5. Increased need for sleep, often feeling tired.\n6. lrritability (feeling aggressive, easily upset\nabout little things, moody)aaa\n7. Nervousness (inner tension, restlessness,\nfeeling fidgety).\n8. Anxiety (feeling panicky)...a.aa\n9. Physical exhaustionnacking vitality (general\ndecrease in performance, reduced activity,\nlacking interest in leisure activities, feeling of\ngetting less done, of achieving less, of having\nto force oneself to undertake activities).\n10. Decrease in muscular strength\n(feeling of weakness) ...a.a.\n11. Depressive mood ((eeling down, sad, on the\nverge of tears, lack of drive, mood swings,\nfeeling nothing is of any use) a.\n12. Feeling that you have passed your peak.\n13. Feeling burnt out, having hit rock-bottom\n14. Decrease in beard growth a.\n15. Decrease in ability/frequency to perform\nsexually..aaapaaaaa.a\n16. Decrease in the number of morning erections.\n17. Decrease in sexual desirenibido (lacking\npleasure in sex, lacking desire for sexual\nintercourse)..\nHave you got any other major symptoms?\nIf Yes, please describe:\n-\nYes.aa.\nNo\nThank you very much for your cooperation"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "沒BG只好學 黃體熊低甲腎肥(肥胖+肢端肥大)糖(糖尿病+glucocorticoid)(黃體熊在吃腎肥糖)",
+                "有BG 就 雌高甲老肝爹(顛)得HIV",
+                "可能改變SHBG濃度的疾病"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s53.webp",
+              "hidden": false,
+              "ocr_text": "可能改變\nSHBG濃度\n的疾病\nBOX 23-2 Conditions Associated with Abnormal Sex\nHormone Binding Globulin (SHBG)\nCONDITIONS ASSOCIATED WITH DECREASED SHBG\nCONCENTRATIONS\nObesity\nNephrotic syndrome\nHypothyroidism\nUse of glucocorticoids, progestins, and androgenic steroids\nAcromegaly\nDiabetes mellitus\nCONDITIONS ASSOCIATED WITH INCREASEDSHBG\nCONCENTRATIONS\nAging\nHepatitis and cirrhosis\nHyperthyroidism\nUse of anticonvulsants\nUse of estrogens\nHuman immunodeficiency virus\n沒BG只好學 黃體熊低甲腎肥(肥胖＋肢端肥大)糖(糖尿病+glucocorticoidX(黃體熊在吃腎肥糖\n有BG 就 雌高甲老肝爹(顛)得HIV"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Testosterone與CV的相關性",
+                "Testosterone 在維持正常CV生理上是有重要角色的",
+                "缺乏testosterone與CAD, CHD等地嚴重程度有相關性",
+                "也會增加CV疾病病人的死亡率",
+                "補充testosterone證實可以改善心肌缺氧跟心臟的功能還有相關的CV risk",
+                "目前研究也發現在心臟病的病人身上TRT長期來說並沒有負面影響",
+                "但目前並沒有常規要在心臟病的病人身上驗T"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s54.webp",
+              "hidden": false,
+              "ocr_text": "Testosterone 與Cv的相關性\n•• Testosterone 在維持正常Cv生理上是有重要角色的\n•缺乏testosterone與CAD,CHD等地嚴重程度有相關性\n•也會增加CV疾病病人的死亡率\n•補充testosterone證實可以改善心肌缺氧跟心臟的功能還有相\n關的CV risk\n•目前研究也發現在心臟病的病人身上TRT長期來說並沒有負面\n影響\n•但目前並沒有常規要在心臟病的病人身上驗T"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "TRT比較 (TUA 2020)",
+                "Testosterone",
+                "propriate",
+                "every 2 days"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s55.webp",
+              "hidden": false,
+              "ocr_text": "TRT比較 (TUA 2020)\n國內現有睪固酮治療製劑之比較\n製劑\n使用方式\n好康\n壤康\nTestosterone\nundecanoate\nTestosterone\npropriate\nTestosterone\ncypionate\nTestosterone\nenanthate\n口服；每日服•降低肝職影•吸收不穩\n用2.3次，每\n響\n定，會受食\n次 1-2顆膠囊\n•口服方便\n物脂質含量\n（40 mg)\n•劑量容易調\n影響\n𤨣\n•需與食物一\n同服用\nevery 2 days\n肌肉注射\n•價格便宜\n•睪固酮濃度\n每 2-3週注射•短效型製\n可能發生起\n一次\n劑，如有副\n伏\n作用可迅速•需多次注射\n停藥\n•可能增加紅\n血球過多症\n的風險\n肌肉注射\n•價格便宜\n•睪固酮濃度\n每2-3週注射 •烜效型製\n可能發生起\n一次\n劑，如有副\n伏\n作用可迅速•需多次注射\n停藥\n•可能增加紅\n血球過多症\n的風險\n製劑\nTestosterone\nundecanoate\nTransdermal\ntestosterone\n使用方式\n肌肉注射\n每 10-14週注\n射一次\n凝膠或貼片\n每日使用\n好處\n壞處\n•睪固酮濃度•注射部位疼\n穩定較不售\n痛\n起伏\n•長效型製\n•長效型針劑\n劑，如有副\n•減少注射頻\n作用無法立\n即停藥\n睪固酮濃度穩•塗抹部位可\n定較不會起伏\n能發生皮唐\n剌激性症狀\n及有傳遞給\n他人之風險\n•須每日塗抹"
+            },
+            {
+              "slide_num": 56,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s56.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 23-4 Available Testosterone Therapy Preparations\nCOMPOUND\nDOSAGE\nORAL AGENTS\nTestosterone undecanoate\n120-240 mg, 2-3\ntimes daily\nADVANTAGES\nOral, adjustable dose\nDISADVANTAGES\nVariable testosterone levels and clinical\nresponse, must be taken with meals\ncontaining at least 20 g of lipids\nINTRAMUSCULAR AGENTS\nTestosterone enanthate\nTestosterone cypionate\nTestosterone propriate\nTestosterone undecanoate\n200 mg every\nLow cost\n1-2 wk\n100-200 mg every\n1-2 wk\n100 mg every 2 days\n750-1000 mg every Efficient testosterone\n10-14 wk\nnormalization, long lasting,\nimproved compliance\nWide fluctuation in testosterone levels, multiple\ninections, increased risk tor polycythemias\nInjection site pain, requires injection training\nSUBUTANEOUS AGENTS\nSurgical implants\n450-700 mg every\n4-6 mo\nCONTROLLED-RELEASE BUCCAL FORMULATION\nTestosterone buccal\n30 mg, twice daily\nTRANSDERMAL AGENTS\nTestosterone patches\n5-10 mg daily\nTestosterone gel 1%-2%\nUnderarm Testosterone\n2% solution\nTestosterone gel 1.62%\n40-80 mg daily\n60-120mg daily\n20.25-81 mg daily\nEfficient testosterone\nnormalization, long lasting,\nimproved compliance\nOral\nInvasive placement, risk of extrusion and site\nintections\nMucosal irritation, twice daily administration\nSimple administration, mimics\ncircadian rhythm\nEfficient testosterone\nnormalization, flexible doses,\nsimple administration\nSkin irritation, daily administration, hygiene\nissues\nSkin irritation, daily administration, possible\ntransference during contact"
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "Adverse effect of T supplement",
+                "Erythrocytosis: most common side effect of TT (monitor HCT)",
+                "injection therapy > topical preparations.",
+                "aggravate vascular disease in the coronary, cerebrovascular, or peripheral vascular circulation, particularly in the elderly with pre-existing conditions",
+                "Increase in prostate volume",
+                "可能會增加worsen LUTS, IPSS, urine flow rates, PVR, or complications",
+                "Severe LUTS (IPSS ≥20) is a relative contraindication to TT",
+                "Liver toxicity/jaundice/nausea/GI bleeding: 口服最容易",
+                "Androgen effects(hirsutism, baldness)",
+                "Gynaecomastia",
+                "身體edema: 因為sodium retention",
+                "Headache",
+                "Skin reaction: 貼片或凝膠",
+                "不會使PSA上升, 也不會增加TRUSP bx的Pca incidence, 但仍有刺激locally advanced或mPca的風險",
+                "不會影響Lipid profile – no change of LDL, T-Cho, TG"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s57.webp",
+              "hidden": false,
+              "ocr_text": "Adverse effect of T supplement\n•Erythrocytosis: most common side effect of TT (monitor HCT)\n• injection therapy > topical preparations.\n•aggravate vascullar disease in the coronary, cerebrovascular, or peripheral\nvascular circulation, particularly in the elderly with pre-existing conditions\n• Increase in prostate volume\n•可能會增加worsen LUTs, IPss, urine flow rates, PVR, or complications\n• Severe LUTS (IPSS ≥20) is a relative contraindication to TT\n•Liver toxicitv/jaundice/nausea/ G1 bleeding： 口服最容易\n• Androgen effects(hirsutism, baldness)\n• Gynaecomastia\n•身體edema：因為sodium retention\n• Headache\n•Skin reaction: 貼片或凝膠\n•不會使PSA上升，也不會增加TRUSPbx的\nPca incidence， 但仍有刺激locally\nadvanced或mPca的風險\n•不會影響Lipid profile - no change of LDL,\nT-Cho, TG"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "T supplement contraindication",
+                "EAU",
+                "EAU跟Campbell大同小異=>口試可以都講，然後提到EAU跟Campbell絕對禁忌症定義的差別",
+                "Campbell",
+                "Localized Pca經過definitive treatment 後追蹤一年沒有recur (PSA<0.01)可以開始給TRT",
+                "No increase risk of Pca recurrence",
+                "gynecomastia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s58.webp",
+              "hidden": false,
+              "ocr_text": "Tsupplement\ncontraindication\nEAU跟Campbell大同小異二>口試可以都講，然\n後提到EAU跟Campbel絕對禁忌症定義的差別\nCampbell\nBOX 23-4 Contraindications for Testosterone Therapy\nVERY HIGH RISK OF SERIOUS ADVERSE OUTCOMES\nMetastatic prostate cancer\nBreast cancer\nMODERATE TO HIGH RISK OF ADVERSE OUTCOMES\nUnevaluated prostate nodule or induration\nHematocrit greater than 50%\nSevere lower urinary tract symptoms associated with benign\nprostatic hypertrophy (American Urological Association Inter -\nnational Prostate Symptom Score >19\nPoorly controlled congestive heart failure\nUnevaluated sleep apnea\nEAU\nTable 4: Main contraindications of testosterone therapy\nAbsolute contraindications\nI Relative contraindication\nLocally advanced or metastatic prostate cancer (Pca)\nMale breast cancer\nMen with an active desire to have children\nHaematocrit = 54%\nUncontrolled or poorly controlled congestive heart failure\nIPSS score > 19\nBaseline haematocrit 48-50%\naynecomastia\nFamilial history of venous thromboembolism\n•Localized Pca經過definitive treatment 後追蹤一年沒有recur (PSA<0.01)可以開始給TRT\n• No increase risk of Pca recurrence"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "Follow up頻率: 3m, 6m, 12m, then Q12m(TUA)",
+                "全身性: general symptoms, T level, Hct, lipid, GOT/GPT",
+                "Urology: PSA, DRE, LUTS (IPSS)",
+                "特殊考量: CHF, sleep apnea, and BMD 1-2 yrs(in men with osteoporosis or low-trauma fracture)",
+                "給TRT會Testicular hypofunction, 一般在停止TRT 12到15個月後testicular hypofunction會恢復, 但造精功能不一定能恢復",
+                "Follow up after TRT"
+              ],
+              "hidden": false,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s59.webp",
+              "ocr_text": "Follow up after TRT\n•Follow up頻率：3m,6m, 12m, then Q12m(TUA)\n•全身性：general symptoms, Tlevel, Hct, lipid, GOT/GPT\n•Urology: PSA, DRE, LUTS (IPSS)\n•特殊考量：CHF, sleep apnea, and BMD 1-2 yrs(in men with osteoporosis\nor low-trauma fracture)\n•給TRT會Testicular hypofunction，一般在停止TRT 12到15個月\n後testicularhypofunction會恢復，但造精功能不一定能恢復"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb_08_02",
+      "title": "性功能異常",
+      "source_file": "7-2 性功能異常(2022).pptx",
+      "total_slides": 60,
+      "topics": [
+        {
+          "id": "t07",
+          "title": "勃起生理（CC/CS/Glans/Detumescence）",
+          "slide_count": 10,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "益生菌用在NOA病人身上",
+                "ED和CAD之間的關係"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s02.webp",
+              "hidden": false,
+              "ocr_text": "EAU2.5 MagRD. Spory\nLactobacillus plantarum 1008 revitalizes testicular health and sperm\ndevelopment in obese male mice model\n1 21-24 March 2025\nFor 16 weeks, and mice randomly chosen from the HFC group were later treated with a probiotic (LP1008) for the final\n8 weeks of HFP feeding (high-fat diet+ LP1008, n = 12).\nNormalized impact (Higher = Worse outcome)\nComparison of Health Outcomes between HFC and HFP Groups\nHFdGroup\nHFP Group (LP1008)\n0.0\nBlood Cholesterol\nInsulin Resistance'\nLiver Function (AST/ALT/LPS)'\nTestosterone\nSperm Quality\nAntioxidant Enzymes\nOxidative Stress'\npoptosis/inflammation\nGut Microbiote Balance\nHealeh Parameters\nwww.eauz3.org\nLiuetal\n益生菌用在NOA病公是\nJ ssocaon\nEAU25 MADRID. SPAN\nPredictive Value of Penile Doppler Ultrasound Impairments for Major\n21-24 Morch 2025\nCardiovascular Events in Patients Refractory to PDE5-1 Therapy: A Longitudinal\nAnalysis\nSurvival curves\n1.00\n8 0.75\n号 a.50\nLog-Rank p =0.032\n0.25\nProba\n0.00\nED和CAD之間的關係\n60\n80\n20\n40\nTime\nPSV>35cm/s PSV<35cm/s\nwww.eau25.org\nSartori et al\nof Uralogy\n。"
+            },
+            {
+              "slide_num": 3,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s03.webp",
+              "hidden": false,
+              "ocr_text": "EAU25 upme seous\nA randomized comparison between Selution SLR™m sirolimus-eluting balloon and\nplain old balloon angioplasty in patients with distal internal pudendal-penile artery\n21-24 March 2025\ndisease, erectile dysfunction and/ or lower urinary tract symptoms: the PERFECT-\nSELUTION first-in-man study\nComparison of Clinical Outcomes between SEB and PoB Groups\nBinary Restenosis\nFollow-up Diameter Stenosis\nClinical Success at 8 Months\n100r\n80\n60\nPercentage (%)\nPercentage (%)\n20\n。\n100，\n80\n60\n40\n20-\n。\n100r\nPercentage (%)\n80\n60\n40\n20\n0\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nwww.eau25.org\nWang T-D.\nEuropean\nof Urology"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "Erectile dysfunction"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s04.webp",
+              "hidden": false,
+              "ocr_text": "Erectile dysfunction"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Penis anatomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s05.webp",
+              "hidden": false,
+              "ocr_text": "A)\nCommunicating vein between cavernosal vein,\ndeep dorsal vein and para-arterial vein (PAV)\nlateral and medial para-arterial vein\nSuperfica!\nCrural vein\ndorsal vein (sov-\nCavernosal vein (CV\nRetrocoronal plexus\nRetrocoronal sulcus\nDistal ligament\nrCV\nCircumflex vein off DDv\nPAV\nDorsal artery\n(B)\nDeep dorsal vein (Dpv)\nCommunicating vein between\nDOV and cavernosal vein\n•para-arterial veins\nPara-arterial vein\nf loteral\n.medial\nEmissary vein of -\ncavernosal vein and DDy\nCavernosal artery\nCaverous nerve\nTunica albuginea\nI inner circular layer\n•outer longitudinal layer\nHsian Chen Ling\nTo internal Pudendal artery\nCommunicating vein-\nof cavernosal vein\nDeep dorsal vein (DoV\n- Santorini's plexus\nDorsal nerve\nPudendal nerve\nCavernous nerve\nIndependent drainage\nof para-arterial vein\nCavernosal artery\nUrethral artery\nBulbar artery\nTo internal pudendal vein\nBulbourethral vein\nHaian-Chen la\nSuperficial dorsal vein\nCavernosal vein\nDorsal artery\nBuck's fascia\nDorsal nerve of penis\nColles' fascia\nCircumflex vein of\nr lateral para-arterial vein.\nDDV\ncaverosal vein\nUrethral vein\nUrethral artery"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Penile Tunica albuginea(Glans沒有)",
+                "A bilayered structure (內環外縱), type 1 collagen",
+                "Inner-layer",
+                "內環",
+                "Bundles support and contain the cavernous tissue",
+                "有很多intracavernous pillars連接Inner layer和septum,",
+                "提供結構支持",
+                "Outer-layer",
+                "外縱",
+                "From the glans penis to the proximal crura, insert inferior pubic rami",
+                "CC 3 to 9 o’clock最薄, CC 5 to 7 o’clock positions完全沒有這層, CS完全沒有這層",
+                "Emissary veins 跑在inner和outer layers之間",
+                "Fundiform ligament: arises from Colles fascia, not adherent to the tunica albuginea of the corpora cavernosa.",
+                "Suspensory ligament: arises from Buck fascia => main function: attach the tunica albuginea of the corpora cavernosa to the pubis => provides support for the mobile portion of the penis",
+                "intracavernous pillars"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s06.webp",
+              "hidden": false,
+              "ocr_text": "Penile Tunica allbuginea(Glans沒有）\n•A bilayered structure（內環外縱),type 1 collagen\n•lnner-laver\n•內環\n•Bundles support and contain the cavernous tissue\n•有很多intracavernous pillars連接Inner laver和septum，\n提供結構支持\nsracavernous pillars\n• Outer-layer\n•外縱\n•From the gilans penis to the proximal crura, insert inferior pubic rami\n•CC3togo'clock最薄,CC5to7o’clock positions完全没有這層，cs完全没有這層\n• Emissary veins 跑在inner 和outer lavers之間\n•Fundiform ligament: arises from Colles fascia,\nFundiform ligarrent of penis\nnot adherent to the tunica albuginea of the\ncorpora cavernosa.\nB\nSuspensory lgarrent ot penis\n• Suspensory ligament: arises from Buck fascia =>\nlschiocavemnosus muscle\nmain function: attach the tunica albuginea of the\ncorpora cavernosa to the pubis => provides\nsupport for the mobile portion of the penis\ndine rapho\nBuilbospongiosus\nmuscle"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Erection - Corpora Cavernosa",
+                "Compression of the subtunical venous plexuses->Stretching of the tunica, occluding the emissary veins between the inner circular and outer longitudinal layers of tunica. Increase in intracavernous pressure to around 100 mm Hg, which raises the penis from the dependent position to the erect state (the full-erection phase)",
+                "Further pressure increase (to several hundred mmHg) occur with reflex contractions of the ischiocavernosus muscles (rigid-erection phase), 此時artery flow 降到低於resting時的flow",
+                "sinusoids",
+                "性刺激->cavernous nerve terminals(副交感)釋放NO->活化Guanylate cyclase->GTP->cGMP或PGE1/VIP注射->活化Adenylyl cyclase->ATP->cAMP(Ca↓ ->smooth m.舒張)",
+                "Dilation of the smooth m. of cavernosal a. → increased cavernosal a. blood flow (Latent phase)->Trapping of the incoming blood by the expanding sinusoids in Corpora Cavernosa(Tumescence phase)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s07.webp",
+              "hidden": false,
+              "ocr_text": "Erection - Corpora Cavernosa\n•性刺激->cavernous nerve terminals(副交感)釋放NO->活化Guanvlate cvclase->GTP-\n>cGMP或PGE1/VIP注射-二活化Adenylyl cyclase->ATP->CAMP(Ca山->smooth m. 舒張）\n•Dilation of the smooth m. of cavernosal a. increased cavernosal a. blood flow (Latent\nphase)->Trapping of the incoming blood by the expanding sinusoids in Corpora\nCavernosa(Tumescence phase)\n•Compression of the subtunical venous plexuses->Stretching of the\ntunica, occluding the emissary veins between the inner circular and\nouter longitudinal layers of tunica. Increase in intracavernous pressure\nFLACCID STATE\nsinusoids\nto around 100 mm Hg, which raises the penis from the dependent\nposition to the erect state (the full-erection phase)\n•Further pressure increase (to several hundred mmHg) occur with reflex\ncOntractions of the ischiocavernosus muscles (rigid-erection phase)，此\n時artery flow 降到低於resting時的flow\nEmissary\nvein\n1567\nTunica\nalbuginea\nA\nERECT STATE\nSubtunical\nvenous plexus\nPDES\ninhibitors\nCavernous\nNerve\nTerminals\nNitric Oxide\nEndothelial\ncell\n-f--Phosphodiesterase 5\nPenile Smooth\nMuscle Cell\nMP maetue\ncGMP\nProtein\nkinase\nactvation\nGTP\nGuanylate Gyclase\nDecreased\nintracellular\ncaldium\nSmooth\nmuscle\nrelaxation\nCAMP\nATP\nWA\nPGE,\nPudendal arterial\nflow (mU/ min)\nIntr acorporeal\npressure (cm H.o)\n20\nCavernous nerve\nPudendal nerve\nFigure 26-6. Blood flow and intracavemous pressure changes during\nthe seven phases of penile erection and detumescence: 0, flaccid; 1,\nlatent: 2, tumescence; 3, full erection; 4, rigid erection; 5, initial detu-\nmescence: 6. slow detumescence:7. fast detumescence.\nExpanded\nsinuses\nB\nCompressed\nsubtunical\nvenous plexus"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Detumescence - Corpora Cavernosa",
+                "Ischiocavernosus m. stop  contractions/artery flow也低於resting時的flow-> intracavernous pressure decreased to around 100 mm Hg(回到full erection phase)",
+                "Sympathetic discharge during ejaculation/Sessation of sexual stimulation(NO decreased)/cGMP breakdown by phosphodiesterase 5/Endothelin/PGF2 -> cavernosal a. smooth m. contraction(initial of detumescence phase) -> Decreased blood flow to sinusoid space",
+                "Sinusoid blood decreased -> slowly reopening of venous channel(slow detumescence phase)",
+                "Completely reopened venous channel -> fast decrease in pressure(fast detumescence)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s08.webp",
+              "hidden": false,
+              "ocr_text": "Detumescence - Corpora Cavernosa\n•Ischiocavernosus m. stop contractions/artery flow也低於resting時的flow-＞\nintracavernous pressure decreased to around 100mm Hg(回到full erection\nphase)\n•Sympathetic discharge during ejaculation/Sessation of sexual stimulation(No\ndecreased)/cGMP breakdown by phosphodiesterase 5/Endothelin/PGF2 ->\ncavernosal a. smooth m. contraction (tnitial of detumescence phase) ->\nDecreased blood flow to sinusoid space\n• Sinusoid blood decreased -> slowly reopening of venous channel(slow\ndetumescence phase)\n• Completely reopened venous channel -> fast decrease in pressure(fast\ndetumescence)\n3\n6\n25\n--f--Phosphodiesterase 5\nPDES\ninhibitors\nCavernous\nNerve\nTerminals\nNitric Oxide\nEndothelial\ncell\nPenile Smooth\nMuscle Cell\nGMP naettve\nDecreased\nintracellutar\nSmooth\nmuscle\ncGMP\nProtein\nsinase\nactvator\nCAMP\nhntr acorporeal\npressure (cm H.o)\nPudendal arterial\nflow (ml min)\n200\n100\nGTP\nGuanylate Cyclase\nATP\nPGE,\nCavernous nery\nPudendal nerve\nFiqure 26-6. Blood flow and intracavemous pressure changes durina\nthe seven phases of penile erection and detumescence: 0, flaccid; 1,\nlatent; 2, tumescence; 3, tull erection; 4, rigid erection; 5, initial detu-\nmescence; 6, slow detumescence; 7, tast detumescence."
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "與勃起相關的神經傳導物質:",
+                "(NS的病人如過得DM記得驗一下GOP)",
+                "NO, Serotonin, Dopamine, Melanocortin -> 促進勃起",
+                "GABA, opioid, prolactin -> 抑制勃起",
+                "與勃起相關的神經傳導物質:",
+                "(NS的病人如過得DM記得驗一下GOP)",
+                "NO, Serotonin(5HT1a是抑制, 5HT2c是促進, Dopamine(D1 D4), Melanocortin, oxycontin(?) -> 促進勃起",
+                "GABA, opioid, prolactin -> 抑制勃起",
+                "多巴硬，血清軟；一氧硬，腎上軟（周邊）。",
+                "促進性慾（中樞），減少erection（周邊）",
+                "alpha agonist 會抑制勃起(a1使陰莖血管收縮，a2 抑制CNS交感神經釋放，使NE下降libido下降），alpha blocker可能會改善ED(使血管擴張）"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s09.webp",
+              "hidden": false,
+              "ocr_text": "Central Neurotransmitters and Their Function\nNEUROTRANSMITTER RECEPTOR AND FUNCTION\nDopamine\nD1 and D4 receptor-enhances erection\nD2 receptor-enhances seminal emission\nSerotonin (5-HT)\n5-HT—-inhibits sex drive and spinal sexual reflex\n5-HT1A-inhibits erection, facilitates ejaculation\n5-HT2C-enhances erection\nNorepinephrine\ny-Aminobutyric acid\nOpioids\nCannabinoids\nOxytocin\nEnhances sexual function 促進性慾（中樞）．減少erection （周邊）\nInhibits erectile signals\nInhibit penile erection\nInhibit sexual function\nEnhances appetitive and reinforcing effects of sexual\nactivity\nNitric oxide\nMediates erection at paraventricular nucleus\nMelanocortins\nMCR4-\n-enhances erection\nProlactin\nSuppresses sexual function\nalpha agonist 會抑制勃起(a1使陰莖血管收縮，a2抑制CNS交感神經釋放，使NE下降libido下降）\nsoha btocker可能會改善ED使印管據張子\n與勃起相蘭的神經傅遵物質：\n多巴硬，血清軟；一氧硬，腎上軟（周\n(NS的病人如過得DM記得驗一下GOP)\n邊）。\nNO, Serotonin(5HT1a是抑制，5HT2C是促進，Dopamine(D1 D4),\nMelanocortin, oxycontin(P)-＞ 促進勃起\nGABA, opioid, prolactin -> 抑制勃起"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Erection - Corpus Spongiosum and Glans Penis",
+                "The pressure in the corpus spongiosum and glans is only one third to one half that in the corpora cavernosa",
+                "Tunical covering is thin(only circular layer) over the corpus spongiosum and virtually absent over the glans, ensures minimal venous occlusion",
+                "During the full-erection phase, partial compression of the deep dorsal and circumflex veins between Buck fascia and the engorged corpora cavernosa",
+                "During the rigid-erection phase, the ischiocavernosus and bulbocavernosus muscles forcefully compress the spongiosum and penile veins"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s10.webp",
+              "hidden": false,
+              "ocr_text": "Erection - Corpus Spongiosum and Glans Penis\n• The pressure in the corpus spongiosum and glans is only one third\nto one half that in the corpora cavernosa\n• Tunical covering is thin(only circular layer) over the corpus\nspongiosum and virtually absent over the glans, ensures\nminimal venous occlusion\n• During the full-erection phase, partial compression of the deep\ndorsal and circumflex veins between Buck fascia and the engorged\ncorpora cavernosa\nTABLE 26-3 Comparison of Corpus Spongiosum\nand Glans Penis\n•During the rigid-erection\nphase, the\nischiocavernosus and\nbulbocavernosus muscles\nforcefully compress the\nspongiosum and penile\nveins\nCORPUS SPONGIOSUM\nTunica albuginea\nThin (circular layer only)\nMain blood supply\nBulbal and spongiosal\narteries\nVenous occlusion\nduring erection\nCompression by\nskeletal muscle\nNo\nYes (ischiocavernosus,\nbulbocavernosus\nGLANS PENIS\nAbsent\nDorsal artery\nNo\nNo"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Erection - 3 types",
+                "Nocturnal erection: 跟REM(快速動眼期)有關, 一個晚上約4-5次",
+                "Reflexogenic erection: 受觸摸刺激(tactile stimuli)而勃起 (S2-S4)",
+                "Psychogenic erection: 受視覺聽覺刺激(audiovisual)而勃起, 年輕人較易因為這樣勃起 (T10-L2)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s11.webp",
+              "hidden": false,
+              "ocr_text": "Erection -3 types\n•Nocturnal erection:跟REM(快速動眼期）有關，一個晚上約4-5次\n•Reflexogenic erection: 受觸摸刺激(tactile stimuli)而勃起(S2-S4)\n•Psychogenic erection: 受視覺聽覺刺激(audiovisual)而勃起，年輕人\n較易因為這樣勃起(T10-L2)"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "ED：定義、原因與評估",
+          "slide_count": 8,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 12,
+              "text": [
+                "定義: Inability to attain and maintain an erection of penis sufficient to permit satisfactory sexual intercourse.",
+                "ED的分類: Psychogenic, Organic, Mixed",
+                "->Psychogenic ED有哪些特徵: Sudden onset, Complete",
+                "immediate loss, Situational dysfunction, 有morning erection",
+                "->Organic ED有哪些特徵: Gradual onset, 沒有morning erection,",
+                "intact libido and ejaculatory function, 有ED risk factor",
+                "Risk factor: 三高,肥胖,不運動,抽菸,BPH/LUTS, 肝腎衰竭",
+                "Erectile dysfunction 概論"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s12.webp",
+              "hidden": false,
+              "ocr_text": "Erectile dysfunction 概論\n•定義：Inability to attain and maintain an erection of penis\nsufficient to permit satisfactory sexual intercourse.\n•ED的分類：Psychogenic, Organic, Mixed\n->psychogenic ED有哪些特徵： Sudden onset, Complete\nimmediate loss, Situational dysfunction， 有morning erection\n->0rganic ED有哪些特徵：Gradual onset， 沒有morning erection,\nintact libido and ejaculatory function， 有EDrisk factor\n•Risk tactor：三高,肥胖不運動,抽菸,BPH/LUTS,肝腎衰竭"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "三高,肥胖,不運動,抽菸,BPH/LUTS",
+                "ED risk factor odds 前四高: 抗憂鬱藥>抗血壓藥>DM>obstructive LUTS",
+                "Antidepressant (9) >Antihypertensive(4) > DM (2.9) > Obstructive urinary symptom (2.2)>HTN, Smoking, BPH (1.6)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s13.webp",
+              "hidden": false,
+              "ocr_text": "ED risk factor odds 前四高：抗憂鬱藥>抗血壓藥>DM>obstructive LUTS\nTABLE 27-2\nMajor Erectile Dysfunction Risk Factors\nCONDITION 三高,肥胖，不運動,抽菸\nBPHAUTS\nMULTIVARIATE ADJUSTED\noDDS RATO\nDiabetes mellitus\nHypertension\nCardiovascular disease\nHypercholesterolemia\nBenign prostate enlargement\nI Obstructive urinary symptoms\nIncreased body mass index\n(>30 kg/m)\nPhysical inactivity\nCurrent cigarette smoking\nAntidepressant use\nAntihypertensive use\n29\n1.6\n1.1\n1.0\n1.6\n2.2\n1.5\n1.5\n1.6\n9.1\n4.0\nAntidepressant (9) >Antihypertensive(4)>DM (2.9)>Obstructive urinary symptom\n（2.2)>HTN, Smoking, BPH (1.6)"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "Levodopa有研究指出因為會變成dopamine可以改善老人性功能",
+                "但常使用出現耐受性反而會造成ED"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s14.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 69.3 Drugs Associated With Erectile Dysfurction\nCLASS\nSPECIFIC AGENTS\nSAntihyperterisives\nAntidepressants\nAntipsychatics\nAntiandrogens\nAntiuioer drugs\nCytptoxdicagents\nOpiatea\nThiazide diuretics. nonselactive beta-\nblockers\nTheyclica- selective serotonin reuptake\ninhibitors\nPhenothiazings\nNonsteroidal (futaride) steroidal;\nLtginizing homane-rEleasing homope\nenalogues\nHistamine He receptor antagonists\nimetidine\nCyelopbospharide, methotraxate\nMorphina\nLevodopa有研究指出因為會變成dopamine可以改善老人性\n功能\n但常使用出現耐受性反而會造成ED\nBOx 70.1 Causes of Priapism\naAdrenergic Recoptor Antagonists\nPrazosin, terazosin, doxazosin, tamsulosin\nAntianxiety Agent\nHydroxyzine\nicoaqulanis\nHepannwartarnl\nAntidepressants and Antipsychotics\nTrazodone, bupropion, tluoxetine,sertralne, lithium,clozapine,\nrisperidone, olanzapine, chlorpromazine, thioridazine,\nAntihypertensives\nHydralazine, guanethidine, propranolol\nAttention-Deficit/Hyperactivity Disorder Agents\nMethyiphenidates (Concerta, Daytrana, Focalin, Metadate,\nMethylin, Quilvant, Ritalin)\nAtomoxetine (Strattera)\nRecreational Drugs\nAlcohol, cocaine (intranasal and topical), crack cocaine,\nmanjuana, synthetic cannabinoids\nGeniournarconditions\nStraddle injury, coital injury, pelvic trauma, kick to\npenis or perineum, penile bypass surgery, urinary\nretention\nHematologic Dyscrasias\nSickle cell disease, thalassemia, granulocytic leukemia,\nmyeloid leukemla, lvmphocytic leukemla, muitiplemyeloma,\nhemoglobin Oimsted variant, fat emboli associated with\nhyperalimentation, hemodialysis, glucose-6-phosphate\ndehydrogenase deficiency\nHormonpc\nGonadotropin-releasing hormone, testosterone\ninfectious Toxin-Mediated) Causes\nScorpion sting, spider bite, rabies, malaria\nMetabolic Conditions\nAmyloidosis, Fabry disease, gout\nNeoplastic Causes (Metastatic or Regional Infiltration)\nProstate, urethra, testis, bladder, rectum, lung, kidney\nNeuroaenicconditions\nSyphilis, spinal cord injiury. cauda equina compression,\nautonomic neuropathy, lumbar disk herniation, spinal\nstenosis, cerebral vascular accident, brain tumor. spinal\nanesthesia, cauda equina syndrome\nVasoactive Erectile Agents\nPapaverine, phentolamine, prostaglandin E, oral\nphosphodiesterase type 5 inhibitors, combination\nintracavemous therapy\nTABLE 71.4 Causes of Retrograde Ejaculation,\nDelayed Ejaculation, Anejaculation, and\nAnorgasmia\nAging male\nPsychogenic\nCongenital\nAnatomic causes\nNeurogenic causes\nInfective\nEndocrine\nMedication\nDegeneration of penile afferent nerves\nInhibited ejaculation\nMallerian duct cyst\nWolffian duct abnormality\nPrune-belly syndrome\nTransurethral resection of prostate\nBladder neck incision\nDiabetic autonomic neuropathy\nMuitiple sclerosis\nSpinal cord injury\nRadical prostatectomy\nProctocolectomy\nBilateral sympathectomy\nAbdominal aortic aneurysmectomy\nPara-aortic lymphadenectomy\nUrethritis\nGenitourinary tuberculosis\nSchistosomiasis\nHHypogonadism\nHypothyroidism\nAlpha-methyldopa\nThiazide diuretics\nTricyclic and SSRl antidepressants\nPhenothiazine\nAlcohol abuse"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "ED cause",
+                "口訣: IMPOTENCE"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s15.webp",
+              "hidden": false,
+              "ocr_text": "ED cause\n口訣：IMPOTENCE\nTable 13.2 Causes of erectile dysfunction or 'IMPOTENCE\nInflammatory\nMechanical\nPsychological\nProstatitis\nbaaobiaittetet\nPeyronie's disease\nDepression; anxiety: relationship difficulties: lack of attractiony\nstress\nOcclusive\nArteriogenics hypertension; smoking: hyperlipidaemia; diabetes\nvascular factors mellitus: peripheral vascular disease\nYenogenic: impairment of veno-occlusive mechanism (due to\nanatomical or degenerative changes)\nTrauma\nExtra factors\nPevic fracture: SCl: penile fracture/ trauma\nlatrogenic: pelvic surgery; prostatectomy\nOther: increasing age; chronic renal failure; cirrhosis, ischaemic\npriapism (i.e. corporeal fibrosis); smoking: penile cancer\nNeurogenic\nCNS: MS; PD; multisystem atrophy; tumour; stroke\nSoinal cord: spina bifida; MS; SCl; tumour\nN5) eno PNS: pelvic surgery or RT: peripheral neuropathy (diabetes.\nalcohol-related): pelvie/ urethral surgeryi\nChemical\nAntihypertensives (B-blockers, thiazides.\nrtoitor\nAntiarrhythmics (amiodarone)\nAntidepressants (tricyclics, MAOls, SSRIS)\nAnxiolytics (benzodiazepine)\nFrecrl\nAntipsychotics (neuroleptics)\nAntiandrogens (finasteride. cyproterone acetate)\nGnRH analogues\nAnticonvulsants (phenytoin, carbamazepine)\nAnti-PD dnuzs (levodopa)\nStatins (atorvastatin)\nRacreational drugs (alcothol, mariuana. cocaine. herorm.andboevs\nsteroids)\nEndocrine\nDabetes melirus: hypogonadism: hvperprolactnaermia: bppo\nand hyperthyroidism, nypo- andnypercortisollsna\nsane-NAD."
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "造成ED",
+                "Diuretics(thiazide)",
+                "Diuretics(furosemide) campbell沒提到",
+                "Non-selective B (B2) blocker (propanolol)",
+                "A2 blocker",
+                "A2 agonist(Clonidine)",
+                "減少ED",
+                "A1 blocker",
+                "ACEI",
+                "ARB",
+                "不影響ED",
+                "CCB"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s16.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 68.10 Effect of Antihypertensive Agents on\nSexual Function\nAGENT\nDiuretics\nBeta-blocker\n(nonselective)\n∞1-Blocker\nEFFECT\nMECHANISM\nED (twice as\ncommon as\nplacebo)\nED\nUnknown\nDecreases ED\nrate but\nmay cause\nalteration of\nejaculation\n02-Blocker\nPrejunctional 0z-\nreceptor inhibition\nFailure of sympathetic-\ninduced (1) closure\nof internal sphincter\nand proximal urethra\nand (2) failure of\nseminal emission\nduring ejaculation\nInhibition of central\naz-receptor\nAngiotensin-\nconverting\nenzyme inhibitor\nAngiotensin ll\nreceptor blocker\nED\nPossible\nreduction in\nED\nPossibly\nreduction in\nED\nED, Erectile dysfunction.\n造成ED\nDiuretics(thiazide)\nDiuretics(furosemide) campbe沒提到\nNon-selective B (B2) blocker (propanolol)\nA2 blocker\nA2 agonist (Clonidine)\n減少ED\nA1 blocker\nACEI\nARB\n不影缨ED\nCCB"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "ED basic evaluation",
+                "History",
+                "內外科病史、藥物史、抽菸喝酒",
+                "性生活史 (ED sudden/gradual onset, 多久了, 有沒有晨勃, 有無性慾, 硬度, 性伴侶關係)",
+                "問卷: IIEF, IIEF-5 [信心、插入、維持、困難、滿意] (5-25分)",
+                "Severe (5 to 7), moderate (8 to 11), mild to moderate (12 to 16), mild (17 to 21), and no ED (22 to 25)",
+                "勃起硬度表(EHS/erection hardness score):",
+                "第一級：變大沒硬度（蒟蒻）",
+                "第二級：有硬度但不足以行房（去皮香蕉）",
+                "第三級：有硬度勉強完成行房（帶皮香蕉）",
+                "第四級：完全堅挺（小黃瓜）",
+                "PE: penile deformity(curvature? Peyronie’s plaque?), testis size, DRE/anal tone, blood pressure",
+                "Lab: Glucose/HbA1C, lipid profile, total testosterone, PSA",
+                "(free testosterone, LH, prolactin in specific conditions)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s17.webp",
+              "hidden": false,
+              "ocr_text": "ED basic evaluation\n•History\n•内外科病史、藥物史、抽菸喝酒\n裝去到麗 性界禮關器gradualonset,多久了，有没有晨勒，有無性\n•問卷：MEF, IEF-5[信心、插入、維持、困難、滿意]（5-25分）\nSevere (5 to 7), moderate (8 to 11), mild to moderate (12 to 16),\nmild (17 to 21), and no ED (22 to 25)\n•勃起硬度表(EHS/erection hardness score)：\n•第一級：變大沒硬度（蒟蒻）\n•第二級：有硬度但不足以行房（去皮香蕉）\n•第三級：有硬度勉強完成行房（帶皮香蕉）\n•第四級：完全堅挺（小黃瓜）\n• PE: penile deformity(curvature? Peyronie's plaque?), testis size,\nDRE/anal tone, blood pressure\n• Lab: Glucose/HbA1C, lipid profile, total testosterone, PSA\n(free testosterone, LH, prolactin in specific conditions)"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "ED further evaluation",
+                "Nocturnal penile tumescence and rigidity testing: 綁一個 RigiScan device在penis shaft上, 可測量夜間勃起硬度, 次數.持續時間, 用來區辨psychogenic和organic ED",
+                "Combined Intracavernosal Injection and Stimulation (CIS)",
+                "陰莖血流第一線評估",
+                "做法: Intracavernosal injection of a PGE1, combined with genital or audiovisual sexual stimulation",
+                "A normal CIS test: 打完15分鐘內要勃起>90度且維持15分鐘以上",
+                "Penile color Dopplar USS:",
+                "陰莖血流第二線評估",
+                "做法:  打PGE1前後都做Doppler USS",
+                "Peak systolic velocity (PSV) < 25cm/s → arterial insufficiency",
+                "End diastolic velocity (EDV) > 5 cm/s; RI (PSV-EDV/PSV) <0.75",
+                "→ venous leakage"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s18.webp",
+              "hidden": false,
+              "ocr_text": "ED further evaluation\n• Nocturnal penile tumescence and rigidity testing: 綁一個 Rigiscan device\n在penis shaft 上，可測量夜間勃起硬度，次數.持續時間，用來區辨\npsychogenic 和organic ED\n• Combined Intracavernosal lnjection and Stimulation (CIs)\n•陰莖血流第一線評估\n••做法： ntracavernosal injection of a PGE1, combined with genital or\naudiovisual sexual stimulation\n• Anormal CIs test:打完15分鐘內要勃起>90度且維持15分鐘以上\nPenile color Dopplar USS:\n•陰莖血流第二線評估\n•做法：打PGE1前後都做Doppler USs\n•Peak systolic velocity (PSV) < 25cm/s > arterial insufficiency\n•End diastolic velocity (EDV) > 5 cm/s; RI (PSV-EDV/PSV) <0.75\nvenous leakage"
+            },
+            {
+              "slide_num": 19,
+              "text": [
+                "ED further evaluation",
+                "Dynamic Infusion Cavernosometry and Cavernosography (DICC)",
+                "陰莖血流第三線評估",
+                "在CC裡面打顯影劑",
+                "Evaluates the penile venous outflow system.",
+                "Penile Angiography(CTA or PTA)",
+                "陰莖血流第三線評估",
+                "從int. pudendal artery打顯影劑評估penile artery的血流",
+                "Indication包括",
+                "->Young patient with ED secondary to a traumatic arterial",
+                "disruption",
+                "->Patient with a history of penile compression injury",
+                "->Patient being considered for penile revascularization surgery",
+                "MRI:評估penile fibrosis和severe cases of Peyronie’s disease"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s19.webp",
+              "hidden": false,
+              "ocr_text": "ED further evaluation\n• Dynamic Infusion Cavernosometry and Cavernosography (DICC)\n•陰莖血流第三線評佶\n•在cC裡面打顯影劑\n• Evaluates the penile venous outflow system.\n•Penile Angiography(CTA or PTA)\n•陰莖血流第三線評佶\n•從int.pudendal artery打顯影劑評估penile artery的血流\n•Indication包括\n->Young patient with ED secondary to a traumatic arterial\ndisruption\n->Patient with a history of penile compression injury\n->Patient being considered for penile revascularization surgery\n•MRl:評估penile fibrosis 和severe cases of Peyronie's disease"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "ED：治療（PDE5i/ICI/VED/Prosthesis）",
+          "slide_count": 10,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 20,
+              "text": [
+                "ED survey and treatment",
+                "(EAU 2021)",
+                "先評估CV risk, low或int. risk(通過stress test)才繼續治療",
+                "第一線",
+                "第三線",
+                "Intracavernosal injection",
+                "第二線",
+                "Artery revascularization",
+                "(if confirmed int. pudendal a. stenosis)",
+                "Data is inadequate to support the use of any specific regimen for penile rehabilitation after radical prostatectomy",
+                "何謂PDE5i沒效？正確使用藥物(有性刺激, 有提前吃, 沒有跟高油脂食物一起吃), 已經吃到最高劑量, 至少嘗試6次服藥",
+                "Basic evaluation +/- further evaluation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s20.webp",
+              "hidden": false,
+              "ocr_text": "Basic evaluation +/-\nED survey\nfurther evaluation\nand\ntreatment\n(EAU 2021\nData is inadequate to\nsupport the use of any\nspecific regimen for\npenile rehabilitation after\nradical prostatectomy\nComprehensive medical and sexual history\n(assessing a detailed aetiological framework)\nBefore any therapeutic suggestions:\nIdentify patient needs and expectations\nShared decision-making\nOffer conjoint psycho-sexual ana medrcal/ physical\ntreatment\nIdentify and treat\n\"curable” causes\nof erectile\ndysfunction\nLifestyle changes\nand risk factor\nmodifications\nProvide education\nand counselling to\npatient (and\na partner, if\navaiable\n先餅佔CV risk, low或int.risk(通過stress test)才繼續治療\nintracavernosal\niniection\nVacuum\ndevice\nOral\ntherapy\nwith\nPDESI\nTopical/\nIntraurethral\nAlprostadil\nVasculogenic\nED only\nPatients with\ndefinitive severe ED\n(Major non nerve-\nsparing pelvic\nsurgery neurogenic\nor traumatic causes)\nAssess therapeutic outcomes in terms of:\n• Patient self-percieved treatment invasiveness\n• Treatment-associated improvement of erectile\nfunction\nTreatment-related side effects\nTreatment-associated satisfaction\nLI-SWT\nwith/without\nPDE5I\nInadequate treatment\noutcome\n• Assess adequate use of treatment options\nProvide new instructions and counselling\nRe-trial\nTreatment-associated satisfaction\nConciaar\nther\npes intracavernosal injection\nInadequate treatment outcome\nPenile prostheses implant\n第三線\n何謂PDE5i沒效？正確使用藥物（有性刺激，\n有提前吃，沒有跟高油脂食物一起吃),己\n經吃到最高劑量，至少嘗試6次服藥\n第一線\nArtery revascularization\n(if confirmed int. pudendal a. stenosis)\n第二線"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "ED pretreatment",
+                "CV evaluation",
+                "Princeton consensus",
+                "High risk",
+                "- Anatomy上的問題: 中重度瓣膜疾病, HOCM, MI <2wks",
+                "- Functional 上的問題: 高風險arrhythmia, NYHA IV, uncontrolled HTN",
+                "- 症狀上: unstable/refractory angina",
+                "Low risk",
+                "- Anatomy上的問題: 輕度瓣膜疾病, 大於六周以上有過MI, MI後血管有成功暢通",
+                "- Functional 上的問題: <3 CAD risk factor, NYHA I or II, controlled HTN",
+                "- 症狀上: 輕度stable angina \u000bIntermediate risk: 介於中間, ≥3 CAD risk factor, stroke/PAOD hx",
+                "CAD risk factors: 心臟病家族史、三高, 抽菸, 不愛動, 老, 男人"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s21.webp",
+              "hidden": false,
+              "ocr_text": "Princeton consensus\nHigh risk\n-Anatomy上的問題：中重度瓣膜疾病， HOCM, MI <2wks\n-Functional 上的問題：高風險arrhythmia,NYHA IV, uncontrolled HTN\n-症狀上：unstable/refractory angina\nLow risk\n-Anatomy上的問題：輕度瓣膜疾病，大於六周以上有過M，MI後血管\n有𢦓功暢通\n-Functional 上的問題：<3 CAD risk factor, NYHA 1 or ll, controlled HTN\n-症狀上：輕度stable angina\nIntermediate risk: 介於中間，≥3 CAD risk factor, stroke/PAoD bx\nED pretreatment\nCV evaluation\nV\nLow risk\nIntermediate risk\nHigh risk\nElective risk\nassessment\nCAD risk factors: 心臟\n病家族史、三高，抽\n菸，不愛動，老，男人\nStress testb\nPass\nFail\nLow risk\n4\nHigh risk\nAdvice, treat ED\nCardiologist"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "PDE5 inhibitor 概論",
+                "Block the catalytic action of the enzyme (PDE5) that degrades cGMP (cGMP↑)",
+                "使用時也需要有sexual stimulation",
+                "On demand use: 做愛前30-60 minutes(Viaggra/Levitra), 60-120 minutes(Cialis)",
+                "Daily use(for ED and BPH/LUTS): Cialis 2.5-5mg QD",
+                "Effectively result in successful sexual intercourse about 70%",
+                "Combined therapy 可降低單一藥物較高劑量之A.E.",
+                "慢久",
+                "most common",
+                "cross-react to PDE type 6",
+                "VIAGRA",
+                "Levitra",
+                "Cialis",
+                "Stendra",
+                "Viagra三特色 – Bio最高, dose別人的5倍 (25/50/100), Blur vision",
+                "Levitra 一特色 – 並用anti-Arrhythmia要小心",
+                "Cialis 三特色 – onset 慢, half life長, 不受fatty food影響, 背痛"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s22.webp",
+              "hidden": false,
+              "ocr_text": "PDE5\ninhibitor 概論\n•Block the catalytic action of the enzyme (PDE5) that degrades cGMP (CGMP个)\n•使用時也需要有sexual stimulation\n• On demand use: 做愛前30-60 minutes(Viaggra/Levitra), 60-120 minutes(Cialis)\n• Daily use (for ED and BPH/LUTS): Cialis 2.5-5mg QD\n• Effectively result in successful sexual intercourse about 70%\n•Combined therapy 可降低單一藥物較高劑量之A.E.\nTABLE 27-7 Comparison of Four Phosphodiesterase Type 5 Inhibitors Currently Available in the United States\nSILDENAFIL\nHAGRA\nCmax (ng/mL)\nTmax (hr)\nOnset of action (min)\nHalf-life (hr)\nBioavailability\nFatty food\nRecommended dosage\nSide effects:\n=most common\nHeadache, duspepsia, facial flushingl\nBackache, myalgia\nBlurred/blue vision\nPrecaution with antiarrhythmics\nContraindication with nitrates\n450\n0.8\n15-60\n3-5\n40%\nReduced absorption\n25,50,100 mg\nVARDENAFIL\ntevitra\n20.9\n0.7-0.9\n15-60\n4-5\n15%\nReduced absorption\n5,10,20mg\nTADALAFIL\nCatis\n378\n2\n15-120\n慢\n17.5\nNot tested\nNo effect\n5, 10,20 mg\nAVANAFIL\nStendra\n2153\n0.3-0.5\n15-60\n3-5\n30%\nReduced absorption\n50,100, 200 mg\nYes\nYes\nRare\ncross-react to\nPDE type 6\nBare\nYes\nYes\nYes\nYes\nRare\nNo\nYes\nViagra.\n三特色一Bio最高,dose別人的5倍 (25/50/100), Blur vision\nLevitra一特色一並用anti-Arrhythmia要小心\nCialis\n三特色一onset慢，half life長，不受fattyfood影響，背痛\nYes\nRare\nNo\nNo\nYes"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "PDE5i 注意事項",
+                "PDE5i 絕不能和nitrate併用-> absolute contraindication",
+                "Nitrate類藥物: sublingual nitroglycerin, isosorbide dinitrate, isosorbide mononitrate, amyl nitrite, and amyl nitrate “poppers”",
+                "Nitrate用完至少間隔兩周才能用PDE5i",
+                "用完PDE5i 24-48小時才能用NTG(Sildenafil, vardenafil 24h, Tadalafil 48h)",
+                "Alpha blocker要和PDE5i分開吃-> 尤其是Sildenafil",
+                "主要是Doxazosin和Sildenafil(會交互作用造成低血壓)",
+                "Tamsulosin: not associated with clinically significant hypotension",
+                "增加PDE5i血中濃度(需降低劑量): ketoconazole, protease inhibitors(合併Protease inhibitor一起用的話PDE5i起始劑量減至¼, 最後一顆viagra要與Pi間隔48 hr, Cialis要72Hr)",
+                "減少PDE5i血中濃度(需增加劑量):rifampin",
+                "PDE5i 的其他contraindication:",
+                "Princeton consensus intermediate(先給CV評估）和high risk",
+                "休息時低血壓(<90/50)或高血壓(>170/100)者",
+                "遺傳性退化性視網膜疾病(包括視網膜炎色素疾病)",
+                "Child-Pugh C肝衰竭",
+                "ESRD在進行腎透析病患"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s23.webp",
+              "hidden": false,
+              "ocr_text": "PDE5i 注意事項\n•PDESi 絕不能和nitrate併用->absolute contraindication\n•Nitrate類藥物：sublingual nitroglycerin, isosorbide dinitrate, isosorbide\nmononitrate, amyl nitrite, and amyl nitrate \"poppers\"\n•Nitrate用完至少間隔兩周才能用PDE5i\n•用完PDESi24-48小時才能用NTG(Sildenafil, vardenafil 24h, Tadalafil 48h)\n• Alpha blocker要和PDE5分開吃-＞尤其是Sildenafil\n。主要是Doxazosin 和sildenafi(會交互作用造成低血壓）\n• Tamsulosin: not associated with clinically significant hypotension\n•增加PDE5i血中濃度(需降低劑量)：ketoconazole,protease inhibitors(合併Protease\ninhibitor一起用的話PDESi起始劑量減至，最後一顆viagra要與pi間隔48 hr, Cialis要\n72Hr)\n•減少PDE5i血中濃度(需增加劑量):rifampin\n•PDE5i 的其他contraindication：\n•Princeton consensus intermediate(先給CV評估）和high risk\n•休息時低血壓(<90/50)或高血壓(>170/100)者\n•遺傳性退化性視網膜疾病(包括視網膜炎色素疾病)\n•Child-Pugh c肝衰竭\n•ESRD在進行腎透析病患"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Intracavernous Injection",
+                "Alprostadil(PGE1):",
+                "only FDA-approved",
+                "full erections in 70% to 80% of patients with ED",
+                "Dosages of 10 to 20 μg",
+                "Papaverine(selective PDE inhibitor) (inhibit PDE2,3,4)(cAMP有關）",
+                "full erections in > 90%",
+                "Invicorp(VIP+phentolamine)",
+                "Side effects",
+                "Penile pain (50%), hematoma/ecchymosis (1.5%)",
+                "prolonged erection/priapism (1% to 5%)",
+                "penile fibrotic lesions (2%)",
+                "Contraindication",
+                "men with psychological instability,",
+                "a history or risk for priapism, histories of severe coagulopathy",
+                "unstable cardiovascular disease,",
+                "reduced manual dexterity",
+                "use of monoamine oxidase inhibitors (life-threatening hypertensive crisis)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s24.webp",
+              "hidden": false,
+              "ocr_text": "Intracavernous lnjection\n• Alprostadil(PGE1):\n•only FDA-approved\n• fullerections in 70% to 80% of patients with ED\n• Dosages of 10 to 20 ug\n• Papaverine(selective PDE inhibitor) (inhibit PDE2,3,4)（CAMP有關）\n• full erections in > 90%\n•Invicorp (VIP+phentolamine）\nSmoare\n• Side effects\n• Penile pain (50%), hematoma/ecchymosis (1.5%)\n• prolonged erection/priapism (1% to 5%)\n•penile fibrotic lesions (2%\n• Contraindication\n• men with psychological instability,\na history or risk for priapism, histories of severe coagulopathy\nunstable cardiovascular disease,\n• reduced manual dexterity\nuse of monoamine oxidase inhibitors (life-threatening hypertensive\ncrisis)"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "Vacuum erection device",
+                "由三個東西構成: Pump + vacuum chamber(Cylinder) + constriction ring",
+                "Side effect: penile coldness, bruising, pain, obstructed ejaculation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s25.webp",
+              "hidden": false,
+              "ocr_text": "Vacuum erection device\n•由三個東西構成：Pump +\nvacuum chamber(Cylinder)\n+ constriction ring\n• Side effect: penile coldness,\nbruising, pain, obstructed\neiaculation\nPump\nCylinder\nConstriction\nring"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Penile prosthesis 種類",
+                "兩大類: Semi- rigid/Non-inflatable(one-piece), inflatable(two-piece or three piece)",
+                "Semi- rigid好處: 容易操作, 便宜",
+                "Semi- rigid缺點: 平常時候仍是勃起狀態",
+                "Inflatable好處: 觸感好, 平常可以消勃",
+                "Inflatable缺點: 難操作, 貴, 幫補可能壞掉",
+                "Side effect: infection, erosion, mechanical failure, penile shortening, glans may not fully engorge",
+                "Semi- rigid",
+                "Three piece inflatable",
+                "Two piece inflatable(少了reservoir)",
+                "Penile prosthesis salvage procedure 禁忌症:",
+                "Patients presenting with enterococcus",
+                "Tissue necrosis",
+                "Cylinder erosion into the urethra",
+                "Sepsis",
+                "Diabetic ketoacidosis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s26.webp",
+              "hidden": false,
+              "ocr_text": "Penile prosthesis 種類\n•兩大類： Semi-rigid/Non-intlatable(one-piece), inflatable(two-piece or\nthree piece)\nThree piece inflatable\nTwo piece inflatable(少 了reservoir)\nFluid reservoir\nSemi- rigid\nCyinders\nRelease valve\nPump buib\nInflatable\nrods\nPenis ~\nPump\nTestes\n•Semi-rigid好處：容易操作，便宜\n•Semi- rigid缺點：平常時候仍是勃起狀態\n•Inflatable好處：觸感好，平常可以消勃\nPenile prosthesis salvage procedure 禁忌症：\n•Patients presenting with enterococcus\n•Tissue necrosis\n• Cylinder erosion into the urethra\n•Sepsis\n• Diabetic ketoacidosis\n•Inflatable缺點：難操作，貴，幫補可能壞掉\n• Side effect: infection, erosion, mechanical failure, penile shortening, glans\nmay not fully engorge"
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "感染",
+                "規則服用抗病毒藥CD4數量正常之HIV 病患，發生感染之機率並沒有比較高",
+                "處理方式 -> 兩條路: delay reimplantation或直接salvage",
+                "(1)可先移除原感染之植入物並放置引流管，待2~6個月感染改善後再行二次",
+                "植入，期間可以視情況予以真空吸引器吸引以減少陰莖縮短之機率。",
+                "(2)可移除原感染之植入物，執行清創併以抗菌溶液及抗生素清洗後，再植入",
+                "新的人工陰莖，較不會發生陰莖縮短的情況。",
+                "Erosion",
+                "縱切口(Longitudinal incisions)對於陰莖血液供應之傷害性較小",
+                "液壓型人工陰莖(Hydraulic implants)對於陰莖感覺異常的人可減少erosion機率",
+                "處理方式 ->",
+                "(1)尿道erosion: 先移除植入物放Foley(尿道無法修補), 待傷口修復後再評估",
+                "(2)Bladder或bowel的erosion: 三件式的fluid reservoir的erosion, 機率不高, 修補",
+                "後bladder/bowel後直接換個位置放fluid reservoir",
+                "Protrusion: 沒外露的話觀察就好, 不用移除",
+                "Mechanical failure: 兩件或三件式可能發生, 打開修復零件或換新的",
+                "Urethral stricture",
+                "若病患人工陰莖腳(Crura)為硬式, 長時間騎腳踏車可能發生urethral stricture",
+                "處理方式 -> 換特殊坐墊, 考慮內視鏡切開",
+                "Prosthesis併發症與處理(Campbell 12版)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s27.webp",
+              "hidden": false,
+              "ocr_text": "prosthesis併發症與處理（Campbell 12版）\n•感染\n。規則服用抗病毒藥CD4數量正常之HIV 病患，發生感染之機率並沒有比較高\n•處理方式 -＞兩條路：delay reimplantation或直接salvage\n(1)可先移除原感染之植人物並放置引流管，待2~6個月感染改善後再行二次\n植入，期間可以視情況予以真空吸引器吸引以減少陰莖縮短之機率。\n(2)可移除原感染之植人物，執行清創併以抗菌溶液及抗生素清洗後，再植人\n新的人工陰莖，較不會發生陰莖縮短的情況。\n• Erosion\n•縱切口(Longitudinal incisions)對於陰莖血液供應之傷害性較小\n•液壓型人工陰莖(Hvdraulic implants)對於陰莖感覺異常的人可減少erosion機率\n•處理方式-＞\n(1)尿道erosion：先移除植人物放Foley(尿道無法修補)，待傷口修復後再評估\n（2)Bladder或bowel的erosion：三件式的fluid reservoir的erosion，機率不高，修補\n後bladder/bowel後直接換個位置放fluid reservoir\n•protrusion：沒外露的話觀察就好，不用移除\n•Mechanical faillure: 兩件或三件式可能發生，打開修復零件或換新的\n• Urethral stricture\n。若病患人工陰莖腳(Crura）為硬式，長時間騎腳踏車可能發生urethral stricture\n•處理方式-＞換特殊坐墊，考慮内視鏡切開"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Arterial Revascularization",
+                "For selected patient only:\u000b=> age less than 55 years, nonsmoker, nondiabetic, absence of venous leakage, and radiographic confirmation of stenosis of the internal pudendal artery",
+                "做法: 灌通internal pudendal artery, balloon擴張或放支架",
+                "The highest success rates are reported in young men (less than 30 years of age) with isolated arterial stenosis after perineal or pelvic trauma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s28.webp",
+              "hidden": false,
+              "ocr_text": "Arterial Revascularization\n• For selected patient only:\n=>age less than 55 years, nonsmoker, nondiabetic, absence of\nvenous leakage, and radiographic confirmation of stenosis of\nthe internal pudendal artery\n•做法：灌通internal pudendal artery， balloon擴張或放支架\n•The highest success rates are reported in young men (less than\n30 years of age) with isolated arterial stenosis after perineal or\npelvic trauma"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "T supplement for ED",
+                "Prevalence of hypogonadism in men with ED ranges from 23% to 47%",
+                "Current recommendations suggest that a short (e.g., 3-month) therapeutic trial is justified, and if no response, testosterone administration should be discontinued",
+                "Combination therapy with phosphodiesterase type 5 inhibitors (PDE5-I) is a highly debated topic"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s29.webp",
+              "hidden": false,
+              "ocr_text": "Tsupplement for ED\n• Prevalence of hypogonadism in men with ED ranges from 23%\nto 47%\n• Current recommendations suggest that a short (e.8., 3-month)\ntherapeutic trial is justified, and if no response, testosterone\nadministration should be discontinued\n• Combination therapy with phosphodiesterase type 5 inhibitors\n(PDE5-1) is a highly debated topic"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "射精障礙（PE/RE/DE/Anorgasm）",
+          "slide_count": 11,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 30,
+              "text": [
+                "Ejaculation/orgasm disorder",
+                "Premature ejaculation",
+                "Retrograde ejaculation",
+                "Delayed ejaculation",
+                "No orgasm"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s30.webp",
+              "hidden": false,
+              "ocr_text": "Ejaculation/orgasm disorder\nPremature eiaculation\nRetrograde ejacullation\nDelayed ejaculation\nNo orgasm"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "射精生理",
+                "過程包含Emission,expulsion, and orgasm.",
+                "Emission (交感)",
+                "由交感T10 to L2調控",
+                "Epididymis, vas, SV, prostate gland收縮, 把精液擠到prostate urethra",
+                "Expulsion/Ejection  (體神經+交感)",
+                "部分由Somatic n. S2 to S4調控, 部分由交感神經reflex控制",
+                "Bulbocavernosus m.間歇性收縮, 外括約肌舒張, BN關起來, 讓精液往前射出去(prostate secretion最先->sperm->SV fluid )",
+                "外括約肌會Intermittent contraction讓精液不會retrograde flow到 proximal urethra",
+                "Orgasm (大腦)",
+                "Cerebral processing of pudendal nerve sensory stimuli",
+                "Resulting from increased pressure in the posterior urethra, sensory stimuli arising from the verumontanum, and contraction of the urethral bulb and accessory sexual organs"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s31.webp",
+              "hidden": false,
+              "ocr_text": "射精生理\n•過程包含Emission,expulsion, and orgasm.\n•Emission（交感）\n•由交感T10 toLz調控\n•Epididymis, vas, SV, prostate gland收縮，把精液擠到prostate urethra\n•Expulsion/Ejection (體神經＋交感）\n•部分由Somaticn. S2to $4調控，部分由交感神經reflex控制\n•外括約肌會Intermittent contraction讓精液不會retrograde flow到\nproximal urethra\n•Orgasm（大腦）\n• Cerebral processing of pudendal nerve sensory stimuli\n•Resulting trom increased pressure in the posterior urethra, sensory\nstimuli arising trom the verumontanum, and contraction of the urethral\nbuib and accessory sexual organs"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "Premature ejaculation criteria(3項都要符合)",
+                "Intravaginal ejaculation latency time (IELT)短",
+                "(ISSM Committee)",
+                "如果是lifelong PE, always or nearly always < 1 min",
+                "如果是acquired PE, often < 3 min",
+                "(DSM5)",
+                "< 1 min",
+                "無法延長射精時間",
+                "造成困擾/沮喪",
+                "單純IELT短 沒有困擾",
+                "是不能診斷PE的",
+                "分4個type （考古題：沒有objective PE)",
+                "Lifelong PE",
+                "Early ejaculation at nearly every intercourse",
+                "within 30 to 60 seconds (80%)",
+                "1 to 2 minutes (20%)",
+                "Acquired PE",
+                "Early ejaculation at some point in their life, which is often situational, having previously normal ejaculation experiences",
+                "Natural variable PE: 非規律或非連續性的早洩, 屬於性生活的正常變化",
+                "Premature-like EjD (or subjective PE) : 主觀的認為自己有PE, 但實際上沒有PE甚至射精時間還更長"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s32.webp",
+              "hidden": false,
+              "ocr_text": "Premature ejaculation criteria(3 項都要符合）\n•Intravaginal ejaculation latency time (IELT)短豆\n(ISSM Committee)\n••如果是lifelong PE, always or nearly always < 1 min\n••如果是acquired PE, often < 3 min\n分4個type（考古題：沒有objective PE）\n(DSM5)\n• ≤1min\n• Lifelong PE\n• Early ejaculation at nearly every intercourse\n•within 30 to 60 seconds 80%)\n•無法延長射精時間\n• 1to 2minutes (20%)\n• Acquired PE\n•造成困擾/沮喪\n• Early ejaculation at some point in their life,\nwhich is often situational, having previously\nnormal ejaculation experiences\n•Natural variable PE： 非規律或非連續性的旱洩，屬\n單純IELT短 沒有困擾\n是不能診斷PE的\n於性生活的正常變化\n•Premature-like EjD (or subjective PE)：主觀的認為\n自己有PE， 但實際上沒有P甚至射精時間還更長"
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "Premature ejaculation etiology/risk factor",
+                "Etiology:",
+                "=>Psychological:  Early sexual experience, anxiety, Reduced frequency of sexual intercourse",
+                "=>Biological: Penile hypersensitivity, serotonin receptor sensitivity (involved in the central control of ejaculation, 5HT1a hypersensitivity, 5HT2c hyposensitivity),  hyperexcitable ejaculatory reflex.",
+                "Risk factor:",
+                "=>CPPS: Several studies report PE as the main sexual disorder symptom in men with chronic prostatitis or CPPS, 26% to 77%",
+                "=>ED: 50% subjects with ED also experience PE",
+                "=>Gene, poor health, obesity",
+                "=>Hyperthyroidism",
+                "台灣盛行率: 13-17%",
+                "亢快低軟",
+                "Hyperthyroidism：早洩",
+                "Hypothyroidism: Low libido, ED",
+                "Hyperprolactinemia: 性慾低、ED、精液量變少"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s33.webp",
+              "hidden": false,
+              "ocr_text": "Premature ejaculation etiology/risk factor\n•Etiology:\n=>Psychological: Early sexual experience, anxiety, Reduced frequency of\nsexual intercourse\n=>Biological: Penile hypersensitivity, serotonin receptor sensitivity (involved\nin the central control of ejaculation, 5HT1a hypersensitivity, 5HT2C\nhyposensitivity), hyperexcitable ejaculatory reflex.\n• Risk factor:\n=>CPPS: Several studies report PE as the main sexual disorder symptom in\nmen with chronic prostatitis or CPPs, 26% to 77%\n=>ED: 50% subjects with ED also experience PE\n=>Gene, poor health, obesity\n=>Hyperthyroidism\n•台灣盛行率：13-17%\n亢快低軟\nHyperthyroidism ：早洩\nHypothyroidism: Low libido, ED\nHyperprolactinemia: 性慾低、ED、精\n液量變少"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Lifelong 一線直接給藥",
+                "PE survey and",
+                "treatment\u000b(EAU+ Campbell)",
+                "ED, CPPS, hyperthyroidism 要先治療",
+                "(優先)正規: Dapoxetine/lidocaine spray(on demand)",
+                "off label: 其他SSRI/Clomipramine(daily",
+                "use), tramadol(on demand)",
+                "(次要) Behavioral therapy",
+                "or Combined therapy",
+                "(優先) Behavioral therapy",
+                "(次要)正規: Dapoxetine/lidocaine spray(on demand)",
+                "off label: 其他SSRI/Clomipramine(daily",
+                "use), tramadol(on demand)",
+                "or Combined therapy",
+                "Acquired一線先behavioral",
+                "確定診斷",
+                "辨別 lifelong/acquired",
+                "PEDT score",
+                "ED, CPPS, hyperthyroidism"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s34.webp",
+              "hidden": false,
+              "ocr_text": "PE survey and\ntreatment\n(EAU+ Campbell)\nClinical diagnosis of premature ejaculation based\non patient +/- partner history\n• Time to eiaculation (ELT\n• Perceived degree of ejaculatory control\ncraculatory cortro —確定診斷\n• Degree of bother/stress\n• Onset and duration of PE\n辨別 ifelong/acquired\n• Psychosocial/relationship issues\n• Medical history ED, CPPS, hyperthyroidism\n• Physical examination\n• PEDT score\nManage primary\nYes\nPE secondary to ED or\ncause\nother sexual dysfunction\nED, CPPS, hyperthyroidism 要先治瘡\nNo\nAcguired PE\nLifelong PE\nAAcquired一線先behavioral\n(優先） Behavioral therapy\n（次要）正規：Dapoxetine/lidocaine sprav(on demand)\noff label：其他SSRI/Clomipramine(daily\nuse), tramadol(on demand)\nor Combined therapy\nPatient\npreference\nLifelong 一線直接給藥\n（優先）正規：Dapoxetine/idocaine spravlon demand)\noff label：其他SSRI/Clomipramine(daily\nuse), tramadol(on demand)\n（次要) Behavioral therapy\nor Combined therapy\nAttempt graduated withdrawal of drug\ntherapy after 6-8 weeks\nFigure 29-3. Algorithm for the office management of premature ejaculation (PE). ED, erectile\ndysfunction; EJAC. DYS., ejaculation dysfunction; SSRl, selective serotonin reuptake inhibitor."
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "PE medication",
+                "Dapoxetine(Priligy)",
+                "一種新型快速的SSRI(selective serotonin reuptake inhibitors), 半衰期短, 抑制hypothalamus射精中樞的postsynaptic serotonin(5-HT)的reuptake， 增加postsynaptic serotonin的濃度，經由5-HT1A receptor的desentilization來達到延遲射精",
+                "the only approved drug for PE(但FDA還沒)",
+                "On-demand use, 1~3Hr前服用, 30mg or 60mg",
+                "2.5- and 3.0-fold increases in IELT",
+                "increased ejaculatory control",
+                "decreased distress, and increased satisfaction",
+                "肝腎代謝，尿液排泄, CYP3A4=> 同PDE5i, 服用ketoconazole等藥物, 要調整",
+                "Topical anesthetics: Lidocaine/Prilocaine spray/cream",
+                "On-demand use",
+                "Off-label use",
+                "Clomipramine(daily use)",
+                "Other SSRI: paroxetine, sertraline, and fluoxetine (daily use)",
+                "Tramadol(on demand use)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s35.webp",
+              "hidden": false,
+              "ocr_text": "PE medication\n• Dapoxetine(Priligy)\n•一種新型快速的SSRI(selective serotonin reuptake inhibitors), 半衰期短，抑制\nhypothalamus射精中樞的postsynaptic serotonin(5-HT)的reuptake，增加\npostsynaptic serotonin的濃度，經由5-HT1A receptor的desentilization來達到\n延遲射精\n• the only approved drug for PE（但FDA還沒）\n•On-demand use, 1~3H前服用，30mg or 60mg\n• 2.5-and 3.0-fold increases in IELT\n•increased ejaculatory control\n•decreased distress, and increased satisfaction\n•肝腎代謝，尿液排泄，CYP3A4=>同PDE5i，服用ketoconazole等藥物，要調整\n• Topical anesthetics: Lidocaine/Prilocaine spray/cream\n• On-demand use\n• Off-label use\n• Clomipramine(daily use)\nOther SSRl: paroxetine, sertraline, and fluoxetine (daily use)\n• Tramadollon demand use)"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "Retrograde ejaculation",
+                "Cause",
+                "Drug-related: a-blocker",
+                "OP: s/p TURP, TUIP of BN, RaLRP",
+                "Neurogenic: SCI, injury to hypogastric N., DM neuropathy",
+                "S/S: low volume of semen(<1mL)",
+                "Lab: Post-orgasm urine specimen >10-15 sperm/HPF",
+                "治療:",
+                "->Treat reversible cause(停alpha blocker)",
+                "->Drug: Alpha agonist(pseudoephedrine, ephedrine, midodrine, phenylropanolamine), TCA(imipramine), 若是為了射精懷孕, 7-10天前吃"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s36.webp",
+              "hidden": false,
+              "ocr_text": "Retrograde ejaculation\n• Cause\n• Drug-related:a-blocker\n•OP:S/p TURP, TUIP Of BN, RaLRP\n• Neurogenic: SCl, injury to hypogastric N., DM neuropathy\n• S/S: low volume of semen(<1mL)\n• Lab: Post-orgasm urine specimen >10-15 sperm/HPF\n•治療：\n->Treat reversible cause(停alpha blocker)\n->Drug: Alpha agonist(pseudoephedrine, ephe drine, midodrine,\nphenyiropanolamine)， TCA(imipramine)，若是為了射精懷孕，7-10\n天前吃"
+            },
+            {
+              "slide_num": 37,
+              "text": [
+                "Delayed ejaculation",
+                "DSM-5,延遲性射精的定義:",
+                "1. 在75%-100%與伴侶性行為的情況下有明顯的延遲、不頻",
+                "繁或完全不射精,且非個體自行想延後射精。",
+                "2. 該情況至少持續六個月以上",
+                "3. 該情況造成個體明顯的困擾",
+                "4. 該情況無法用其他心理問題、伴侶關係、壓力、物質/藥",
+                "物濫用或其他內科問題來解釋"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s37.webp",
+              "hidden": false,
+              "ocr_text": "Delayed ejaculation\nDSM-5,延遲性射精的定義：\n1.在75%-100%與伴倡性行為的情況下有明顯的延\n遲、不頻\n繁或完全不射精,且非個體自行想延後射精。\n2.該情況至少持續六個月以上\n3. 該情況造成個體明顯的困擾\n4. 該情況無法用其他心理問題、伴侶關係、壓力\n、物質/藥\n物濫用或其他內科問題來解釋"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Delayed",
+                "ejaculation/",
+                "Anorgasm",
+                "etiology"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s38.webp",
+              "hidden": false,
+              "ocr_text": "Delayed\neiaculation/\nAnorgasm\netiology\nTABLE 71.4 Causes of Retrograde Ejaculation,\nDelayed Ejaculation, Anejaculation, and\nAnorgasmia\nAging male\nPsychogenic\nCongenital\nAnatomic causes\nNeurogenic causes\nInfective\nEndocrine\nMedication\nDegeneration of penile afferent nerves\nInhibited ejaculation\nMallerian duct cyst\nWolffian duct abnormality\nPrune-belly syndrome\nTransurethral resection of prostate\nBladder neck incision\nDiabetic autonomic neuropathy\nMultiple sclerosis\nSpinal cord injury\nRadical prostatectomy\nProctocolectomy\nBilateral sympathectomy\nAbdominal aortic aneurysmectomy\nPara-aortic lymphadenectomy\nUrethritis\nGenitourinary tuberculosis\nSchistosomiasis\nHypogonadism\nHypothyroidism\nAlpha-methyldopa\nThiazide diuretics\nTricyclic and SSRl antidepressants\nPhenothiazine\nAlcohol abuse\nSSRl, selective serotonin reuptake inhibitor."
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Delayed",
+                "ejaculation drug therapy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s39.webp",
+              "hidden": false,
+              "ocr_text": "Delayed\nejaculation drug\ntherapy\nTABLE 71.7\nDrug Therapy for Delayed Eiaculation and\nAneiaculation\nDOSAGE\nDRUG\nCabergoline\nPramipexole\nAmantadine\nAS NEEDED\nDAILY\n0.5-2.0 mg every\n3 days\n0.125-0.25mg\n100-200 mg bid\n100-400 mg (for two\ndays before coitus)\nBupropion\nPseudoephedrine\nReboxetine\nBuspirone\nCyproheptadine\n150 mg daily or\nbid\n60-120 mg goh\nthe day before\ncoitus and then\ntwice on the\nday of coitus\n4-8mg\n5-15 mg bid\nOxytocin\n4-12 mg (3-4 h\nbefore coitus)\n24 1U intranasal\nduring coitus"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "Anorgasm algorithm"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s40.webp",
+              "hidden": false,
+              "ocr_text": "Is There Orgasm?\nNo, Never\nSometimes\nYes, always\nAnorgasm algorithm\nFailure of\nEmission\nPsychosexual\nTherapy®\nDelayed\nEjaculation\nCheck Hormones,\nGlucose, neurologic\nexam\nDisease Specific\nManagement\nPVS, Medications'^,\nhormone replacement,\nDisease control\nPVS, Medications'^,\nhormonereplacement,\nDisease control\nDelayed\nEjaculation\nNormal Nocturnal\nor Masturbatory\nemissions?\nYes\nNO\nYes\nIs there an\nGaculaie? 1\nNo\nNormal\nAre sperm found in\nurine after orgasm?\nPsychosexual\nTherapy®\nPsychosexual\nTherapy®\nI Icheck Hormones\nslucose, physical\nexam\nAssessfor Premature\nEjac.as needed\nNo\nYes\nAge Related\nNeurologic\nInfective\nEndocrine\nPharmacologic\nAspermia\nRetrograde\nEjaculation\nReasurance, sex\ntechnique change\nTreat Ds states. Pvs\nCuitures,\nAntibiotics, NSAID'S\nMedications',\nHormone Ds\nChange\nmedications^\nEjac.Duct Obstruction\npossible transrectal u/s or\nsurgery if fertility concerns\nEducation, Reassure,\nMedications\", Surgery"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "Penile Curvature & Peyronie's Disease",
+          "slide_count": 18,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 41,
+              "text": [
+                "Penile curvature",
+                "Congenital penile curvature(including chordee)",
+                "Peyronie’s disease(Acquired)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s41.webp",
+              "hidden": false,
+              "ocr_text": "Penile curvature\nCongenital penile curvature(including chordee)\nPeyronie' s disease(Acquired)"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Congenital penile curvature",
+                "Congenital curvature is rare, less than 1%",
+                "可以bend upward(congenital dorsal curvature),",
+                "bend downward(congenital ventral curvature=Chordee)",
+                "Chordee:",
+                "S/S: 陰莖勃起時腹側彎曲，向後下方尿尿濕褲子, 陰莖背側可見dorsal hood deformity的包皮畸形",
+                "手術的三個目的:(1)改善陰莖的外觀、(2)可以站立小便、(3)順利達成性行為",
+                "建議手術時間: 6個月到2歲(但常常青春期之後才勃起發現, 所以有些paper建議之後處理)",
+                "手術方式: Nesbit, other plication method, dissection of the dorsal neurovascular bundle is needed",
+                "dorsal hood deformity"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s42.webp",
+              "hidden": false,
+              "ocr_text": "Congenital penile curvature\n•Congenital curvature is rare, less than 1%\n•可以bend upward(congenital dorsal curvature),\nbend downward(congenital ventral\ncurvature=Chordee)\n• Chordee:\n•S/S: 陰莖勃起時腹側彎曲，向後下方尿尿濕褲子，\n陰莖背側可見dorsal hood deformity的包皮畸形\n•手術的三個目的：(1)改善陰莖的外觀、(2)可以站\n立小便、(3)順利達成性行為\n•建議手術時間：6個月到2歲(但常常青春期之後才\n勃起發現，所以有些paper建議之後處理）\n•手術方式：Nesbit, other plication method,\ndissection of the dorsal neurovascular bundle is\nneeded\ndorsal hood deformity\nVentral length\ntoo short"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "Peyronie’s disease 概論",
+                "Definition: An acquired benign penile condition characterized by deformity of the penile shaft secondary to the formation of a fibrous, inelastic scar on the tunica albuginea, frequently accompanied by erectile dysfunction (ED)",
+                "Prevalence is 3– 9%, 多好發於40歲以上, 高峰期在50歲.",
+                "Risk factor: Aging, Diabetes, Erectile dysfunction Psychological distress Radical prostatectomy Hypogonadism Collagen disorders(Dupuytren’s contracture)",
+                "Etiology/Pathogenesis: Trauma + gene related",
+                "(1)Repeated minor trauma during sexual intercourse",
+                "(2)Microvascular injury and bleeding into the tunica",
+                "(3)Inflammation and fibrosis (exacerbated by TGF- β)",
+                "(Minor trauma最易發生在pillar所連接的dorsal site,",
+                "所以60-70%的plaque都在penis背側, 加上5-7點沒有",
+                "tunica外縱的構造, 易形成dorsal curvature)",
+                "intracavernous pillars",
+                "Dupuytren’s contracture"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s43.webp",
+              "hidden": false,
+              "ocr_text": "Pevronie's disease 概論\n• Definition: An acquired benign penile condition\ncharacterized bv deformitv of the penile shaft secondary\nto the formation of a fibrous, inelastic scar on the tunica\nalbuginea, frequently accompanied by erectile\ndysfunction (ED)\n•prevglence is 3-9% 多好發於40歲以上，高峰期在50歲。\n•Risk factor: Aging, Diabetes, Erectile avsfunction\nPsychological distress Radical prostatectomy\nHypogonadism Collagen disorders(Dupuytren's\ncontracture)\n• Etiology/Pathogenesis: Trauma + gene related\n(1)Repeated minor trauma during sexual intercourse\nZMicrovascular iniury and bleeding into the tunica\nDupuytren's contracture\nlintracavernous pillars"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "Peyronie’s disease nature history",
+                "Active (acute) phase: 1-6個月",
+                "Painful erections and changing deformity of the penis",
+                "Stable (chronic) phase: 6-12個月",
+                "Disappearance of painful erections, stabilization of the deformity",
+                "Plaque有沒有鈣化跟acute or chronic無關, 以疼痛來區辨",
+                "< 13% of patients will have some improvement of their deformity over the first 12 to 18 months after onset (>50%會worsening)",
+                "Complete spontaneous resolution of PD is rare",
+                "Plaque size變小不代表deformity會改善"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s44.webp",
+              "hidden": false,
+              "ocr_text": "Peyronie's disease nature history\n• Active (acute) phase:1-6個月\n• Painful erections and changing deformity of the penis\n• Stable (chronic) phase: 6-12個月\n•Disappearance of painful erections, stabilization of the deformity\n•Plaque有没有鈣化跟acute or chronic無關，以疼痛來區辨\n•≤13% of patients will have some improvement of their deformity over the\nfirst 12 to 18 months after onset (≥50%會worsening)\n• Complete spontaneous resolution of PD is rare\n•Plaque size變小不代表deformityv會改善"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "Peyronie’s disease S/S and survey",
+                "Hx:",
+                "Penile pain(onset, duration, during erection?),",
+                "Penile curvature(during erection?",
+                "ED(IIEF-5/risk factors)",
+                "Alcohol?",
+                "PE(penis should be examined on stretch):",
+                "Erect deformity (dorsal/ventral, degree),",
+                "palpable plaque(location, size)",
+                "stretched penile length",
+                "Hourglass deformity?",
+                "Dupuytren’s contracture?",
+                "examined on stretch, pulling at a 90-degree angle",
+                "hourglass deformity"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s45.webp",
+              "hidden": false,
+              "ocr_text": "Peyronie' s disease S/S and survey\n• Hx:\nPenile pain(onset, duration,\nduring erection?),\n• Penile curvature(during\nerection?\nED(IIEF-5/risk factors)\n• Alcohol?\n•PE(penis should be examined on\nstretch)：\nErect deformity\n(dorsal/ventral, degree),\npalpable plaque(location,\nsize)\n• stretched penile length\n• Hourglass deformity?\nDupuytren's contracture?\nexamined on stretch,\npulling at a 9o-degree angle\nhourglass deformity"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "Peyronie’s disease Image",
+                "Penile USS and color duplex USS:",
+                "Indication: 合併ED才做, 不建議常規做去看plaque和大小(EAU)",
+                "Plaque有鈣化不代表是chronic",
+                "MRI:",
+                "Indication: extensive CC fibrosis, pre-penile prothesis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s46.webp",
+              "hidden": false,
+              "ocr_text": "Peyronie's disease Image\n• Penile Uss and color duplex USS:\n•Indication：合併ED才做，不建議常規做去 看plaque 和大小(EAU)\n•plaque有鈣化不代表是chronic\nBOx 31-3 Value of Penile Duplex Ultrasonography for\nPeyronie Disease\n• Identification and measurement of plaque calcification\n• ldentification of corporeal fibrosis\n• Observation of erectile response to vasoactive intracavernosal\niniection\n• Measurement of penile vascular parameters (peak systolic\nvelocity, end-diastolic velocity, and resistive index)\n• Optimum objective measurement of erect penile deformity\n(curvature, girth irregularities, hinge effect)\n• MRl:\n• Indication: extensive CC fibrosis, pre-penile prothesis"
+            },
+            {
+              "slide_num": 47,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s47.webp",
+              "hidden": false,
+              "ocr_text": "3.3.2.2.2 Recommendations for the diagnosis of Peyronie's disease\nRecommendations\nIn the medical and sexual history of patients with Peyronie's disease, include duration of\nIthe disease, penile pain, change of penile deformity, difficulty in vaginal intromission due to\ndeformity, and erectile dysfunction (ED).\nIn the physical examination, include assessment of palpable plaques, penile length, extent\nof curvature (self-photograph, vacuum-assisted erection test or pharmacological-induced\nlerection) and any other possibly related diseases (Dupuytren's contracture, Ledderhose\ndisease).\nDo not use Peyronie's disease specific questionnaire in everyday clinical practice.\nDo not use ultrasound (US) measurement of plaque size in everyday clinical practice.\nUse Doppler US only in the case of dliagnostic evaluation of ED, to ascertain vascular\nparameters associated with ED.\nStrength rating\nStrong\nStrong\nWeak\nWeak\nWeak"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Peyronie’s disease treatment",
+                "(EAU 2021 +Campbell)",
+                "6-12months",
+                "treat ED",
+                "術前已經ED的病人",
+                "術後ED機會很高"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s48.webp",
+              "hidden": false,
+              "ocr_text": "Peyronie's\ndisease\ntreatment\n(EAU 2021\n+Campbell)\nTreatment of Peyronie's disease\nDiscuss natural history of the disease\nReassure patient that Peyronie's doesn't lead to\nany form of malignancy\nDiscuss current treatment modalities\nShared decision-making\nActive disease\n(pain, deformity deterioration,\nprogressive curvature)\nStable disease 6-12months\n(no pain, no detormity\ndeterioration, stable penile\ncurvature)\nPain control (consider NSAIDs,\ntadalafil or LI-ESWT\nOptional: Traction therapy,\nintralesional CCH or IFN-a2b\nPatient desires active\ntreatment\n術前已經ED的病人\n術後ED機會很高\nNo ED\nYes\nED\ntreat ED\nResponse\nto ED\ntreatment"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                ">60 degree",
+                "Inflatable prosthesis較適合curvature病人",
+                "<60 degree",
+                "Tunical shortening or",
+                "Tunical lengthening",
+                "病人可否接受",
+                "病人可否接受"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s49.webp",
+              "hidden": false,
+              "ocr_text": "Palpable dorsal plagues\nNon calcified plaques\nDorsal Curvature 30°-90°\nContraindications for\nsurgery/patient does not\nwant surgery\nAdequate penile\nlength\nAbsence of severe\ncurvature <60 degree\nAbsence of complex\ndeformities\nShort penis\nSevere curvature >60 degree\nComplex deformities\n(hour-glass, hinge)\nNo\nIntralesional\ninjection treatment:\nCCHor interferon\nAccepts risk of\nlength loss 病人可否接受\n病人可否接受\nAccepts risk of\neerectile dysfunction\nYes\nTunical lengthening\nprocedures\nPenile\nprosthesis\n＞30°\nPenile\nprosthesis\nInflatable prosthesis較\n適合curvature病人\nResidual\ncurvature\nYes\nTunical shortening\nprocedures\nNo\nTunical lengthening\nprocedures\nManual\nmodeling\n＞30°\nResidual\ncurvature\n＜30°\nTunical shortening or\nTunical lengthening\nNo additional\nstraightening\nprocedures"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "Potaba",
+                "Potaba=> 播他吧(plaque撥下來 攪亂播正)",
+                "Pentoxifylline=> penis修復泥",
+                "EAU已不建議",
+                "EAU已不建議",
+                "只有type I (無type3)",
+                "P",
+                "C"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s50.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 31-1 Oral Agents for Peyronie Disease (PD)\nTREATMENT MECHANISM OF ACTION\nSTUDY OUTCOMES\nADVERSE EFFECTS\nPotaba P\nEAU已不建議\nVitamin E\nDecreases serotonin levels by increasing monoamine\noxidase activity, resulting in enhancement of the\nantifibrotic properties of tissues\nAntioxidant, limits oxidative stress of reactive oxygen\nspecies shown to be increased in PD\nDecreased plaque size,\nno decrease in\ncurvature\nNo benefit\nAnorexia, nausea, fever, skin\nrash, hypoglycemia, acute\nhepatitis\nPossible cerebrovascular events,\nnausea, vomiting, diarrhea,\nheadache, dizziness\nTamoxifen\nInduces the production of TGF-B in an estrogen\nNo benefit\nAlopecia, retinopathy,\nreceptor-independent fashion, theoretically causing\nthromboembolism,\nmacrophage deactivation and T-lymphocyte\npancytopenia\nsuppression, thus preventing turther tibrogenesis\nColchicine\nMicrotubule depolymerization; inhibits cell mitosis,\nNo benefit\nMyelosuppression, diarrhea,\nmobiity, adhesion of leukocytes, and transcellular\nnausea, vomiting\nmovement of collagen and stimulates the production of\ncollagenase\nCarnitine\nIncreases mitochondrial respiration; decreases free\nNo benefit\nSeizures, diarrhea, nausea,\nradical formation\nstomach cramps, vomiting\nPentoxifylline\nBlocks the TGF-B1-mediated pathway of inflammation;\nDecreased curvature in\nNausea, vomiting, dyspepsia,\nEAU己不建議 prevents deposition of collagen type lil is a nonspecifio\n33% of patients,\nmalaise, flushing, dizziness,\nphosphodiesterageytytremegesgses platelet\nmean 23 degrees\nand headache\nactivating factor\nPotaba\nOral treatment with potassium para-aminobenzoate may result in a significant reduction in\n1b\npenile plaque size and penile pain as well as penile curvature stabilisation.\nPotaba=>播他吧(plaque撥下來 攪亂播正）\nPentoxifylline=> penis修復泥"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "P+C",
+                "P",
+                "P+C",
+                "P+C",
+                "除了nicardipine外P(Plaque)+C(Curvature)都有效",
+                "CCH",
+                "EAU已不建議",
+                "EAU已不建議"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s51.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 31-2 Intralesional Agents for Peyronie Disease (PD)\nTREATMENT\nMECHANISM OF ACTION\nSTUDY OUTCOMES\nADVERSE EFFECTS\nVerapamil\nCalcium channel blocker inhibits\nReduction of curvature and plaque-\nfibroblast proliferation, extracellular\nassociated penile narrowing,\nNausea, lightheadedness,\npenile pain, ecchymoses\nP+C\nmatrix protein synthesis and secretion;\nimprovement in quality of erection\nincreases collagenase activity.\nEAU已不建議\nNicardipine\nDHP type of calcium channel blocker. In\nReduction of pain, improvement in IEF-5\nNo severe side effects, such\nvitro study demonstrated that it is\nscore, and reduction of plaque size; no\nas hypotension or other\nmore effective than a non-DHP type,\nbenefit in curvature\ncardiovascular events\nverapamil, in reducing\nglycosaminoglycan biosynthesis and\nEAU已不建議\nproduction of extracellular matrix,\nsuch as colagen.\nInterferon\nalfa-2b\nDecreases plaque fibroblast proliferation\nin dose-dependent fashion, decreases\nthe production of extracellular\nDecrease in curvature of 27% (13.5\ndegrees) vs. 9% (4.5 degrees) in the\nplacebo group\nP+C\ncollagen, and increases the production\nSinusitis, flulike symptoms\n(tever, chills, and arthralgia),\nand minor penile swelling\nwith ecchymosis\nof collagenase.\nClostridial CCH\ncollagenase\nSelectively degrades collagen types l\nand lll in connective tissues despite\nContusions, ecchymoses,\ncorporeal rupture\nthe presence of TIMPs, which have\nP+C\nbeen shown to be elevated in PD and\nto increase apoptosis of fibroblasts.\nDecrease in penile curvature by 34%,\nmean decrease of 17 degrees vs. 18%,\nmean decrease 9.3 degrees in placebo;\nPD symptom bothersomeness score\nsignificantly improved vs. placebo\nDHP, dihydropyridine; IIEF, International Index of Erectile Function; TIMPs, tissue inhibitors o\n除了nicardipine外\nIntralesional treatment with verapamil may induce a significant reduction i\nI p(Plaque)+C(Curvature)都有效\nand plaque volume.\nIntralesional treatment with clostridium collagenase showed significant decreases in the\ndeviation angle, plaque width and plaque length.\nIntralesional treatment with interferon may improve penile curvature, plaque size and density,\nand pain.\n1b\nB\n1b\nTopical verapamil gel 15% may improve penile curvature and plaque size.\n1b"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "P+C",
+                "P+C+L",
+                "P, Pain, QoL, IIEF",
+                "(Iontophoresis)",
+                "L(Length)",
+                "EAU已不建議",
+                "用vacuum來traction"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s52.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 31-3 External Force Application for Peyronie Disease\nTREATMENT\nElectromotive drug\nadministration\n(ontophoresis)\nP+C\nExtracorporeal\nshockwave\ntherapy\nP, Pain, QoL, IIEF\nPenile traction\n用vacuum來tractior\nP+C+L\nVacuum therapy\nMECHANISM OF ACTION\nBypasses hepatic metabolism, increases\nconcentration of drug to target tissues\ncompared with topical application alone\nEAU已不建議\nDkect damage to the penile plaque;\ninoreases vascularity of the targeted area\ninducing an inflammatory reaction,\nresultingxin lysis of the plaque and\nremoval bymacrophages\nDecreases a-smaoth muscle actin,\nincreases matrix metalloproteinases\ninvolved in collagen degradation\nSTUDY OUTCOMES\nrverapaml alone: no beneit\nVerapamil + dexamethasone\ndecreases i plaque volrume as\nwell as penile curvature from 43\ndegrees to 21 degrees\nImprovements in pain, IEF-5 score,\nand mean QoL score; no\ncurvature reduction\nADVERSE EFFECTS\nTemporary erythema at the\nelectrode site\nLocal petechiae and\necchymoses\nUnknown; mechanical effects simllar to\ntraction have been suggested\nRadiation therapy\nAnti-inflammatory effects via functional\nmodulation of the adhesion of white\nblood cells to activated endothelial cells\nand modulation of the induction of nitric\noxide synthase in activated\nmacrophages\nED, erectile dysfunction; IIEF, International Index of Erectile Function; Q\nL(Length)\nLength increased 0.5-2.0 cm; girth\nincreased 0.5-1.0 cm; curvature\nmean decrease of 20 degrees;\nErythema in the\nbalanopreputial sulcus,\ndiscomfort\npain decreased; softening or\nshrinking of plaque; overall\nsatisfaction 85%\nReduction in the angle of curvature\nDevelopment of PD, urethral\nby 5-25 degrees in 21 of 31\nbleeding, skin necrosis,\npatients\nand penile ecchymosis\nNo clinical benefit\nPossible malignant change,\nincreased risk of ED in\nelderly\n過足\n、DRUG MIXTURE\nPLAQUE\nIThe active electrode receptacle containing the drug mixture is positioned\nat the level of the penie plaque. The dispersive electrode is placed on\nthe patient's leg."
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "EAU已不建議",
+                "EAU已不建議",
+                "EAU已不建議",
+                "EAU已不建議",
+                "EAU已不建議",
+                "Serotonin",
+                "TGFb, collagen I"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s53.webp",
+              "hidden": false,
+              "ocr_text": "治療藥物/方法\n效果\n口眼potzssium Serotonin\n減少疼痛、減小plague大小、穩定陰蒸彎曲角度\naminobenzoate EAU已不建議\n(Potaba)\n病4內注射\n減少轡曲角度及plaque\n1b\nverapamil\nEAU已不蓮議\n病灶内注射 clostridium 減少彎曲角度及plaque\n1b\ncollagenase\n病灶内注射\n減少疼痛、減少plaque大小、減少陰莖彎曲角度 1b\nIFN alfa-2b\n局部涂抹\n改善彎曲角度及paqte\nverapami\nEAU已不建議\nJlantopharesis(離子導人  改善蠻曲鱼度及plaque大小\n1h\n療法)使用verapamil +\ndexamethasone EAU已不建議\nESWL(低能量震波）\n改善疼痛(無法改善角度及plaque大小\nVacuum device\n減少變形惡化、維持陰莖長度\n1b\n2b\nDaily penile traction\n(modelling)\n口服pentexifylline\nTGP6,collagen |\nEAU岂不建議\n減少彎曲度33%，平均改善23度。\n但EAU Guideline不建議使用\n等級\n證據\n(EAU)\nB"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Tunical Shortening Procedures",
+                "Aims to shorten the longer (or convex) side of the tunica albuginea to match the length to the shorter",
+                "包含: Nesbit procedure, Yachia procedure, Dot procedure(16-dot plication, simple plication)",
+                "優點",
+                "shorter surgical time, good cosmetic outcomes",
+                "minimal effect on rigidity",
+                "simple and safe surgery",
+                "effective straightening",
+                "缺點",
+                "penis shortening",
+                "failure to correct an hourglass or hinge"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s54.webp",
+              "hidden": false,
+              "ocr_text": "Tunical Shortening Procedures\n• Aims to shorten the longer (or convex) side of the tunica albuginea to\nmatch the length to the shorter\n•包含：Nesbit procedure, Yachia procedure, Dot procedure(16-dot\nplication, simple plication)\n•優點\n•shorter surgical time, good cosmetic outcomes\n•minimal effect on rigidity\n•simple and safe surgery\n•effective straightening\n•缺點\n• penis shortening\n•failure to correct an hourglass or hinge"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "橢圓",
+                "腹側",
+                "背側"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s55.webp",
+              "hidden": false,
+              "ocr_text": "A\nB\n橢圓\nFigure 31-11. A, The Nesbit procedure employs a transverse elliptical\nincision of the tunica albuginea. B, This is done contralateral to the\narea of greatest curvature. C, The defect is closed transversely with\npermanent suture with or without the addition of absorbable suture.\nA\nB\nFigure 31-12. A, The Yachia procedure employs a full-thickness ver-\ntical incision (B) in the tunica albuqinea contralateral to the area of\nqreatest curvature and is closed transversely (C) without removal of\ntunica albuginea.\n腹側\n背側\nA\nB\nFigure 31-13. The dot procedure employs no incision. The tunica albuginea is plicated with\npermanent suture using an extended Lembert-type suture placement following four dots per\nplication. A, Suture placement for dorsal curve. B, Suture placement for ventral curve."
+            },
+            {
+              "slide_num": 56,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s56.webp",
+              "hidden": false,
+              "ocr_text": "Table 30: Results of tunical shortening procedures for PD (data from different, non-comparable studies)\n[1004,1108-1135]\nTunical shortening procedures\nNesbit\nModified\nYachia\n16-dot /\nSimple\nNesbit\nmod16-dot\nplication\nNo. of patients/studies\n652 /4\n387/5\n150 /6\n285 /5\n1068 / 18\nSignificant penile\n8.7%(5-39)\n3.,2% (0-13)\n3.5% (0-10)\n5.9% (0-6)\n8.9% (0-55)\nshortening (%)*\nAny penile shortening\n121.8% (9-39)\n158.% (23-74)\n69% (47-97）\n44.6% (40-52). 33.4% (0-90)\n%*\nPenile straightening (%)* 88.5% (86-100) 97.6% (92-100) 95.5% (93-100) 96.9% (95-100） 94.7% (85-100)\nPost-operative de novo\n6.9% 0-17)\n13% (0-13)\n9.6% (0-13)\n3.8% (0-13)\n18.1% (0-38)\nED 1%)*\nPenile hypoesthesia\n111.8% (2-60)\n5.6% (0-31)\n1%(0-3)\n8.2% (6-13)\n9% (0-47)\n%)*\nOverall satisfaction (%)* 83.5% (76-88) 95.4% (87-100) 86.8% (78-100) 94% (86-100)\n86.4%(52-100)\nFollow-up (months)*\n1(69-84)\n(19-42)\n(10-24)\n(18-71)\n(12-141)\n*Data are expressed as weighted average. t Defined as > 30 degrees of curvature. Ranges are in parentheses.\nED =Erectile aystunction."
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "Tunical Lengthening Procedures",
+                "Plaque complete or partial Incision + Grafting",
+                "Lue procedure",
+                "Indications",
+                "Greater complexity of disease",
+                "Curvature greater than 60 to 70 degrees",
+                "Shaft narrowing, hinging,",
+                "Extensive plaque calcification",
+                "缺點",
+                "ED(25%, 所以術前erectile function要夠好)",
+                "Residual deformity",
+                "Expert opinion has been consistent that patients with ventral deformity do not do well with grafting procedures."
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s57.webp",
+              "hidden": false,
+              "ocr_text": "Tunical Lengthening Procedures\n• Plaque complete or partial Incision + Grafting\n• Lue procedure\n• Indications\n• Greater complexity of disease\n• Curvature greater than 60 to 70 degrees\n• Shaft narrowing, hinging,\n•Extensive plaque calcification\n•缺點\n•ED（25%，所以術前erectile function要夠好）\n•Residual deformity\n• Expert opinion has been consistent that patients with ventral deformity do\nnot do well with grafting procedures."
+            },
+            {
+              "slide_num": 58,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s58.webp",
+              "hidden": false,
+              "ocr_text": "Table 31: Results of tunical lengthening procedures for PD (data from different, non-comparable studies)\n[1077,1116,1140,1141, 1145-1213, 1220, 1221]\nYear of\nNo. of\npublication patients /\nstudies\nSuccess (%)*\nPenile\nshortening\n(%*\nDe novo ED\n(%)*\nFollow-\nup (mo)*\nAutologous grafts\nDermis\n1974-2019\nVein grafts\n1995-2019\nTunica albuginea\n12000-2012\nTunica vaginalis\n1980-2016\n1718/12\n690 / 17\n56 / 3\n176/5\nTemporalis fascia /  1991-2004 24/2\n81.2% (60-100\n185.6% (67-100)\n85.2% (75-90)\n86.2%(66-100)\n100%\n59.9% (40-75) 20.5% (7-67)\n32.7% (0-100) 14.8% (0-37)\n16.3% (13-18) 17.8% (0-24)\n32.2% (0-83)\n9.6% (0-41)\n0%\n0%\n(6-180)\n(12-120)\n(6-41)\n(12-60)\n3-10\nFascia lata\nBuccal mucosa\n2005-2016 137/7\n94.1%(88-100)\n115.2% (0-80)\n15.3% (0-10\n(12-45)\nAllografts (cadaveric)\nPericardium\nFascia lata\nDura matter\n2001-2011\n190/ 5\n12006\n114/1\n1988-2002\n157 / 2\n93.1%(56-100)\n178.6%\n187.5%\n23.1% (0-33)\n28.6%\n130%\n137.8%(30-63) (6-58)\n7.1%\n31\n17.4% (15-23) (42-66)\nXenografts\nPorcine Sis\n2007-2018\n429 / 10\n83.9%(54-91)\n19.6% (0-66)\n21.9% (7-54)\nBovine pericardium\n2002-2020\n318/6\n87.4% (76.5-100)\n20.1% (0-79.4) 26.5% (0-50)\nBovine dermis\n12016\n128/1\n93%\n0%\n25%\nPorcine dermis\n2020\n19/1\n73.7%\n78.9%\n63%\nTachoSi®\n2002-2020 529 /7\n92.6%(83.3-97.5) 13.4% (0-93\n113% (0-21)\n(9-75)\n(14-67\n132\n85\n(0-63)\n*Data are expressed as weighted average. Ranges are in parentheses.\nED = Erectile dystunction; S/S = Small intestinal submucosa."
+            }
+          ]
+        },
+        {
+          "id": "t12",
+          "title": "Haemospermia",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 59,
+              "text": [
+                "Haemospermia概論",
+                "Definition: the presence of blood in the semen",
+                "Usually intermittent, benign, self- limiting, and no cause identified.",
+                "Causes",
+                "Age <40y:",
+                "Infection(most common): sexually transmitted diseases (STDs) (e.g. gonococcus, Chlamydia trachomatis, herpes simplex, Ureaplasma urealyticum) and non- STD infection (e.g. Enterococcus faecalis)",
+                "Inflammation: prostatitis, epididymo- orchitis, urethritis",
+                "Cancer:  testicular tumor(tumors are found in 2.4%)",
+                "Trama: perineal or testicular trauma",
+                "Bleeding tendnecy",
+                "Age >40y:",
+                "Iatrogenic: s/p TRUSP bx(most common), s/p RT of Pca;",
+                "Cancer: prostate cancer; bladder cancer; testicular cancer, tumors are found in 3.5%",
+                "Other benign cause: BPH; dilated veins in the prostatic urethra; prostatic or seminal vesicle calculi; hypertension",
+                "Trama: perineal or testicular trauma",
+                "Bleeding tendnecy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s59.webp",
+              "hidden": false,
+              "ocr_text": "Haemospermia概論\nDefinition: the presence of blood in the semen\n• Usually intermittent, benign, self- limiting, and no cause identified.\n• Causes\n• Age <40y:\nInfection(most common): sexually transmitted diseases (STDs) (e.g.\ngonococcus, Chlamydia trachomatis, her pes simplex, Ureaplasma\nurealyticum) and non- STD infection (e.g. Enterococcus faecalis)\nInflammation:prostatitis, epididymo- orchitis, urethritis\nCancer: testicular tumor(tumors are found in 2.4%)\nTrama: perineal or testicular trauma\n• Bleeding tendnecy\n• Age >40y:\nlatrogenic: s/p TRUSP bx(most common), s/p RT of Pca;\nCancer: prostate cancer; bladder cancer; testicular cancer, tumors are\nfound in 3.5%\nOther benign cause: BPH; dilated veins in the prostatic urethra;\nprostatic or seminal vesicle calculi; hypertension\nTrama:perineal or testicular trauma\nBleeding tendnecy"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "Haemospermia survey/treatment",
+                "Survey",
+                "Hx, external genitalia PE(including DRE)",
+                "Urine culture",
+                "+/- STD survey(urethral swab/VB1 NAAT or culutre) if abnormal sex exposure",
+                "+/- cancer survey(PSA, urine cytology, urethroscytoscopy, renal echo, CT/MRI) if recurrent/persistent",
+                "Treatment",
+                "Treat underlying cause",
+                "If no cause identified, reassure that it is self-limiting"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s60.webp",
+              "hidden": false,
+              "ocr_text": "Haemospermia survey/treatment\n• Survey\n• Hx, external genitalia PE(including DRE)\n• Urine culture\n• +/- STD survey(urethral swab/VB1 NAAT or culutre) if abnormal sex\nexposure\n+/- cancer survey(PSA, urine cytology, urethroscytoscopy, renal echo,\nCT/MRI) if recurrent/ persistent\n• Treatment\n•Treat underlying cause\n• Ifno cause idlentified, reassure that it is self-limiting"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

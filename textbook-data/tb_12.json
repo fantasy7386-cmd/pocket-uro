@@ -1,0 +1,1207 @@
+{
+  "id": "tb_12",
+  "number": "XII",
+  "title": "外傷",
+  "icon": "🩹",
+  "sections": [
+    {
+      "id": "tb_12_01",
+      "title": "外傷",
+      "source_file": "12 外傷(2025).pptx.pptx",
+      "total_slides": 77,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "腎臟外傷：分級（AAST）與評估",
+          "slide_count": 10,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "Renal trauma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "Renal trauma"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "ATLS - ABCDE",
+                "Airway with Cervical spine protection",
+                "Breathing and ventilation",
+                "Circulation with hemorrhage control",
+                "Disability: Neurologic status",
+                "Exposure/ Environmental control"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "ATLS -ABCDE\n•Airway with Cervical spine protection\n•Breathing and ventilation\n•Circulation with hemorrhage control\n•Disability: Neurologic status\n•Exposure/ Environmental control"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "The anterior pararenal space lies between the parietal peritoneum and Gerota's fascia, and contains the pancreas, duodenum, and ascending and descending colon. The posterior pararenal space sits between Zuckerkandl's fascia and the transversalis fascia, and contains no organs, only fat pads",
+                "只有在腎臟後面",
+                "Gerota’s fascia",
+                "renal capsule外面一整圈"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Connective tissue coverings\nprotecting and supportingsthe kidney\nSuperficial to deep:\n1. Peritoneum\n2. Renal fascia\n3. Perirenal fascia\n4. Renal capsule\n5. Pararenal fat\ncelom\nPerirenal fat\nrenal capsule外面一整圈\n(adipose capsule)\nperitoneum\nsubserous fascia\noorta\ninferior vena cova\nrenal vein\nnal orter\nvertebra\nbrous\ncapsule\nkidney\nbody wall\nmuscle\nPsoas and quadratus\nttamtorummusctes\nroarm\nThe anterior pararenal space lies between the parietal peritoneum and Gerota's fascia, and contains\nthe pancreas, duodenum, and ascending and descending colon. The posterior pararenal space sits\nbetween Zuckerkandl's fascia and the transversalis fascia, and contains no organs, only fat pads\nGerota's fascia\nRenal Fascia\nPararenal fat\n只有在腎臧後面"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Renal injuries 概論",
+                "Most common injured GU organ in trauma",
+                "佔所有trauma的1-5%",
+                "受傷機轉 – blunt(90%) vs penetrating",
+                "小孩trauma比成人更容易有renal injury: larger comparative kidney size, less relative rib coverage over the kidneys, More renal abnormalities (Wilms tumor / Hydro)",
+                "小孩trauma時要>50% blood loss, BP才會下降, 因為Higher catacholamine, 因此容易忽略unstable disease",
+                "A+P CTU是golden standard",
+                "腎臟blunt較多 90%",
+                "輸尿管醫源性最多",
+                "外傷penetrating比blunt多"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "腎臟blunt較多 90%\nRenal injuries 概論\n輸尿管醫源性最多\n外傷penetrating比blunt多\n•Most common injured GU organ in trauma\n•佔所有trauma的1-5%\n•受傷機轉-blunt(90%) vs penetrating\n•小孩trauma比成人更容易有renal injury:larger comparative\nkidney size, less relative rib coverage over the kidneys, More\nrenal abnormalities (Wilms tumor / Hydro)\n•小孩traural時要-50% blood loss,BP才會下降，因為Higher\ncatacholamine,因此容易忽路unstable disease\n•A+P CTU是golden standard"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Indication for image",
+                "All penetrating trauma with a likelihood of renal injury who are hemodynamically stable enough to have a CT",
+                "All blunt trauma with acceleration/deceleration mechanism",
+                "All blunt trauma with gross hematuria",
+                "All blunt trauma with micro hematuria + hypotension (SBP<90)",
+                "All pediatric patients with greater than 5 RBCs/HPF",
+                "More prone to renal injury (anatomy)",
+                "larger comparative kidney size and",
+                "less relative rib coverage over the kidneys",
+                "Higher catacholamine (>50% blood loss, BP才會下降)",
+                "More renal abnormalities (Wilms tumor / Hydro)",
+                "小朋友腎臟 膀胱 尿道",
+                "都比較容易受傷"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh06.webp",
+              "ocr_text": "Indication for image\n•All penetrating trauma with a likelihood of renal injury who are\nhemodynamically stable enough to have a CT\n•All blunt trauma with acceleration/deceleration mechanism\n•All blunt trauma with gross hematuria\n•All blunt trauma with micro hematuria + hypotension (SBP<9o)\n•All pediatric patients with greater than 5 RBCS/HPF\n•More prone to renal injury (anatomy)\n•larger comparative kidney size and\neless relative rib coverage over the kidneys\n•Higher catacholamine （>50% blood 1oss, BP才會下降）\n•More renal abnormalities (Wilms tumor / Hydro)\n小朋友豎臟膀胱尿道\n都比較容易受傷"
+            },
+            {
+              "slide_num": 7,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh07.webp",
+              "ocr_text": "TABLE 50-1 American Association for the Surgery of Trauma Organ Injury Severity Scale for the Kidney\nGRADE*\nTYPE\nV\nContusion\nHematoma\nHematoma\nLaceration\nLaceration\nLaceration\nVascular\nLaceration\nVascular\nDESCRIPTION\nMicroscopic or gross hematuria, urologic studies normal\nSubcapsular, nonexpanding without parenchymal laceration\nNonexpanding perirenal hematoma confined to renal retroperitoneum\n<1 cm parenchymal depth of renal cortex without urinary extravasation\n>1 cm parenchymal depth of renal cortex without collecting system rupture or urinary\nextravasation\nParenchymal laceration extending through renal cortex, medulla, and collecting system\nMain renal artery or vein injury with contained hemorrhage\nCompletely shattered kidney\nAvulsion of renal hilum, devascularizing the kidney\n*Advance one grade for bilateral injuries up to grade Ill.\nData from Moore EE, Shackford SR, Pachter HL, et al. Organ injury scaling: spleen, liver, and kidney. J Trauma 1989;29:1664-6."
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Renal trauma AAST grade",
+                "Subcapsular hematoma",
+                "Perirenal hematoma / cortex laceration <1cm",
+                "Cortex laceration > 1cm, 沒裂到collecting system沒漏尿",
+                "Laceration裂到collecting system漏尿, 或renal a./v.受損局部出血 (漏尿漏血)",
+                "整個碎掉, 或renal hilum斷掉導致devascularizing",
+                "@artery受傷造成Thrombus讓腎臟完全沒有顯影跟 artery斷掉沒有顯影都是5級",
+                "@在小兒shattered kidney是grade 4"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Renal trauma AAST grade\n1. Subcapsular hematoma\n2. Perirenal hematoma / cortex\nlaceration <1cm\n3. Cortex laceration ＞1cm，沒裂\n到collecting system沒漏尿\n4. Laceration裂到collecting\nsystem漏尿，或renal a./.受\n損局部出血（漏尿漏血）\n5. 整個碎掉，或renal hilum斷掉\n導致devascularizing\n@artery受傷造成Thrombus讓腎\n臟完全沒有顯影跟 artery斷掉沒\n有顯影都是5級\n@在小兒shattered kidney是\ngrade 4\nGrade l\nGrade ll\nGrade il\nGrade IV\nGrade V"
+            },
+            {
+              "slide_num": 9,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh09.webp",
+              "ocr_text": "P<\nA\nB\nC\nFigure 50-13. A, Movement of the kidney from blunt trauma (deceleration injury) causes stretch\non the renal artery, resutting in rupture of the arterial intima and formation of a thrombus.\nB, Computed tomography of a left kidney with renal artery thrombosis, demonstrating lack of\ncontrast material perfusion to the kidney. C, Arteriography demonstrating complete occlusion\nof the left renal artery (arrow) secondary to thrombus formation."
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "小兒",
+                "小兒shattered kidney是第四級"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh10.webp",
+              "ocr_text": "From Buckley JC, McAninch JW. Revision of current American Association for the Surgery of Trauma renal\ninjury grading system. J Trauma 2011;70:35-7.\nGRADE\nOF\nRENAL\nINJURY\nDESCRIPTION\n1\n2\n小兒\n3\n5\nRenal contusion or subcapsular hematoma\nLess than 1-cm parenchymal laceration, all renal fragments viable,no\nurinary extravasation\nGreater than 1-cm parenchymal laceration, includes renal segmental\ninjuries resulting in devitalized fragments no urinary extravasation\nLaceration extending into the collecting system, includes renal segmental\ninjuries resulting in devitalized fragments, urinary extravasation is\npresent. Grade 4 includes shattered kidney, renal pe lvic lacerations and\ncomplete ureteropelvic iunction disruption.\nInjury to the main renal vasculature: major renal vessel laceration or\navulsion resulting in uncontrollable hemorrhage or renal thrombosis of\nthe major renal vessels\n小兒shattered\nkidnev是第四級"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Contrast-enhanced CT",
+                "Gold standard for GU imaging in renal trauma",
+                "CT finding suggesting serious injury",
+                "Medial hematoma (vascular injury)",
+                "Medial urine extravasation (renal pelvis / UPJ avulsion)",
+                "Global lack of contrast of parenchyma (renal artery occlusion)",
+                "以下大於兩項 ( 9倍機率要開進去 或 TAE)",
+                "Hematoma >3.5 cm,",
+                "Medial renal laceration",
+                "vascular contrast extravasation",
+                "(全內血尿extra3.5內拉)"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh11.webp",
+              "ocr_text": "Contrast-enhanced CT\n•Gold standard for GU imaging in renal trauma\n•CT finding suggesting serious injury\n1. Medial hematoma (vascular injury)\n2.Medial urine extravasation (renal pelvis / UPJ avulsion)\n3. Global lack of contrast of parenchyma (renal artery occlusion)\n以下大於兩項（9倍機率要開進去 或 TAE)\n1. Hematoma >3.5 cm,\n2. Medial renal laceration\n3. vascular contrast extravasation\n(全內血尿extra3.5內拉）"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "腎臟外傷：治療（TAE / Exploration / Reconstruction）",
+          "slide_count": 12,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 12,
+              "text": [
+                "TAE 治療腎臟外傷",
+                "會損失部分腎臟",
+                "可重複執行"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh12.webp",
+              "ocr_text": "Hematuria\nMicroscopic\n1（>5RBC/HPF)\nNo shock\nSelective\nrenal imaging\nClinical\nfollow-up\nTAE 治療腎臟外傷\n會損失部分腎臟\n可重複執行\nTrauma\nBlunt\nHematuria\nGross or microscopic\nassociated with shock\n(SBP <90)\nUnstable\nAbdominal\nexploration\nSingle-shot\nIVP on table\nAbnormal or\ninconclusive\nRenal\nexploration\nPenetrating\nHematuria\nMicroscopic\n（>5 RBC/HPF)\nor gross\nStable\nAbdominal\nCT scan\n(IVP optional)\nGrades I-V\nSelective renal\nexploration"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Renal trauma management",
+                "(2021 EAU改良)",
+                "Consider intra-op one shot IVP",
+                "Intra-operative one shot IVP",
+                "For patients too unstable to have had pre-operative imaging",
+                "Two purposes: 1.Presence of a functioning contralateral kidney 2. Radiographically stage the injured side",
+                "2 ml/kg of contrast → single film 10 mins later",
+                "Limited role, unreliable in diagnosis, as it is negative in up to 60% of patients",
+                "@Hx: Trauma mechanism, Hematuria(血尿程度不等於腎臟傷害程度), kidney underlying disease(s/p op?, UPJO?, single kidney?)",
+                "@PE: vital signs, flank hematoma, tenderness",
+                "Penetrating injury, Blunt injury with 1.Gross hematuria 2.Acceleration/deceleration injury 3.Micro hematuria(>5/hpf) +hypotension(SBP<90) 4.小孩micro hematuria(>5/hpf)",
+                "yes",
+                "no"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch12_trauma/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "Renal trauma management\n(2021EAU改良）\nStable\nPenetrating injury, Blunt injury with 1.Gross hematuria\n2.Acceleration/deceleration injury 3.Micro hematuria(>5/hpf)\nthypotension(SBP<90)4./小孩micro hematuria(>5/hpf)\nno\nObservation\nNo active bleeding\nGrade 1-3\nGrade 4-5*\nObservation,\nbed rest, serial\nHt according to\nseverity**\nObservation,\nbed rest, serial\nHt, antibiotics\nRepeat Imaging\nPersistant\nurinary leak\nJstent or drain\nyes\nMultiphase CT scan with\ndelaveciimages\nActive bleeding/blush\nSuspected\nrenal trauma\nDetermine haemodynamic\nstability\nafter primary resuscitation\n@Hx: Trauma mechanism, Hematuria(血尿程\n度不等於腎臟傷害程度),kidney underlying\ndisease(S/ p op?, UPJO?, single kidney?)\n@PE:vital signs, flank hematoma, tenderness\nUnstable\nOngoing resuscitation,\nmultiphase CT &\nangioembolisation\nFailure\nEmergency\nlaparotomy\nRenaliniury\n(pulsatile\nor expanding\nhaematoma)\nGrade 5\n(penetrating)\nAngiography\nand selective\nangioembolisation\n(repeat if\nunsuccessful\nSAE unavailable\nRenal exploration (reconstruction or\nnephrectomy)\nFailure\nConsider intra-op one shot IVP\nIntra-operative one shot IVP\n•For patients too unstable to have had pre-operative imaging\n•Two purposes: 1.Presence of a functioning contralateral kidney 2. Radiographically\nstage the injured side\n•2ml/kg of contrast => single film 10 mins later\n•Limited role, unreliable in diagnosis, as it is negative in up to 60% of patients"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "Penetrating renal trauma (EAU)",
+                "過去認為penetrating abdominal wound 都要開, 現在認為在stable病人不一定要開",
+                "The majority of low-grade stab wounds posterior to the anterior axillary line can be managed non-operatively in stable patients",
+                "Grade 3 or higher injuries due to stab wounds in stable patients can be managed expectantly, but warrant closer observation as the clinical course is more unpredictable and associated with a higher rate of delayed intervention",
+                "High-grade injuries, concomitant abdominal injuries and gunshot wounds are most likely to fail non-operative management",
+                "Overall, non-operative management of penetrating injuries in selected stable patients is associated with a successful outcome in up to 50% of stab wounds and up to 40% of gunshot wounds"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh14.webp",
+              "ocr_text": "Penetrating renal trauma (EAU)\n•過去認為penetrating abdominal wound 都要開，現在認為\n在stable病人不一定要開\n•The majority of low-grade stab wounds posterior to the\nanterior axillary line can be managed non-operatively in\nstable patients\n•Grade 3 or higher injuries due to stab wounds in stable\npatients can be managed expectantly, but warrant closer\nobservation as the clinical course is more unpredictable and\nassociated with a higher rate of delayed intervention\n•High-grade injuries, concomitant abdominal injuries and\ngunshot wounds are most likely to fail non-operative\nmanagement\n•overall, non-operative management of penetrating injuries\nin selected stable patients is associated with a successful\noutcome in up to 50% of stab wounds and up to 40% of\ngunshot wounds"
+            },
+            {
+              "slide_num": 15,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh15.webp",
+              "ocr_text": "Flgure 4.1.2 Evaluatlon of penetrating renal trauma In adults\nEvaluation of penetrating\nrenal trauma*\nDetermine haemodynamic stabiity\nStable\nUnstable\nContrast enhanced\nspiral CT scan with\ndelayed imagest\nEmergency\nlaparotomy\nGrade 1-2\nGrade 3\nGrade 4-5\nRenal exploration\nreconstruction or\nnephrectomy‡\nObservation,\nbed rest, serial Ht,\nantibiotics\nAssociated\ninjuries requiring\nlaparotomy\nAngiography\nand selective\nangioembolisation"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Absolute indications for open",
+                "Hemodynamic instability with shock",
+                "Expanding/pulsatile renal hematoma \u000b (usually indicating renal artery laceration)",
+                "Suspected renal vascular pedicle avulsion (grade 5)",
+                "Ureteropelvic junction disruption (EAU沒這條)"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh16.webp",
+              "ocr_text": "Absolute indications for open\n•Hemodynamic instability with shock\n•Expanding/ pulsatile renal hematoma\n(usually indicating renal artery laceration)\n•Suspected renal vascular pedicle avulsion (grade 5)\n•Ureteropelvic junction disruption (EAU 沒這條）"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Relative indications",
+                "Urinary extravasation with significant renal parenchymal de-vascularization",
+                "Renal injury with colon/pancreatic injury",
+                "higher complication rate if their renal injury is not repaired at the time of colon/pancreatic injury repair, but the renal injury may be closely observed after repair of the enteric injury",
+                "A delayed diagnosis of arterial injury",
+                "which will most likely need delayed nephrectomy"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh17.webp",
+              "ocr_text": "Relative indications\n•Urinary extravasation with significant renal parenchymal de-\nvascularization\n•Renal injury with colon/pancreatic injury\n•higher complication rate if their renal injury is not repaired at the\ntime of colon/pancreatic injury repair, but the renal injury may be\nclosely observed after repair of the enteric injury\n•A delayed diagnosis of arterial injury\n•which will most likely need delaved nephrectomy"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "How to explore the kidney in renal trauma",
+                "Transabdominal approach (千萬不要後腹腔)",
+                "用紗布把小腸撥開讓視野清楚",
+                "打開Gerota fascia前要先control hilum的血管",
+                "下腸系膜靜脈 (IMA)內側打開, 可以找到兩側腎臟的血管, 先控制好之後再打開Gerota fascia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "How to explore the kidney in renal trauma\n•Transabdominal approach （千萬不要後腹腔）\n•用紗布把小腸撥開讓視野清楚\n•打開Gerota fascia 前要先control hilum的血管\n•下腸系膜靜脈 (MA)內側打開，可以找到兩側腎臟的血管，先控制好之後\n再打開Gerota fascia\n4.\n病患因創傷導致右腎破裂出血合併\n擴張性大量血腫且延伸超過主動\n脈，若要在右腎探查打開腎臟包膜\n(Gerota's Fascia)前先掌挫右腎動靜脈\n源頭(early vascular control)，此時欲切\n開後腹膜之位置常利用何者作為界\n標(landmark)？\n(A）下腸系膜靜脈（IMV)內側\n(B) 下腸系膜靜脈(IMV外側\n(©下腸系膜動脈(IMA)內側\nD）下腸系膜動脈(IVA)外側\n(E）以上皆非\nA\n1. Aorta\n2. Celac\n3. Splenic artery\n4. Common hepatic artery\n5. Left Gastric artery\n6. Gastroduodenal artery\n7. SMA\nIMA\n9. LRA\n10. RRA\n11. LRV\n12. RRV\n13. Cystic duct\n14. SMV\n15. IMV\n16. Splenic Vein\n17. Portal confluence\n18. Common Hepatic duct\n19. RPV\n20. LPV\nGreat Vessels\n21. Right Gastricartery\n22.Proper hepatic artery\n23. Left Bonadal artery\n24. Right Gonadal artery\n25. Right Gonadal vein\n26. Left Gonadal vein\n27.Common Bile duct\n28. 1VC"
+            },
+            {
+              "slide_num": 19,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh19.webp",
+              "ocr_text": "KEY POINTS: RENAL TRAUMA\n• Expectant management strategies of renal trauma allow for\nmaximal renal preservation.\n• The degree of hematuria and the severity of renal injury do\nnot consistently correlate.\n• Contrast-enhanced CTis the gold standard for genitourinary\nimaging in renal trauma.\n• Patients with microscopic hematuria without shock can be\nobserved dinically without imaging studies.\n• Hemodynamically stable, well-staged renal injuries can be\nconservatively managed (even with high-grade injuries) .\n• Selective embolization provides an effective and minimally\ninvasive means to stop active bleeding from parenchymal\nlacerations and segmental arterial injury.\n• CTfindings suspicious for significant renal injury incude (1)\nmedial hematoma (vascular pedicle injury), (2) medial\nurinary extravasation (renal pelvis or ureteropelvic junction\ninjury), (3) lack of contrast enhancement of the parenchyma\n(main renal arterial injury), and (4) active intravascular con-\ntrast extravasation (arterial injury with brisk bleeding).\n• Intraoperative one-shot TVP confirms the presence of a con-\ntralateral functioning kidney and may be helpful to define\nurinary extravasation.\n• During renorrhaphy, early vascular control before opening\nthe Gerota fascia can decrease renal loss."
+            },
+            {
+              "slide_num": 20,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh20.webp",
+              "ocr_text": "Inferior\nmesenteric vein\nInferior\nmesenteric vein\nRight renal\nvein\nr Left renal\nvein\nLeft renal\nartery\nGonadal\nveinl\nRight renal\nartery\nAora\nA\nB\nFigure 50-8. The surgical approach to the renal vessels and kidney. A, Retroperitoneal incision\nover the aorta medial to the inferior mesenteric vein. B, Anatomic relationships of the renal\nvessels. C, Retroperitoneal incision lateral to the colon, exposing the kidney.\nB Partial polar\nnephrectomy\nC Collecting system\nclosure\nFigure 50-9. Technique for partial nephrectomy. A, Total renal exposure. B, Sharp removal of\nnonviable tissue. C, Hemostasis obtained and collecting system closed. D, Defect covered.\nD omental pedicle\nflap"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "How to do renal reconstruction",
+                "Complete renal exposure",
+                "Measures for temporary vascular control",
+                "Limited debridement of nonviable tissue (可以partial)",
+                "Hemostasis by individual suture ligation of bleeding vessels",
+                "Watertight closure of the collecting system",
+                "Re-approximation of the parenchymal defect",
+                "Coverage with nearby fascio-adipose flaps (Gerota fascia or omentum) if feasible",
+                "Liberal use of drains"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "How to do renal reconstruction\n•Complete renal exposure\nMeasures for temporary vascular control\n•Limited debridement of nonviable tissue (可以partial)\n•Hemostasis by individual suture ligation of bleeding vessels\n•Watertight closure of the collecting system\n•Re-approximation of the parenchymal defect\n•Coverase with nearby fascio-adipose flaps (Gerota fascia or omentum) if\nfeasible\n•liberal use of drains\nB Partial polar\nnephrectomy\ncollecting system\nclosure\nD Omental pedicle\nflap\nFigure 50-9. Technique for partial nephrectomy. A, Total renal exposure. B, Sharp removal of\nnonviable tissue. C, Hemostasis obtained and collecting system closed. D, Defect covered."
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Complications of Renal Trauma",
+                "Ranged from 3 to 20%",
+                "Early complications",
+                "delayed bleeding",
+                "urinary extravasation",
+                "abscess formation",
+                "Late complications",
+                "hypertension",
+                "renal failure",
+                "hydronephrosis",
+                "Pyelonephritis",
+                "AVM/psuedoaneurysm"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Complications of Renal\nTrauma\n•Ranged from 3 to 20%\n•Early complications\n•delayed bleeding\n•urinary extravasation\neabscess formation\n•Late complications\n•hypertension\nerenal failure\n•hydronephrosis\n•Pyelonephritis\n•AVM/psuedoaneurysm"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Ureteral injury"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral injury"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "輸尿管外傷：分級、修復原則與術式",
+          "slide_count": 21,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 23,
+              "text": [
+                "Ureteral injury"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral injury"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Ureteral injury causes",
+                "Iatrogenic(Surgical)",
+                "Hysterectomy 54%",
+                "疑似輸尿管損傷, 可以注射 indigo carmine (better), methyl blue",
+                "Open手術比較容易辨認輸尿管損傷",
+                "腹腔鏡子宮切除 比 經陰道切除 容易造成輸尿管損傷",
+                "腎臟blunt較多 90%",
+                "輸尿管醫源性最多",
+                "外傷penetrating比blunt多",
+                "CRS 14%",
+                "Ovarian tumor 8%",
+                "Transabdominal urethropexy 8%",
+                "Abdominal vascular 6%: Vascular surgery 中最常導致ureteral injury 是Aortoiliac或aortofemoral bypass手術, 約12-20%, 會自己好",
+                "Trauma (penetrating 4%, blunt 1%)",
+                "@術中不確定輸尿管有沒有斷: IV Indigo carmine或IV methylene blue後用膀胱鏡確認, 染料流下來,表示輸尿管通暢(兩者都不可用在孕婦,會死孕婦或死胎,methylene blue不可合併SSRI或用在G6PD deficiency)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "腎臟blunt較多 90%\n輸尿管醫源性最多\n外傷penetratingLtblunt多\nUreteral injury causes\n•latrogenic(Surgical)\n•Hysterectomy 54%\n•疑似輸尿管損傷，可以注射 indigo carmine (better), methyl blue\n•Open手術比較容易辨認輸尿管損傷\n•腹腔鏡子宮切除比經陰道切除容易造成輸尿管損傷\n•CRS 14%\n•ovarian tumor 8%\nOvarian artery\n•Transabdominal urethropexy 8%\n• Abdominal vascular 6%: Vascular surgery 中最常\n導致ureteralinjury 是Aortoiliac或aortofemoral\nbypass手術，約12-20%，會自己好\nIntemal iliac\nartery\nUterine\nartery\n@術中不確定輸尿管有沒有斷：IV Indigo carmine或N\nmethylene blue後用膀胱鏡確認，染料流下來,表示輸尿\n管通暢(兩者都不可用在孕婦,會死孕婦或死胎\n® Ureter\n,methylene blue不可含併SSR1或用在 G6PD deficiency)\nVaginal\nartery\n•Trauma (penetrating 4%,blunt 1%)\nFigure 50-14. Ureteral anatomy showing relationship to fallopian\ntbeanduernearery"
+            },
+            {
+              "slide_num": 25,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 50-2 American Association for the Surgery of\nTrauma Organ Injury Severity Scale for the Ureter\nGRADE*\nTYPE\nDESCRIPTION\nHematoma\n=三≥\nLaceration\nLaceration\nLaceration\nV\nLaceration\nContusion or hematoma without\ndevascularization\n<50% transection\n≥50% transection\nComplete transection with <2 cm\ndevascularization\nAvulsion with >2 cm\ndevascularization\n*Advance one grade for bilateral up to grade Il\nFrom Moore EE, Cogbill TH, Jurkovich GU, et al: Organ injury scaling. Ill.\nChest wall, abdominal vascular, ureter, bladder, and urethra. J Trauma\n1992;33:337-9."
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Campbell分級(多了第六級)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "Campbell分級（多了第六級）\nTABLE 19.5 Grading System for Classifying\nUreteral Injury\nGRADE\nINJURY\n1\nHematoma\n2\n3\n4\nLaceration\nLaceration\nLaceration\n5\nLaceration\n6\nDESCRIPTION\nContusion or hematoma without\ndevascularization\n≤50% transection\n≥50% transection\nComplete transection with ≤2 cm\ndevascularization\nComplete transection with >2 cm\ndevascularization\nNot salvageable"
+            },
+            {
+              "slide_num": 27,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh27.webp",
+              "ocr_text": "UPPER\nDirect ureteroureterostomy\nTransureteroureterostomy\nMIDDLE\nDirect ureteroureterostomy\nTransureteroureterostomy\nLOWER\nReimplantation\nPsoas hitch\nStemper\nFigure 50-17. Suggested management options for ureteral injuries at\ndifferent levels."
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Timing of repair",
+                "Postoperatively discovered injuries",
+                "Immediately repaired when detected within 72 hours (三天內)",
+                "Injuries discovered after this 3-day period are drained with stent, PCN, or both, and definitive repair is delayed until 6 weeks after injury"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh28.webp",
+              "ocr_text": "Timing of repair\n•Postoperatively discovered injuries\n•mmediately repaired when detected within 72 hours（三天內）\n•lnjuries discovered after this 3-day period are drained with stent, PCN,\nor both, and definitive repair is delayed until 6 weeks after injury"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "General principles",
+                "Mobilize the injured ureter carefully, sparing the adventitia widely, so as not to devascularize the ureter further.",
+                "Debride the ureter minimally but judiciously until edges bleed, especially in high-velocity gunshot wounds.",
+                "Repair ureters with spatulated, tension-free, stented, watertight anastomosis, using fine absorbable monofilament such as 5-0 polydioxanone and retroperitoneal drainage afterward.",
+                "Retroperitonealize the ureteral by closing peritoneum over it"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh29.webp",
+              "ocr_text": "General principles\n•obilize the injured ureter carefully, sparing the adventitia\nwidely, so as not to devascularize the ureter further.\n•Debride the ureter minimally but judiciously until edges bleed,\nespecially in high-velocity gunshot wounds.\n•Repair ureters with spatulated, tension-free, stented, watertight\nanastomosis, using fine absorbable monofilament such as 5-0\npolydioxanone and retroperitoneal drainage afterward\n•Retroperitonealize the ureteral by closing peritoneum over it"
+            },
+            {
+              "slide_num": 30,
+              "text": [
+                "Do not tunnel ureteroneocystostomies but rather create a widely spatulated nontunneled anastomosis. (不要在bladder的muscle layer 做tunnel !!)",
+                "Ps: smith: antireflux procedure should be done whenever possible",
+                "EAU: 未定論, 需權衡利弊",
+                "With severely injured ureters, blast effect, concomitant vascular surgery, and other complex cases, consider omental interposition to isolate the repair when possible.",
+                "Damage control: If immediate repair is not possible, tie off the ureter with long silk sutures and plan to repair it later"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh30.webp",
+              "ocr_text": "•Do not tunnel ureteroneocystostomies but rather create a\nwidely spatulated nontunneled anastomosis.（不要在bladder\n的muscle laver 做tunnel !)\n•Ps: smith: antireflux procedure should be done whenever possible\nEAU：未定論，需權衡利弊\n•With severely injured ureters, blast effect, concomitant\nvascular surgery, and other complex cases, consider omental\ninterposition to isolate the repair when possible.\n•Damage control: If immediate repair is not possible, tie off\nthe ureter with long silk sutures and plan to repair it later"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "Ureteral injury management",
+                "Iatrogenic: 術中發現直接補, If immediate repair is not possible, tie off the ureter with long silk sutures and plan to repair it later(Damage control)",
+                "Iatrogenic: 術後發現try PCN or stent (retrograde /antegrade)",
+                "三天(EAU)/一週(Campbell)內直接補, 超過三天/一週放6 weeks後再補",
+                "做完手術有放stent的(DBJ, single J) 都放6 weeks",
+                "Penetrating / Blunt 走ATLS: 類似renal trauma, 不穩定open + shot IVP, 穩定做CT, 有finding就修補",
+                "End to end",
+                "anastomosis",
+                "UNC",
+                "Boari flap"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral injury management\n\"latrogenic: 術中發現直接補，If immediate repair is not possible, tie off the\nureter with long silk sutures and plan to repair it later(Damage control)\n•latrogenic：術後發現try PCN or stent (retrograde /antegrade)\n•三天(EAUY一週(Campbell)內直接補，超過三天/一週放6weeks後再補\nUpper 1/3:\n• End-to-end\nanastomosis\n• Transuretero-\nureterostomy\n• Uretero-\ncalycostomy\nMid 1/3:\n• End-to-end\nanastomosis\n•Transuretero-\nureterostomy\n• Boari flap\nLower 1/3:\n• Psoas hitch\nEnd to end\nanastomosis\nUNC\nBoari flap\nLong segment:\n• Graft\nureteroplasty\n•Intestinal\ninterposition\n• Auto-\ntransplant\nFailure\n•做完手術有放stent的(DB), single J）都放6 weeks\n•Penetrating / Blunt 走ATLS:類似renal trauma，不穩定open + shot IVP,穩定\n做CT，有fincing就修補"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "End to end anastomosis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "B\nEnd to end\nanastomosis\nStempen\nD\nE\nFigure 50-18. Technique of ureteroureterostomy after traumatic disruption. A, Injury site defini-\ntion by ureteral mobilization. B, Debridement of margins and spatulation. C, Stent placement.\nD, Approximation with 5-0 absorbable suture. E, Final result."
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "Uretero-calycostomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Uretero-calycostomy\n一\n一"
+            },
+            {
+              "slide_num": 34,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Boari flap procedure."
+            },
+            {
+              "slide_num": 35,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "Psoas hitch procedure."
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "absorbable monofilament, 5-0 PDS",
+                "Mobilize the injured ureter, but spare adventitia to prevent devascularization",
+                "Retroperitonealize the ureter by closing peritoneum over it",
+                "until edge bleeds",
+                "用peritoneum或omentum把ureter包覆起來",
+                "Principles of ureter repair"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "Principles of ureter repair\nTable 4.2.2: Principles of surgical repair of ureteral injury\nMobilize the injured ureter, but spare adventitia to prevent devascularization\nDebridement of necrotic tissue.\nuntil edge bleeds\nSpatulation of ureteral ends.\nWatertight mucosa-to-mucosa anastomasis with abeorbable sutures. absorbabte mmomofitarment, 5-0-PBs\nInternal stenting.\nExternal drain.\nUsolation of injury with peritoneum or omentum. 用peritoneumaorentum把ureter包覆起來\nRetreperitenealize the ureter ay clesing periteneuf over it"
+            },
+            {
+              "slide_num": 37,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh37.webp",
+              "ocr_text": "KEY POINTS: URETERAL TRAUMA\n• Ureteral injuries must be carefully sought, or they will be\nmissed.\nAfter penetrating injury, use CT scan and intraoperative one-\nshot IVP liberally.\nAfter penetrating injury, determine the course of the knife or\nbullet tract to ensure that the ureter is not at risk.\nIf delayed recognition is suspected, use CT and retrograde\npyelography aggressively.\n• Safe ureteroscopy practices should be followed, including\nusing sound technique, limiting ureteroscopy times, using\nsafety wires, scoping over guidewires, and halting ureteros-\ncopy immediately in the face of any ureteral injury.\nRetroperitoneal surgery should be undertaken only with\nconstant attention to the location of the ureter. Intraopera-\ntively, expose and inspect the ureter when necessary.\n• See Figure 50-24."
+            },
+            {
+              "slide_num": 38,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh38.webp",
+              "ocr_text": "Intraoperative recognition\nMinor ureteral\ninjury\nMajor ureteral\ninjury\nDeligate as necessary\nStent\nPrimary stented\nureteroureterostomy, psoas hitch,\nor Boari flap with or without\nkidney mobilization\nUreteral stent 6 weeks\nConsider damage control\nand postoperative\nplacement of percutaneous\nnephrostomy in rare case\nof extremely long injury\nFollow-up retrograde pyelography and\nstent removal or replacement as needed\nSuccess\nFail\nAfter stent removal\nconsider periodic Lasix\nrenogram or surveilance\nultrasound (detect\nhydronephrosis) to\nrule out recurrence\nConsider endoscopic methods\n(laser, Acusize, balloon)\nPrimary stented ureteroureterostomy,\npsoas hitch, or Boari flap with or\nwithout kidney mobilization,\nautotransplant or ileal ureter\nR"
+            },
+            {
+              "slide_num": 39,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh39.webp",
+              "ocr_text": "Postoperative recognition\nCT with contrast (+ delayed films)\n+ retrograde pyelography\nMinor ureteral\nmury\nMajor ureteral\ninjury\nUreteral stent 6 weeks\nAttempted retrograde\nstent placement\nFollow-up retrograde pyelography and\nstent removal or replacement as needed\nFail\nSuccess\nFail\nSuccess\nFail, wait\n6 weeks\nPercutaneous nephrostomy\nand anterograde stent\nplacement, if possible\nAfter stent removal\nconsider periodic Lasix\nrenogram or surveillance\nultrasound (detect\nhydronephrosis) to\nrule out recurrence\nConsider endoscopic methods\n(laser, Acusize, balloon)\nPrimary stented ureteroureterostomy,\npsoas hitch, or Boari flap with or\nwithout kidney mobiization\nConsider autotransplant or ileal loop\nin rare case of extremely long injury\nFigure 50-24, cont'd B, Discovered intraoperatively. C, Discovered postoperatively. CT, com-\nputed tomography; IVP, intravenous pyelography; OR, operating room."
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "Penetrating or Blunt trauma"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh40.webp",
+              "ocr_text": "Penetrating or Blunt trauma\nBlunt trauma\nPenetrating trauma\nGross hematuria, or microhematuria with\ndeceleration/hypotension/associated injuries\nStable, to CT\n+ contrast,\n+ delayed films\nUnstable, to OR\nUnstable, to OR\nNormal\nIntraoperative\none-shot IVP\nAbnormal\nPotential ureteral\nInury (ureteral\nnonopacification\nor extravasation)\nGross or micro-\nhematuria\nYes\nNo\nIntraoperative\none-shot IVP\nNormal\nConsider other sources\nfor hematuria (bladder,\nurethra, kidney)\nA\nAfter stent removal consider\nperiodic Lasix renogram or\nsurveillance ultrasound\n(detect hydronephrosis)\nto rule out recurrence\nStent removal\n6 weeks\nExplore ureter and\nrepair (consider\ndamage control\nas necessary)\nBullet/knite\nwound in\nvicinity of\nureter\nFigure 50-24. Algorithms for the diagnosis and treatment of ureteral injuries. A, From external\nviolence.\nContinued"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "EAU 比較簡單",
+                "Damage control: If immediate repair is not possible, tie off the ureter with long silk sutures and plan to repair it later",
+                "處理方法跟下面一樣(upper/mid/lower/long)",
+                "retrograde or antegrade",
+                "三天以上發現",
+                "三天內發現"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh41.webp",
+              "ocr_text": "Ureteric Injury\n二天內發現\nEAU比較簡單\nImmediate diagnosis\nDelayed diagnosis\n三天以上發現\nStable\nUnstable\nDamage control\nephrostomy\nmmediate repair\n處理方法跟下面一樣\n(upper/mid/lower/long)\nNephrostomy/JJ-stent retrograde or antegrade\nDamage control: If immediate repair is not\npossible, tie off the ureter with long silk\nsutures and plan to repair it later\nFollow up\nStricture\nEndo-urologic dilation\nYes\nNo\nUpper 1/3:\n• End-to-end\nanastomosis\n• Transuretero-\nureterostomy\n• Uretero-\ncalycostomy\nMid 1/3:\n• End-to-end\nanastomosis\n• Transuretero-\nureterostomy\n• Boari flap\nLower 1/3:\n• Psoas hitch\nLong segment:\n•Graft\nureteroplasty\n•Intestinal\ninterposition\n• Auto-\ntransplant\nFailure"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Ureteroscopy related",
+                "complication and management",
+                "Perforation",
+                "False passage",
+                "Mucosa tear",
+                "Ureteral bleeding",
+                "Intussusception, avulsion",
+                "Adjacent structure damage",
+                "Risk factors association with higher complication rates",
+                "Longer surgery times",
+                "Treatment of renal calculi",
+                "Surgeon inexperience",
+                "Previous irradiation",
+                "Management",
+                "放DBJ閃人",
+                "放不過去做 PCN+antegrade"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "Ureteroscopy related\ncomplication and management\n•Perforation\n•False passage\n•Mucosa tear\nWreteral bleeding\nalntussusception, avulsion\n•Adjacent structure damage\n•Risk factors association with higher complication rates\n•Longer surgery times\n•Treatment of renal calculi\n•Surgeon inexperience\n•Previous irradiation\n•Management\n•放DBJ閃人\n•放不過去做 PCNtantegrade"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "Benign ureteral stricture management",
+                "<2cm且>20% function => endoscopy或氣球擴張, 放較粗的DBJ至少8週",
+                ">2cm => repair or Nx (看是否>20% function)",
+                "Anterior incision或balloon dilatation",
+                "Anterior incision或balloon dilatation",
+                "Lateral incision或balloon dilatation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Benign ureteral stricture\nmanagement\nOPTIMAL THERAPY FOR BENIGN URETERAL STRICTURES*\nAssess length, renal function\nStricture is <2 cm and >20% function\nStricture is >2 cm\nDistal ureter\nMiddle ureter\nProximal ureter\nMoiety is >20%\nMoiety is <20%+\nAnterior incision或 Anterior incision或 Lateral incision或\nballoon dilatation\nballoon dilatation\nballoon\nditatatior\nOpen or\nlaparoscopic repair\nLaparoscopic\nnephrectomy\n*Consider balloon if transplant on immunosuppression.\ntPediatric patients and select patients with renal insufticiency may warrant repalr.\n•<2cm 且>20% function => endoscopy或氣球擴張，放較粗的DBJ至少g週\n•>2cm =repair or Nx (看是否>20% function)"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "外生殖器外傷（Penile / Testicular / Skin Loss）",
+          "slide_count": 14,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 44,
+              "text": [
+                "Open/Lapa ureter repair選擇",
+                "Campbell-Walsh Urology ,11e, p1575",
+                "先看defect長度, 看有哪些選擇, ex: 7cm就不能選UNC",
+                "再依照位置做最後決定"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Open/Lapa ureter repair選擇\n•先看defect長度，看有哪些選擇，ex: 7cm就不能選UNC\n•再依照位置做最後決定\nTechnique\nUreteroureterostomy\nDefect length (cm)\n2-3\nUreteroneocystostomy(UNC)\n4-5\npsaos hitch\n6-10\nBoari flap\n12-15\nRenal descensus\nTransureteroureterostomy\nlleal Ureteral Substitution\nAutotransplantation\n5-8\n不限\n不限\n不限\nCampbell-Walsh Urology, 11, p1575"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "External genitalia injury",
+                "Penile injury(fracture, penetrating, bites, amputation)",
+                "Scrotal/testicular injury"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "External genitalia injury\nPenile injury(fracture, penetrating, bites, amputation)\nScrotal/testicular injury"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "AAST penile injury scale",
+                "皮膚",
+                "1. laceration/contusion=> 1",
+                "2. avulsion=> 3",
+                "Bucks laceration => 2",
+                "Glans/meatus => 3",
+                "白膜/尿道 <2 => 3, >2=> 5",
+                "Partial P=> 4"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "AAST penile injury scale\n皮膚\n1. laceration/ contusion=> 1\n2. avulsion=> 3\nBucks laceration =>2\nGlans/meatus =>3\n白膜/尿道<2 =>3,>2=>5\nPartial P=> 4\nAAST\nGrade\nDescription of injury\nII\nIV\nV\nCutaneous laceration/contusion\nBuck's fascia (cavernous) laceration without tissue\n1oss\nCutaneous avulsion\nLaceration through glans/meatus\nCavernosal or urethral defect <2cm\nPartial penectomy\nCavernosal or urethral defect >2cm\nTotal penectomy"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "Penile Fracture",
+                "Usually during vigorous sex",
+                "Other causes: masturbation, falling down, self-induced",
+                "Location: usually at the most distal of suspensory ligament, at ventro-lateral side of tunica albuginea(thinnest)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "Penile Fracture\n•Usually during vigorous sex\n•Other causes: masturbation, falling down, self-induced\n•Location: usually at the most distal of suspensory ligament, at ventro-\nlateral side of tunica albuginea(thinnest)\n2.2 mm\n4.5 x 107 N/m?\n×\nSuspensory ligament•\n1.2 mm\n3.0 × 107 N/me\nPenis\n0.8mm\n1.6 x 107 N/m?\n(most vulnerable)\nScrotum"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Penile fracture - diagnosis",
+                "History & PE (即可診斷penile fracture)",
+                "Crack pop sound, rapid detumescence, egg plant deformity 茄子狀, deviates tunical tear 的對側, butterfly hematoma",
+                "Butterfly hematoma ->Buck‘s fascia損傷, the blood leak can spread to involve the scrotum, perineum and lower abdominal wall",
+                "Urethral injury (~20%) → gross hematuria, trouble urinating",
+                "Adjunctive imaging: sonography, MRI"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "Penile fracture - diagnosis\n•History & PE（即可診斷penile fracture)\n•Crack pop sound, rapid detumescence, egg plant deformity茄子狀，\ndeviates tunical tear 的對側,butterfly hematoma\n•Butterfly hematoma ->Buck's fascia損傷,the blood leak can spread\nto involve the scrotum, perineum and lower abdominal wall\n•Urethral injury (~20%) gross hematuria, trouble urinating\n•Adjunctive imaging: sonography, MRI\nDeep Dorsal w Superficial Dorsal v\nDorsal n:\nDorsal a\nBuck's fascia\nScarpa's\nfascia\nDeep a\nCorpus caverosum\nCorpus spongiosum\n•1.Skin\n• 2.Superficial (Dartos) fascia\n3.Areolar tissue\n4.Deep (Buck's) fascia\n5. Tunica abuginea\nBuck's fascia\nUrethra®\nRupture of urethra in\nthe shaft of the penis\n(no rupture of Buck's fascia)\nColle's\nfascia\nRupture of urethra\nat bulb (rupture of\nBuck's fascia)"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "Penile Fracture-management",
+                "Management",
+                "Ventral vertical penoscrotal incision, lateral or Circumcising incision",
+                "Tunica repair: 2-0 or 3-0 absorbable sutures(Vicryl)",
+                "Post-OP: broad spectrum Abx and 1 month sexual abstinence",
+                "Timing: Within 7 days(Delayed surgery up to 7 days will not affect results , 可以七天內開)",
+                "Outcome",
+                "Surgical repair:  5% penile curvature",
+                "Conservative Treatment: 10% penile curvature",
+                "Penile fracture 7天",
+                "Testis 3天",
+                "效果差不多 不用真的馬上開"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "Penile Fracture-management\n•Management\n•Ventral vertical penoscrotal incision, lateral or Circumcising\nincision\n•Tunica repair: 2-0 or 3-0 absorbable sutures(Vicryl)\n•Post-OP: broad spectrum Abx and 1 month sexual abstinence\n•Timing: Within 7 days(Delayed surgery up to 7 days will not affect\nresults，可以七天內開）\nPenile fracture 7天\nTestis 3天\n•Outcome\n效果差不多 不用真的馬上開\n•Surgical repair: 5% penile curvature\n•Conservative Treatment: 10% penile curvature"
+            },
+            {
+              "slide_num": 50,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "79.E下列有關生殖器外傷的敘述何者為對\n(A) Penile fracture 往往是直接可以透過可靠的病史和體格檢查來診斷\n(B） 大部分陰莖骨折在離 suspensory ligament 較遠的位置\n【C 性交時造成的陰莖骨折主要在 ventral 和lateral side\n(D 由於尿道損傷的發生並不少見，術前懷疑有尿道損傷時，應考慮進行尿道攝影\nE) 以上皆對\nA\nFigure 101-3. A, Uitrasound examination demonstrates ruptured tunica albuginea (arrow) in a\npatient with a suspected penile fracture. B, Hematoma adjacent to ruptured tunica."
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "Penile penetrating injury/bite",
+                "Most penetrating injury → Gun-shot",
+                "Management",
+                "Immediate exploration, adequate irrigation, debridement, closure",
+                "Retrograde urethrography",
+                "擔心尿道受傷的情況",
+                "Penetrating injury, high velocity missile, meatus blood, urinary difficulties",
+                "Urethral injuries from penetrating trauma should be closed primarily",
+                "Animal and human bites",
+                "Animal bite: irrigation, debride, primary closure and ABx",
+                "Human bite: irrigation, debride, No primary closure and ABx",
+                "Abx choices: Augmentin, 2nd gen cefa, clindamycin + fluoroquinolone"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "Penile penetrating injury/bite\n•Most penetrating injury => Gun-shot\n•Management\n•mmediate exploration, adequate irrigation, debridement, closure\n•Retrograde urethrography\n•擔心尿道受傷的情況\n•Penetrating injury, high velocity missile, meatus blood, urinary\ndifficulties\n•Urethral injuries from penetrating trauma should be closed primarily\n•Animal and human bites\n•Animal bite: irrigation, debride, primary closure and ABx\n•Human bite: irrigation, debride, No primary closure and ABx\n•Abx choices: Augmentin, 2nd gen cefa, clindamycin + fluoroquinolone"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "Penile amputation",
+                "Traumatic amputation is rare",
+                "Usually self-mutilation (65-87% has psychosis)",
+                "Warm ischemia time 6 hr, cold ischemia time 16 hr",
+                "Management -> within 24h",
+                "Suprapubic cystostomy",
+                "修補白膜, Corporal bodies(2-O/3-O absorbable suture)",
+                "修補尿道(two layers, 4-O absorbable suture)",
+                "micro修補動靜脈神經(dorsal a. 11-O Nylon, dorsal v. 9-O Nylon, dorsal nerve 10-O Nylon)",
+                "修補skin",
+                "Macro vs Micro repair",
+                "Erection: same ~50%",
+                "Urethral stricture, skin loss, sensory abnormalities: Micro better",
+                "Sensory return: 10% of macroscopic, 80% of microscopic"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "Penile amputation\n•Traumatic amputation is rare\n•Usually self-mutilation (65-87% has psychosis)\n•Warm ischemia time 6 hr, cold ischemia time 16 hr\n•Management -> within 24h\n1. Suprapubic cystostomy\n2. 修補白膜， Corporal bodies(2-0/3-0 absorbable suture)\n3. 修補尿道(two lavers, 4-0 absorbable suture)\n4. micro修補動靜脈神經(dorsal a. 11-0 Nylon, dorsal v. 9-0 Nylon, dorsal nerve\n10-0 Nylon)\n5. 修補skin\n•Macro vs Micro repair\n•Erection: same ~50%\n•Urethral stricture, skin loss, sensory abnormalities: Micro better\n•ensory return: 10% of macroscopic, 80% of microscopic"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "AAST scrotal injury",
+                "Contusion=>1",
+                "Laceration=> 2,3 (<25%)",
+                "Avulsion=> 4,5 (<50%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "AAST scrotal injury\nScrotum injury scale\nGrade\nDescription of injury\n=三 >\nContusion\nLaceration <25% of scortal diameter\nLaceration ≥25% of scrotal diameter\nAvulsion <50%\nAvulsion >50%\nContusion=>1\nLaceration=> 2,3 ($25%）\nAvulsion=> 4,5 (50%)"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Testicular injury",
+                "機轉",
+                "Usually blunt injury (~75%)",
+                "Penetrating: firearm(槍枝), explosion, impalement(穿刺)",
+                "Hx/PE: pain, nausea/vomiting, fainting, scrotal tenderness/hematoma/enlargement",
+                "Scrotal echo: hematoma, testis tunica albuginea rupture",
+                "Must consider testicular rupture in ALL injury (血腫程度不等於睪丸損傷程度, 要診斷只有scrotal exploration)",
+                "Management(timing: ASAP, within 3 days)",
+                "懷疑testicular rupture(Hx/PE/echo)或penetrating scrotal injury -> scrotal exploration +debridement +/- testis repair(absorbable sutures)",
+                "Outcome",
+                "If early repair(within 3 days), more testis will be salvaged(90% salvage rate within 3 days), better fertility and hormone function, faster recovery",
+                "3-8倍 testis loss if delay repair(>3 days)",
+                "Penile fracture 7天 效果差不多 不用真的馬上開",
+                "Testis 盡早, 3天內salvage rate 90%",
+                "Penetrating wound",
+                "Scrotum, Bladder 需open",
+                "腎臟不一定",
+                "血尿程度不等於腎臟傷害程度",
+                "血腫程度不等於睪丸損傷程度"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss33.webp",
+              "ocr_text": "血尿程度不箏於腎臟傷害程度\n血腫程度不等於睪丸損傷程度\nTesticular injury\nPenetrating wound\n•機轉\nSerotum, Bladder 需open\n•Usually blunt injury (~75%)\n腎臟不一定\n•Penetrating: firearm(槍枝),explosion,impallement(穿刺）\n•Hx/PE: pain, nausea/vomiting, fainting, scrotal tenderness/hematoma/enlargement\n•Scrotal echo: hematoma, testis tunica albuginea rupture\n•Must consider testicular rupture in ALL injury (血腫程度不等於睪丸損傷程度，要\n診斷只有scrotal exploration)\n•Management(timing: ASAP, within 3 days)\n•懷疑testicular rupture(Hx/PE/echo)或penetrating scrotal injury -> scrotal\nexploration +debridement +/- testis repair(absorbable sutures)\n•Outcome\n•f early repair(within 3 days), more testis will be salvaged(90% salvage rate\nwithin 3 days), better fertility and hormone function, faster recovery\n•3-8倍 testis loss if delay repair(>3 days)\npenile fracture 7天 效果差不多 不用真的馬上開\nTestis 盡早，3天内salvage rate 90%"
+            },
+            {
+              "slide_num": 55,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh55.webp",
+              "ocr_text": "KEY POINTS: GENITAL TRAUMA\n• Although penile fracture usually can be diagnosed based on\nhistory and physical examination, penile ultrasonography is\na readily available, inexpensive, rapid, and accurate imaging\nmodality that may be useful to guide dinical management.\nGunshot wounds to the penis should be repaired primarily\nto prevent deformity and erectile dysfunction.\nAnimal bites should be irrigated, debrided, and closed pri-\nmarily, whereas most human bites should be left open.\n• Blunt scrotal injury can be evaluated by ultrasonography for\ntesticular rupture. Penetrating scrotal injuries should undergo\nsurgical exploration to assess and repair deep tissues and\nremove contamination."
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "Genital skin loss",
+                "Most common cause: Fournier’s gangrene",
+                "Other cause: Burn injury (same management as other burn)"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss34.webp",
+              "ocr_text": "Genital skin loss\n•Most common cause: Fournier's gangrene\n•Other cause: Burn injury (same management as other burn)\nA\nB\nFigure 101-10. A, Large erythematous scrotum with central necrosis suggestive of necrotizing\ninfection. B, Computed tomography scan reveals subcutaneous air in the scrotum (arrow)\nsecondary to Fournier gangrene."
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "Question",
+                "以下有關 penile fracture / penetrating injury 何者為非?",
+                "Penile shaft 最薄是在 ventro-lateral side, penile fracture 最容易發生在 suspensory ligament 最遠端",
+                "Penile fracture 有40%合併尿道損傷",
+                "Penile fracture repair在7天以內都不太會影響功能與外觀",
+                "Surgical repair 有5%的機會產生 陰莖彎曲(penile curvature)",
+                "Conservative treatment 有10%的機會產生 陰莖彎曲(penile curvature)",
+                "Ans: B, 20%",
+                "Campbell 11th edition Chap. 101 p. 2379-2382"
+              ],
+              "has_exam_question": true,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss35.webp",
+              "ocr_text": "Question\n•以下有關penile fracture / penetrating injury 何者為非？\na) penile shaft最薄是在 ventro-lateral side, penile fracture\n最容易發生在 suspensory ligament 最遠端\nb) Penile fracture 有40%合併尿道損傷\nPenile fracture repair在7天以內都不太會影響功能與外\n觀\nd) Surgical repair 有5%的機會產生 陰莖彎曲(penile\ncurvature)\nConservative treatment 有10%的機會產生 陰莖彎曲\n(penile curvature)\nAns:B, 20%\nCampbell 11th edition Chap. 101 p. 2379-2382"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "膀胱外傷：Cystography 與治療",
+          "slide_count": 8,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 58,
+              "text": [
+                "Question",
+                "有關 testicular injury, 何者為非?",
+                "受傷陰囊的外觀(腫脹與淤青)跟 testicular injury 的嚴重度成正比",
+                "大部分的 testicular injury 是鈍器傷 (blunt injury)",
+                "越早修補 testicular rupture 對賀爾蒙功能與生育都有幫助",
+                "睪丸超音波正常可是臨床懷疑 testicular rupture, 還是需要 scrotum exploration",
+                "超音波可以用來判斷睪丸的完整度與血液共應的程度",
+                "Ans: A",
+                "Campbell 11th edition Chap. 101 p. 2382-2384"
+              ],
+              "has_exam_question": true,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss36.webp",
+              "ocr_text": "Question\n•有關testicular injury，何者為非？\na) 受傷陰囊的外觀（腫脹與淤青）跟 testicular injury 的嚴\n重度成正比\nb）大部分的 testicular injury 是鈍器傷(blunt injury)\nC）越早修補 testicular rupture 對賀爾蒙功能與生育都有\n幫助\n畢丸超音波正常可是臨床懷疑 testicular rupture,還是\n需要 scrotum exploration\ne）超音波可以用來判斷睪丸的完整度與血液共應的程度\nAns: A\nCampbell 11th edition Chap. 101 p. 2382-2384"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "Bladder injury"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss37.webp",
+              "ocr_text": "Bladder injury"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "沒破=> 1",
+                "腹膜外=> 2,3 (<2cm)",
+                "腹膜內=> 3,4 (<2cm)",
+                "Neck/UO=> 5",
+                "AAST bladder injury"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss38.webp",
+              "ocr_text": "AAST bladder injury\n沒破=>1\n腹膜外=>2,3 (<2cm)\n腹膜內=> 3,4 (<2cm)\nNeck/UO=>5\nTable 21\nBladder injury scale\nGrade* Injury type\nDescription of injury\nICD-9\nAIS-\n90\nHematoma\nContusion, intramural hematoma\nLaceration Partial thickness\n867.0/867.1 2\n3\nLaceration Extraperitoneal bladder wall laceration <2 cm\n867.0/867.1\n4\nLaceration Extraperitoneal (≥2cm) or intraperitoneal (≤2cm) bladder wall laceration\n867.0/867.14\nIV\nLaceration\nIntraperitoneal bladder wall laceration ≥2cm\nV\nLaceration\nIntraperitoneal or extrapertoneal bladder wall laceration extending into the bladder neck\nor ureteral orifice (trigone)\n*Advance one grade for multiple lesions up to grade lll\nFrom Moore et al. [2): with permission\n867.0/867.1 4\n867.0/867.14"
+            },
+            {
+              "slide_num": 61,
+              "text": [
+                "Bladder injury 概論",
+                "Bladder well protected in bony pelvis",
+                "原因分為trauma和iatrogenic",
+                "Trauma: 常見於trauma後pelvic fracture(83%-95%), 造成bladder的injury通常力道很強, 因此常常伴隨non-urological injuries。pelvic fracture只有5-10%骨頭會刺到膀胱",
+                "Iatrogenic: 常見泌尿科內視鏡手術或婦科hysterectomy/pelvic surgery",
+                "兩種type: intraperitoneal type(破到肚腹膜裡, 20%, 最易破的地方在dome)或extraperitoneal type(破到腹膜外, 80%)",
+                "Hx/PE: Suprapubic tenderness, gross hematuria, AUR, abdomen pain/fullness",
+                "Unrecognized bladder injuries: Acidosis, Azotemia(BUN/Cre上升), Fever/Sepsis, Peritonitis, Ileus, Urine ascites",
+                "Initial evaluation and management:",
+                "Catheterization →if hematuria or suspect bladder injury→ arrange retrograde cystography or (retrograde)CT cystography to confirm bladder injury",
+                "if not able to insert cath → retrograde urethrography (concomitant urethral injury ~10-29%) -> 進入urethral injury management"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss39.webp",
+              "ocr_text": "Bladder injury 概論\n•Bladder well protected in bony pelvis\n•原因分為trauma和iatrogenic\n•Trauma: 常見於trauma後pelvic fracture(83%-95%)，造成bladder的injury通常\n力道很強，因此常常伴隨non-urological injuries。pelvic fracture只有5-10%\n骨頭會剌到膀胱\n。latrogenic:常見泌尿科内視鏡手術或婦科hvsterectomv/pelvic surgery\n•兩種type：intraperitoneal type(破到肚腹膜裡，20%，最易破的地方在dome)或\nextraperitoneal type(破到腹膜外，80%)\n•Hx/PE: Suprapubic tenderness, gross hematuria, AUR, abdomen pain/fullness\n•Unrecognized bladder injuries: Acidosis, Azotemnia(BUN/Cre 上升), Fever/Sepsis,\nPeritonitis, Ileus, Urine ascites\n•nitial evaluation and management:\n•Catheterization sif hematuria or suspect bladder injury -> arrange retrograde\ncystography or (retrograde)CT cystography to confirm bladder injury\neif not able to insert cath  > retrograde urethrography (concomitant urethral\ninjury ~10-29%)-二進入urethral injury management"
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Retrograde cystography",
+                "X-ray: 膀胱攝影診斷膀胱破裂, 要灌到300ml或是病人受不了",
+                "A dense, flame-shaped collection of contrast material in the pelvis is characteristic of extraperitoneal extravasation",
+                "火焰狀的是Extraperitoneal",
+                "Intraperitoneal extravasation is identified when contrast material outlines loops of bowel and/or the lower lateral portion of the peritoneal cavity",
+                "可以看到腸子的外觀是intraperitoneal",
+                "Extraperitoneal",
+                "Intraperitoneal"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss40.webp",
+              "ocr_text": "Retrograde cystograph\n。Xray:膀胱撬影診斷膀胱破裂，要灌到300m\n或是病人受不了\n•A dense, flame-shaped collection of\ncontrast material in the pelvis is\ncharacteristic of extraperitoneal\nextravasation\n•火焰狀的是Extraperitoneal\n•Intraperitoneal extravasation is identified\nwhen contrast material outlines loops of\nbowel and/or the lower lateral portion of\nthe peritoneal cavity\n•可以看到腸子的外觀是\nintraperitoneal\nExtraperitoneal\nIntraperitoneal\nL\nR"
+            },
+            {
+              "slide_num": 63,
+              "text": [
+                "(retrograde) CT cystography",
+                "做法: 先放尿管, 灌顯影劑300-350cc, 2-4% 1:6 with N/S(antegrade IV contrast濃度不夠), 再去做CT",
+                "可以更清楚區辨extraperitoneal或intraperitoneal type",
+                "Extraperitoneal",
+                "Intraperitoneal"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss41.webp",
+              "ocr_text": "(retrograde) CT cystography\n•做法：先放尿管，灌顯影劑300-350cc, 2\n4% 1:6 with N/S(antegrade IV contrast濃\n度不夠)，再去做CT\n•可以更清楚區辨extraperitoneal或\nintraperitoneal type\nky 120\n230\nFigure 101-13. g\nIntraperitoneal\ncontrast materia\nperitoneal bladder rupture.\nExtraperitoneal\ndemonstrates\nstent with intra-"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "Final management after bladder injury confirmed",
+                "Immediate bladder repair,",
+                "以下為indication(Campbell):",
+                "Trauma造成 intraperitoneal injury",
+                "penetrating injury",
+                "合併vaginal/rectal injury",
+                "bladder neck injury",
+                "血塊洗不出來",
+                "open pelvic fracture",
+                "bone刺進去",
+                "pelvic fracture且骨科要做ORIF",
+                "Iatrogenic nonurologic injury",
+                "生命徵象穩定，其他科要開刀進去",
+                "抗生素只要3天",
+                "不需要插cystostomy(沒幫助)",
+                "Conservative(放Foley觀察7-14天):",
+                "不含上述indication的情況, 例如TURBT沒有傷到bladder neck(不管intra還是extra)",
+                "要做cystography",
+                "抗生素給7天以上",
+                "if failed -> bladder repair",
+                "Penetrating wound",
+                "Scrotum, Bladder 需open",
+                "腎臟不一定"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss42.webp",
+              "ocr_text": "Final management after bladder injury confirmed\n• lmmediate bladder repair,\n。以下為indication(Campbell)：\n•Trauma造成 intraperitoneal injury\npenetrating injury\n•合併vaginal/rectal injury\nbladder neck injury\n•血塊洗不出來\nopen pelvic tracture\n• bone刺進去\nPenetrating wound\nScrotum, Bladder 需open\n腎臟不一定\n• pelvic fracture且骨科要做ORIF\nlatrogenic nonurologic iniury\n•生命徵象穩定，其他科要開刀進去\n。抗生素只要3天\n。不需要插cvstostomy(沒幫助）\n• Conservative（放Foley觀察7-14天）：\n。不含上述indication的情況，例如TURBT沒有傷到oladder neck(不管intra還是\nextra)\n。要做cystography\n。抗生素給7天以上\no if failed -> bladder repair"
+            },
+            {
+              "slide_num": 65,
+              "text": [
+                "什麼時候要進去補 (重要)"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh65.webp",
+              "ocr_text": "什麼時候要進去補（重要）\nKEY POINTS: INDICATIONS FOR IMMEDIATE REPAIR\nOF BLADDER INJURY\nIntraperitoneal injury from external trauma\nPenetrating or iatrogenic nonurologic injury\nInadequate bladder drainage or clots in urine\nBladder neck injury\n。 Rectal or vaginal injury\nOpen pelvic fracture\n• Pelvic fracture requiring open reduction and internal\nfixation\nSelected stable patients undergoing laparotomy for other\nreasons\n• Bone fragments projecting into bladder"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "尿道外傷：分類（Goldman/AAST）與評估",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 66,
+              "text": [
+                "Urethral injury",
+                "Male posterior urethral injury",
+                "Male anterior urethral injury",
+                "Female urethral injury"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss43.webp",
+              "ocr_text": "Urethral injury\nMale posterior urethral injury\nMale anterior urethral iniury\nFemale urethral injury\nANTERIOR\nURETHRA\nFLU\nBLADDER\nPOSTERIOR\nURETHRA"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "Goldman classification of urethral injury"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss44.webp",
+              "ocr_text": "Goldman classification of urethral injury\nBladder.\nPubis\nzenile urethra\nProstate\nProstatic urethra\nUrogenital dia phragm\nNormal\noldman Type l\nRupture of the puboprostatic ligaments and surrounding periprostatic\nhematoma stretch the membranous urethra without rupture\nGoldman Type ll\nPartial or complete rupture of the membranous urethra above\nthe urogenital diaphragm\nGoldman Type ll\nPartial or complete rupture of the membranous urethra with\ndisruption of the urogenital diaphragm\nGoldman Type NV\nBladder neck injury with extension into the urethra\nGoldman TypeV\nPure anterior urethral injury"
+            },
+            {
+              "slide_num": 68,
+              "text": [
+                "AAST urethral injury",
+                "partial disruption(膀胱還有顯影)",
+                "complete disruption(膀胱沒有顯影)"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss45.webp",
+              "ocr_text": "AAST urethral injury\nGrade Injury type\nContusion\nStretch injury\nPartial\ndisruption\nComplete\ndisruption\nV\nComplete\ndisruption\nDescription of injury\nBlood at urethral meatus;\nurethrography\nElongation of urethra without\nextravasation on urethrography\nExtravasation of urethrography\ncontrast at injury site with\nvisualization in the bladder\nExtravasation of urethrography\ncontrast at injury site without\nvisualization in the bladder;\n<2 cm of urethra separation\nComplete transaction with >2cm\nurethral separation or extension\ninto the prostate or vagina\npartial\ndisruption\n膀胱還有\n顯影\ncomplete\ndisruption\n膀胱沒有\n顯影）"
+            },
+            {
+              "slide_num": 69,
+              "text": [
+                "Urethral injury evaluation",
+                "Hx/PE: trauma mechanism, posterior urethral injury triad(Blood at the urethral meatus, Inability to void, Pelvic fracture with pelvic hematoma), bulbar urethral injury triad(前兩個跟posteior injury一樣, pelvic hematoma替換成perineal hematoma/Butterfly hematoma)",
+                "男生做Retrograde Urethrography(男生的gold standard) -> 分辨是posterior還是anterior urethral injury, partial or total disruption",
+                "A small-bore (16-Fr) urethral catheter is placed 1 cm into the fossa navicularis, and the balloon is filled with 1 cm of water",
+                "Oblique or lateral decubitus position",
+                "Under fluorography when it is available",
+                "25 mL of contrast medium is injected gently",
+                "女生做Urethroscopy(女生的gold standard): 無法診斷才try retrograde urethrography",
+                "Ultrasound: ultrasound imaging of urethral strictures is more accurate than retrograde urethrography"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss46.webp",
+              "ocr_text": "Urethral injury evaluation\n•Hx/PE: trauma mechanism, posterior urethral injury triad(Blood at the urethral\nmeatus, Inability to void, Pelvic fracture with pelvic hematoma), bulbar urethral\ninjury triad(前兩個跟posteior injury一樣, pelvic hematoma替換成perineal\nhematoma/Butterfly hematoma)\n•男生做Retrograde Urethrography(男生的gold standard)-＞分辦是posterior還是\nanterior urethral injury, partial or total disruption\n• A small-bore (16-Fr) urethral catheter is placed 1 cm into the fossa navicularis,\nand the balloon is filled with 1 cm of water\n•Oblique or lateral decubitus position\n•Under fluorography when it is available\n•25 ml of contrast medium is injected gently\n•女生做Urethroscopv(女生的gold standard)：無法診斷才try retrograde\nurethrography\noUtrasound: ultrasound imaging of urethral strictures is more accurate than\nretrograde urethrography"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "男性 Posterior Urethral Injury",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 70,
+              "text": [
+                "Male Posterior Urethral Injury 概論",
+                "Cause: Blunt(最多), Penetrating, Iatrogenic",
+                "Blunt trauma造成posterior urethral injury常伴隨pelvic fracture和multi-system trauma",
+                "因為posterior urethra由urogenital diaphragm和puboprostatic ligaments固定在pubic bone後面, 在發生pelvic fracture時prostatomembranous junction比較不容易斷, bulbomembranous junction比較容易斷",
+                "S/S triad: Blood at the urethral meatus, Inability to void (or distended bladder), Pelvic fracture with pelvic hematoma",
+                "Other s/s: Gross haematuria(if可自解), Scrotal/penile haematoma,  Difficulty in passing Foley's catheter, ‘High riding’ or non-palpable prostate",
+                "Retrograde urethrography finding: urethral disruption/obstruction, high riding prostate(posterior)",
+                "Complications: ED (50%最常見, 傷到NVB), Urethral stricture (5-15%), incontinence (<4%)",
+                "Posterior urethral injury with extravasation",
+                "Goldman type II",
+                "AAST type III",
+                "Posterior urethral elongation with stretch injury, no extravasation",
+                "Goldman type I",
+                "AAST type II"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss47.webp",
+              "ocr_text": "Male Posterior Urethral lnjury 概論\n•cause: Blunt(最多)， Penetrating, latrogenic\n•Blunt trauma造成posterior urethral injury常伴\n隨pelvic fracture 和multi-system trauma\n•因為posterior urethra由urogenital\ndiaphragm 和puboprostatic ligaments固定在\npubic bone後面，在發生pelvic fracture時\nprostatomembranous junction比較不容易\n斷,bulbomembranous junction比較容易斷\n•S/S triad: Blood at the urethral meatus, Inability\nto void (or distended bladder), Pelvic fracture\nwith pelvic hematoma\nOther s/s: Gross haematuria(f可自解），\nScrotal/ penile haematoma, Difficulty in passing\nFoley's catheter, 'High riding’ or non-palpable\nprostate\n•Retrograde urethrography finding: urethral\ndisruption/obstruction, high riding\nprostate(posterior)\n。Complications: ED （50%最常見，傷到NVB)，\nUrethral stricture (5-15%), incontinence (≤4%)\nPosterior urethral\nelongation with stretch\ninjury, no extravasation\nGoldman type\nIAAST type l\nPosterior urethral injury\nwith extravasation\nGoldman type ll\nAAST type Ill"
+            },
+            {
+              "slide_num": 71,
+              "text": [
+                "Male posterior urethral injury management",
+                "(EAU 2022)",
+                "已經知道posterior injury了就不要盲放, Retrograde走尿道鏡放guidewire再放Foley, +/- 從suprapubic route antegrade看來輔助, Foley成功放過去的話放3週",
+                "Partial injury如果一開始就能放過Foley能降低stricture rate(44% vs 89%), 也能縮短日後stricture段的長度",
+                "放完Foley不要traction, 之後容易incontinence",
+                "Complete injury不建議兩天內就去urethroplasty, 因為組織會很腫且有很多hematoma看會不清楚, 另外就是可能會大出血",
+                "DVIU(Direct visual internal urethrotomy), EAU只建議切開一次, 還是stricture就要urethroplasty",
+                "timing: 2天後到6週",
+                "Foley成功放過去的話放6週",
+                "timing: 2天後到6週",
+                "Triad: Blood at the urethral meatus, Inability to void, Pelvic fracture with pelvic hematoma",
+                "Suspect post. urethral injury"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss48.webp",
+              "ocr_text": "Male posterior\nurethral injury\nmanagement\n(EAU 2022)\nSuspect post. urethral iniury\nTriad: Blood at the urethral meatus, Inability\nto void, Pelvic fracture with pelvic hematoma\nAssess haemodynamic status\nUnstable\nResuscitation plus\nurinary diversion\nI Urethral catheter\n1attempt\nFailure\nSuprapubic\ncatheter\n•Partial injury如果一開始就能\n放過Foley能降低stricture\nrate(44% v$ 89%)，也能縮短日\n後stricture段的長度\nPartial injury\n已經知道posterior injury Early\n了就不要盲放，\nRetrograde走尿道鏡放\nguidewire再放Foley, +/-\n從suprapubic route\nantegrade 看來輔助，Foley\n成功放過去的話放3週\nendoscopic\nre-alignment\nFailure\n•放完Foley不要traction，之後\n容易incontinence\nFollow up\n。complete injury不建議兩天内\n就去urethroplasty，因為組織\n會很腫且有很多hematoma看\nYes\n會不清楚，另外就是可能會大\n出血\nDVIU(Direct visual internal\nurethrotomy)， EAU只建議切開一次vU\n，還是stricture就要urethroplasty\nStricture short, flimsy &\nnon-obliterative\nNo\nFailure\nStable\nPerform RuG/\nurethroscopy\nComplete injury\nInjury to bladderineck and/or\nLprostate\nSuprapubic\ncatheter\nNo\nYes\nSurgery for\nassociated\niniuries\nEarlv\ntiming:2天後到6退\nYes\nNo\nFollow-up\nEarly\nendoscopic\nre-alignment Failure\nFoley成功\n放過去的話\n放6週\nSuprapubic\ncatheter\nAssess 2 days-6 weeks\nshort distraction defect\nsoft perineum\nlithotomy positon possible\nNo\nYes\nDelayed\nurethroplasty\n(>3 months)\nEarly\ntimaing: 2笑後劉6週"
+            },
+            {
+              "slide_num": 72,
+              "text": [
+                "Deferred posterior urethroplasty",
+                "Timing: >3 months, 此時hematoma大部分已吸收, 組織stabilised, prostate的位置降下來了, 腳能打開成lithotomy的姿勢",
+                "首選：Perineal anastomotic repair +/- combined abdominoperineal approach if concomitant bladder neck injury or recto-urethral fistula",
+                "成功率: 86%",
+                "Possible complication: Erectile dysfunction(<7%, 要裝penile prothesis臉年後再考慮), incontinence(主因為bladder neck incompetence)"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss49.webp",
+              "ocr_text": "Deferred posterior urethroplasty\n•Timing: >3months，此時hematoma大部\n分巳吸收，組織stabilised,prostate的位\n置降下來了，腳能打開成lithotomy的姿\n•首選：Perineal anastomotic repair +/-\ncombined abdominoperineal approach if\nconcomitant bladder neck injury or recto-\nurethral fistula\n•成功率：86%\n•Possible complication: Erectile\ndysfunction(<7%，要裝penile prothesis臉\n年後再考慮),incontinence(主因為\nbladder neck incompetence)\nD"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "男性 Anterior Urethral Injury & 女性尿道外傷",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 73,
+              "text": [
+                "Male Anterior Urethral Injury 概論",
+                "Cause: Blunt(Straddle injury最多), Penetrating(gunshot), Penile fracture, Iatrogenic(Foley trauma最多)",
+                "Straddle injury:",
+                "The primary morbidity of straddle injury is urethral stricture",
+                "最常造成Bulbar受傷",
+                "S/S triad: Blood at the urethral meatus, Inability to void (or distended bladder), perineal hematoma/Butterfly hematoma(if Bucks fascia破)",
+                "Other s/s: Gross haematuria(if可自解),  Difficulty in passing Foley's catheter",
+                "Retrograde urethrography finding: anterior urethral disruption/obstruction",
+                "Complications: Urethral stricture",
+                "Butterfly hematoma",
+                "Bulbar urethral injury with extravasation",
+                "Goldman type V",
+                "AAST type III"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss50.webp",
+              "ocr_text": "Male Anterior Urethral Injury 概論\neCause: Blunt(Straddle injury最多），\nPenetrating(gunshot), Penile fracture,\nlatrogenic(Foley trauma最多）\n•Straddle iniury:\n•The primary morbidity of straddle injury is\nurethral stricture\n•最常造成Bulbar受傷\n•S/S triad: Blood at the urethral meatus, Inability to\nvoid (or distended bladder), perineal\nhematoma/Butterfly hematoma(if Bucks fascia破\n•Other s/s: Gross haematuria(i可自解)，Difficulty\nin passing Foley's catheter\n•Retrograde urethrography finding: anterior\nurethral disruption/obstruction\n•Complications: Urethral stricture\nButterfly hematome\nBulbar urethral injury\nwith extravasation\nGoldman type V\nAAST type l"
+            },
+            {
+              "slide_num": 74,
+              "text": [
+                "Male anterior urethral injury management",
+                "(EAU 2022+EU 2010 paper+Med J Armed Forces India 2021 paper)",
+                "Blunt injury如果是complete disruption可以選擇immediate repair或先放catheter/diversion, 如果spongiosum很腫或hematoma則建議後者, 兩者outcome差不多, 但前者可以讓病人提早自己解尿",
+                "Small lacerations: simple closure Complete ruptures without extensive tissue loss: anastomotic repair",
+                "Complete ruptures with extensive tissue loss or bite injury: staged repair",
+                "Urinary diversion with urethral (endoscopic realignment) or suprapubic catheter",
+                "Suspect ant. urethral injury",
+                "Foley放2-4週",
+                "success",
+                "failed",
+                "Retrograde urethrography",
+                "Urinary diversion with urethral or suprapubic catheter(2-3 weeks)",
+                "Follow up(symptoms/UFR)",
+                "No stricture",
+                "方法同上"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss51.webp",
+              "ocr_text": "Suspect ant. urethraliniury\nMale anterior\nurethral injury\nFoley放2-4週\nmanagement\n(EAU 2022+EU 2010\npaper+Med J Armed Forces\nIndia 2021 paper)\nsuccess\nUrethral catheter\n1 attempt\nV\nlatrogenic\nPartial\nRetrograde urethrography\nfailed\nBlunt\nPenetrating\nV\nStable\nPenile fracture\nComplete\nNo\nYes\n•Blunt injury如果是\ncomplete disruption可\n以選擇immediate\nrepair或先放\ncatheter/diversion， 如\n果spongiosum很腫或\nhematoma則建議後\n者,兩者outcome差不\n多，但前者可以讓病\n人提早自己解尿\nUrinary diversion with urethral\n(endoscopic realignment) or suprapubic\ncatheter\nPartial 1-2 weeks\nComplete 3 weeks\nImmediate repair\nSmall lacerations: simple closure\nComplete ruptures without extensive\ntissue loss: anastomotic repair\nComplete ruptures with extensive\ntissue loss or bite injury: staged repair\nUrinary diversion with urethral or suprapubic\ncatheter (2-3 weeks)\nUrethrogram\nNo stricture\nFollow up(symptoms/UFR)\nif stricture is\nshort (< 1 cm) and flimsy\ni stricture is long or\ndenser\nif failure\nEndoscopic optical incision\n方法同上\nFormal urethral reconstruction"
+            },
+            {
+              "slide_num": 75,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch12_trauma/render/sh75.webp",
+              "ocr_text": "KEY POINTS: LOWER GENITOURINARY\nTRACT INJURIES\n• Although most bladder injuries are associated with pelvic\nfractures, only 10% of patients with pelvic fracture have\nbladder injuries.\n• Intraperitoneal bladder injury from external trauma requires\nurgent operative repair.\n• Prompt suprapubic catheter drainage is recommended for\ninitial management of pelvic fracture urethral disruption\ninjury; although primary realignment may be performed in\nstable patients, close follow-up is essential because of the\nhigh rate of stricture formation.\n• Posterior urethroplasty by excision and primary anastomosis\nis the treatment of choice for urethral distraction injuries,\nalthough a single attempt at endoscopic treatment may be\nreasonable for short stenoses."
+            },
+            {
+              "slide_num": 76,
+              "text": [
+                "Female Urethral Injury 概論",
+                "Cause: Blunt(pelvic fracture, 但比男性少, 因為有vagina等軟組織在附近), Penetrating(gunshot), Iatrogenic(Foley trauma, birth related)",
+                "S/S: Vaginal bleeding or laceration (80%), Urethral bleeding, Hematuria, Labial swelling, Inability to void",
+                "Urethroscopy findings: injury at bladder neck or urethra",
+                "Complications: Urethral stricture"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss52.webp",
+              "ocr_text": "Female Urethral Injury概論\n。Cause: Blunt(pelvic fracture， 但比男性少，因為有vagina等軟組織在附近)，\nPenetrating(gunshot), latrogenic(Foley trauma, birth related)\n•S/S: Vaginal bleeding or laceration (80%), Urethral bleeding, Hematuria,\nLabial swelling, Inability to void\n•Urethroscopy findings: injury at bladder neck or urethra\n•Complications: Urethral stricture\nFetal head\nM. bulbocavernosus\nM. ischiocavernosus\nM. transversus perinei\nsuperticialis et profundus\nM. levator ani -\nM. sphincter ani\nexterus"
+            },
+            {
+              "slide_num": 77,
+              "text": [
+                "Female urethra injury management",
+                "(EAU 2022, EU 2010 paper)",
+                "Early repair (<7 days): Complication rate is the lowest, preferred once the patient is haemodynamically stable",
+                "Delayed repair (>7 days): often requires complex abdominal or combined abdominal-vaginal reconstruction, urinary incontinence和vaginal stenosis的機會都比early repair高",
+                "Early repair, <7 days",
+                ">7 days"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch12_trauma/render/ss53.webp",
+              "ocr_text": "Female urethra\ninjury management\n(EAU 2022, EU 2010 paper)\nsuspect urethral injury\nUrethroscopy\nhniured bladder neck or urethra\nNo lesions of bladder-urethra\nEarly repair <7 days):\nComplication rate is the\nlowest, preferred once the\npatient is\nhaemodynamically stable\npatlent unstable\npatient stable\nEvaluatlon of upper\nurinary tract\nSuprapubic cystostomy\n• Delayed repair (>7days)：\notten requires complex\nabdominal or combined\nabdominal-vaginal\nreconstruction, urinary\nincontinence和vaginal\nstenosis的機會都比early\nrepair高\nDolayed primary roconstruction\nEarly repair, <7 days\n>7 days\ninlury of bladder neck ar\nproximal uretha\ninlury of distal urethra\nRotropublc ropair of\nurothra, bladdor and\npavic floar\nTransvaginal ropalr of\nurothra and potvlc floor"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

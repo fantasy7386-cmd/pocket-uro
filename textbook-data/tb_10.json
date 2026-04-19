@@ -1,0 +1,1902 @@
+{
+  "id": "tb_10",
+  "number": "X",
+  "title": "感染",
+  "icon": "🦠",
+  "sections": [
+    {
+      "id": "tb_10_01",
+      "title": "感染",
+      "source_file": "10 感染(2022).pptx",
+      "total_slides": 101,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "UTI 總論、分類與治療（EAU）",
+          "slide_count": 11,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "常見症狀D/D",
+                "Bladder/suprapubic pain:",
+                "UTI/cystitis",
+                "Bladder cancer",
+                "Interstitial cystitis/bladder pain syndrome",
+                "BOO causing urine retention",
+                "CPPS",
+                "Urethral pain/dysuria/penis pain:",
+                "UTI/cystitis/acute bacterial prostatitis/chronic bacterial prostatitis",
+                "Urethritis/STD",
+                "Penile cancer/BXO",
+                "CPPS/urethral sphincter spasm/high pelvic muscle tone",
+                "Perineal pain",
+                "UTI/chronic bacterial prostatitis",
+                "Perianal abscess/Fournier gangrene",
+                "CPPS/urethral sphincter spasm/high pelvic muscle tone"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "常見症狀D/D\n•Bladder/suprapubic pain:\n• UTI/cystitis\n• Bladder cancer\n• Interstitial cystitis/bladder pain syndrome\n• BOO causing urine retention\n•CPPS\n• Urethral pain/ dysuria/penis pain:\n• UTI/cystitis/acute bacterial prostatitis/chronic bacterial prostatitis\n• Urethritis/STD\n• Penile cancer/Bxo\n• CPPS/urethral sphincter spasm/high pelvic muscle tone\n•Perineal pain\n• UT/chronic bacterial prostatitis\n•Perianal abscess/Fournier gangrene\n• CPPS/urethral sphincter spasm/high pelvic muscle tone"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "UTI",
+                "Uncomplicated UTI\u000bComplicated UTI",
+                "Catheter related UTI",
+                "Asymtomatic bacteruira",
+                "Recurrent UTI",
+                "Candidly UTI",
+                "Urosepsis/septic shock",
+                "UTI in pregnancy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "UI\nUncomplicated UTI\nComplicated UTI\nCatheter related UTI\nAsymtomatic bacteruira\nRecurrent UTl\nCandidly UTI\nUrosepsis/ septic shock\nUTlin pregnancy"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "Pyuria/bacteriuria",
+                "Pyuria",
+                "The presence of white blood cells (WBCs) in the urine",
+                "Pyuria without bacteriuria",
+                "Cause: 未治療完全的UTI, tuberculosis/Chlamydia, stones, foreign body or cancer",
+                "Bacteriuria without pyuria",
+                "Cause: Bacterial colonization without infection of the urinary tract"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Pyuria/bacteriuria\n•Pyuria\n•The presence of white blood cells (WBCs) in the urine\n•Pyuria without bacteriuria\nCause：未治療完全的UT, tuberculosis/Chlamydia, stones, foreign\nbody or cancer\n•Bacteriuria without pyuria\nCause: Bacterial colonization without infection of the urinary tract"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Uncomplicated / Complicated UTI definition",
+                "Uncomplicated UTI",
+                "Women with functionally and structurally normal GU tract",
+                "沒懷孕，停經前",
+                "可以是發燒的APN, Cystitis",
+                "最主要病原體: P-piliated E.coli, KP, Proteus, Staphylococcus saprophyticus",
+                "Complicated UTI",
+                "最主要病原體: E.coli, Enterococcus, KP, Proteus, Pseudomonas, Serratia spp",
+                "小孩",
+                "@小於一歲男生多, 大於一歲女生多",
+                "@主要是KP, Enterobacter, 菌種不同於成人"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "Uncomplicated / Complicated UTI definition\n• Uncomplicated UTI\n• Women with functionally and structurally normal GU tract\n•沒懷孕，停經前\n•可以是發燒的APN, Cystitis\n•最主要病原體：P-piliated E.coli, KP, Proteus, Staphylococcus saprophyticus\n•Complicated UTI\n•最主要病原體：E.coli, Enterococcus, KP, Proteus, Pseudomonas, Serratia\nspp\n小孩\n@小於一歲男生多，大於一歲女生多\n@主要是KP,Enterobacter，菌種不同於成人\nTable 5: Common factors associated with complicated UTls [173-176]\nObstruction at any site in the urinary tract\nUTlin males\nForeign body\nPregnancy\nIncomplete voiding\nDiabetes mellitus\nI Vesicoureteral reflux\nImmunosuppression\nRecent history of instrumentation\nHealthcare-associated infections\nlsolated ESBL-producing organisms\nI 'solated multi-drug resistant organisms\nChildhood urinary tract infection Symptoms for more than 7 days at presentation"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Uncomplicated UTI survey",
+                "Hx: 有無complicating factor, cystitis相關(dysuria, urgency/frequency, hematuria, suprapubic pain), APN相關(fever/chills, nausea/vomiting, flank pain)",
+                "@Cystitis也可能fever",
+                "PE: suprapubic tenderness, flank knocking tenderness",
+                "Lab: U/A(pyuria)",
+                "+/- U/C(if懷疑APN, Women with atypical symptoms)",
+                "+/- CBC/DC/生化/Blood culture (if明顯systemic症狀如高燒)",
+                "Image:  +/- renal echo/KUB/A+P CTU(if APN高燒, 特殊細菌如TB/fungus/Proteus, renal stone hx, Papillary necrosis的高風險族群如止痛藥濫用者或sickle cell disease)",
+                "U/C criteria for diagnosing UTI(EAU 2011):",
+                "Uncomplicated cystitis: ≥103",
+                "Uncomplicated APN: ≥104",
+                "Recurrent UTI: <103",
+                "＠APN的echo finding: wedge shape hypoechogenicity, dopplar看到hypoperfusion",
+                "＠APN的CT finding: arterial phase有wedge shape hypoattenuatted area, perirenal fat stranding(edema), enlarged kidney"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Uncomplicated UTI survey\nHx:有無complicating factor, cystitis相關(dysuria, urgencv/frequency,\nhematuria, suprapubic pain), APN相關(fever/chills, nausea/vomitins,\nflank pain)\n@Cystitis也可能fever\n•PE: suprapubic tenderness, flank knocking tenderness\n• Lab: U/A(pyuria)\n+/-U/C(if懷疑APN, women with atypical symptoms)\n+/-CBC/DC/生化/Blood culture (i明顯systemic症狀如高燒）\nimage: +/-renal echo/KUB/A+P CTU(f APN高燒，特殊細菌如\nTB/fungus/Proteus, renal stone hx, Papillary necrosis的高風險族群如止痛藥\n濫用者或sickle cell disease)\nIU/C criteria for diagnosing UTI(EAU 2011):\n•Uncomplicated cystitis: ≥103\n• Uncomplicated APN: >104\n• Recurrent UT: <103\n@APN的echo finding: wedge shape\nhypoechogenicity, dopplar看到\nhypoperfusion\n@APN的CT finding: arterial phase有wedge\nshape hypoattenuatted area, perirenal fat\nStranding(edema), enlarged kidney"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Complicating UTI survey",
+                "Hx/PE: 是什麼complicating factor, 男生UTI要r/o acute prostatitis/epididymitis",
+                "Lab: U/A + U/C",
+                "+/- CBC/DC/生化/PSA(prostatitis)/Blood culture (if明顯systemic症狀如高燒)",
+                "Image: renal echo",
+                "bladder echo/PVR",
+                "KUB",
+                "+/- A+P CTU(if hydro or other suspected defect)",
+                "+/- scrotal echo(if scrotal pain, to r/o epididymitis)",
+                "Special exam:  +/- VUDS(VUR, neurogenic bladder)",
+                "+/- cystoscopy(r/o bladder cancer and other defect)",
+                "U/C criteria for diagnosing UTI(EAU 2011):",
+                "Complicated UTI in woman: ≥105",
+                "Complicated UTI in man: ≥104"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "Complicating UTI survey\n• Hx/PE：是什麼complicating tactor，男生UTI要r/o acute\nprostatitis/epididymitis\n• Lab:UA+U/C\n+/-CBC/DC/生化/PSA(prostatitis)/Blood culture (if明顯systemic症狀如\n高燒）\n• Image:renal echo\nbladder echo/PVR\nKUB\n+/- A+P CTU(if hydro or other suspected defect)\n+/-scrotal echo(if scrotal pain, to r/o epididymitis)\n•special exam: +/- VUDS(VUR, neurogenic bladder)\n+/- cystoscopy(r/o bladder cancer and other defect)\nu/C criteria for diagnosing UTI(EAU 2011):\n• Complicated UTIin woman: ≥105\n• Complicated UTl in man: ≥104"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Uncomplicated cystitis treatment(EAU)",
+                "懷孕不能用Baktar, grade C"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "Uncomplicated cystitis treatment(EAU)\nTable 1: Suggested regimens for antimicrobial therapy in uncomplicated cystitis\nAntimicrobial\nDaily dose\nDuration of\nComments\ntherapy\nFirst-line women\nFosfomycin trometamol\nNitrofurantoin macrocrystal\n3g SD\n50-100 mg tour\n1 day\n5 days\ntimes a day\nNitrofurantoin monohydrate/  100 mg b.i.d\n5 days\nmacrocrystals\nNitrofurantoin macrocrystal\n100mg b.i.d\n5 days\nprolonged release\nPivmecillinam\n400mg t.i.d\n13-5 days\nAlternatives\nCephalosporins\n1500mg b.i.d\n3 days\n(e.g. cefadroxil)\nIf the local resistance pattern for E. coli is < 20%\nTrimethoprim\n200mg b.i.d\n5 days\nTrimethoprim-\n160/800 mg b.i.d 3 days\nsulfamethoxazole\n懷孕不能用Baktar, grade C\nRecommended only in women with\nuncomplicated cystitis.\nOr comparable\nNot in the first trimenon of pregnancy\nNot in the last trimenon of pregnancy"
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "Uncomplicated Pyelonephritis Treatment(EAU)",
+                "Uncomplicated pyelonephritis可以在家口服anti或住院打anti，EAU只給出口服anti的天數(5-14 days)，沒有給出IV anti的天數",
+                "第三代cepha",
+                "@Uncomplicated APN用適當的abx治療三天沒效要做A+P CT",
+                "最常見三個原因: 1.Complicated APN 2.Pyonephrosis 3.Perinephric/Renal abscess"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "Uncomplicated\nPyelonephritis\nTreatment(EAU\n〕\nUncomplicated\npvelonephritis可以在\n家口服anti或住院打\nanti , EAU只給出口\n服anti的天數(5-14\ndavs)，沒有給出I\nanti的天數\n@Uncomplicated APN用適\n當的abx治療三天沒效要做\nAtP CT\n最常見三個原因：\n1.Complicated APN\n2.Pyonephrosis\n3.Perinephric/Renal abscess\nTable 3: Suggested regimens for empirical oral antimicrobial therapy in uncomplicated pyelonephritis\nAntimicrobial\nCiprofloxacin\nLevofloxacin\nTrimethoprim\nsulfamethoxazol\nCefpodoxime 第三代ceoha\nCeftibuten\nb.i.d = twice daiy; q.a = every day.\nDaily dose\nDuration of\nComments\ntherapy\n500-750 mg b.i.d 7 days\n1750 mg g.d\n5 days\n1 160/800mg b.i.d 14 days\n200mg b.i.d\n400 mg g.d\n10 days\n110 days\nFluoroquinolone resistance should be less\nthan 10%.\nIf such agents are used empirically, an initial\nintravenous dose of a long-acting parenteral\nantimicrobial (e.g. ceftriaxone) should be\nadministered.\nTable 4: Suggested regimens for empirical parenteral antimicrobial therapy in uncomplicated\npyelonephritis\nAntimicrobials\nFirst-line treatment\nCiprofloxacin\nLevofloxacin\nCefotaxime\nDaily dose\nComments\n400mg b.i.d\n750mgg.d\n2gt.i.d\nCeftriaxone\nSecond-line treatment\nCefepime\nPiperacillin/tazobactam\nGentamicin\nAmikacin\nLast-line alternatives\nImipenem/cilastatin\nMeropenem\nCeftolozane/tazobactam\nCeftazidime/avibactam\nCefiderocol\nMeropenem-vaborbactam\nPlazomicin\n11-2g9.d\nNot studied as monotherapy in acute uncomplicated\npyelonephritis.\nLower dose studied, but higher dose recommended.\n1-2gb.i.d\n2.5-4.5g t..d\n5mg/kg g.d\n115 mg/kg g.d\nLower dose studied, but higher dose recommended.\nNot studied as monotherapy in acute uncomplicated\npyelonephritis.\n0.5g t..d\n11gt.i.d\n1.5g t.i.d\n2.5 g t.i.d\n2g t.i.d\n2gt.i.d\n15 mg/kg o.d\nb.i.d = twice daily; t.i.d = three times daily; g.d = every day; o.d = once daily.\nConsider only in patients with early culture results\nindicating the presence of multi-drug resistant organisms."
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Complicated UTI treatment(EAU)",
+                "Treatment principle: treat underlying factor first",
+                "Abx(EAU建議的empirical regimen)",
+                "amoxicillin plus an aminoglycoside;",
+                "a second generation cephalosporin plus an aminoglycoside;",
+                "a third generation cephalosporin",
+                "(不建議quinolone類因為抗藥性)",
+                "治療天數(EAU): 7-14天(男生不能排除prostatitis就要14天)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Complicated UTI treatment(EAU)\n• Treatment principle: treat underlying factor first\n• Abx(EAU建議的empirical regimen)\namoxicillin plus an aminoglycoside;\na second generation cephalosporin plus an aminoglycoside;\na third generation cephalosporin\n（不建議quinolone類因為抗藥性）\n••治療天數(EAU)：7-14天（男生不能排除prostatitis就要14天）"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Catheter-related UTI(CAUTI) (EAU)",
+                "1.定義：有尿管的期間或48小時內被插過尿管(包含單次導尿, urethral catheter, suprapubic catheter)引起的UTI, 要>103 CFU(EAU), 且有s/s( fever, suprapubic or costovertebral angle tenderness, SIRS)",
+                "2.尿管放越久風險越高",
+                "3.通常是多種細菌且有多重抗藥性",
+                "4.尿出現沈澱物或變濁無法區辨catheter related UTI或ABU(asymtomatic UTI)",
+                "5.pyuria的多寡也無法區辨catheter related UTI或ABU(asymtomatic UTI)",
+                "=>Treatment原則：",
+                "要確定符合Catheter-related UTI(沒症狀不治)",
+                "要移除或更換尿管",
+                "要使用anti前先留U/C，用已換新的Foley留的尿來送",
+                "=>anti選擇：同complicated UTI",
+                "=>anti使用天數：3-14天(如果delayed response就14天）"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Catheter-related UTI(CAUTI) (EAU)\n1.定義：有尿管的期間或48小時內被插過尿管(包含單次導尿，urethral\ncatheter, suprapubic catheter)引1起的UT!，要>103CFU(EAU)，且有s/s(\nfever, suprapubic or costovertebral angle tenderness, SIRS)\n2.尿管放越久風險越高\n3.通常是多種細菌且有多重抗藥性\n4.尿出現沈澱物或變濁無法區辣catheter related UT1或\nABU(asymtomatic UTI)\n5.pvuria的多寡也無法區辨catheter related UT1或ABU (asymtomatic UTI)\n=>Treatment原則：\n•要確定符合Catheter-related UT沒症狀不治）\n•要移除或更換尿管\n•要使用anti前先留U/C，用己換新的Foley留的尿來送\n=>anti選擇：同complicated UTI\nEanti使用天數：3-14天(如果delaved response就14天）"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "ABU(asymptomatic bacteriuria)",
+                "定義：bacterial growth ≥ 105 cfu/mL in two consecutive samples in women and in one single sample in men",
+                "@臨床上asymptomatic pyuria就會預設可能有ABU",
+                "男生有ABU要做DRE",
+                "不用routine做upper tract imaging/cystoscopy(除非culture 長proteus)",
+                "ABU確定需要abx的情況: 懷孕(EAU: 使用2-7天), 將進行侵襲性泌尿道手術(EAU: 術前single dose或3-5 days沒有差異)",
+                "ABU可能需要abx的情況: immunocompromised(EAU: case by case)",
+                "ABU不需要被治療的情況：recurrent UTI, 停經女性, 機構老人, 換腎後, 有尿管/換尿管、停經前婦女、糖尿病女性、脊髓損傷患者、膿尿(pyuria)合併無症狀菌尿患者。"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "ABU(asymptomatic bacteriuria)\n•定義：bacterial growth ≥ 105 cfu/mL in two consecutive samples in\nwomen and in one single sample in men\n@臨床上asymptomatic pyuria就會預設可能有ABU\n•男生有ABU要做DRE\n•不用routine 做upper tract imaging/cystoscopv(除非culture 長proteus)\n•ABU確定需要abx的情況：懷孕(EAU：使用2-7天)，將進行侵襲性泌尿道手\n術(EAU：術前single dose 或3-5 davs沒有差異）\n•ABU可能需要abx的情況：immunocompromised(EAU: case by case)\n• ABU不需要被治療的情況：recurrent UT, 停經女性，機構老人，換腎後，\n有尿管/換尿管、停經前婦女、糖尿病女性、脊髓損傷患者、膿尿\n(pvuria)合併無症狀菌尿患者。"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "Recurrent UTI / Candidal UTI / SCI",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 13,
+              "text": [
+                "Recurrent UTI - bacterial persistence",
+                "泌尿道感染治療後感染同一隻細菌，發病間隔短",
+                "原因:",
+                "是一開始就有抗藥性(E.coli ST131, 多重抗藥性)",
+                "Urological structural abnormality",
+                "Urological functional problem有關",
+                "Definition: at least three UTIs within 12 months or two UTIs in six months(培養陽性且有症狀)",
+                "可能是bacterial persistence或re-infection, risk factors如下",
+                "Recurrent UTI definition",
+                "Recurrent UTI - reinfection",
+                "反覆泌尿道感染，但每次培養出的細菌不相同, 感染源大部分來自腸道細菌",
+                "男性reinfection可能是GU結構或功能上有問題(ex: BOO)",
+                "女性reinfection與GU結構或功能上無關，可能是從bowel flora 來的ascending colonization或vaginal mucosal receptivity of pathogen上升"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "Recurrent UTI definition\n• Definition:at least three UTIs within 12 months or two UTIs in six months(培養陽性且有症狀)\n•可能是bacterial persistence或re-infection, risk factors如下\nYoung and pre-menopausal women\nPost-menopausal and elderly women\nSexual intercourse\nHistory of UTI before menopause\nUse of spermicide\nUrinary incontinence\nA new sexual partner\nAtrophic vaginitis due to oestrogen deficiency\nA mother with a history of UTl\nCystocele\nHistory of UTI during childhood\nIncreased post-void urine volume\nBlood group antigen secretory status\nBlood group antigen secretory status\nUrine catheterisation and functional status\ndeterioration in elderly institutionalised women\nRecurrent UTI -bacterial persistence\n•泌尿道感染治療後感染同一隻細菌，發病間隔短\n•原因：\n•是一開始就有抗藥性(E.coli ST131，多重抗藥性）\n• Urological structural abnormality\n•Urological functional problem有關\nRecurrent UTl - reinfection\n•反覆泌尿道感染，但每次培養出的細菌不相同，感染源大部分來自腸道細菌\n•男性reinfection可能是GU結構或功能上有問題(ex:BOO)\n•女性reinfection與GU結構或功能上無關，可能是從bowel flora 來的ascending\ncolonization或vaginal mucosal receptivity of pathogen 上升"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "=>U/C長同一隻細菌->bacterial persistence -> 找anatomical/functional cause (KUB, renal echo, PVR, A+P CT, UDS/VUDS, cystoscopy) -> 找到原因並治療或加強abx(multi-resistant bacteria)",
+                "=>U/C長不同隻細菌 -> re-infection -> 同上",
+                "Recurrent UTI survey and management",
+                "(Male)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "Recurrent UTI survey and management\n(Male)\n= U/C長同一隻細菌->bacterial persistence -＞找anatomical/functional cause\n(KUB, renal echo, PVR, A+P CT, UDS/UDS, cystoscopy)-＞找到原因並治療或\n加強abx(multi-resistant bacteria)\n=>U/C長不同隻細菌->reinfection一＞同上\nBOx 12-4 Correctable Urologic Abnormalities That\nCause Bacterial Persistence\nIntection stones\nChronic bacterial prostatitis\nUnilateral infected atrophic kidneys\nUreteral duplication and ectopic ureters\nForeign bodies\nUrethral diverticula and infected periurethral glands\nUhilateral medullary sponge kidneys\nNonrefluxing, normal-appearing, infected ureteral stumps after\nnephrectomy\nInfected urachal cysts\nInfected communicating cysts of the renal calyces\nPapillary necrosis\nPerivesical abscess with fistula to bladder"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "=>U/C長同一隻細菌->bacterial persistence -> 找anatomical/functional cause (KUB, renal echo, PVR, A+P CT, UDS/VUDS, cystoscopy) -> 找到原因並治療或加強abx(multi-resistant bacteria)",
+                "=>U/C長不同隻細菌 -> re-infection -> 預防re-infection",
+                "吃Cramberry",
+                "減少以下行為: reduced fluid intake, habitual and post-coital delayed urination, wiping from back to front after defecation, douching and wearing occlusive underwear",
+                "停經後婦女可局部補充女性荷爾蒙(intra-vaginal estrogen)",
+                "膀胱灌玻尿酸(induction: once per week, 4-6 w, maintainence: one per month, 4-6 m, 健保未給付)",
+                "可考慮給予預防性抗生素: continuous 6-12個月(TUA->TMP/SMX, TMP, nitrofurantonin, Cephalexin if pregnancy), 或行房之後(single dose)",
+                "->還是常常recurrent UTI -> survey bacterial persistence",
+                "Recurrent UTI survey and management",
+                "(Female)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "Recurrent UTI survey and management\n(Female)\n= U/C長同一隻細菌->bacterial persistence -＞找anatomical/functional cause\n(KUB, renal echo, PVR, A+P CT, UDS/UDS, cystoscopy)-＞找到原因並治療或\n加強abx(multi-resistant bacteria)\n二 /長不同隻細菌-＞re-infection -＞預防re-infection\n•吃Cramberry\n•減少以下行為：reduced fluid intake, habitual and post-coital\ndelayed urination, wiping from back to front after defecation,\ndouching and wearing occlusive underwear\n•停經後婦女可局部補充女性荷爾蒙(intra-vaginal estrogen)\n•膀胱灌玻尿酸(induction: once per week, 4-6 W, maintainence: one\nper month,4-6m，健保未給付）\n••可考慮給予預防性抗生素：continuous 6-12個月(TUA->TMP/SMX,\nTMP, nitrofurantonin, Cephalexin if pregnancy)，或行房之後(single\ndose)\n一>還是常常recurrent UTI -> survey bacterial persistence"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Candidal UTI",
+                "Asymptomatic candiduria: EAU建議在immunocomprommised的病人不用治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "Candidal UTI\nAsymptomatic candiduria: EAU建議在\nimmunocomprommised的病人不用治療\ni Canti dena os paanle cae\naoCuturnton交合族部ceandisss万举\ne) Condidal UTI\nasnntfortie\nCanlilal prebagphits\ncansemat\nrenl teedvg\n12.3同U1工，发重revail infectfan可能產生\nfaryal ball 道成 by dereshrons\n3 Aungrent\n0 If utaf sigrs wartable (us aroepes)\n一先上w;在到经明是其他威染浮\nl If wial nyny stable\n一r-catare，没再長代表cantomeaTio，\n有就wontvin（没Fly建次工ep有\nFlay i re-an Fab\n=amtamt， 只有四mentpency智道\n行i区手4o vey low buthuestt\n才上anti\nspianqhes上anti\n4\n些\n-14\nGstrts : Crezlo , Fusril or Amphouans\nCCL<Io\nampleutunB形楼注\nJaverkt\ncan edemia: flrsammte ar Aophe"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "UTI的特殊情況- spinal cord injury",
+                "SCI若有bacteriuria常常無症狀",
+                "SCI如果有fever最常見的原因是UTI",
+                "表現的UTI症狀常常很不典型",
+                "Loss of sensation=> no LUTS",
+                "More often, they complain of flank, back, or abdominal discomfort, leakage between catheterizations, increased spasticity, malaise, lethargy, and/or cloudy, malodorous urine.",
+                "最常見的細菌也是Ecoli，20%",
+                "CIC 可以降低長期的lower urinary tract complication 以及catheter related complication(UTI, epididymitis, prostatitis)",
+                "Treatment: 無症狀菌尿症不用Abx，有症狀才用Abx，使用原則同uncomplicated/complicated UTI"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "UTI的特殊情況-spinal cord injury\n•SCl若有bacteriuria常常無症狀\n•SCI如果有fever最常見的原因是UTI\n•表現的UT症狀常常很不典型\n• Loss of sensation=>no LUTs\n•More often, they complain of flank, back, or abdominal discomfort,\nleakage between catheterizations, increased spasticity, malaise,\nlethargy, and/or cloudy, malodorous urine.\n•最常見的細菌也是Ecoli，20%\n•GIC可以降低長期的lower urinary tract complication 以及catheter related\ncomplication(UTl, epididymitis, prostatitis)\n•Treatment:無症狀菌尿症不用Abx，有症狀才用Abx，使用原則同\nuncomplicated/complicated UTI"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "Urosepsis & UTI in Pregnancy",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 18,
+              "text": [
+                "Urosepsis/septic shock",
+                "Quicksofa score: 三個裡面有兩個"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Urosepsis/septic shock\nTable 6. Definition and criteria of sepsis and septic shock [14, 220, 221]\nDisorder\nSepsis\nSeptic shock\nDefinition\nLife-threatening organ dysfunction caused by a dysregulated host response to infection.\nFor clinical application, organ dysfunction can be represented by an increase in the SOFA\nscore of 2 points or more. For rapid identification a quickSOFA score was developed:\nrespiratory rate of 22/min or greater, altered mentation, or systolic blood pressure of\n100 mmHg or less.\nQuicksofa score:三個裡面有兩個\nSSeptic shock should be defined as a subset of sepsis in which particularly profound\ncirculatory, cellular, and metabolic abnormalities are associated with a greater risk of\nmortality than with sepsis alone. Patients with septic shock can be clinically identified\nby a vasopressor requirement to maintain a mean arterial pressure of 65 mmHg or\ngreater and serum lactate level greater than 2 mmol/L (>18 mg/dL) in the absence of\nhypovolemia."
+            },
+            {
+              "slide_num": 19,
+              "text": [
+                "UTI in Pregnancy",
+                "所有懷孕婦女 asymtomatic bacteriuria都要被治療",
+                "沒有治療幾乎不可能自行痊癒,而且容易導致早產",
+                "沒有bacteriuria的孕婦, APN 1-4%",
+                "有bacteriuria的孕婦又沒有治療, APN 20~40% (第三孕期最多: 60~75%)",
+                "尿路感染與stone與生產次數無關",
+                "Pathogen 與未懷孕相似",
+                "Pregnancy UTI complication: prematurity, prenatal mortality, maternal anemia",
+                "Lab findings",
+                "U/A常常false negative, 建議自第一孕期的時候開始做urine culture",
+                "Abx選擇(EAU): penicillins, cephalosporins, fosfomycin, nitrofurantoin, TMP不建議第一孕期使用, TMP/BMX(Baktar)不建議第三孕期使用(Campbell: TMP, TMP/BMX完全不能用, nitrofurantoin不建議第三孕期使用)",
+                "Bacteriuria",
+                "孕婦要survey要治療",
+                "腎移植, Catheter 都不用survey",
+                "口訣: FC踢一踢"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "Bacteriuria\n孕婦要survey要治療\n腎移植， Catheter 都不用survey\nUTI in Pregnancy\n•所有懷孕婦女 asymtomatic bacteriuria都要被治療\n•沒有治療幾乎不可能自行痊癒,而且容易導致早產\n•沒有bacteriuria的子婦，APN 1-4%\n•有bacteriuria的孕婦又沒有治療，APN 20~40% （第三孕期最多：60~75%)\n•尿路感染與stone與生產次數無關\n•Pathogen 與未懷孕相似\n•Pregnancy UTI complication: prematurity, prenatal mortality, maternal anemia\n• Lab findings\n•U/A常常false negative，建議自第一孕期的時候開始做urine culture\n•Abx選擇(EAU)：penicillins, cephalosporins, fosfomycin, nitrofurantoin，TMP不建\n議第一孕期使用，TMP/BMX(Baktar)不建議第三孕期使用(Campbell: TMP,\nTMP/BMX完全不能用，nitrofurantoin不建議第三孕期使用）\n口訣：FC踢一踢\nAGENTS THAT SHOULD BE AVOIDED\nFluoroquinolones\nChloramphenicol\nTrimethoprim\nErythromycin\nTetracyclines\nPossible damage to immature cartilage\nAssociated with \"gray baby\" syndrome\nMay cause megaloblastic anemia because of anti-folic acid action\nAssociated with maternal cholestatic iaundice\nMay cause acute liver decompensation in the mother and inhibition of new bone arowth in the\nfetus"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "EPN / XGPN / CPN",
+          "slide_count": 10,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 20,
+              "text": [
+                "Emphysematous pyelonephritis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "Emphysematous\npyelonephritis"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "Emphysematous pyelonephritis概論",
+                "Pathogen : 最常見為E. coli, 感染之後產氣",
+                "只會發生於adult, 好發>60歲",
+                "Risk factor",
+                "DM(80-90%): 最重要的predisposing factor, 但sugar值跟mortality沒有正相關",
+                "Female比較常見 F:M=6:1",
+                "Papillary necrosis",
+                "Old age",
+                "S/S Triad: fever, vomiting, flank pain（幾乎所有病人都有）",
+                "Mortality rate: 19-43% (Campbell review 考題)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "Emphysematous pvelonephritis概論\n•Pathogen ：最常見為E.coli,感染之後產氣\n•只會發生於adult，好發>60歲\n• Risk factor\n•M80-99%：最重要的predisposing factor,\n但sugar值跟mortality没有正相關\n•Female比較常見F:M=6:1\n•Papillary necrosis\n• old age\n•SLS Triad': tever, vomiting, flank pain （幾乎所\n有病人都有）\n•Mortality rate: 19-43% （Campbell review 考題）"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Emphysematous pyelonephritis type",
+                "Type 1 vs Type 2",
+                "Type 1: 侵犯大於1/3的 parenchymal, 有streaky appearance of gas, 沒有renal/perirenal fluid , mortality rate 70%",
+                "Type 2: 侵犯小於1/3的 parenchymal,有renal/perirenal fluid或intrapelvis gas,  mortality rate 20%",
+                "Huang-Tseng (黃曾) CT classification system (109年考題)",
+                "class 1: gas 只侵犯collecting system",
+                "class 2: gas 只侵犯 renal parenchyma (without extrarenal extension)",
+                "class 3: gas 侵犯 renal parenchyma + extrarenal extension",
+                "class 3a: extension of gas or abscess to perinephric space",
+                "class 3b: extension of gas or abscess to pararenal space",
+                "class 4: 雙側都有，或者solitary kidney有 EPN",
+                "(class 4 不是最嚴重的, 只是代表所有的kidney都有)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Emphysematous pyelonephritis type\n•Type 1 vs Type 2\n•Type 1:侵犯大於1/3的parenchymal， 有streaky appearance of gas,\n沒有renal/ perirenal fluid , mortality rate 70%\n•Type 2:侵犯小於1/3的parenchymal，有renal/perirenal fluid或\nintrapelvis gas, mortality rate 20%\n•Huang-Tseng（黃曾） CT classitication system (10g年考題）\n•class 1:gas 只侵犯collecting system\n•class 2:gas 只侵犯 renal parenchyma (without extrarenal extension)\n•class 3:gas 侵犯 renal parenchyma + extrarenal extension\n• class 3a: extension of gas or abscess to perinephric space\n• class 3b: extension of gas or abscess to pararenal space\n•class 4:雙側都有，或者solitary kidney有 EPN\n(class 4 不是最嚴重的，只是代表所有的kidney都有）"
+            },
+            {
+              "slide_num": 23,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Figure 1. Class 1 emphysematous pyelonephritis. (See “Methods ”\nsubseation of “Patients and Methods\" section for explanation of class.)\nComputed tomographic scan demonstrates gas accumulated only in the right\nrenal pevs. A pelvic stone (arrowhead) with hydronephrosis was also found\nin the right kianay.\nFigure 2. Class 2 emphysematous pyelonephritis. (See “Methods\"\nsubsection of \"Patients and Methods\" se ction for explanation of class.)\nComputed tomographic scan shows gas wi thin the nght renal parenchyma\nand a right renal stone (arrowhead).\nFigure 3. Left Class 3A emphysematous pyelonephritis (EPW). (See “Methods\" subsection of \"Patients and Methods \" section for explanation of class.) This\ncomputed tomagraphic scan shows lert-sided EPN with extension of gas to the perinephric space (white arrow). Right Class 38 EPN. Computed tomographic\nscan shows lett-sided EPN with extension of gas to the pararenal space (arrowheaa)."
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Risk factor要不要nephrectomy",
+                "Thrombocytopenia",
+                "ARF",
+                "Conscious change",
+                "Shock",
+                "EPN Management",
+                "Nonfunctional kidney且no obstruction可考慮直接nephrectomy",
+                "ASAP"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "EPN\nManagement\n• Risk factor要不要nephrectomy\n• Thrombocytopenia\n• ARF\n• Conscious change\n• Shock\n分類\nClass land 2\nClass 3A and 3B\nClass 4\nNonfunctional\nkidney旦no\nobstruction可考\n慮直接\nnephrectomy\n經皮引流\n(PCD)\n低危險組\n（<2危險因子）\n高危險組\n（2危險因子)\n經皮引流\n(PCD\n治療反應良好\n治療失敗\n冶撩失敗\n冶療反應良好\n處理尿路阻寒\n腎碳切除手術積極處理\nASAP\n處理尿路阻塞\n存活\n存活\n存活\n存活\n圖一：根據Michaeli et al.' 及 Huang and Tseng’ 所建議之產氣性腎孟肾炎處理流程 (PCD: percutaneous drainage： 后險\n因因子：血小板低下，意識障礙，休克，腎衰竭（急性腎損傷，接受血液透析））。"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "Chronic pyelonephritis(CPN)",
+                "Xanthogranlomatous pyelonephritis (XGPN)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "Chronic pyelonephritis(CPN)\nXanthogranlomatous pyelonephritis\n(×GPN)"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Chronic pyelonephritis",
+                "是一個影像學病理學上的診斷, 指的就是renal scarring",
+                "Causes and type :",
+                "Obstructive CPN -> obstruction後反覆infection",
+                "Non-obstructive CPN -> long term effect if VUR with or without UTI",
+                "Presentation: asymptomatic or s/s of renal failure",
+                "Image: renal echo/CT/ renal scan可以看到distortion or dilation of renal calyx(常常在upper or lower pole, 這些地方易受reflux影響)或small/atrophic kidney",
+                "Management: 治療obstruction/VUR, 預防UTI",
+                "Complication: ESRD洗腎"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "Chronic pyelonephritis\n•是一個影像學病理學上的診斷，指的就是renal scarring\n• Causes and type :\nObstructive CPN ->obstruction後反覆infection\nNon-obstructive CPN -> long term effect if VUR with or without UTI\n•Presentation:asymptomatic or s/s of renal failure\n•lmage: renal echo/CT/ renal scan可以看到distortion or dilation of renal calyx(常\n常在upper orlower pole, 這些地方易受reflux影響）或small/atrophic kidney\n•Management： 治療obstruction/UR，預防UTI\n•Complication: ESRD洗腎"
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "XGPN",
+                "A rare form of chronic pyelonephritis",
+                "Pathogen : Proteus 為主",
+                "任何年齡都會發生, 好發40~70歲",
+                "Risk factor",
+                "Obstructing stone(83%): 最重要的predisposing factor",
+                "Female比較常見, F:M = 4:1",
+                "DM",
+                "S/S triad: fever, flank pain, malaise",
+                "CT/Echo: bear paw sign, reniform mass with central calcification",
+                "50-80%符合Triad:",
+                "Unilateral renal enlargement",
+                "Little or non-function kidney",
+                "Renal stone in pelvis (有一半的結石是staghorn stone)",
+                "其他diffuse renal destruction (non-functional kidney, enlargement)",
+                "Chronic pyelonephritis和何者最有關係? ESRD under HD",
+                "bear paw sign",
+                "reniform mass with central calcification"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch10_infection/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "•Cvenicpyelenephritic和何者最\n有關係？ESRD under HD\nXGPN\n•A rare form of chronic pyelonephritis\n•Pathogen：Proteus 為主\n•任何年齡都會發生，好發40~70歲\n•Risk factor\n•Obstructing stone(83%)：最重要的predisposing\nfactor\n•Female比較常見，F:M=4:1\n•DM\n•S/S triad: fever, flank pain, malaise\n•CT/Echo: bear paw sign, reniform mass with central\ncalcification\n•50-80%符合Triad：\n•Unilateral renal enlargement\n• Little or non-function kidney\n•Renal stone in pelvis(有一半的結石是staghorn\nstone)\n•其他diffuse renal destruction (non-functional\nbear paw sign\nreniform mass with central calcification"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "XGPN",
+                "Gross Morphology",
+                "Papillary necrosis (+), peri-pelvic fibrosis, nephrolithiasis(+)",
+                "Purulent material in dilated calyces",
+                "Micro pathology: lipid-laden foamy macrophages (xanthoma cells)",
+                "常常會和cancer有關",
+                "Renal cell carcinoma",
+                "Urothelial carcinoma of the pelvis or bladder",
+                "Infil­trating squamous cell carcinoma of the pelvis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "×GPN\n•Gross Morphology\n•Papillary necrosis (+), peri-pelvic\nfibrosis, nephrolithiasis（+)\n• purulent material in dilated calyces\n•Micro pathology: lipid-laden foamy\nmacrophages (xanthoma cells)\n•常常會和cancer有關\n•Renal cell carcinoma\n• Urothelial carcinoma of the pelvis or\nbladder\n• Infiltrating squamous cell carcinoma\nof the pelvis\nOF91O Has t aipsar"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "XGPN stage and management",
+                "Stage I: the disease is confined to the renal parenchyma only",
+                "Stage II: extension to perirenal fat",
+                "Stage III: extension to perirenal and pararenal spaces or diffuse retroperitoneum",
+                "Management: Nephrectomy(因為有infection和cancer risk, 非emergent, 因為本來就放很久了)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "×GPN stage and management\n•Stage l: the disease is confined to the renal parenchyma only\n•Stage ll:extension to perirenal fat\n• Stage Il: extension to perirenal and pararenal spaces or diffuse\nretroperitoneum\n•Management: Nephrectomy(因為有infection 和cancer risk, 非\nemergent, 因為本來就放很久了）"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Abscess（Renal / Perinephric / Retroperitoneal）& Pyonephrosis",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 30,
+              "text": [
+                "EPN",
+                "vs",
+                "XGPN"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "EPN\nVS\nXGPN\nitems\nPathogen\nPredisposing\nPresentation\nEpidemiology\nRadiology\nManagement\nEmphysematou\ns pyelnephritis\nE.Coli\nDM\nFever, vomiting,\nflank pain\nAdult only\nTissue gas\nSurgical\nemergency\nxGp\nProteus\nmirabilis\nObstructing\nnephrolithiasis\nFlank pain,\nfever, malaise\nAny age, peak\n5th ~7th\ndecades\nReniform\nmass with\ncentral\ncalcification\nRule out\nmalignancy"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "Renal abscess \u000bPeri-renal abscess",
+                "Pyonephrosis",
+                "Retroperitoneal abscess"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "Renal abscess\nPeri-renal abscess\nPyonephrosis\nRetroperitoneal abscess"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "Renal abscess",
+                "Pathogen: E.coli, Proteus, S,aureus",
+                "成因:",
+                "本身就有結構問題(renal stone, VUR), 繼發一個GNB infection",
+                "由血行傳遞到kidney, 通常是GPC (1/3來自skin infection)",
+                "S/S: 有三分之一的人不會發燒",
+                "Lab: U/A可能沒有pyuria, U/C也常常驗不到",
+                "Renal echo: anechoic or hypoechoic lesion(常常無法辨別tumor or abscess) + increase transmission",
+                "APN",
+                "Renal abscess",
+                "Perirenal abscess",
+                "Retropritoneal abscess",
+                "都有可能沒有pyuria",
+                "CT: Decreased attenuation with ring signs (abscess wall的 vascularity增加)",
+                "Management",
+                "<3cm : IV Abx(原則同complicated UTI, if懷疑血行用Vanco因為可能是MRSA) + closely observation",
+                "3-5cm: 視clinical condition而定",
+                ">5cm : IV Abx+ PCN drainage",
+                "＠Immunocompromised patient (腎移植之類), 無論大小都要PCN"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "Renal abscess\n•Pathogen: E.coli, Proteus, S,aureus\n•成因：\nAPN\nRenal abscess\nPerirenal abscess\nRetropritoneal abscess\n都有可能沒有pvuria\n•• 本身就有結構問題(renal stone, VUR), 繼發一個GNB infection\n•由血行傳遞到kidnev，通常是GPC (1/3來自skin infection)\n•S/S:有三分之一的人不會發燒\n•Lab：U/A可能沒有pyuria，U/C也常常驗不到\n•Renal echo: anechoic or hypoechoic lesion(常常無法辨別tumor or abscess) +\nincrease transmission\n•CT: Decreased attenuation with ring signs (abscess\nwall的 vascularitv增加）\n•Management\n•<3cm:IV Abx(原則同complicated UTl,if懷疑血行\n用vanco因為可能是MRSA) + closely observation\n•3-5cm：視clinical condition而定\n•>5cm :IV Abx+ PCN drainage\n@lmmunocompromised patient (腎移植之類），無論\n大小都要PCN"
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "Perinephric abscess",
+                "Pathogen: 同renal abscess",
+                "成因:",
+                "由內而外: Cortical abscess→perinephric space(可能進一步到到paranephric)",
+                "由外而內: colon perforation, osteomyelitis, pancrease, Crohn disease",
+                "由血行傳遞到kidney, 通常是GPC (1/3來自skin infection)",
+                "S/S: 同renal abscess",
+                "Lab: 同renal abscess",
+                "Abscess最常造成mortality的原因 : delayed diagnosis",
+                "Renal echo/CT: Perinephric fluid accumulation",
+                "Management",
+                "<3cm : IV Abx(原則同complicated UTI, if懷疑血行用Vanco因為可能是MRSA) + closely observation",
+                ">3cm : IV Abx+ PCN drainage(比較: renal abscess >5cm才去做 PCN drainage)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss33.webp",
+              "hidden": false,
+              "ocr_text": "Perinephric abscess\n•Pathogen： 同renal abscess\nAbscess最常造成\nmortalitv的原因：\nldelaved diagnosis\n•成因：\n• 由內而外：Cortical abscess->perinephric space(可能進一步到到\nparanephric)\n•由外而内：colon perforation, osteomyelitis, pancrease, Crohn disease\n••由血行傳遞到kidnev，通常是GPC (1/3來自skin infection)\n•S/S:同renal abscess\n•Lab：同renal abscess\n•Renal echo/CT: Perinephric fluid\naccumulation\n•Management\n•<3cm :IV Abx(原則同complicated UTl, if\n懷疑血行用Vanco因為可能是MRSA)+\nclosely observation\n•>3cm :IV Abxt PCN drainage(比較：\nrenal abscess >5cm才去做 PCN\ndrainage)"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Pyonephrosis",
+                "Abscess在renal pelvis",
+                "Pathogen: 同renal abscess",
+                "成因: GU tract obstruction之後在renal pelvis形成abscess",
+                "S/S: 同renal abscess, 通常更高燒, systemically unwell",
+                "Lab: 同renal abscess",
+                "Renal echo/CT: hydronephrosis, fluid-debris level, thickening renal pelvis",
+                "Management",
+                "不管大小都要urgent PCN drainage"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss34.webp",
+              "hidden": false,
+              "ocr_text": "Pyonephrosis\n• Abscess 在renal pelvis\n•Pathogen: 同renal abscess\n•成因：GU tract obstruction之後在\nrenal pelvis形成abscess\n•S/S:同renal abscess, 通常更高燒，\nsystemically unwell\n•Lab：同renal abscess\n• Renal echo/CT:hydronephrosis, fluid-\ndebris level, thickening renal pelvis\n• Management\n• 不管大小都要urgent PCN drainage\nRIGHT KIDNEY"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "Retroperitoneal abscess",
+                "可以依位置分為五區",
+                "Perinephric",
+                "Upper retroperitoneal (above the pelvic brim)",
+                "Pelvic (below the pelvic brim)",
+                "Combined=Upper retroperitoneal+Pelvic  最多, 40%!!!",
+                "Localized musculoskeletal",
+                "來源:",
+                "GU tract (APN/renal abscess +/-Stone and obstruction → Perinephric→ retroperitoneal)",
+                "Iatrogenic : PCNL or URS  → urinoma infection or abscess",
+                "Other organs: colon, duodenum, pancreas, bone infection",
+                "Trauma or tumor bleeding with abscess formation",
+                "血管傳遞",
+                "Female 較多, F:M 1.2:1",
+                "Risk factor: DM(hazard ratio: 3-4), immunocompromised"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss35.webp",
+              "hidden": false,
+              "ocr_text": "Retroperitoneal abscess\n•可以依位置分為五區\n•Perinephric\n• Upper retroperitoneal (above the pelvic\nbrim)\n• Pelvic (below the pelvic brim)\n• Combined=Upper\nretroperitoneaitPelvic 最多，40%!!!\nocalized muscuoskeletal\n•來源：\n• GU tract (APN/renal abscess +/-Stone\nand obstriction 'perinephric>\nretroperitoneal\n• latrogenic : PCNL or URS 一urinoma\ninfection or abscess\n•Other organs: colon, duodenum,\npancreas, bone infection\n•Trauma or tumor bleeding with abscess\n×\nPelvic\nbrim\nLesser (true)\npelvis\n•Female 較多，F:M 1.2:1\n•Risk factor: DM(hazard ratio: 3-4),\nimmunocompromised"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "Retroperitoneal abscess",
+                "S/S: non-specific, non-localized, abdominal pain, variable GI symptoms, referred pain to hip (psoas abscess) => 因為症狀模糊平均Delayed diagnosis時間12.7天!!!",
+                "Lab:  U/A不一定有pyuria",
+                "A+P CT: 主要診斷工具",
+                "APN",
+                "Renal abscess",
+                "Perirenal abscess",
+                "Retropritoneal abscess",
+                "都有可能沒有pyuria",
+                "治療: IV Abx + Surgery",
+                "Retroperitoneal approach (flank incision)",
+                "Pelvic approach (presacral incision)",
+                "Better than transperitoneal approach (67% failure rate)",
+                "Complication: 繼發pneumonia or respiratory failure!!! (相關死亡率80%)",
+                "Prognosis: 死亡率26%",
+                "pyonephrosis侵犯psoas m.形成psoas abscess"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss36.webp",
+              "hidden": false,
+              "ocr_text": "Retroperitoneal abscess\nAPN\nRenal abscess\nPerirenal abscess\nRetropritoneal abscess\n都有可能沒有pvuria\n•S/S:non-specific, non-localized, abdominal pain, variable Gl symptoms, referred\npain to hip (psoas abscess)=>因為症狀模糊平均Delaved diagnosis時間12.7天!!\n•Lab:U/A不一定有pvuria\n•A+P CT：主要診斷工具\n•治療：IV Abx + Surgery\n•Retroperitoneal approach\n(flank incision)\n•Pelvic approach (presacral\nincision)\n•Better than transperitoneal\napproach (67% failure rate)\n•Complication:繼發pneumonia or\nrespiratory failure!!!（相關死亡率\n80%）\n•Prognosis:死亡率26%\npvonephrosis侵犯psoas m.形成psoas abscess"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "Fournier's Gangrene",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 37,
+              "text": [
+                "Fournier’s Gangrene"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss37.webp",
+              "hidden": false,
+              "ocr_text": "Fournier's Gangrene"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Fournier’s Gangrene",
+                "感染侵犯沿著scrotum的Dartos, perineum 的 Colles, 和腹壁的 Scarpa擴展",
+                "S/S: skin erythema, tenderness, edema->fever/sepsis, palpable crepitus->skin blister/bulae",
+                "Image:  CT/KUB/scrotal echo會看到air在上述的layer之間",
+                "Risk/Predisposing factors:",
+                "DM",
+                "Local trauma",
+                "Paraphimosis (考題都問phimosis=> 陷阱!)",
+                "Periurethral extravasation or urine",
+                "Perirectal or perianal infections",
+                "Surgery such as circumcision or herniorrhaphy",
+                "(抽菸無關)",
+                "尿道癌 以及 FG",
+                "都與抽菸無關"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss38.webp",
+              "hidden": false,
+              "ocr_text": "Fournier's Gangrene\n•感染侵犯沿 著scrotum的Dartos, perineurn 的Colles，和腹壁的\nScarpa擴展\n•S/S: skin erythema, tenderness, edema->fever/sepsis, palpable\ncrepitus->skin blister/bulae\n•Image: CT/KUB/scrotal echo會看到air在上述的layer之間\n•Risk/Predisposing factors:\n•DM\n• Local trauma\n•Paraphimosis （考題都問phimosis=> 陷阱！\n•Periurethral extravasation or urine\n• Perirectal or perianal infections\n•Surgery such as circumcision or herniorrhaphy\n尿道癌以及 FG\n都與抽菸無關\n•（抽菸無關）"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Fournier’s Gangrene",
+                "細菌來自: 表皮, 尿道, 肛門菌種",
+                "Aerobic facultative organisms(產氣菌)",
+                "(E. coli, Klebsiella, enterococci)",
+                "Anaerobes",
+                "(Bacteroides, Fusobacterium, Clostridium, microaerophilic streptococci)",
+                "Mortality rate 20%",
+                "Factors for mortality: DM, alcoholics, colorectal source of infection, wide spread",
+                "DM的胖病人如果有 abdominal wall的invasion會進展得很快"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss39.webp",
+              "hidden": false,
+              "ocr_text": "Fournier's Gangrene\n•細菌來自：表皮,尿道，肛門菌種\n• Aerobic facultative organisms(產氣菌）\n•(E.coli, Klebsiella, enterococci)\n• Anaerobes\n• (Bacteroides, Fusobacterium, Clostridium, microaerophilic\nstreptococci)\n•Mortality rate 20%\n•Factors for mortality: DM, alcoholics, colorectal source of infection, wide\nspread\n•DM的胖病人如果有 abdominal wall的invasion會進展得很快"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "評估mortality risk"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss40.webp",
+              "hidden": false,
+              "ocr_text": "Table 5. Fournier Gangrene Severity Index\n評估mortality risk\nPhysiologic Variablel\nPoint Assignment\nTemperature (°C)\nHeart rate\nRespiratory rate\nSerum Sodium (mmol/L)\nSerum Potassium (mmol/L)\nSerum Creatine\n(mgroo/ml x 2 for acute\nrenal failure)\nHematocrit\nWBC (total/mm x 1000)\nSerum bicarbonate\nVenous, mmol/)\n44\n>41\n＞180\n>50\n>180\n>7\n>3.5\n>60\n>40\n>53\nYeniyol CO et al. Urology: 2004,64:218-222.\nHigh Abnormal Values\n•3\n•2\n39-40.9\n140-179\n35-49\n160-179\n66.9\n23.4\n110-139\n266-159\n•1\n38.5-39\n25-34\n350-354\n5.55.9\n15-1.9\n50-59.9\n20-39.9\n41-51.9\n46-49.9\n15-19.9\n32-40.9\nNormal\n0\n36-38.4\n70-109\n12-24\n130-149\n3.55.4\n0.6-1.4\n30-45.9\n3-14.9\n22 31.9\n•1\n34-35.9\n10-11\n3-3.4\nLow Abnormal Values\n•2\n32-33.9\n55-59\n6-9\n120-129\n2.5-2.9\n≤0.6\n20-29.9\n1-2.9\n18-21.9\n•3\n30-31.9\n40-54\n111-119\n15-17.9\n<29.9\n<39\n<5\n<110\n<3.5\n<20\n<1\n<15"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "Treatment => abx + op",
+                "Broad-spectrum antibiotic therapy",
+                "Ciprofloxacin and clindamycin",
+                "Augmentin / Tazocin + aminoglycoside + metronidazole or clindamycin",
+                "Vancomycin for methicillin-resistant Staphylococcus aureus (MRSA).",
+                "Intravenous immunoglobulin (IVIG), to neutralize superantigens (eg, streptotoxins A and B)",
+                "Emergent debridement(<24h)",
+                ">50% defect考慮skin graft",
+                "大部分病人不需要orchiectomy",
+                "(testis有自己血流系統)",
+                "EAU"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss41.webp",
+              "hidden": false,
+              "ocr_text": "Treatment => abx + op\n•Broad-spectrum antibiotic therapy\n• Ciprofloxacin and clindamycin\n• Augmentin / Tazocin + aminoglycoside + metronidazole or clindamycin\n•Vancomycin for methicilin-resistant Staphylococcus aureus (MRSA).\n•Intravenous immunoglobulin (IVIG), to neutralize superantigens (eg,\nstreptotoxins A and B)\nEAU\n•Emergent debridement (<24h)\n•>50% defect考慮skin graft\n•大部分病人不需要orchiectomy\n(testis有自己血流系統）\nAntimicrobial\nPiperacillin-tazobactam plus\nVancomycin\nmipenem-cilastatin\nMeropenem\nErtapenem\nGentamicin\nCefotaxime plus\nmetronidazole or\nclindamycin\nCefotaxime plus\nfosfomycin plus\nmetronidazole\nDosage\n4.5 g every 6-8h IV\n15 mg/kg every 12h\n11g every 6-8 hlV\n1g every 8 hIV\n1g once daily\n15mg/kg daily\n2g every 6hIV\n500 mg every 6 hlV\n600-900 mg every 8 h IV\n2g every 6hlV\n5g every 8h iV\n500 mg every 6 hIV"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "Epididymitis / Orchitis",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 42,
+              "text": [
+                "Epididymitis / Orchitis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss42.webp",
+              "hidden": false,
+              "ocr_text": "Epididymitis /\nOrchitis"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "Epididymitis/Orchitis 概論",
+                "特色",
+                "大部分都是Epididymo-orchitis, 單純的orchitis很少見",
+                "Acute epididymitis: <6 w/3m(Campbell), Chronic > 6 w/3m(Campbell)",
+                "Risk factor - 老人小孩(UTI), young men(STD)",
+                "Pathogen",
+                "Sexually non-active(usually >35y/o): 主要是UTI common pathogen(E.coli)",
+                "Sexually active年輕人(usually<35 y/o): 主要是 STD (Chlamydia or N.gonorrhoaea), 但仍要考慮UTI common pathogen(E.coli)",
+                "其他pathogen: TB, 偏向chronic,infection,可能來自血行性感染或尿路感染(BCG灌藥),常發生在immunocompromised的病人",
+                "單純的orchitis大部分是viral origin, 血行造成, viral orchitis 最常見是mumps virus的感染(通常在parotis後的3-4天發生, 會造成精液品質下降)",
+                "GU TB",
+                "第一名 腎臟",
+                "第二名 副睪"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss43.webp",
+              "hidden": false,
+              "ocr_text": "Epididymitis/Orchitis 概論\n•特色\n•大部分都是Epididymno-orchitis, 單純的orchitis很少見\n• Acute epididymitis: <6 w/3m(Campbell), Chronic > 6 w/3m (Campbell)\n•Risk factor - 老人小孩(UTI), young men(STD)\nGUTB\n第一名腎臟\n第二名副睪\n•Pathogen\n• sexually non-active(usually >35y/0)：主要是UTI common pathogen(E.coli)\n•Sexually active 年輕人(usually<35 y/o)：主要是 STD (Chlamydia or\nN.gonorrhoaea)，但仍要考慮UTI common pathogen(E.coli)\n•其他pathogen：TB，偏向chronic infection,可能來自血行性感染或尿路感染\n(BCG灌藥),常發生在immunocompromised的病人\n•單純的orchitis大部分是viral origin，血行造成,viral orchitis 最常見是mumps\nvirus的感染(通常在parotis後的3-4天發生，會造成精液品質下降）"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "Epididymitis/Orchitis survey",
+                "History: Scrotal pain(slower onset), UTI, sexual activity, urethral discharge, catheterization, dysfunctional voiding, abnormal anatomy",
+                "PE: scrotal enlargement with tenderness, pus-like urethral discharge(Gonorrhea), elevated scrotum will relief pain (Prehn sign +), thickening of spermatic cord, reactive hydrocele",
+                "Lab",
+                "Sexually non-active,懷疑UTI common pathogen, 驗U/A, mid stream culture",
+                "Sexually active年輕人(usually<35 y/o),懷疑STD, 除了驗U/A,mid stream urine culture, 還要驗first void urine(NAAT for Chlamydia and Gonorrhea), urethral swab discharge(culture/NAAT for Chlamydia and Gonorrhea)",
+                "懷疑TB infection, 送三套清晨尿 (for acid-fast stain and NAAT for M. tuberculosis)",
+                "@NAAT: nucleic acid amplification test(偵測細菌DNA)",
+                "Image",
+                "Scrotal echo: epididymis/testis blood flow increased"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss44.webp",
+              "hidden": false,
+              "ocr_text": "Epididymitis/Orchitis survey\n• History: Scrotal pain(slower onset), UTl, sexual activity, urethral discharge,\ncatheterization, dysfunctional voiding, abnormal anatomy\n•PE: scrotal enlargement with tenderness, pus-like urethral\ndischarge(Gonorrhea), elevated scrotum will relief pain (Prehn sign +),\nthickening of spermatic cord, reactive hydrocele\n• Lab\n•Sexually non-active,，懷疑UTI common pathogen, 驗U/A,mid stream\n•soathaatmore年證公選業素你起 %84需 河只a学 -琶Hbajala and\nGoaarherpe sectwrg suau giseaareecororeNNAZFPo CRamCaigad\nGonorrheal\n•懷疑TB infection，送三套清晨尿 (for acid-fast stain and NAAT for M.\ntuberculosis)\n@NAAT: nucleic acid amplification test(偵測細菌DNA）\n•mage\n•Scrotal echo: epididymis/testis blood flow increased"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "Epididymitis-orchitis treatment(EAU)",
+                "General measures: Anti-inflammatory agents(NSAID, BroenC), elevate scrotum",
+                "Sexually active年輕人(usually<35 y/o)->多考慮STD",
+                "Suspect gonorrhea infection: Ceftriaxone 500mg IM once+Doxycycline 10-14days(200mg initial dose, then 100mg BID)",
+                "Not suspect gonorrheal infection(mostly Chlamydia): Abx against E.coli(ex: Cefixime) 10-14 days + Doxycycline 10-14days(200mg initial dose, then 100mg BID)",
+                "or",
+                "Quinolone QD 10-14 days(也可打Chlamydia)",
+                "Sexually non-active->Mainly E.coli",
+                "Quinolone QD 10-14 days",
+                "Surgical exploration may be required to drain abscesses or debride tissue.",
+                "HIV patient : consider treatment for CMV, Salmonella, Ureaplasma, Mycoplasma, fungus"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss45.webp",
+              "hidden": false,
+              "ocr_text": "Epididymitis-orchitis treatment(EAU)\n•General measures: Anti-inflammatory agents(NSAlD, BroenC), elevate scrotum\n•sexually active 年輕人(usually<35 y/o)->多考慮STD\n•Suspect gonorrhea infection: Ceftriaxone 500mg I once+ Doxycycline 10-\n14days(200mg initial dose, then 100mg BID)\n• Not suspect gonorrheal infection(mostly Chlamydia):Abx against E.coli(ex:\nCefixime) 10-14 days + Doxycycline 10-14days(200mg initial dose, then 100mg\nBID)\nr\nQuinolone QD 10-14 days(也可打Chlamydia)\n•Sexually non-active->Mainly E.coli\n• Quinolone QD 10-14 days\n• Surgical exploration may be required to drain abscesses or debride tissue.\n• HlV patient : consider treatment for CMV, Salmonella, Ureaplasma, Mycoplasma,\nfungus"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "Prostatitis（NIH I-IV / CPPS）",
+          "slide_count": 9,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 46,
+              "text": [
+                "Prostatitis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss46.webp",
+              "hidden": false,
+              "ocr_text": "Prostatitis"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "有症狀, VB2的U/C長菌",
+                "有症狀, VB2/VB3沒長菌",
+                "EPS or VB3 or semen WBC(+)",
+                "無症狀, VB2/VB3沒長菌",
+                "EPS or VB3 or semen or histologic specimen WBC(+)",
+                "Prostatitis",
+                "NIKKD/NIH classification",
+                "有症狀, VB3菌落＞VB2菌落 10倍",
+                "有症狀, VB2/VB3沒長菌",
+                "EPS or VB3 or semen WBC(-)",
+                "發生率約9-16%, high prevalence at 20-50 and >70y/o",
+                "年輕男性無症狀菌尿症=>想到prostatitis",
+                "診斷:4 glass test(標準, EAU/Campbell已不建議4 glass test)=> VB1, VB2, EPS, VB3 都送U/A, U/C",
+                "2 glass test(簡化)=> VB2, VB3 都送U/A, U/C",
+                "10-15ml",
+                "first void urine",
+                "中段尿 100-150mL",
+                "4 glass test",
+                "Excretion of prostate massage(CPPS)",
+                "Urine after prostate massage, 10-15mL",
+                "2 glass test"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss47.webp",
+              "hidden": false,
+              "ocr_text": "Prostatitis\nNIKKD/NIH\nclassification\n有症狀，VBz的U/C長菌\n有症狀，VB3菌落＞VB2菌落 10倍\n•發生率約9-16%，high prevalence at 20-50 and\n>70y/o\n•年輕男性無症狀菌尿症二>想到prostatitis\n•診斷;4 glass test(標準，EAU/ Campbell已不建議4\nglass test)=> VB1, VB2, EPS, VB3 都送U/A, U/C\n2 glass test(簡化)=＞VB2,VB3 都送U/A, U/C\n4 glass test\nO\nVB1\nVB2\nrostate\nmassage\nEPS\nVB3\n10-15ml\n中段尿 100-\nfirst void urine\n150mL\nExcretion of\nUrine after\nprostate\nprostate\nmassage(CPPS)\nmassage,\n10-15mL\n2 glass test\nPra-M\nVB2\nProstate\nmassage\nPnct-M\nVB3\nAcute bacterial\nCategory 1\nprostatitis\nChronic bacterial Category 1I\nprostatitis\nN/A\nCategory 11\nChronic pelvic pain\nsyndrome\nCPPS)\nNonbacterial\nprostatitis\nCategory IlA\nInflammatory CPPs\n有症狀，VB2NB3沒長菌\nEPS or VB3 or semen WBC(+\nProstatodynia\nCategory IIB\nNoninflammatory\nCPPS\n有症狀，VB2NB3沒長菌\nEPS or VB3 or semen WBC(-)\nV/A\nCategory N\nAsymptomatic\ninflammatory\nprostatitis (AIP\n無症狀，VB2/B3沒長菌\nEPSor VB3or semen or\nhistologic specimen WBC(+)\nAcute infection of the\nprostate gland\nChronic infection of the\nprostate gland\nChronic genitourinary\npain in the absence\nof uropathogenic\nbacteria locaized to\nthe prostate gland\nemploying standard\nmethodology\nSignificant number of\nwhite blood cells in\nexpressed prostatic\nsecretions,\npost-prostatic\nmassage urine\nsediment (VB3), or\nsemen\nnsignificant number of\nwhite blood cells in\nexpressed prostatic\nsecretions, post-\nprostatic massage\nurine sediment (VB3),\norsemen\nWhite blood cells (and/\nor bacteria) in\nexpressed prostatic\nsecretions, post-\nprostatic massage\nurine sediment (VB3),\nsemen or histologic\nSpecimens of\nprostate gland"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Prostatitis NIKKD/NIH classification",
+                "Category  I : Acute bacterial prostatitis",
+                "Category  II: Chronic bacterial prostatitis",
+                "Category III : CPPS",
+                "IIIA : inflammatory, EPS or VB3 or semenWBC(+)",
+                "IIIB : non-inflammatory, EPS or VB3 or semenWBC(-)",
+                "Category  IV: Asymptomatic inflammatory prostatitis (AIP)=histological prostatitis",
+                "無症狀,但PSA 增加,切片仍然看見inflammation",
+                "BPH, Prostate Ca, infertility 較多"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss48.webp",
+              "hidden": false,
+              "ocr_text": "Prostatitis NIKKD/NIH classification\n• Category I: Acute bacterial prostatitis\n• Category l:Chronic bacterial prostatitis\n• Category 川 :CPPS\n• IA : inflammatory, EPS or VB3 or semenW BC(+)\n•IB: non-inflammatorv, EPS or VB3 or semen W BC(-)\n• Category IV: Asymptomatic inflammatory prostatitis\n(AIP)=histological prostatitis\n•無症狀,但PSA 增加,切片仍然看見inflammation\n•BPH, Prostate Ca, infertility 較多"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "Category I : Acute bacterial prostatitis",
+                "Pathogen: 同成人UTI細菌The Enterobacteriaceae \u000b(e.g., E. coli 65-80%, Enterococcus 10%, Serratia, Klebsiella, Proteus, Pseudomonas)",
+                "Pathophysiology: infected urine逆流到prostatic ducts, 5%發展成chronic bacterial prostatitis(prostate tissue edema會塞住prostatic duct困住細菌)",
+                "Risk factors: Foley indwelling, 泌尿科內視鏡手術, prostatic stone..",
+                "S/S: Fever, AUR/LUTS, acute onset perineal/suprapubic/genitalia pain",
+                "DRE : prostate may be swollen and tender(Prostate massage is contraindicated, 可以做DRE但不要massage)",
+                "Lab: 跟著complicating UTI survey去做, 懷疑acute prostatitis 加抽PSA",
+                "Image and special exam: 跟著complicating UTI survey去做",
+                "Treatment:",
+                "=> Abx(Quinolone, 2-4 weeks), analgesics/antipyretics, treat urine retention",
+                "=>如果abx治療反應不佳, 需r/o prostate abscess(DRE: boggy, TRUSP/CT: ring enhancing fluid collection), 若<1-2cm先打abx即可, >2cm建議TUR切開引流或percutaneous drainage",
+                "prostate abscess",
+                "prostate abscess"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss49.webp",
+              "hidden": false,
+              "ocr_text": "Category l : Acute bacterial prostatitis\n•Pathogen：同成人UTI細菌The Enterobacteriaceae\n(e.g., E. coli 65-80%, Enterococcus 10%, Serratia, Klebsiella,\nProteus, Pseudomonas)\n•Pathophysiology：infected urine 逆流到prostatic ducts, 5%發展成\nchronic bacteriai prostatitis(prostate tissue edema會塞住prostatic\nduct困住細菌）\n•Risk factors: Foley indwelling, 泌尿科內視鏡手術，prostatic stone.\n•S/S: Fever, AUR/LUTS, acute onset perineall/ suprapubic/genitalia\npain\n•ami gnarategr当段我的R 招梁曼Hoasauerostate massazes\n•Lab:跟著complicating UTI survey去做，懷疑acute prostatitis 加抽\n• 1mage and special exam: 跟著complicating UT1 survev去做\n• Treatment:\nretention\n=> Abx(Quinolone, 2-4 weeks), analgesics/antipyretics, treat urine\n三如果水x治療反應不佳，需!/oprostate abscess(DRE /9g9Y\nprostate abscess\nprostate abscess"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "Category II : Chronic bacterial prostatitis",
+                "診斷criteria: 4 glass-> EPS/VB3的細菌菌菌落數(CFU)是VB1/VB2的10倍",
+                "2 glass test-> VB3的細菌菌菌落數(CFU)是VB2的10倍",
+                "Characterized by recurrent UTI with the same organism (bacterial persistence)",
+                "Bacterial prostatitis 的症狀通常大於6 weeks或3 months",
+                "Pathogen: 同ABP",
+                "Pathophysiology: 同ABP",
+                "S/S: chronic pelvic pain, voiding dysfunction, ejaculation problem",
+                "DRE : prostate may be tender and enlarged",
+                "Lab: 2 glass test",
+                "Image and special exam: UFR/PVR(因為urine retention會增加recurrent UTI的機會)",
+                "Treatment:",
+                "=> Abx(Quinolone, 4-6 weeks)",
+                "alpha blocker(幫助urine flow減少prostatic duct reflux)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss50.webp",
+              "hidden": false,
+              "ocr_text": "Category 1 : Chronic bacterial prostatitis\n•診斷criteria::4glass->EPS/VB3的細菌菌菌落數(CFU)是VB1~B2的10倍\n2glass test-＞ VB3的細菌菌菌落數(CFU)是VB2的10倍\n•Characterized by recurrent UTI with the same organism (bacterial persistence)\n•Bacterial prostatitis 的症狀通常大於6 weeks或3 months\n•Pathogen：同ABP\n•Pathophysiology：同ABP\n•S/S: chronic pelvic pain, voiding dysfunction, ejaculation problem\n•DRE : prostate may be tender and enlarged\n•Lab:2 glass test\n•lmage and special exam: UFR/PVR(因為urine retention會增加recurrent UTI的機會）\n• Treatment:\n=> Abx(Quinolone, 4-6 weeks)\nalpha blocker(幫助urine flow減少prostatic duct reflux)"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "Category III : Chronic pelvic pain syndrome(CPPS)",
+                "最常見, 佔90%",
+                "診斷criteria: 有症狀且2 glass test(VB2/VB3)都沒長細菌(排除bacterial prostatitis)",
+                "IIIA : inflammatory, EPS or VB3 or semen  WBC(+)",
+                "IIIB : non-inflammatory, EPS or VB3 or semen WBC(-)",
+                "Etiology: 感染,自體免疫, neuromuscular spasm",
+                "Symptom",
+                "一到多個tender point, 常見於suprapubic, urethra, penis, perineal",
+                "最特別的主訴是pain during/after ejaculation",
+                "最常見的重疊疼痛症狀是大腸激躁症(irritable bowel syndrome)",
+                "CPPS問卷NIH-CPSI(推薦), IPSS, IIEF-5",
+                "DRE(必做): tenderness",
+                "Lab: U/A(必做), U/C(必做), 2 glass test(推薦), urine cytology(推薦), semen test不建議",
+                "Image and special exam: UFR/PVR(推薦)",
+                "必做",
+                "推薦"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss51.webp",
+              "hidden": false,
+              "ocr_text": "Category Il : Chronic pelvic pain syndrome(CPPs)\n• 最常見，佔90%\n•診斷criteria：有症狀且2 glass test(VB2/VB3)都沒長細菌(\n排除bacterial prostatitis)\n• IA :inflammatory, EPS or VB3 or semen WBC(+)\n• IB :non-inflammatory, EPS or VB3 or semen WBC(-)\n• Etiology：感染,自體免疫,neuromuscular spasm\n•Symptom\n•一到多個tender point，常見於suprapubic, urethra,\npenis, perineal\n••最特別的主訴是pain during/after ejaculation\n•最常見的重疊疼痛症狀是大腸激躁症(irritable\nbowel syndrome)\n•CPPS問卷NIH-CPSI(推薦)，1PSS, IIEF-5\n• DRE(必做）：tenderness\n• Lab:U/A(必做)，U/C(必做),2glass test(推薦),urine\ncytology（推薦),semen test不建議\n• Image and special exam: UFR/PVR(推薦）\nEVALUATION OF A\nMAN WITH CPPS\nMANDATORY 必做\nHistory\nphysical examination (DRE and pelvic floor)\nurinalysis, midstream culture\nRecurrent UTIs\npositive culture\nCAT Il chronic\nbacterial prostatitis\nRECOMAMENDED 推薦\nNH-CPSI/sexualhistory\n2-glass test\nCytology\nFlow rate/residual urine\nOPTIONAL\n(NOT RECOMMENDED\nfor routine evaluation of typical\npationt diagnosed with CPPS)\nHematuria,\nsuspicious\ncytology,\nobstruction\nObstruction\n(symptoms,\nflow rate,\nresidual\nurine)\nUrethral\nsymptoms\n(discharge\ndysuna,\npenile pain)\nAbnormalities\nsuggested\nby other\ntests\nSemen\nabnormalities\n(discolored\nfoul semen\")\nAbnormal DRE\n=45 years,\ntamily history\nr risk factors\nMajor\npsychopathology\n(depression,\nsuicidal)\nBacteria\nlocalized in\n2-glass test\nCystoscopy\nUrodynamics\nSTI\nassessment\nTRUS,\nCT, MAI\nSemen\nculture\nSerum\nPSA\nPsychological\nevaluation\n4-glass\ntest?\nrC"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "NIH-CPSI (Chronic prostatitis symptom index) 問卷",
+                "->不能當診斷, 可以當作評估療效的評量工具",
+                "->4 domain:, Pain, Urination, Quality of life (QoL), Impact of symptoms"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss52.webp",
+              "hidden": false,
+              "ocr_text": "NIH-CPSI (Chronic\nprostatitis symptom\nindex)問卷\n-＞不能當診斷，可以當作評估療\n效的評量工具\n-≥4 domain', Pain, Urination,\nQuality of life (QoL), Impact of\nsymptoms\nBainxDscamfod\nin me Last week, haave you experienced any pain or\ndsoomtort in the fcllowing areas?\nNIH-Chronic Prostatitis Symptom Index (NIH-CPSD)\n6. How ofen have you had to urinate again bess than two\nhours after you finished urinating. over the last week?\nYes\nNo\na Area between rectum and\nsestides (pgrgum)\nb\nTesticjes\nc Tipd te pents (not related to\nwrinatlon)\nBelow your waist, in your\npuoic or tladd'sr area\n2. n me last week, have you expenenced:\npain or buring during\nurination?\nb. Pain or discomtort during or\nster sexsal clmax (efacutenonj?\n3. How ctten hare you had pain or dsoomdart in any of\ntese areas over the last week?\nLo Never\nDi Rarely\nSometmes\nd oten\nUs aly\n4. wnich number best describes your AVE RAGE pah or\ndscamdort on the days that you had it, over the lass week?\n。\nNO\nPAIN\n10\nPAIN AS\nBAD AS\nYOU CAN\nAGINE\nJinalen\n5. Howr cften hare you had a sensatlon of not emptyng\nyour bladJsr compktey after you finished urinatng.\norer the last wock?\ndo Not at all\nD less than 1 sme in 5\nD, Less than haff the sme\nds About halt the tie\nD:More than half me sme\nDAmosl alway\nO Not atal\ng, Less than 1 tme n 5\ng, Less than har the time\nd About hall the time\nd; More than hall the time\ngs Amost atwags\nmpact at Simgtoms\n7. How much have your symptcms kept you trom doing\nthe kinds of things you would usually do, over the\nlzst week?\ng, None\nO Only a lnle\nO Some\ndAld\n8. How mudh dd you think sbout your Sympsoms, over ne\nLast week?\ng, None\nO Only a lne\nSome\ngAidt\noually ot Lre\n9. If you were lo spand the rest of your ite wth your\nsympsors just the way they have been during the last\nweek, how would you feel atout mar\nd Dalighled\nO Pleased\ng, Moslly sallsted\nd Mxed (about equally sallstied and\nO Moslly alssalished\nO Urhappy\nds ferrtle\nSearins he NIlLChronic Brsalitis\nSymntam Iniax Domain.\nPain: Total of itemss 1a, 1b, Ic,1d, 2a,2b,3,snd 4\nUrinary Smproms: Total of items 5 and 6\nOualigy of Life lapact: Total of items 7, 8, and 9"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "CPPS evaluation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss53.webp",
+              "hidden": false,
+              "ocr_text": "MANDATORY\nHistory\n• Pelvic pain: pain in penis, testes, suprapubic area, perineum;\npain with bladder filling and/or relieved by bladder emptying;\npain with ejaculation, dysuria, voiding symptoms\n• Review of symptoms\n• Neurologic problems: changes in vision, back pain,\nnumbness in legs or pelvis/ perineum, migraine\nGl problems: constipation or diarrhea, pain relieved by\nbowel movement\n• Rheumatologic: excessive fatigue, pain in many areas\nthroughout body\n• Psychological: significant anxiety, depression, history of\ntraumatic experience, pain worse with stress\nPhysical Examination\n•GU examination for hernia, hydrocele, penile lesions\n• Prostate nodules or tenderness\n• Pelvic floor examination\n• Abdominal examination for other sources of pain\nLaboratory Studies\n• Urinalysis to rule out hematuria reflex to formal urinalysis\n• Urine culture\nRECOMMENDED\n• Symptom inventory: Use NIH-CPSI or GUPI\n• Sexual function assessment\n• Two-glass urine VB2 and VB3\n• Flow rate\n• Urine cytology for dysuria or gross hematuria\n• Bladder ultrasound for postvoid residual urine\nCPPS evaluation\nNOT RECOMMENDED FOR INITIAL EVALUATION IN ALL\nPATIENTS; OPTIONAL IN SELECT PATIENTS\n•Evaluation for STD with nuclear ampification (urine)\nmaging studies\n• Scrotal US for testicular pain or lesions\n• cT of abdomen/pelvis for abdominal pain\n• Transrectal ultrasound\n• MRl of lumbar/sacral spine for symptoms suggestive of\ndisk herniation\n•Other\n• Urodynamics/flow rate and cystoscopy: for refractory voiding\nsymptoms, elevated residual urine volume\n• PSA: for prostate cancer screening"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "CPPS treatment -",
+                "Phytotherapy (草本)",
+                "Cernilton=pollen花粉 extract",
+                "Quercetin=bioflavonoid類生物黃鹼素",
+                "PPS",
+                "NSAIDS",
+                "Conservative: education,避免辛辣食物, 避免久坐/騎腳踏車, 減少生活壓力",
+                "玻尿酸?",
+                "Campbell: best treatment combination是antibiotics加上alpha-blockers",
+                "quinolone/tetracycline 6 weeks",
+                "(if treatment naive, s/s<1 year)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch10_infection/render/ss54.webp",
+              "hidden": false,
+              "ocr_text": "CPPS treatment -\nConservative: education,避免辛辣食物，避\n免久坐/騎腳踏車，減少生活壓力\nUrinary\nPsychosocial\nOrgan specific\nInfection\nNeuropathic/\nextrapelvic\nTenderness\n\"Sexual””\nVoiding\nstorage\nDepression\nProstate\nCatastrophizing Tenderness\nAnxiety\nInflammation\nBladder\nPositive\nmprovement cultures\nwith voiding Antibiotic\nresponse\nPelvic\nfloor muscle\npain or spasm\nDystunction\nandlor pain\nAlpha-blockers\nAnticholinergics\nDiet modification\nCognitive behavioral therapy\nAntidepression medication\nAnxiolytics\nAppropriate referral\nAntibiotics\nduinolone/tetracy cline 6 weeks\n(ftreatment naive, s/s<1 rearl\nGabapentinoids\nAmitriptyline\nNeuromodulation\nAcupuncture\nPain clinic\nSexual dysfunction\ntherapy (e.g,\nPDE-5 inhibitors)\nCernilton\nQuercetin\nAnti-\nintlartlsatofes\nphytotherapy（草本）\nCernilton=pollen花粉 extract\nQuercetin=bioflavonoid類生物黃鹼素\nPentosanpolysultate pps\nQuercetin\nIntravesical therapy\n玻尿酸？\nPelvic floor physical therapy\nBiofeedback\nESWT\nExercise\nHeat therapy\nCampbell:best treatment combination是antibiotics加 上alpha-blockers"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "Surgical Prophylaxis & ABx Duration",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 55,
+              "text": [
+                "各種感染症abx duration整理(EAU 2021)",
+                "14"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss55.webp",
+              "hidden": false,
+              "ocr_text": "各種感染症abx duration整理(EAU 2021)\nTreatment duration by EAU 2021\nDiagnosis\nUncomplicated cystitis\nUncomplicated pyelonephritis\nComplicated lower UTIs\nCA-UTIs\nUrosepsis\nBacterial prostatitis\nBacterial prostatitis\nAcute infective epididymitis (GNB)\nRecomm(1 4led duration\nvaried\n5-10 days\n7-14 days\n3-14 days depending on response\n7-10 days\nacute: 2-4 weeks\nchronic: 4-6 weeks\n10-14 days"
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "Antibiotic for surgical prophylaxis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss56.webp",
+              "hidden": false,
+              "ocr_text": "Antibiotic ;for\nsurgical prophylaxis"
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "Wound classification",
+                "All urologic procedures in which the urinary tract is opened electively",
+                "Entry into an infected urinary tract"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss57.webp",
+              "hidden": false,
+              "ocr_text": "Wound classification\nTABLE 12-8 Surgical Wound Classification\nTERM\nClean\nClean\ncontaminated\nContaminated\nDirty infected\nDESCRIPTION\nUninfected wound without inflammation or\nentry into the genital, urinary, or\nalimentary tract\nPrimary wound closure f closed drainage\nUninfected wound with controlled entry into\nthe genital, urinary, or alimentary tract\nPrimary wound closure f closed drainage\nUninfected wound with major break in sterile\ntechnique (gross spillage from\ngastrointestinal tract or nonpurulent\ninflammation)\nOpen fresh accidental wounds\nWound with preexisting clinical infection or\nperforated viscera\nOld traumatic wounds with devitalized tissue\nAll urologic procedures in\nwhich the urinary tract is\nopened electively\nEntry into an infected\nurinary tract"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "Antibiotic prophylaxis",
+                "Time between 30 to 120 mins before the procedure and limited time after the procedure (24 hrs, at most)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss58.webp",
+              "hidden": false,
+              "ocr_text": "Antibiotic prophylaxis\n• Time between 30 to 120 mins before the procedure and\nlimited time after the procedure (24 hrs, at most)\nBOx 12-5\nHost Factors That Increase the Risk\nof Infection\nAdvanced age\nAnatomic anomalies\nPoor nutritional status\nSmoking\nChronic corticosteroid use\nImmunodeficiency\nChronic indwelling hardware\nInfected endogenous/exogenous material\nDistant coexistent infection\nProlonged hospitalization"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "Antibiotic prophylaxis (EAU最新)",
+                "1.不建議使用quinolone",
+                "2.Transperineal的感染率較transrectal低(EAU說可以transperineal就transperineal)",
+                "3.肛門用優點消毒可降低感染率"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss59.webp",
+              "hidden": false,
+              "ocr_text": "Antibiotic prophylaxis (EAU最耕\nProcedure\nProphylaxis\nrecommended\nUrodynamics\nNo\nCystoscopy\nNo\nExtracorporeal shockwave  No\nfithotripsy\nUreteroscopy\nPercutaneous\nYes\nI Yes (single dose)\nnephrolithotomy\nTransurethral resection of\nIYes\nthe prostate\nTransurethral resection of\nthe bladder\nYes, in patients who have a\nhigh risk of suffering post-\nloperative sepsis.\nTransrectal prostate biopsy\nYes\nAntimicrobial\nN/A\nTrimethoprim\nTrimethoprim-sulphamethoxazole\nCephalosporin group 2 or 3\nAminopenicillin plus a beta-lactamase inhibitor\n1.\n2.\n1.不建議使用quinalene 3.\n2.Transperineal的感染\n率較transrectal低(EAU\n說可以transperineal就\ntransperineal\n3.肛門用優點消毒可降\n低感染率\nTargeted prophylaxis - based on rectal\nswab or stool cuiture.\nAugmented prophylaxis - two or more\ndifferent classes of antibiotics*\nAlternative antibiotics\n• tostomycin trometamol (e.g.3g\nbefore and 3 g 24-48 hrs after biopsy)\n•cephalosporin (e.g. ceftriaxone 1 g\ni.m.: cefixime 400 mg p.o. for 3 days\nstarting 24 hrs before biopsy)\n•aminoglycoside (e.g. gentamicin 3mg/\nkg i.v.; amikacin 15mg/kg i.m.)"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "STD：Urethritis（GC / Chlamydia / Trichomonas）",
+          "slide_count": 11,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 60,
+              "text": [
+                "Sexually transmitted disease(STD)",
+                "Urethritis(Gonococcal, Non-gonococcal)",
+                "Genital ulcer/lesion(Genital herpes, Syphilis, Chancroid, Lymphogranuloma, Condyloma accuminata, Donovanosis, Molluscum Contagiosum)",
+                "HIV"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss60.webp",
+              "hidden": false,
+              "ocr_text": "Sexually transmitted\ndisease(STD)\n• Urethritis(Gonococcal, Non-gonococcal)\n• Genital ucer/lesion(Genital herpes, Syphilis, Chancroid,\nLymphogranuloma, Condyloma accuminata, Donovanosis,\nMolluscum Contagiosum)\nHIV"
+            },
+            {
+              "slide_num": 61,
+              "text": [
+                "STD 盛行率與通報時間",
+                "台灣本土資料:",
+                "梅毒(Syphilis): 每年通報8000人",
+                "淋病(Gonorrhea): 每年通報4000人",
+                "HIV/AIDS: 每年通報2500人",
+                "性病屬第三類法定傳染病，包含 HIV, syphilis, gonorrhoeae",
+                "愛滋病 24 小時內通報",
+                "梅毒 7 天內通報",
+                "淋病 7 天內通報"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss61.webp",
+              "hidden": false,
+              "ocr_text": "STD 盛行率與通報時間\n•台灣本士資料：\n•梅毒(Syphilis)： 每年通報8000人\n•淋病(Gonorrhea)：每年通報4000人\n•HIV/AIDS:每年通報2500人\n•性病屬第三類法定傳染病，包含 HIV, syphilis, gonorrhoeae\n•愛滋病 24小時内通報\n•梅责7天内通報\n•淋病7天內通報"
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Urethritis 分成三個type",
+                "Gonococcal urethritis(GU)",
+                "->caused by Neisseria gonorrhoeae",
+                "Non-gonococcal urethritis(NGU)= non-specific urethritis(NSU)",
+                "Infective cause: Chlamydia trachomatis, Trichomonas vaginalis, Ureaplasma urealyticum, Mycoplasma, Herpes simplex virus(HSV)",
+                "Non-infective cause: urethral trauma, foreign body,",
+                "Contact urethritis(spermicides, shower gel)",
+                "Reiter’s syndrome(尿道炎, 關節炎, 結膜炎 三者皆有complete type; 只有兩個incomplete type; 和 HLA-B27相關,也可能由Chlamydia造成)",
+                "Wegnener’s granulomatosis",
+                "Recurrent or persistent urethritis: NGU治療30-90天後recurrence"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss62.webp",
+              "hidden": false,
+              "ocr_text": "Urethritis\n分成三個type\n•Gonococcal urethritis(GU)\n->caused by Neisseria gonorrhoeae\n• Non-gonococcal urethritis(NGU)= non-specific urethritis(NsU)\n•Infective cause: Chlamydia trachomatis, Trichomonas vaginalis,\nUreaplasma urealyticum, Mycoplasma, Herpes simplex virus(HSV)\n• Non-infective cause: urethral trauma, foreign body,\nContact urethritis(spermicides, shower gel)\nReiter's syndrome(尿道炎，關節炎，結膜炎 三者皆有complete type;\n只有兩個incomplete type;和 HLA-B27相關，也可能由Chlamydia造成）\nWegnener's granulomatosis\n•Recurrent or persistent urethritis: NGU 治療30-90天後recurrence"
+            },
+            {
+              "slide_num": 63,
+              "text": [
+                "Urethritis survey",
+                "S/S: Sexual contact",
+                "urethral pain/dysuria(較嚴重且acute onset->GU, 較輕微且gradual onset->NGU)",
+                "urethral discharge(量多且黃/pus-like->GU, 量較少澄清水狀->NGU)",
+                "glans/penile skin lesion, testis/epididymis tenderness, lymphadenopathy",
+                "Lab: (NAAT: nucleic acid amplification tests,  high sensitivity)",
+                "First void urine(VB1)->U/A(>10/hpf/leukocyte esterase+: urethritis)",
+                "->送NAATs(可偵測Chlamydia/Gonorrhea DNA)",
+                "Urethral swab採urethral discharge->送一般分析(WBC > 2/oil immersion field-> urethritis)",
+                "->  NAATs(可偵測Chlamydia/Gonorrhea DNA)",
+                "-> if NAAT positive for gonorrhea, 送Gonorrhea gram stain/culture",
+                "(Gonorrhoea gram stain/culture一定要swab, 培養期約需3-14天)",
+                "Midstream urine(VB2): 送U/A, U/C(仍要check common pathogen)",
+                "有gonorrhea的病人要考慮同時測syphilis, HIV test",
+                "60天內有性接觸者都要screen",
+                "@ 血清學檢查(IgG/IgA/IgM)不能用來診斷Chlamydia尿道炎",
+                "(區分GU和NGU)首先要先確定有urethritis, VB1(first void urine) >10WBC/hpf或有leukocyte esterase則符合, urethral swab WBC > 2/oil immersion field也符合。要區分gonococcal urethitis的話, 首先黃色濃稠尿道分泌物傾向gonococcus感染. urethral swab送grain stain可以看到革蘭氏陰性雙球菌, 送culture可以培養出gonococcus, 另外VB1和urethral swab的NAAT也可以驗gonococcus DNA, 若都沒有則懷疑是non-gonococcal urethritis, 則可以驗C.trachomatis/M.genitalium的NAAT。"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss63.webp",
+              "hidden": false,
+              "ocr_text": "Urethritis survey\n•S/S: Sexual contact\nurethral pain/dvsuria(較嚴重且acute onset->GU， 較輕微且gradual onset->NGU)\nurethral dlischarge (量多且 黃/pus-like->GU，量較少澄清水狀->NGU)\nglans/ penile skin lesion, testis/epididymis tenderness, lymphadenopathy\n•Lab: (NAAT: nucleic acid amplification tests, high sensitivity)\n• First void urine(VB1)->U/A(>10/hpf/leukocyte esterase+: urethritis)\n-＞送NAATs(可偵測Chlamydia/Gonorrhea DNA)\n•Urethral swab採urethral discharge->送一般分析(WBC > 2/oil immersion field-> urethritis)\n-＞NAATS(可偵測Chlamydia/ Gonorrhea DNA)\n-if NAAT positive for gonorrhea，送Gonorrhea gram stain/culture\n(Gonorrhoea gram stain/culture一定要swab，培養期約需3-14天\n•Midstream urine(VB2)：送U/A，U/C(仍要check common pathogen)\n•有gonorrhea的病人要考慮同時測syphilis, HIV test\n•60天內有性接觸者都要screen\n（區分。@由清學檢查（tgGAlEA/IgMA不能用來詮斷Chlanayalia家道美age則符合，urethralswab WBC -2o1l\nimmersion field也符合。要區分gonococcal urethitis的話，首先黃色濃碉尿道分泌物傾向gonococcus感染.urethral swab送grain stain可以\n看到革蘭氏陰性雙球菌，送culture可以培養出gonococcus，另外VB1和urethral swab的NAAT也可以驗gonococcus DNA, 若都沒有則懷疑是\nnon-aonococcal urethritis. 則可以驗C.trachomatis/M.genitalium的NAAT。"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "Neisseria gonorrhoeae infection",
+                "Pathogen: Neisseria gonorrhoeae, GN 雙球菌, 潛伏期 2-7 days; 好侵犯(尿道, cervix, rectum mucosa)",
+                "傳染途徑: sexual contact, hematogenous少見(Disseminated gonorrhea: Arthritis, dermatitis, meningitis, endocarditis)",
+                "男性受感染的部位(症狀比較明顯): Urethritis, Epididymitis/Orchitis, Prostatitis, Proctitis",
+                "女性受感染的部位: Pelvic inflammatory disease(Vagina扁平表皮可抗感染,Cervix柱狀表皮不可抗), 造成子宮外孕, 不孕, tubal scarring和chronic pelvic pain"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss64.webp",
+              "hidden": false,
+              "ocr_text": "Neisseria gonorrhoeae infection\n•Pathogen: Neisseria sonorrhoeae， GN 雙球菌，潛伏期2-7 days;好侵犯\n（尿道,cervix, rectum mucosa)\n•傳染途徑：sexual contact, hemnatogenous少 見(Disseminated\ngonorrhea: Arthritis, dermatitis, meningitis, endocarditis)\n•男性受感染的部位(症狀比較明顯)：Urethritis, Epididymitis/Orchitis,\nProstatitis, Proctitis\n•女性受感染的部位：Pelvic inflammatory disease(Vagina扁平表皮可抗\n感染,Cervix柱狀表皮不可抗)，造成子宮外孕，不孕，tubal scarring和\nchronic pelvic pain"
+            },
+            {
+              "slide_num": 65,
+              "text": [
+                "Gonococcal urethritis treatment(EAU)",
+                "要遵守Dual therapy的原則: 除了Gonorrhea還要考慮Chlamydia (coinfection常見)",
+                "性伴侶也要接受治療",
+                "診斷後七天不能have sex, 直到治療好, 治療後仍有症狀3-4週後再驗一次",
+                "大多是single dose(SD), 只有Azithromycin allergy時替換成Doxycycline是7天",
+                "可cover Chlamydia",
+                "Post-gonococcal urethritis: 在GU治療成功的4-7天後又urethritis, 就是沒遵守dual therapy原則只使用Ceftriaxone/Cefexime, 而NGU的病原菌(Chlamydia)沒治療到",
+                "CDC:(2021) 500mg IM ceftriaxone + 100mg BID doxycycline for 7 days"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss65.webp",
+              "hidden": false,
+              "ocr_text": "Gonococcal urethritis treatment(EAU)\n•要遵守Dual therapy的原則：除了Gonorrhea 還要考慮Chlamydia (coinfection常見）\n•性伴侶乜要接受治療\nPathogen\nAntimicrobial\nGonococcal Infection\nCeftriaxone\nAzithromycin\ncover Chlamydia\n大多是single dose(SD),\n只有Azithromycin\nallergy時替換成\nDoxvcvcline是7天\nDosage & Duration Alternative regimens\nof therapy\n11gi.m. ori.v., sD\n1gp.o.,SD\nCefixime 400 mg p.o., SD plus\nAzithromycin 1 g p.o., SD\nCDC:(2021)500mg IM\nceftriaxone + 100mg BID\ndoxycycline for 7 days\nIn case of cephalosporin allerav:\nGentamicin 240 mg i.m SD plus\nAzithromvcin 2 gp.o. SD\nGemifloxacin 320 mg p.o., SD plus\nAzithromycin 2 g p.o., SD\nSpectinomycin 2 g i.m., sD\nFosfomycin trometamol 3 g p.o., on\ndays 1, 3 and 5\nIn case of azithromycin allergy, in\ncombination with ceftriaxone or cefixime:\n• Doxvcvcline 100 mg b.i.d, p.o., 7 days\n•診斷後七天不能have sex 直到治療好，治療後仍有症狀了-4週後驗一次\nPost-gonococcal urethritis:在GU治療成功的4-7天後又urethritis, 就是沒遵守dual\ntherapy原則只使用Ceftriaxone/Cefexime,而NGU的病原菌(Chlamydia)沒治療到"
+            },
+            {
+              "slide_num": 66,
+              "text": [
+                "Chlamydia trachomatis infection",
+                "Pathogen: Chlamydia trachomatis 披衣菌",
+                "STD最常見的致病細菌",
+                "佔NGU的50%",
+                "最常見的Chlamydia菌株 : E>D>Da",
+                "潛伏期 7-21 days(比gonorrhea慢",
+                "傳染途徑: sexual contact",
+                "男性受感染的部位(症狀比較明顯): 同Gonorrhoeae",
+                "女性受感染的部位(有75%會沒有症狀): 同Gonorrhoeae",
+                "產婦感染,15%會導致新生兒chlamydia pneumonia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss66.webp",
+              "hidden": false,
+              "ocr_text": "Chlamydia trachomatis infection\n•Pathogen: Chlamydia trachomatis 披衣菌\n•STD最常見的致病細菌\n•佔NGU的50%\n•最常見的Chlamydia菌株：E>D>Da\n•潛伏期 7-21 days(比tgonorrhea慢\n•傳染途徑：sexual contact\n•男性受感染的部位(症狀比較明顯）：同Gonorrhoeae\n••女性受感染的部位(有75%會沒有症狀)：同Gonorrhoeae\n•產婦感染,15%會導致新生兒chlamydia pneumonia"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "Chlamydia urethritis treatment(EAU)",
+                "不確定感染菌或沒長出細菌就都用Doxycycline 100mg BID x7天",
+                "診斷後七天不能have sex, 直到治療好, 治療後仍有症狀3-4週後再驗一次",
+                "Non-gonoccocal urethritis treatment(EAU)",
+                "(不確定感染菌)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss67.webp",
+              "hidden": false,
+              "ocr_text": "Non-gonoccocal urethritis treatment(EAU)\n(不確定感染菌）\n•不確定感染菌或沒長出細菌就都用Doxycycline 100mg BID x7天\n•診斷後七天不能have sex,直到治療好，治療俊仍有症狀了-4週後再驗一次\nPathogen\nAntimicrobial\nDosage & Duration Alternative regimens\nof therapy\nNon-Gonococcal\ninfection\n(non-identified\npathogen)\nDoxycycline\n100 mg b.i.d, p.o.,\n7 days\nAzithromycin\n500mg p.o., day 1,\n1250 mg p.o., 4 days\nChlamydia urethritis treatment(EAU)\nPathogen\nChlamydia trachomatis\nAntimicrobial\nDosage & Duration  Alternative regimens\nof therapy\nAzithromycin\n11.0-1.5g p.o.,SD\nOr\n•\nDoxycycline\nLevofloxacin 500 mg p.o., q.d., 7 days\nOfloxacin 200 mg p.o., b.l.d., 7 days\n100 mg b.i.d, p.o.,\nfor 7 days"
+            },
+            {
+              "slide_num": 68,
+              "text": [
+                "Trichomonas 陰道滴蟲",
+                "非淋病尿道炎(Non-gonorrheal urethritis), 如果用Doxycycline效果不佳, 要考慮陰道滴蟲(Trichomonas vaginalis)感染, 因為Metronidazole才有效",
+                "男性症狀: 同其他non-gonococcal infection",
+                "女性症狀",
+                "Strawberry rash of vulva",
+                "Strawberry cervix",
+                "診斷 – culture",
+                "治療(EAU):"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss68.webp",
+              "hidden": false,
+              "ocr_text": "Trichomonas 陰道滴蟲\n•非淋病尿道炎(Non-gonorrheal urethritis)，如果用Doxycycline效\n果不佳，要考慮陰道滴蟲(Trichomonas vaginalis)感染，因為\nMetronidazole才有效\n•男性症狀：同其他non-gonococcal infection\n•女性症狀\n•Strawberry rash of vulva\n•Strawberry cervix\n•診斷 -culture\n•治療(EAU)：\nPathogen\nTrichomonas vaginalis\nAntimicrobial\nDosage & Duration Alternative regimens\nof therapy\nMetronidazole 2 g p.o., sD\nMetronidazole 500 mg p.o., b.i.d., 7 days\nTinidazole\n2g p.o., SD"
+            },
+            {
+              "slide_num": 69,
+              "text": [
+                "Ureaplasma Urealyticum treatment(EAU)",
+                "Mycoplasma Genitalium treatment(EAU)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss69.webp",
+              "hidden": false,
+              "ocr_text": "Mycoplasma Genitalium treatment(EAU)\nPathogen\nAntimicrobial\nMycoplasma genitalium  Azithromycin\nDosage & Duration Alternative regimens\nof therapy\n500 mg p.o., day 1,In case of macrolide resistance:\n250 mg p.o., 4 days • Moxifloxacin 400 mg g.d., 7-14 days\nUreaplasma Urealyticum treatment(EAU)\nPathogen\nUreaplasma urealyticum Doxycycline\nAntimicrobial\nDosage & Duration Alternative regimens\nof therapv\n100 mg b.i.d, p.o., Azithromycin 1.0-1.5 g p.o., SD\n7 days"
+            },
+            {
+              "slide_num": 70,
+              "text": [
+                "NGU治療30-90天後recurrence",
+                "Recurrent or persistent urethritis treatment(EAU)",
+                "可cover Trachomatis vaginalis",
+                "可cover Trachomatis vaginalis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss70.webp",
+              "hidden": false,
+              "ocr_text": "Recurrent or persistent urethritis treatment(EAU)\n• NGU治療30-90天後recurrence\nPathogen\nAfter first-line\ndoxycycline\nAntimicrobial\nAfter first-line\nazithromycin\nAzithromycin\nplus\nMetronidazole\n400 mg b.i.d. p.o.,\n可cover Trachomatis vaginalis 5 days\nMoxifloxacin\n400 mg p.o.q.d.,\n7-14 days\nDosage & Duration Alternative regimens\nof therapy\n500 mg p.o., day 1, If macrolide resistant M. genitalium is\n250 mg p.o., 4 days detected moxifloxacin should be substituted\nfor azithromycin\nplus\nMetronidazole\n400mg b.i.d. p.o.,\n可cover Trachomatis vaginalis  5 days"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "Genital Ulcers（Herpes / Syphilis / LGV 等）",
+          "slide_count": 20,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 71,
+              "text": [
+                "Genital ulcers/lesion概論",
+                "發生率",
+                "最常見Herpes > syphilis > chancroid > Lymphogranuloma",
+                "前三者比例懸殊 1000:1:0.01",
+                "其他的包括Condyloma accuminata, Donovanosis, Molluscum Contagiosum",
+                "以上性病治療後都極易復發",
+                "治療原則",
+                "調查性伴侶(可能多重)感染狀況, 要一起治療",
+                "都需考慮HIV感染的可能性(經患者同意後檢查)",
+                "在治療完成前避免性行為",
+                "建議患者固定性伴侶且戴保險套",
+                "最常見STD: Chlamydia",
+                "Genital ulcer 中最常見: HSV"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss71.webp",
+              "hidden": false,
+              "ocr_text": "Genital ulcers/lesion概論\n最常見STD: Chlamydia\nGenital ulcer 中最常見：HSV\n•發生率\n•最常見Herpes > syphilis > chancroid > Lymphogranuloma\n•前三者比例懸5珠 1000:1:0.01\n•其他的包括condyloma accuminata,Donovanosis, Molluscum\nContagiosum\n•以上性病治療後都極易復發\n•治療原則\n•調查性伴侶(可能多重)感染狀況，要一起治療\n•都需考慮HIV感染的可能性(經患者同意後檢查）\n•在治療完成前避免性行為\n•建議患者固定性伴侶且戴保險套"
+            },
+            {
+              "slide_num": 72,
+              "text": [
+                "Genital herpes",
+                "由Herpes simplex virus(HSV)造成, 雙股螺旋DNA病毒, 較常由HSV2造成, 較少由HSV1造成(較常感染oral)",
+                "潛伏期約4 天, 約2天到2週表現症狀(也可能無症狀), 之後會潛伏在sacral root ganglion, 再伺機出來感染(因此成人表現症狀常常不是初次感染而是復發的病兆), 無症狀也可能傳給性伴侶",
+                "S/S:",
+                "Genital出現多顆，表淺，會痛的小水泡 (不會follow neural distribution!!)",
+                "LAP: 雙側有壓痛",
+                "初次發作, HSV1和2感染的比例差不多, 但HSV2比HSV1容易recurrence",
+                "初次發作,有13-36%會有輕度腦膜炎, 也常造成dysuria",
+                "Lab: 採檢genital ulcer/lesion的ulcer swab送NAAT或culture(血清學非常規診斷工具)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss72.webp",
+              "hidden": false,
+              "ocr_text": "Genital herpes\n•由Herpes simplex virus(HSV)造成，雙股螺旋\nDNA病毒，較常由HSV2造成，較少由HSV1造成(\n較常感染oral)\n•潛伏期約4 天，約2天到2週表現症狀(也可能無\nHSV-2 virus\n症狀)，之後會潛伏在sacral root ganglion, 再伺\n機出來感染(因此成人表現症狀常常不是初次\n感染而是復發的病兆，無症狀也可能傳給性\n伴侶\n•S/S:\n•Genital出現多顆，表淺，會痛的小水泡（\n不會follow neural distribution!!)\n•LAP:雙側有壓痛\n•初次發作，HSV1和2感染的比例差不多，但\nHSV2比HSV1容易recurrence\n•初次發作，有13-36%會有輕度腦膜炎，也常\n造成dysuria\n•Lab:採檢genital ulcer/lesion的ulcer swab送\nNAAT或culture(血清學非常規診斷工具）"
+            },
+            {
+              "slide_num": 73,
+              "text": [
+                "Genital herpes treatment",
+                "(TUA 2020)",
+                "局部塗藥膏只能減緩症狀, 無法減少復發",
+                "口服抗病毒藥為標準治療",
+                "如何減少傳給性伴侶的機會: 口服抗病毒藥, 局部塗藥膏, 戴保險套",
+                "3-6個月",
+                "3-6個月",
+                "10次以上建議Acyclovir"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss73.webp",
+              "hidden": false,
+              "ocr_text": "Genital herpes\ntreatment\n(TUA 2020)\n•局部塗藥膏只能滅緩症狀，無\n法減少復發\n•口服抗病毐蘂為標準治療\n•如何減少傳給性伴侶的機會：\n口服抗病毒藥,局部塗藥膏，戴\n保險套\n病灶\n初次\n感染\n治療建議\n備註\n口服 Acyclovir 400mg每日3次xPCR陽性；\n7-10天或\nHSV-gG多為\n口服 Acyclovir 200mg每日5次x陰性：HSV-\n7-10天或\nIgM 多為陽性\n口服 Famciclovir 250mg 每日3次x抗病毒藥物可\n7-10天或\n減輕後續臨床\n口服 Valacvdovir 1g每 日2次*症狀與縮短療\n7-10大\n程，建議使用\n復發病\n灶\n口服 Acyclovir 200mg 每日5次x5 PCR陽性；\n天或\nHSV-1gG陽\n口服 Acyclovir 400 mg 每日3次*5性；\n天或\nHSV-IgM 多為\n口服 Acycovir 800 mg 每日3次x2陰性\n天或\n臨床上大多採\n口服 Famcicloavir 125ma每日2次x 取症狀治療，\n5天或\n抗病毒藥物多\n口服 Famcidovir 1g 每日2次x1天建議於病灶發\n或\n生前或發生一\n口服單次Famciclovir 500mg＋ 日之內使用\n250mg每日2次x天或\n口服 Valacyclovir 500mg 每日2次x\n5天或\n口服 Valacvclovir 1a每日1次x5禾\n反覆復\n口服 Acyclovir 200 或 400 mg 每日\n每年復發超過\n發之長 2次或\n3-6個月\n6次以上考慮\n期壓抑  口服 Valacyclovir 500mg 或 1g 每日 使用\n療法\n1次\n3-6個月\n10次以上建\n議Acyclovir"
+            },
+            {
+              "slide_num": 74,
+              "text": [
+                "Syphilis(梅毒)",
+                "病原體: Treponema pallidum梅毒螺旋體，每30-33小時複製一次",
+                "潛伏期: 10天至90天(平均3週)",
+                "臨床表現:",
+                "-> primary syphilis",
+                "-> secondary syphilis",
+                "-> latent syphilis(early/late)",
+                "-> tertiary syphilis",
+                "(也可能完全沒症狀)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss74.webp",
+              "hidden": false,
+              "ocr_text": "Syphilis(梅毒）\n••病原體：Treponema pallidum梅毒\n螺旋體，每30-33小時複製一次\n•潛伏期：10天至90天(平均3週）\n•臨床表現：\n-> primary syphilis\n-> secondary syphilis\n-> latent syphilis(early/late)\n-> tertiary syphilis\n(也可能完全沒症狀）\nSTAGES of\nSYPHILIS\nPRIMARY\n1-3 WEEKS\nSECONDARY\n6-12 WEEkS\nLATENT\nEARLY (WITHIN 1 YEAR)\nLATE (AFTER 1 YEAR)\nLATE / TERTIARY"
+            },
+            {
+              "slide_num": 75,
+              "text": [
+                "Primary syphilis(一期梅毒)",
+                "症狀在感染後1-3週開始出現",
+                "Lesion: Chancre 硬性下疳(念法 : 炫克)",
+                "通常只有一顆, 不會痛",
+                "周邊clean, indurated",
+                "不治療病灶大約3-8週就會自行消失"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss75.webp",
+              "hidden": false,
+              "ocr_text": "Primary syphilis(一期梅毒）\n•症狀在感染後1-3週開始出現\n•Lesion： Chancre 硬性 下疳(念法：炫\n克克）\n•通常只有一顆，不會痛\n•周邊clean, indurated\n•不治療病灶大約3-8週就會自行\n消失"
+            },
+            {
+              "slide_num": 76,
+              "text": [
+                "Secondary syphilis(二期梅毒)",
+                "第二期傳染力最強(相比之下HIV第一期傳染力最強)",
+                "症狀在感染後6-12週之後開始出現",
+                "Lesion - maculopapular rash",
+                "Maculopapular rash, 主要分佈頭皮，手掌，腳掌",
+                "Condylomata Lata(扁平濕疣): genital, anus, mouth",
+                "Fever, malaise, weight loss, ocular inflammation, 頭痛, 聽力受損(侵犯聽神經)",
+                "大約10%的病人會有vasculitis表現，包含hepatitis, nephritis, iritis",
+                "Condylomata Lata",
+                "扁平濕疣 – syphilis",
+                "Condyloma acuminata 尖形濕疣 – HPV",
+                "Molluscum Contagiosum 傳染性軟疣 – pox",
+                "Maculopapular rash",
+                "Penis condylomata lata",
+                "Anus condylomata lata"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss76.webp",
+              "hidden": false,
+              "ocr_text": "Secondary syphilis(二期梅毒）\n•第二期傳染力最強（相比之下HIV第一期傳染力最強）\n•症狀在感染後6-12週之後開始出現\n• Lesion - maculopapular rash\n•Maculopapular rash，主要分佈頭皮，手掌，腳掌\nCondylomata Lata\n扁平濕疣 —syphilis\nCondyloma acuminata\n尖形濕疣-Hpv\nMolluscum Contagiosum\n傳染性軟疣-pox\n•condylomata Lata(扁平濕疣)：genital,anus, mouth\n•Fever, malaise, weight loss, ocular intlammtion,頭痛，聽力受損(侵犯聽神經）\n•大約10%的病人會有vasculitis表現，包含hepatitis, nephritis, iritis\nMaculopapular rash\nPenis condylomata lata\nAnus condylomata lata"
+            },
+            {
+              "slide_num": 77,
+              "text": [
+                "Latent syphilis",
+                "指梅毒進入完全無臨床症狀的時期，但體內仍有梅毒螺旋菌存在，對身體組織器官仍有破壞性",
+                "早期潛伏性梅毒(Early latent)",
+                "感染後未超過1年之無症狀期，病患仍具傳染性",
+                "晚期潛伏性梅毒(Late latent)",
+                "感染超過1年之無症狀期，傳染力較弱"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss77.webp",
+              "hidden": false,
+              "ocr_text": "Latent syphilis\n•指梅毒進人完全無臨床症狀的時期，但體内仍有梅毒螺\n旋菌存在，對身體組織器官仍有破壞性\n•早期潛伏性梅毒(Early latent)\n•感染後末超過1年之無症狀期，病患仍具傳染性\n•晚期潛伏性梅毒(Late latent)\n•感染超過1年之無症狀期，傳染力較弱"
+            },
+            {
+              "slide_num": 78,
+              "text": [
+                "Tertiary/Late syphilis(三期梅毒)",
+                "不少病患未經過一期或二期梅毒即進入三期梅毒",
+                "通常發生於感染後3-7年",
+                "Gummatous syphilis (gummas: 梅毒腫)",
+                "好犯皮膚、上表皮組織以及骨骼肌肉組織",
+                "Neurosyphilis",
+                "tabes dorsalis (局部運動共濟失調): lost of vibration and proprioception",
+                "dementia, paralysis, slurred speech",
+                "Cardiovascular syphilis (15-20 yrs)",
+                "Aortic aneurysm",
+                "Aortic valve regurgitation",
+                "gummas"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss78.webp",
+              "hidden": false,
+              "ocr_text": "Tertiarv/Late svphilis（三期梅毒）\n•不少病患未經過一期或二期梅毒即進入三期梅毒\n•通常發生於感染後3-7年\n•Gummatous syphilis （gummas:梅毒腫）\n•好犯皮膚、上表皮組織以及骨骼肌肉組織\n•Neurosyphilis\n•tabes dorsalis(局部運動共濟失調)：lost of vibration and proprioception\n•dementia, paralysis, slurred speech\n• Cardiovascular syphilis (15-20 yrs)\n•Aortic aneurysm\n• Aortic valve regurgitation\ngummas"
+            },
+            {
+              "slide_num": 79,
+              "text": [
+                "Syphilis test",
+                "Non-treponemal test:",
+                "包含兩種檢查: Rapid plasma reagin(RPR)和Venereal disease research laboratory(VDRL)",
+                "Traditionally for screening and monitoring disease activity",
+                "High false-positive rate, 尤其老年人, HIV感染者, 藥癮者, 孕婦",
+                "Titer: 有症狀≥1:4有意義, early latent≥1:8有意義, late latent≥ 1:2有意義",
+                "Treponemal test:",
+                "包含Treponema pallidum haemagglutination(TPHA, >1:320陽性, <1:80陰性)和Syphilis enzyme immunoassays(EIA)和fluorescent treponemal antibody absorption(FTA-ABS)",
+                "Traditionally for confirmation",
+                "一旦感染, 終生會驗出來 (所謂\"梅毒的疤痕\")",
+                "If neurologic s/s: 考慮抽CSF來驗VDRL activity",
+                "感染syphilis的病人有25%合併有HIV, 要考慮驗HIV(Campbell: 全部都要驗HIV)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss79.webp",
+              "hidden": false,
+              "ocr_text": "Syphilis test\n•Non-treponemal test:\n•包含兩種檢查：Rapid plasma reagin(RPR)和Venereal disease research\nlaboratory(VDRL)\n• Traditionally for screening and monitoring disease activity\n•High fallse-positive rate，尤其老年人，HIV感染者，藥癮者，孕婦\n•Titer：有症狀21:4有意義，early latent>1:8有意義,late latent≥ 1:2有意義\n• Treponemal test:\n•包含Treponema pallidum haemagglutination(TPHA，>1:320陽性，<1:80陰性）\n和Syphilis enzyme immunoassays(EIA)和fluorescent treponemal antibody\nabsorption(FTA-ABS)\n• Traditionallv for confirmation\n•一旦感染，終生會驗出來(所謂\"梅毒的疤痕\")\n•If neurologic s/s:考慮抽CSF來驗VDRL activity\n•感染syphilis的病人 有25%合併有HIV，要考慮驗HIV(Campbell：全部都要驗HIV)"
+            },
+            {
+              "slide_num": 80,
+              "text": [
+                "Syphilis test 診斷流程",
+                "以前CDC是建議traditional, 但後來也推出reverse testing, 目前沒有定論, reverse testing較cost-effective但false positive rate較高",
+                "除非已經治療過, 否則直接治療",
+                "沒治療過就治療, 治療過titer>4倍還是治療",
+                "除非已經治療過, 否則直接治療",
+                "無需治療或考慮第三種treponemal test",
+                "無需治療",
+                "無需治療",
+                "無需治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss80.webp",
+              "hidden": false,
+              "ocr_text": "Syphilis test 診斷流程\n•以前cDC是建議traditional，但後來也推出reverse testing， 目前沒有\n定論,reverse testing較cost effective但false positive rate較高\nTraditional\nReverse Sequence\nQuantitative\nRPR\nElA or CIA\nEIA/CIA+\nRPR+\nRPR-\n無需治療\nEIA/CIA-\n無需治療\nTP-PA or other\ntrep. test\nQuantitative\nRPH\nRPR+Syphilis\n(past or presenl\n沒治療過就治療，\n治療過titer>4倍還\n是治療\nRPR-\nTP.PA+\nSyphilis\nfast or presend)\n除非已經治療過，\nTP-PA-\nSyphilis\nunlikey\n無需治療\n否則直接治療\nBouroa A\nse Bylde sasarn\nMardh 31,3011. repuloarrods.oovshouve\npdt Aoceossd re 17.2015\nTP-PA\ncoG\nTP.PA+\ntst or present\n除非巳經治療過，\n否則直接治療\nTP.PA-\nSyphais unlkay\n無需治療或考慮第三種\ntreponemal test"
+            },
+            {
+              "slide_num": 81,
+              "text": [
+                "Syphilis treatment",
+                "(CDC 2010)",
+                "-> 無症狀(latent):",
+                "early(<1y) or late(>1y) or unknown",
+                "-> 有症狀:",
+                "哪一期別primary/secondary/tertiary",
+                "有無neurologic involvement",
+                "Jarisch-Herxheimer reaction",
+                "Reaction to endotoxin-like products released by the death of harmful microorganisms",
+                "治療過程初期反應(1–3 hours after the first dose), 治療早期梅毒較常發生",
+                "fever, malaise, N/V, chills, skin rash, hypotension, shock",
+                "處理方式: bed rest + NSAIDs"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss81.webp",
+              "hidden": false,
+              "ocr_text": "Syphilis\ntreatment\n(CDC 2010)\n＞無症狀(latent)：\nearlv(<1v) or late (>1v) or unknown\n-＞有症狀：\n哪一期別primary/secondary/tertiary\n有無neurologic involvement\n•Jarisch-Herxheimer reaction\n• Reaction to endotoxin-like products\nreleased by the death of harmful\nmicroorganisms\n•治療過程初期反應(1-3 hours after the\nfirst dose),治療早期梅寿較常發生\n•fever, malaise, N/, chills, skin rash,\nhypotension, shock\n•處理方式：bed rest + NSAIDs\nSTAGE OF\nSYPHILIS\nPrimary.\nsecondary.\nand early\nlatent syphilis,\nno neurologic\ninvolvement\nLate latent or\nlatent syphilis\nof unknown\nduration, no\nneurologic\ninvolvement\nTertiary (late)\nsyphilis\nwithout\nneurologic\ninvolvement\nNeurosyphilis\nAlternative\nregimen\nPENICILLIN\nTREATMENT\nBenzathine penicillin\nG 2.4 million units\nIM, single dose\nBenzathine penicillin\nG 2.4 million units\nIM once per week\nfor 3 wk\nBenzathine. penicillin\nG 2.4 million units\nIM once per week\nfor 3 Wk\nAqueous crystalline\npenicillin G 3-4\nmillion units IV q4h,\nor continuous IV\ninfusion for total\n18-24 million units\nper day, for 10-14\ndays\nProcaine penicilin 2.4\nmillion units IM daily\nplus probenecid\n500 mg Po qid,\nboth for 10-14 days\nPENICILLIN-\nALLERGIC\nPATIENTS\nDoxycycline 100 mg\nPO bid for 2 wk\nTetracycline 500 mg\nPO qid for 2 wk\nDoxycycline 100 mg\nPO bid for 28\ndays\nTetracycline 500 mg\nPo qid for 28\ndays\nConsult infectious\ndisease specialist"
+            },
+            {
+              "slide_num": 82,
+              "text": [
+                "Syphilis treatment 追蹤",
+                "成功治療定義: RPR/VDRL變成陰性或濃度下降到4倍以上",
+                "治療無效定義 : 治療六個月之後, VDRL降不到4倍以下",
+                "重新驗HIV",
+                "考慮neurosyphilis, 抽CSF來檢查",
+                "重新給予每周的Penicillin G注射 *3周(除非neurosyphilis已經確認)",
+                "再度感染或復發定義: RPR/VDRL重新上升4倍以上"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss82.webp",
+              "hidden": false,
+              "ocr_text": "Syphilis treatment 追蹤\n•成功治療定義：RPR/VDRL變成陰性或濃度下降到4倍以上\n•治療無效定 義：治療六個月之後,VDRL降不到4倍以下\n•重新驗HIV\n•考慮neurosyphilis，抽CSF來檢查\n•重新給予每周的PenicillinG注射 *3周(除非neurosyphilis 已經確認）\n•再度感染或復發定義：RPR/DRL重新上升4倍以上"
+            },
+            {
+              "slide_num": 83,
+              "text": [
+                "Chancroid (軟性下疳 )",
+                "病原體: Haemopilus ducreyi (GNB)",
+                "發展中國家性工作者,已開發國家不常見",
+                "潛伏期2-3 days",
+                "Lesion",
+                "疼痛性ulcer單個或多個",
+                "LAP: 局部,非對稱性, 有壓痛, 化膿",
+                "診斷:culture",
+                "不治療的話，一到三週會自然緩解，不過會產生有痛性的淋巴腫大",
+                "沒割過包皮/HIV患者可能治療效果不佳",
+                "Treatment",
+                "Ceftriazone 1g IM once or",
+                "Azithromycin 1g PO once"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss83.webp",
+              "hidden": false,
+              "ocr_text": "Chancroid （軟性下疳）\n•病原體：Haemopilus ducreyi (GNB)\n•發展中國家性工作者,已開發國家不常見\n•潛伏期2-3 days\n•Lesion\n•疼痛性ucer單個或多個\n•LAP:局部,非對稱性，有壓痛，化膿\n•診斷:culture\n•不治療的話，一到三週會自然缓解，不\n過會產生肴痛性的淋色庫天\n•沒割過包皮/HV患者可能治療效果不佳\n•Treatment\n•Ceftriazone 1g IM once or\n• Azithromycin 1g Po once"
+            },
+            {
+              "slide_num": 84,
+              "text": [
+                "Lymphogranuloma Venereum (LGV)",
+                "Pathogen: Chlamydia trachomatis中特別的三個type L1/L2/L3(與常造成urethritis的Chlamydia type不同)",
+                "潛伏期3 to 30 days",
+                "Lesion",
+                "不痛的小水泡漸漸演變成ulcer, 痊癒之後2-4週才會形成會痛的LAP",
+                "LAP: 大而痛, 單一側, 可能有fistula tract，伴隨化膿, 會形成groove sign",
+                "MSM(male to male sex)病人可能會有proctitis, 可能會變成colorectal fistula or stricture",
+                "3 stages",
+                "Stage I: ulcer\u000bStage II LAP (男>女)\u000bStage III colorectal fistula/stricture\u000b                象皮病",
+                "治療：Doxycycline 100mg BID * 21 days",
+                "Groove sign"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss84.webp",
+              "hidden": false,
+              "ocr_text": "Lymphogranuloma Venereum\n(GV\n•Pathogen: Chlamydia trachomatis中特别的三個type L1/L2/L3(\n造成urethritis的Chlamydia type不同)\n•落茯期31o-50 davs\n•Lesion\n•不痛的小水泡漸漸演變成ulcer，痊癒之後2-4週才會形成會痛的LAP\n•LAP:大而痛，單一側，可能有tistula tract • 伴隨化膿，會形成groove sign\n• MSM(male to male sex)病人可能會有proctitis，可能會變成colorectal\nfistula or stricture\nGroove sign\n•3 stages\n•Stage l:ulcer\nStage !!LAP (男>女，\nStage iil colorectal fistula/stricture\n象皮病\n•治療：Doxycycline 100mg B1D * 21 days"
+            },
+            {
+              "slide_num": 85,
+              "text": [
+                "Condyloma acuminata(尖形濕疣/菜花)",
+                "Pathogen: HPV(human papillomavirus), 雙股DNA virus",
+                "90%由HPV types 6及11造成(不易變成cancer), 主要是sexual contact",
+                "@會造成anal cancer/cervical cancer的是HPV 16, 18, 31, 33, 34, 35, 45",
+                "HPV 6/11潛伏期: 幾週至數年(平均三個月)",
+                "診斷: 肉眼即可診斷, 若有非典型外觀, 出血, 色素沈澱或治療無效可考慮biopsy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss85.webp",
+              "hidden": false,
+              "ocr_text": "Condyloma acuminata(尖形濕疣/菜花）\n•Pathogen: HPV(human papillomavirus),\n雙股DNA virus\n•90%由HPV types 6及11造成(不易變成\ncancer), 主要是sexual contact\n@會造成anal cancer/cervical cancer的\n是HPV 16, 18, 31,33,34, 35, 45\n•HPV 6/11潛伏期：幾週至數年（平均三\n個月）\n•診斷：肉眼即可診斷，若有非典型外觀\n，出血，色素沈澱或治療無效可考慮\nbiopsy\n- Condyloma\n- Pearly penile\npapules"
+            },
+            {
+              "slide_num": 86,
+              "text": [
+                "Condyloma acuminata 治療與預防",
+                "治療: 外用藥膏, 局部治療(手術切除, 冷凍, 雷射/電燒, 光動力, 免疫治療, 干擾素...)",
+                "預防: HPV vaccine",
+                "9價疫苗: 預防HPV 6, 11, 16, 18, 31,33, 45, 52, 58 型的感染",
+                "4價疫苗: Gardasil, Merk (HPV 6,11,16,18), 三劑 0-2-6 month",
+                "FDA 同時可用在男女性 9-26歲",
+                "會在male被建議是因為: 可以預防anal cancer和 genital warts",
+                "2價疫苗: Cervarix, GSK (HPV 6,11), 三劑 0-1-6 month",
+                "女性9歲以上就可以打"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss86.webp",
+              "hidden": false,
+              "ocr_text": "Condyloma acuminata 治療與預防\n•治療：外用藥膏，局部治療(手術切\n除,冷凍 雷射/電燒，光動为，免疫\n浴療，午擾素…)\n•預防：HPV vaccine\n•9價疫苗：預防HPY 5, 11,16,18,\n31,33,45,52，58 型的感染\n•4價疫苗：Gardasil, Merk (HPy\n5,11,15,18)，三劑 0-2-6 month\n•FDA 同時可用在男女性9-26\n歲\n•會在male被建議是因為：可\n以預防anal cancer和 genital\nwarts\n•2價疫苗：Gervarix, GSK (HPV\n6,11)，三劑0-1-6 month\n•女性9歲以上就可以打\n方式\n治痍建議\n㑤 註\n患者自\nPodophyllotoxin ( Podofilox )\n洁除率 45%~77%\n行外用 0.5%（化绕敵 Wartec）早晚塗 復發率 38%~65%\n抹，迪續使用3天後，停藥4\n天，最多 4療程，建議濕疣面積\n≤10cm2 且每劑量不超過 0.5ml\nImiauimod 3.75% or 5% cream\n渚除率\n（樊得美 Aldara）每周塗抹 356%~84.5%\n次，最多1周\n復發率 13%~16%\nSinecatechins 10% or 15%  清除率 40%~58%\nointment (VEREGEN）每天塗抹 復發率 6%~10%\n3次，最多1周\n5-Fluorouracil 5% cream 每天塗 清除率 10%~50%\n抹1~2次（已停產）\n復發率 50%\n局部治| 手術切除 (For large pedunculated  清除率 72%\n療\nor atypical lesions)\n復發率 19%~29%\n低溫冷凍（Cryotherapy）每周 1 清除率79%~88%\n次，通常需 12周療程\n復發率 25%~40%"
+            },
+            {
+              "slide_num": 87,
+              "text": [
+                "Donovanosis (granuloma inguinale)",
+                "Pathogen: Klebsiella granulomatis (GNB).感染造成",
+                "已經很少見, 潛伏期約50 天",
+                "診斷標準: 會有Donovan body(dark staining==> cytoplasm of macrophage裡面有inclusion of bacteria)",
+                "The disease manifests as painless, slowly progressive ulcers on the genitals and perineum.",
+                "Despite the name, inguinal involvement is uncommon (10%)",
+                "Doxycycline 100 mg BID 至少三周以及到lesion完全不見"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss87.webp",
+              "hidden": false,
+              "ocr_text": "Donovanosis (granuloma inguinale)\n• Pathogen: Klebsiella granulomatis (GNB).感染造成\n•已經很少見,潛伏期約50天\n•診斷標準：會有Donovan body(dark staining==>cytoplasm\nofmacrophage裡面有inclusion of bacteria)\n•The disease manifests as painless, slowly progressive uicers\non the genitals and perineum.\n•Despite the name, inguinal involvement is uncommon\n(10%）\n•Doxvcycline 100 mg B1D 至少三周以及到lesion完全不見"
+            },
+            {
+              "slide_num": 88,
+              "text": [
+                "Monkeypox（猴痘）",
+                "Pathogen: 人畜共通傳染病，痘病毒科Poxviridae，與天花病毒同科",
+                "第二類法定傳染性疾病",
+                "傳染途徑: 人與動物之間（如接觸受感染的囓齒類、靈長類動物）",
+                "人與人之間：皮膚傷口或黏膜接觸; 體液、飛沫、長時間密切接觸; 性接觸",
+                "臨床表現",
+                "前驅期（發燒前1–3天）：發燒、寒顫、頭痛、肌肉痛、倦怠、明顯淋巴結腫大（天花沒有LAP）",
+                "出疹期：常先出現在臉部與四肢，再擴散至身體其他部位",
+                "紅斑 → 丘疹 → 水泡 → 膿疱 → 結痂 → 脫落",
+                "(疹子數量可多可少，可能集中在生殖部位)",
+                "接種第1劑猴痘疫苗14天後,對疾病的保護力僅有約4成至8",
+                "成,而完成接種2劑疫苗後,則可高達9成保護力。"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss88.webp",
+              "hidden": false,
+              "ocr_text": "Monkeypox（猴痘）\n•Pathogen：人畜共通傳染病，痘病毒科Poxviridae，與天花病毒同科\n•第二類法定傳染性疾病\n•傳染途徑：人與動物之間（如接觸受感染的囓齒類、靈長類動物）\n•人與人之間：皮膚傷口或黏膜接觸;體液、飛沫、長時間密切接觸;性接觸\n•臨床表現\n前驅期（發燒前1-3天）：發燒、寒顫、頭痛、肌肉痛、倦怠、明顯淋巴\n結腫大（天花沒有LAP）\n出疹期：常先出現在臉部與四肢，再擴散至身體其他部位\n紅斑 夕丘疹＞水泡 ＞膿疱 ＞結痂 ＞脫落\n（座子數量可多可少，可能集中在生殖部位）\n接種第1劑猴痘疫苗14天後,對疾病的保護力僅有約4成至8\n成,而完成接種2劑疫苗後,則可高達9成保護力。"
+            },
+            {
+              "slide_num": 89,
+              "text": [
+                "Molluscum Contagiosum傳染性軟疣",
+                "Pathogen: Pox virus, 雙股DNA",
+                "3-5mm的紅疹,central depression pattern",
+                "HIV的病患會特別嚴重",
+                "診斷: skin biopsy, 會看到molluscum body",
+                "不需要治療，會自然痊癒",
+                "積極治療可以考慮laser, 冷凍...藥膏",
+                "Condylomata Lata 扁平濕疣 – syphilis",
+                "Condyloma acuminata 尖形濕疣 – HPV",
+                "Molluscum Contagiosum傳染性軟疣 – pox",
+                "DNA virus: 細小病毒、乳突病毒、腺病毒、痘病毒、 皰疹病毒、B肝病毒",
+                "(記憶: 小乳腺痘皰B)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss89.webp",
+              "hidden": false,
+              "ocr_text": "Molluscum Contagiosum傳染性軟疣\n•Pathogen: Pox virus, 雙股DNA\n•3-5mm的紅疹,central depression pattern\nDNA virus:細小病毒、乳突病毒、腺病毒\n、痘病毒、皰疹病毒、B肝病毒\n(記憶：小乳腺痘皰B)\n•HIv的病患會特別嚴重\n•診斷：skin biopsy,會看到molluscum body\nCondvlomata Lata 扁平濕疣-syphili's\n•不需要治療，會自然痊癒\nCondyloma acuminata 尖形濕疣-Hpv\nMolluscum Contagiosum傳染性軟疣一pox\n•積極治療可以考慮laser，冷凍．.藥膏"
+            },
+            {
+              "slide_num": 90,
+              "text": [
+                "Genital ulcers/lesion 表現整理",
+                "記憶:",
+                "Primary syphilis, LGV, Donovanosis 水泡不痛",
+                "Herpes水泡會痛, Chancroid 水泡會痛會化膿",
+                "LAP: 只有梅毒不痛, LV會鑽洞(fistula)",
+                "有G的才有全身症狀",
+                "- G在前面(genital herps)有primary lesion 就有症狀",
+                "- G 在後面(LymphoGranuloma) 在genital lesion結束後才有症狀"
+              ],
+              "hidden": false,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss90.webp",
+              "ocr_text": "Genital ulcers/lesion 表現整理\nTABLE 15-3 Genital Uicer Disease\nDISEASE\nLESIONS\nLYMPHADENOPATHY\nSYSTEMIC SYMPTOMS\nPrimary syphilis\nGenital herpes\nPainless, indurated, with a clean base,\nNontender, rubbery, nonsuppurative\nusually singular\nbilateral lymphadenopathy\nPainful vesicles, shallow, usually multiple Tender, bilateral inguinal adenopathy\nNone\nChancroid\nPresent during primary\ninfection\nNone\nLymphogranuloma\nTender papule, then painful, undermined\npurulent uicer, single or muitiple\nSmall, painless vesicle or papule\nprogresses to an ulcer\nTender, regional, painful, suppurative\nnodes\nPainful, matted, large nodes with fistulous\nPresent after genital\ntracts\nlesion heals\n記憶：\nPrimary syphilis, LGV, Donovanosis 水泡不痛\nHerpes水泡會痛，Chancroid 水泡會痛會化\n膿\nLAP：只有梅毒不痛，LV會鑽洞(fistula)\n有G的才有全身症狀\n-G在前面(genital herps) 有primary lesion 就\n有症狀\n-G 在後面(LymphoGranuloma) 在genital\nlesion結束後才有症狀"
+            }
+          ]
+        },
+        {
+          "id": "t12",
+          "title": "HIV",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 91,
+              "text": [
+                "HIV概論",
+                "HIV-1 傳播較為廣泛且毒性較強",
+                "HIV 病毒表面為脂質雙層構造, 上面佈滿許多gycloprotein，為gp120 及gp41 組成, 是病毒可以入侵細胞的重要構造",
+                "HIV透過血液、精液、陰道液或母乳傳染。",
+                "包皮環切可以降低異性戀者HIV感染風險50%",
+                "Autopsy中6~23% AIDS患者kidney中有TB, 多數無症狀"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss91.webp",
+              "hidden": false,
+              "ocr_text": "HIV概論\n•HIV-1傳播較為廣泛且毒性較強\n•HIV病寿表面為脂質雙層構造，上面佈滿許多gycloprotein •為\n3p120及gp41 組成，是病毒可以人侵細胞的重要構造\n•HV透過血液、精液、陰道液或母乳傳染。\n•包皮環切可以降低異性戀者HIV感染風險50%\n•Autopsy中6~23% AIDS患者kidney中有TB，多數無症狀"
+            },
+            {
+              "slide_num": 92,
+              "text": [
+                "Stage 1 (acute stage):",
+                "發生在感染後 2~4 週,表現為流感樣症狀。急性感染期一般症狀包括發燒、喉嚨痛、疲倦、體重下降及肌肉疼痛,難以與一般急性病毒感染做區別。在此階段病毒量高,患者傳播病毒的風險增加,在這一階段,常規的 HIV 抗體檢測通常是陰性的",
+                "高傳染力高病毒量, 驗不到抗體, CD4下降 CD8上升",
+                "Stage 2 (clinical latency, asymptomatic HIV infection or chronic HIV infection):",
+                "又稱潛伏期,在這一階段,病人通常無症狀。特徵 是病毒複製緩慢,根據治療的不同,病毒複製可以持續數年至數十年。",
+                "slow viral replication, 期間檢測血液CD4 大於200cells/mm3",
+                "Stage 3 (AIDS): 又稱發病期。當 CD4 數量低於 200 個細胞/mm3或者是確認為 HIV 感染,並伴隨任一種伺機性感染"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss92.webp",
+              "hidden": false,
+              "ocr_text": "Stage 1 (acute stage):\n發生在感染後 2~4 週,表現為流感樣症狀。急性感染期一般症\n狀包括發燒、喉嚨痛、疲倦、體重下降及肌肉疼痛,難以興一\n般急性病毒慰染做區別。在此階段病毒量高,患者傳播病毒的\n風險增加,在這一階段,常規的 HIV 抗體檢測通常是陰性的\n高傳染力高病毒量，驗不到抗體，CD4下降 CD8 上升\nStage 2 (clinical latency, asymptomatic HIV infection or\nchronic HIV infection):\n又稱潛伏期,在這一階段,病人通常無症狀。特徵 是病寿複製\n緩慢,根據治療的不同,病毒複製可以持續數年至數十年。\nslow viral replication， 期間檢測血液CD4大於200cells/mm3\nStage 3 (AIDS)：又稱發病期。當CD4 數量低於 200 個細胞\n/mm3或者是確認為 HIV 感染,並伴隨任一種伺機性感染"
+            },
+            {
+              "slide_num": 93,
+              "text": [
+                "HIV 檢驗",
+                "NATs (nucleic acid tests) 貴: 適用於stage 1 急性期",
+                "直接測viral load (HIV RNA) test",
+                "Antigen/antibody tests: 適用於stage 2 潛伏期",
+                "篩檢: 第四代系統, 抽血驗 HIV p24 Ag + Ab EIA",
+                "診斷: HIV antibody differentiation assay (區分HIV-1,2)",
+                "已取代western blot作為confirm test",
+                "第四代可以在暴露後2-6周早期診斷,但至少要90天(三個月)檢驗為陰性才可以排除HIV",
+                "Antibody tests",
+                "多做為自我篩檢用途,驗唾液/血液",
+                "Rapid test: 30 分鐘就知道結果"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss93.webp",
+              "hidden": false,
+              "ocr_text": "HIV檢驗\n• NATs (nucleic acid tests) 貴：適用於stage 1急性期\n。直接測virallload (HIV RNA) test\n• Antigen/antibody tests: 適用於stage 2 潛伏期\n。篩檢：第四代系統，抽血驗 HIV pZ4 Ag + Ab EIA\n。診斷： HIV antibody differentiation assay (區分 HIV-1,2)\n。已取代western blot作為confirm test\n。第四代可以在暴露後2-6周早期診斷,但至少要90天(三個月)檢驗\n為陰性才可以排除HIv\nWindow Period\nHIV RNA (plasma)\nHIV-1 p24 Antigen\nHIV Antibody\n• Antibody tests\n。多做為自我節檢用途,驗唾液/血液 muwtuo\n。 Rapid test: 30 分鐘就知道結果\n14\nT\nT\n10 20 30 40 50 60 7080 180360 540 720 Days\n1st Gen. Ab EIA\n2nd Gen. Ab EIA\n3rd Gen. Ab EIA\n4th Gen. HIV p24 Ag + Ab EIA\nNAT Detectable HIV RNA"
+            },
+            {
+              "slide_num": 94,
+              "text": [
+                "HIV treatment",
+                "抗反轉錄病毒療法 (Antiretroviral therapy, ART)開時的時機",
+                "目前是有感染就治療",
+                "以前是有症狀 / CD4<200 / viral load 等因素參考",
+                "Kaposi sarcoma, nHK lymphoma 機率下降",
+                "PC機率上升",
+                "Pre-exposure prophylaxis, PrEP (case control, 非RCT結果)",
+                "2種藥: tenofovir disoproxil fumarate (TDF) 300 mg and emtricitabine (FTC) 200 mg, Truvada(Tenofovir + Emtricitabine)",
+                "服藥七天開始有效",
+                "降低傳染90%以上, 靜脈注射感染亦可,  三個月要抽一次HIV",
+                "吃法:",
+                "每天吃 1# QD",
+                "On demand: 2# 2~24 Hr 前 + 1# 24Hr後 + 1# 48Hr 後",
+                "On demand馬拉松: 2# 2~24 Hr 前 + 1# QD + 1# 24Hr後 + 1# 48Hr 後",
+                "若最後一劑在7天內, 2~24Hr前只要1#",
+                "Post-exposure prophylaxis, PEP (曝處後72小時內投藥, 3種藥, 給28天)",
+                "Tenofovir disoproxil fumarate (TDF) (300 mg) + emtricitibine (FTC) 200 mg) QD\u000b                     +",
+                "Raltegravir (RAL) (400 mg) BID or dolutegravir (DTG) (50 mg) QD"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss94.webp",
+              "hidden": false,
+              "ocr_text": "HIV treatment\n•抗反轉錄病青療法 (Antiretroviraltherapy, ART)開時的時機\n。目前是有感染就治療\n。以前是有症狀 / CD4<200 / viral load 等因素參考\n。Kaposi sarcoma, nHK lymphoma 機率下降\n。PC機率上升\n• Pre-exposure prophylaxis, PrEP (case control， 非RCT結果）\n。2種藥：tenofovir disoproxil fumarate (TDF) 300 mg and emtricitabine (FTC) 200 mg,\nTruvada(Tenofovir + Emtricitabine)\n。服藥七天開始有效\n。降低傳染90%以上，靜脈注射感染亦可，三個月要抽一次HIV\n。吃法：\n•每天吃1# QD\nOn demand： 2# 2~24 Hr 前＋1# 24Hr後+1# 48Hr後\n• On demand馬拉松：2# 2~24 Hr 前＋1# QD+ 1# 24Hr後十1# 48Hr後\n•若最後一劑在7天內，2~24Hr前只要1#\n• Post-exposure prophylaxis, PEP（曝處後72小時內投藥，3種藥，給28天）\no Tenofovir disoproxil fumarate (TDF) (300 mg) + emtricitibine (FTC) 200 mg) QD\n＋\no Raltegravir (RAL) (400 mg) B1D or dolutegravir (DTG) (50 mg) QD"
+            }
+          ]
+        },
+        {
+          "id": "t13",
+          "title": "GU Tuberculosis",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 95,
+              "text": [
+                "GU TB"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss95.webp",
+              "hidden": false,
+              "ocr_text": "GUTB"
+            },
+            {
+              "slide_num": 96,
+              "text": [
+                "GU TB 概論",
+                "Extrapulmonary TB 佔所有TB感染的10%",
+                "GU TB是佔Extrapulmonary TB中20%(第三常見, 僅次於pleura, LN)",
+                "受侵犯的GU organ: kidney (1st, 80%), Epididymis (2nd)",
+                "Immunocompromised的病人(ex: HIV)GU TB比例持續增加",
+                "GU TB 15% 同時合併HIV(25%HIV 死於TB)",
+                "來源: primary lung TB 血行/淋巴過來",
+                "膀胱灌BCG直接感染",
+                "表現",
+                "大部分沒有症狀 (sterile pyuria)",
+                "20%同時有肺結核",
+                "50% LUTS",
+                "30% Hematuria",
+                "Fever, weight loss, night sweating, anorexia <20%",
+                "(最多的不是這些傳統TB的症狀, 比例並不高)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss96.webp",
+              "hidden": false,
+              "ocr_text": "GUTB 概論\n•Extrapulmonary TB 佔所有TB感染的10%\n•GUTB是佔Extrapulmonary TB中20%(第三常見，僅次於pleura, LN)\n•受侵犯的GU organ: kidney (1$, 80%), Epididymis (2nd)\n•Immunocompromised的病人(ex:HIV)GU TB比例持續增加\n•GU TB 15%同時合併 HIV(25%HIV 死於TB)\n•來源：primary lung TB 血行/淋巴過來\n•表現\n膀胱灌BCG直接感染\n•大部分沒有症狀 (sterile pyuria)\n。20%同時有肺結核\n• 50% LUTS\n• 30% Hematuria\n•Fever, weight loss, night sweating, anorexia <20%\n（最多的不是這些傳統TB的症狀，比例並不高）"
+            },
+            {
+              "slide_num": 97,
+              "text": [
+                "GU TB organ involvement",
+                "Kidney: 最常見, 會造成renal papillae和calyx tissue fibrosis, 之後腎臟變小萎縮, 最終會autonephrectomy(30%)(2 types: shrunken fibrotic or enlarged caseous filled sac)",
+                "Ureter: 通常會產生ureteral stricture造成hydronephrosis",
+                "Bladder: Dome 最常見,感染在UVJ/UO附近可能會VUR, UO會Golf hole appearance, 膀胱壁會有ulceration或tubercles(yellow lesions)",
+                "Epididymis: 在小孩來自血行性傳染, 成人來自GU tract, 會摸到beaded cord(vas infection), epididymal induration",
+                "Testis: 通常來自epidydimis，可能導致不孕",
+                "Prostate and SV: DRE會覺得變硬, 可能產生LUTS",
+                "(肉芽腫性prostatitis=> 通常是BCG/surgery related,很少是systemic TB)",
+                "A “golf-hole” ureter orifice is suggestive of tuberculosis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss97.webp",
+              "hidden": false,
+              "ocr_text": "GUTB organ involvement\nautonephrectomy(30%)(2 types: shrunken fibrotic\nor enlarged caseous filled sac)\n•Ureter:通常會產生ureteral stricture造成\nhydronephrosis\n•Bladder:Rome 最常見,感染在Uv!/ O附近可能會\nVUR, UO會goif hole appearance,膀胱壁會有\nuiceration或tubercles(yellow lesions)\n•Epicidympis在小孩來自血行性傳染，成人來自GU\ntract, 會摸到beaded cord(vas infection),\nepididymal induration\n•Testis:通常來自epidvdimis，可能導致不孕\n•Prostate and sV: DRE會覺得彎硬，可能產生LUTS\n（肉芽腫性prastatitis=>通常是BCG/surgery\nrelated,很少是systemic TB)\nG\nA\"golf-hole\" ureter orifice\nis suggestive of tuberculosis"
+            },
+            {
+              "slide_num": 98,
+              "text": [
+                "GU TB survey",
+                "U/A,U/C: sterile pyuria",
+                "3套晨間第一泡尿送acid fast stain和TB culture: Gold standard",
+                "+/- urine NAAT for TB",
+                "+/- GU tract tissue biosy(cystoscopy/URS) for TB",
+                "CXR, sputum culture acid fast stain and TB culture",
+                "確定有GU TB感染後要做image(Gold standard: IVU/CT)去看GU organ involve的狀況"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss98.webp",
+              "hidden": false,
+              "ocr_text": "GUTB survey\n•U/A, U/C: sterile pyuria\n•3套晨間第一泡尿送acid fast stain 和TB culture: Gold standard\n•+/-urine NAAT for TB\n•+/- GU tract tissue biosy(cystoscopy/URS) for TB\n•CxR, sputum culture acid fast stain and TB culture\n•確定有GU TB感染像要做image(Gold standard: NU/CT)去看\n6U organ invaive的狀沅"
+            },
+            {
+              "slide_num": 99,
+              "text": [
+                "2",
+                "3",
+                "KUB:",
+                "Kidney autonephrectomy",
+                "Putty-like (油灰狀) calcification forming a lobar cast - 1",
+                "IVU:",
+                "moth (蛾) eaten appearance of calyx - 2",
+                "(calyceal erosion)",
+                "Phantom (魅影) calyx - 3",
+                "(infundibular stenosis)",
+                "1",
+                "GU TB image finding"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss99.webp",
+              "hidden": false,
+              "ocr_text": "1\n2\nGUTB\nimage\nfinding\nB\n33\nKUB:\nKidney autonephrectomy\nPutty-like(油灰狀）\ncalcification forming a\nllobar cast - 1\n87 kVp\n3.65 mA\nIvU:\nmoth（蛾）eaten\nappearance of calyx - 2\n(calyceal erosion)\nPhantom（魅影）calyx-3\n(infundibular stenosis)"
+            },
+            {
+              "slide_num": 100,
+              "text": [
+                "4",
+                "5",
+                "UPJ: Kerr's kink (hiked-up renal pelvis) - 4",
+                "Ureter: Pipe-stem – 5",
+                "Ureter: Beaded corkscrew (nodular fibrosis) - 6"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss100.webp",
+              "hidden": false,
+              "ocr_text": "4\nUPJ:Kerr's kink\n(hiked-up renal\npelvis) - 4\n5\nureter: Pipe-stem -5\nBeaded / Corkscrew ureter\nFusion of multiple strictures may\ncreate a long, irregular narrowing.\nSeveral nonconfluent strictures can\nproduce a “beaded” or \"corkscrew/\"\nureter\nUreter: Beaded corkscrew\n(nodular fibrosis) -6\nmucosal thickening of ureter"
+            },
+            {
+              "slide_num": 101,
+              "text": [
+                "GU TB- Treatment",
+                "Standard 6 months (HRZ *2 + HR *4)",
+                "First 2 months",
+                "INH (Isoniazid) + Rifampicin(腎功能不需要調劑量)+ PZA (Pyrazinamide)",
+                "Ethambutol: for drug resistant, 一開始會加上去, 如果HRZ有效就會停掉",
+                "PZA可用來治療廣泛性抗藥性",
+                "Additional 4 months :  INH + Rifampicin",
+                "+ Pyridoxine (Vit . B6) administration (INH會peripheral neuropathy)",
+                "Pregnancy: HER*9 months (不能用PZA)",
+                "Surgery: 看各器官產生什麼併發症再決定要怎麼手術, 如有需要手術治療，開始用藥後的 4-6週是手術時間的最佳選擇，因為可以細菌量下降及病兆發炎情形相對穩定。",
+                "HRZ 都有肝毒性",
+                "H有neuropathy (INH) N",
+                "E有眼睛問題(視力,紅綠辨識)",
+                "R有flu like s/s(reFampin) F",
+                "Z有rash, hyperuricemia, GI",
+                "HIV (+)病人 不可以用Rafampin / Rifapentine",
+                "改用Rifabutin"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch10_infection/render/ss101.webp",
+              "hidden": false,
+              "ocr_text": "GUTB- Treatment\n• Standard 6 months (HRZ *2 +HR*4)\n• First 2 months\n•INH (lsoniazid) + Rifampicin(腎功能不需要調劑量)+ PZA (Pvrazinamide)\n•Ethambutol:for drus resistant，一開始會加上去，如果HRZ有效就會停掉\n• PZA可用來治療廣泛性抗藥性\n• Additional 4 months : INH + Rifampicin\n•+ Pyridoxine (Vit . B6) administration (INH會peripheral neuropathy)\n•Pregnancy: HER*g months （不能用PZA)\n•Surgery：看各器官產生什麼併發症再決定要怎麼手術，如有需要手術治\n療，開始用藥後的 4-6週是手術時間的最佳選擇，因為可以細菌量下降\n及病兆發炎情形相對穩定。\nHRZ 都有肝责性\nH有neuropathy (INH) N\nE有眼睛問題(視力,紅綠辨識）\nHIV(+)病人 不可以用Rafampin / Rifapentine\n改用Rifabutin\nR有flu like s/s(reFampin) F\nZ有rash,hyperuricemia, Gl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2446 @@
+{
+  "id": "tb_01",
+  "number": "I",
+  "title": "結石",
+  "icon": "🪨",
+  "sections": [
+    {
+      "id": "tb_01_01",
+      "title": "結石疾病",
+      "source_file": "1-1 結石疾病 (2022).pptx",
+      "total_slides": 76,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "臨床表現與鑑別診斷",
+          "slide_count": 2,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "Acute flank pain D/D and survey",
+                "D/D:",
+                "Ureter stone - sudden, colicky, radiation to groin -> 50%",
+                "Other urological cause:",
+                "Ureter UC or blood clot obstruction",
+                "UPJO",
+                "Testicular torsion(referred pain)",
+                "Infection: APN, pyonephrosis, EPN - often with fever/sepsis",
+                "Non-urological cause:",
+                "CV: AMI, leaking abdominal aortic aneurysm (AAA) - pulsatile mass?",
+                "OBS/GYN:  twisted ovarian cyst, ectopic pregnancy",
+                "GI: Acute appendicitis/peritonitis, Diverticulitis, peptic ulcer, Ileus, IBD",
+                "NS: prolapsed intervertebral disc",
+                "Derma: herpes zoster",
+                "Survey:",
+                "Hx: “colicky, 坐立不安”->stone, “不敢移動”->peritonitis/appendicitis,",
+                "fever? hematuria?, scrotal pain? pregnancy hx?, HIVD hx?, GI hx?",
+                "PE: abd muscle guarding?, torsion test, palpable pulsatile abd mass?",
+                "Lab: U/A, U/C, pregnancy test(年輕女性), basic blood test",
+                "Image: renal echo, KUB, +/- A+P CTU, image of other system if needed"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s02.webp",
+              "hidden": false,
+              "ocr_text": "Acute flank pain D/D and survey\nD/D:\n• Ureter stone -sudden, colicky, radiation to groin -> 50%\n•Other urological cause:\n• Ureter UC or blood clot obstruction\n•Upo\n• Testicular torsion(referred pain)\n• Infection: APN, pyonephrosis, EPN - often with fever/sepsis\n• Non-urological cause:\n•CV:AMl, leaking abdominal aortic aneurysm (AAA) - pulsatile mass?\n•OBS/GYN: twisted ovarian cyst, ectopic pregnancy\n• Gl: Acute appendicitis/peritonitis, Diverticulitis, peptic ulcer, lleus, IBD\n• NS:prolapsed intervertebral disc\n•Derma: herpes zoster\nSurvey:\n•Hx: “colicky，坐立不安”二stone，〞不敢移動”-=peritonitis/appendicitis,\nfever? hematuria?, scrotal pain? pregnancy hx?, HIVD hx?, Gl hx?\n•PE:abd muscle guarding?, torsion test, palpable pulsatile abd mass?\n•Lab:U/A, U/C, pregnancy test(年輕女性),basic blood test\n•Image: renal echo. KuB. +/-A+P CTU.image of other svstem if needed"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "Chronic flank pain D/D and survey",
+                "D/D:",
+                "Renal stone, ureter stone(卡住久了變得沒那麼痛)",
+                "Other urological cause:",
+                "Cancer: RCC, renal pelvis UC, testis ca(referred pain)",
+                "UPJO",
+                "VU reflux",
+                "Infection: chronic pyelonephritis, XPGN, renal TB",
+                "Non-urological cause:",
+                "GI: bowel cancer, liver disease",
+                "NS: HIVD, spine degeneration, spine metastasis",
+                "Rehab: 肌肉筋膜拉傷",
+                "Survey:",
+                "Hx: fever? hematuria?, weight loss?, bone pain?, HIVD hx?, GI hx?",
+                "PE: tender point?(stone not likely), scrotal mass?",
+                "Lab: U/A, U/C, urine cytology, basic blood test",
+                "Image: renal echo, KUB, +/- A+P CTU, image of other system if needed"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s03.webp",
+              "hidden": false,
+              "ocr_text": "Chronic flank pain D/D and\npEsurvey\n•Renal stone, ureter stone(卡佳久了變得沒那麼痛）\n•Other urological cause:\n•Cancer: RCC, renal pelvis UC, testis ca(referred pain)\n•UPo\n•VUreflux\n•Infection: chronic pyelonephritis, XPGN, renal TB\n• Non-urological cause:\n•Gl:bowel cancer, liver disease\n•NS: HIVD, spine degeneration, spine metastasis\n•Rehab:肌肉筋膜拉傷\nSurvey:\n•Hx: fever? hematuria?, weight loss?, bone pain?, HIVD hx?, Gl hx?\n•PE:tender point?(stone not likely), scrotal mass?\n•Lab: U/A, U/C, urine cytology, basic blood test\n•lmage: renal echo, KUB, +/- A+P CTU, image of other system if needed"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "結石形成理論與分類",
+          "slide_count": 18,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 4,
+              "text": [
+                "結石形成理論",
+                "結石種類與分類"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s04.webp",
+              "hidden": false,
+              "ocr_text": "結石形成理論\n結石種類與分類"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "結石形成的三個機制兩個theory",
+                "三個機制",
+                "Supersaturation of urine(過飽和)",
+                "Nucleation, retention and aggregation (晶核化)",
+                "Decreased inhibitor substances(結晶抑制減少)",
+                "兩個theory",
+                "Intraluminal theory - 2 models",
+                "->Free particle model",
+                "->Fixed particle model",
+                "Interstitial theory(Randall’s plaque theory) - 3 hypothesis",
+                "->磷酸鈣沈積hypothesis",
+                "->間質細胞成骨活性hypothesis",
+                "->vasa recta內皮鈣化hypothesis",
+                "Supersaturation",
+                "Nucleation",
+                "Crystal Growth",
+                "Aggregation(Tamms-Horsfall抑制）",
+                "Retention"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s05.webp",
+              "hidden": false,
+              "ocr_text": "結石形成的三個機制兩個theory\n•三個機制\n•supersaturation of urine(過飽和）\nSupersaturation\n•Nucleation, retention and aggregation (晶核化） Nucleation\n• Decreased inhibitor substances(結晶抑制減少）Crystal Growth\nAggregation(Tamms-\nHorsfail抑制）\n•兩個theory\nRetention\n•Intraluminal theory - 2 models\n->Free particle model\n->Fixed particle model\n•Interstitial theory(Randall's plaque theory) -3 hypothesis\n>磷酸鈣沈積hypothesis\n>間質細胞成骨活性hypothesis\n-=vasa recta内皮鈣化hypothesis"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "結石形成的三個機制",
+                "Supersaturation of urine(過飽和)",
+                "尿液中的離子(calcium, oxalate)超過一定濃度即使有inhibitor也會形成結晶",
+                "Nucleation, retention and aggregation (晶核)",
+                "晶核(nucleation)形成在epithelium surface或collecting tube的lumen, 滯留後聚集在一起",
+                "Decreased inhibitor substances(結晶抑制)",
+                "Inhibitor可以抑制nucleation也可以抑制aggregation",
+                "包含: 口訣: NTU-CPM Z (喵~)",
+                "Nephrocalcin: inhibit Ca. oxalate, from proximal renal tubules and thick ascending limb （有四種isoform)",
+                "Tamm-Horsfall protein: inhibit Ca. oxalate monohydrate(抑制aggregation沒有抑制growth)",
+                "Uropontin/Osteopontin",
+                "Citrate: inhibit Ca. Oxalate, Ca. Phosphate",
+                "(機制: 直接與鈣結合, 搶走鈣)",
+                "Pyrophosphate",
+                "Mg",
+                "Zinc",
+                "Matrix (角色未定)",
+                "結石的非結晶性成分稱為基質(matrix)，是由粘蛋白(mucoprotein)，蛋白質，碳水化合物和結石抑制劑(urinary inhibitor)所組成"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s06.webp",
+              "hidden": false,
+              "ocr_text": "結石形成的三個機制\n•Supersaturation of urine(過飽和）\n•尿液中的離子(calcium, oxalate)超過一定濃度即使有inhibitor也會形成結晶\n• Nucleation, retention and aggregation （晶核）\n•晶核(nucleation)形成在epithelium surface或collecting tube的lumen，滞留後\n聚集在一起\n•Decreased inhibitor substances(結晶抑制）\n•lnhibitor可以抑制nucleation也可以抑制aggregation\n•包含：口訣：NTU-CPMZ(喵～)\n•Nephrocalcin: inhibit Ca. oxalate, from proximal renal tubules and thick\nascending limb（有四種isoform)\n•Tamm-Horsfall protein: inhibit Ca. oxalate monohydrate(抑制aggregation\n沒有抑制growth)\n• Uropontin/Osteopontin\n•Citrate: inhibit Ca. Oxalate, Ca. Phosphate\n(機制：直接與鈣結合，搶走鈣）\n•Pyrophosphate\n•Mg\n•Zinc\n•Matrix(角色未定）\n•結石的非結晶性成分稱為\n基質(matrix），是由粘蛋白\n(mucoprotein)•蛋白質，\n碳水化合物和結石抑制劑\n(urinary inhibitor)所組成"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Intraluminal theory",
+                "Free/Fixed particle model",
+                "Free particle model",
+                "Super-saturation of stone-forming salts [超飽和]",
+                "Nucleation in the lumen of the nephron [小管內晶核化]",
+                "Crystal growth, aggregation [晶體聚合]",
+                "Fixed particle model",
+                "Crystal in lumen adhere to luminal renal tubular cells [晶體接合]",
+                "Induces renal cell injury [自由基造成腎細胞受傷]",
+                "Formation of a fixed nuclei [固定晶核]",
+                "Interacts with the super-saturated urinary environment [超飽和環境]",
+                "Crystal growth, stone formation[晶體聚合]",
+                "兩種theory形成的位置在Inner medullary collecting ducts (IMCD)或Ducts of Bellini (BD)",
+                "做過繞道手術的病人，脂肪吸收較差，總之最後較不會產生rendall plaque，比較是用這種方式形成結晶，直接造成阻塞，引起後續的發炎和纖維化"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s07.webp",
+              "hidden": false,
+              "ocr_text": "營智兒是的收界合a地 lintraluminal theory\n差，總之最後較不會產生rendall\nplaque，比較是用這種方式形成結\n曼和嘉盡港成阻聖，司起後额的發 Free /Fixed particle model\n•Free particle model\n•Super-saturation of stone-forming salts[超飽和]\n• Nucleation in the lumen of the nephron  小管內\n晶核化1\n1Proximal\nTubule\nGlomerulus\n•Crystal growth, aggregation[晶體焣合]\n•Fixed particle model\nS3\n• Crystal in lumen adhere to luminal renal tubular\ncells晶體接合]\nThick\nAsending\nLimb\n•Induces renal cell injury 自由基造成腎細胞受\n傷]\n•Formation of a fixed nuclei 固定晶核]\nVasa\nRecta\n• Interacts with the super-saturated urinary\nThin\nLimb\nInterstitial\nPlaque\nenvironment [超飽和環境]\n•Crystal growth, stone formationl晶體聚合]\nCollecting\nTubule\nDuct of\nBellini\nInner Medullary\nCollecting Duct\n3\n•兩種theory形成的位置在Inner meduilary\ncollecting ducts (IMCD)或Ducts of Bellini (BD)"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Endoscopic examination of the renal papilla",
+                "IMCD stone: suburothelial sites of yellow plaque",
+                "Arrow",
+                "Arrow head",
+                "brushite patient",
+                "Ileostomy patient"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s08.webp",
+              "hidden": false,
+              "ocr_text": "Endoscopic examination of the renal papilla\nIMCD stone: suburothelial sites of yellow plaque\nbrushite patient\nlleostomy patient\nB\nArrow\nArrow head"
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "Endoscopic examination of the renal papilla",
+                "BD stone: dilation of the openings w/wo protruding mineral plugs",
+                "米字",
+                "米字",
+                "米字",
+                "米字",
+                "Ileostomy patient",
+                "Ileostomy patient",
+                "Distal RTA patient",
+                "Distal RTA patient"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s09.webp",
+              "hidden": false,
+              "ocr_text": "Endoscopic examination of the renal papilla\nBD stone: dilation of the openings w/wo protruding mineral plugs\nlleostomy patient\nlleostomy patient\n米字\n米字\nB\nC\nDistal RTA patient\nDistal RTA patient\n米字\n米字"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Interstitial(Randall’s plaque) theory",
+                "磷酸鈣沈積hypothesis",
+                "在Thin limbs of Henle’s loop(亨爾氏環的細枝)的基底膜形成磷酸鈣斑塊calcium phosphate(calcium apatite)",
+                "變成Randall’s plaque",
+                "從interstitium 穿破到urothelium, 成為一個錨點(nidus)",
+                "形成核心, 草酸鈣附著上去, 長大成結石",
+                "一般的"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s10.webp",
+              "hidden": false,
+              "ocr_text": "一般的\nInterstitial(Randall's plaque) theory\n磷酸鈣沈積hypothesis\n•在Thin limbs of Henle's loop(亨爾氏環的細\n枝)的基底膜形成磷酸鈣斑塊calcium\nphosphate(calcium apatite)\n•變成Randal'’s plaque\n•從interstitium 穿破到urothelium，成為一個\n錨點(nidus\n•形成核心，草酸鈣附著上去，長大成結石\nA\nB\nProximal\nS3\nThick\nAsending.\nLimb\nThin\nInterstrtial\nPlaque®\nVasa\nRecta\nInner Medullary\nCollecting Duct\nDuct of\nBellini\nE\nCORTEX\nLoop of Henle\nLoop ot Henl\nMEDULUA\nDistal tubule\nLoop of HenleP)\nPILLA\nUrothelial cells\ncollecting duct\nLoop of Henle\nRandal's\nplaque\nLoop of Henle\nRandal''s\nPlaque\nCaox\nstone\ninterstitial cells\nMacrophages\nPlasma cells\nCollagen fibers\n： Transporters/Channels\no Apatite crystals\n。 osteopontin"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Interstitial(Randall’s plaque) theory間質細胞成骨活性hypothesis",
+                "亨爾氏環內有高濃度的草酸鈣引發局部發炎",
+                "小管上皮細胞分化成間質細胞且而帶有成骨活性",
+                "間質細胞成骨過程形成Randall’s plaque",
+                "從interstitium 穿破到urothelium, 成為一個錨點(nidus)",
+                "形成核心, 草酸鈣附著上去, 長大成結石",
+                "＠支持這個理論是因為骨頭中的蛋白質如osteopontin (OPN) 和 osteocalcin也在斑塊內發現",
+                "‹#›"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s11.webp",
+              "hidden": false,
+              "ocr_text": "Interstitial(Randall's plaque) theory\n間質細胞成肙活性hypothesis\n。亨爾氏環內有高濃度的草酸鈣引發局部發炎\n•小管上皮細胞分化成間質細胞且而帶有成骨活性\n•間質細胞成骨過程形成Randall's plaque\n•從interstitium 穿破到urotheliur，成為一個錨點(nidus)\n•形成核心，草酸鈣附著上去，長大成結石\n@支持這個理論是因為骨頭中的蛋白質如osteopontin (OPN) 和\nosteocalcin也在斑塊內發現\n11"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "靠近腎乳頭附近的血管vasa recta受傷",
+                "血管的修復過程會造成動脈粥樣硬化, 然後血管內皮鈣化",
+                "血管內皮的鈣化Erosion到interstitial space, 形成Randall’s plaque",
+                "從interstitium 穿破到urothelium, 成為一個錨點(nidus)",
+                "形成核心, 草酸鈣附著上去, 長大成結石",
+                "@支持這個理論是因為Low and Stoller 發現結石病人有74%的腎鈣斑，而對照組只有 43%",
+                "Interstitial(Randall’s plaque) theory",
+                "vasa recta內皮鈣化hypothesis",
+                "vasa recta"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s12.webp",
+              "hidden": false,
+              "ocr_text": "Interstitial(Randall's plaque) theory\nvasa recta內皮鈣化hypothesis\n•靠近腎乳頭附近的血管vasa recta受傷\n•血管的修復過程會造成動脈粥檬硬化，然後血\n管內皮鈣化\n•血管内皮的鈣化Erosion到linterstitial space,\n形成Randall's plaque\n•從interstitium 穿破到urothelium，成為一個錨\n點(nidus)\n•形成核心，草酸鈣附著上去，長大成結石\n@支持這個理論是因為Low and Stoller 發現結\n石病人有74%的腎鈣斑，而對照組只有 43%\nvasa recta"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Endoscopic examination of the renal papilla",
+                "Randall’s plaque: white plaque",
+                "Arrow",
+                "Arrow",
+                "Double arrow",
+                "Arrow",
+                "brushite patient",
+                "Ileostomy patient"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s13.webp",
+              "hidden": false,
+              "ocr_text": "Endoscopic examination of the renal papilla\nRandal''s plaque: white plaque\nA\nbrushite patient\nArrow\nDouble\narrow\nlleostomy patient\nArrow\nArrow\nA\nB"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "2017 口試",
+                "給你看一張這樣的圖片?",
+                "試問",
+                "A. 這是什麼構造?",
+                "B. 箭頭所指白色的是啥?",
+                "Randall plaque 的成分?",
+                "Randall plaque 的機轉?",
+                "ESWL後再形成更多new stones formation的原因?",
+                "a) Randall’s plaque (arrows) irregular white areas beneath the urothelium",
+                "A plaque site was noted that lacked a urothelial layer(arrowhead)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s14.webp",
+              "hidden": false,
+              "ocr_text": "2017口試\na) Randall's plaque (arrows) irregular\nwhite areas beneath the urothelium\nA plaque site was noted that lacked a\nurothelial layer (arrowhead)\n•給你看一張這樣的圖片？\n•試問\n•A.這是什麼構造？\n•B.箭頭所指白色的是啥？\n•Randall plaque 的成分？\n•Randall plaque 的機轉？\nA\n•ESWL後再形成更多new stones formation的原因？\nB"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "Stone prevalence and risk factor",
+                "盛行率:  台灣 9.6% / 美國 8.8% (根據NHANES)",
+                "Risk factor(Campbell)",
+                "成年男性是成年女性的2-3倍",
+                "40~60 歲高峰期",
+                "白人1.00 >> 西班牙0.7 > 亞洲0.63 >> 黑人0.44",
+                "肥胖也會增加 renal stone的風險",
+                "女性BMI偏高對結石的發生率比男生還要高",
+                "BMI越高所造成腎臟結石的發生率越高",
+                "BMI 到達30以後，RISK穩定不會隨之升高",
+                "CAD, DM (possible HTN)",
+                "發生原因：20-40% Absorptive hypercalciruia, 15-30% idiopathic low urine PH, 2-15% Hyperoxaluric calcium nephrolithiasis (Infection stone: 1-5%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s15.webp",
+              "hidden": false,
+              "ocr_text": "Stone prevalence and risk factor\n•盛行率：台灣9.6%/ 美國 8.8%（根據NHANES)\n• Risk factor(Campbell)\n•成年男性是成年女性的2-3倍\n• 40~60歲高峰期\n•白人1.00>＞西班牙0.7＞亞洲0.63>>黑10.44\n•肥胖也會增加 renal stone的風險\n•女性BMI偏高對結石的發生率比男生還要高\n•BM越高所造成腎臟結石的發生率越高\n•BM到達30以後，RISK穩定 不會隨之升高\n• CAD, DM (possible HTN)\n發生原因：20-40% Absorptive hypercalciruia, 15-30% idiopathic low\nurine PH, 2-15% Hyperoxaluric calcium nephrolithiasis (Infection stone:\n1-5%)"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Stone type",
+                "Morpho-constitutional classification",
+                "Class I: Calcium oxalate monohydrate/單水草酸鈣(礦石名Whewellite), 依照不同etiology又分成Ia, Ib, Ic, Id, Ie , 比雙水硬",
+                "Class II: Calcium oxalate dihydrate/雙水草酸鈣(礦石名Weddellite), 依照不同etiology又分成IIa, IIb, IIc",
+                "Class III: Uric acid stone, 5-10%",
+                "-IIIa: uric acid anhydrous",
+                "-IIIb: uric acid dihydrate",
+                "-IIIc: uric acid anhydrous/dihydrate + ammonium urate -> 感染性",
+                "-IIId: ammonium urate -> 感染性",
+                "Class IV: Phosphate stone, 10%",
+                "-IVa: Basic calcium phosphate(礦石名 Carbapatite = Apatite =磷灰石)",
+                "-IVb: Basic calcium phosphate + 感染性phosphate stone(ex: 礦石名Carbonate apatite/Whitlockite/Struvite) -> 感染性",
+                "-IVc: 磷酸銨鎂(礦石名Struvite) -> 感染性(staghorn stone最常見成分)",
+                "-IVd: Calcium hydrogen phosphate dihydrate(礦石名Brushite = 鈣磷石)->最硬, ESWL resistant",
+                "Class V: Cystine stone, 1-2%",
+                "Class VI: Protein stone(matrix stone) +/- drug stone(Indinavir, Triamterene…)",
+                "Class VII: Miscellaneous: 包含Xanthine stone, 2-8 Dihydroxyadenine stone",
+                "I + II 共 80-85%",
+                "Comptes Rendus Chimie Volume 19, Issues 11–12, November–December 2016, Pages 1470-1491"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s16.webp",
+              "hidden": false,
+              "ocr_text": "Stone type\nMorpho-constitutional classification\n• 開器b品驶分 r9eTEH恩是果發常酸無理石去whewolte, 依照不\n•S   ,叉男版SHeithydrare/雙水拿酸额(城石各wedtelte.低照不园\nComposition HU +SD\n•Class I: Uric acid stone, 5-10%\n1+11共 80-85%\n-la: uric acid anhydrous\n11.123+254\n844士346\n-lb:uric acid dihydrate\n-l c: uric acid anhydrous/ dihydrate + ammonium urate ->感染性\n-lld:ammonium urate ->感染性\nBrushite\nApatite\nCaoMH\n100-80%\n<80-60%\n<60-50%\nCaoDH\n• Class IV: Phosphate stone, 10%\nCystine\n-Ia: Basic calcium phosphate(礦石名 Carbapatite = Apatite =磷灰石)Uric acid\n-Ib: Basic calcium phosphate ＋ 感染性phosphate stone(ex： 礦石名Carbonate\napatite /whitlockite/Struvite）->感染\n879+230\n769士 295\n717+304\n517+205\n550士74\n338士 145\nESWL resistant\n•Class V: Cystine stone, 1-2%\n• Class V:Protein stone(matrix stone) +/-drug stone(Indinavir, Triamterene..)\n•Class Vl: Miscellaneous: 包含Xanthine stone, 2-8 Dihydroxyadenine stone\nComptes Rendus Chimie Volume 19, Issues 11-12, November-December 2016, Pages 1470-1491"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Class I/II stone",
+                "Calcium oxalate monohydrate",
+                "Calcium oxalate dihydrate",
+                "hourglass"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s17.webp",
+              "hidden": false,
+              "ocr_text": "Class I/ll stone\nhourglass\nCalcium oxdfate monohydrate\nMorphological\nsubtype\nMain\ncomponent\nWhevellite\nStone morphology\nSurface\nSection\nType la\nCalcium oxalate dihydrate\nMorphological\nsubtype\nMain\ncomponent\nHeddellite\nStone morphology\nSurface\nSection\nType lla\nType 1b\nWhevelli\nWeddellite\nType le\nType 1lb\nWhevell\nMeddellite\nType ld\nType Ile\nWhevellite\nType le"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "Class III/IV/V stone",
+                "Phosphate stone",
+                "Uric acid/ammonium urate",
+                "Cystine stone",
+                "needle-shaped",
+                "coffin-lid",
+                "hexagonal",
+                "appatite:\u000bAmorphous"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s18.webp",
+              "hidden": false,
+              "ocr_text": "Uric acid/ammonium urate\ncystine stone\nhexagonal\nMain\ncomponent\nUricacid\nanlydrous\nType illa\nUricacid\nandor\nType illb\nClass Il/IV/ stone\nSurface\nSection\na1\nMorphological\nsubtype\nMain\ncomponent\nCarbapatite\nType Ival\nappatite:\nAmorphous\nCarbapatite\nType IVa2\nSurface\nPhosphate stone\nStone morphology\nSection\nRydrosen\nwrale or\nother urate\nType lllc\nAmmoniam\nhydrogen\nType Illd\nCstine\nType Va\nn\nL\nC\nir\nCistine\nTypeVb\nCarbapatite\nType IVb\ncoffin-lid\nStruvite\nType Ive\nneedle-shaped\nBrushlre\nTvpe lvd\n(eft: initial stage)"
+            },
+            {
+              "slide_num": 19,
+              "text": [
+                "Brushite-needle shaped"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s19.webp",
+              "hidden": false,
+              "ocr_text": "Stone type\nCalcium\noxalate\nmonohydrate\nCalcium\noxalate\ndihydrate\nCalcium\nphosphate\nStruvite\nUricacid\nCystine\nMorphology of Associated Crystals\n(Urine Microscopy)\nDumbbell\nUrinary Risk\nFactor\nHypercalciuria\nHyperoxaluria\nEnvelope (X)\nAs outlined for\ncalcium oxalate\nmonohydrate\nFlat shaped or\nwedge-shaped\nprisms; prisms\noften in rosettes\n•Hypercalciuria\n•Hypocitraturia\n1•Urine pH >7\nCoffin-lid\nHigh levels of\nammonium and\nbicarbonate\nClinical Settings\nHyperparathyroidism,\nimmobilization, vitamin D\nexcess, sarcoidosis, Cushing\nsyndrome, high sodium intake,\ngenetic disorders (eg, Dent\ndisease), idiopathic, etc\n•Increased oxalate absorption\n(eg, bowel pathologies)\n•Primary hyperoxaluria\n•Excess vitamin C intake\nAs outlined for calcium oxalate\n結晶名\n聯想\nWhewellite\nWilliam Whewell\nWeddellite\nJames Weddell （探險家）\nBrushite\nBrush 教授\nWhitlockite\nWhitlock\nStruvite\nStruve（感染相關）\nUrinary tract infections with\nurease-splitting microorganisms\n30Mmy\nBrushite-needle shaped\n30 um\n記憶方式\n單水草酸鈣\n雙水草酸鈣\n雙水磷酸氫鈣\n三鈣磷酸鹽\n鏷+銨＋碳酸亠烕染性結石常見\nRnomboid/\nfootball-shaped;\nmultiple forms\npossible; often\nyellow/brown\nHexagonal\n• Urine pH <5.5\nI Patients with metabolic\n• Hyperuricosuria syndrome, insulin resistance,\ntype-2 diabetes\nCystinuria\nGenetic disorder"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "Stone classified by etiology(EAU)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s20.webp",
+              "hidden": false,
+              "ocr_text": "Stone classified by etiology(EAU)\nNon-infection stones\n• Calcium oxalate\n• Calcium phosphate\n•Uric acid\nInfection stones\n•Magnesium ammonium\nphosphate\n•Highly-carbonated\napatite\n•Ammonium urate\nGenetic causes\n•Cystine\n•Xanthine\n•2,8-Dihydroxyadenine\nDrug stones"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "Stone radiodensity",
+                "Radio-opaque -> KUB看得到",
+                "Calcium oxalate",
+                "Calcium phosphate(>Calcium oxalate)",
+                "Relatively radiolucent -> KUB看得到但模糊",
+                "磷酸銨鎂/Struvite",
+                "Cystine (因為含sulfur)",
+                "Completely radiolucent -> KUB看不到但CT可以",
+                "Uric acid, Ammonium urate",
+                "Xanthine",
+                "2-8 Dihydroxyadenine stone",
+                "Drug stone(Triamterene, Indinavir), Indinavir連CT都看不到, 只能用IVU判斷位置"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s21.webp",
+              "hidden": false,
+              "ocr_text": "Stone radiodensity\n•Radio-opaque-＞KUB看得到\n• Calcium oxalate\n• Calcium phosphate (>Calcium oxalate)\n•Relatively radiolucent ->KUB看得到但模糊\n•磷酸銨鎂/Struvite\n•Cystine（因為含sulfur)\n•Completely radiolucent ->KUB看不到但CT可以\n•Uric acid, Ammonium urate\n• Xanthine\n• 2-8 Dihydroxyadenine stone\n•Drug stone(Triarnterene, Indinavir), Indinavir連CT都看不到,只能\n用IvU判斷位置"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "腎結石評估與治療選擇",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 22,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_h22.webp",
+              "ocr_text": "Chemical name\nCalcium oxalate monohydrate\nCalcium oxalate dihydrate\nBasic calcium phosphate\nCalcium hydroxyl phosphate\nb-tricalcium phosphate\nCarbonate apatite phosphate\nCalcium hydrogen phosphate dihydrate\nCalcium carbonate\nMagnesium ammonium phosphate\nhexahydrate\nMineral name 15]\nChemical formula\nApatite 磷灰石：\nCa(Po.).(E,CL,OHD\nWhewellite\nWeddelite\nApatite\nCarbonate apatite\nCaC204.H20\nCaC204.2H20\nBrushite 鈣磷石\n：CaH(PO.12H.Q\nCao(P0A)6-(OH)2\nCas(POa)g(OH)\nHydroxylapatitie 氫\n氧基磷灰石：\nCa1o(P04)6(OH)2\nWhitlockite\nDahllite\nBrushite\nAragonite\nCas(Po4)2\nCas(POA)30H\nStruvite (magnesium ammonium\nphosphate) 磷酸黑銨：\nNH4MgPO4-6H20\nCaHPO4.2H50\nCacos\nStruvite\nMgNHAPO4.6H20"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Renal stone",
+                "Evaluation and Treatment",
+                "ESWL",
+                "RIRS",
+                "PCNL"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s22.webp",
+              "hidden": false,
+              "ocr_text": "Renal stone\nEvaluation and Treatment\nESWL\nRIRS\nCNL"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Renal stone evaluation",
+                "S/S: flank pain, gross hematuria, recurrent UTI(尤其struvite staghorn)",
+                "U/A: microscopic hematuria +/- pyuria",
+                "(生育年齡女性影像檢查前記得先驗pregnancy test)",
+                "Renal echo + KUB: for screening",
+                "IVU: traditional test, 須考量contrast allergy與腎功能, 已被CT取代, 但仍可診斷連CT也看不到的indinavir stone",
+                "non-contrast CT: gold standard, 可依照HFU判斷可能成分",
+                "MRU: 看不到stone但看的到hydro"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s23.webp",
+              "hidden": false,
+              "ocr_text": "Renal stone evaluation\n• S/s: flank pain, gross hematuria,recurrent UTI（尤其struvite staghorn)\n• U/A:microscopic hematuria +/- pyuria\n(生育年齡女性影像檢查前記得先驗pregnancy test)\n•Renal echo + KUB: for screening\n•NU:traditional test,須考量contrast allery與腎功能，已被CT取代，\n但仍可診斷連CT也看不到的indinavir stone\n•non-contrast CT:gold standard，可依照HFU判斷可能成分\n•MRU：看不到stone但看的到hydro"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "移除腎結石的適應症(EAU)",
+                "stone growth",
+                "易結石復發的病人",
+                "obstruction caused by stones;",
+                "infection;",
+                "symptomatic stones (e.g., pain or hematuria)",
+                "stones > 1.5cm;",
+                "stones < 1.5cm 但無法觀察(特殊職業，例如機師);",
+                "patient preference",
+                "愛考",
+                "可以背一段話:",
+                "結石大小大於1.5cm或者持續增大之病人，以及結石阻塞發生感染，症狀比如說疼痛血尿，或影響腎功能。或者病人狀況不適合追蹤例如職業關係等。最後如病人有意願也可以開"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s24.webp",
+              "hidden": false,
+              "ocr_text": "移除腎結石的適應症(EAU)\n愛考\n•stone growth\n•易結石復發的病人\n• obstruction caused by stones;\n•infection;\n•symptomatic stones (e.g., pain or hematuria)\n• stones ＞ 1.5cm;\n•stones ＜ 1.5cm 但無法觀察(特殊職業，例如機師）;\n• patient preference\n可以背一段話：\n結石大小大於1.5cm或者持續增大之病人，以及結石阻塞發\n生感染，症狀比如說疼痛血尿，或影響腎功能。或者病人狀\n況不適合追蹤例如職業關係等。最後如病人有意願也可以開"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Renal stone treatment(EAU)",
+                "(PNL or RIRS)",
+                "(PNL or RIRS)",
+                "(PNL or RIRS)",
+                "1.steep infundibular-pelvic angle(<45 degree)",
+                "2.long calyx(infundibulum>2.5cm)",
+                "3.long skin-to-stone distance(>10cm);",
+                "4.narrow infundibulum(<5mm);",
+                "5. shock wave-resistant stones (難碎排行榜: Brushite>cystine>單水>matrix>apatite>struvite>雙水, 前四個是EAU認定resistant的, 注意此排名與HFU的排序不同)",
+                "@ Campbell多提到: >1000HU和結構異常(horseshoe因為上面常有腸子, calyceal diverticulum), 考古題多提到>900HU, stone>1cm",
+                "@上述紅字EAU沒提到,補充自其他paper",
+                "infundibular",
+                "pelvic angle",
+                "不願意接受手術的病人若是uric acid stone或cystine stone可以考慮dissolution therapy",
+                "infundibulum窄長抖和太厚"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s25.webp",
+              "hidden": false,
+              "ocr_text": "Renal\nstone\ntreatment =20 mm\n(EAU)\n10-20mm\nKidney stone\nall but lower pole stone 10-20 mm)\n1. PNL\n2. RIRS or SWL\n＜10mm\n•SWLor Endourology*\n(PNL or RIRS)\n1. SWL or RIRS\n2. PNL\n不願意接受手術的病\n人若是uric acid stone\n或cvstine stone可以考\n慮dissolution therapy\nFinfundibulum窄長抖和太厚\n1.steep infundibular-pelvic\nangle(<45 degree)\nz.long calyx(infundibulum>2.5cm)\n3.long skin-to-stone\ndistance (>10cm);\n4.narrow infundibulum (<5mm)；\n5. shock wave-resistant stones （難\n碎排行榜：Brushite>cystine>單水\nmatrixzapatiteastruvite>雙水，\n前四個是EAU認定resistant的，注\n意此排名與HFU的排序不同)\n@ Campbell多提到：>1000HU和\n結構異常(horseshoe因為上面常\n有腸子，calyceal diverticulum)，考\n古題多提到>900HU, stone 1cm\n@上述紅字EAU沒提到,補充自其\n他paper\nLower pole stone\n＞20 mm and < 10 mm: as above\nNo\n10-20mm\nUnfavourable\nfactors for SWL\n(see Table 3.4.5)\nYes\n• SWL or Endourology*\n(PNL Or RIRS)\ntPNL or RIRS\n1. Endourology*\n2. SWL\n-infundibular\npelvic angle\n-> Intundibutar Widht\nntundibular Lenght"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "ESWL",
+          "slide_count": 10,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 27,
+              "text": [
+                "ESWL原理",
+                "體外震波碎石術擊碎結石有哪些機制？",
+                "散裂 Spall fracture",
+                "周圍擠壓 Squeezing-splitting or circumferential compression",
+                "剪力 Shear stress",
+                "超對焦 Superfocusing",
+                "空洞化 Cavitations (氣泡崩解產生局部高能量)",
+                "動態疲勞 Dynamic fatigue",
+                "哪個機制與腎包膜下血腫相關性較高？",
+                "周圍擠壓 Squeezing-splitting or circumferential compression",
+                "空洞化 Cavitations"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s26.webp",
+              "hidden": false,
+              "ocr_text": "ESWL原理\n•體外震波碎石術擊碎結石有哪些機制？\n•散裂 Spall fracture\n•周圍擠壓 squeezing-splitting or circuimferential compression\n•剪力 Shear stress\n。超對焦 superfocusing\n•空洞化 Cavitations （氣泡崩解產生局部高能量）\n•動態疲勞 Dynamic fatigue\n•哪個機制與腎包膜下血腫相關性較高？\n•周圍擠壓 squeezing-splitting or circumferential compression\n•空洞化 Cavitations"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "ESWL 能量種類與代數",
+                "第一代(Donier HM3): 使用electrohydraulic, 使用water bath當介質, 需epidural麻醉",
+                "第二代: 使用electromagnetic或piezoelectric, 使用水袋當介質, 只需局部止痛, 但效果比第一代差",
+                "第三代: 與第二代類似, 能用ultrasound或fluoroscopy更精準的定位石頭, 有些廠牌每一下打的能量也可以調比較強"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s27.webp",
+              "hidden": false,
+              "ocr_text": "ESWL 能量種類與代數\n種類\n優點\nElectrohvdraulic（電 效率高\n液壓)\nElectromagnetic (電\n穩定，電極持久\n磁式）\nPiezoelectric\n(壓電式）\n缺點\n能量不穩定\n電極消耗快\n容易subcapsular\nhematoma\n效果差\n疼痛少\n不用麻醉\n穩定，電極持久\n•第一代(Donier HM3)：使用electrohydraulic，使用water bath當介質，需\nepidurai麻醉\n•第一代：使用electromagnetic或piezoelectric, 使用水袋當介質，只需局部止\n痛，但效果比第一代差\n•第三代：與第二\n-代類似，能用ultrasound或fuoroscopy更精準的定位石頭,\n有些廠牌每一下打的能量也可以調比較強"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "ESWL 基本設定與注意事項",
+                "成人設定：",
+                "Energy level: 5-7kV/下 for renal stone, 5-11kV/下 for ureter stone",
+                "每次治療打幾下: 3000-3500下for renal stone, 3000-4000下for ureter stone",
+                "震波頻率: EAU建議60-90/min(Campbell說<60/min可以減少傷害)",
+                "兒童設定：",
+                "Energy level: 2-4kV/下 for renal stone, 3-5kV/下 for ureter stone",
+                "每次治療打幾下: 2500下for renal stone, 3500下for ureter stone",
+                "震波頻率: EAU建議60-90/min(Campbell說<60/min可以減少傷害)",
+                "建議前100-500下先用低能量去打(成人2-5kV), 再調高到高能量(成人5-7kV)=> ramping protocol",
+                "要適當止痛(口服或局部)避免病人移動或呼吸過大(EAU)",
+                "Abx prophylaxis何時使用: 術前有DBJ(不會減少steinstrasse所以不建議), 感染性石頭, bacteriuria",
+                "Ramping protocol",
+                "60-90/min",
+                "Coupling Gel minimal handling"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s28.webp",
+              "hidden": false,
+              "ocr_text": "ESWL 基本設定與注意事項\n•成人設定：\n•Energy level: 5-7kV/ 下 for renal stone, 5-11kV/下 for\nureter stone\n這些是門診震波的套餐，\n•每次治療打幾下：3000-3500下for renal stone, 3000-\n術前要有的必要檢驗項目\n4000下for ureter stone\n•震波頻率：EAU建議60-90/min(Campbell說<60/min可\n以減少傷害）\n術前需清腸，NPO4小時（可喝\n水及服用血壓藥）（停用抗凝\n血藥物至少七天）\n•兒童設定：\n• Energy level: 2-4kV/下 for renal stone, 3-5kV/下 for\n術後藥物是 buscopan跟止痛\n三天份\nureter stone\n•每次治療打幾下：2500下for renal stone, 3500 下for\n術前必須要有 30日内影像檢查\n(KUBtecho 或IU）\nureter stone\n•震波頻率：EAU建議60-90/min(Campbell說<60/min可\n以減少傷害）\n•建議前100-500下先用低能量去打(成人2-5kV),再調高到\n高能量（成人5-7kV)=>ramping protocol\nCBC,BUN,creative ,PTPTT,PFA\nA-100,常規尿\n•要適當止痛(口服或局部)避免病人移動或呼吸過大(EAU)\n•Abx prophylaxis何時使用：術前有DBi(不會減少\nRamping protocol\n60-90/min\nssteinstrasse 所以不建議)，感染性石頭,bacteriuria\nCoupling Gel minimal handling"
+            },
+            {
+              "slide_num": 30,
+              "text": [
+                "會加重或減輕ESWL傷害的factor",
+                "減輕"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s29.webp",
+              "hidden": false,
+              "ocr_text": "會加重或減輕ESWL傷害的factor\nAGGRAVATING FACTORS\nNumber of shocks\nPeriod of shock wave administration: Shorter period increases\ndamage\nAccelerating voltage: Higher voltage increases damage\nType of shock wave generator: First- versus second/third-\ngeneration devices\nKidney size: Juvenile versus adult\nPreexisting renal impairment\n減輕\nMITIGATING FACTORS\nPretreatment with 100 to 500 shocks at low energy levelto reduce\nlesion size\nTreatment at a slow rate of shock wave delivery (≤60 shocks/min)"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "打不到: skeletal嚴重異常, obesity(Smith: >300磅)",
+                "打到別的東西: 懷孕, arterial aneurysm",
+                "打完後流血: bleeding disorder(治療前24hr及治療後48hr內要compensate)",
+                "打完後感染: uncontrolled UTI",
+                "打完後石頭排不出來: obstruction distal to stone",
+                "ESWL Contraindication(EAU)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s30.webp",
+              "hidden": false,
+              "ocr_text": "ESWL Contraindication(EAU)\n3.4.8.5.\nContraindications of procedures\nContraindications of extracorporeal SWL\nThere are several contraindications to the use of extracorporeal swL, including:\npregnancy, due to the potential effects on the foetus Boz);\n•\nbleeding disorders, which should be compensated for at least 24 hours before and\n48 hours after treatment B08;\n•\n•\nuncontrolled UTIs;\nsevere skeletal malformations and severe obesity, which prevent targeting of the\nstone;\narterial aneurysm in the vicinity of the stone [309);\n•\nanatomical obstruction distal to the stone.\n-打不到：skeletal嚴重異常,obesity(Smith：>300磅）\n-打到別的東西：懷孕,arterial aneurysm\n-打完後流血：bleeding disorder(治療前24hr及治療後48hr內要\ncompensate)\n-打完後感染：uncontrolled UTI\n-打完後石頭排不出來：obstruction distal to stone"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "鳥光單AS爽尿酸"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s31.webp",
+              "hidden": false,
+              "ocr_text": "7. Which of the following is the most difficult stone composition to fragment with\nSWL?\na. Calcium oxalate dehydrate 6\nb. Calcium oxalate monohydrate 3\nc. Struvite 5\nd. Hydroxyapatite 4\ne. Uric acid 7\n鳥光單AS爽尿酸\nBrushite-＞Cystine -＞單水-＞Appatitie->struvite＞雙水＞尿酸\nb. Calcium oxalate monohydrate. Cystine and brushite are the stones most resistant to SWL,\nfollowed by calcium oxalate monohydrate. Next, in descending order, are hydroxyapatite,\nstruvite, calcium oxalate dihydrate, and uric acid stones."
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "ESWL Complications",
+                "Most common: Brushite",
+                "subcapsular, peri-renal",
+                "ESWL後容易出complication(hematoma)的risk factor: 老,胖,凝血異常,DM,CAD,HTN",
+                "腎功能下降",
+                "血尿",
+                ", HTN",
+                "Post-ESWL peri-renal hematoma",
+                "(AAST grade2)",
+                "若ESWL針對遠端輸尿管打的話，病人術後可能出現短暫精子品質下降，3個月左右會恢復（可能因傷到睪丸或精索或者誘發局部發炎與自由基有關"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s32.webp",
+              "hidden": false,
+              "ocr_text": "ESWL Complications\nComplications\nI Related to stone\ntragments\nSteinstrasse\n%\n4-7\nIIntectious\nRegrowth of residual\nfragments\nRenal colic\nBacteriuria in non-\ninfection stones\nSepsis\nRenal\n腎功能下降\n阳尿\nCardiovascular\n21-59\nMost common: Brushite\n12-4\n17.7- 23\nsubcapsular, peri-renal\n1-2.7\nI Tissue effect\nHaematoma symptomatic\n＜1\nHaematoma, asymptomatic 4 - 19\nDvsrhvthmia,HTN\n111-59\nPost-ESWL\nperi-renal\nhematoma\n(AAST grade2)\nMorbid cardiac events\nCase reports\nGastrointestinal\nBowel perforation\nCase reports\nLiver spleen haematoma\nCase reports\n若ESWL針對遠端輸尿管打的話，病人術後可能出現短暫精子品質下隆，3個月左石會恢復（可能因傷到睪丸或精索或者誘發局部發炎\n奥昌由基有𣊫\nESWL後容易出complication(hematoma)的risk factor：老，胖，凝血異常,DM,CAD,HTN"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Repeat ESWL後新增結石",
+                "ESWL後產生新結石成分以磷酸鈣成分中的Brushite最多。",
+                "接受過越多次ESWL，結石為磷酸鈣成分的機率越高",
+                "可能的病理機制",
+                "組織切片發現在renal cortex與papilla有Interstitial fibrosis, tubular atrophy, glomerular obsolescence, and deposition of large amounts of biologic hydroxyapatite in the lumens of inner medullary collecting ducts。",
+                "推測是ESWL對nephron造成傷害, 使nephron失去urine acidification的效果, 使尿液偏鹼, 繼而使環境利於calcium phosphate stone的形成, 再加上上述病理發現, 形成磷酸鈣成分的石頭, 與idiopathic calcium oxalate成因不同。"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s33.webp",
+              "hidden": false,
+              "ocr_text": "Repeat ESWL後新增結石\n•ESWL後產生新結石成分以磷酸鈣成分中的Brushite最多。\n••接受過越多次ESWL，結石為磷酸鈣成分的機率越高\n•可能的病理機制\n•組織切片發現在renal cortex與papilla 有Interstitial fibrosis,\ntubular atrophy, glomerular obsolescence, and deposition of\nlarge amounts of biologic hydroxyapatite in the lumens of inner\nmedullary collecting ducts •\n•推測是ESWL對nephron造成傷害，使nephron失去urine\nacidification的效果，使尿液偏鹼,繼而使環境利於calcium\nphosphate stone的形成，再加上上述病理發現，形成磷酸鈣成\n分的石頭，與idiopathic calcium oxalate成因不同。"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "7.目前有關體外震波碎石術的禁忌(contraindications):[2012]",
+                "(A)孕婦(B)未經治療的出血病變或高血壓心臟病(C)病人身體的畸形或解剖結構異常(D)病人太胖或太小的兒童(E)以上皆是",
+                "102.有關體外震波碎石術的敘述，下列何者「不」正確 [2012]",
+                "(A)震波治療結石，對於腎臟的傷害有如挫傷（Contusion）少數會引起較嚴重的腎臟血腫，多數病人短期內會有血尿及蛋白尿\u000b(B)對於懷孕第3個月的孕婦有腎結石，由於震波不直接對準骨盆腔，因此可施行ESWL治療\u000b(C)震波治療時腎盂壓力會上升，引起尿逆流（reflux）易造成暫時性的尿路感染\u000b(D)有出血傾向或尿路感染的病人，若治療前給予適當的控制，仍可施行ESWL治療\u000b(E)以上皆非"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s34.webp",
+              "hidden": false,
+              "ocr_text": "7.目前有關體外震波碎石術的禁忌(contraindications): 20121\n(A)孕婦(B)未經治療的出血病變或高血壓心臟病(C病人身體的畸形或解剖結\n構異常(D)病人太胖或太小的兒童(E)以上皆是\n102.有關體外震波碎石術的叙述，下列何者「不」正確 12012]\n(A)震波治療結石，對於腎臟的傷害有如挫傷(Contusion ）少數會引起較嚴\n重的腎臟血腫，多數病人短期內會有血尿及蛋白尿\n(B)對於懷孕第3個月的孕婦有腎結石，由於震波不直接對準骨盆腔，因此\n可施行ESWL治療\nS墨波治滑味路孟壓力售上升•引l起尿过济 ( relux） 曷造成雪時性的尿路\n(D)有出血傾向或尿路感染的病人，若治療前給予適當的控制，仍可施行\nESWL治療\n(E)以上皆非"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "腎臟下盞結石的震波碎石廓清率，下列因素較不利於排出，何者除外？",
+                "(A)\t肥胖。",
+                "(B)\t結石超過1公分。",
+                "(C)\tCT上亮度超過900 HU",
+                "(D)\t峽部(infundibulum)長度超過25 mm",
+                "(E)\t以上皆是。",
+                "體外震波碎石術治療引起的腎臟傷害所致的再發腎結石，其成分多為：",
+                "(A)\t單水草酸鈣",
+                "(B)\t磷酸鈣",
+                "(C)\t尿酸",
+                "(D)\t雙水草酸鈣",
+                "(E)\t磷酸氨鎂",
+                "3.腎結石依照結石成分的不同會影響體外震波碎石的成功率，請問以下哪一種成分的結石對於體外震波碎石治療的成功率最高? [2016]",
+                "(A)單水草酸鈣結石(Calcium oxalate monohydrate stone)",
+                "(B)雙水草酸鈣結石(Calcium oxalate dihydrate stone)",
+                "(C)胱胺酸結石(Cystine stone)",
+                "(D)磷酸鈣結石(Calcium phosphate stone)",
+                "(E)基質結石(Matrix stone)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s35.webp",
+              "hidden": false,
+              "ocr_text": "腎臟下盞結石的震波碎石廓清率，下列因素較不利於排出，何者除外？\n•(A)\n肥胖。\n•(B)\n結石超過1公分。\n•(C\nCT上亮度超過9o0HU\n•D)\n峽部(infundibulum)長度超過25 mm\n•(E)\n以上皆是。\n體外震波碎石術治療引起的腎臟傷害所致的再發腎結石，其成分多為：\n•(A)\n單水草酸鈣\n•B)\n磷酸鈣\n•(C)\n尿酸\n•(D)\n雙水草酸鈣\n•（E)\n磷酸氨鎂\n3.腎結石依照結石成分的不同會影響體外震波碎石的成功率，請問以\n下哪一種成分的結石對於體外震波碎石治療的成功率最高？12016]\n•（A)單水草酸鈣結石(Calcium oxalate monohydrate stone)\n•（B)雙水草酸鈣結石(Calcium oxalate dihydrate stone)\n•（C)胱胺酸結石(Cystine stone)\n•（D)磷酸鈣結石(Calcium phosphate stone)\n•（E)基質結石 (Matrix stone)"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "RIRS",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 37,
+              "text": [
+                "RIRS的適應症(參考Oxford)",
+                "ESWL failure",
+                "有ESWL的unfavorable factors",
+                "有ESWL的contraindication",
+                "有PCNL的unfavorable factors",
+                "有PCNL的contraindication",
+                "Patient’s preference"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s36.webp",
+              "hidden": false,
+              "ocr_text": "RIRS的適應症（參考Oxford）\n•ESWL failure\n•有ESWL的unfavorable factors\n•有ESWL的contraindication\n•有PCNL的unfavorable factors\n•有PCNL的contraindication\n• Patient's preference"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "RIRS概論",
+                "作法: 先置放ureteral access sheath, 再走軟式輸尿管鏡, 可以合併雷射和stone basket來清除腎臟內的石頭",
+                "需要全身麻醉來控制呼吸",
+                "Ureteral access sheath:",
+                "長度: 成人36-55cm, 成人男性可選45-55cm, 成人女性可選36cm",
+                "粗細(內徑/外徑): 成人男性可選12/14, 成人女性可選11/13",
+                "腎結石<2cm較適合",
+                "缺點: 手術時間較長",
+                "Intra-renal pressure較高的情況下較易sepsis(>30 mmHg/ 45 cmH2O)",
+                "打碎石頭時有粉塵或傷到腎臟流血容易看不清楚",
+                "ureteral access sheath的complication(ureter stricture, rupture)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s37.webp",
+              "hidden": false,
+              "ocr_text": "RIRS概論\n•作法：先置放ureteral access sheath，再走軟弍輸尿管鏡，可以合併雷射和stone\nbasket來清除腎臟內的石頭\n•需要全身麻醉來控制呼吸\n•Ureteral access sheath:\n•長度：成人36-55cm，成人男性可選45-55cm，成人女性可選36cm\n•粗細(内徑/外徑)：成人男性可選12/14，成人女性可選11/13\n•腎結石<2cm較適合\n•缺點：手術時間較長\nIntra-renal pressure較高的情況下較易sepsis(>30 mmHg/ 45 cmH20）\n打碎石頭時有粉塵或傷到腎臟流血容易看不清楚\nureteral access sheath的complication(ureter stricture, rupture)"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "PCNL",
+          "slide_count": 10,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 39,
+              "text": [
+                "PCNL的適應症與注意事項",
+                "(參考Oxford)",
+                "Indication",
+                "ESWL failure",
+                "有ESWL的unfavorable factors",
+                "有ESWL的contraindication",
+                "RIRS failure",
+                ">3cm stone",
+                "Staghorn stone",
+                "Patient’s preference",
+                "注意事項",
+                "從12th肋骨下緣進入(避免pleural injury),",
+                "從posterior lateral進針(prone姿勢下與水平面約30度,避免傷害post. renal a.)",
+                "入針時, 平行腎盞的路徑進入集尿系統, 減少穿越parenchyma 造成流血",
+                "手術中盡量避免大角度的banding 或 移動, 而造成 parenchyma laceration",
+                "PCNL的unfavorable factors: 肥胖導致skin to stone太遠, Musculoskeletal deformities, horseshoe kidney(因為常有腸子蓋著), pelvic kidney(因為可能有奇怪的血管供應)",
+                "Mini-PCNL常在手術中遇到的瓶頸有哪些? 如何克服?",
+                "因為血流太多手術視野不清楚",
+                "減少建立tract時造成的流血",
+                "困難 Stone extraction with extremely narrow sheaths",
+                "dusting the stone with laser ( low power high frequency)",
+                "suction device over outer sheath",
+                "較難處理較大的腎臟結石, 如staghorn stone",
+                "可嘗試multiple-tract mini PCNL 來處理較複雜的結石"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s38.webp",
+              "hidden": false,
+              "ocr_text": "PCNL的適應症與注意事項\n（參考Oxford)\n•Indication\n•ESWL failure\n•有ESWL的unfavorable factors\n•有ESWL的contraindication\n•RIRS failure\n•≥3cm stone\n•Staghorn stone\n•Patient's preference\nMini-PCNL常在手術中遇到的瓶頸有哪些？如何克服？\n•因為血流太多手術視野不清梵\n•減少建立tract時造成的流血\n•困難 Stone extraction with extremely narrow sheaths\n•dusting the stone with laser ( low power high frequency)\n• suction device over outer sheath\n•較難處理較大的腎臟結石，如staghorn stone\n•可嘗試multiple-tract mini PCNL 來處理較複雜的結石\n•注意事項\n•從12th肋骨下緣進入（避免pleural injury)，\n•從posterior lateral進針(prone姿勢下與水平面約30度,避免傷害post. renal a.)\n•人針時，平行腎盞的路徑進人集尿系統，減少穿越parenchyma 造成流血\n•手術中盡量避免大角度的banding 或 移動，而造成 parenchyma laceration\n•PCNL的unfavorable factors：肥胖導致skin to stone太遠，Musculoskeletal\ndeformities, horseshoe kidney (因為常有腸子蓋著)，pelvic kidney(因為可能\n有奇怪的血管供應）"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "PCNL Contraindications(EAU)",
+                "打到別的東西 (懷孕)",
+                "打完後流血(bleeding disorder, 治療前24hr及治療後48hr內要compensate)",
+                "打完後感染(uncontrolled UTI)",
+                "打完後tumor seeding(tract路徑上有tumor, 腎臟裡面有tumor)",
+                "@與ESWL contraindication比少了skeletal嚴重異常, obesity, aneurysm,多了tumor"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s39.webp",
+              "hidden": false,
+              "ocr_text": "PCNL Contraindications(EAU)\nContraindications\nPatients receiving anti-coagulant therapy must be monitored carefully pre- and post-operatively.\nAnti-coagulant therapy must be discontinued before PNL 264].\nOther important contraindications include:\nuntreated UT;\n•\n•\ntumour in the presumptive access tract area;\npotential malignant kidney tumour,\npregnancy (Section 3.4.14.1).\n-打到別的東西(懷孕）\n-打完後流血(bleeding disorder, 治療前24hr及治療後48hr內要compensate)\n-打完後感染(uncontrolled UT)\n-打完後tumor seedling(tract路徑上有tumor，腎臟裡面有tumor)\n@與ESWLcontraincication比t少了skeletal嚴重異常,obesity,aneurysm，多了tumor"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "PCNL概論",
+                "台大做法: 先放ureteral catheter(若是C-arm guide可打contrast)或DBJ(若是echo-guide可製造hydro), 再建立PCN tract,針先進入renal pelvis, 放guidewire, 先fascial dilator和balloon dilator擴張, 再放PCN sheath, 走腎臟鏡, 可以合併雷射/lithocast(pneumatic)和夾子來清除腎臟內的石頭",
+                "需要全身麻醉來控制呼吸",
+                "可以supine或prone position, 術後可以tubeless(放止血物)或放nephrostomy tube",
+                "PCNL sheath的比較: standard 24-30Fr, mini 14-20Fr, ultra-mini 11-13Fr, micro 4.8Fr.",
+                "適用小兒"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s40.webp",
+              "hidden": false,
+              "ocr_text": "PCNL概論\n•台大做法：先放ureteral catheter(若是Carm guide可打contrast)或DBJ(若是echo-\nsuide可製造hydro)，再建立PCN tract,針先進 入renal pelvis, 放guidewire,先fascial\ndilator和balloon dilator擴張，再放PCN sheath,走腎臟鏡，可以合併雷射\nNithocast(pneumatic)和夾子來清除腎臟内的石頭\n•需要全身麻醉來控制呯吸\n•可以supine或prone position, 術後可以tubeless(放止血物）或放nephrostory tube\n•PCNL sheath的比較：standard 24-30Fr,mini 14-20Fr, ultra-mini 11-13Fr, micro\nPCNL\nIndication\nStone free rate\nBlood\nLimitations\ntechnique\ntransfusion\nFragmentation\ndevice\nStandard\nPCNL\n124-30F]\nMini PCNL\n[14-20F1\nLarge stones\n- any size\nIstaghorn\nstones)\nLarge stones\n3-6%\nPneumaticor\nultrasound or\nlaser\n1-2%\nPneumatic or\nUltrasound or\nLaser\ncomplexity)\n85-92%\nUltra-mini\n(UMPIPCNL\n(11-13F)\nMicro PCNL\n14.8F)\nStones up to\n2cm\nStones up to\n1.5cm 適用小兒\n85-90%\nTransfusion -\nnot reported\nTransfusion -\nnot reported\nAble to remove\nsmall fragments\nonly\nUnable to remove\nfragments\nLaser\nLaser"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Supine or Prone, Tubeless or not",
+                "Supine position優點:",
+                "較不影響tidal volume及cardiac output所以麻醉風險較低",
+                "手術時間較短(不用翻來翻去)",
+                "術中有狀況臨時要on line(cvc,a-line)較方便",
+                "可以同時操作輸尿管鏡 （比較難打upper pole，做事空間比較小）",
+                "Prone position優點:",
+                "打tract的位置選擇較多",
+                "較不擔心visceral organ injury，Tract較supine來得短",
+                "較適合upper pole stone",
+                "較適合large stone(需要multiple tract)",
+                "什麼情況不適合tubeless: 流血厲害, collecting system破裂, infection stone(staghorn), >2 tracts"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s41.webp",
+              "hidden": false,
+              "ocr_text": "Supine or Prone, Tubeless or not\n•Supine position優點：\n•較不影響tidal volume及cardiac output所以麻醉風險較低\n•手術時間較短（不用翻來翻去）\n••術中有狀況臨時要on line(cvc,a-line)較方便\n•可以同時操作輸尿管鏡（比較難打upperpole，做事空間比\n較小）\n•Prone position優點：\n•打tract的位置選擇較多\n•較不擔心visceral organ injury •Tract較supine來得短\n•較適合upper pole stone\n•較適合large stone(需要multiple tract)\n•什麼情況不適合tubeless：流血厲害，collecting system破裂，\ninfection stone(staghorn), >2 tracts"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "Bleeding management during/after PCNL",
+                "PCNL bleeding 大部分是 Venous bleeding",
+                "Placement of a nephrostomy tube is usually sufficient to control the bleeding",
+                "如果流血不止可以",
+                "Clamping the tube for a time may facilitate the tamponade。",
+                "如果還是不止可以",
+                "放置 Kaye nephrostomy to tamponade bleeding。",
+                "如果還是不止，就做Angiography + embolization",
+                "Kaye nephrostomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s42.webp",
+              "hidden": false,
+              "ocr_text": "Bleeding management during/after PCNL\n•PCNL bleeding 大部分是 Venous bleeding\n• Placement of a nephrostomy tube is usually sufficient to control the\nbleeding\n•如果流血不止可以\n• Clamping the tube for a time may facilitate the tamponade。\n•如果還是不止可以\n•放置 Kave nephrostomy to tamponade bleeding•\n•如果還是不止，就做Angiography + embolization\nKaye nephrostomy"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "PCNL complication",
+                "Pleural injury",
+                "Subcostal access is the safest route to the kidney(Pleural injury rare, 0.4%)",
+                "Early hemorrhage: most common",
+                "Risk: multiple access sites, supracostal access, increasing tract size, dilation other than balloon dilatation, prolonged op time, renal pelvic perforation",
+                "治療: conservative, 只有0.8 ~ 20% 需要輸血",
+                "Delayed hemorrhage: 1%",
+                "AV fistula or Arterial pseudoaneurysm (more common)",
+                "治療: Embolization.",
+                "Collecting system injury/rupture, urinoma",
+                "術中發現: Stop procedure and insert a PCN+DBJ",
+                "術後發現: keep PCN/DBJ, 沒放PCN考慮放",
+                "Colon injury: < 1%.",
+                "Risk: Access to the lower pole, Advanced age, Dilated colon, Previous colon surgery, horseshoe kidney",
+                "Sepsis: 0.3 ~ 1%, Fever: 0 ~ 32% (僅次於hemorrhage)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s43.webp",
+              "hidden": false,
+              "ocr_text": "PCNL complication\n•Pleural injury\n•Subcostal access is the safest route to the kidney(Pleural injury rare, 0.4%)\n•Early hemorrhage: most common\n•Risk: multiple access sites, supracostal access, increasing tract size, dilation\nother than balloon dilatation, prolonged op time, renal pelvic perforation\n•治療：conservative，只有0.8~20% 需要輸血\n•Delayed hemorrhage: 1%\n• AV fistula or Arterial pseudoaneurysm (more common)\n•治療：Embolization.\n• Collecting system injury/rupture, urinoma\n••術中發現：Stop procedure and insert a PCN+DBJ\n•術後發現：keep PCN/DB)，没放PCN考慮放\n• Colon injiury: < 1%.\n•Risk: Access to the lower pole, Advanced age, Dilated colon, Previous colon\nsurgery, horseshoe kidney\n•Sepsis: 0.3 ~ 1%,Fever:0~ 32%（僅次於hemorrhage)"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "放nephrostomy 的indication",
+                "目的：",
+                "to aid in healing of the nephrostomy tract",
+                "promote hemostasis,",
+                "prevent urinary extravasation,",
+                "drain infection,",
+                "allow reentry"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s44.webp",
+              "hidden": false,
+              "ocr_text": "放nephrostomy 的indlication\n•Post opeartive PCN tube indication\n- presence of residual stones\n- likelihood of a second-look procedure;\n- significant intra-operative blood loss;\n- urine extravasation;\n- ureteral obstruction;\n- potential bacteriuria due to infected stones\n- solitary kidney\n— bleeding tendency\n— planned percutaneous chemolitholysis.\n目的：\nto aid in healing of the nephrostomy tract\npromote hemostasis,\nprevent urinary extravasation,\ndrain infection,\nallow reentry"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "Colon injury of PCNL",
+                "PCNL的colon injury通常為Extraperitoneal injury",
+                "如果是Extraperitoneal injury:",
+                "將穿過colon進入collecting system的nephrostomy tube往外拉到colon lumen當作 Colostomy，放一條新的nephrostomy tube和放置DBJ引流尿液",
+                "Colostomy 至少放七天，之後做Nephrostogram 確定大腸和腎臟沒有相交通才能拔掉",
+                "Diet: NPO幾天排氣後給clear liquid diet",
+                "如果是Intraperitoneal injury",
+                "開刀補腸子"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s45.webp",
+              "hidden": false,
+              "ocr_text": "Colon injury of PCNL\n•PCNL的colon injury通常為Extraperitoneal injury\n•如果是Extraperitoneal injury:\n•將穿過colon進入collecting system的nephrostomy tube往外\n拉到colon lumen當作 Colostomy，放一條新的nephrostomy\ntube 和放置DBJ引流尿液\n•colostomy 至少放七天，之後做Nephrostogram 確定大腸和\n腎臟沒有相交通才能拔掉\n•Diet: NPO幾天排氣後給clear liquid diet\nManagement: If the patient is stable and without peritonitis, a ureteral stent and\nFoley should be placed, the nephrostomy tube retracted into the colon under\n••如果是intraperitoneal injury\n•開刀補腸子\nfluoroscopy, and the patient started on broad spectrum antibiotics and bowel\nrest. General surgical consultation is required if the patient develops peritonitis\nor signs of sepsis to determine the need for exploratory surgery. A\nnephrostogram should be performed in 1 to 2 weeks to ensure resolution of the\nnephrocolonic fistula Open surgical exploration with/without colostomy is\nrecommended if the perforation is transperitoneal, the patient has peritoneal\nsigns or is septic or non operative management fails.\nAUA update series 2021"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "經皮腎造廔截石手術 (percutaneous  nephrolithotomy)  最常見的後遺症是： [2011]",
+                "(A) 出血 (B) 集尿系統穿孔 (C) 氣胸或水胸 (D) 大腸穿孔 (E) 敗血症",
+                "經皮腎造廔碎石取石手術(Percutaneous  Nephrolithotomy)的\u000b併發症中下列何者最多？[2012]",
+                "(A)尿液滲漏(extravasation)(B)輸血(transfusion)(C)發燒\u000b(D)肋膜損傷(E)敗血症(septicaemia)",
+                "下列何者不是經由subcostal access操作PCNL(percutaneous nephrolithotomy)常見的complication？",
+                "(A)hemorrhage",
+                "(B)sepsis",
+                "(C)pleural  injuries",
+                "(D)perforation  of  renal  pelvis  and  ureter",
+                "(E)failed  access"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s46.webp",
+              "hidden": false,
+              "ocr_text": "經皮腎造廔截石手術 (percutaneous nephrolithotomy） 最常見的後\n遺症是：[2011]\n(A) 出血(B)集尿系統穿孔 （C氣胸或水胸(D) 大腸穿孔(E)敗血症\n經皮腎造廔碎石取石手術(Percutaneous Nephrolithotomy)的\n併發症中下列何者最多？12012]\n（A)尿液渗漏(extravasation)（(B）輸血(transfusiony（C)發燒\n()肋膜損傷(E)敗血症(septicaemia)\n下列何者不是經由subcostal access操作PCNL(percutaneous\nnephrolithotomy)常見的complication？\n•(A)hemorrhage\n•(B)sepsis\n•(Cpleural injuries\n• (D)perforation of renal pelvis and ureter\n• (E)failed access"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "經皮穿腎造廔碎石術有逐漸小口徑化的趨勢，目前最小口徑為4.85 Fr.，稱為Micro PCNL，何者是它的優點？[2017]",
+                "(A)\t轉換其它手術的比率低",
+                "(B)\t水流快、視野清楚",
+                "(C)\t適用於小兒或1至1.5公分的下盞結石",
+                "(D)\t與軟式輸尿管鏡比較，在流血時不致視野不清楚。",
+                "(E)\t以上全是"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s47.webp",
+              "hidden": false,
+              "ocr_text": "經皮穿腎造廔碎石術有逐漸小口徑化的趨勢，目前最小口\n徑為4.85 Fr.，稱為Micro PCNL，何者是它的優點？2017]\n•(A) 轉換其它手術的比率低\n•B\n水流快、視野清楚\n•1C) 適用於小兒或1至1.5公分的下盞結石\n•(D)\n與軟式輸尿管鏡比較，在流血時不致視野不清楚。\n•(E)\n以上全是\n106 年度泌尿科住院醫師核心訓練課程測驗 答案公告\n44.C下列何者不是顯微經皮穿腎碎石取石手術(4.85 Fr micro PNL)目前待克服問題？\n(A)失血\nB)無出水孔\nC小孩子\n①轉換成其他手術\nE)視野小"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "Dissolution Therapy & Nephrocalcinosis",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 49,
+              "text": [
+                "Dissolution therapy",
+                "Uric acid stone:",
+                "water intake, 控制三高, 減少animal protein intake, 減少高尿酸食物",
+                "降尿酸+鹼化尿液(右圖)",
+                "Cystine stone:",
+                "Hydration",
+                "Dietary manipulation: 減少cystine precursor amino acid methionine的食物, 限鈉( <100mg/ day)",
+                "Drugs to convert cystine to more soluble compounds: Mercaptopropionylglycine(Tiopronin第一線), Captopril(第二線), Penicillamine, N-acetyl-D- penicillamine",
+                "Penicillamine副作用:蛋白尿、腎病症候群、皮疹、腸胃，少見有神經症狀"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s48.webp",
+              "hidden": false,
+              "ocr_text": "Dissolution therapy\n•Uric acid stone:\n•water intake，控制三高，減少animal\nprotein intake，藏公高尿酸食粉\n•降尿酸+鹼化尿液(右圖）\n“Uric acid arrest”\nUrine pH <6\nHyperuricosuria\n• Cystine stone:\n•Hydration\n•Dietary manipulation：減少cystine\nAlcaline citrate\n9-12 g/d'\nOR\nsodium\nbicarbonate\n1.5g tid\n卜4.0 mmold\nallopurinol\n100 mg/d\nprecursor amino acid methionine的食\n物，限鈉(<100mg/ day)\n• Drugs to convert cystine to more\nDose depends\non targeted\nurine pH\nsoluble compounds:\nMercaptopropionylglycine (Tiopronin第\n一線)，Captopril(第二線），\nPrevention\nurine pH 6.2-6.8\nChemolytholisis\nurine pH 6.5-7.2\nPenicillamine, N-acetyl-D-\npenicillamine\nPenicillamine副作用:蛋白尿、腎病症候群、皮疹、腸胃，少見有神經症狀\n＞4.0 mmol/d\nand\nHyperuricemia\n＞380 umol\nallopurinol\n100-300 mg/d"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "Nephrocalcinosis",
+                "Definition:",
+                "Deposition of both Ca. oxalate and Ca. phosphate",
+                "Asymptomatic, incidental finding",
+                "Main causes:",
+                "Hypercalcemia",
+                "PTH(Primary)",
+                "Vit.D3",
+                "Sarcoidosis (PTH-rP)",
+                "RTA (Type 1)",
+                "Primary hyperoxaluria",
+                "Medullary sponge kidney (Boquet of flowers)",
+                "TB"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s49.webp",
+              "hidden": false,
+              "ocr_text": "Nephrocalcinosis\n•Definition:\n• Deposition of both Ca. oxalate and Ca. phosphate\n•Asymptomatic, incidental finding\n•Main causes:\n• Hypercalcemia\n• PTH(Primary)\n• Vit.D3\n• Sarcoidosis (PTH-rP)\n• RTA (Type 1)\n•Primary hyperoxaluria\n• Medullary sponge kidney (Boquet of flowers)\n•TB"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "Renal stone in horseshoe kidney",
+                "馬蹄腎發生率約1/400 live births",
+                "結石發生率15-20%患者，最常見為calcium oxalate",
+                "最常見的位置為renal pelvis和posterior lower pole calyx",
+                "結構上renal pelvis較長且前傾、UPJ高位、上段輸尿管須跨過isthmus所以導致urine stasis而結石",
+                "1.5cm以下非lower pole結石可以SWL或URS，SWL在馬蹄腎中比正常腎臟，需要更多次的治療次數，且須排除UPJO。",
+                "2cm以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常為從posterior upper calyx進入，因腎臟位置前傾且向內，建議有術前CT評估，通常在12th rib下，故鮮少需要supracostal access，肋膜損傷為罕見。",
+                "補充：horseshoe kidney常常合併出現的異常",
+                "男性：undecendented testis, hypospadias",
+                "女性：Bicornuate uterus and, a septate vagina,",
+                "VUR",
+                "UPJO"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s50.webp",
+              "hidden": false,
+              "ocr_text": "Renal stone in horseshoe kidney\n•馬蹄腎發生率約1/400 live births\n•結石發生率15-20%患者，最常見為calcium oxalate\n•最常見的位置為renalpelvis和posterior lower pole q竖\n•結構上renal pelvis較長且前傾、UP高位、上段輸尿管須跨過\nisthmus所以導致urine stasis而結石\n•1.5cm以 下非lower pole結石可以SWL或URS，SWL在馬蹄腎中\n比正常腎臟，需要更多次的治療次數，且須排除UPJO。\n•2cm以以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常\n為從posterior upper calyx進入，因腎臟位置前傾且向內，建議\n有術前CT評估，通常在12thrib下 ，故鮮少需要supracostal\naccess，肋膜損傷為罕見。\n補充：horseshoe kidney常常合併出現的異常\n-\n男性：undecendented testis, hypospadias\n-女性：Bicornuate uterus and, a septate vagina,\nVUR\nUpJO"
+            }
+          ]
+        },
+        {
+          "id": "t07b",
+          "title": "馬蹄腎結石",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 51,
+              "text": [
+                "Renal stone in horseshoe kidney",
+                "馬蹄腎發生率約1/400 live births",
+                "結石發生率15-20%患者，最常見為calcium oxalate",
+                "最常見的位置為renal pelvis和posterior lower pole calyx",
+                "結構上renal pelvis較長且前傾、UPJ高位、上段輸尿管須跨過isthmus所以導致urine stasis而結石",
+                "1.5cm以下非lower pole結石可以SWL或URS，SWL在馬蹄腎中比正常腎臟，需要更多次的治療次數，且須排除UPJO。",
+                "2cm以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常為從posterior upper calyx進入，因腎臟位置前傾且向內，建議有術前CT評估，通常在12th rib下，故鮮少需要supracostal access，肋膜損傷為罕見。",
+                "補充：horseshoe kidney常常合併出現的異常",
+                "男性：undecendented testis, hypospadias",
+                "女性：Bicornuate uterus and, a septate vagina,",
+                "VUR",
+                "UPJO"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s50.webp",
+              "hidden": false,
+              "ocr_text": "Renal stone in horseshoe kidney\n•馬蹄腎發生率約1/400 live births\n•結石發生率15-20%患者，最常見為calcium oxalate\n•最常見的位置為renalpelvis和posterior lower pole q竖\n•結構上renal pelvis較長且前傾、UP高位、上段輸尿管須跨過\nisthmus所以導致urine stasis而結石\n•1.5cm以 下非lower pole結石可以SWL或URS，SWL在馬蹄腎中\n比正常腎臟，需要更多次的治療次數，且須排除UPJO。\n•2cm以以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常\n為從posterior upper calyx進入，因腎臟位置前傾且向內，建議\n有術前CT評估，通常在12thrib下 ，故鮮少需要supracostal\naccess，肋膜損傷為罕見。\n補充：horseshoe kidney常常合併出現的異常\n-\n男性：undecendented testis, hypospadias\n-女性：Bicornuate uterus and, a septate vagina,\nVUR\nUpJO"
+            },
+            {
+              "slide_num": 52,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_h52.webp",
+              "ocr_text": "110-112\n關於馬蹄腎(horseshoe kidnevs)的敘述，下列何者錯誤？\n(A)其結石發生率約為 20%，尤其易在腎盂及 下腎盞(lower pole calyx)產生結石\n(B）如果腎結石大於兩公分，馬蹄腎病人接受經皮腎造廔碎石 (PCNL)的結石廓清率\n比正常腎臟病人差，併發症也較多\n（C)針對一公分的上腎盞結石，若無水腎可選擇體外震波處理\n(D)其輸尿管與腎盂輸尿管接合處(ureteropelvic junction)比 起正常腎臟更高位且靠\n內側，易受峽部(isthmus)血管壓迫產 生水腎\n(E）其上腎盞較靠背側及外側，比起下腎盞更適合建立 PCNL 通道"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "輸尿管結石",
+          "slide_count": 9,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 53,
+              "text": [
+                "Ureteral stone"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s51.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral stone"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Ureteral stone evaluation",
+                "S/S: Sudden onset colicky flank pain(may radiate to groin if L/3 stone, 通常還可以走來走去坐立難安, 與appen不同), gross hematuria",
+                "U/A: microscopic hematuria +/- pyuria",
+                "(生育年齡女性影像檢查前記得先驗pregnancy test)",
+                "Renal echo: for screening of hydro",
+                "KUB: 不夠sensitive",
+                "IVU: traditional test, 須考量contrast allergy與腎功能, 已被CT取代",
+                "non-contrast CT: gold standard, 可依照HFU判斷可能成分",
+                "MRU: 看不到stone但看的到hydro"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s52.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral stone evaluation\n•S/S: Sudden onset colicky flank pain(may radiate to groin if L/3 stone,\n通常還可以走來走去坐立難安，與appen不同), gross hematuria\n• U/A:microscopic hematuria +/- pyuria\n（生育年齡女性影像檢查前記得先驗pregnancy test)\n•Renal echo: for screening of hydro\n•KUB:不夠sensitive\n•Iu:traditional test,須考量contrast allergy與腎功能，已被CT取代\n•non-contrast CT: gold standard，可依照HFU判斷可能成分\n•MRU:看不到stone但看的到hydro"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "Ureteral stone treatment",
+                "Acute management: Pain control,+/-abx, +/-emergent decompression",
+                "Pain control:",
+                "- First-line -> NSAIDS(indomethacin, ibuprofen, diclofenac,CKD不要用diclofenac)",
+                "- Second line: Tramadol, Ultracet, morphine",
+                "Need antibiotics? 有pyuria/bacteriuria或fever/sepsis要給",
+                "Need emergent decompression?",
+                "- Method: PCN or DBJ",
+                "- Indication: Hydronephrosis with fever/sepsis(PCN/DBJ equally effective, 但",
+                "oxford傾向PCN因為減少灌水且PCN可以監測尿量",
+                "Definitive management: MET +/- oral chemolysis",
+                "或active removal(retro/antegrade URSSM or ESWL or lapa/open ureterolithotomy)",
+                "Need emergent active removal?",
+                "- Method: URSSM or ESWL",
+                "- Indication: Hydro with solitary kidney or impaired renal function, bil stone",
+                "with bil hydro",
+                "- Contraindication: fever/sepsis(感染控制好才能definitive treatment)",
+                "Oxford: 急性期不建議猛喝水, 不會增加stone passage rate, 反而可能使hydro變嚴重ureter變更torteous更難排石頭"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s53.webp",
+              "hidden": false,
+              "ocr_text": "Ureteral stone treatment\n•Acute management: Pain control,+/-abx, +/-emergent decompression\n• Pain control:\n-First-line -> NSAlDS(indomethacin, ibuprofen,diclofenac,CKD不要用\ndiclofenac)\n-Second line: Tramadol, UItracet, morphine\n•Need antibiotics？ 有pvuria/bacteriuria 或fever/sepsis要給\n• Need emergent decompression?\n- Method: PCNor DBJ\n-Indication: Hydronephrosis with fever/sepsis(PCN/DB/ equally effective, 但\norord,愈性期不通海ixtord傾風PGA尽為滅公濕水,品PCNIall以監測！尿量乖排石頭\n•Definitive management: MET +/- oral chemolysis\n或active removal(retro/antegrade URSSM or ESWL or lapa/open ureterolithotomy)\n• Need emergent active removal?\n- Method: URSSM or ESWL\n-Indication: Hydro with solitary kidney or impaired renal function, bil stone\nwith bil hydro"
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "Management of obstructed stone with sepsis/anuria"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s54.webp",
+              "hidden": false,
+              "ocr_text": "Management of obstructed stone\nwith sepsis/anuria\nSummary of evidence\nLE\nFor decompression of the renal collecting system, ureteral stents and\npercutaneous nephrostomy catheters are equally effective.\n1b\nRecommendations\nStrength rating\nUrgently decompress the collecting system in case of sepsis with\nobstructing stones, using percutaneous drainage or ureteral stenting.\nStrong\nDelay definitive treatment of the stone until sepsis is resolved.\nStrong\nCollect (again) urine for antibiogram test following decompression.\nStrong\nStart antibiotics immediately (+ intensive care, if necessary).\nStrong\nRe-evaluate antibiotic regimen following antibiogram findings.\nStrong"
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "Definitive treatment",
+                "MET +/- oral chemolysis",
+                "MET(medical expulsive therapy)",
+                "藥物: Alpha blocker(支持使用Harnalidge的study最多, off-label use需自費)（考古題有一題寫用CCB其實可以但副作用較多）, 可以增加stone passage rate, 減少stone passage time, 減少ureteric colic的症狀",
+                "EAU: 建議使用在distal ureteral stones且> 5 mm(<5mm被卡住肯定有東西擋在下面反而不好排出)",
+                "Campbell: 小孩的話< 3mm有高度機會排出所以可先保守治療",
+                "EAU: 如果合併infection應該停止先控制感染,",
+                "EAU: 如果合併refractory pain或腎功能惡化應該停止, 改成active removal(ESWL or URSSM)",
+                "2-4周後追蹤 KUB +/- renal echo",
+                "Oral chemolysis",
+                "藥物:  Potassium citrate or sodium bicarbonate, keep urine PH 7.0-7.2",
+                "Indication: Uric acid stones(非sodium或ammonium urate stones) 且> 5mm",
+                "@70% of stones 5mm or less and almost 50% of stones 6– 10mm in diameter will pass spontaneously over a period of 3– 6wks(Oxford)",
+                "@Sexual intercourse has been reported to be beneficial in facilitating stone expulsion in men(EAU)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s55.webp",
+              "hidden": false,
+              "ocr_text": "Definitive treatment\nMET +/- oral chemolysis\n••MET(medical expulsive therapy)\n-藥物：Alpha blocker(支持使用Harnalidge的study最多，off-label use需自費）（\n考古題有一題寫用CCB其實可以但副作用較多），可以增加stone passage\nrate，減少stone passage time, 減少ureteric colic的症狀\nEAU：建議使用在distal ureteral stones 且＞5mm(<5mm被卡住肯定有東西擋\n在下面反而不好排出）\n-Campbell：小孩的話<3mm有高度機會排出所以可先保守治療\nEAU:如果合併infection應該停止先控制感染，\nEAU：如果合併refractory pain或腎功能惡化應該停止，改成active\nremoval(ESWL or URSSM)\n- 2-4周後追蹤KUB +/- renal echo\n•Oral chemolysis\n藥物：Potassium citrate or sodium bicarbonate, keep urine PH 7.0-7.2\nIndication: Uric acid stones(非sodium或ammonium urate stones) 且>5mm\n@70% of stones 5mm or less and almost 50% of stones 6- 10mm in diameter will pass\nspontaneously over a period of 3- 6wks(Oxford)\n@Sexual intercourse has been reported to be beneficial in facilitating stone expulsion in men(EAU)"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "對小孩 AUA guideline: α-blocker 可作為無併發症遠端輸尿管結石（≤10mm）兒童的輔助排石選項, off-lable use, 療程不超過6個禮拜"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s56.webp",
+              "hidden": false,
+              "ocr_text": "對小孩 AUA guideline: a-blocker 可作為無併發症遠端輸尿管結石（ ≤10mm）兒童的輔助排石選項,off-lable use, 療程不超\n週6個榴拜  翰尿 管結石 ( Ureter stones)\n對於無併發症（感染、反覆疼痛、腎功能異常）的輪\n尿管結石病人，在病人知情下可以選擇追蹤觀察。\n輸尿管結石治療建議\n建議\n強度\n新診斷輸尿管結石的病人，若結石夠小*且無積極移除 強\n結石的必要，可選擇追蹤觀察合併定期評估。\n對於≥5mm 的（遠端）輸尿管結石，可以使用 強\na-blockers 作為藥物治療（註）\nURS (ureterorenoscopy）較有可能達到 stone free 的強\n單一治療方式\nURS ( ureterorenoscopy）較 shockwave lithotripsy 有 強\n較高併發症發生率\n針對嚴重肥胖病人，URS ( ureterorenoscopy）為輸尿 強\n管結石和腎結石的第一線治療方式\n註：目前台灣健保認定 a-blockers 作為排結石藥物治療為off-\nlabel use，不予以給付；且有些文獻也不支持此療效，故仍\n存有爭議。"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "Definitive treatment",
+                "Active removal(ESWL or URSSM)",
+                "Indication:",
+                "Emergent active removal的indication(Hydro with solitary kidney or impaired renal function, bil stone with bil hydro)",
+                "MET之下stone passage或obstruction太久(4-6周以上, 已經造成renal injury)",
+                "給了止痛藥還是反覆疼痛",
+                "腎功能變差",
+                "特殊social reason(特殊職業: 機師)",
+                "Patient preference",
+                "Common iliac a.以上",
+                "Common iliac a.以下",
+                "黏膜下結石建議用雷射切開取出結石再置放DBJ，但會增加輸尿管狹窄的機會"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s57.webp",
+              "hidden": false,
+              "ocr_text": "Definitive treatment\nActive removal(ESWL or URSSM)\n•lndication:\n•Emergent active removal的indication(Hydro with solitary kidney or impaired\nrenal function, bil stone with bil hydro)\n•MET之 下stone\npassage或obstruction\nroximal Ureteral Stone\nCommon iliac a.以上\n太久(4-6周以上，己\n經造成renal injurv)\n＞10mm\n1. URS (ante- or retrogade)\n2. SWL\n•給了止痛藥還是反覆\n疼痛\n＜10mm\nSWL or URS\n•腎功能鸞差\n•特殊social reason(特\n殊職業：機師）\nDistal Ureteral Stone\nCommon iliac a.以下\n• Patient preference\n＞10mm\n1. URS\n2. SWL\n< 10mm\n黏膜下結石建議用雷射切開取出結石再置放DBJ，但會增加輸尿管狹窄的機會\nSWL or URS"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "URSSM後是否放DBJ",
+                "Routine stenting is not necessary in uncomplicated URSSM",
+                "Indication:",
+                "Ureteral trauma",
+                "Ureteral stricture",
+                "Residual fragments",
+                "Bleeding",
+                "Perforation",
+                "UTIs",
+                "Pregnancy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s58.webp",
+              "hidden": false,
+              "ocr_text": "URSSM後是否放DBJ\n• Routine stenting is not necessary in uncomplicated URSSM\n•Indication:\n•Ureteral trauma\n•Ureteral stricture\n•Residual fragments\n•Bleeding\n•Perforation\n•UTIs\n•Pregnancy"
+            },
+            {
+              "slide_num": 61,
+              "text": [
+                "URSSM complication",
+                "Fever/sepsis",
+                "Ureter stricture",
+                "Hemorrhage",
+                "Ureter perforation +/- stone掉到體內",
+                "掉落體輸尿管外的結石要怎麼處理？-> 原則上不必處理，但是須告知病人此事，以防將來其他醫師誤以為有輸尿管結石",
+                "企圖取出結石可能惡化損傷，增加沖洗液更多的外滲，應該置放輸尿管導管後停止手術，給予抗生素治療以防止不多但可能的膿瘍形成，其中一個晚期後遺症就是輸尿管狹窄，基於以上理由，手術後必須X影像檢查，以確定結石位置。",
+                "Ureter avulsion",
+                "Avulsion怎麼處理? -> EAU建議直接補(primary repair), 但Campbel建議先PCN 後delay repair(沒講原因)。",
+                "注意transureteroureterostomy is contraindicated in stone formers"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s59.webp",
+              "hidden": false,
+              "ocr_text": "URSSM complication\n•Fever/sepsis\n• Ureter stricture\n•Hemorrhage\n•Ureter perforation +/- stone掉到體內\n•掉落體輸尿管外的結石要怎麼處理？一二原則上不必處理，但是須\n告知病人此事，以防將來其他醫師誤以為有輸尿管結石\n•企圖取出結石可能惡化損傷，增加沖洗液更多的外渗，應該置放\n輸尿管導管後停止手術，給予抗生素治療以防止不多但可能的膿\n瘍形成，其中一個晚期後遺症就是輸尿管狹窄，基於以上理由，\n手術後必須x影像檢查，以確定結石位置。\n•Ureter avulsion\n•Avulsion怎麼處理？一＞EAU建議直接補(primary repair), 但Campbel\n建議先PCN 後delay repair(沒講原因）。\n•注意transureteroureterostomy is contraindicated in stone formers"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "體內碎石裝置",
+          "slide_count": 7,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 62,
+              "text": [
+                "URS/RIRS/PCNL的體內碎石裝置",
+                "雷射: holmium YAG laser",
+                "鈥(Holium)雷射為2100nm, 2.1μm, highly absorbed by water",
+                "Pulse duration: 250 to 350 microseconds, duration越長越不會push back",
+                "雷射碎石的效應為photothermal effect + Moses effect",
+                "Photothermal effect: direct light energy absorption by stone surfaces (“photo”) -> rapid temperature increases(“thermal”)  ->heat diffusion(最主要)",
+                "Moses effect: occurs by the rapid vaporization of fluid creating a vapor channel between the fiber tip and stone surface, allowing for more direct energy transfer.(其次的)",
+                "Laser fibres: vary in diameter from 200 to 360µm, 選越大口徑的laser, energy density越低越不會push back, 但越大口徑flexibility越低",
+                "Laser tip前面3mm的水會吸收到熱但只有0.5到1mm會受到thermal injury",
+                "鈥雷射能擊碎任何成分的結石，成功率可達100%，結石清除率95%，穿孔與狹窄的比率分別是1.1% 和 1.2%",
+                "在體外不小心近距離誤擊眼晴,最可能傷害的組織為何? Cornea",
+                "單次雷射脈衝的持續時間"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s60.webp",
+              "hidden": false,
+              "ocr_text": "URS/RIRS/PCNL的體內碎石裝置\n雷射：holmium YAG laser\n•鈥(Holium)雷射為2100nm,2.1um, highly absorbed by water\n•PseaupgtrGm!:250 to 350 microseconds, duration 越長越不會push back\n•雷射碎石的效應為photothermaleffect + Moses effect\n• Photothermal effect: direct light energy absorption by stone surfaces\n(\"photo”)->rapid temperature increases(\"thermar)-sheat diffusion(最主\n要）\n•Moses effect: occurs by the rapid vaporization of fluid creating a vapor\nchannel between the fiber tip and stone surface, allowing for more direct\nenergy transfer.（其次的）\n• Laser fibres: vary in cliameter from 200 to 360um， 選越大口徑的laser, energy\ndensity越低越不會push back,但越大口徑flexibility越低\n•Laser tip前面3mm的水會吸收到熱但只有0.5到1mm會受到thermal injury\n•鈥雷射能擊碎任何成分的結石，成功率可達100%，結石清除率95%，穿孔\n與狹窄的比率分別是1.1% 和1.2%\n。在體外不小心近距離誤擊眼睛,最可能傷害的組織為何？Cornea"
+            },
+            {
+              "slide_num": 63,
+              "text": [
+                "URS/RIRS/PCNL的體內碎石裝置",
+                "雷射的能量設定",
+                "頻率(Hz) x 能量(J)= 總輸出能量(W)",
+                "例如: 10Hz x 1J =10W(一秒有10 次雷射震波, 每次發出1J, 產生10W的能量)",
+                "常用頻率與能量:",
+                "碎石mode -> 8Hz x 1.2J(1200mJ)=9.6W",
+                "Dusting mode -> 15-18Hz x 0.5J(500mJ)= 7.5-9.0W",
+                "另外有些機器還可以選擇Pulse duration要long還是short(250 to 350 microseconds)",
+                "如何減少石頭push back?",
+                "選最大口俓fiber, 讓energy density最小,  降低後座力",
+                "增加frequency, 減少J(dusting mode), 在總輸出一樣的情形下, 每一下的能量最低, 降低後座力",
+                "增加Pulse duration, 降低後座力",
+                "使用stone basket擋在結石後面",
+                "頭高腳低",
+                "控制進水量"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s61.webp",
+              "hidden": false,
+              "ocr_text": "URS/RIRS/PCNL的體內碎石裝置\n雷射的能量設定\n•頻率(HZ)x 能量(J=總輸出能量(W)\n•例如：10H2x 1/=10W(一秒有10次雷射震波，每次發出1！,產生1ow的\n能量)\n•常用頻率與能量：\n•碎石mode-＞8Hz x 1.2J(1200mJ)=9.6W\n•Dusting mode ->15-18HZ x 0.5J(500m/)= 7.5-9.0W\n•另外有些機器還可以選擇Pulse duration要long還是short(250 to 350\nmicroseconds)\n如何減少石頭push back?\n•選最大口俓tiber，讓energy density最小，降低後座力\n•增加frequency，減少dusting mode)，在總輸出一樣的情形下，每一下的能量最低，降低後座力\n•增加Pulse duration,降低後座力\n•使用stone basket擋在結石後面\n•頭高腳低\n•控制進水量"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "URS/RIRS/PCNL的體內碎石裝置Pneumatic lithotripsy 氣震式碎石機",
+                "也就是Lithocast",
+                "原理: 碎石機的probe直接接觸石頭傳遞震波到石頭上導致碎裂",
+                "氣震式比較不會造成輸尿管穿孔，平均而言，穿孔機會少於 1%，因為碎石時不會產熱，所以黏膜的熱傷害也減到最低",
+                "氣震式碎石機的另外一個優點是相對便宜與低維修率，雖然機器比水電波貴，但是沒有拋棄式衛材的費用，而且探頭壽命較長",
+                "缺點是探頭屬硬的材質、需要直的工作通道、硬式輸尿管鏡以及斜角的接目鏡，而且氣震式碎石機有比較高的結石回推率 17%",
+                "常用於PCNL, URSSM已少用因為結石回推率高"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s62.webp",
+              "hidden": false,
+              "ocr_text": "URS/RIRS/PCNL的體內碎石装置\nPneumatic lithotripsy 氣震式碎石機\n•也就是Lithocast\n•原理：碎石機的probe直接接觸石頭傳遞震波到石頭上導致碎裂\n•氣震式比較不會造成輸尿管穿孔，平均而言，穿孔機會少於1%，因為碎\n石時不會產熱，所以黏膜的熱傷害也減到最低\n•氣震式碎石機的另外一個優點是相對便宜與低維修率，雖然機器比水電\n波貴，但是沒有拋棄式衛材的費用，而且探頭壽命較長\n••缺點是探頭屬硬的材質、需要直的工作通道、硬式輸尿管鏡以及斜角的\n接目鏡，而且氣震式碎石機有比較高的結石回推率 17%\n•常用於PCNL, URSSM已少用因為結石回推率高"
+            },
+            {
+              "slide_num": 65,
+              "text": [
+                "URS/RIRS/PCNL的體內碎石裝置Electrohydraulic lithotripsy水電波碎石機",
+                "第一代體內碎石機",
+                "原理: 電流能量被附近的水吸收, 氣化形成泡泡, 泡泡expand and collapse產生震波(不用直接接觸石頭或mucosa就可以造成傷害）",
+                "導線離輸尿管壁幾個微米仍會傷及輸尿管, 輸尿管穿孔率高, 報告從 0 - 39%,  就算是導線並沒有直接碰觸輸尿管壁仍可能產生穿孔, 風險與能量成等比率",
+                "與鈥雷射比較，水電波比較會讓結石回推往上，而且碎片比較粗大常需要反覆以取石網取出",
+                "已少用"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s63.webp",
+              "hidden": false,
+              "ocr_text": "URS/RIRS/PCNL的體內碎石装置\nElectrohydraulic lithotripsy水電波碎石機\n•第一代體內碎石機\n•原理：電流能量被附近的水吸收，氣化形成泡泡，泡泡expand and\ncollapse產生震波(不用直接接觸石頭或mucosa就可以造成傷害\n•導線離輸尿管壁幾個微米仍會傷及輸尿管，輸尿管穿孔率高，報告\n從0-39%，就算是導線並沒有直接碰觸輸尿管壁仍可能產生穿\n孔，風險與能量成等比率\n•與鈥雷射比較，水電波比較會讓結石回推往上，而旦碎片比較粗\n大常需要反覆以取石網取出\n。已少用"
+            },
+            {
+              "slide_num": 66,
+              "text": [
+                "URS/RIRS/PCNL的體內碎石裝置Ultrasonic lithotripsy超音波碎石機",
+                "原理: Ultrasound transducer產生特定頻率的ultrasound waves                     (23 000– 25000hz), 傳遞到石頭後石頭跟著共振之後碎裂",
+                "Soft tissue不會共振所以不會傷害輸尿管壁(Perforation: 0 %, Avulsion: 0 %), 但仍可能Submucous dissection",
+                "Stone migration：4.3%",
+                "Post-operative symptoms show that",
+                "Irritative symptoms: 51.4 %",
+                "Loin pain: 11.4%",
+                "Hematuria :31.4%",
+                "Fever: 7.1 %",
+                "常用於PCNL, URSSM少用"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s64.webp",
+              "hidden": false,
+              "ocr_text": "URS/RIRS/PCNL的體內碎石裝置\nUltrasonic lithotripsy超音波碎石機\n•原理：Ultrasound transducer產生特定頻率的ultrasound waves\n(23 000-25000h2)，傳遞到石頭後石頭跟著共振之後碎裂\n•soft tissue不會共振所以不會傷害輸尿管壁 (Perforation: 0 %, Avulsion: 0\n-%)， 但仍可能Submucous dissection\n•Stone migration : 4.3%\n•Post-operative symptoms show that\n• Irritative symptoms: 51.4%\n•Loin pain: 11.4%\n•Hematuria :31.4%\n•Fever: 7.1%\n•常用於PCNL, URSSM少用"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "EHL> Nd:YAG 銣laser > Ho:YAG laser > Ballistic"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s65.webp",
+              "hidden": false,
+              "ocr_text": "57. 下列哪一種體內碎石的設備最容易造成輸尿管的破裂？ (109）\n(A) 超音波碎石(Ultrasonic lithotripsy)\n(B）钬雷射(Holmium laser)\n(C) Electrohydraulic lithotripsy (EHL)\nD) Pulsed-dye laser\n(E）氣動式碎石(Ballistic lithotripsy)\nEHL> Nd:YAG 銣laser > Ho:YAG laser > Ballistic"
+            },
+            {
+              "slide_num": 68,
+              "text": [
+                "Definitive treatment",
+                "Lapa/open ureterolithotomy",
+                "Indication:",
+                "URSSM and ESWL failure",
+                "Large, impacted stones (stone free rate >90%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s66.webp",
+              "hidden": false,
+              "ocr_text": "Definitive treatment\nLapa/open ureterolithotomy\n•Indication:\n•URSSM and ESWL failure\n• Large, impacted stones\n(stone free rate >90%)"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "膀胱結石與人工膀胱",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 69,
+              "text": [
+                "Bladder stone"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s67.webp",
+              "hidden": false,
+              "ocr_text": "Bladder stone"
+            },
+            {
+              "slide_num": 70,
+              "text": [
+                "Bladder stone概論",
+                "分成primary(endemic) vs secondary vs migratory",
+                "secondary: 有secondary cause",
+                "migratory: 從upper tract掉下來",
+                "成年男性的膀胱結石主要病因是？",
+                "排尿障礙或膀胱出口阻塞(secondary)",
+                "成年女性的膀胱結石主要病因是？",
+                "膀胱內異物（ex: mesh erosion into bladder）(secondary)",
+                "成人最常見石頭成分: uric acid stone(其次是calcium oxalate和struvite)",
+                "BPO-related bladder stone的結石成分: 42% calcium based stones (oxalate, phosphate), 33% struvite, 10% mixed stones, 14% uric acid stones",
+                "SCI病人發生結石約是受傷3個月後高峰，十年內近三成都會有，BIW bladder irrigation可降低石頭形成的機會",
+                "S/S: terminal hematuria(最常見), dysuria, suprapubic pain,  LUTS (hesitancy, poor flow, 石頭擋住bladder neck)",
+                "Image: KUB/USS/CT",
+                "比較：urethra stone 85-90%是migratory stone 且多是來自upper tract. predominant 是calcium oxalate"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s68.webp",
+              "hidden": false,
+              "ocr_text": "Bladder stone概論\n•分成primarvlendemic) vs secondary vs migratory\n•secondary：有secondary cause\n•migratory：從uppertract掉下來\n•成年男性的膀胱結石主要病因是？\n•排尿障礙或膀胱出口阻塞(secondary)\n•成年女性的膀胱結石主要病因是？\n•膀胱内異物(ex: mesh erosion into bladder ) (secondary)\n•成人最常見石頭成分：uric acid stone(其次是calcium oxalate 和struvite)\n•BPO-related bladder stone的結石成分：42% calcium based stones (oxalate,\nphosphate), 33% struvite, 10% mixed stones, 14% uric acid stones\n•SCI病人發生結石約是受傷3個月後高峰，十年内近三成都會有，BIW bladder\nirrigation可降低石頭形成的機會\n• S/S: terminalhematuria(最常見),dysuria, suprapubic pain, LUTS (hesitancy, poor\nflow，石頭擋住bladder neck)\n• Image: KUB/USS/CT\n比較：urethra stone 85-90%是migratory stone 且多是來\n自upper tract. predominant 是calcium oxalate"
+            },
+            {
+              "slide_num": 71,
+              "text": [
+                "Primary/Endemic bladder stone",
+                "好發於開發中國家",
+                "十歲以下兒童，二-四歲是發生的高峰",
+                "男孩比女孩明顯比較多，其比率約是9:1 to 33:1",
+                "膀胱結石通常是單一的，而且手術後很少復發",
+                "原因是multifactorial, 通常是poor hydration, recurrent diarrhoea和低動物蛋白及低磷酸飲食",
+                "常見結石成分: ammonium urate, calcium oxalate",
+                "營養不良、低鉀、慢性脫水會刺激腎臟產生更多 NH₄⁺ 來排酸"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s69.webp",
+              "hidden": false,
+              "ocr_text": "Primary/Endemic bladder stone\n•好發於開發中國家\n•十歲以下兒童，二-四歲是發生的高峰\n•男孩比女孩明顯比較多，其比率約是9:1to 33:1\n•膀胱結石通常是單一的，而且手術後很少復發\n•原因是multifactorial，通常是poorhydration,recurrent diarrhoea和低\n動物蛋白及低磷酸飲食\n•常見結石成分：ammonium urate, calcium oxalate\n營養不良、低鉀、慢性脫水會刺激腎臟產生更多 NHat來排酸"
+            },
+            {
+              "slide_num": 72,
+              "text": [
+                "Bladder stone treatment(EAU)",
+                "@Surgery: open/lapa取石(住院久) vs transurethral碎石(laser/pneumatic/EHL誰好誰快證據都不夠) vs percutaneous碎石(少用但還是比open住院天數短) vs ESWL(SFR低)",
+                "@TURP和碎石一起做有什麼壞處：UTI機會稍高，post-op early incontinence rate較高(in laser HoLEP)",
+                "Primary bladder stone要改善poor hydration, diarrhea和補充動物蛋",
+                "secondary cause"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s70.webp",
+              "hidden": false,
+              "ocr_text": "Bladder\nstone\ntreatment\n(EAU)\nFigure 3.4 Management of Bladder stones\nBladder stone diagnosed on\nimaging or cystoscopy\nInvestigations for cause:\n• physical examination\n• uroflowmetry and post-void\nresidual\n• urine dipstick (inc. pH 士 culture)\n• serum tests\nIn selected patients, consider:\n• upper tract imaging (if history of\nurolithiasis or loin pain)\ncysto-urethroscopy or\nurethrogram\n×-Ray KUB\nRadio-opaque\nRadio-lucent\nor other factors\nsuggesting uric\nacid calculi)\n@Surgery: open/lapa取石（住\n院久）vs transurethral碎石\n(laser/pneumatic/EHL誰好誰\n快證據都不夠)vs\npercutaneous碎石（少用但還\n是比open住院天數短）vs\nESWL(SFR低）\n@TURP和碎石一起做有什麼\n壞處：UT機會稍高，post-op\nearly incontinence rate較高(in\nlaser HoLEP\nConsider concomitant treatment\nSurgical Treatment:\nfor:\nf Boo secondary cause\n• Chronic urinary retention (e.B,\nintermittent self.\ncatheterisation)\n• Pre-disposing metabolic factors\n1. TUCL\n2. PCCL°\nIf TUCL is not possible or advisable\n(e.g, urethral stricture, young child)\n3. Open Cystolithotomyt\nConsider as first line treatment in\nselected cases, e.B., very large stones\nPrimary bladder stone要改善poor\n4. SWL, Laparoscopic Cystolithotomy\nhydration, diarrhea和補充動物蛋\nOffer Oral\nChemolitholysistt\nUitrasound\nStone analysis\nFailure\nSuccess"
+            },
+            {
+              "slide_num": 73,
+              "text": [
+                "bladder stone 用ESWL治療indication"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s71.webp",
+              "hidden": false,
+              "ocr_text": "bladder stone 用ESWL治療indication\nESWL as a modality of treatment has been considered as an option in patients\nwith bladder calculi with\nArtificial urinary sphincters (B)\n2. Penile prosthesis. (A)\nESWL has also been considered to be a treatment option in stones in\n1. Neobladders (C)\n2. Medically high-risk patients (D)"
+            },
+            {
+              "slide_num": 74,
+              "text": [
+                "Stone in augmented Bladders and Urinary Diversions",
+                "困難點: intra-abdominal spillage of urine and irrigation can lead to peritonitis",
+                "Kock 最容易產生結石",
+                "Conduit 最好處理, 可以內視鏡",
+                "Orthotopic diversions, augmented bladders, Kock 可以用transurethral scopy, 也可以用percutaneous",
+                "Mitrofanoff catheterizable conduit, Indiana and Penn pouch => 經皮取石 (Endoscopy 不建議, 會破壞continence的機制)",
+                "TIW或QD沖洗人工膀胱可降低石頭形成的機會"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s72.webp",
+              "hidden": false,
+              "ocr_text": "Stone in augmented Bladders and\nUrinary Diversions\n•困難點：intra-abdominal spillage of urine and irrigation can\nlead to peritonitis\n•Kock 最容易產生結石\n•conduit 最好處理，可以內視鏡\nSametahai scopy， b問以用perautareous\namented bladders, Kock 可以用\n• Mitrofanoff catheterizable conduit, Indiana and Penn pouch\n=經皮取石(Endoscopy 不建議，會破壞continence的機制\n•TIW或QD沖洗人工膀胱可隆低石頭形成的機會"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "孕婦結石",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 75,
+              "text": [
+                "Stones in pregnancy",
+                "懷孕生理變化",
+                "Renal blood flow increase, kidney function會增加: glomerular filtration 增加30-50%, 尿蛋白的排出也會增加，所以24hrs尿蛋白小於300mg還正常)",
+                "Increase excretion of Ca, Na, uric acid",
+                "Hyperuricosuria",
+                "Increased excretion of inhibitors",
+                "Citrate, Mg, and Glycoproteins (Tamm-Hosfall)",
+                "(Absorptive) Hypercalciuria",
+                "Increased placental production of 1,25(OH)2D3",
+                "PTH was suppressed",
+                "kidney的大小會增加1cm",
+                "ureter會減少peristasis (progesterone-induced smooth muscle relaxation)",
+                "bladder capacity會增加 (Estrogen=> bladder hypertrophy)",
+                "孕期中有結石vs沒有結石差最多是perinephric abscess (OR:41.4%), pyelonephritis(OR:24.4%), cystitis(4%)",
+                "減少單水草酸鈣結石aggregation"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s73.webp",
+              "ocr_text": "Stones in pregnancy\n•懷孕生理變化\n• Renal blood flow increase, kidney function會增加：glomerular filtration\n增加30-50%，尿蛋白的排出也會增加，所以24hrs尿蛋白小於300mg\n還正常)\n• lncrease excretion of Ca, Na, uric aid 孕期中有結石w没有結石差最多是\n•Hyperuricosuria\nperinephric abscess (OR:41.4%)，\npyelonephritis(OR:24.4%),cystitis(4%)\n• Increased excretion of inhibitors\n•Gitrate, Mg, and Glycoproteins (Tamm-Hfosfall)浦 體癶常酸鈣結石\n• (Absorptive) Hypercalciuria\n•Increased placental production of 1,25(OH)2D3\n•PTH was suppressed\n•kidney的大小會增加1cm\n•ureter會減少peristasis (progesterone-induced smooth muscle\nrelaxation)\n•bladder capacity會增加 (Estrogen=> bladder hypertrophy)"
+            },
+            {
+              "slide_num": 76,
+              "text": [
+                "Stone in pregnancy",
+                "Overall risk of stone - 有沒有懷孕差不多",
+                "Symptomatic -有沒有懷孕差不多",
+                "Stone composition - 磷酸鈣 calcium phosphate 占多數（孕婦尿尿常呈鹼性）",
+                "做輸尿管鏡產生併發症的機會-有沒有懷孕差不多",
+                "ESWL,PCNL 懷孕是禁忌症",
+                "但是DBJ仍比一般人容易產生結石,  6-8 week 要換",
+                "Stone in pregnancy - survey",
+                "Stone in pregnancy - treatment",
+                "no hydro, fever/sepsis",
+                "最適合URSSM的時間是第二孕期",
+                "結石最常發生在第二孕期",
+                "90%症狀發生在第二和第三孕期"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch01_stone/render/s1_s74.webp",
+              "ocr_text": "結石羅常發生在第 Stone in pregnancy -survey\n二孕期\n90%症狀發生在第\n二和第三孕期\n建議\nStone in pregnancy\n•Overall risk of stone - 有\n沒有懷孕差不多\n•Symptomatic -有沒有懷\n孕差不多\n•Stone composition - 磷酸\n鈣 calcium phosphate 占\n多數（孕婦尿尿常呈鹼\n性）\n超音波為患有尿路結石的孕婦第一線影像學檢查\nMRI為患有尿路結石的孕婦第二線影像學檢查\n低劑量 CT 為患有尿路結石的孕婦最後一線影像學檢查\n建議\n強度\n強\n強\n強\nStone in pregnancy - treatment\n建議\n建議\n強度\n對於所有 uncomplicated urolithiasis 的孕婦採取保守治強\n療\nno hydro, tever /sepsis\n•做輸尿管鏡產生併發症\n的機會-有沒有懷孕差不\n多\n若必須採取介入性治療，ureteral stent 或 percutaneous\n•ESWLPCNL懷孕是禁忌nephrostomy tube 會是主要的選項。輪尿管鏡可以用在\n•但是De1仍比一般人容易 基此無法 長時間 stenine 或 drainaee的病人身上。Uircter\n產生結石，6-8week 要換 stent 在孕婦體內較易 encrustation。最適合URSSM的時間是第二孕期"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tb_01_02",
+      "title": "結石代謝預防",
+      "source_file": "1-2 結石代謝預防 (2022).pptx",
+      "total_slides": 51,
+      "topics": [
+        {
+          "id": "t12",
+          "title": "代謝評估總論與一般預防",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 1,
+              "text": [
+                "結石代謝預防"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s01.webp",
+              "ocr_text": "結石代謝預防"
+            },
+            {
+              "slide_num": 2,
+              "text": [
+                "代謝評估 & 預防復發",
+                "Calcium oxalate stone",
+                "Calcium phosphate stone",
+                "Uric acid stone",
+                "Infection stone",
+                "Cystine stone",
+                "胃繞道手術：草酸鈣結石",
+                "懷孕婦女：磷酸鈣結石",
+                "小孩：草酸鈣(50%)和磷酸鈣(20%)（較少見尿酸結石）",
+                "Primary bladder stone (好發於2-4歲小孩）:ammonium urate, calcium oxalate",
+                "腎移植：常見含鈣結石(65%), struvite stone(20%), uric acid stone (13%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s02.webp",
+              "ocr_text": "代謝評佔＆預防復發\nCalcium oxalate stone\nCalcium phosphate stone\nUric acid stone\n-胃繞道手術：草酸鈣結石\nInfection stone - 懷孕婦女：磷酸鈣結石\nCystine stone\n-小孩：草酸鈣(50%)和磷酸鈣(20%)（較少見尿酸結\n石〕\nPrimary bladder stone （好發於2-4歲小孩）\nammonium urate, calcium oxalate\n腎移植：常見含鈣結石(65%), struvite stone(20%)，\nuric acid stone (13%)"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "代謝評估 & 預防復發",
+                "Low-risk stone former",
+                "Basic analysis",
+                "一般預防措施: 多喝水多蔬果, 少鹽少肉正常鈣, 減重多運動",
+                "喝啤酒(beer),咖啡,茶(tea)可以降低結石形成的風險",
+                "喝含糖蘇打水會增加結石風險",
+                "High-risk stone former:(小孩, Family hx, 代謝/遺傳疾病, 感染性石頭, Anatomy有問題, Solitary kidney)",
+                "Basic analysis",
+                "特定代謝評估: 依照各類石頭成分去survey, 包括blood test和24-hour urine test(要兩套, 手術後stone free至少20天後再做)",
+                "一般預防措施 + 針對個別結石成分來治療與預防復發",
+                "CBC, K, Na, CRP",
+                "Basic analysis",
+                "Na/K, CRP, CBC",
+                "石頭排出或打碎後最重要就是要知道石頭成分, 才能預防",
+                "如果有拿到石頭就送stone analysis(第一次, 或用藥無效,太快復發,很久沒復發),",
+                "Stone analysis方法: infrared spectroscopy或X-ray diffraction",
+                "沒拿到石頭要用hx(家族史, diet/drug hx), image(CT HU)去猜石頭成分",
+                "知道或猜到石頭成分後, 要將病患分成low or high-risk group"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s03.webp",
+              "ocr_text": "謝評估＆預防復發\n•石頭排出或打碎後最重要就是要知道石頭成分，才能預防\n•如果有拿到石頭就送stone analysis(第一次，或用藥無效,太快復發,很久 沒復發)，\n•Stone analvsis方法：infrared spectroscopy或x-ray diffraction\n•沒拿到石頭要用hx（家族史，diet/drug hx), image(CT HU)去猜石頭成分\n•知道或猜到石頭成分後，要將病患分成low or high-risk group\n• Low-risk stone former\n•Basic analysis\n•一般預防措施：多喝水多蔬果，少鹽少肉正常鈣，\n減重多運動\n•喝啤酒(beer),咖啡，茶(tea)可以降低結石\n形成的風險\n•喝含糖蘇打水會增加結石風險\nBasic analvsis\n血液检查\n尿液检查\n鈣難子（或total calcium + albumin ），肌酐酸，尿\n酸 Nalk CRP. CBC\n監控尿液pH（一天測四次以上），尿液試紙\n(leukocytes, erythrocytes, nitrite, protein, pH,\nspecific weight），尿液細菌培養，urine sediment\n鏡檢（最間第一泡尿〉，cyanide nitroprusside test\n（胱胺酸尿症）\nComposition HU tsD\n•Highrisk stene former:（小孩，Family hx, 代謝/遺傳\n疾病，感染性石頭，Anatorny有問題，Solitary kidney)\nBrushite\nApatite\n•Basic analysis\nCaOMH\n。特定代謝評估：依照各類石頭成分去survev，包\n100-80%\n<80-60%\n括blood test和24-hour urine test(要兩套，手術後\n≤60-50%\nCaODH\nstone free 至少20天後再做）\nCystine\n•一般預防措施＋針對個別結石成分來治療與預\nUric acid\n1,123+254\n844 士346\n879+ 230\n769士295\n717士304\n517+205\n550+74\n338士145"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "High-risk stone former 如右表",
+                "記法: (大原則) \u000b. Early onset(小孩)\u000b. Family hx\u000b. 代謝/遺傳疾病",
+                ". 感染性石頭\u000b. Anatomy 有問題\u000b. Solitary kidney"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s04.webp",
+              "ocr_text": "High-risk stone\nformer 如右表\n記法：（大原則）\n.Early onset(小孩）\n. Family hx\n•代謝/遺傳疾病\n.感染性石頭\n. Anatomy 有問題\n. Solitary kidney\nGeneral factors\nEarly onset of urolithiasis (especially children and teenagers)\nFamilial stone formation\nBrushite-containing stones (CaHP04.2H,0)\nUric acid and urate-containing stones\nInfection stones\nSolitary kidney (the kidney itself does not particularly increase the risk of stone formation, but prevention of\nstone recurrence is of more importance)\nDiseases associated with stone formation\nHyperparathyroidism\nMetabolic syndrome\nNephrocalcinosis\nPolycystic kianey disease (PKD)\nGastrointestinal diseases (i.e., jejuno-ileal by pass, intestinal resection, Crohn's disease, malabsor ptive\nconditions, enteric hyperoxaluria after urinary diversion) and bariatric surgery [21]\nSarcoidosis\nSpinal cord injury, neurogenic bladder\nGenetically determined stone formation\nCystinuria (type A, B and AB)\nPrimary hyperoxaluria (PH)\nRenal tubular acidosis (RTA) typel\n2,8-Dihydroxyadeninuria\nXanthinuria\nLesch-Nyhan syndrome\nCystic fibrosis\nDrugs associated with stone formation\nAnatomical abnormalities associated with stone formation\nMedullary sponge kidney (tubular ectasia)\nUreteropelvic junction (UPJ) obstruction\nCalyceal diverticulum. calyceal cyst\nUreteral stricture\nVesico-uretero-renal reflux\nHorseshoe kidhey\nUreterocele"
+            },
+            {
+              "slide_num": 5,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s05.webp",
+              "ocr_text": "BOx 92.1 Indications for a Metabolic Stone Evaluation\nRecurrent stone formers\nStrong family history of stones\nIntestinal disease (particularly chronic diarrhea)\nPathologic skeletal fractures\nOsteoporosis\nHistory of urinary tract infection with calculi\nPersonal history of gout\nInfirm health (unable to tolerate repeat stone episodes)\nSolitary kidney\nAnatomic abnormalities\nRenal insufficiency\nStones composed of cystine, uric acid, struvite"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "一般預防措施(EAU)",
+                "多喝水多蔬果 少鹽少肉正常鈣減重多運動"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s06.webp",
+              "ocr_text": "一般預防措施(EAU)\nTable 4.5: General preventive measures\n多喝水多蔬果 少鹽少肉正常鈣減重多運動\nFluld intake (arinking advice)\nFluid amount: 2.5-3.0 L/day\nCircadian drinking\nNeutral pH beverages\nDiuresis: 2.0-2.5 L/day\nSpecific weight of urine: < 1010\nNutritional advice for a balanced diet\nBalanced diet*\nRich in vegetables and fibre\nNormal calcium content: 1-1.2 g/day\nI Limited NaCl content: 4-5 g/day\nLimited animal protein content: 0.8-1.0 g/kg/day\nILifestyle advice to normalise general risk tactors\n1BM:retain a normal BMI level\nAdequate physical activity\nBalancing of excessive fluid loss\nCaution: The protein need is age dependent, therefore protein restriction in childhood should be hanaled\ncaretully.\n* Avoid excessive consumption of vitamin supplements."
+            }
+          ]
+        },
+        {
+          "id": "t13",
+          "title": "草酸鈣結石：概論、診斷與 Absorptive Hypercalciuria",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 7,
+              "text": [
+                "Calcium oxalate stone 概論",
+                "Most common stone, 80-85% of all stone",
+                "Radio-opaque stone",
+                "Calcium oxalate appears in two groups",
+                "Class I: Calcium oxalate monohydrate/單水草酸鈣(礦石名Whewellite), 依照不同etiology又分成Ia, Ib, Ic, Id, Ie , 比雙水硬(CT HFU:750-850)",
+                "Class II: Calcium oxalate dihydrate/雙水草酸鈣(礦石名Weddellite), 依照不同etiology又分成IIa, IIb, IIc, (CT HFU:500-600)",
+                "可能原因",
+                "Hypercalciuria: >250mg/d(女), 300mg/d(男) (>7.5 mmol/天)",
+                "Hyperoxaluria:  > 40mg/day ( > 0.5 mmol/day )",
+                "Hyperuricosuria:  > 800mg/day ( > 4 mmol/day )",
+                "Hypocitraturia: < 320mg/day (< 2.5mmol/day)",
+                "Hypomagnesuria: < 72mg/day (<3 mmol/day)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s07.webp",
+              "ocr_text": "Calcium oxalate stone 概論\n•Most common stone, 80-85% of all stone\n•Radio-opaque stone\n• Calcium oxalate appears in two groups\n•Class l: Calcium oxalate monohydrate/單水草酸鈣(礦石名whewellite)，依\n照不同etiology叉分成1la，1b,1c,ld,le，比雙水硬(CT HFU:750-850)\n• Ciass n: Calciurn oxalate dinvarate/雙水草酸鈣（礦石名weddellite)，依照不\n同etiology又分成lla,Ilb, lIC, (CT HFU:500-600)\n•可能原因\n•Hypercalciuria: >250mg/d(女），300mg/d（男）（>7.5mmol/天）\n•Hyperoxaluria: ＞ 40mg/day (> 0.5 mmol/day )\n•Hyperuricosuria:>800mg/day ( >4 mmol/day\n• Hypocitraturia: < 320mg/day (< 2.5mmol/day)\n• Hypomagnesuria: < 72mg/day (<3 mmol/day)"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Calcium oxalate stone diagnosis",
+                "特定評估",
+                "Blood test: blood gas, chloride, PTH, Vit D",
+                "24 hour urine: volume, pH, SG, Ca, oxalate, UA, citrate, Mg, Na",
+                "30-60%, 最常見",
+                "26-67%",
+                "15-46%",
+                "5-29%",
+                "7-23%",
+                "Vit D",
+                "24h urine  Ca",
+                "24h urine citrate",
+                "24h urine oxalate",
+                "24h urine UA",
+                "24h urine Mg",
+                "Absorptive(3 types +Granulo-matous disease)",
+                "Renal leak",
+                "Resorptive(Hyperpara+惡性腫瘤+Cushing)",
+                "Vitamin C excess",
+                "Hyperthyroidism",
+                "PTH↑",
+                "Fasting Uca↑",
+                "PTH,Fasting Uca正常",
+                "PTH↑",
+                "Fasting Uca↑",
+                "Hypercalciuria D/D: 先用serum calcium, PTH區分出absorptive, renal和resorptive，若是absorptive再用low calcium diet test和calcium loading test區分type I/II/III。也可以做thiazide challenge test進一步區分renal leak和resorptive, 一開始有鈣正常血液酸要想到RTA",
+                "Chronic diarrhea",
+                "低血鉀(包括thiazide induced)",
+                "Fat吸收不良(腸胃道發炎, GI bypass手術, 膽囊切除)",
+                "鈣攝取不足",
+                "type",
+                "1,2,3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s08.webp",
+              "ocr_text": "Calcium oxalate stone diagnosis\n特定評估\n•Blood test: blood gas, chloride, PTH, Vit D\n•24 hour urine: volume, pH, SG, Ca, oxalate, UA, citrate, Mg, Na\n24h urine Ca\nHypercalciuria\n30-60%，最常見\n24n urine citrate\nHypocitraturia\n5-29%\nMeta-低血鉀(\nChronic\nbolic\n包括\ndiarrhea\nacidosis\nthiazide\ninduced)\n24h urine oxalate\nHyperoxaluria\n26-67%\nDietary\nEnteric\n24n urine\nUAperuricosuria\n15-46%\nNormo-\ncalcemia\nAbsorptive\n(3 types\n+Granulo-\nmatous\ndisease)\nPTH,Fasting\nUca正常\nRenal leak\nPTH个\nFasting\nUca个\nHyper-\ncalcemia\nResorptive\n(Hyperpara\n+惡性腫瘤\n+Cushing)\nPTH个\nFasting\nUca个\nVitamin C\nexcess\nHyperthyr\noidism\nNormo-\ncalcemia\n＋\nMeta-\nbolic\nacidosis\nPrimary\nHyper-\nuricemia\nNormou-\nricemia\nDistal\nrenal\nrubular\ncidosis\nHypercalciuria D/D:先用\nserum calcium, PTH區分出\nabsorptive, renal和\nresorptive，若是absorptive\n冉用low calcium diet test和\ncalcium loading test區分\ntype l/lll。也可以做\nthiazide challenge test進一\n步區分renal leak和\nresorptive,一開始有鈣正常\n血液酸要想到RTA\nLow\nCalcium\nintake\nHigh intake\nof oxalate-\nrich foods\nExcess vit C\nintake\n(≥5mmol/\nday)\nFat吸收\n不良(腸\n胃道發\n炎,G1\nbypass手\n術，膽囊\n切除\n鈣攝取\n不足\ntype\n1,2,3\nGout\nHigh dietary\npurine\nintake\nMyeloprolif\n-erative\ndisorders\nHaemolytic\nanaemia\n24h urine Me\nHypomagnesuria\n7-23%\nPoor\ndietary\nintake\nReduced\nintestinal\nabsorption\n(chronic\ndiarrheal)"
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "Vit D",
+                "成人的表皮和新生兒的表皮和真皮有豐富的provitamin D3，即7-dehydrocholecterol，經陽光的紫外線照射後光解轉變為維他命D3: cholecalciferol，而來自植物的丁種維生素經紫外線照射轉化成維生素D2: ergocalciferol，由食物經十二指腸和空腸吸收的維生素D2與皮膚合成的維生素D3進入血中與維生素D結合蛋白質(DBP)結合而被送至肝臟，代謝成calcifediol，即25-(OH)D3，其活性低，在血中仍與蛋白質結合而運送至腎臟，被腎臟中proximal renal tubule的1 alpha-hydroxylase(受parathyroid hormone調控)水解為1,25(OH)2D3，此即為最具活性的D3，calcitriol",
+                "@Calcitriol: 能刺激腸道對鈣的吸收。能在副甲狀腺素的協同作用下，刺激骨頭對鈣的分解。能抑制PTH分泌。",
+                "1,25-(OH)2-D3 調控",
+                "PCT的𝛂1 hydroxylase"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s09.webp",
+              "ocr_text": "•成人的表皮和新生兒的表皮和真\n皮有豐富的provitamin D3，即7-\ndehydrocholecterol，經陽光的紫\n外線照射後光解轉缕為維他命\nD3: cholecalciferol，而來自植物\n的丁種維生素經紫外線照射轉化\n成維生素D2:ergocalciferol，由食\n物經十二指腸和空腸吸收的維生\n素D2與皮膚合成的維生素D3進人\n血中與維生素口結合蛋白質(DBP)\n結合而被送至肝臟，代謝成\ncalcifediol，即25-1OH)D3，其活\n性低，在血中仍與蛋白質結合而\n運送至腎臟，被腎臟中proximal\nrenal tubule的1 alpha-\nhydroxylase(受parathyroid\nhormone調控)水解為\n1,25(OH)2D3，此即為最具活性的\nD3，calcitriol\n@calcitriol: 能刺激腸道對鈣的吸\n收。能在副甲狀腺素的協同作用\n下，刺激骨頭對鈣的分解。能抑\n制PTH分泌。\nVit D\nSun\nlUttraviolet B\nSkin\nVitamin D.\n1,25-(OH)2-D3 調控\nLiver\nKidney\nVitamin DC 1>2510H)p 1,25(0H).D\nPCT的c1 hydroxylase\nDiet: fortification/supplementation\nvitamin Dz or vitamin Ds\nVitamin Dz = ergocalciferol\nVitamin Dg = cholecalciforol\nBone\n1 Ca mobilization\nIntestine\n1Ca absorption\nParathyroid glands\n1 PTH secretion"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Ca metabolism",
+                "升鈣的三種方式",
+                "Bone resorption: PTH和1,25-(OH)2-D3(calcitrol)刺激骨頭分解出鈣",
+                "Kidney re-absorption: PTH刺激proximal tubule(PCT)再吸收鈣",
+                "Small intestine absorption: 1,25-(OH)2-D3(calcitrol)刺激小腸吸收鈣(也吸磷)",
+                "1,25-(OH)2-D3 調控",
+                "PTH 調控",
+                "PTH刺激PCT再吸收鈣排出P",
+                "除了刺激osteoclast, 也改變骨骼中hydroxyapatite的離子價, 導致 Orthophosphate轉變成 Pyrophosphate，以致Hydroxyapatite變得易解離出鈣離子",
+                "PTH刺激PCT的𝛂1 hydroxylase產生1,25(OH)2D3",
+                "Serum/Urine Ca↑",
+                "Serum P↓",
+                "PCT的𝛂1 hydroxylase"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s10.webp",
+              "ocr_text": "Sun\nlUltraviolet B\n1,25-(0H)2-D3 調控\nCa metabolism\nBone\n1Ca mobilization\nSkin\nVitamin Ds\nVitamin D\nLiver\nKidney\n>251 HD >1,25(0H),D\nPCT的o1 hydroxylase\n升鈣的三種方式\n。Bone resorption: FTH和1,25-\n(OH)2-D3(calcitrol)刺激骨頭分\n解出鈣\n•Kidney re-absorption: FTH刺激\nproximal tubule(PCT)再吸收鈣\n•Small intestine absorption: 1,25-\n(OH)2-D3(calcitrol)刺激小腸吸\n收鈣(也吸磷）\nIntestine\n1Ca absorption\nDiet: fortification/supplementation\nvitamin D, or vitamin D.\nVitamin Dz = ergocalciferol\nIVitamin Dg = cholecalciferol\nParathyroid glands\n!PTH secretion\nPTH\nTH 調控\nFTH刺激PCT的a1 hydroxylase\n產生1,25(QH)2D3\n251OH1D3\nIa1 hydroxylase\n1.25 [OH12 D3\nOsteoclast\nOsteoblast\n-， Proteoclast\nFTH刺激PCT再\n吸收鈣排出P\n除了刺激osteoclast，也改變骨骼中\nhydroxyapatite的離子價，導致\nOrthophosphate轉變成\nPyrophosphate ，以致Hydroxyapatite\n變得昮解離出鈣離子\nOsteolvse\ncalcium reabsorption\nSerum/Urine Ca个\nSerum pl\nIntestinal calcium\nreabsorption"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Hypercalciuria",
+                "Definition: urinary excretion of more than 250 mg of calcium per day in women or more than 275-300 mg of calcium per day in men while on a regular unrestricted diet (400",
+                "4 types",
+                "Absorptive hypercalciuria (AH): 50%",
+                "Resorptive hypercalciuria: 15%",
+                "Renal hypercalciuria(Renal leak): 10%",
+                "Idiopathic"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s11.webp",
+              "ocr_text": "Hypercalciuria\n• Definition: urinary excretion of more than 250 mg of calcium\nper day in women or more than 275-300 mg of calcium per\nday in men while on a regular unrestricted diet (400\n•4 types\n•Absorptive hypercalciuria (AH):50%\n•Resorptive hypercalciuria: 15%\n• Renal hypercalciuria(Renal leak):10%\n•ldiopathic"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "Absorptive hypercalciuria (50%)",
+                "Definition: Increased urinary calcium excretion (>0.2mg/mg creatinine) after an oral calcium load (1g calcium後2-4hour的Ca/Cre濃度))",
+                "Type I: primary increase in intestinal absorption of calcium, CYP24A1 mutation減少1,25(OH)2D3 分解, VDR gene 異常造成D3 hypersensitivity, 腸道(最主要小腸) 對於Vitamin D的刺激有高度的反應，在正常飲食下，會有大量的鈣被吸收(↑Systemic Ca. load)。",
+                "Type II:是type1的亞型,  較會受到dietary factors的影響. reversible under dietary restrictions",
+                "Type III: renal phosphate wasting with hypophosphatemia->刺激腎臟轉換出更多calcitrol->促進小腸吸鈣吸磷 (少用了）",
+                "三個type 都是一開始血鈣上升, PTH下降(被抑制但濃度持平),  減少腎臟在吸收鈣, 增加鈣排泄到尿(hyperclciuria), 之後血鈣正常",
+                "=腸道對鈣的吸收過度增加"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s12.webp",
+              "ocr_text": "=腸道對鈣的吸收過度增加\nAbsorptive hypercalciuria (50%)\n•Definition: Increased urinary calcium excretion (>0.2mg/mg creatinine) after\nan oral calcium load (1g calcium 後2-4hour的Ca/Cre濃度））\n•Type l: primary increase in intestinal absorption of calcium, CYP24A1\nmutation減少1,25(OH)2D3 分解，VDR gene 異常造成D3 hypersensitivity,腸\n道(最主要小腸)對於vitamin D的刺激有高度的反應，在正常飲食下，會\n有大量的鈣被吸收(个Systemic Ca. load)。\n•Type 1l:是type1的亞型，較會受到dietary factors的影響.reversible under\ndietary restrictions\n• Type l: renal phosphate wasting with hypophosphatemia->刺激腎臟轉\n換出更多calcitrol->促進小腸吸鈣吸磷（少用了\n•三個type 都是一開始血鈣 上升，PTH下降(被抑制但濃度持平)，減少腎臟在\n吸攻鉦 垴加鉦挑泄到尿hvnaralrir〕之後加鉦正堂"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Absorptive hypercalciuria",
+                "tests and treatment",
+                "Calcium restricted test=Low calcium diet urine test: 400mg Ca, 100mg Na for one week-> Uca 200mg/day",
+                "Oral calcium load test: 1g calcium後2-4hour的Ca/Cre濃度)",
+                "限鈣沒用",
+                "限鈣有用",
+                "治療",
+                "降低Calcium load - 口服鈣結合劑(Cellulose phosphate)或限制Ca攝取(只對type 2有用, type 2較輕微)=> 治本",
+                "降低腎臟排出Ca – Thiazides => 治標",
+                "Thiazide作用讓Ca再吸收回來，直接降低尿鈣，因此在renal-leak或是absorptive都可以用，而在absorptive中真正降低 Ca loading的是限鈣與鈣螯合劑"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s13.webp",
+              "ocr_text": "Absorptive hypercalciuria\ntests and treatment\n•calcium restricted test=Low calcium diet urine test: 400mg Ca, 100mg Na for\none week->Uca 200mg/day\n•Oral calcium load test: 1g calciur後2-4hour的Ca/Cre濃度）\nSERUM\nURINARY\nCa\nP\nPTH\nCa\nFASTING\nCa\nLOAD\nCa\nRESTRICTED\n1\n限鈣没用\nAbsorptive hypercalciuria\nN\nN\nN\ntype ]\nAbsorptive hypercalciuria\nN\nN\nN\n鈉N\n*个\nN\n限鈣有用\ntype Il\nRenal hypercalciuria\nN\nN\nPrimary hyperparathyroidism\n•治療\n•隆低Calcium load - 口服鈣結合劑(Cellulose phosphate)或限制Ca攝取（只對type\n2有用，type 2較輕微)=＞治本\nThiazide作用讓Ca再吸收回來，直接降低\n•降低腎臟排出Ca— Thiazides =>治標\n尿鈣，因此在renal-leak或是absorptive都\n可以用，而在absorptive中真正降低 Ca\nloading的是限鈣與鈣螯合劑"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "限鈣沒用",
+                "限鈣有用"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s14.webp",
+              "ocr_text": "了.一位泌尿道結石病患接受代謝分析檢查，其血清中鈣離子、磷離子及副甲狀腺素皆正常；\n尿液分析發現尿鈣於空腹(fast)時正常但於鈣負荷測試(calcium load test)時高於正常值，其餘尿液\n離子檢測皆正常，請問此患者最有可能為下列何種狀況？\n(A) 賢性高尿鈣症 (Renal bypercalciuria)\n(B) 第一型吸收性高尿鈣症 (Absorptive hypercalciuria type 1)\n(C) 第二型吸收性高尿鈣近 (Absorptive bypercalciurig type 1)\n(） 原發性副甲狀腺功能亢進 (Primary hyperparathyroidism)\n仁） 未分類之高尿鈣症\n(Unclassified hypercalciuria)\nSERUM\nURINARY\nCa\nFASTING\nCa\nLOAD\nAbsorptive hypercalciuria\ntype D\nAbsorptive hypercalciuria\ntype 1)\nRenal hypercalciuria\nPrimary hyperparathyroidism\nCa\nN\nN\n-z\nP\nN\nN\n一z\nPTH\nN\nN\nN\nCa\nRESTRICTED\nUA\n限鈣沒用\nN\n限鈣有用\nN\nN"
+            }
+          ]
+        },
+        {
+          "id": "t14",
+          "title": "高尿鈣：Resorptive / Renal Leak / Thiazide / 其他",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 15,
+              "text": [
+                "Resorptive hypercalciuria(3-5%)",
+                "起因於原發型副甲狀腺功能亢進(primary hyperparathyroidism)",
+                "PTH Increase renal synthesis of calcitrol -> intestine 吸鈣吸磷",
+                "PTH 刺激proximal tubule吸鈣排磷",
+                "骨頭的鈣成份也因PTH的作用被釋放至血液內(Bone resorption)",
+                "PTH ↑, 血鈣上升, 血磷下降, 尿鈣上升",
+                "PTHrP（腫瘤）也會造成（最常見是lung cancer, breast cancer)造成類似 hyperparathyroidism",
+                "治療: 開刀切除副甲狀腺瘤或肥大副甲狀腺，藥物治療無效"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s15.webp",
+              "ocr_text": "Resorptive hypercalciuria(3-5%)\n••起因於原發型副甲狀腺功能亢進(primary hyperparathyroidism)\n•PTH Increase renal synthesis of calcitrol ->intestine 吸鈣吸磷\n•FTH 刺激proximal tubule吸鈣排磷\n•骨頭的鈣成份也因PTH的作用被釋放至血液內(Bone\nresorption)\n•PTH 个，血鈣上升，血磷下降，尿鈣上升\nPTHrP（腫瘤）也會造成（最常見是lung cancer, breast cancer)\n造成類似 hyperparathyroidism\n•治療：開刀切除副甲狀腺瘤或肥大副甲狀腺，藥物治療無效"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Renal-leak hypercalciuria(5-8%)",
+                "Impaired tubular reabsorption of Ca -> 尿鈣上升 (renal leak, fasting U[Ca]↑)",
+                "因為鈣流失, PTH ↑調控(續發副甲狀腺亢進), 最後血鈣正常",
+                "治療",
+                "降低腎臟排出Ca - Thiazides",
+                "補充鈣質",
+                "Thiazide作用讓Ca再吸收回來，直接降低尿鈣，因此在renal-leak或是absorptive都可以用，而在absorptive中真正降低 Ca loading的是限鈣與鈣螯合劑",
+                "Thiazide: 抑制遠曲小管Na⁺/Cl⁻ cotransporter.  Na再吸收減少，使體內鈉離子減少，導致尿鈣再吸收增加",
+                "Thiazide造成體液減少，啟動RAAS，使K+和 H+都排出，造成代謝性鹼中毒。然後會使近曲小管Na+再吸收增加（近曲小管Na+ 和 HCO3-是同向，所以HCO3-再吸收也增加），且會成低檸檬酸尿（Thiazide 會引起的低血鉀，導致的細胞內酸中毒會增加腎小管對檸檬酸鹽的再吸收，從而導 致低檸檬酸尿症。)， 尿會變酸，可能造成高尿酸症增加尿酸結石產生"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s16.webp",
+              "ocr_text": "Renal-leak hypercalciuria(5-8%)\n• Impaired tubular reabsorption of Ca-尿鈣上升(renalleak,\nfasting UICa]个)\n•因為鈣流失，PTH 不調控(續發副甲狀腺亢進),最後血鈣正常\n•治療\n•降低腎臟排出Ca - Thiazides\n•補充鈣質Thiazide:抑制遠曲小管Nat/Cr cotransporter. Na再\n吸收減少，使體內鈉離子減少，導致尿鈣再吸收\n增加\nThiazide作用讓Ca再吸收回來，直接隆低尿鈣，因此在\nrenal-leak或是absorptive都可以用，而在absorptive中真正\n降低 Ca loadina的是限鈣與鈣螯合劑\nThiazide造成體液減少，啟動RAAS• 使K+和H+都排出，造成代謝性鹼中毒。然後\n會使近曲小管Na+再吸收增加（近曲小管Na+ 和HCO3-是同向，所以HCO3-再吸收\n也增加），且會成低檸檬酸尿（Thiazide 會引起的低血鉀，導致的細胞內酸中毒會\n增加腎小管對檸檬酸鹽的再吸收，從而導 致低檸檬酸尿症。），尿會變酸，可能造\n成高尿酸症增加尿酸結石產生"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Thiazide",
+                "直接促進Distal tubule再吸收鈣",
+                "造成體液減少, 間接促進Proximal tubule再吸收鈣",
+                "降低尿鈣的同時, 也會造成三低一高",
+                "低血鉀, 低血鎂, 低檸檬酸尿",
+                "高尿酸",
+                "長期下來骨密度會上升",
+                "Na會造成體液增加, 抑制proximal tubule再吸收鈣, 造成高尿鈣",
+                "吃太鹹容易產生結石",
+                "高尿鈣用Thiazide治療, 需同時限鹽",
+                "Thiazide會造成intracellular acidosis, 造成hypocitraturia",
+                "Citrate 分泌進尿液中主要靠酸鹼平衡調控",
+                "Metabolic acidosis → hypocitraturia",
+                "Thiazide是 intracellular acidosis, 一樣會造成hypocitraturia",
+                "高尿鈣用Thiazide治療, 需同時加上Potassium citrate",
+                "補鉀",
+                "提升尿中Citrate濃度",
+                "鎂鉀檸檬高尿酸 (咩賈雷夢搞柳僧 => 台語:要吃檸檬高尿酸)",
+                "Thiazide challenge test->區分renal leak 或是 resorptive",
+                "給thiazide後 因為會造成高血鈣的狀況, 所以如果是renal hypercalciuria所造成的secondary hyperparathyroidism會讓副甲狀腺素下降, 反之如果是原發性副甲狀腺素增高則不會降"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s17.webp",
+              "ocr_text": "Thiazide\n•直接促進Distal tubule再吸收鈣\n•造成體液減少，間接促進Proximaltubule再吸收鈣\n•降低尿鈣的同時，也會造成三低一高\n•低血鉀，低血鎂，低檸檬酸尿\n鎂鉀檸檬高尿酸（咩賈雷夢搞柳僧二台語:要吃檸檬高尿酸\n•高尿酸\n•長期下來骨密度會上升\n•Na會造成體液增加，抑制proximal tubule再吸收鈣，造成高尿鈣\n•吃太鹹容易產生結石\n•高尿鈣用Thiazide 治療，需同時限鹽\n•Thiazide會造成intracellular acidosis,造成hypocitraturia\n• Citrate 分泌進尿液中主要靠酸鹼平衡調控\n•Metabolic acidosis > hypocitraturia\n•Thiazide是 intracellular acidosis, 一檬會造成hypocitraturia\n•高尿鈣用Thiazide治療，需同時加上Potassium citrate\n•補鉀\nThiazide challenge test->區分renalleak 或是 resorptive\n•提升尿中Citrate濃度\n給thiazide後 因為會造成高血鈣的狀況,所以如果是renal\nhypercalciuria所造成的secondary hyperparathyroidism會讓\n副甲狀腺素下降，反之如果是原發性副甲狀腺素增高則不會"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "PTH正常調控",
+                "PTH正常調控",
+                "PTH↑",
+                "PTH↑",
+                "PTH normal"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s18.webp",
+              "ocr_text": "TABLE 52-5 Differential Diagnosis of Hypercalciuria\nABSORPTIVE RENAL\nRESORPTIVE\nNormal\nPTH正常調控\nSuppressed\nPTH normal\nNormal\nNormal\nElevated\nPTH正常調控\nSStimulated\nStimulated\nPTHN(secondarily) PTH Nprimarily)\nElevated\nElevated\nSerum\ncalcium\nParathyroid\nfunction\nFasting\nurinary\ncalcium\nIntestinal\ncalcium\nabsorption\nElevated\n(primarily)\nElevated\n(secondarily)\nElevated\n(secondarily)"
+            },
+            {
+              "slide_num": 19,
+              "text": [
+                "Hypercalciuria其他原因",
+                "Sarcoidosis, granulomatous disease (Macrophages中的1a hydroxylase造成1,25-D3 (calcitrol)↑，進而使腸子增加calcium吸收)",
+                "->類似absorptive",
+                "->治療用 steroids, hydroxychloroquine or ketoconazole",
+                "Malignancy: 分泌PTHrp，功能類似PTH, In Pt’ 最常見高血鈣的原因, Lung & breast (60%), RCC (10-15%)",
+                "->類似resorptive",
+                "Glucocorticoid過多: stimulate release of PTH->promote bone resorption, 常見於Cushing syndrome(50%的病人會有 urolithiasis), 長期使用steroid",
+                "->類似resorptive"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s19.webp",
+              "ocr_text": "Hypercalciuria其他原因\n•Sarcoidosis, granulomatous disease (Macrophages中的1a hydroxylase造\n成1,25-D3(calcitrol)个 •進而使腸子增加calcium吸收）\n-類似absorptive\n->治療用 steroids, hydroxychloroquine or ketoconazole\n•Malignancy： 分泌PTHrD•功能類似PTH, In Pt'最常見高血鈣的原因，\nLung & breast (60%), RCC (10-15%)\n二類似resorptive\n•Glucocorticoid過多：stimulate release of PTH->promote bone resorption,\n常見於Cushing syndrome(50%的病人會有urolithiasis)， 長期使用steroid\n>類似resorptive"
+            }
+          ]
+        },
+        {
+          "id": "t15",
+          "title": "低檸檬酸尿與高草酸尿",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 20,
+              "text": [
+                "Hypocitraturia",
+                "Citrate 是 Calcium stone 重要的 inhibitor",
+                "與Ca 複合來減少 Urine[Ca]",
+                "預防草酸鈣spontaneous nucleation",
+                "抑制agglomeration (凝聚), sedimentation(沉澱)",
+                "增強 Tamm-Horsfall glycoprotein [THS protein]的抑制效果",
+                "D/D",
+                "Distal RTA (低尿檸檬酸尿 + 高尿鈣  +  Urine PH值升高): 影響Citrate excretion最主要的因素是酸鹼狀態, metabolic acidosis時, citrate excretion 會下降",
+                "Hypokalemia",
+                "Chronic diarrhea syndrome (低尿檸檬酸 + 高尿草酸)",
+                "Drug induced:",
+                "- Thiazide(低尿檸檬酸 + 低血鎂 + 低血鉀 + 高尿酸)",
+                "- Carbonic anhydrase inhibitors(ex: Acetazolamide),",
+                "- ACEI(Enalapril)",
+                "-Topiramate",
+                "治療: Alkaline citrate(potassium citrate)",
+                "U[citrate] ≦ 320 mg/day",
+                "Male < 450mg/Female < 550mg/day"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s20.webp",
+              "ocr_text": "UIcitrate] 三 320 mg/day\nMale < 450mg/Female < 550mg/day\nHypocitraturia\n•Citrate 是 Calcium stone 重要的 inhibitor\n•與ca複合來減少 UrineICal\n•預防草酸鈣spontaneous nucleation\n•抑制agglomeration （凝縣),sedimentation(沉澱）\n•增強 Tamm-Horsfall glycoprotein ITHS protein]的抑制效果\n•D/D\n•Distal RTA(低尿檸檬酸尿＋高尿鈣 + Urine PH值升高)：影響\nCitrate excretion最主要的因素是酸鹼狀態，metabolic acidosis時，\ncitrate excretion 會下降\n•Hypokalemia\n•Chronic diarrhea svndrome (低尿檸檬酸＋高尿草酸）\n• Drug induced:\n-Thiazide(低尿檸檬酸＋低血鎂＋ 低血鉀＋ 高尿酸）\n-Carbonic anhydrase inhibitors(ex: Acetazolamide)，\n-ACEI(Enalapril)\n-Topiramate\n•治療！Alkaline citrate(potassium citrate)"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "Hyperoxaluria - Primary type",
+                "ESRD risk:",
+                "Type 1> Type 2> Type 3 (Type 3不會ESRD)",
+                "治療:",
+                "Vit B6(pyridoxine therapy) for type 1(5-20 mg/kg/day according to urinary oxalate excretion)",
+                "Liver-renal transplant（只對type I 和type II有效但反正 type III不會ESRD)",
+                "U[oxalate] ≧ 40 mg/day",
+                "隱性遺傳疾病",
+                "Liver Glyoxylate metabolism異常，Oxalate 增加↑, U oxalate excretion ↑",
+                "Type 1: 肝臟中的AGT 壞掉, Glyoxylate 無法轉成Glycine (補充Vit B6), 所以會轉成Glycolate造成堆積（註）（Lumasiran）",
+                "Type 2: GRHPH 壞掉hydroxypyruvate無法轉成 D-Glycerate",
+                "Type 3 與 HOGA壞掉有關",
+                "PH: AGH"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s21.webp",
+              "ocr_text": "Hyperoxaluria - Primary type\n•隱性遺傅疾病PH: AGH\n• Liver Glyoxylate metabolism異常\n，Oxalate 增加个，U oxalate\nPH3\n* 4hydroxy-2-oxoglutarate—> Giyoxylate + Pyruvate\nHOGA\nexcretion 个\nAlanine\n•Type 1:肝臟中的AGT壞掉，\nPH1\nGilyoxylate 無法轉成Glycine(補充\nGlycolate 4\nGlyoxylate\nvit B6)，所以會轉成Glycolate造成\nGRHPR\nHydroxypyruvate\nAGT\n(Vit B6\n堆積（註）(Lumasiran）\nGRHPR\nLDH\n•Type 2: GRHPH 壞掉\nPH2\nhydroxypyruvate無法轉成 D-\nD-Glycerate\nL-Glycerate\nGlycerate\n◎xalate\n•Type 3 與 HOGA壞掉有關\n• ESRD risk:\n•Type 1> Type 2> Type 3 （Type 3不會ESRD)\n•治療：\n• Vit B6(pyridoxine therapy) for type 1(5-20 mg/kg/day according to urinary\noxalate excretion)\n• Liver-renal transplant（只對type 1 和type 11有效但反正 type 川不會ESRD)\nPyruvate\nGlycir\nUoxalate] ≥ 40mg/day"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Hyperoxaluria - Enteric type",
+                "Oxalate吸收↑ U oxalate excretion ↑",
+                "與腸道的Ca/Mg濃度, oxalate degrading bacteria有關",
+                "原因一: Fat malabsorption, 腸道內 fatty acid 與Ca, Mg 皂化而減少Ca 與 oxalate 結合, 腸道oxalate 增加",
+                "腸胃道發炎(腸胃炎、胰臟炎、潰瘍性大腸炎, 會造成Chronic diarrhea, 也造成Bicarbonate流失和Citrate流失)",
+                "Roux-en-Y gastric bypass",
+                "膽囊切除",
+                "原因二: Ca攝取過少，導致游離的Oxalate太多",
+                "治療: 治療underlying disease, 減少fat/oxalate攝取, 補鈣鎂(Ca >1000mg/day, Mg 200-400mg/day)",
+                "6-14%攝取的草酸會被吸收，一半在大腸一半在小腸吸收"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s22.webp",
+              "ocr_text": "Hyperoxaluria - Enteric type\n•oxalate吸收不 U oxalate excretion 个 6-18%年照的总酸會被吸收．一半在大腸\n一半在小腸吸收\n•與腸道的Ca/Mg濃度,oxalate degrading bacteria有關\n•原因一：Fat malabsorption.腸道内tatty acid 與Ca， Mg 皂化而減少Ca 與\noalate 結合,腸道oxalate 增加\n•腸胃道發炎(腸胃炎、胰臟炎、潰瘍性大腸炎，會造成Chronic\ndiarrhea， 也造成Bicarbonate 流失 和Citrate流失）\n•Roux-en-Y gastric bypass\n•膽囊切除\n•原因二：Ca攝取過少，導致游離的Oxalate太多\n•治療：治療underlying disease,減少fat/oxalate攝取，補鈣鎂(Ca\n>1000mg/ day, Mg 200-400mg/day)\nUrinary risk factor\nSuggested treatment\nLE\nEnteric hyperoxaluria\nPotassium citrate\n3-4\nCalcium supplement\n12\nDiet reduced in fat and oxalate\n3\nGR\nB\nB"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Hyperoxaluria - Dietary type",
+                "飲食中oxalate太多, U oxalate excretion ↑",
+                "Oxalate-rich foods: 巧克力, 菠菜, 韭菜, 芹菜, 地瓜, 堅果, 草莓, 葡萄, 濃茶, 啤酒",
+                "Vit C會代謝成Oxalate, 但是和結石關聯目前沒有明確證據, 但AUA建議Vitamin C的劑量不要超過2g/day",
+                "High animal protein diet是risk factor, animal protein攝取增加->protein分解增加->某些胺基酸的代謝會產生oxalate(hydroxyproline, glycine, phenylalanine, tyrosine)",
+                "治療: 減少oxalate食物, 減少high animal protein和Vit C攝取",
+                "草酸桿菌(Oxalobacter formigenes)",
+                "陽性厭氧菌, 存在於人體的大腸 (restricted to the distal colon)",
+                "把草酸代謝成二氧化碳和甲酸獲得能量",
+                "抗生素使用 => 缺乏草酸桿菌=> 草酸再吸收增加",
+                "亦是 Cystic fibrosis容易產生結石的原因"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s23.webp",
+              "ocr_text": "Hyperoxaluria - Dietary type\n•飲食中oxalate太多，U oxalate excretion 个\n•Qxalate-rich foods:巧克力，菠菜,韭菜,芹菜，地瓜，堅果，草莓，葡萄，濃茶，啤\n•vit C會代謝成Oxalate，但是和結石關聯目前沒有明確證據，但AUA建議Vitarnin\nc的劑量不要超過2g/dav\n•High animal protein diet是risk factor, animal protein攝取增加->protein分解增加\n->某些胺基酸的代謝會產生oxalate(hydroxyproline, glycine, phenylalanine,\ntyrosine)\n•洽療：減少oxalate食物，減少high animal protein和vit C攝取\n•草酸桿菌(Oxalobacter formigenes)\n•陽性厭氧菌，存在於人體的大腸(restricted to the distal colon)\n•把草酸代謝成二氧化碳和甲酸獲得能量\n•抗生素使用二>缺乏草酸桿菌=，草酸再吸收增加\n•亦是 Cystic fibrosis容易產生結石的原因"
+            }
+          ]
+        },
+        {
+          "id": "t16",
+          "title": "高尿酸尿與低鎂尿",
+          "slide_count": 1,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 24,
+              "text": [
+                "Hyperuricosuria",
+                "Hyperuricosuria定義: 成人>800mg/day, 小孩: >12 mg/kg/day",
+                "可能同時有hyperuricemia或沒有, 造成hyperuricosuria/hyperuricemia的原因: 尿酸食物攝取過多, enzyme defect, myeloproliferative disease/tumor lysis, hemolytic anemia",
+                "尿酸食物: 海鮮(特別是鮭魚、蝦子、龍蝦), 紅肉, 內臟類, 含有高果糖玉米糖漿的飲料, 酒精飲品（特別是啤酒，包含無酒精啤酒), 高湯",
+                "尿液中的尿酸高-> 尿液酸 “Acidic arrest” (urine pH constantly < 5.8) ->uric acid 和 calcium oxalate共同結晶(co-crystallization).",
+                "治療: 有hyperuricemia->allopurinol(100-300mg/d) + potassium citrate(9-12g/d)",
+                "沒有hyperuricemia->potassium citrate/sodium bicarb(1.5# TID) +/- allopurinol",
+                "＠Allopurinol(1線), Febuxostat (2線)",
+                "Hypomagnesiuria",
+                "低尿鎂 ->  抑制結晶功能下降",
+                "Hypomagnesiuria定義: < 72mg/day",
+                "原因: 鎂攝取不夠, 吸收不好reduced intestinal absorption (chronic diarrhea)",
+                "治療:補鎂(200-400mg/day)",
+                "鎂主要在distal small intestine 被動吸收"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s24.webp",
+              "ocr_text": "Hyperuricosuria\n• Hyperuricosuria定義：成人>800mg/day，小孩亥：>12 mg/ kg/day\n•可能同時有hyperuricernia或沒有，造成hyperuricosuria/hyperuricemnia的原因：\n尿酸食物攝取過多,enzyme defect, myeloproliferative disease/tumor lysis,\nhemolytic anemia\n•尿酸食物：海鮮(特別是鮭魚、蝦子、龍蝦），紅肉，內臟類，含有高果糖玉米糖\n漿的飲料，酒精飲品（特別是啤酒，包含無酒精啤酒)，高湯\n•尿液中的尿酸高-＞尿液酸 “Acidic arrest” (urine pH constantly ≤ 5.8) ->uric acid\n和 calcium oxalate共同結晶(co-crystalization).\n•治療：有hyperuricemia->allopurinol(100-300mg/d) + potassium citrate(9-12g/d)\n沒有hyperuricemia->potassium citrate/sodium bicarb(1.5#TID)+/-\nallopurinol\n@Allopurinol1線），F byB-Q12铜gnesiuria\n•低尿鎂-＞抑制結晶功能下降\n鎂主要在distal small intestine 被動\n•Hypomagnesiuria定義：<72mg/day\n吸收\n•原因：鎂攝取不夠，吸收不好reduced intestinal absorption (chronic diarrhea)\n•治療：補鎂(200-400mg/dav)"
+            }
+          ]
+        },
+        {
+          "id": "t17",
+          "title": "草酸鈣結石治療總結與觀念複習",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 25,
+              "text": [
+                "Calcium oxalate stone - treatment",
+                "Urinary calcium and oxalate contribute equally to urinary saturation of calcium oxalate."
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s25.webp",
+              "ocr_text": "Calcium oxalate stone - treatment\nUrinary calcium and oxalate\ncontribute equally to urinary\nsaturation of calcium oxalate.\nCalcium oxalate stone\nBasic evaluation\n24 h urine collection\nHypercalcuria\nHypocitraturia\nHyperoxaluria\nHyperuricosuria\n5-8 mmol/d?\n8 mmol/d\nMale < 1.7 mmol/d\nFemale < 1.9 mmol/d\n＞0.5mmol/d\nenteric)\n＞1mmol/d\n(primary)\nV\n＞4 mmol/d\nHyperuricosuria\nand\nHyperuricaemia\n＞380 umo//L\nAlkaline\nCitrate\n9-12 g/d\nor\nsodium\nbicarbonate\n1.5 g tid24\nHydrochlorothiazide\ninitially 25 mg/d\nup to 50 mg/d\nchlorthalidone\n25 mg/d\nindapamide\n2.5mg/d\nAlkaline\ncitrate\n9-12 g/d\nCalcium\n＞1,000 mg/d\nand\nmagnesium\n200-400 mg/d\nPyridoxine\ninitial 5 mg/kg/d\nu to\n20mg/kg/d\nAlkaline\ncitrate\n9-12g/d\nOR\nsodium\nbicarbonate\n1.5g tid?\nPLUS/OR\nallopurinol\n100 mg/d\nAlkaine citrate\n9-12 a/d\nPLUS\nallopurinol\n100-300 mg/d4.5\nHypomagnesuria\n＜3 mmol/d\nMaqnesium\n200-400 ma/d"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "草酸鈣結石 治療",
+                "鈣: Thiazide + citrate",
+                "檸檬: citrate",
+                "草:",
+                "原發 pyridoxine (PH-1)",
+                "續發 補充 citrate, Ca片, Mg (enteric)",
+                "尿酸:",
+                "citrate(鹼化尿)",
+                "Allopurinol(1線), Febuxostat (2線)",
+                "鎂: Mg",
+                "針對五種異常 鈣草 檸尿鎂",
+                "含鈣結石",
+                "蓋臭 喝完沒?"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h26.webp",
+              "ocr_text": "草酸鈣結石治療\n•鈣：Thiazide + citrate\n•檸檬：citrate\n•草：\n•原發 pyridoxine (PH-1)\n•續發補充 citrate, Ca片， Mg (enteric)\n•尿酸：\n•citrate(鹼化尿）\n• Allopurinol(1線)，Febuxostat （2線）\n•鎂：Mg\n針對五種異常 鈣草檸尿鎂\n含鈣結石\n蓋臭 喝完沒？"
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "second line",
+                "in hyperuricosuria"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h27.webp",
+              "ocr_text": "4.4.4\nRecommendations for pharmacological treatment of patients with specific abnormalities in\nurine composition\nUrinary risk factor\nHypercalciuria\nHyperoxaluria\nEnteric hyperoxaluria\nGR\nA\nA\nHypocitraturia\nHypocitraturia\nHyperuricosuria\nIHigh sodium excretion\nSmall urine volume\nUrea level indicating a high intake of\nanimal protein\nNo abnormality identified\nSuggested treatment\nThiazide + potassium citrate\nOxalate restriction\nPotassium citrate\nCalcium supplement\nDiet reduced in fat and oxalate\nPotassium citrate\nSodium bicarbonate if intolerant to potassium citrate\nAllopurinol\nFebuxostat second line\nRestricted intake of salt\nIIncreased fluid intake\nAvoid excessive intake of animal protein\nin hyperuricosuria\nIHigh fluid intake\nLE\n11a\n2b\n13-4\n2\n3\n1b\n1b\n1a\n1b\n1b\n1b\n1b\n2b\nB\nB\nA\nA\nA\nA\nA\nA\nA\nB"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "觀念複習1",
+                "高尿鈣: normocalcemia (idiopathic hypercalciuria, or granulomatous diseases) or hypercalcaemia (hyperparathyroidism, granulomatous diseases, vitamin D excess, or malignancy).",
+                "Absorptive腸吸收, Renal腎漏, Reabsorptive副甲亢; idiopathic",
+                "要看 intact PTH 判斷是否為hyperparathyroidism (HPT).",
+                "低檸檬酸尿 Hypocitraturia (male < 1.7 mmol/d, female < 1.9 mmol/d) may be idiopathic or secondary to metabolic acidosis or hypokalemia",
+                "造成低檸檬酸的原因: Distal RTA, Chronic diarrhea, Thiazide造成",
+                "RTA和烙賽 都會代謝酸",
+                "代謝酸會使citrate流失(因為當作酸鹼緩衝劑)",
+                "Thiazide會低鉀和intracellular acidosis"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h28.webp",
+              "ocr_text": "觀念複習1\n。高尿鈣：normocalcemia (idiopathic hypercalciuria, or granulomatous\ndiseases) or hypercalcaemia (hyperparathyroidism, granulomatous\ndiseases, vitamin D excess, or malignancy).\n•Absorptive腸吸收，Renal腎漏，Reabsorptive副甲亢;idiopathic\n•要看 intact FTH 判斷是否為hyperparathyroidism (HPT).\n•低檸檬酸尿 Hypocitraturia (male < 1.7 mmol/d, female < 1.9 mmol/ d)\nmay be idiopathic or secondary to metabolic acidosis or hypokalemia\n•造成低檸檬酸的原因：Distal RTA, Chronic diarrthea, Thiazide造成\n•RTA和烙賽 都會代謝酸\n•代謝酸會使citrate流失(因為當作酸鹼緩衝劑）\n•Thiazide會低鉀和intracellular acidosis"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "觀念複習2",
+                "高草酸尿 hyperoxaluria: > 0.5 mmol/day in adults (> 0.37 mmol/1.73 m2/day in children)",
+                "Primary hyperoxaluria (excretion mostly > 1 mmol/day), 三種基因問題 PH1,PH2,PH3",
+                "Enteric hyperoxaluria (excretion > 0.5 mmol/day, usually < 1 mmol/day), 腸胃炎、胰臟炎、潰瘍性大腸炎, 腸道吸收",
+                "Mild hyperoxaluria (excretion 0.45-0.85 mmol/day), 常見於 idiopathic CaOx stone formers.",
+                "Enteric hyperoxaluria",
+                "Bicarbonate流失(慢性腹瀉和脫水)",
+                "Citrate流失 (因為當作酸鹼緩衝劑)",
+                "避拉肚子-> 油脂吸收不良 和鈣鎂形成皂化-> 無法去附著oxalate",
+                "補Ca可以幫助附著腸道之Oxalate 減少吸收",
+                "避免使用slow-release的citrate"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h29.webp",
+              "ocr_text": "觀念複習2\n•高草酸尿 hyperoxaluria: > 0.5 mmol/ day in adults (> 0.37 mmol/1.73\nm2/day in children)\n•Primary hyperoxaluria (excretion mostly ＞ 1 mmol/day)，三種基因問題\nPH1,PH2,PH3\n•Enteric hyperoxaluria (excretion > 0.5 mmol/day, usually < 1 mmol/day)，腸\n胃炎、胰臟炎、潰瘍性大腸炎,腸道吸收\n• Mild hyperoxaluria (excretion 0.45-0.85mmol/dav)，常見於idiopathic CaOx\nstone formers.\n。Enteric hyperoxaluria\n•Bicarbonate流失(慢性腹瀉和脫水）\n•Citrate流失 (因為當作酸鹼緩衝劑）\n•避拉肚子-＞油脂吸收不良 和鈣鎂形成皂化-＞無法去附著oxalate\n•補ca可以幫助附著腸道之Oxalate 減少吸收\n•避免使用slow-release的citrate"
+            }
+          ]
+        },
+        {
+          "id": "t18",
+          "title": "磷酸鈣結石與 RTA",
+          "slide_count": 6,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 30,
+              "text": [
+                "Calcium phosphate stone 概論",
+                "高度復發, 5-10%",
+                "Radio-opaque stone",
+                "Calcium phosphate appears in three groups",
+                "Class IVa: Basic calcium phosphate(礦石名 Carbapatite = Apatite =磷灰石) -> 非感染性, 鹼性環境中易生成",
+                "Class IVb: Basic calcium phosphate + 感染性phosphate stone(ex: 礦石名Carbonate apatite/Whitlockite/Struvite)",
+                "-> 感染性(UTI), 鹼性環境中易生成(pH > 6.8結晶)",
+                "Class IVd: Calcium hydrogen phosphate dihydrate(礦石名Brushite = 鈣磷石)->非感染性, pH 6.5-6.8易生成, 最硬, ESWL resistant",
+                "可能原因",
+                "Hypercalciuria",
+                "Hyperparathyroidism",
+                "RTA type 1(distal RTA)",
+                "UTI(only carbonate apatite and Whitlockite)",
+                "Repeat ESWL(only Brushite)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s30.webp",
+              "ocr_text": "Calcium phosphate stone 概論\n•高度復發，5-10%\n• Radio-opaque stone\n• Calcium phosphate appears in three groups\n• Class IVa: Basic calcium phosphate(礦石名 Carbapatite = Apatite=磷灰石）-\n＞非感染性，鹼性環境中昮生成\n•Class IVb: Basic calciurn phosphate ＋ 感染性phosphate stone(ex:礦石名\nCarbonate apatite/Whitlockite/Struvite)\n-＞感染性(UTI)，鹼性環境中易生成(pH>6.8結晶）\n• Class IVd: Calcium hydrogen phosphate dihydrate(礦石名Brushite = 鈣磷石\n)-非感染性，pH6.5-6.8号生成，最硬，ESWL resistant\n•可能原因\n•Hypercalciuria\n•Hyperparathyroidism\n• RTA type 1(distal RTA)\n• UTI(only carbonate apatite and Whitlockite)\n• Repeat ESWL(only Brushite)"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "*兩類stone都要survey hyperpara, hypercalciuria和RTA",
+                "*Carbonate apatite要多survey有沒有UTI, 且PH>6.5考慮酸化尿液",
+                "Hyperparathyroidism (HPT)",
+                "酸化尿液, 但要監控避免代謝酸中毒(少用)",
+                "Calcium phosphate stone",
+                "診斷與治療",
+                "依照不同成因去治療(absorptive/resorptive/renal leak)",
+                "依照不同成因去治療(absorptive/resorptive/renal leak)",
+                "Survey UTI, 有UTI的話走infection stone treatment流程",
+                "Survey distal RTA(血液代謝酸尿液鹼或正常) and treat(鹼化尿液)",
+                "Survey distal RTA(血液代謝酸尿液鹼或正常) and treat(鹼化尿液)",
+                "Survey HPT and treat(primary就開刀)",
+                "Survey HPT and treat(primary就開刀)",
+                "Carbonate apatite如果有RTA要鹼化還是酸化尿液? PH>6.8考慮酸化, PH<6.8考慮鹼化"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s31.webp",
+              "ocr_text": "Calcium phosphate stone\n診斷與治療\nCalcium phosphate\nstones\nCarbonate\napatite\nstones\nBrushite stones\nSurvey distal RTA(\n血液代謝酸尿液鹼\n或正常)and treat(\n鹼化尿液）\nBasic evaluation\n「*兩類stone都要survey hyperpara,\nhypercalciuria 和RTA\n*Carbonate apatite要多survey有沒\n有UT，且PH>6.5考慮酸化尿液\nBasic evaluation\nHypercalciuria\nSurvey HPT and\ntreat(primary就\n開刀）\nHyperparathyroidism (HPT)\nSurvey HPT and\ntreat(primary就\n開刀\nSurvey distal RTA(血\n液代謝酸尿液鹼或\n正常)and treat(鹼化\n尿液}\nSurvey UTI, 有\nU的話走\ninfection stone\ntreatment流程\n依照不同成因去治療\n(absorptive/resorptive\nlrenal leak)\nHypercalciuria\n＞8 mmolld\nCarbonate apatite如果\n有RTA要鹼化還是酸\n化尿液？PH>6.8考慮\n酸化，PH<6.8考慮鹼化\nAdjust urinary pH\nbetween 5.8 and 6.2\nwith L-methionine\n200-500mg\n3 times daily\n酸化尿液，但要監控避\n免代謝酸中毒4用)\n依照不同成因去治療\nabsorptive/resorptive\nfrenal leak)"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "Calcium phosphate stone",
+                "診斷與治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s32.webp",
+              "ocr_text": "Calcium phosphate stone\n診斷與治療\nCalcium phosphate\nstones\nCarbonate\napatite\nstones\nBasic evaluation\nHypercalciuria\nUrinary pH\n＞6.5-6.8\nElevated calcium\nExclude HPT\nHydrochlorothiazide*\ninitially 25 mg/d\nup to 50 mg/d\nlExclude conditions\ncausing stones.\nAct consequently\nRTA, UTI,\ntreatment with\nAcetazolamide,\nTopiramate,\nZonisamide\n•\nExclude\nconditions\npreventing\nstones\nTreatment with\nbicarbonate,\nalkine citrate,\nvegetarian-\nvegan diet\nExclude\nMetabolic\nalkalosis,\nrespiratory\nacidosis\nBrushite stones\nBasic evaluation\nExclude HPT\nExclude RTA\nHypercalciuria\n>8 mmol/d\nIf none of the\nprevious\nAdjust urinary\npH between 5,8\nand 6.2 with\nHydrochlorothiazide*\ninitially 25 mg/d\nup to 50 mgld\nchlorthalidone 25 mg/d\nindapamide 2.5 mg/d\npaonosisi\nFollow-up"
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "Renal tubular acidosis - type 1",
+                "臨床表現:",
+                "Metabolic acidosis/尿鹼性(PH持續>5.8)或正常:  H+ATPase defect, H/K ATPase defect",
+                "Hypokalemia: H/K ATPase defect",
+                "Hypocitraturia: 尿液鹼導致citrate excretion減少",
+                "Hypercalciuria: 骨頭在metabolic acidosis的酸性環境下釋出鈣",
+                "又叫做distal RTA",
+                "Defect in H+ATPase(主要) and H/K ATPase of alpha intercalated cell at distal convoluted tubule and distal collecting tube→ inability to acidify urine",
+                "Most common form of RTA",
+                "常形成的stone type: 1.磷酸鈣 2.草酸鈣"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s33.webp",
+              "ocr_text": "Renal tubular acidosis - type 1\n•又叫做distal RTA\n•Defect in H+ATPase(主要）and H/K ATPase of alpha intercalated cell at\ndistal convoluted tubule and distal collecting tube-> inability to acidify\nurine\n•Most common form of RTA\n•常形成的stone type: 1.磷酸鈣 2.草酸鈣\n•臨床表現：\n•Metabolic acidosis/尿鹼性\n(PH持續>5.8)或正常：\nH+ATPase defect, H/K ATPase\ndefect\n• Hypokalemia: H/K ATPase\ndefect\n•Hypocitraturia:尿液鹼導致\ncitrate excretion減少\n•Hypercalciuria:骨頭在\nnephron\nmetabolic acidosis 的酸性環\n培下理屮全\na-intercalated cell\nHt-ATPas\nH+IK+-ATPas\nvoro\nHt\nHCO\nHCO\ncAI CI\nHO+COz\nK+\nlumen •\nHCo•\nAE1\nCl\ninterstiti"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "RTA type I 診斷與治療",
+                "BGA = blood gas analysis",
+                "PH持續>5.8且metabolic acidosis可直接診斷",
+                "PH持續>5.8但血液沒有metabolic acidosis，可做Ammonium chloride loading test(NH4Cl load with 0.05 g/kg body weight over three days)，如果urine PH 還是>5.4那就確診RTA type 1 (second alternative: furosemide acidification test)",
+                "治療: 鹼化尿液(Potassium citrate 1.5mg TID/Sodium bicarbonate 9-12mg/day), 目標是保持酸鹼平衡, 儘管尿液已是鹼性還是要鹼化尿液, 因為nephron cell仍然是intracellular acidosis且血液也是metabolic acidosis, 治療成功VBG可看到BE: ± 2.0 mmol/L",
+                "酸鹼矯正後 尿鈣仍高(>8mmol/day), 用thiazide降尿鈣, 仍有hypokalemia就補鉀"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s34.webp",
+              "ocr_text": "RTA type 1診斷與治療\n•PH持續>5,8且 metabolic acidosis可直\n接診斷\nUrinary pH\nconstantly >5.8\n•PH持續>5.8但血液沒有metabolic\nacidosis ，可做Ammonium chloride\nloading test(NH4cl load with 0.05\nRTA Type l\npossible\ng/kg body weight over three days)，\n如果urine PH 還是>5.4那就確診RTA\ntype 1 (second alternative:\nfurosemide acidification test)\nAAmmonium chloride\nloading test'*\n(NH,C1 0.1 g/kg body weight)\nExcept for patients with\nclinicallv confirmed\nmetabolic acidosis\n•治療：鹼化尿液(Potassium citrate\n1.5mg TID/Sodium bicarbonate 9-\n12mg/day,貝標是堡持酸鹼乎衡，儘\n管尿液已是鹼性還是要鹼化尿液，\n因為nephron cell仍然是intracellular\nacidosis 且 血液也是metabolic\nacidosis, 治療成功VBG可看到BE:士\n2.0 mmol/\n•酸鹼繑正後 尿鈣仍高(>8mmol/dav)，\n用thiazide降尿鈣，仍有hypokalemia\n就補鉀\nUrine pH < 5.4\nRTA excluded!\nNormal bicarbonate\nin BGA\nRTA -incomplete\nBGA = blood gas analysis\nUrine pH >5.4\nRTA\nLow bicarbonate in\nBGA\nRTA - complete"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "Renal tubular acidosis(type II/IV)",
+                "Type 2 RTA(proximal):",
+                "Defect in HCO3- reabsorption",
+                "Nephrolithiasis is uncommon !!",
+                "Type 4 RTA:",
+                "與chronic renal damage (interstitial renal disease, DM nephropathy) 有關",
+                "Nephrolithiasis is uncommon !!"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s35.webp",
+              "ocr_text": "Renal tubular acidosis(type Il/v)\n•Type 2 RTA(proximal):\n• Defect in HCO3- reabsorption\n• Nephrolithiasis is uncommon !!\n•Type 4 RTA:\n•與chronic renal damage (interstitial renal disease, DM nephropathy) 有關\n• Nephrolithiasis is uncommon !!\nRTA type-I\nPrimary defect\nImpaired ability to\nexcrete Ht in distal\ntubule\nMinimum urine pH\npH>5.5\nStones\nYes\nHyperchloremic acidosis\nYes\nSerum potassium\nLow-normal\nPlasma bicarbonate\n＜10 meqL\nRTA: Renal tubular acidosis, HCOs: Bicarbonate\nRTA type-Il\nImpaired HCOs\nreabsorption in\nproximal tubule\npH <5.5\nNo\nYes\nLow-normal\n12-20 meqL\nRTA type-Iv\nDecreased secretion\nof aldosterone or\ndecreased effect\npH <5.5\nNo\nYes\nHigh\n＞17meg/L"
+            }
+          ]
+        },
+        {
+          "id": "t19",
+          "title": "尿酸結石與 Lesch-Nyhan",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 36,
+              "text": [
+                "Uric acid stone 概論",
+                "高度復發",
+                "占5-10% of all stone",
+                "Complete radiolucent stone",
+                "分成4個group",
+                "-IIIa: uric acid anhydrous",
+                "-IIIb: uric acid dihydrate",
+                "-IIIc: uric acid anhydrous/dihydrate + ammonium urate -> 感染性",
+                "-IIId: ammonium urate -> 感染性"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s36.webp",
+              "ocr_text": "Uric acid stone 概論\n•高度復發\n•占5-10% of all stone\n•Complete radiolucent stone\n••分成4個group\n-lla: uric acid anhydrous\n-lb:uric acid dihydrate\n-lIc: uric acid anhydrous/dihydrate + ammonium urate->感染性\n-ld: ammonium urate ->感染性"
+            },
+            {
+              "slide_num": 37,
+              "text": [
+                "Uric acid stone",
+                "Uric acid anhydrous/uric acid dihydrate",
+                "可能原因: （高尿酸尿，低尿PH值，尿量減少)",
+                "Hyperuricemia/Hyperuricosuria: 尿酸食物攝取過多, enzyme defect, myeloproliferative disease/tumor lysis, hemolytic anemia",
+                "尿液酸性(最重要, urine pH < 5.5):",
+                "- Decreased urinary ammonium excretion: insulin resistance or gout",
+                "- Increased endogenous acid production: insulin resistance, metabolic",
+                "syndrome/obesity, or exercise-induced lactic acidosis",
+                "- Increased acid intake: high animal protein intake",
+                "- Increased base loss: chronic diarrhea",
+                "治療:",
+                "water intake, 控制三高, 減少animal protein intake, 減少高尿酸食物",
+                "降尿酸+鹼化尿液(右圖)",
+                "二線:Febuxostat",
+                "尿酸食物: 海鮮(特別是鮭魚、蝦子、龍蝦), 紅肉, 內臟類, 含有高果糖玉米糖漿的飲料, 酒精飲品（特別是啤酒，包含無酒精啤酒), 高湯"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s37.webp",
+              "ocr_text": "Uric acid stone\nUric acid anhydrous/uric acid dihydrate\n•可能原因：（高尿酸尿，低尿PH值，尿量減少)\n•Hyperuricemia/Hyperuricosuria:尿酸食物攝取\n過多,enzyme defect, myeloproliferative\ndisease/tumor lysis, hemolytic anemia\n• 尿液酸性（最重要，urine pH ≤5.5)：\n-Decreased urinary ammonium excretion:\ninsulin resistance or gout\n- Increased endogenous acid production: insulin\nresistance, metabolic\nsyndrome/obesity, or exercise-induced lactic\nacidosis\n- Increased acid intake: high animal protein\nintake\n- Increased base loss: chronic diarrhea\n•治療：\n•water intake，控制三高，減少animal protein\niintake，減少高尿酸食物\n•降尿酸＋鹼化尿液（右圖）\n尿酸食物：海鮮(特別\n是鮭魚、蝦子、龍蝦\n),紅肉，内臟類，含有\n高果糖玉米糖漿的飲\n料，酒精飲品（特別\n是啤酒，包含無酒精\n啤酒），高湯\nnUiio aoid aroste\nHyperuricosuria\nUrine pH <6\nAlcaline citrate\n9-12 g/d\nOR\nsodium\nbicarbonate\n1.5 g tid\n卜4.0 mmol/d\nallopurinol\n100ma/d\n線：Febuxostat\nPom agpeag®\non targeted\nurine pH\nprovonton\nurine pH 6.2-6.8\nChemolytholisis\nurine pH 6.5-7.23\n>4.0mmol/d\nand\nHyperuricemia\n＞380 umol\nallopurinol\n100-300 mg/d"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Lesch-Nyhan syndrome萊希-尼亨症候群",
+                "X-linked recessive(所以幾乎只有男生會發病，女生多是帶原）",
+                "HGPRT 酵素缺乏",
+                "嘌呤（hypoxanthine, guanine）不能再利用 → 被代謝成尿酸累積",
+                "症狀",
+                "高尿酸血症、高尿酸尿->尿酸結石",
+                "dystonia、chorea、運動障礙、智能障礙 （中樞神經發展異常）",
+                "自傷",
+                "治療",
+                "控制尿酸：Allopurinol",
+                "預防腎結石、水分補充、控制行為問題",
+                "職能治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s38.webp",
+              "ocr_text": "Lesch-Nyhan syndrome萊希-尼亨症候群\nX-linked recessive(所以幾乎只有男生會發病，女生多是帶原）\nHGPRT 酵素缺乏\n-嘌呤 ( hypoxanthine, guanine ）不能再利用一，被代謝成尿酸累積\n-症狀\n-\n高尿酸血症、高尿酸尿->尿酸結石\ndystonia、chorea、運動障礙、智能障礙（中樞神經發展異常）\n自傷\n-治療\n-\n控制尿酸：Allopurinol\n預防腎結石、水分補充、控制行為問題\n職能治療"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Uric acid stone",
+                "Ammonium urate",
+                "佔全部石頭< 1%",
+                "可能原因:",
+                "尿液鹼性 pH > 6.5結晶",
+                "尿液Ammonium增加",
+                "-UTI caused by urease producing bacteria(ex: Proteus)",
+                "-Insufficient phosphate uptake(urine phosphate buffer不夠, glutamine會轉換更多成ammonium): Malnutrition(貧窮小孩缺乏乳製品和肉攝取或vegeterian), Bowel malabsorption(inflammatory bowel disease, ileostomy diversion, laxatives)",
+                "治療: 參考infection stone流程"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s39.webp",
+              "ocr_text": "Uric acid stone\nAmmonium urate\n•佔全部石頭<1%\n•可能原因：\n•尿液鹼性 pH＞6.5結晶\n•尿液Ammonium增加\n-UTI caused by urease producing bacteria(ex: Proteus)\n-nsufficient phosphate uptake(urine phosphate buffer不夠，\nglutamine會轉換更多成ammonium)：Malnutrition(貧窮小孩缺乏乳\n製品和肉攝取或vegeterian),Bowel malabsorption(inflammatory\nbowel disease, ileostomy diversion, laxatives)\n•治療：參考infection stone流程"
+            }
+          ]
+        },
+        {
+          "id": "t20",
+          "title": "感染性結石",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 40,
+              "text": [
+                "Infection stone 概論",
+                "高度復發",
+                "典型尿液培養會有urease-producing bacteria, 分解urea產生ammonium和CO2, 並鹼化尿液, 因此感染性石頭在尿液鹼性的環境下形成",
+                "有三種感染性結石:",
+                "Struvite(磷酸氨鎂): pH > 7.2 結晶",
+                "Carbonate apatite: pH >6.8 結晶",
+                "Ammonium urate: pH>6.5 結晶",
+                "就是UTI和urine retention的risk factor"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s40.webp",
+              "ocr_text": "Infection stone 概論\n•高度復發\n•典型尿液培養會有urease-producing bacteria， 分解urea產生armonium和\ncO2,並鹼化尿液,因此感染性石頭在尿液鹼性的環境下形成\n•有三種感染性結石：\n•Struvite(磷酸氨鎂)：pH>7.2結晶\n• Carbonate apatite: pH>6.8 結晶\n•Ammonium urate: pH>6.5 結晶\nTable 4.9: Factors predisposing to struvite stone formation 就是UT1和urine retention的risk factor\n• Neurogenic bladder\n• Urethral stricture\nSpinal cord injury/paralysis\n• Benign prostatic hyperplasia\n• Continent urinary diversion\n• Bladder diverticulum\nlleal conduit\nCystocele\n• Foreign body\n• Stone disease\n•\n•\nCalyceal diverticulum\nUPJ obstruction\nIndwelling urinary catheter"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "Urease-producing bacteria",
+                "Urease(+) UTI中, Proteus mirabilis佔了超過一半"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s41.webp",
+              "ocr_text": "Urease-producing bacteria\n•Urease(+)UTI中,Proteus mirabilis佔了超過一半\nTABLE 91.3 Organisms That May Produce Urease\nORGANISMS\nGram-negative\nGram-positive\nMycoplasma\nYeasts\nUSUALLY (90% OF ISOLATES)\nProteus rettgeri\nProteus vulgaris\nProteus mirabilis\nProteus morganit\nPProvidencia stuartii\nHaemophilus influenzae\nBordetella pertussi's\nBacteroides corrodens\nYersinia enterocolitica\nBrucella species\nFlavobacterium species\nStaphylococcus aureus\nMicrococcus\nCorynebacterium ulcerans\nCorynebacterium renale\nCorynebacterium ovi's\nCorynebacterium hofmanni\nT-strain Mycoplasma\nUreaplasma urealyticum\nCryptococcus\nRhodotorula\nSporobolomyces\nCandida humicola\nTrichosporon cutaneum\nOCCASIONALLY (5%-30% OF ISOLATES)\nKlebsiella pneumoniae\nKlebsiella oxytoca\nSerratia marcescens\nHaemophilus parainfluenzae\nBordetella bronchiseptica\nAeromonas hydrophila\nPseudomonas aeruginosa\nPasteurella species\nCornebacterium equi\nPeptococcus asaccharolyticus\nClostridium tetani\nMycobacterium rhodochrous group"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Acetohydroxamic acid",
+                "if嚴重感染",
+                "if urine PH持續>6.5",
+                "Infection stone 治療",
+                "Struvite/Ammonium urate",
+                "1.Abx(有持續性菌尿症可考慮long course)",
+                "2.移除UTI 的complicating factors和特殊factor (ex: ammonium urate的營養不良等等)",
+                "控制在PH 5.8-6.2",
+                "控制在PH 5.8-6.2",
+                "酸化尿液, 但要監控避免代謝酸中毒(少用)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s42.webp",
+              "ocr_text": "Infection stone 治療\nStruvite/Ammonium urate\nHutrCology\nh Ammonium Chioride\nInfection stones\n(Struvite carbon apatite\nAmmonium urate)\nSOLARAY\nDILTARY SUPPLEAIN\nLMethionine\nS0oMG.\nNewely prdarnd for Fra calle\n30 CPSIIE\nUrease\nproducing\nbacteria\nTreatment\nUrinary pH\n(Carbon apatite >6.8\nStruvite >7.2)\nComplete\nsurgical\nremoval\nis mandatory\nPercutaneous\nchemolysis may\nbe a useful\nadiunct\n1.Abx(有持續性菌\n尿症可考慮long\ncourse)\n2.移除UTI的\ncomplicating\nfactors和特殊\nfactor (ex:\nammonium urate\n的營養不良等等）\nUrine\nacidification\nif urine PH持續>6.5\nAmmonium\nMethionine\nchloride\n200-500mg\n1g bid or tid\n1-3 times/d\n控制在PH 5.8-6.2\n控制在PH 5.8-6.2\n酸化尿液，但要監控避免代謝酸中毒（少用）\nUrease\ninhibition*\n计嚴重感染\nV\nAHA?\n15 mg/kg/day\nAcetohydroxamic acid"
+            }
+          ]
+        },
+        {
+          "id": "t21",
+          "title": "Cystine 結石與其他",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 43,
+              "text": [
+                "Cystine stone(胱胺酸石)概論",
+                "高度復發",
+                "佔成人結石之1-2%; 佔小孩結石之6-8%",
+                "Inherited (autosomal recessive) disorder(SLC3A1 ch2和 SLC7A9 gene ch19)",
+                "Defect of transmembrane cystine transport -> 小腸吸收cystine下降, 腎臟proximal tubule吸收cystine下降->尿中cystine濃度上升(cystine難以溶解,易過飽和形成結晶)",
+                "易形成於尿液酸性環境(酸性環境溶解度驟降, 300mg/L at PH 5,  400mg/L at PH 7)",
+                "Lab: 尿液的sodium nitroprusside spot test會呈現紫色",
+                "24 hour urine test check cystine level"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s43.webp",
+              "ocr_text": "Cystine stone(胱胺酸石）概論\n•高度復發\n••佔成人結石之1-2%;佔小孩結石之6-8%\n•Inherited (autosomal recessive) disorder(SLC3A1 ch2和 SLCTA9 gene\nch19)\n•Defect of transmembrane cystine transport-＞小腸吸收cystine下降，\n腎臟proximal tubule 吸收cystine下降-二尿中cystine濃度上升(cystine\n難以溶解,昜過飽和形成結晶）\n•易形成於尿液酸性環境(酸性環境溶解度驟降,300mg/L at PH 5,\n400mg/L at PH 7)\n•Lab:尿液的sodium nitroprusside spot test會呈現紫色\n24 hour urine test check cvstine level"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "Cystine stone treatment",
+                "喝水 3.5 L/d",
+                "飲食：減少攝取含methionine的食物(methionine會代謝成cystine, 穀類、芝麻、葵花籽、肉類、魚類), 少鹽 <2 g/day",
+                "鹼化尿液 (potassium citrate or sodium bicarb)到PH7.5-8.5",
+                "Tiopronin(100mg/tab): if Cystine > 3 mmol/day, 第一線用藥, 可幫助cystine stone溶解, 通常因為副作用停止或產生腎病症候群",
+                "其他用藥: Captopril(第二線), Penicillamine, N-acetyl-D- penicillamine",
+                "Penicillamine副作用多 如rash, fever, arthralgia, pancytopenia, proteinuria, and nephrotic syndrome",
+                "Tiopronin較不會有nephrotic syndrome，但是仍有asthenia, GI",
+                "distress, rash, joint aches, mental status changes等副作用"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s44.webp",
+              "ocr_text": "Cystine stone treatment\nTiopronin較不會有nephrotic syndrome，但是仍有asthenia, Gl\ndlistress, rash, joint aches, mental status changes等副作用\n•喝水 3.5 L/d\n•飲食：減少攝取含\nmethionine的食物\n(methionine會代謝成cystine,\n穀類、芝麻、葵花籽、肉類\n、魚類），少鹽<2 g/day\nAppropriate hydration with\n＞3.5 Ud in adults and\n1.5 Lm? body surface in\nchildren\nAND\nadjust urine pH\nbetween 7.5 and 8.5\nwith\nalkaline citrates or\nsodium bicarbonate\n•鹼化尿液 (potassium citrate\nor sodium bicarb)到PH7.5-8.5\n• Tiopronin (100mg/tab):if\nCystine >3mmol/day， 第一線\n用藥，可幫助cvstine stone溶\n解,通常因為副作用停止或\n產生腎病症候群\nCystine excretion\n＜3 mmol/d\nCystine excretion\n＞3 mmolld\nPossible add. treatment\nwith tiopronin\ndepending on recurrence)\nAdditional treatment with\ntiopronin 250 mg/d up to\n2,000 mg/d max. dos.\npenicillamine副作用多 如rash, fever, arthralgia, pancytopenia, proteinuria, and nephrotic\n•其他用藥vCepptOpril(第二線)，Penicillarnine, N-acetyl-D- penicillamine"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "其他結石",
+                "2,8-Dihydroxyadenine stones",
+                "治療同尿酸結石 用 High-dose allopurinol or febuxostat",
+                "Xanthine stones",
+                "沒藥預防 就多喝水",
+                "Indinavir stone: 酸性尿溶解度高(<pH5.5)",
+                "Topiramate讓尿液鹼化（尿 pH ↑）+ 檸檬酸排出減少也確實會產生代謝性酸中毒。但應該要補充potassium citrate for hypocitraturia",
+                "最常導致腎結石的移植藥物: CNI",
+                "-> hypocitraturia, hypercalciuria"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s45.webp",
+              "ocr_text": "其他結石\n•2,8-Dihydroxyadenine stones\n•治療同尿酸結石 用 High-dose allopurinol or febuxostat\n•Xanthine stones\n•沒藥預防 就多喝水\n•Indinavir stone: 酸性尿溶解度高(<pH5.5)\n•Topiramate讓尿液鹼化（尿pH个）＋檸檬酸排出減少也確實會產生代\n謝性酸中毒。但應該要補充potassium citrate for hypocitraturia\n•最常導致腎結石的移植藥物：CNI\nActive compounds crystallising in urine  Substances impairing urine composition\nAllopurinol/oxypurinol\nAcetazolamide-> hypocitraturia,hypercalciuria\nAmoxicillin/ampicillin\nAllopurinol\n•\n•\nCeftriaxone\nQuinolones\n•\n•\nAluminium magnesium hydroxide\nAscorbic acid\nEphedrine\nCalcium\nIndinavir\nFurosemide\nMagnesium trisilicate\nLaxatives\nSulphonamides\n• Methoxyflurane\n• Triamterene\nVitamin D\nZonisamide\n• Topiramate"
+            }
+          ]
+        },
+        {
+          "id": "t22",
+          "title": "CKD/ESRD 風險與用藥整理總表",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 46,
+              "text": [
+                "結石患者得到CKD/ESRD的風險因子"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_s46.webp",
+              "ocr_text": "結石患者得到CKD/ESRD的風險因子\nTable 3.4 Risk factors for CKD and ESKD in stone formerss\nRisk factors for CKD/ESKD in stone formers\nFemale gender\nOverweight\nFrequent UTI\nStruvite stones\nAcquired single kidney\nNeurogenic bladder\nPrevious obstructive nephropathy\nlleal conduit\nTable 3.5 Risk factors for CKD and renal stones\nRisk of chronic kidney disease and renal stones\nPossible risk of CKD\nXanthine stones\nIndinavir stones\nDistal renal tubular acidosis (incomplete)\nPrimary hyperparathyroidism\nEating disorders and laxative abuse\n• Medullary sponge kidney\nModerate risk of CkD\n• Brushite stones\n2,8-Dihydroxyadenine stones\nSarcoidosis\nPyelo-ureteral or ureteral strictures\nHigh risk of CKD\nCvstine stones\nStruvite stones\nStones in a single kidney\nDistal renal tubular acidosis (complete)\nSecondary hyperoxaluria (bariatric surgery, inflammatory bowel disease, bowel resection and\nmalabsorptive syndromes)\nOther forms of nephrocalcinosis (often associated with genetic conditions with hypercalciuria)\nAnatomical abnormalities of the kidney and urinary tract (for example, horseshoe kidney, ureterocele\nand vesicoureteral reflux)\nNeurological bladder\nVery high risk of CKD\nPrimary hyperoxaluria\nAutosomal dominant polycystic kidney"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "特定結石預防復發用藥整理(1)"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h47.webp",
+              "ocr_text": "特定結石預防復發用藥整理(1)\nAgent\nAlkaline citrates\nAllopurinol\nRationale\nAlkalinisation\nHypocitraturia\nInhibition of\ncalcium oxalate\ncrystallisation\nHyperuricosuria\nHyperuricaemia\nDose\n5-12 g/d\n(14-36 mmol/d)\nChildren:\n10.1-0.15 g/kg/d\nSpecifics and side\nStone type\neffects\nDaily dose for\nCalcium oxalate\nalkalinisation depends Uric acid\non urine pH\nCystine\n100-300 mg/d\nChildren:\n1-3 mg/kg/d\n1000 mg/d\nI Calcium\nCaptopril\nEnteric\nhyperoxaluria\nCystinuria\nActive decrease of\nurinary cystine levels\n75-150 mg\n100 mg in isolated\nhyperuricosuria\nRenal insufficiency\ndemands dose\ncorrection\nntake 30 min before\nmeals\nSecond-line option\ndue to significant side\neffects\nCalcium oxalate\nUric acid\nAmmonium urate\n2,8-Dihydroxyadenine\nCalcium oxalate\nCystine\nRef\n[57,494,\n1517-5241\n525-529\n507-509]\n[530,531]"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "特定結石預防復發用藥整理(2)"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h48.webp",
+              "ocr_text": "特定結石預防復發用藥整理(2)\nFebuxostat\nHyperuricosuria\n80-120mg/d\nL-Methionine\nHyperuricaemia\nAcidification\n600-1500 mg/d\nMagnesium\nlsolated\nhypomagnesiuria\nEnteric\nhyperoxaluria\n200-400 mg/d\nChildren:\n6 mg/kg/d\nAcute gout\ncontraindicated,\npregnancy, xanthine\nstone formation\nHypercalciuria, bone\ndemineralisation,\nsystemic acidosis.\nNo long-term therapy\nRenal insufficiency\ndemands dose\ncorrection.\nDiarrhoea, chronic\nalkali losses,\nhypocitraturia\nSodium bicarbonate\nPyridoxine\nAlkalinisation\nHypocitraturia\nPrimary\nhyperoxaluria\n4.5 g/d\nInitial dose\n5 mg/kg/d\nMax. 20 mg/kg/d\nPovneuropathia\nCalcium oxalate\nUric acid\nInfection stones\nAmmonium urate\nCalcium phosphate\nCalcium oxalate\nCalcium oxalate\nUric acid, Cystine\nCalcium oxalate\n1532,533]\n157, 534,\n5351\n1536,537]\n(Low\nevidence)\n538\n539"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "特定結石預防復發用藥整理(3)"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h49.webp",
+              "ocr_text": "特定結石預防復發用藥整理(3)\nThiazide\n(Hydrochlorothiazide)\nHypercalciuria\n25-50 mg/d\nChildren:\n0.5-1 mg/kg/d\nTiopronin\nCystinuria\nInitial dose\nActive decrease of 250 mg/d\nurinary cystine levels\nRisk for agent-\ninduced hypotonic\nblood pressure,\ndiabetes,\nhyperuricaemia,\nhypokalaemia,\nfollowed by\nintracellular acidosis\naand hypocitraturia\nMax. 2000 mgld\nRisk for tachyphylaxis\nand proteinuria\nCalcium oxalate\nCalcium phosphate\nCystine\n157,536,\n540-548]\n[549-552]"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "治療總結(五種石)",
+                "1.草酸: 鈣高 / 低檸檬/ 草高PH1;Enteric / 尿酸 / 鎂",
+                "Thiazide, citrate/vitB6; SCP, orthoP, Ca配飯/ 第三點 / Mg",
+                "2.磷酸: 鈣高 / RTA (&低檸檬) / apatite",
+                "Thiazide, citrate/ 鹼化用 citrate or bicarbo",
+                "apa反而要酸化用L-methionine",
+                "3.尿酸: 鹼化用citrate or bicarbo, allopurinol, febru",
+                "尿酸氨: 酸化用L-methionine",
+                "4.感染性: AHA,酸化用L-methionine",
+                "5.胱胺酸: D-peni, Tiopronin, captopril"
+              ],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h50.webp",
+              "ocr_text": "治療總結（五種石）\n•1.草酸：鈣高/低檸檬/ 草高PH1;Enteric / 尿酸/ 鎂\n•Thiazide, citrate/vitB6; SCP, orthoP, Ca配飯/第三點/ Mg\n•2.磷酸：鈣高/RTA（&低檸檬)/ apatite\n•Thiazide, citrate/ 鹼化用 citrate or bicarbo\n•apa反而要酸化用L-methionine\n•3.尿酸：鹼化用citrate or bicarbo, allopurinol, febru\n•尿酸氨：酸化用L-methionine\n•4.感染性：AHA,酸化用L-methionine\n•5.胱胺酸：D-peni, Tiopronin, captopril"
+            },
+            {
+              "slide_num": 51,
+              "text": [],
+              "hidden": true,
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch01_stone/render/s2_h51.webp",
+              "ocr_text": "Hypercalcuria\n5-8 mmol/d?\n8 mmol/d\nHypocitraturia\nV\nMale < 1.7 mmol/d\nFemale < 1.9 mmol/d\nAlkaline\ncitrate\n9-12 g/d\nor\nsodium\nbicarbonate\n1.5g tid24\nHydrochlorothiazide\ninitially 25 mg/d\nup to 50 ma/d\nchlorthalidone\n25 mg/d\nindapamide\n2.5 mg/d\nAlkaline\nCitrate\n9-12 g/d\nCalcium oxalate stone\nBasic evaluation\n24 h urine collection\nHyperoxaluria\n＞0.5mmol/d\n(enteric)\n＞1 mmolld\nprimary)\nCalcium\n＞1,000 mg/d'\nand\nmagnesium\n200-400 mg/d\nPyridoxine\ninitial 5 mg/kg/d\nuto\n20mg/kg/d\nHyperuricosuria\n＞4 mmol/d\nHyperuricosuria\nand\nHyperuricaemia\n＞380 umol/\nAlkaline\ncitrate\n9-12g/d\nOR\nsodium\nbicarbonate\n1.5g tid?\nPLUS/OR\nallopurinol\n100 mg/d\nAlkaline citrate\n9-12 g/d\nPLUS\nallopurinol\n100-300 mg/d4.5\nHypomagnesuria\n＜3 mmol/d\nMaanesium\n200-400 mg/d"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

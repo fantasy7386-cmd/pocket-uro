@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Textbook Knowledge — Preview</title>
+<style>
+  :root {
+    --purple: #8e44ad;
+    --purple-light: #a569bd;
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --text2: #555;
+    --border: #e0e0e0;
+    --hjh: #c0392b;
+    --hjh-bg: #fdf2f2;
+    --exam-bg: #fef9e7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, var(--purple), #6c3483); color: #fff; padding: 16px 20px; position: sticky; top: 0; z-index: 100; }
+  .header h1 { font-size: 18px; font-weight: 600; }
+  .header small { opacity: 0.8; font-size: 12px; }
+  .back-btn { background: rgba(255,255,255,0.2); border: none; color: #fff; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 14px; margin-right: 10px; }
+  .back-btn:hover { background: rgba(255,255,255,0.3); }
+
+  /* Search */
+  .search-bar { padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 56px; z-index: 99; }
+  .search-bar input { width: 100%; padding: 10px 14px; border: 2px solid var(--border); border-radius: 8px; font-size: 15px; outline: none; }
+  .search-bar input:focus { border-color: var(--purple); }
+
+  /* Chapter list */
+  .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+  .chapter-card { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 12px; cursor: pointer; border: 1px solid var(--border); transition: box-shadow 0.2s; }
+  .chapter-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .chapter-card .icon { font-size: 28px; margin-right: 12px; }
+  .chapter-card .title { font-size: 16px; font-weight: 600; }
+  .chapter-card .meta { font-size: 12px; color: var(--text2); margin-top: 4px; }
+  .chapter-card .hjh-badge { background: var(--hjh); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-left: 6px; }
+  .row { display: flex; align-items: center; }
+
+  /* Topic list */
+  .topic-card { background: var(--card); border-radius: 10px; padding: 14px 16px; margin-bottom: 8px; cursor: pointer; border: 1px solid var(--border); }
+  .topic-card:hover { border-color: var(--purple-light); }
+  .topic-card .t-title { font-size: 15px; font-weight: 600; }
+  .topic-card .t-meta { font-size: 11px; color: var(--text2); margin-top: 2px; }
+  .exam-badge { background: #f39c12; color: #fff; padding: 1px 5px; border-radius: 3px; font-size: 10px; margin-left: 4px; }
+  .fig-badge { background: #3498db; color: #fff; padding: 1px 5px; border-radius: 3px; font-size: 10px; margin-left: 4px; }
+
+  /* Slide content */
+  .slide { background: var(--card); border-radius: 10px; padding: 16px; margin-bottom: 12px; border: 1px solid var(--border); }
+  .slide.hjh { border-left: 4px solid var(--hjh); background: var(--hjh-bg); }
+  .slide.exam { background: var(--exam-bg); }
+  .slide-header { font-size: 12px; color: var(--text2); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .slide-header .hjh-tag { color: var(--hjh); font-weight: 700; }
+  .slide p { margin-bottom: 4px; font-size: 14px; }
+  .slide img { max-width: 100%; border-radius: 6px; margin: 8px 0; cursor: pointer; }
+  .slide img:hover { opacity: 0.9; }
+
+  /* Image lightbox */
+  .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; }
+  .lightbox-close { position: absolute; top: 16px; right: 20px; color: #fff; font-size: 30px; cursor: pointer; }
+
+  /* Stats bar */
+  .stats { background: var(--purple); color: #fff; padding: 8px 20px; font-size: 12px; text-align: center; }
+
+  /* Search highlights */
+  mark { background: #f1c40f; padding: 0 2px; border-radius: 2px; }
+
+  /* Loading */
+  .loading { text-align: center; padding: 60px; color: var(--text2); }
+  .section-divider { font-size: 14px; font-weight: 600; color: var(--purple); padding: 12px 0 6px; border-bottom: 2px solid var(--purple); margin-bottom: 10px; }
+
+  /* Hide */
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <div class="row">
+    <button class="back-btn hidden" id="backBtn" onclick="goBack()">← Back</button>
+    <div>
+      <h1 id="headerTitle">📕 Textbook Knowledge</h1>
+      <small id="headerSub">Preview — 12 Chapters, 1,622 Pages, 1,669 Figures</small>
+    </div>
+  </div>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="搜尋所有內容..." oninput="onSearch(this.value)">
+</div>
+
+<div class="container" id="content">
+  <div class="loading" id="loadingMsg">Loading textbook data...</div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="">
+</div>
+
+<script>
+const DATA_FILES = [
+  'textbook-data/tb_01.json',
+  'textbook-data/tb_02.json', 'textbook-data/tb_03.json', 'textbook-data/tb_04.json',
+  'textbook-data/tb_05.json', 'textbook-data/tb_06.json', 'textbook-data/tb_07.json',
+  'textbook-data/tb_08.json', 'textbook-data/tb_09.json', 'textbook-data/tb_10.json',
+  'textbook-data/tb_11.json', 'textbook-data/tb_12.json'
+];
+
+let chapters = [];
+let currentView = 'chapters'; // chapters | topics | slides
+let currentChapter = null;
+let currentTopic = null;
+
+async function init() {
+  try {
+    const promises = DATA_FILES.map(f => fetch(f).then(r => r.json()));
+    chapters = await Promise.all(promises);
+    // Sort by chapter number
+    chapters.sort((a, b) => {
+      const romanOrder = {'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7,'VIII':8,'IX':9,'X':10,'XI':11,'XII':12};
+      return (romanOrder[a.number]||99) - (romanOrder[b.number]||99);
+    });
+    renderChapters();
+  } catch(e) {
+    document.getElementById('loadingMsg').textContent = 'Error loading data: ' + e.message;
+  }
+}
+
+function renderChapters() {
+  currentView = 'chapters';
+  document.getElementById('backBtn').classList.add('hidden');
+  document.getElementById('headerTitle').textContent = '📕 Textbook Knowledge';
+  document.getElementById('headerSub').textContent = 'Preview — 12 Chapters, 1,622 Pages, 1,669 Figures';
+
+  let html = '';
+  for (const ch of chapters) {
+    const totalSlides = ch.sections.reduce((sum, s) => sum + s.topics.reduce((s2, t) => s2 + t.slide_count, 0), 0);
+    const totalFigs = ch.sections.reduce((sum, s) => sum + s.topics.reduce((s2, t) => s2 + t.figure_count, 0), 0);
+    const totalTopics = ch.sections.reduce((sum, s) => sum + s.topics.length, 0);
+    const hasHJH = ch.sections.some(s => s.topics.some(t => t.has_hjh_content));
+
+    html += `<div class="chapter-card" onclick="openChapter('${ch.id}')">
+      <div class="row">
+        <span class="icon">${ch.icon}</span>
+        <div>
+          <div class="title">${ch.number}. ${ch.title}${hasHJH ? '<span class="hjh-badge">[HJH]</span>' : ''}</div>
+          <div class="meta">${totalTopics} topics · ${totalSlides} slides · ${totalFigs} figures</div>
+        </div>
+      </div>
+    </div>`;
+  }
+  document.getElementById('content').innerHTML = html;
+}
+
+function openChapter(chId) {
+  currentChapter = chapters.find(c => c.id === chId);
+  if (!currentChapter) return;
+  currentView = 'topics';
+  document.getElementById('backBtn').classList.remove('hidden');
+  document.getElementById('headerTitle').textContent = `${currentChapter.icon} ${currentChapter.number}. ${currentChapter.title}`;
+  document.getElementById('headerSub').textContent = `${currentChapter.sections.length} section(s)`;
+
+  let html = '';
+  for (const sec of currentChapter.sections) {
+    html += `<div class="section-divider">${sec.title}</div>`;
+    for (const topic of sec.topics) {
+      const hjh = topic.has_hjh_content ? '<span class="hjh-badge">[HJH]</span>' : '';
+      const exam = topic.has_exam_questions ? '<span class="exam-badge">📝 考題</span>' : '';
+      const figs = topic.figure_count > 0 ? `<span class="fig-badge">${topic.figure_count} figs</span>` : '';
+      html += `<div class="topic-card" onclick="openTopic('${sec.id}','${topic.id}')">
+        <div class="t-title">${topic.title}${hjh}${exam}</div>
+        <div class="t-meta">${topic.slide_count} slides ${figs}</div>
+      </div>`;
+    }
+  }
+  document.getElementById('content').innerHTML = html;
+  window.scrollTo(0, 0);
+}
+
+function openTopic(secId, topicId) {
+  const section = currentChapter.sections.find(s => s.id === secId);
+  if (!section) return;
+  currentTopic = section.topics.find(t => t.id === topicId);
+  if (!currentTopic) return;
+  currentView = 'slides';
+  document.getElementById('headerTitle').textContent = currentTopic.title;
+  document.getElementById('headerSub').textContent = `${currentTopic.slide_count} slides · ${currentTopic.figure_count} figures`;
+
+  let html = '';
+
+  // Separate visible and hidden slides
+  const visibleSlides = currentTopic.slides.filter(s => !s.hidden);
+  const hiddenSlides = currentTopic.slides.filter(s => s.hidden);
+
+  for (const slide of visibleSlides) {
+    const isHJH = slide.source === 'HJH';
+    const isExam = slide.has_exam_question;
+    const cls = isHJH ? 'slide hjh' : (isExam ? 'slide exam' : 'slide');
+
+    html += `<div class="${cls}">`;
+    html += `<div class="slide-header">`;
+    if (isHJH) html += `<span class="hjh-tag">[HJH]</span> `;
+    html += `<span>${typeof slide.slide_num === 'string' ? slide.slide_num : 'Slide ' + slide.slide_num}</span>`;
+    if (isExam) html += ` <span class="exam-badge">📝</span>`;
+    html += `</div>`;
+
+    if (slide.slide_image) {
+      html += `<img src="${slide.slide_image}" alt="Slide" loading="lazy" onclick="openLightbox(event, '${slide.slide_image}')" style="max-width:100%;border-radius:6px;cursor:pointer;border:1px solid #eee;">`;
+    }
+    html += `</div>`;
+  }
+
+  // Hidden slides section
+  if (hiddenSlides.length > 0) {
+    html += `<div style="margin-top:16px;border-top:2px dashed #ccc;padding-top:12px;">
+      <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'; this.querySelector('span').textContent=this.nextElementSibling.style.display==='none'?'▸':'▾'" style="cursor:pointer;color:var(--text2);font-size:13px;padding:8px 0;">
+        <span>▸</span> 隱藏的投影片（${hiddenSlides.length} 張）
+      </div>
+      <div style="display:none;">`;
+    for (const slide of hiddenSlides) {
+      html += `<div class="slide">`;
+      html += `<div class="slide-header"><span>🔒 Slide ${slide.slide_num}</span></div>`;
+      if (slide.slide_image) {
+        html += `<img src="${slide.slide_image}" alt="Slide" loading="lazy" onclick="openLightbox(event, '${slide.slide_image}')" style="max-width:100%;border-radius:6px;cursor:pointer;border:1px solid #eee;">`;
+      } else {
+        for (const line of slide.text) {
+          if (line.length > 0) html += `<p>${escapeHtml(line)}</p>`;
+        }
+        for (const fig of slide.figures) {
+          html += `<img src="${fig.src}" alt="${fig.alt}" loading="lazy" onclick="openLightbox(event, '${fig.src}')" style="max-width:100%;border-radius:6px;margin:6px 0;">`;
+        }
+      }
+      html += `</div>`;
+    }
+    html += `</div></div>`;
+  }
+  document.getElementById('content').innerHTML = html;
+  window.scrollTo(0, 0);
+}
+
+function goBack() {
+  if (currentView === 'slides') {
+    openChapter(currentChapter.id);
+  } else if (currentView === 'topics') {
+    renderChapters();
+  }
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Search
+function onSearch(query) {
+  if (!query || query.length < 2) {
+    if (currentView === 'chapters') renderChapters();
+    return;
+  }
+
+  const q = query.toLowerCase();
+  let results = [];
+
+  for (const ch of chapters) {
+    for (const sec of ch.sections) {
+      for (const topic of sec.topics) {
+        for (const slide of topic.slides) {
+          // Search in both original text AND OCR text
+          const textMatch = slide.text.some(t => t.toLowerCase().includes(q));
+          const ocrMatch = slide.ocr_text ? slide.ocr_text.toLowerCase().includes(q) : false;
+          if (textMatch || ocrMatch) {
+            // Collect matching lines from both sources
+            let matchLines = slide.text.filter(t => t.toLowerCase().includes(q));
+            if (ocrMatch && matchLines.length === 0 && slide.ocr_text) {
+              // Match was only in OCR - extract matching lines from OCR text
+              matchLines = slide.ocr_text.split('\n').filter(l => l.toLowerCase().includes(q)).slice(0, 3);
+            }
+            results.push({
+              chapter: ch,
+              section: sec,
+              topic: topic,
+              slide: slide,
+              matchLines: matchLines
+            });
+          }
+          if (results.length >= 50) break;
+        }
+        if (results.length >= 50) break;
+      }
+      if (results.length >= 50) break;
+    }
+    if (results.length >= 50) break;
+  }
+
+  let html = `<div style="font-size:13px;color:var(--text2);margin-bottom:12px;">Found ${results.length}${results.length>=50?'+':''} results for "${escapeHtml(query)}"</div>`;
+
+  for (const r of results) {
+    const isHJH = r.slide.source === 'HJH';
+    const isHidden = r.slide.hidden === true;
+    const cls = isHJH ? 'slide hjh' : 'slide';
+
+    html += `<div class="${cls}" style="cursor:pointer" onclick="openChapter('${r.chapter.id}');openTopic('${r.section.id}','${r.topic.id}')">`;
+    html += `<div class="slide-header">`;
+    html += `<span style="color:var(--purple);font-weight:600">${r.chapter.number}. ${r.chapter.title}</span>`;
+    html += ` › ${r.topic.title}`;
+    if (isHJH) html += ` <span class="hjh-tag">[HJH]</span>`;
+    if (isHidden) html += ` <span style="font-size:11px;">🔒</span>`;
+    html += `</div>`;
+
+    for (const line of r.matchLines.slice(0, 3)) {
+      const highlighted = line.replace(new RegExp(`(${escapeRegex(query)})`, 'gi'), '<mark>$1</mark>');
+      html += `<p>${highlighted}</p>`;
+    }
+    if (r.matchLines.length > 3) {
+      html += `<p style="color:var(--text2)">... +${r.matchLines.length - 3} more matches</p>`;
+    }
+    html += `</div>`;
+  }
+
+  document.getElementById('content').innerHTML = html;
+}
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Lightbox
+function openLightbox(e, src) {
+  e.stopPropagation();
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Init
+init();
+</script>
+</body>
+</html>

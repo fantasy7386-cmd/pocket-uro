@@ -1,0 +1,407 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-04-06",
+  "total_sections": 13,
+  "total_subsections": 59,
+  "sections": [
+    {
+      "id": "tg_01",
+      "number": "I",
+      "title": "急診評估與處置",
+      "full_title": "I. 急診評估與處置",
+      "subsections": [
+        {
+          "id": "tg_01_01",
+          "title": "Stone 處置流程",
+          "markdown": "1. Fever? CRE?\n2. Image (KUB, CT)\n3. Hydronephrosis?\n4. Need for PCN?\n5. If < 0.5 cm → possible spontaneous passage → alpha blocker + Buscopan + Naposin (if CRE normal) → arrange OPD\n6. ADM or OPD? ESWL or URSSM (patient-wise to deal the stone)\n\n- URS stone 抓 0.5 cm 以下有機會自己排\n- **Urosepsis 的 stone 要打通，不能用 ESWL**\n- 孕婦 stone: sono, MRI → 有 hydro 可考慮 local DBJ or PCN → 安排 U/A, U/C, SONO, KUB"
+        },
+        {
+          "id": "tg_01_02",
+          "title": "Hematuria — MOIST mnemonic",
+          "markdown": "- **M**alignancy\n- **O**thers\n- **I**nfection\n- **S**tone\n- **T**rauma"
+        },
+        {
+          "id": "tg_01_03",
+          "title": "Difficult Foley",
+          "markdown": "1. Remember size\n2. Echo"
+        },
+        {
+          "id": "tg_01_04",
+          "title": "尿道損傷疑慮",
+          "markdown": "- 有 suspect urethra damage 的 → 要驗 U/A and record UO"
+        },
+        {
+          "id": "tg_01_05",
+          "title": "If possible OP",
+          "markdown": "- NPO, pre-OP, CXR, EKG"
+        }
+      ]
+    },
+    {
+      "id": "tg_02",
+      "number": "II",
+      "title": "病房照護與醫囑",
+      "full_title": "II. 病房照護與醫囑",
+      "subsections": [
+        {
+          "id": "tg_02_01",
+          "title": "大刀術後飲食進展",
+          "markdown": "試小水 → 喝水不限量 → 排氣後 → 米湯 → 五分粥 → 溫三（鹹粥） → 正常飲食\n\n- **有動到腸子：NPO 到排氣**"
+        },
+        {
+          "id": "tg_02_02",
+          "title": "Foley / Bed Rest 原則",
+          "markdown": "- **Total bed rest 要放 Foley！**\n- Post-TAE 的病人：bed rest 就要 on Foley → record U/O → **也要 record I/O！給點滴！**"
+        },
+        {
+          "id": "tg_02_03",
+          "title": "Insulin Sliding Scale",
+          "markdown": "| Fingerstick (mg/dL) | Regular Insulin (U) |\n|----------------------|---------------------|\n| 201–250              | 4U                  |\n| 251–300              | 6U                  |\n| 301–350              | 8U                  |\n| 351–400              | 10U                 |\n| > 400                | **Call duty**        |"
+        },
+        {
+          "id": "tg_02_04",
+          "title": "Transamin 劑量",
+          "markdown": "- 750 mg Q12H **or** 500 mg Q8H"
+        },
+        {
+          "id": "tg_02_05",
+          "title": "抗凝血劑停藥（for TRUSPBx）",
+          "markdown": "- NOAC → 停 **3 天**\n- Aspirin / Plavix → 停 **5–7 天**"
+        },
+        {
+          "id": "tg_02_06",
+          "title": "化療前給藥",
+          "markdown": "- Chemo pre-medication 會暈\n- Primeran：每公斤 0.5–1，Q2H\n- EPS：坐立難安"
+        },
+        {
+          "id": "tg_02_07",
+          "title": "膀胱鏡術前抗生素",
+          "markdown": "- Cefuroxime 2 tab Q12H × one day"
+        }
+      ]
+    },
+    {
+      "id": "tg_03",
+      "number": "III",
+      "title": "藥物與副作用",
+      "full_title": "III. 藥物與副作用",
+      "subsections": [
+        {
+          "id": "tg_03_01",
+          "title": "常用藥物速查",
+          "markdown": "| 藥物 | 副作用 / 備註 |\n|------|---------------|\n| Harnalidge | 鼻塞、流鼻水 |\n| Betmiga | **高血壓** |\n| Proscar | Post-TURP hematuria 可考慮使用 `[闕P]` |\n| Alpha blocker + Buscopan + Naposin | 結石保守治療（CRE 正常才用 Naposin） |"
+        }
+      ]
+    },
+    {
+      "id": "tg_04",
+      "number": "IV",
+      "title": "超音波與影像技巧",
+      "full_title": "IV. 超音波與影像技巧",
+      "subsections": [
+        {
+          "id": "tg_04_01",
+          "title": "TRUSP 設定與技巧",
+          "markdown": "- B gain **5.2** for prostate TRUSP\n- Apex 可用 **external sphincter** to trace\n- Intravesical protrusion 分級：> 1 cm = severe；0.5–1 cm = moderate"
+        },
+        {
+          "id": "tg_04_02",
+          "title": "睪丸超音波",
+          "markdown": "- 抓住蛋蛋掃 echo\n- 小孩血流會在**周邊**\n- **Trace 位置比較重要**\n- 深度調到 **3 公分**左右"
+        },
+        {
+          "id": "tg_04_03",
+          "title": "腎臟超音波",
+          "markdown": "- 腎超有 hydro → **記得要掃 RU**\n- 若 transplant echo 要找血流 → 可以打 **power**"
+        },
+        {
+          "id": "tg_04_04",
+          "title": "C-arm",
+          "markdown": "- 直接先推到**找到 spine** → 找到 spine 再旋轉"
+        }
+      ]
+    },
+    {
+      "id": "tg_05",
+      "number": "V",
+      "title": "內視鏡手術",
+      "full_title": "V. 內視鏡手術",
+      "subsections": [
+        {
+          "id": "tg_05_01",
+          "title": "A. 膀胱鏡技巧",
+          "markdown": "#### 軟式膀胱鏡 `[軟膀技巧]`\n1. 以 **bladder neck and anterior wall** 作為基準，下彎找 UO\n2. Retroflex：**上下顛倒，左右沒差**（螢幕右邊就是病人左邊）\n3. 軟膀進去之後**要退回洞口**\n\n#### 硬式膀胱鏡\n- 看完 UO 就看 **anterior**\n- 水繼續開，病人說漲再關\n- **貼地看！**\n\n#### High Bladder Neck\n- 定義：是否能從 veru 直接看到 bladder\n\n#### 軟膀設備提醒\n- 光源線、光源機（**光源線要合！**）\n- 打給開刀房內勤 → 要布包/碎花\n- 急診的 M07\n- 不收費的 guidewire 病房就好\n- 走急診電梯"
+        },
+        {
+          "id": "tg_05_02",
+          "title": "B. URS",
+          "markdown": "#### 進入技巧\n- URS 進去的時候要有點 **hyperextension**（手往病人頭側進）\n\n#### URS 操作 `[小黃]`\n1. 膀胱鏡用**短橋**\n2. 放 urethral catheter **不用斷頭**；guidewire 留著，用膀胱鏡放，直接走旁邊（膀胱鏡也不用穿 guidewire）"
+        },
+        {
+          "id": "tg_05_03",
+          "title": "C. URSSM `[小黃]` — 16 條操作要點",
+          "markdown": "1. Guidewire **不要進太多**（UO），黑頭 junction 進一些就好 → 進太多鏡子就無法壓著進去（因為 guidewire 是硬的，只有前頭是軟的）\n2. 進 UO 時 **rotate** 到一個可以看到 lumen 的角度進去\n3. 一進去就要**往外側走**；往上翹鏡子的時候不要原地翹，要**同時有前後的位移**\n4. 有石頭**不要用針筒打水！**\n5. **水的收放很重要**：看到石頭可以開一點水打 → 打到粉塵很多時可以放水（放水的 timing 也能打）→ 但不要放到扁掉\n6. 重新開水的時候**也不要開太快**\n7. 雷射在打的時候 operator **要閉氣**（像相機快門防手震一樣）\n8. **只要有糊就不要打**\n9. 輸尿管結石瓦數：**1J 10Hz 開始**；慢慢上調，最好**不要超過 15–18 W**\n10. **壓著打**；如果都碎碎的，可以把 fiber 放在中間打（像 RIRS 的 popcorn effect）\n11. 打到跟 fiber 略相同大的碎石即可\n12. **配合病人的呼吸打**\n13. 磨到 mucosa 抖一抖，不一定要用針筒打，**用針筒反抽也可以！**\n14. CCD **請用 free**\n15. 石頭**不要在 fold 的地方打**；可考慮推上去\n16. 放 DBJ 膀胱不要太脹\n\n#### 補充雷射參數\n- 輸尿管雷射基本上就是 **1 × 10** 能量，不要 over 1.2"
+        },
+        {
+          "id": "tg_05_04",
+          "title": "D. RIRS",
+          "markdown": "- **時間限制**：最好不要 over **1 hr**；endoscope surgery 最好不要 over **2 hr**\n- **水壓**：從 **150** start，不要 over **300**\n- PUL 量：大約 **2.5–3.0 cm**（Veru 到 bladder neck） `[闕P]`"
+        },
+        {
+          "id": "tg_05_05",
+          "title": "E. TURP",
+          "markdown": "#### Traction 止血位置\n- `[郭名捷]`：traction 是止血在 **bladder neck**\n- `[蒲P]`：止血在 **prostate fossa**？\n\n#### 22 3-way Foley Balloon 充氣指引\n| Balloon volume | 效果 |\n|----------------|------|\n| 打到 10 ml | 寬度到達**第一階段** |\n| 10–40 ml | **延伸長度** |\n| > 40 ml | 繼續增加**寬度** |\n| > 80 ml | 寬度差別不大，繼續增加**長度**（會變成蘋果樣） |\n\n- `[郭醫師]` 覺得不大需要打 over 80 ml\n\n#### 其他\n- Post-TURP hematuria → 可考慮用 **Proscar** `[闕P]`\n- `[主任]` TURP 要用三條奇怪布膠先黏"
+        },
+        {
+          "id": "tg_05_06",
+          "title": "F. TURBT — Mono vs Bipolar 選擇",
+          "markdown": "沒有一定，隨心所選：\n1. **血尿多** → 選 mono\n2. **Lateral wall 怕 jerk** → 選 bipolar\n3. **Bipolar 可以切得更薄**；wall 薄怕破的也可以選 bipolar\n\n不同觀點：\n- `[小黃]`：TURBT **mono 可以切得更薄！！！** 他喜歡用 mono。而且 **dis water 會把 tumor cell 脹破**\n- `[育誠]`：覺得 **bipolar 利**，對於 re-TURBT 的好用，也可以用 bipolar **在 dis water 中止血**\n\n#### 電刀包分類\n- **A 包**：mono\n- **IN 包**：bipolar"
+        },
+        {
+          "id": "tg_05_07",
+          "title": "G. 膀胱碎石 `[小黃]`",
+          "markdown": "1. 用 **lithoclast**；用**拿鉛筆的手勢**\n2. **24 Fr Sheath** 直接 engage；前端 sharp → 如果用看進去的會磨傷\n3. 用 sheath & litho **夾住石頭**；中間敲碎，敲出不光滑面；litho **不要伸出去太長**"
+        },
+        {
+          "id": "tg_05_08",
+          "title": "H. Allium Stent",
+          "markdown": "- Stricture site 起碼要**離 UO above 3 cm** 才不用突進 bladder\n- **3 週** allium stent 可擴張完全\n- **不要 in-line 放** allium → in-line 的話要 25 Fr sheath → 不然就像放 URS 那樣"
+        }
+      ]
+    },
+    {
+      "id": "tg_06",
+      "number": "VI",
+      "title": "經皮手術",
+      "full_title": "VI. 經皮手術",
+      "subsections": [
+        {
+          "id": "tg_06_01",
+          "title": "PCN（經皮腎造廔術）",
+          "markdown": "#### 適應症\n1. Stone with fever\n2. Hydro with fever\n3. Hydro with AKI\n\n#### 禁忌症\n1. Anticoagulant and low platelet\n\n#### 操作要點\n- PCN 圈起來 25 cm，放硬管 30 cm\n- 推 guide wire：大約推 **5 次**，每次 **5 公分**（共 25 cm）\n- 更換 PCN 時：鐵條再入 **7–8 公分**時拔除，勾勾 **5–7 公分**\n\n#### 更換原則\n- Nephrostomy 的 PCN → **隨時都能換**\n- Bladder 的 → 至少等 **6 months** 再直接換（不然要加上 guidewire）"
+        },
+        {
+          "id": "tg_06_02",
+          "title": "PCNL",
+          "markdown": "#### 苑如 PCNL `[苑如]`\n1. **Bulls eye puncture** with 壓克力板（needle holder）\n2. 14 cm − 量的深度 = 要來 mark 的長度\n   - Dilator 要 mark\n   - Balloon 的 balloon mark（**並非從 tip**）\n   - 30 Fr 的吸管標記深度（**從 tip**）\n   - OP site 貼紙留一小段\n3. Amplatz **8-10-12 Fr** dilator, and **balloon to 20 atm for 3 min** → release to **5 atm**\n4. Cook single J 組裝：guide wire 從硬頭進 → 夾住 → pusher → 夾住\n5. Spogosan：加水 **8 ml** 開始搖 → 放入 **10 ml** 空針\n6. **10 Fr 小兒 Foley** 放到 renal pelvis 塞住 → 在 Foley and Amplatz 之間打入 Spogosan\n\n#### 小黃 PCNL `[小黃]`\n1. 要 **C-arm**\n2. 病人要**往下拉**，才能照"
+        }
+      ]
+    },
+    {
+      "id": "tg_07",
+      "number": "VII",
+      "title": "腹腔鏡 / 機器人手術",
+      "full_title": "VII. 腹腔鏡 / 機器人手術",
+      "subsections": [
+        {
+          "id": "tg_07_01",
+          "title": "A. TEP（腹股溝疝氣修補）",
+          "markdown": "#### 新哥 TEP `[新哥]`\n1. **術前 Foley**\n2. 立正，**bending 15°**\n3. **不 towel clip**\n4. **Mono Hook**\n5. 30° 鏡 → 開右邊的話**從左下往右上看**\n6. 棒棒只打一些些\n7. 傷口是**橫的**\n\n#### 小黃 TEP `[小黃]`\n1. Midline 有 **fat**，兩側是**肌肉**\n2. **Arcuate line 以下**沒有 posterior sheath\n3. Dissection **從血管底下**\n4. 5 mm 傷口**不關 subQ**\n\n#### 袁醫師 TEP `[袁醫師]`\n1. 傷口劃開之後用 **10 的 trocar** 搭配鏡子 **blunt dissect**\n2.（小黃是用棒棒）"
+        },
+        {
+          "id": "tg_07_02",
+          "title": "B. LRP `[淵哥]`",
+          "markdown": "#### 器械 Setup\n- 1 號：Maryland bipolar\n- 2 號：Bipolar grasp\n- 3：鏡子\n- 4：剪刀 mono\n\n#### 擺位與準備\n1. **腳降 27°，頭也是**\n2. 腳擺位是**最底的床緣**\n3. **立正站好**\n4. 消毒時先放**小綠布**吸水\n5. 消 Foley 時用**大 K and 紗布固定** → 進進出出的時候也是這樣"
+        },
+        {
+          "id": "tg_07_03",
+          "title": "C. RALRP",
+          "markdown": "#### 皓哥 RALRP `[皓哥]`\n- 進 Foley 要**露出洞洞**讓皓哥自己抓起來\n\n#### 育翔 RALRP `[育翔]`\n- **所有都要低**（肩墊、table、腳床緣）\n\n#### 通用技巧\n- RALRP 流血 → 可以把腹壓**調高（12）**"
+        },
+        {
+          "id": "tg_07_04",
+          "title": "D. RALPN",
+          "markdown": "#### 淵哥 RALPN `[淵哥]`\n- **要打 CVC**\n\n#### 阿貓 Single Port RALPN `[阿貓]`\n1. **平躺**；IV 手可出；**胸約**（下面不一定要約）\n2. Single port 的 arm **不可以垂直，要傾斜**\n3. 如果要**平移** → 按把手\n4. 頭上的**大轉盤**用旋轉\n5. **粗面朝外**\n6. 要 **approach to retroperitoneum** → 到 **psoas**\n7. Psoas 放在底下，**往上分上去找血管**"
+        }
+      ]
+    },
+    {
+      "id": "tg_08",
+      "number": "VIII",
+      "title": "Open 手術",
+      "full_title": "VIII. Open 手術",
+      "subsections": [
+        {
+          "id": "tg_08_01",
+          "title": "包皮手術",
+          "markdown": "#### 雷射割包皮 `[小黃]`\n- **雷射不需要 mark**\n\n#### 包槍 `[小黃]`\n1. 小蚊鉗先夾 mark 在 **corona 前端 0.5–1 cm**\n2. **Dorsal slit** 11 & 1 點夾，中間剪開（腹側夾 5 and 7 點）\n3. 五天不碰水；傷口之後沒事就過關\n4. Marking 位置是 **bell 上緣**\n5. 打 local：**neutral position**，看著 bone 跟 root 打入\n6. Mosquito 夾**三點**（3/9/6）\n7. 一般雷射夾 **1/11/5/7** 四個點\n\n#### 割包（另一種）`[小黃]`\n1. Local **斜著** bone and root\n2. **拉著皮打麻藥**\n3. 上面一隻，下面一隻\n\n#### 割包 `[州哥]`\n- 要切的點用**小文鉗**抓在 edge\n- **往上提**，再切切削削"
+        },
+        {
+          "id": "tg_08_02",
+          "title": "Varicocelectomy `[小黃]`",
+          "markdown": "1. **Subinguinal approach**：scrotum skin 側邊往上跟 penis root 水平走向的交叉點 → 以此點往外 **1–2 cm** 傷口 → 用 Metzenbaum 分 cord\n2. 分**三區血管**：cremasteric / vas / cord（**只要綁 cord 區的 vein**）→ 大約 **7–8 條**\n3. 有 micro 差在**分 lymph** → 綁掉 lymph 往後 **hydrocele** → 綁掉 artery 後續 **atrophy**\n4. 綁血管用 **Prolene**"
+        },
+        {
+          "id": "tg_08_03",
+          "title": "Vasectomy",
+          "markdown": "#### 澤宇 Vasectomy `[澤宇]`\n- **先打外側再內側**\n- 尖把也**先分外側再內側**\n\n#### Vasectomy 門診 `[袁]`\n- OPD vasectomy → **隔週門診**\n-（包皮 → 隔天門診）"
+        },
+        {
+          "id": "tg_08_04",
+          "title": "睪丸扭轉手術 `[欣媚]`",
+          "markdown": "1. Scrotum **正中 vertical incision**\n2. Trans scrotal retrieve → **溫水濕紗加速回血**\n3. **三點固定**使用 **5-0 PDS**\n4. **Chromic** 縫最外面"
+        },
+        {
+          "id": "tg_08_05",
+          "title": "Trocar Cystostomy",
+          "markdown": "#### 州哥 Trocar Cystostomy `[州哥]`\n1. 不用 optic 看 → 膀胱有脹就能打\n2. 要打 local → **骨頭上一指幅垂直入針** → 反抽有就記深度\n3. 切開皮 → **kelly dissect**\n4. Local 再 test 一次\n5. Set 扎入 → **要確定套管也有跟著進到膀胱**（不然 Foley 會進不去、balloon 打不起來）\n6. 放入 Foley\n\n#### 小黃 Trocar Cystostomy `[小黃]`\n1. **Pubic bone 上一指服**，vertical incision\n2. **Mini-lapa 開**：打開 anterior sheath → 用手撥開 muscle → 就會直接 approach 到 bladder\n3. 膀胱**要先扁** → 摸到 bladder 後開始灌水 → 用手感受 **bladder dome**\n4. 用 **needle test** → 大約 **1–2 公分**\n5. 用鋼針打進 → 趕緊放 Foley（**最大只能放到 18 Fr**）\n6. 縫 **anterior sheath** and 關 skin"
+        },
+        {
+          "id": "tg_08_06",
+          "title": "Suprapubic Cystostomy `[闕P]`",
+          "markdown": "- 打 suprapubic cystostomy 一個目的是 for **bladder training**\n- 可以直接流出來**看餘尿**"
+        },
+        {
+          "id": "tg_08_07",
+          "title": "補膀胱",
+          "markdown": "- Mucosa：**3-0 mono continuous**\n- 外層：**2-0 vicryl or mono**"
+        }
+      ]
+    },
+    {
+      "id": "tg_09",
+      "number": "IX",
+      "title": "攝護腺手術",
+      "full_title": "IX. 攝護腺手術",
+      "subsections": [
+        {
+          "id": "tg_09_01",
+          "title": "TURSPB",
+          "markdown": "- 針 **4 格**"
+        },
+        {
+          "id": "tg_09_02",
+          "title": "TRUSPBx 術前",
+          "markdown": "- Cefuroxime 2 tab Q12H × one day\n- 抗凝血劑停藥：NOAC 停 3 天；Aspirin/Plavix 停 5–7 天"
+        },
+        {
+          "id": "tg_09_03",
+          "title": "TP Biopsy `[士庭]`",
+          "markdown": "1. **14 號 cath** 放到 muscle → 針輕輕滑進去探頭去 trace\n2. 位置：**RM, RL, LM, LL, Rt ant, Lt ant**\n3. **Spinal needle 打 apex** → 一開始皮下用短針打\n4. **Perineal 最薄處** → 離中線約 **0.5 cm**"
+        },
+        {
+          "id": "tg_09_04",
+          "title": "TP Biopsy 補充 `[Stin]`",
+          "markdown": "- 會多一個 **14 號 catch**"
+        },
+        {
+          "id": "tg_09_05",
+          "title": "HIFU",
+          "markdown": "- 1 小時燒 **10 g**\n- AP **不能超過 4 公分**"
+        }
+      ]
+    },
+    {
+      "id": "tg_10",
+      "number": "X",
+      "title": "攝護腺評估",
+      "full_title": "X. 攝護腺評估",
+      "subsections": [
+        {
+          "id": "tg_10_01",
+          "title": "DRE Grading",
+          "markdown": "| Grade | 描述 |\n|-------|------|\n| 2 | 摸**到** sulcus |\n| 3 | 摸**不到** sulcus |\n| 4 | 摸**不到邊界** |"
+        },
+        {
+          "id": "tg_10_02",
+          "title": "Prostate Trifecta",
+          "markdown": "1. **Sexual function**\n2. **Incontinence**\n3. **Oncology outcome**"
+        },
+        {
+          "id": "tg_10_03",
+          "title": "Incontinence",
+          "markdown": "- 觀察期：**1 年內**\n- 評估方式：**pad / per day**（normal < 1）\n- 大約 **1 成**左右會有失禁問題"
+        },
+        {
+          "id": "tg_10_04",
+          "title": "Sexual Function",
+          "markdown": "- 評估工具：**IIEF-5**（5 domains）\n- 大約 **5 成**左右會有問題"
+        },
+        {
+          "id": "tg_10_05",
+          "title": "攝護腺癌診斷",
+          "markdown": "- MRI Dx PCa：AUC **85**\n- PHI：AUC **75**\n- `[PPu]` 覺得 HR 要**小於 0.75** 才有意義"
+        }
+      ]
+    },
+    {
+      "id": "tg_11",
+      "number": "XI",
+      "title": "洗血塊",
+      "full_title": "XI. 洗血塊",
+      "subsections": [
+        {
+          "id": "tg_11_01",
+          "title": "器材選擇",
+          "markdown": "- 用 **22 3-way** Foley 洗\n- 不行就 **nephrostomy**（18/20 Fr）"
+        },
+        {
+          "id": "tg_11_02",
+          "title": "Echo Guidance",
+          "markdown": "- 用 **sagittal view** echo guide\n- **不要硬吸 bladder wall**\n- 可以先放 Foley → 打 balloon test bladder neck 位置\n- 洗的時候**要消 balloon**\n- 從裡面慢慢拉出來"
+        },
+        {
+          "id": "tg_11_03",
+          "title": "Balloon 定位",
+          "markdown": "- 洗血塊可以把 balloon 打起來（**30–40 ml**）for localization!!"
+        },
+        {
+          "id": "tg_11_04",
+          "title": "灌水量",
+          "markdown": "- 打水漲膀胱 **50 ml** 差不多\n- **最好不要 over 100 ml**"
+        },
+        {
+          "id": "tg_11_05",
+          "title": "血塊分布",
+          "markdown": "- Blood clot 多會黏在 **stasis 的地方**、**balloon 的位置**、or **bladder neck**\n- Foley **只能前後**；左右的血塊洗不到\n- 左右可以靠**放水/漲膀胱**來調整"
+        },
+        {
+          "id": "tg_11_06",
+          "title": "其他",
+          "markdown": "- 洗的途中一直漏 → 可能是因為**病人肚子出力**"
+        }
+      ]
+    },
+    {
+      "id": "tg_12",
+      "number": "XII",
+      "title": "泌尿道處置",
+      "full_title": "XII. 泌尿道處置",
+      "subsections": [
+        {
+          "id": "tg_12_01",
+          "title": "Ureteral Stricture Sizing",
+          "markdown": "| 年齡 | 最大 Fr |\n|------|---------|\n| ≥ 18 y/o | < 18 Fr（or < 14–16） |\n| < 18 y/o | < 12 Fr |"
+        }
+      ]
+    },
+    {
+      "id": "tg_13",
+      "number": "XIII",
+      "title": "解剖與設備",
+      "full_title": "XIII. 解剖與設備",
+      "subsections": [
+        {
+          "id": "tg_13_01",
+          "title": "解剖名詞",
+          "markdown": "- **Aponeurosis** = 腹外（斜肌腱膜）\n- **Conjoint** = 腹內 + 腹橫（肌）"
+        },
+        {
+          "id": "tg_13_02",
+          "title": "IC Grading（Interstitial Cystitis）",
+          "markdown": "| Grade | 描述 |\n|-------|------|\n| 0 | No glomerulation |\n| 1 | Less than 1/2 of inspected bladder |\n| 2 | More than 1/2 of inspected bladder |\n| 3 | Waterfall hemorrhage |"
+        },
+        {
+          "id": "tg_13_03",
+          "title": "州哥小提醒 `[州哥]`",
+          "markdown": "- If infection（e.g. 就不會震波）"
+        },
+        {
+          "id": "tg_13_04",
+          "title": "Enlarge Prostate 相關",
+          "markdown": "- Enlarge prostate, bladder cancer, stone → urine 易都髒髒\n\n\n*Last updated: 2026-03-29*"
+        }
+      ]
+    }
+  ]
+}

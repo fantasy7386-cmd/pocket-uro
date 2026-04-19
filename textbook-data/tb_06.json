@@ -1,0 +1,1196 @@
+{
+  "id": "tb_06",
+  "number": "VI",
+  "title": "腎上腺",
+  "icon": "🔺",
+  "sections": [
+    {
+      "id": "tb_06_01",
+      "title": "腎上腺",
+      "source_file": "4-2 腎上腺.pptx",
+      "total_slides": 67,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "腎上腺解剖",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "Adrenal anatomy",
+                "Artery:",
+                "Superior adrenal A. from Inferior Phrenic A.",
+                "Middle adrenal A. from Aorta",
+                "Inferior adrenal A. from Renal A.",
+                "Adrenal 內: 三種血管",
+                "Capsular arteries: only supply the adrenal capsule",
+                "Fenestrated cortical sinusoidal capillaries: supply the cortex and then \u000bdrain into fenestrated medullary capillary sinusoids.",
+                "Medullary arterioles travel within the trabeculae of the adrenal gland to deliver blood to the medullary capillary sinusoids",
+                "Medulla 有兩套blood supply",
+                "Artery blood from medullary arterioles",
+                "Venous blood from cortical sinusoid capillaries (已經經過cortex, 含glucocorticoid, 幫助epinephrine生成)",
+                "Vein:",
+                "Left adrenal V.  from Left renal V.",
+                "Right adrenal V. from IVC",
+                "出生時adrenal 大小約是成人的兩倍大"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal anatomy\n•Artery:\n•Superior adrenal A. from Inferior Phrenic A.\n• Middle adrenal A. from Aorta\n•Inferior adrenal A. from Renal A.\n• Adrenal 內：三種血管\n• Capsular arteries: only supply the adrenal capsule\n•Fenestrated cortical sinusoidal capillaries: supply the cortex and then\ndrain into fenestrated medullary capillary sinusoids.\n• Medullary arterioles travel within the trabeculae of the adrenal gland to\ndeliver blood to the medullary capillary sinusoids\n• Medulla 有兩套blood supply\n• Artery blood from medullary arterioles\n• Venous blood from cortical sinusoid capillaries (已經經過cortex，含\nglucocorticoid,幫助epinephrine生成）\n• Vein:\n•Left adrenal V. from Left renal V.\n•Right adrenal V. from IVC\n•出生時adrenal 大小約是成人的兩倍大"
+            },
+            {
+              "slide_num": 3,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "Interior phrenic artery\nSuperior adrenal arteries\n• Left adrenal gland\nRight adrenal gland\nRight adrenal\nvein\nMiddle\nadrenal\nartery\nLeft\nadrenal\nvein\nInferior\nadrenal\nartery\n•Left kidney\nAbdominal aorta\nRight\nkidney\nInterior\nvena cava\nFigure 64-4. Arterial supply to the adrenal glands. (From Drake RL, Vogl W, Mitchell AWM.\nGray's anatomy for students. Philadelphia: Elsevier; 2005.)"
+            },
+            {
+              "slide_num": 4,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Zona\nCapsule glomerulosa\nZona\nfasciculata\nZona\nreticularis\nMedulla\nCapsule\nCortex\nZona\nglomerulosa\nZona\nfasciculata\nZona\nreticularis\n0 000\n- Medulla\nPreganglionic\nsympathetic\nterminal\nSecretes:\nMineralo-\ncorticoids\n(including\naldosterone)\nSecretes:\nGlucocorticoids\n(including cortisone)\nand\nsex hormones\n(including dehydroepi-\nandrosterone)\nSecretes:\nAdrenaline\nFig. 105.5. The complex vascular supply of the adrenal gland. (From Gray H, Wiliams PL, Bannister LH:\nGray's anatomy: the anatomical basis of medicine and surgery, New York, 1995, Churchil Livingstone.)\nSecretes:\nNoradrenaline"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "腎上腺皮質生理與 CAH",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 5,
+              "text": [
+                "Adrenal cortex (from mesoderm)",
+                "外→內 G(Aldosterone)-F(cortisol)-R(Androgen)",
+                "Zona Glomerulosa (15% of cortex)",
+                "含CYP21, CYP11B2",
+                "分泌 Aldosterone",
+                "Conn syndrome",
+                "嗜鹼性polyhedral cell",
+                "Zona Fasciculata (80%, 最大部分, 擁有最多脂肪含量)",
+                "含CYP17 (17α-hydroxylase), CYP21, CYP11B1 \u000b(17α-hydroxylase, 21-hydroxylase, 11β-hydroxylase enzymes)",
+                "分泌 Glucocorticoid",
+                "Cushing syndrome",
+                "嗜鹼性polyhedral cell",
+                "Zona Reticularis (5-7%)",
+                "含CYP17 (17α-hydroxylase, 17,20-lyase)",
+                "分泌 DHEA, DHEA-S, androstenedione: adrenal androgen",
+                ">20 mg/day",
+                "在人體生理上相對比較沒有重要角色; 然而在攝護腺癌的病人可以利用manipulate adrenal sex steroid來達到治療效果 (Abiraterone)",
+                "dehydroepiandrosterone (DHEA)\u000bsulfated DHEA (DHEA-S)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal cortex (from mesoderm)\n•外＞內 G(Aldosterone)-F(cortisol)-R(Androgen)\n•zona Glomerulosa (15% of cortex)\n•含CYP21, CYP11B2\n•分泌 Aldosterone\n• Conn syndrome\n•嗜鹼性polyhedral cell\n•zona Fasciculata (80%，最大部分，擁有最多脂肪含量）\n•含CYP17 (17chydroxylase), CYP21, CYP11B1\n(17a-hydroxylase, 21-hydroxylase, 11B-hydroxylase enzymes)\n•分泌 Glucocorticoid\n•Cushing syndrome\n•嗜鹼性polyhedral cell\n•Zona Reticularis (5-7%)\n•含CYP17 (17a-hydroxylase, 17,20-lyase)\ndehydroepiandrosterone (DHEA\n•分泌 DHEA, DHEA-S, androstenedione: adrenal androgen\nsulfated DHEA (DHEA-S)\n•>20mg/day\n•在人體生理上相對比較沒有重要角色;然而在攝護腺癌的病人可以利用\nmanipulate adrenal sex steroid來達到治療效果 (Abiraterone)"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "G",
+                "F",
+                "R",
+                "圖像記憶 => 個區塊對應的enzyme和 product",
+                "建議記紅字的enzyme和最終的product (aldo, cortisol, DHT)",
+                "21",
+                "CYP 11B2",
+                "17; 17,20 layse",
+                "11B1",
+                "5AR",
+                "17βHSD",
+                "3β2HSD",
+                "3β2HSD"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Side chain cleavage\n(StAR, CYP11A)\n3B2HSD\n3B-Hydroxysteroid\nDehydrogenase (3B2HSD)\n21\n21-Hydroxylase (CYP21)\nCYP 11B2\n11B-Hydroxylase\n(CYP11B2)\nAldosterone synthase\n(CYP11B2)\n18-Oxidase\n(CYP11B2)\n圖像記憶二個區塊對應的enzyme和 product\n建議記紅字的enzyme 和最終的product (aldo,cortisol, DHT)\nR\nCholesterol\nPregnenolone\n17;17,20 layse\n17o-Hydroxylase\n(CYP17)\n17.:0lyase\n17-OH pregnenolone\nProgesterone\n117-0H prog ssteron\nDeoxycorticosteronP\n11-Deoxycortisol\n11B1\n11B-Hydroxylase\n(CYP11B1)\nDehydroepiandrosterone\n3B2HSD\n17BHSD\nAndrostenedione\n17B-Hydroxysteroid\nDehydrogenase\n(17BHSD)\nTestosterone\n5AR\n5a-Reductase\n(SRD5A)\nCorticosterone\n18-0H corticostero\nAldosterone\nCortis\nDihydrotestosterone"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "CYP 11B2",
+                "CYP 11B2",
+                "CYP 11B2",
+                "CYP 21",
+                "3B2HSD",
+                "G",
+                "CYP 11B1",
+                "CYP17",
+                "F",
+                "CYP17",
+                "R",
+                "Adrenal內分泌路徑",
+                "(跟Abiraterone同一張圖)",
+                "CYP21",
+                "Glomerulosa",
+                "Fasciculata",
+                "Reticularis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "F\nPituitary\nACTH\nCholesterol\nKeto 1\nPregnenolone\nKeto\n170H-pregnenolone\nAbi\nKeto\nTak-700\nDHEA\nCholesterol Side Chain\nCleavage\nProgesterone\nDoc\n3B2HSD\n3-BHSD-\ncyp 21 21-hydroxvlase\n17a-hydrxylase\nCYP17\nCYP21.\n170H progesterone\n3-B4SD-\nC17.20 lvase\nCYP17\n3-BHSD-1\nAdrenal内分泌路徑\n（跟Abiraterone同一張圖）\nAdrenal Cortex\nCoricosterone\nCYP 11B2\n11a-hydroxylase\n180H-\ncorticosterone\nCYP 11B2\n18-hydroxvlase\nAldosterone\nTcvp 11B2\n18-oxidase\nMineralocorticoids\nKeto\nCYP 11B1\n11-D0c\nCortisol\nGlucocorticoids\nPeripheral Tissues\nTestosterone\nDHT\nAndrostenedione\nAndrogens\n17-keto-reductase\n5g-reductase\nGlomerulosa\nFasciculata\nReticularis"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Congenital adrenal hyperplasia",
+                "Autosomal recessive, CAH gene",
+                "機制: CYP21 或 11 deficiency (CYP 21, 21-hydroxylase缺乏佔95%, 11缺乏佔5%), 所有steroid往Androgen走, Aldosterone ↓, cortisol ↓, Testosterone ↑, ACTH ↑\u000b→ cortex hyperplasia",
+                "46XX的DSD(Disorder of sexual development)中最常見的原因, 也是DSD最常見原因",
+                "Presentation: female pseudohermaphrotidism(男性化的女性, ambiguous genitalia, 有肌肉, 聲音低沈, 月經紊亂, 提早長陰毛), aldosterone不足(高鉀低鈉)",
+                "產前診斷: 羊水中的 17-hydroxyprogesterone",
+                "治療: 補hydrocortisone (aldosterone和cortisol都補得到)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "Congenital adrenal hyperplasia\n• Autosomal recessive, CAH gene\n機制：CYP21 或 11 deficiency (CYP 21, 21-hydroxylase缺乏\n佔95%，11缺乏佔5%)，所 有steroid往Androgen走，\nAldosterone d,cortisol 山, Testosterone 个, ACTH 个\n=cortex hyperplasia\n46xx的DSD(Disorder of sexual development)中最常見的\n原因，也是DsD最常見原因\nPresentation: female pseudohermaphrotidism(男性化的女\n售,ambiguous genitalia，有肌肉,聲賁低沈， 月經紊亂,提\n早長陰毛),aldosterone不足(高鉀低鈉）\n•產前診斷：羊水中的 17-hydroxyprogesterone\n•治療：補hydrocortisone (aldosterone 和cortisol都補得到）"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "腎上腺髓質",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 9,
+              "text": [
+                "Adrenal medulla (from ectoderm)",
+                "交感神經節後神經元組成\u000b(無axons, dendrites)",
+                "主要來自chromaffin cells",
+                "分泌catecholamines",
+                "Epinephrine (80%, most)",
+                "Norepinephrine (19%)",
+                "Dopamine (1%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal medulla (from ectoderm)\n。交感神經節後神經元組成\n(無axons, dendrites)\n•主要來自chromaffin cells\nHO\n•分沁catecholamines\n•Epinephrine (80%, most)\n• Norepinephrine (19%)\n• Dopamine (1%)\nL-Tyrosine\nOH\nFree catecholamines*\nFree metanephrines*\nTotal metanephrines*\nNH2\nLDOPA\n*Term ffractionated\" is used if concentration values are reported\ntor individual catecholamine or metanephrne compounds.\nDopamine\nNorepinephrine\nOH\nNormetanephrine\nOH\nHO\nCOMT\nHsco\n* Normetanephrine\nsulfate\nHO\nNH2\nJPMNT\nHO\nNH2\nEpinephrine\nMetanephrine\nOH\nOH\nHO\nCOMT\nHgco\n* Metanephrine\nsulfate\nHN\nHO\nHN\nHO\nCHs\nCHs\nCOMT, MAO, others\nVanillylmandelic acid\n(VMA)\nFig. 106.4. Summary of catecholamine metabolism. The figure simplifies the metabolic pathway of\nnorepinephrine and epinephrine degradation to highlight those metabolic products that play a role in\nroutine clinical practice. Note: The central role that the monoamine oxidase (MAO) enzyme plays in\ncatecholamine degradation is not fuly relected in this figure, because most metabolites that are produced\nby MAO catalysis are not routinely measured in laboratory assessments for pheochromocytoma. Key\nenzymes involved in catalysis of metabolic conversions are indicated in italic font. COMT, Catechol-\nO-methytransferase; PNMT, phenylethanolamine-N-methytransferase."
+            },
+            {
+              "slide_num": 10,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Cortex\nMedulla\nAdrenal vein\nCapsule\nZona glomerulosa\nZona fasciculata\nZona reticularis\nMedulla"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "Cushing Syndrome：診斷與鑑別",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 11,
+              "text": [
+                "Cushing syndrome"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Cushing syndrome"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "Cushing syndrome",
+                "Hypercortisolism secondary to excessive production of glucocorticoids by the adrenal cortex",
+                "Central obesity(最常見), moon face, buffalo hump, proximal muscle weakness, easy bruisability, and abdominal striae",
+                "50%會結石",
+                "cortisol -> 骨頭釋放鈣質->血鈣↑",
+                "降低尿中的citrate",
+                "抑制腎小管bicarbonate回收(保住Na排出H和bicarbonate\u000b->尿液酸化",
+                "胰島素抗性",
+                "常見結石為草酸鈣"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "Cushing syndrome\n• Hypercortisolism secondary to excessive production of\nglucocorticoids by the adrenal cortex\n•Central obesity(最常見),moon face, buffalo hump, proximal\nmuscle weakness, easy bruisability, and abdominal striae\n•50%會結石\n• cortisol-＞骨頭釋放鈣質->血鈣不\n降低尿中的citrate\n抑制腎小管bicarbonate回收(保住Na排出H和bicarbonate\n->尿液酸化\n•胰島素抗性\n•常見結石為草酸鈣\nHypothalamus\nCRH\nOxvtocin\nVasopressin\nPituitary\nOH\nStress\n• Circadian\nRegulation\nACTH\n。 Cortisol\nAdrenal\nFig. 106.5. The hypothalamic-pituitary-adrenal axis and feedback loop.ACTH,\nAdrenocorticotropic hormone; CRH, corticotropin-releasing hormone."
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Central obesity 最多"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 106.5 Signs and Symptoms of Cushing\nSyndrome\nSYMPTOMS AND SIGNS\nCentral obesity\nRounded tace (“moon tace”)\nFacial plethora\nDecreased libido\nPurple striae\nMenstrual disturbances\nHirsutism\nErectile dysfunction\nHypertension\nMuscle weakness\nPosterior neck fat deposit (“buffalo hump”)\nBody bruising\nGlucose intolerance, diabetes\nOsteopenia, osteoporosis\nEmotional lability, depression\nHeadache\nBackache\nLimb edema\nRecurrent infections\nHypokalemic alkalosis\nNephrolithiasis\nAcne\nAlopecia\nPREVALENCE (%)\n90-100\nCentral obesity 最多\nDepression,\npsychosis\nGlaucoma •\nBuffalo hump\nmmunosuppression\n70-90\nAltered carbohydrate/\nlipid metabolism\nPeptic ulcer\ndisease\nVisceral obesitv\nPeripheral insulin\nresistance\n50-70\nUrolithiasis\nSaltwater retention\nHypertension\n20-50\nProtein catabolism 一\nSkin thinning\nMuscular atrophy\nBone osteoporosis\nHypogonadal\nhypogonadism\n0-20"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "Cushing disease:",
+                "pituitary ACTH分泌增加, \u000b最常見原因為pituitary adenoma",
+                "Cushing syndrome",
+                "Etiology",
+                "bil/unilateral hyperplasia,",
+                "unilateral adenoma",
+                "80-85%",
+                "10%",
+                "外用型儘管是topical, 鼻噴劑都可能發生",
+                "最常見原因是bronchial carcinoid tumor"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "Cushing syndrome\nEtiology\nCushing syndrome\n(Hypercortisolemia)\n外用型儘管是topical,鼻噴\n劑都可能發生\nExogenous*\nndogenous\n80-85%\nACTH\ndependent\n10%\nACTH\nindependent\n最常見原因是bronchial carcinoid\ntumor\nlatrogenic\nsteroids\nPituitary\nACTH\n~70%\nEctopic\nAACTH\n~10%-15%\nIncreased\nCRH\n≤1%\nPrimary\nadrenal\n~10%\nCushing disease:\npituitary ACTH分泌增加，\n最常見原因為pituitary adenoma\nbil/unilateral hyperplasia,\nunilateral adenoma\nIncreased cortisol production\n*Most common\nFig. 106.6. Clinically relevant causes of excess cortisol production. ACTH,\nAdrenocorticotropic hormone; CRH, corticotropin-releasing hormone."
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "Diagnosis of Cushing syndrome",
+                "Diagnosis(三選一)",
+                "Overnight low-dose dexamethasone suppression test (LD-DST)",
+                "口服1mg of dexamethasone 11 PM - 12 AM\u000b(口服3-4倍生理濃度)",
+                "Serum cortisol measured between 8 AM and 9 AM",
+                "Failed to suppress cortisol < 5 μg/dL (140 nmol/L) → Cushing syndrome",
+                "24-hr urinary free cortisol (UFC, <40 μg/24h)\u000b(insufficient sensitivity for diagnosis of subclinical Cushing syndrome)\u000bagainst it for metabolic evaluation of incidentaloma",
+                "Late-night salivary cortisol (11:00 - 12:00 pm驗salivary cortisol, 正常應< 101 ng/dL) (Salivary 中的cortisol多是游離型，測起來準確)",
+                "sensitivity94-100%, Specificity80-90%",
+                "Random serum cortisol, ACTH level no longer recommended"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "Diagnosis of Cushing syndrome\n•Diagnosis(三選一）\n• Overnight low-dose dexamethasone suppression test (LD-DST)\n•口服1mg of dexamethasone 11 PM -12 AM\n（口服3-4倍生理濃度）\n• Serum cortisol measured between 8 AM and 9 AM\n• Failed to suppress cortisol < 5 wg/dL (140 nmol/L) -> Cushing\nsyndrome\n• 24-hr urinary free cortisol (UFC, <40 wg/24h)\n(insufficient sensitivity for diagnosis of subclinical Cushing syndrome)\nagainst it for metabolic evaluation of incidentaloma\n• Late-night salivary cortisol (11:00- 12:00 pm 驗salivary cortisol，正常應<\n101 ng/dL) (salivary 中的cortisol多是游離型，測起來準確）\n•sensitivity94-100%,Specificity80-90%\n•Random serum cortisol, ACTH level no longer recommended"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Find the cause of Cushing syndrome",
+                "先排除有exogenous routes",
+                "Check ACTH (normal range 10-60 pg/mL)",
+                "low ACTH -> ACTH independent(< 5 pg/ml): primary adrenal",
+                "normal or high ACTH -> ACTH dependent",
+                "10-200 pg/mL: Cushing disease(pituitary ACTH過高)",
+                ">200 pg/mL: ectopic ACTH syndrome (ectopic ACTH 驗得到)",
+                "進一步區辨ACTH dependent 中的ectopic和pituitary ACTH",
+                "ACTH level of inferior petrosal sinus blood after CRH stimulation\u000b(high level after CRH: Cushing disease)",
+                "(Old) high dose dexamethasone suppression test: ectopic ACTH still production after suppression",
+                "若是ACTH independent(primary adrenal), 且lesion是單邊(unilateral adenoma/hyperplasia)會比較直觀的判定那邊是病兆而去開那邊, 但如果兩邊都有lesion(bilateral adenoma/hyperplasia)就還是要做lateralization:",
+                "NP59 test",
+                "Adrenal vein sampling(只有少數study說可以用, 主要還是用在Conn’s)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "Find the cause of Cushing syndrome\n•先排除有exogenous routes\n• Check ACTH (normal range 10-60 pg/mL)\nlow ACTH -> ACTH independent(< 5 pg/ml):primary adrenal\nnormal or high ACTH -> ACTH dependent\n•10-200 pg/ mL: Cushing disease (pituitary ACTH過高）\n• =200 pg/mL: ectopic ACTH syndrome (ectopic ACTH 驗得到）\n•進一步區辨ACTH dependent 中的ectopic和pituitary ACTH\n• ACTH level of inferior petrosal sinus blood after CRH stimulation\n(high level after CRH: Cushing disease)\n(Old) high dose dexamethasone suppression test: ectopic ACTH still\nproduction after suppression\n•若是ACTH independent(primary adrenal)， 县lesion是單邊(unilateral\nadenama/byperplasia)會比較直觀的判定那邊是病兆而秀開那邊，但\n如果兩邊都有lesion(bilateral adenoma/hyperplasia)就還寔要做\nlateralization:\n• NP59 test\n• Adrenal vein sampling(只有少數study說可以用，主要還是用在Conn's)"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Ectopic ACTH",
+                "Bronchial carcinoid tumor 最多。\u000bIslet cell tumor, small cell lung cancer"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Ectopic ACTH\nTABLE 106.4 Sources of Ectopic Adrenocorticotropic Hormone\nPARAMETER\nCURRENT\nSTUDY\nNumber of patients\nNo tumor found (%)\nIslet cell tumor (%)\nBronchial carcinoid tumor (%)\nThymic carcinoid tumor (%)\nMedullary thyroid cancer (%)\nDisseminated neuroendocrine tumor (%)\nDisseminated gastrointestinal carcinoid tumor (%)\nSmall cell lung cancer (%)\nMiscellaneous (%)\nPancreatic adenocarcinoma (%)\nAdenocarcinoma of the bronchus (%)\nSquamous cell carcinoma of the bronchus %)\nUndifferentiated carcinoma of the bronchus (%)\nMalignant thymoma (%)\nPheochromocytoma (%\nTotal\n106\n16\n16\n25\n5\n8\n7\n1\n11\n8\n3\n100\nBronchial carcinoid tumor 最多。\nslet cell tumor, small cell lung cancer\nFINDLING AND\nTYRRELL, 19869\nIMURA\nET AL., 1975\n49\n12\n4\n49\n16\n30\n7\nDOPPMAN\nHOWLETT\nET AL., 1989 ET AL., 1986\n28\n32\n11\n46\n16\n13\n38\n13\n10\n6\n2\n100\n33\n17\n10\n3\n10\n13\n100\n19\n13\n11\n100\n6\n100\nancludes a literature review.\n\"Carcinoid of the gallbladder and colon cancer.\nModified from Aniszewski JP, Young WF Jr, Thompson GB, et al. Cushing syndrome due to ectopic adrenocorticotropic hormone secretion. world\nd Sur9 25(7):934-940,2001."
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Cushing Syndrome：治療",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 18,
+              "text": [
+                "Treatment of Cushing syndrome",
+                "Primary adrenal",
+                "Unilateral adenoma/hyperplasia或bilateral hyperplasia/adenoma但Lateralization(+) -> Adrenalectomy(lapa vs open)",
+                "＠若bilateral hyperplasia/adenoma沒有明顯lateralization考慮先開一邊",
+                "Pre-op preparation:",
+                "控制血糖",
+                "Perioperative/post-op:",
+                "Op day: 送刀時打一支solu-cortef(100mg)，剛取下adenoma再打一支solu-cortef(100mg)",
+                "Post-op: solucortef q8h慢慢taper",
+                "控制血糖",
+                "@無法開刀者用藥治療：",
+                "Metyrapone, aminoglutethimide trilostane, ketoconazole, etomidate: block steroid synthesis",
+                "Mitotane: used for ACC, can also be used",
+                "Abiraterone: Inhibitors of 17α-hydroxylase (CYP17)",
+                "抑制CYP11B1",
+                "抑制CYP11A1 & aromatase",
+                "抑制3b-HSD",
+                "抑制17"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Treatment of Cushing syndrome\nPrimary adrenal\nUnilateral adenoma/hyperplasia或bilateral hyperplasia/adenoma但\nLateralization(+)-> Adrenalectomy(lapa vs open)\n@若bilateral hyperplasia/adenoma沒有明顯lateralization考慮先開一邊\nPre-op preparation:\n•控制血糖\nPerioperative/post-op:\n• Op day:送刀時打一支solu-cortef(100mg)•剛取下adenoma再打一支\nsolu-cortef(100mg)\nPost-op: solucortef q&h慢慢taper\n•控制血糖\n@無法開加者愚藥治療：MkaEVP IAL a aronatae\n抑制3b-HSD\n抑制17\n•Metyrapone, aminoglutethimide trilostane, ketoconazole, etomidate:\nblock steroid synthesis\nMitotane: used for AcC, can also be used\nAbiraterone: Inhibitors of 17a-hydroxylase (CYP17)"
+            },
+            {
+              "slide_num": 19,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch06_adrenal/render/sh19.webp",
+              "ocr_text": "Cholesterol side chain\ncleavage enzyme\nCholesterol\n3B-steroid dehydrogenase\nMineralocorticoid\nPregnenolone\nGlucocorticoid\nAndrogen\n17a-hydroxlase\n17.20 lyase\nProgesterone\n21-hydroxlase\n17-OH pregnenolone\nSp-steroid deryr ogenase/\n17a-hydroxlase\n17-OH progesterone\n21-hydroxlase\n11-Deoxycortisol\nDehydroepi-\nandrosterone\n3-steroid denydrogenase/\n17,20 lyase\n• Androsterone\n21-hydroxlase\nTestosterone\n11-Deoxycorticosterone\nI' phycroxlasell\nCorticosterone\n18-hydroxlase\n18-OH-corticosterone\nAldosterone\nsynthase\nAldosterone\nCortisol\nCortisol\nreceptor\nKetoconazole\nMitotatane\nMetyrapone\nAminoglutethimide\nMifepristone"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "G",
+                "F",
+                "R",
+                "Aldo",
+                "Cortisol",
+                "DHEA",
+                "3𝞫HSD",
+                "21-Hyd",
+                "17𝞪",
+                "17,20lyase",
+                "11(B2)",
+                "11(B1)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "G\nF\nR\n3BHSD\nMineralocorticoid\nGlucocorticoid\nAndrogen\ncholestoral\nCholesterol side chain\ncleavage enzyme\n• Preanenolone\n3B-steroid dehydrogenasi\n17a-hydroxlase\n• 17-OH preanenolone\n3p-steroid denydrogenas\n17a-hydroxlase\n17.20 lyase 1\nDehydroepi-\nandrosterone\nspserold detyerogemasl\n17.20 lyase\nProgesterone\n117-OH progesterone\n• Androsterone\n21-hydroxlase\n21-hydroxlase/\n21-hydroxlase\n1 11-Deoxycorticosterone\n11-Deoxycortisol\nTestosterone\n11-B-hydroxlase\n11-p-hydroxlase,\nCorticosterone\nCortisol\n18-hydroxlase\n118-0H-corticosterone\nAldosterone\nsynthase\nAldosterone\nroceptor\nI Kotoconazoo\nI Miotatane\n/ Metyrapone\nI aminoglutethimide\nI Mfopristone\n21-Hvd\n11(B2）\n11(B1)\n17a\n17,20lyase\nAldo\n• Cortisol\n>\nDHEA"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "Primary Aldosteronism：Screening & Confirmatory",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 21,
+              "text": [
+                "Conn’s syndrome"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "Conn's syndrome"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Parathyroid hormone",
+                "proximal吸收鈣",
+                "proximal轉VitD",
+                "Thiazide",
+                "distal再吸收鈣",
+                "間接促進proximal再吸收鈣",
+                "(高鈉會抑制這個效果)",
+                "Aldosterone",
+                "distal 留NaCl, 排鉀",
+                "collecting 排氫",
+                "ADH",
+                "collecting 收水",
+                "ccRCC, papillary RCC",
+                "proximal",
+                "Collecting duct / Chromophobe",
+                "Medullary carcinoma",
+                "collecting duct",
+                "留鈉氯排氫鉀"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "留鈉氯排氫鉀\nTABLE 106.1 Primary Effects of Mineralocorticoids\nACTION\nRenal sodium\nreabsorption\nRenal chloride\nreabsorption\nRenal potassium\nsecretion\nRenal proton\nsecretion\nEFFECT\nIncreased blood\nvolume\nIncreased blood\npressure\nDecreased urine\nsodium\nIncreased serum\nchloride\nDecreased urine\nchloride\nDecreased serum\npotassium\nIncreased urine\npotassium\nIncreased urine\nNH4\nSITE OF ACTION\nDistal tubule\nConnecting segment\nCollecting duct\nDistal tubule\nConnecting segment\nColecting duct\nDistal tubule\nConnecting segment\nColecting duct\nCollecting duct-a\nresult of sodium\nreabsorption\nNHio Ammonia.\nParathyroid hormone\nproximal吸收鈣\nproximal轉VitD\nThiazide\ndistal再吸收鈣\n間接促進proximal再吸收鈣\n（高鈉會抑制這個效果）\nAldosterone\ndistal 留Nac， 排鉀\ncollecting 排氫\nADH\ncollecting 收水\nCCRCC, papillary RCC\nproximal\nCollecting duct / Chromophobe\nMedullary carcinoma\ncollecting duct"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Primary aldosteronism(Conn) screening indication"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Primary aldosteronism (Conn)\nscreening indication\nBOX 106.2 Indications for Primary Aldosterone\nScreening\nHypertension with hypokalemia\nResistant hypertension (three or more oral agents including a\ndiuretic)\nControlled hypertension on four or more antihypertensives\nAdrenal incidentaloma with hypertension\nHypertension with sleep apnea\nEarly-onset hypertension (<20 years) or stroke (<50 years)\nSevere hypertension (②150/≥100) measured on 3 different days\nWhenever considering secondary causes of hypertension (i.e.,\npheochromocytoma or renovascular disease)\nUnexplained hypokalemia (spontaneous or diuretic induced)\nEvidence of target organ damage disproportionate to degree of\nhypertension\nHypertension with family history of primary aldosteronism"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Primary Aldosteronism(Conn)",
+                "Symptoms and signs (distal留NaCl排鉀, collecting排氫)",
+                "HTN",
+                "Hypokalemia (6~9成的人血鉀是正常的)",
+                "Screening test: ARR + PAC",
+                "Morning(8-10AM) plasma aldosterone (ng/dL) to renin (ng/mL/h) ratio (ARR)",
+                "PAC (plasma aldosterone concentration)",
+                "ARR > 20 (30)  + PAC (plasma aldosterone concentration) > 15 ng/mL → Conn syndrome",
+                "ARR > 30  + PAC > 20 → Conn syndrome (by NIH consensus)",
+                "Potassium-sparing diuretics (amiloride)",
+                "Mineralocorticoid receptor blockers (spironolactone)",
+                "Test前要停藥六周!!",
+                "Beta-blocker也考慮要停"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Primary Aldosteronism (Conn)\n•Symptoms and signs (distal留Nacl排鉀，collecting排氫）\n•HTN\n• Hypokalemia （6~g成的人血鉀是正常的）\n•Screening test: ARR + PAC\n• Morning(8-10AM) plasma aldosterone (ng/dL) to renin (ng/ ml/h) ratio (ARR)\n• PAC (plasma aldosterone concentration)\n•ARR >20 (30) + PAC (plasma aldosterone concentration) > 15ng/mL>\nConn syndrome\n• ARR >30 + PAC>20 ≥ Conn syndrome (by NIH consensus)\nPotassium-sparing diuretics (amiloride)\nMineralocorticoid receptor blockers (spironolactone)\nTest前要停藥六周！！\nBeta-blocker也考慮要停"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "Primary Aldosteronism(Conn)",
+                "Confirmatory tests (看看就好)",
+                "Fludrocortisone suppression test",
+                "Mineralocorticoid fludrocortisone (0.1 mg Q6H) for 4 days",
+                "Sodium chloride (2 g Q8H) for 4 days",
+                "PAC in the upright position, > 6 ng/dL → PA",
+                "Oral sodium loading test",
+                "high-sodium diet for 3 days (12.8 g/day)",
+                "24-hour urine aldosterone, sodium, and creatinine",
+                "24-hour urine aldosterone > 12 μg/day → PA"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "Primary Aldosteronism (Conn)\n• Confirmatory tests （看看就好）\n• Fludrocortisone suppression test\n• Mineralocorticoid fludrocortisone (0.1 mg Q6H) for 4 days\n• Sodium chloride (2 g Q8H) for 4 days\n• PAC in the upright position, >6ng/dL >PA\n• Oral sodium loading test\n• high-sodium diet for 3 days (12.8 g/day)\n•24-hour urine aldosterone, sodium, and creatinine\n• 24-hour urine aldosterone > 12 wg/day PA"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Primary Aldosteronism(Conn)",
+                "Confirmatory tests (看看就好)",
+                "Intravenous saline infusion test",
+                "Overnight fast, morning IV 2L of 0.9% sodium chloride over 4 hours. （會使體液短時間內expansion，正常人應會抑制RAAS，減少aldosterone產生）",
+                "PAC > 5 ng/dL → PA",
+                "PAC > 10 ng/dL → aldosterone-producing adenomas",
+                "Captopril suppression test",
+                "25 to 50 mg of the captopril (ACEI) to suppress ARR",
+                "PAC in the upright position > 15 ng/dL → PA"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "Primary Aldosteronism(Conn)\n• Confirmatory tests （看看就好）\n•ntravenous saline infusion test\n• Overnight fast, morning IV 2L of 0.9% sodium chloride over 4\nhours.（會使體液短時間內expansion，正常人應會抑制RAAS\n，减少aldosterone產生）\n• PAC>5ng/d> PA\n• PAC > 10 ng/dL = aldosterone-producing adenomas\n• Captopril suppression test\n• 25 to 50 mg of the captopril (ACEI) to suppress ARR\n• PACin the upright position > 15 ng/dL > PA"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "Primary Aldosteronism：AVS & 核醫",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 27,
+              "text": [
+                "FH: familial hyperaldosteronism"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "indication for PA screening\nScreen with PAC and PRA\nPA unlikely\nPrimary aldosteronism\nFH: familial hyperaldosteronism\nSurgical candidate\n＋\nFamily history of PA or\nScreen for FH type l\nAdrenal CT\nUnilateral nodule >1 cm\nNormal adrenals, bilateral\nenlargement, or micronodularity\n<40 years old\nAdrenal venous sampling\nLateralization\nAdrenalectomy\nMedical management"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Adrenal vein sampling",
+                "確認PA後要考慮lateralization → Adrenal venous sampling",
+                "哪些病人可以不用做直接開刀？",
+                "<40 y/o, 且Image明顯單側腫瘤(對側正常)\u000b(>40 y/o + unilateral >1 cm adenoma建議做)",
+                "懷疑有ACC的病患",
+                "Procedure\u000b→ 放導管到兩邊adrenal vein和IVC\u000b→ 測selectivity index(adrenal v. cortisol/ IVC cortisol) 和 lateralization index (Adominant/Cdominant)  / (Anondominant/Cnondominant)。\u000b→ 打synthacen(ACTH analogue)，再測一次。",
+                "打Synthacen, cosyntropin(ACTH analogue)的目的？\u000b→ Minimize stress-induced fluctuations in aldosterone secretion\u000b→ Maximize the gradient in cortisol from the adrenal vein to the inferior vena cava\u000b→ Maximize aldosterone secretion from an aldosterone-producing adenoma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal vein sampling\n•確認pA後要考慮lateralization > Adrenal venous sampling\n•哪些病人可以不用做直接開刀？\n• <40y/0，且lmage明顯單側腫瘤(對側正常）\n(>40 y/o + unilateral >1 cm adenoma建議做）\n•懷疑有ACC的病患\n• Procedure\n＞放導管到兩邊adrenal vein和IvC\n＞測selectivity index(adrenal v. cortisol/ IVC cortisol) 和lateralization index\n(Adominant/ Cdtominant) / (Anondominant/ Cnondominant)。\n＞打synthacen(ACTH analogue），再測一次。\n•打Synthacen, cosyntropin(ACTH analogue)的目的？\n= Minimize stress-induced fluctuations in aldosterone secretion\n>Maximize the gradient in cortisol from the adrenal vein to the inferior vena cava\n> Maximize aldosterone secretion from an aldosterone-producing adenoma"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "Adrenal vein sampling",
+                "Interpretation (2016 Endocrine Society Guideline)",
+                "先品質判斷(SI, selectivity index: adrenal v. cortisol/ IVC cortisol)",
+                "Adrenal v. cortisol要比IVC高, 確定有取到adrenal v.",
+                "Adrenal v. cortisol / IVC cortisol: \u000b(before ACTH) SI要大於2 (1.1:1)\u000b(after ACTH) SI要大於5",
+                "判斷哪一側(LI, lateralization index: (Adominant/Cdominant)  / (Anondominant/Cnondominant))",
+                "(before ACTH) LI要大於2",
+                "(after ACTH) LI要大於4"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal vein sampling\n•Interpretation (2016 Endocrine Society Guideline)\n•先品質判斷(Sl, selectivity index: adrenal v. cortisol/ IVC cortisol)\n• Adrenal v. cortisol要比IVC高，確定有取到adrenalv.\n• Adrenal v. cortisol / IVC cortisol:\n(before ACTH) S1要大於2(1.1:1)\n(after ACTH) S1要大於5\n•判斷哪一側(L, Iateralization index: (Atominant/ Cdomrinanr) /\n(Anondominant/ Cnondominant))\nRight Adrenal Gland\nLeft Adrenal Gland\n•(before ACTH) LI要大於2\n• (after ACTH)LI要大於4\nIC\nAPA\n麼\nRight Adrenal Gland\nIVC\nRieht adrenal ACratic\nLeft adrenal AC ratio\nDiagnosis\nAldosterone-\nRicht adrenal Ac ratio\nLett adrenal AC ratio\nIC AC ratio\nproducing adenoma\n恐：麼\n\"Double-down\"®\nApparent bilateral\nadrenal suppression\nLeft Adrenal Gland\nDlagnosis\nBilateral adrenal\nhyperplasia"
+            },
+            {
+              "slide_num": 30,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "Indication for\nadrenal vein sampling\nCorrection of hypokalemia\nWithdraw contraindicated medications\nPerform\nadrenal vein sampling\nNonselective\nEvaluate cortisol gradient\nSelective\nCalculate aldosterone ratio\nDiscard data\n中\nConsider repeat\nadrenal vein sampling\n(with ACTH stimulation\nifnot used initially)\nAldosterone ratio\ndemonstrates lateralization\nYes\nConsider ipsilateral adrenalectomy\nNo\nMedical management\nB\nFig. 106.15. Adrenal vein sampling protocol. (A) Proper catheter positioning tor sampling right adrenal\nvein sample (R, left adrenal vein sample (L), and inferior vena cava sample (. (B) After sample collection,\nthe cortisol gradient is evaluated using the ratios Pcortso/ cortsol and Lcoiso/oonso- If the cortisol gradients\nconfim appropriate sample collection, lateralization of aldosterone secretion can be evaluated. Lateralization\nof aldosterone secretion is determined by the ratio of aldosterone secretion of the dominant to the\nnondominant adrenal gland while correcting for ipsilateral cortisol secretion using the formula (Adominan/\nCdominand/ (Anondominan/ Cnondominand， where A = plasma aldosterone concentration and C = cortisol. ACTH,\nAdrenocorticotropic hormone."
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "核醫檢查",
+                "Adrenal cortical scan",
+                "用的是Iodine-131 (I-131)-6β-iodomethyl-norcholesterol (NP59)",
+                "NP59是Cortisol analogue，會被功能亢進的adrenal cortical cells uptake，注射的4-10天後來攝影",
+                "用來偵測adrenal cortex功能亢進，Cushing、Conn’s都會亮起來, 可幫助lateralization",
+                "Unilateral uptake (注射後<5天顯影)\u000b→ APA (aldosterone producing adenoma), cortisol producing adenoma",
+                "Bilateral uptake \u000b→ Idiopathic hyperplasia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "核醫檢查\nAdrenal cortical scan\n•用的是lodine-131 (1-131)-6B-iodomethyl-norcholesterol (NP59)\n•NP59是Cortisol analogue•會被功能亢進的adrenal cortical cells\nuptake ，注射的4-10天後來攝影\n•用來偵測adrenal cortex功能亢進• Cushing、conn's都會亮起來\n可幫助lateralization\n•Unilateral uptake (注射後<5天顯影）\nAPA (aldosterone producing adenoma), cortisol producing\nadenoma\n• Bilateral uptake\n≥ldiopathic hyperplasia"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "Conn syndrome 35% surgical",
+                "Cushing syndrome 10% surgical",
+                "但是incidentaloma, non-functional 最多 (80-90%), 其次cortisol > pheo > aldo",
+                "常見：bilateral hyperplasia 60% > adenoma 35% > unilateral adrenal hyperplasia 2%",
+                "ACC"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "BOX 106.3 Subtypes of Primary Aldosteronism\nSURGICALLY CORRECTABLE\nAldosterone-producing adenoma\nPrimary unilateral adrenal hyperplasia\nOvarian aldosterone-secreting tumor\nAldosterone-producing carcinoma\nNOT CORRECTABLE BY SURGERY\nBilateral adrenal hyperplasia\nFamilial hyperaldosteronism type l\nFamilial hyperaldosteronism type ll\nFamilial hyperaldosteronism type fl\nConn syndrome\n(hyperaldosteronism）\nBilateral\nhyperplasia\n60%\nAdenoma\n35%\nUnilateral adrenal\nhyperplasia\n2%\n$ACC\nCarcinoma\n≤1%\nEctopic aldosterone-\nproducing tumor\n≤1%\nFamilial\nhyperaldosteronism\n≤1%\nIncreased aldosterone production\n常見：bilateral hyperplasia 60% > adenoma 35% > unilateral adrenal hyperplasia 2%\nFig. 106.12. Subtypes of primary aldosteronism. (Modified from Young WF. Primary aldosteronism:\nrenaissance of a syndrome. Clin Endocrinol 1Oxf) 66:607-618, 2007.)\nConn syndrome 35% surgical\nCushing syndrome 10% surgical\n但是incidentaloma,non-functional 最多(80-90%)，其次cortisol >pheo =aldo"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "Primary Aldosteronism：Familial & Treatment",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 33,
+              "text": [
+                "Familial hyperaldosteronism",
+                "FH type I (glucocorticoid-remediable aldosteronism)",
+                "Autosomal dominant genetic disorder",
+                "Chimeric fusion of",
+                "Promoter region of the 11β-hydroxylase gene (CYP11B1)",
+                "Coding region of the aldosterone synthase gene (CYP11B2)",
+                "使aldosterone synthase在腎上腺束狀帶（zona fasciculata）中表達",
+                "Aldosterone synthase controlled by ACTH, rather than RAAS\u000b(和Cortisol一樣有circadian rhythm)",
+                "Genetic test for FH type I: 建議early-onset PA (<20 y/o), family history of PA, strokes at young ages",
+                "Treatment - Glucocorticoid (reduce ACTH)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "Familial hyperaldosteronism\n•FH type l (glucocorticoid-remediable aldosteronism)\n• Autosomal dominant genetic disorder\n• Chimeric fusion of\n• Promoter region of the 11B-hydroxylase gene (CYP11B1)\n•Coding region of the aldosterone synthase gene (CYP11 B2)\n使aldosterone synthase在腎上腺束狀帶 (zona fasciculata）中表達\n• Aldosterone synthase controlled by ACTH, rather than RAAS\n（和Cortisol一樣有circadian rhythm）\n• Genetic test for FH type上：建議early-onset PA (<20 y/o), family history\nof PA, strokes at young ages\n• Treatment - Glucocorticoid (reduce ACTH)"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Treatment of Conn syndrome",
+                "Bilateral hyperplasia(no lateralization)",
+                "Medical treatment: aldosterone antagonist, such as Spironolactone, Eplerenone(孕婦用藥).",
+                "Lifestyle modification: weight loss, low-sodium, regular exercise",
+                "Unilateral adenoma/hyperplasia(Lateralization +)",
+                "Operation - Adrenalectomy(lapa vs open)",
+                "Pre-op preparation:",
+                "Spironolactone 1-2 weeks before op if hypokalemia, acidosis",
+                "Mg, K supplement if persisted hypokalemia",
+                "Diuretics if fluid overload",
+                "Perioperative/post-op: none",
+                "Improvements in blood pressure are noted in the majority of patients undergoing adrenalectomy for primary aldosteronism, 37% to 52% of patients not requiring antihypertensives postoperatively\u000b(換句話說小部分的人術後一樣要吃血壓藥)",
+                "血鉀100%恢復正常"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss33.webp",
+              "hidden": false,
+              "ocr_text": "Treatment of Conn syndrome\n• Bilateral hyperplasia(no lateralization)\n• Medical treatment: aldosterone antagonist, such as Spironolactone,\nEplerenone(孕婦用藥）.\n• Lifestyle modification: weight loss, low-sodium, regular exercise\n• Unilateral adenoma/hyperplasia(Lateralization +)\n• Operation - Adrenalectomy(apa vs open)\n• Pre-op preparation:\n• Spironolactone 1-2 weeks before op if hypokalemia, acidosis\n• Mg, K supplement if persisted hypokalemia\nDiuretics if fluid overload\n• Perioperative/post-op: none\n• Improvements in blood pressure are noted in the majority of patients\nundergoing adrenalectomy for primary aldosteronism, 37% to 52% of patients\nnot requiring antihypertensives postoperatively\n(換句話說小部分的人術後一樣要吃血壓藥）\n•血鉀100%恢復正常"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "腎上腺手術考量",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 35,
+              "text": [
+                "Solitary mets",
+                "Bil. Adrenal hyperplasia\u000b非surgical correctable",
+                "較不建議開刀",
+                "Ps. 曾經有這種case內科控制不良, 皓哥說通常要開就是挑一邊開。",
+                "incidentaloma中傾向malignancy的",
+                "Pheochromocytoma >10HU Adrenal adenoma<10HU 比較： ACC>39HU"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss34.webp",
+              "hidden": false,
+              "ocr_text": "BOX 107.1 Indications for Adrenalectomy\nFUNCTIONAL ADRENAL TUMORS\nAldosterone-secreting adenomas (Conn syndrome)\nCortisol-secreting adenomas (Cushing syndrome)\nPituitary-dependent Cushing disease unsuccessfully managed\nby transsphenoidal surgery\nBileterel edrenal-hyperplasie\nPheochromocytomas\nAdrenal androgens/estrogen-producing tumors causing\nvirilization/feminization\nNONFUNCTIONAL ADRENAL TUMORS\nHistologically confirmed adrenal cortical carcinoma\nSymptomatic adrenal masses such as cysts, myelolipomas\nIncidentally discovered adrenal tumors (adrenal incidentalomas)\nSize criteria:\n• Incidentaloma ≥6cm\n• Incidentaloma between 4 and 6 cm with suspicious\nfeatures such as irregular margins and heterogenous\nenhancement\n• Incidentaloma <4 cm and enlarging by >20% (in addition\nto at least a 5-mm increase in maximum diameter)\nRadiologic imaging criteria:\n• >10 HUin an unenhanced CT scan\n• Enhancement washout of <50% and delayed attenuation\nof ≥35 HUon contrasted CT\n• MRl - chemical shift not consistent with lipid rich\nadenoma (oss of signal intensity on outphase imaging)\n• 18F-FDG-PET showing presence of FDG uptake or\nuptake more than the iver\nSolitary adrenal metastasis from nonadrenal primary\nCT, Computed tomography; HU, Hounsfield units; MRl, magnetic resonance\nimaging; 18F-FDG PET, tiuorine-18-fluorodeoxyglucose positron emission\ntomography.\nBil. Adrenal hyperplasia\n非surgical correctable\n較不建議開刀\nPs.曾經有這種case內科控制不良，皓\n哥說通常要開就是挑一邊開。\nincidentaloma中傾向\nmalignancy的\nPheochromocytoma >10HU\nAdrenal adenoma<10HU 比較：\nACC>39HU\nSolitary mets"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "Partial adrenalectomy indication",
+                "Bilateral adrenal tumors",
+                "Solitary adrenal gland",
+                "Familial syndromes such as von Hipple-Lindau disease",
+                "Familial Pheochromocytoma",
+                "Multiple endocrine neoplasia type IIA"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss35.webp",
+              "hidden": false,
+              "ocr_text": "BOX 107.2 Indications and Contraindications for\nLaparoscopic Adrenalectomy\nCONTRAINDICATIONS\nRelative\nLarge tumor\nLocalized adrenal cortical carcinoma without evidence of local\ninvasion, adrenal vein, or vena caval involvement or lymph\nnode metastases (>12 cm)\nMorbid obesity\nMalignant pheochromocytoma\nVirilizing adrenal tumor (70%-80% of these tumors are actually\nfunctional adrenal cortical carcinoma)\nSignificant abdominal adhesion\nHistory of recurrent pyelonephritis\nPregnancy\nAbsolute\nLocal recurrence of a previously resected adrenal mass\nInvasive adrenal cortical carcinoma with evidence of invasion of\nneighboring organs or renal vessels or vena caval\ninvolvement\nSevere cardiopulmonary disease\n• Partial adrenalectomy indication\n• Bilateral adrenal tumors\n•Solitary adrenal giand\n• Familial syndromes such as von\nHipple-Lindau disease\n•Familial Pheochromocytoma\n• Multiple endocrine neoplasia type IIA\nBOX 107.2 Indications and Contraindications for\nLaparoscopic Adrenalectomy\nINDICATIONS\nFunctional adrenal tumors\n• Aldosterone-secreting adenoma\n• Cortisol-secreting adenoma\n• Bilateral adrenal hyperplasia\n• Pheochromocytoma\nSymptomatic benign adrenal cyst or myelolipoma\nSmall incidentaloma without clinical or radiologic evidence of\nmalignancy and local invasion\nBOX 107.5 Indications for Partial Adrenalectomy\nBilateral hereditary pheochromocytoma\nEndocrine syndromes MEN I and i\nvon Hippel-Lindau syndrome\nNeurofibromatosis type 1\nHereditary pheochromocytoma-paraganglioma syndrome\n(PGL)\nUnilateral pheochromocytoma in documented genetic cases\nPrimary aldosteronism resulting from unilateral adrenal\nadenoma with the opposite normal adrenal gland\nUnilateral adrenal adenoma in Cushing syndrome\nPseudocyst or adrenal endothelial cyst"
+            },
+            {
+              "slide_num": 37,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss36.webp",
+              "hidden": false,
+              "ocr_text": "BOX 107.7 Postoperative Complications of\nAdrenal Surgery\nPRIMARY ALDOSTERONISM\nHypokalemia: secondary to continued potassium loss\nimmediately postoperative\nHyperkalemia: secondary to failure of contralateral adrenal to\nsecrete aldosterone\nCUSHING SYNDROME\nInadequate steroid replacement leading to hypocorticism\nFracture secondary to osteoporosis\nHyperglycemia\nPoor wound healing\nIncreased risk of infections\nPHEOCHROMOCYTOMA\nHypotension secondary to a-adrenergic blockade after tumor\nremoval\nGENERIC COMPLICATIONS\nHemorrhage\nPneumothorax\nPancreatitis\nPneumonia\nProlonged ileus\nIntra-abdominal collections"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "Pheochromocytoma：特徵與遺傳",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 38,
+              "text": [
+                "Adrenal malignant tumor",
+                "Primary",
+                "cortex : adrenocortical carcinoma",
+                "medulla : pheochromocytoma",
+                "Metastatic",
+                "Lung, GI tract, melanoma, RCC"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss37.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal malignant tumor\n• Primary\n- cortex :adrenocortical carcinoma\nmedulla :pheochromocytoma\n• Metastatic\nLung, Gl tract, melanoma, RCC"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Pheochromocytoma",
+                "60% incidental findings by CT(typically small, <3cm)",
+                "10% tumor",
+                "10% extra-adrenal, actually 1-25%, 又叫paraganglioma(PPGL)",
+                "10% familial, actually up to 30-40%",
+                "10% bilateral",
+                "10% pediatric",
+                "10% malignant (defined by the presence of clinical metastases)",
+                "NOT by pathologic appearance",
+                "NOT by local invasion",
+                "Incidentaloma: 5%是pheochromocytoma",
+                "Non-hereditary: diagnosed in 40-50 y/o",
+                "The triad",
+                "Headache",
+                "Episodic sudden perspiration(sweating)",
+                "Tachycardia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss38.webp",
+              "hidden": false,
+              "ocr_text": "Pheochromocytoma\n• 60% incidental findings by CT(typically small, <3cm)\n•10% tumor\n• 10% extra adrenat, actually 1-25%，又叫paraganglioma(PPGL)\n10% familiat, actually up to 30-40%\n• 10% bilateral\n• 10% pediatric\n• 10% malignant (defined by the presence of clinical metastases)\n•NOT by pathologic appearance\n• NOT by local invasion\n•Incidentaloma:5%是pheochromocytoma\nTABLE 106.15 Characteristics of Incidental Adrenal\nMasses as Described in a Systematic\nReview of Published Series of Adrenal\nIncidentalomas That Include 20 or\nMore Patients\n• Non-hereditary: diagnosed in 40-50 y/o\nADRENAL LESION\n• The triad\n•Headache\n• Episodic sudden perspiration (sweating)\n• Tachycardia\nMetabolically active\nCortisol-producing adenoma\nAldosterone-producina adenoma\nPheochromocytoma\nMalignant\nAdrenocortical carcinoma\nMetastasis\nTotal potentially surgical lesions\nPERCENT OF TOTAL\n(N=2005)\n11.2%\n5.3%\n1.0%\n5.1%\n7.2%\n4.7%\n2.5%\n18.4%"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "Pheochromocytoma遺傳相關",
+                "家族性pheo有關的疾病: MEN type 2A, MEN type 2B, VHL type 2, Neurofibromatosis type 1, PGL-4, PGL-1",
+                "最容易造成pheo: RET",
+                "5 genes associated with familial pheochromocytoma:",
+                "Rearranged transfection proto-oncogene (RET)",
+                "von Hippel-Lindau gene (VHL)",
+                "Neurofibromatosis type 1 gene (NF1)",
+                "Mitochondrial succinate dehydrogenase subunits D and B genes (SDHD, SDHB)",
+                "造成pheo的比例最低: NF1 1%",
+                "MEN type  2A與2B基因型態相同 (RET, 10q11.2, autosomal dominant)",
+                "Familial PGL-4 (SDHB) 和 PGL-1 (SDHD) 基因型不同",
+                "與惡性嗜鉻細胞瘤最相關: PGL-4 (SDHB) 30-50%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss39.webp",
+              "hidden": false,
+              "ocr_text": "Pheochromocytoma遺傳相關\n•家族性pheo有關的疾病：MEN type ZA, MEN type 2B, VHL type 2,\nNeurofibromatosis type 1, PGL-4, PGL-1\n•最容易造成pheo:RET\n•5 genes associated with familial pheochromocytoma:\n•Rearranged transfection proto-oncogene (RET)\n•von Hippel-Lindau gene (VHL)\n• Neurofibromatosis type 1 gene (NF1)\n• Mitochondrial succinate dehydrogenase subunits D and B genes (SDHD, SDHB)\n•造成pheo的比例最低： NF1 1%\n•MEN type 2A與2B基因型態相同 (RET, 10g11.2, autosomal dominant)\n•Familial PGL-4 (SDHB) 和 PGL-1 (SDHD) 基因型不同\n•與惡性嗜鉻細胞瘤最相關：PGL-4 (SDHB) 30-50%"
+            },
+            {
+              "slide_num": 41,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss40.webp",
+              "hidden": false,
+              "ocr_text": "TABLE 106.6 Hereditary Fors of Pheochromocytoma\nSYNDROME\nMultiple endocrine\nneoplasia type 2A\nMultiple endocrine\nneoplasia type 2B\nvon Hippel-Lindau\nsyndrome type 2\nNeurofibromatosis\ntype 1\nFamilial\nparaganglioma\nsyndrome type 4\n(PGL-4)\nFamilial\nparaganglioma\nsyndrome type 1\nPGL-1)\nCLINICAL CHARACTERISTICS\nMedullary cancer of thyroid\nHyperparathyroidism\nCutaneous lichen\nAmyloidosis\nMedullary cancer of thyroid\nMultiple neuromas\nMarfanoid body habitus\nRare hyperparathyroidism\nRenal cell carcinomas and renal cysts\nCNS and retinal hemangioblastomas\nPancreatic cysts\nEpididymal cystadenomas\nEndolymphatic cyst tumors\nNeurofibromas\nCafe-au-lait skin spots\nCarotid body tumors\n(chemodectomas)\nVagal, jugular, tympanic, abdominal,\nthoracic paragangliomas\nCarotid body tumors\n(chemodectomas)\nVagal, jugular, tympanic, abdominal,\nthoracic paragangliomas\nRISK FOR\nPHEOCHROMOCYTOMA\nGENE\n50%\n50%\n10%-20%\n1%\nApproximately 20%\nApproximately 20%\nRET\nRET\nVHL\nNF1\nSDHB\nSDHD\nCHROMOSOME\nAND INHERITANCE\n10g11.2\nAutosomal dominant\n10g11.2\nAutosomal dominant\n3p25.26\nAutosomal dominant\n17g11.2\nAutosomal dominant\n1p36.13\nAutosomal dominant\n11923\nMatemal imprinting\nPROTEIN\nGERMLINE\nMUTATION IN\nAPPARENTLY\nSPORADIC\nCASES (%)\nRATE OF\nMALIGNNT\nDISEASE\nTyrosine\nkinase\nreceptor\n<5\nTyrosine\nkinase\nreceptor\n<5\npVHL19\npVHL30\n2-11\nNeurofibromin\nUnknown\nCatalvtic\niron-sulfur\nprotein\n3-10\nCybS\nmembrane-\nspanning\nsubunt\n4-7\n3\n3\n5\n11\n30-50\nCNS, Central nervous system.\n665-675,2005.\nData from Dluhy RG. Pheochromocytoma-death of an axiom. N Engl J Med 2002;346(19):1486-1488; and Lenders JW, Eisenhofer G, Mannelli M, et al. Phaeochromocytoma. Lancet 366(9486):"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Screening for hereditary pheochromocytoma"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch06_adrenal/render/sh42.webp",
+              "ocr_text": "Screening for hereditary pheochromocytoma\nInformed consent\nFamily history or\n<50 years old\nMultiple\nMalignant\nBilateral\nVHL\nRET\nSDHB\nSDHD\nSDHB\nSDHD\nVHL\nSDHB\nVHL\nRET\nVHL\nSDHD\nDifferential monitoring\nGenetic counseling for first-degree family members"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "Pheochromocytoma：診斷",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 43,
+              "text": [
+                "Pheochromocytoma --- screening test",
+                "Plasma-free metanephrines(catecholamine經過COMT的中間代謝物)",
+                "sensitivity 89-100%, specificity 79-98%",
+                "24-hr urinary fractionated metanephrine level",
+                "sensitivity 86-97%, specificity 69-95%",
+                "24 hour urine catecholamines(Dopamine, Norepinephrine, Epinephrine)",
+                "24 hour urine VMA(catecholamine的最後代謝物）",
+                "Campbell和NEJM都說",
+                "screen前兩個，",
+                "但台大只有後兩個"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss41.webp",
+              "hidden": false,
+              "ocr_text": "Pheochromocytoma -=- screening test\n• Plasma-free metanephrines(catecholamine經過CONT的中間代謝物）\n。 sensitivity 89-100%, specificity 79-98%\n• 24-hr urinary fractionated metanephrine level\no sensitivity 86-97%,specificity 69-95%\n• 24 hour urine catecholamines(Dopamine, Norepinephrine, Epinephrine)\n• 24 hour urine VMA(catecholamine的最後代謝物）\nCampbell和NEJM都說\nscreen前兩個，\n但台大只有後兩個\n×\nNorepinephrine\nMonoamincoxidase(MAo) /\n(COMT\nDihvdroxvmandelic aldchvdel/Normctancphrine\nRsthucthon\nOxidation\n|Dihvdrxvphenvlelvcol\nDihydroxymandelic acid\n(COMT\n(MAO)\nMethoxyhydroxypheny\nglycol\n一\n(Produced in brain)\nEpinephril\nCatcchol-O-methyltransferasc\n(COMT\nMetanephrinel\n(MAO)\n3-Methoxy-4Hiydroxy\nmandclic aldchyde\nOxidation\nVanillvImandclic acid\nCVMAJ\nExcrcted in urinc\nReflect the total ptoduction\nof catecholamines"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "一旦確定是pheo，主要建議surgical intervention",
+                "Acetaminophen 可能造成偽陽性cross-reactivity in the assay",
+                "測catecholamine要停:",
+                "TCA三環抗憂鬱劑",
+                "phenoxybenzamine(a-block)",
+                "Acetaminophen",
+                "茶/咖啡",
+                "beta blocker不停(只有repeat test要停）"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss42.webp",
+              "hidden": false,
+              "ocr_text": "Acetaminophen 可能\n造成偽陽性cross-\nreactivity in the assay\nAdrenal mass\n測catecholamine要停：\nTCA三環抗憂鬱劑\nphenoxybenzamine(a-block)\nAcetaminophen\nPerform one of the following tests:\n茶/咖啡\n(stop tricyclic antidepressants, phenoxybenzamine)\nbeta blocker不停(只有\nrepeat test要停）\nPlasma-free\nmetanephrines\n(stop acetaminophen 5 days\nprior; draw sample with patient\nin supine position)\n24-hr fractionated urinary\nmetanephrines\n(verify normal renal function)\nAny abnormal result\nNormal\n一旦確定是pheo，\n主要建議surgical\nintervention\nV\nConsult endocrinologist\nfor contirmatory testing\nPheochromocytoma\nextremely unlikely\nFig. 106.18. Testing algorithm to evaluate adrenal mass for catecholamine\nsecretion."
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "Pheochromocytoma --- confirmatory test(核醫)",
+                "131I/123I-MIBG(Metaiodobenzylguanidine Scintigraphy)",
+                "Small-molecule analog of norepinephrine; tagged with 131I or 123I",
+                "可檢查也可治療(Beta射線)",
+                "18F-FDG PET",
+                "Gold standard for pheochromocytoma staging (超越123I-MIBG)",
+                "MEN-2 唯一不準，建議用MIBG staging",
+                "68Ga-DOTATOC PET",
+                "new technique for pheochromocytoma diagnosis",
+                "DOTATOC: somatostatin analogue",
+                "Most pheo/PGL expressed SSTR(somatostatin receptor)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss43.webp",
+              "hidden": false,
+              "ocr_text": "Pheochromocytoma --- confirmatory test(核醫）\n• 1311/1231-M1BG(Metaiodobenzylguanidine Scintigraphy)\n• Small-molecule analog of norepinephrine; tagged with 1311 or 1231\n• 可檢查也可治療(Beta射線）\n• 18F-FDG PET\n• Gold standard for pheochromocytoma staging （超越123-M1BG)\n• MEN-2唯一不準，建議用MIBG staging\n• 68Ga-DOTATOC PET\n• new technique for pheochromocytoma diagnosis\n• DOTATOC: somatostatin analogue\nMost pheo/PGL expressed SSTR(somatostatin receptor)"
+            }
+          ]
+        },
+        {
+          "id": "t12",
+          "title": "Pheochromocytoma：治療與術前術後",
+          "slide_count": 5,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 46,
+              "text": [
+                "Pheo - treatment",
+                "Localized:",
+                "Adrenalectomy",
+                "Metastatic",
+                "Surgical metastatectomy: SOC",
+                "Sunitinib",
+                "Radionucleotide therapy",
+                "131I MIBG: 400-500mCi",
+                "Peptitde receptor radionucleotide therapy(PRRT)",
+                "Lu-177 Dotatate, Y-90 Dotatoc(Dotatate/Dotatac: somatostatin analogue)",
+                "Most pheo/PGL expressed SSTR(somatostatin receptor)",
+                "Chemotherapy: cyclophosphamide, vincristine, dacarbazine\u000b(when MIBG failed)",
+                "Follow up: metabolic testing, MIBG if needed (10y recurrence rate: 16%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss44.webp",
+              "hidden": false,
+              "ocr_text": "Pheo - treatment\n• Localized:\n• Adrenalectomy\nSomatostatin\nanalog\nSomatostatin\nreceptors\nSomatostatin\nreceptors\nSomatostatin analog\n(peptide) linked to\n177Lu radionuclide\n177Lu\nradionuclide\n• Metastatic\n• Surgical metastatectomy: SOc\n• Sunitinib\n• Radionucleotide therapy\nCancer cells\n177Lu-somatostatn analog\n177Lu-somatostatin analog\ncomplex attaching to\ncomplex internalizing into\n1311 MIBG: 400-500mCi\nsomatostatin receptors\nthe cell and emitting\non cell surface\ntherapeutic beta radiation\n• Peptitde receptor radionucleotide therapy(PRRT)\n•Lu-177 Dotatate, Y-9o Dotatoc(Dotatate/Dotatac: somatostatin\nanalogue)\n• Most pheo/PGL expressed SSTR(somatostatin receptor)\nChemotherapy:cyclophosphamide, vincristine, dacarbazine\n(when MIBG failed)\nFollow up: metabolic testing, MiBG if needed (10y recurrence rate: 16%)"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "Pheo - 術前術中術後注意事項",
+                "術前:",
+                "術前7-14天 -> Control BP",
+                "α-blocker: 建議Phenoxybenzamine 10 mg BID, 7-14天 (手術當天不吃)",
+                "吃足夠劑量alpha blocker如果BP高或是tachycardia/arrythmia就加上β-blocker，還是BP高就加上CCB",
+                "也可以考慮加上catetholamine synthesis blockage (metyrosine)",
+                "術前1-2天 -> 增加intravascular volume",
+                "IV hydration (1-2 L/night), BP goal: 120-130/80 mmHg in seated position",
+                "告知麻醉科",
+                "術中:",
+                "用Rapid onset & short half-life drugs來降BP: nitroprusside, nitroglycerin, nicardipine",
+                "用Short-acting β-blockers來降HR: labetalol and esmolol",
+                "準備anti-arrhythmic drug",
+                "減少tumor manipulation",
+                "Aggressive fluid management with volume repletion",
+                "儘快control adrenal vein, 並在ligate之前跟麻醉科說",
+                "術後:",
+                "Close monitor BP and HR",
+                "If hypotension(abrupt drop of catecholamine), intensive volume resuscitation",
+                "Check blood sugar → Hypoglycemia (rebound hyperinsulinemia after tumor removal)",
+                "24H urine catecholamine/metanephrines 1-2 weeks later after op and lifelong annual"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss45.webp",
+              "hidden": false,
+              "ocr_text": "• tRheQo德前術中術後注意事項\n•a-blocker：建議Phenoxybenzamine 10 mg BID,7-14天（手術當天不吃)\n•吃足夠劑量alpha blocker如果BP高或是tachycardia/arrythmia就加上B-blocker，\n還是BP高就加上CCB\n•也可以考慮加上catetholamine synthesis blockage (metyrosine)\n•術前1-2天-＞增加intravascular volume\n•Ihydration (1-2 L/night), BP goal: 120-130/80 mmHg in seated position\n•告知麻醉科\n•術中：\n•用Rapid onset & short half-ife drugs來降BP:nitroprusside,nitroglycerin, nicardipine\n•用Short-acting B-blockers來降HR: labetalol and esmolal\n•準備anti-arrhythmic drug\n•減少tumor manipulation\n•Aggressive fluid management with volume repletion\n•儘快controladrenal vein， 並在ligate之前跟麻醉科說\n•術後：\n• Close monitor BP and HR\n•If hypotension(abrupt drop of catecholamine), intensive volume resuscitation\n• Check blood sugar > Hypoglycemia (rebound hyperinsulinemia after tumor removal)\n• 24H urine catecholamine/ metanephrines 1-2 weeks later after op and lifelong annual"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Pheochromocytoma \u000b術前要注意甚麼? 術中要注意甚麼?",
+                "術前: alpha-blocker 1-2 week, adequate hydration",
+                "術中:",
+                "Nitroprusside 降壓",
+                "準備anti-arrhythmia drug",
+                "減少tumor manipulation",
+                "儘快Control adrenal vein以減少catecholamine造成血壓波動",
+                "術後:",
+                "Close monitor hypotension (abrupt drop of catecholamine)",
+                "If hypotension happened, intensive volume resuscitation!!",
+                "Hypertension（有三成病人術後仍會有高血壓）",
+                "Hypoglycemia (result of rebound hyperinsulinemia after tumor removal)",
+                "‹#›",
+                "beta-1 selective blocker比較好",
+                "Beta-2會放鬆血管"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss46.webp",
+              "hidden": false,
+              "ocr_text": "Pheochromocytoma\n術前要注意甚麼？術中要注意甚麼？\nbeta-1 selective blocker比較好\nBeta-2會放鬆血管\n•術前：alpha-blocker 1-2 week, adequate hydration\n•術中：\n•Nitroprusside 降壓\n•準備anti-arrhythmia drug\n•減少tumor manipulation\n•儘快control adrenal veinl认減少catecholamine造成血壓波動\n•術後：\n• Close monitor hypotension (abrupt drop of catecholamine)\nIf hypotension happened, intensive volume resuscitation!!\n• Hypertension（有三成病人術後仍會有高血壓）\nHypoglycemia (result of rebound hyperinsulinemia after tumor\nremoval)\n48"
+            },
+            {
+              "slide_num": 49,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch06_adrenal/render/sh49.webp",
+              "ocr_text": "Option 1\no-Blockade:\nPhenoxybenzamine 10 mg Po bid\n•Increase by 10- to 20-mg increments\nevery 2-3 days\n• Total dose of 1 mg/kg usually sufficient\n• Last dose on night before surgery\n(no morning dose, to avoid postop\nhypotension)\nOption 2\nCalcium channel blockade:\nAmiodipine 10-20 mg daily or\nNicardipine 60-90 mg daily ol\nNifedipine 30-90 mg daily or\nVerapamil 180-540 mg daily\nIf patient develops tachycardia\nand/or cardiac arrhythmias\n1 B-Blockade\n(do not start before adequate a-blockage):\nAtenolol 12.5-25 mg Po bid or tid or\nMetoprolol 25-50 mg PO tid or gid\n7-14 days\npreop as\noutpatient\nCatecholamine synthesis blockade\n(use based on availability and\ninstitutional preference):\nMetyrosine 250 mg Po bid or tid\n•Increase dose by 250-500 mg every\n2-3 days as necessary\n•Total dose of 1.5-2 g per day usually\nsufficient\n•500 mg Po on night before surgery\n1F BP still poorly controlled\nCalciur channel blockade:\nAmlodipine 10-20 mg daily or\nNicardipine 60-90 mg daily or\nNifedipine 30-90 mg daily or\nVerapamil 180-540 mg\nCatecholamine synthesis blockade\n(use based on availability and\ninstitutional preference):\nMetyrosine 250 mg Po bid or tid\n•Increase dose by 250-500 mg every\n2-3 days as necessary\n•Total dose of 1.5-2 g per day usually\nsufficient\n•500 mg PO on night before surgery\nMonitor BP and HR\n•BP goal: 120-130/80 mm Hg in seated\nposition\n•Midpostural hypotension (SBP >90mm\nHg) is acceptable and a sign of\nappropriate blockade\n1-2 days preop\nas inpatient\nIntravascular volume restoration:\nI•lvfluids\n1-2 Lbolus night before surgery\nFig. 106.20. Preoperative medical management in patients with pheochromocytoma. BP, Blood pressure;\nHR, heart rate; IV, intravenous; PO, by mouth; SBP, systolic blood pressure. (Modified from Pacak K.\nPreoperative management of the pheochromocytoma patient. J Clin Endocrinol Metab 92:4069-4079, 2007J"
+            },
+            {
+              "slide_num": 50,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss47.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprenensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nNeuroendocrine and Adrenal Tumors\nNetwork®\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nAmerican Joint Committee on Cancer (AJCC)\nTNM Staging System for Adrenal - Neuroendocrine Tumors [Pheochromocytoma and paraganglioma] (8th ed., 2017)\nTable 13. Definitions for T, N, M\nTable 14. AJCC Prognostic Stage Groups\nAdrenal\nPheochromocytomalSympathetic Paraganglioma\nT Primary Tumor\nT\nN\nM\nTX Primary tumor cannot be assessed\nT1 PH <5 cm in greatest dimension, no extra-adrenal invasion\nT2 PH 25 cm or PG-sympathetic of any size, no extra-adrenal invasion\nStage l\nStage !1\nStage\nT1\nNO\nMO\nT2\nNo\nMo\nT1\nT3 Tumor of any size with local invasion into surrounding tissues\nT2\n三三\nMO\nMO\n(e.g., liver, pancreas, spleen, kidneys)\nT3\nAny N\nMo\nPH: within adrenal gland\nPG Sympathetic: functional\nStage IV\nAny T AnyN\nM1\nPG Parasympathetic: nonfunctional, usually in the head and neck region\nNote: Parasympathetic paraganglioma are not staged because they are largely benign.\nN Regional Lymph Nodes\nNX Regional lymph nodes cannot be assessed\nNO No regional lymph node metastasis\nN1 Regional lymph node metastasis\nM\nMO\nM1\nDistant Metastasis\nNo distant metastasis\nDistant metastasis\nM1a Distant metastasis to only bone\nM1b Distant metastasis to only distant lymph nodes/liver or lung\nM1c Distant metastasis to bone plus multiple other sites"
+            }
+          ]
+        },
+        {
+          "id": "t13",
+          "title": "Adrenocortical Carcinoma",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 51,
+              "text": [
+                "Adrenal cortical carcinoma",
+                "常見於0-10歲與40-50歲, 女性居多, 小朋友0-10歲 預後較好",
+                "5%跟遺傳有關",
+                "Li-Fraumeni syndrome",
+                "Loss of TP53 function, 20-33% sporadic ACC, 50-80% pediatric ACC",
+                "Beckwith-Wiedemann syndrome",
+                "Increased insulin-like growth factor (IGF) expression, 90% sporadic ACC",
+                "MEN type 1",
+                "If functional (50-79% in adult, 90% in pediatric): cortisol>androgen>estrogen>aldosterone",
+                "Adrenal incidentaloma non-functional較多",
+                "Adrenal cortical carcinoma functional 較多",
+                "兩者的functional都是cortisol最多",
+                "50%發現已經第四期，五年存活率<5%",
+                "小孩的ACC 90%是functional。其中最常見的是virilization(55-70%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss48.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal cortical carcinoma\n•常見於0-10歲與40-50歲，女性居多，小朋友0-10歲 預後較好\n•5%跟遺傳有關\n• Li-Fraumeni syndrome\n• Loss of TP53 function, 20-33% sporadic ACC, 50-80% pediatric ACC\n•Beckwith-Wiedemann syndrome\n•Increased insulin-like growth factor (GF) expression, 90% sporadic ACC\n•MENtype 1\n•If functional (50-79% in adult, 90% in pediatric):\ncortisol>androgen>estrogen>aldosterone\n50%發現已經第四期，五年存活率<5%\nTABLE 106.12 Functional Breakdown of Adrenal\nCortical Carcinomas\nNonfunctional\nFunctional\nCushing syndrome\nCushing syndrome plus virilization\nVirilization alone\nFeminization\nHyperaldosteronism\n21%-50%\n50%-79%\n33%-53%\n20%-24%\n10%-20%\n6%-10%\n2.5%-5%\nAdrenal incidentaloma non-functional較多\nAdrenal cortical carcinoma functional較多\n兩兩者的functional都是cortisol最多\n小孩的ACC 90%是functional。其中最常見的\n是virilization(55-70%)"
+            },
+            {
+              "slide_num": 52,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch06_adrenal/render/sh52.webp",
+              "ocr_text": "TABLE 106.13 Functional Evaluation of Adrenal\nTumors Suspected to Be\nAdrenocortical Carcinoma\nTYPE OF ADRENAL\nHYPERSECRETION\nGlucocorticoid\nexcess\nSexual steroids and\nsteroid precursors\nFUNCTIONAL EVALUATION\nLow-dose dexamethasone suppression\ntest (or late night salivary or 24-hour\nurine cortisol)\nACTH\nDHEA-S\nTestosterone\n17-OH-progesterone (optional)\nAndrostenedione (optional)\n17-OH-pregnenolone (optional)\n11-deoxycorticosterone optional)\nProgesterone (optional)\nEstradiol (optional)\n17B-estradiol (only in men and\npostmenopausal women\nSerum or urinary metanephrines\nCatecholamine\nexcess\nMineralocorticoid\nexcess\nAldosterone-to-renin ratio (only in\npatients with hypertension or\nhypokalemia)\nACTH, Adrenocorticotropic hormone; DHEA-S, dehydroepiandrosterone\nsulfate.\nData from Fassnacht M, Kenn W, Allolio B. Adrenal tumors: how to establish\nmalignancy? J Endocrinol Invest 27(4):387-399,2004."
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "Image finding",
+                "常見轉移lung, liver",
+                "CT",
+                "Irregular borders",
+                "Irregular enhancement",
+                "Calcifications",
+                "Necrotic areas with cystic degeneration",
+                "Higher attenuation(平均39 HU) on noncontrast CT",
+                "adenomas 平均 8 HU (<10HU可以先判定benign)",
+                ">35 HU 是手術indication",
+                "MRI",
+                "T1跟spleen/liver 等強度, T2 hyperintense",
+                "Contrast uptake↑",
+                "PET(18F-FDG PET)",
+                "Sensitivity and specificity 97% and 91%",
+                "Cannot distinguish ACC from other malignancies and metastases.",
+                "ACC最常轉移到lung",
+                "最常metastasis to adrenal : lung"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss49.webp",
+              "hidden": false,
+              "ocr_text": "Image finding\n• 常見轉移lung, liver\n•CT\nACC最常轉移到lung\n最常metastasis to adrenal :lung\n•lrregular borders\n•Irregular enhancement\n• Calcifications\n• Necrotic areas with cystic degeneration\n•Higher attenuation(平均39 HU) on noncontrast CT\n•adenomas 平均8 HU(10HU可以先判定benign)\n•>35 HU 是手術indication\n•MRI\n•T1跟spleen/iver-等強度，T2 hyperintense\n• Contrast uptake个\n•PET(18F-FDG PET)\n• Sensitivity and specificity 97% and 91%\n•Cannot distinguish ACC from other malignancies and metastases."
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Surgical consideration",
+                "No touch technique",
+                "Retroperitoneal approach",
+                "腫瘤貼著的腹膜不要打開",
+                "盡量不讓血或液體進入腹腔"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss50.webp",
+              "hidden": false,
+              "ocr_text": "No touch technique\nRetroperitoneal approach\nSurgical consideration 鹽瘦貶着的腹膜不墨打開\n盡量不讓血或液體進入腹腔\nBOX 107.3\nOncologic Principles of Resection for\nAdrenal Cortical Carcinoma\n1. No touch technique\n2. Preservation of the intact peritoneum on the anterior surface\nof the adrenal gland if no evidence of invasion through the\noverlying peritoneal layer\n3. En bloc resection of tumor with a wide margin of\nsurrounding benign tissue outside the tumor capsule\n4. Strict preservation of an intact tumor capsule\n5. Exclusion of the remainder of the peritoneal cavity as much\nas possible using barriers such as laparotomy pads, plastic\nbarriers, or drapes\n6. Minimizing of bleeding and fluid spillage into the peritoneal\ncavity\n7. Extraction of specimen in a bag\n8. Change of gloves, gowns, and instruments after removal of\nthe tumor and before closure of the abdomen\nModified from Porpiglia F, Miller BS, Manfredi M, et al.: A debate on lapa-\nroscopic versus open adrenalectomy for adrenocortical carcinoma. Horm\nCancer 2:372-377, 2011."
+            },
+            {
+              "slide_num": 55,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss51.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprehensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nAdrenal Gland Tumors\nNetwork®\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nCLINICAL\nDIAGNOSIS\nADDITIONAL EVALUATION\nPRIMARY TREATMENT\nResectable disease\n-• open adrenalectomy for\nsuspected carcinoman\nsuspected\nadrenocortical\ncarcinoma\n1• FDG PETICTI\n• Chest CT with or\nwithout contrast\n•Abdominal/pelvic\nCT or MRI with\ncontrast\n•Biochemical\nworkupb\nSee Adrenocortical\n•Carcinoma (AGT-5)\nUnresectable or suspected\nmetastatic disease\nb See Principles of Biochemical Testing (NE-C)\nJSee Principles of lmaging (NE-B).\nnIf size is resectable by laparoscopy, may explore with a minimally invasive approach with planned conversion for evidence of local invasion. The decision for open\nversus minimally invasive surgery is based on tumor size and degree of concern regarding potential malignancy, and local surgical expertise."
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "positive margins,",
+                "Ki-67 >10%,",
+                "rupture of capsule,",
+                "large size, and high grade"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss52.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nAdrenal Gland Tumors\nNetwork®\nWORKUP\nTREATMENT\npositive margins,\nKi-67>10%，\nrupture of capsule,\nlarge size, and high grade\nlIf high risk for local recurrence:l\n• Clinical trial ff available)\n• Consider external beam RT\n(EBRT) to tumor bed\n• Consider adjiuvant mitotane\ntherapytu,V (category 3)\nACC, additional\nworkup (NE-E 2 of4):\n•Genetic counseling\nand testing for\ninherited genetic\nsyndromes (NE-G)\n• Consider tumor\nmicrosatellite\ninstability (MSI),\nmismatch repair\n(MMR),and tumor\nmutational burden\n(TMB) testing®\nLocalized\ndisease\nResect tumor and\nradiographically or\nclinically evident\nlvmph nodes open\nadrenalectomyg\nlrecommendedP,9\nLocoregional\nunresectable\nor\nMetastatic\nldisease\n| Consider observation with chest CT t contrast\nand abdomenlpelvis CT or MRI with contrast\nfor clinically indolent disease every 12 wk and\nbiomarkers (if tumor initially functional)\n• Consider resection of primary tumor and metastases\nif >90% removable, particularly if functional'\n• Consider local therapy (ie, SBRT, thermal ablative\ntherapies, liver-directed therapy) (NE-K)\nConsider systemic therapy preferably in clinical trial\nI (NE-H8 of 12)\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nFOLLOW-UP\nlEvery 12 wk-12mo up to 5y\n(after 5 y as clinically\nlindicated):\nConsider chest CT+\ncontrast, and\nabdomen CT or MRI with\ncontrast\n•Consider biomarkers, if\ntumor initially functional\nEvery 12 wk-12 mo up to 5y\n(after 5 y as clinically\nindicated):\n• Chest CT t contrast and\n•Abdomen/pelvis CT or MRI\nwith contrast or FDG-PETI\nCT (NE-D)"
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "小型研究ORR: 36.4%",
+                "大型研究(FIRM‑ACT) ORR:9%",
+                "OS:14.8M",
+                "response rate of 49%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss53.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nCancer\nNetwork®\ncomprehensive NCCN Guidelines Version 2.2022\nAdrenal Gland Tumors\nPRINCIPLES OF SYSTEMIC ANTI-TUMOR THERAPY\nLocoregional Unresectable/Metastatic Adrenocortical CarcinomaP\nNCCN Guidelines lndex\nTable of Contents\nDiscussion\nLocoregional Unresectable/Metastatic Adrenocortical Carcinoma\nPreferred Regimens\n•Cisplatin + etoposide33 士 doxorubicin t mitotane 9r:34\n•Carboplatin + etoposide t doxorubicin t mitotane9sr\nOS:14.8M\nresponse rate of 49%\nOther Recommended Regimens\nUseful in Certain Circumstances\n•Pembrolizumab 35,36土 mitotane9,r\n•Streptozocin 士 mitotane 9.r,34\n• Mitotane monotherapy9t\n小型研究ORR: 36.4%\n大型研究(FIRM-ACT) ORR:9%"
+            },
+            {
+              "slide_num": 58,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss54.webp",
+              "hidden": false,
+              "ocr_text": "Printed by Hsiang Chang on 6/23/2025 4:24:59 AM. Copyright o 2025 National Comprehensive Cancer Network. Inc. All Rights Reserved.\nNational\ncomprehensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nNeuroendocrine and Adrenal Tumors\nNetwork®\nNCCN\nAmerican Joint Committee on Cancer (AJcc)\nTNM Staging system for Adrenal Cortical Carcinoma (8th ed., 2017)\nTable 17. Definitions for T, N, M\nT Primary Tumor\nTX Primary tumor cannot be assessed\nTO No evidence of primary tumor\nT1 Tumor s5 cm in greatest dimension, no extra-adrenal invasion\nT2 Tumor >5cm,no extra-adrenal invasion\nT3 Tumor of any size with local invasion but not invading adjacent\norgans surrounding tissues\n(e.g., liver, pancreas, spleen, kidneys)\nT4 Tumor of any size that invades adjacent organs (kidney, diaphragm,\npancreas, spleen, or liver) or large blood vessels (renal vein or vena\ncava)\nTable 18. AucC Prognostic Stage Groups\nN\nNO\nStage l\nStage i\nT1\nT2\nStage IV\nAnyT\nAny\n乙乙\nMO\nMO\nMO\nMO\nM1\nRegional Lymph Nodes\nNX Regional lymph nodes cannot be assessed\nNo No regional lymph node metastasis\nN1 Regional lymph node metastasis\nM\nMO\nM1\nDistant Metastasis\nNo distant metastasis\nDistant metastasis"
+            }
+          ]
+        },
+        {
+          "id": "t14",
+          "title": "Adrenal Incidentaloma",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 59,
+              "text": [
+                "Adrenal Incidentaloma",
+                "Adrenal incidentalomas are unsuspected adrenal masses greater than 1 cm in diameter (75% non-function, 20% surgical)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss55.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal Incidentaloma\n• Adrenal incidentalomas are unsuspected adrenal masses\ngreater than 1 cm in diameter (75% non-function, 20%\nsurgical\nTABLE 106.15 Characteristics of Incidental Adrenal\nMasses as Described in a Systematic\nReview of Published Series of Adrenal\nIncidentalomas That Include 20 or\nMore Patients\nADRENAL LESION\nMetabolically active\nCortisol-producing adenoma\nAldosterone-producing adenoma\nPheochromocytoma\nMalignant\nAdrenocortical carcinoma\nMetastasis\nTotal potentially surgical lesions\nPERCENT OF TOTAL\n(N=2005)\n11.2%\n5.3%\n1.0%\n5.1%\n7.2%\n4.7%\n2.5%\n18.4%"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "Adrenal Incidentaloma",
+                "重要流程",
+                "SUV: standard uptake value",
+                "on non-contrast CT",
+                "on CT",
+                "Suspicious",
+                "CT ≥4cm, >10 HU, contrast洗不掉,",
+                "MRI T2 hyperintense or no signal loss",
+                "PET比肝脾亮",
+                "30% adenoma: >10 HU",
+                "一定要CT with iodine contrast才可以做wash out",
+                "MRI with Gadolinium不行"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss56.webp",
+              "hidden": false,
+              "ocr_text": "Adrenal\nIncidentaloma\n重要流程\nComprehensive history taking and physical examination to assess for features of hormonal hypersecretion\nImaging\nTumor size and attenuation on unenhanced CT\nAdditional imaging (enhanced CT, MRI, 13F-FDG\nPET-CT in some patients\nAAbsolute percent washout\nHormonal evaluation\nOvernight 1-mg dexamethasone suppression test\nMeasurement of plasma-free metanephrine level\nor fractionated metanephrine level in 24-hr\nurinary specimen\nIfhypertension or hypokalemia present, measurement\nof plasma aldosterone concentration and plasma\nrenin activity\n<60%\n(Enhanced - delayed)\n*100%\n(Enhanced - unenhanced)\nNegative results\nRelative percent washout\n(Enhanced- delaved)*100%\n(Enhanced)\n<40%\nNo further follow-up after hormonal\nevaluation unless symptoms or\nsigns indicating hormonal\nexcess develop\nNegative results\n一定要CT with\niodine contrast\n才可以做wash\nout\nMRI with\nGadolinium不行\nBenign appearance\nTumor <4 cm in diameter\n$10 Hounsfield units on CT\nCT contrast washout ≥40-60%\nSignal loss on MRI chemical-shift\nanalysis\nOn 18F-FDG PET-CT, SUV-<5or\nadrenal-to-spleen or adrenal-to\nliver signal-intensity ratio <1\nTABLE 106.13 Functional Evaluation of Adrenal\nTumors suspected to Be\nAdrenocorticalCareinomal\nTYPE OF ADRENAL\nHYPERSECRETION\nGlucocorticoid\nSexualsterods and\nsteroid precursors\nFUNCTIONAL EVALUATION\nlow-dose doxamothasone supprossion\ntest (or late night salivary or 24-hour\nurine cortiso)\nACIH\nDHEA-S\nTestosterone\n17-0H-progesterone (optiona)\nAndrostenedione optonal\n17-0H-pregnenolone (optiona\n11-deoxycorticosterone (optiona)\nProgesterone (optiona)\nEstradiol (optiona)\n17B-estradiol (only in men and\nCatocho\nSorum or unnary motanophnnos\nMineralocorticoid\nAldosterone-to-renin ratio (only in\npatentswinnyperensionor\nPositive results\nConfirmatory testing\nfor mild autonomous cortisol\nexcess and primary hyper-\naldosteronism, if necessary\nPositive results\nAdrenalectomy for pheochromocy-\ntoma after allpha-blockade (and\nafter beta-blockade, if necessary)\nConsider adrenalectomy for auto-\nnomous cortisol hypersecretion\nand primary hyperaldosteronism\nNo further follow-up imaging need-\ned unless symptoms or signs\nindicating hormone excess develop\nSuspicious appearance\nTumor =4 cm in diameter on CT\n$10 Hounsfield units on CT on non-contrast CT\nCT contrast washout <40-60%\nOn MRI. hyperintense on T2\nimaging or no signal loss on\nchemical-shift analysis\nOn 18F-FDG PET-CT, SUV.\n≥5or\naarenarto-spreen or aarenarto\nTliver signalrintensity ratio ≥1\n中\nConsider adrenalectomy\nConsider biopsy if meta stasis\nsuspected and confirmation\nwould change treatment plan\nIfadrenalectomy not performed,\nconsider follow-up imaging in\n6mo to lyr\nSUV:standard\nuptake value\nSuspicious\nCT ≥4cm, ≥10 HU, contrast洗不掉，\nMRI T2 hyperintense or no signal loss\nPET比肝脾亮\n30% adenoma: >10 HU"
+            },
+            {
+              "slide_num": 61,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss57.webp",
+              "hidden": false,
+              "ocr_text": "B\nAdrenal mass >1cm\nManagement\nImaging features\nSize\nMetabolic work-up\n1) Low dose dexamethasone suppression testing (LD-DST) or\nlate-night salivary cortisol\n2) Plasma free metanephrines or total urinary metanephrines\n3) If patient is hypertensive, morning aldosterone and\naldosterone/renin ratio (ARR)\nBenign\n(lipid rich)\nIndeterminate\n(ipid poor)\nSize <4 cm\nSize ≥4 cm\nMetabolically silent\n1) Cortisol <1.8 ug/dL on LD-DST\n2) Aldosterone <15 ng/dL\n3 Metanephrines <4x normal\nAutonomous cortisol\nSecretion (aka subclinical Cushina)\n>5 ug/dL on LD-DST and no clinical signs of\nCushing*\nMetabolically active\n1) Cortisol >5 pg/dl on LD-DST and clinical\nsigns/symptoms of Cushing\n2) Aldosterone >15 ng/dL and ARR >20-30\n(adrenal vein sampling advisable)\n3) Metanephrines >4x normal\nCONFIRMATORY TESTING /\nENDOCRINOLOGY REFERRAL\nNo further follow-up\nFollow patient\n日\nC\nMass grows >20% and at least 5 mm or\nbecomes metabolically active\nConsider adrenalectomy\n(blockade if pheochromocytoma;\nconsider open surgery if >6 cm)\n* if LDDS reveals cortisol 1.8 to 5 ugldL, autonomous cortisol secretion is\npossible and follow upendocrinology referral is advisable\nFig. 106.33. Management algorithm for newly diagnosed incidental adrenal mass."
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Tumor size",
+                "< 40 y/o with incidentaloma <4 cm : cancer is a concern"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss58.webp",
+              "hidden": false,
+              "ocr_text": "1.Tumor size\nqreatest\ndiameter\nmalignancy %\n＜ 4cm\n4 to 6 cm\n≥6 cm\n2%\n6%\n25%\n≤ 40 y/o with incidentaloma <4cm : cancer is a concern"
+            },
+            {
+              "slide_num": 63,
+              "text": [
+                "Imaging Features --- MRI",
+                "Adrenal signal-intensity index",
+                "Adrenal-to-spleen ratio",
+                "⇒ both had high accuracy  (sensitivities 94%, specificities 95%)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss59.webp",
+              "hidden": false,
+              "ocr_text": "Imaging Features --- MRI\n• Adrenal signal-intensity index\n• Adrenal-to-spleen ratio\n=both had high accuracy (sensitivities 94%, specificities 95%)"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "Imaging Features --- 18F-FDG PET-CT",
+                "maximum standardized uptake value",
+                "the maximum uptake value in the adrenal tumor to spleen or liver ratio",
+                "⇒ effectively distinguished benign from malignant tumors                  (sensitivities, 85 to 91%, and specificities, 89 to 91%)",
+                "但分辨ACC和其他malignancy是無法的"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss60.webp",
+              "ocr_text": "Imaging Features --- 18F-FDG PET-CT\n• maximum standardized uptake value\n• the maximum uptake value in the adrenal tumor to spleen\nor liver ratio\n=effectively distinguished benign from malignant tumors\n(sensitivities, 85 to 91%,and specificities, 89 to 91%)\n但分辨ACC和其他malignancv是無法的"
+            }
+          ]
+        },
+        {
+          "id": "t15",
+          "title": "Retroperitoneal Tumor",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 65,
+              "text": [
+                "Retroperitoneal tumor",
+                "Retroperitoneal tumor",
+                "Malignant >> Benign, Most common: liposarcoma",
+                "80% combination of liposarcomas, leiomyosarcomas, and malignant fibrous histiocytomas",
+                "Retroperitoneal sarcomas 最常轉移之處: lungs > liver",
+                "除了TNM staging，其他影響預後因子:",
+                "Tumor grade, mitotic index, necrosis, molecular markers"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss61.webp",
+              "ocr_text": "Retroperitoneal tumor\n•Retroperitoneal tumor\n• Malignant >> Benign, Most common: liposarcoma\n• 80% combination of liposarcomas, leiomyosarcomas, and malignant\nfibrous histiocytomas\n•Retroperitoneal sarcomas 最常轉移之處：lungs ＞liver\n•除了TNM staging，其他影響預後因子：\n•Tumor grade, mitotic index, necrosis, molecular markers"
+            },
+            {
+              "slide_num": 66,
+              "text": [
+                "Retroperitoneal tumor staging"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss62.webp",
+              "ocr_text": "Retroperitoneal tumor staging\nTO\nT1\nT2\nT3\nNO\nN1\nMO\nM1\nRO\nR1\nR2\nR3\nNo demonstrable tumor\nTumor measuring <5 cm in maximal diameter\nTumor measuring ≥5 cm in maximal diameter\nEvidence of macroscopic invasion of nearby structures\nby the tumor\nNo histologic evidence of regional lymph node\ninvolvement\nHistologically proved regional lymph node\ninvolvement\nNo distant metastasis\nDistant metastasis present\nTumor was entirely resected with no residual tumor\nand negative surgical margins\nMicroscopic residual tumor = positive surgical\nmargins\nMacroscopic residual tumor\nTumor spillage and dissemination during resection"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "Definitive surgical resection is the standard primary treatment",
+                "Neoadjuvant RT and/or systemic therapy should be considered",
+                "If R1 resection(Microscopic residual disease), consider adjuvant RT",
+                "If R2 resection(Macroscopic residual disease), consider re-op"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch06_adrenal/render/ss63.webp",
+              "ocr_text": "• Definitive surgical resection is the standard primary treatment\n• Neoadjuvant RT and/or systemic therapy should be considered\n•IfR1 resection(Microscopic residual disease), consider adjuvant RT\n•IfR2 resection(Macroscopic residual disease), consider re-op\nSurgical outcomes/\nRO\nR1\nclinical pathologic\nfindings*\nR2\nPostoperative\ntreatment\nPostoperative RT should not\nbe administered routinely with\nthe exception of highly\nselected patients and unless\nlocal recurrence would cause\nundue morbidityt‡\nPostoperative RT should not\nbe administered routinely with\nthe exception of highly\nselected patients and unless\nlocal recurrence would cause\nundue morbidity村\nor\nPostoperative external beam\nor\nConsider boost (10-16 Gy) if\npreoperative RT was given\nConsider re-resection if\ntechnically feasible\nor\nSee primary treatment\n(unresectable) (RETSARC-4)\nFollow-up\n•Physical examination with imaging (abdominal/pelvic CT) every 3-6 mo for 2-3 yr, then every 6 mo tor\nnext 2 yr, then annually\n• Consider chest imaging\nRecurrent disease\nTreatment for\nrecurrent disease\nUnresectable or stage IV/\nmetastatic diseases\n(See RETSARC-4)\nResectables\n(See RETSARC-2)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

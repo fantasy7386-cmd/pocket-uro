@@ -1,0 +1,1441 @@
+{
+  "id": "tb_09",
+  "number": "IX",
+  "title": "小兒泌尿",
+  "icon": "👶",
+  "sections": [
+    {
+      "id": "tb_09_01",
+      "title": "小兒泌尿疾病",
+      "source_file": "8-1 小小兒疾病 (2022).pptx",
+      "total_slides": 87,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "小兒基本評估通則",
+          "slide_count": 1,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "小兒Uro基本評估通則",
+                "問診",
+                "Background: 產檢狀況、產前超音波、羊水量、出生史、發育史、小兒精神科(LUTD)、家族史、有無systemic disease、UTI history(有無發燒)、割包皮否",
+                "症狀: 排尿症狀(痛急頻漏不出來)、排尿時程、尿床、排便狀況、便秘否?",
+                "行為模式: 如廁訓練、食慾喝水的狀況",
+                "問卷: 排尿日誌(至少兩天)、DVSS(for LUTD)、\u000b          紀錄兩周夜間排尿量及第一次起床尿量(for尿床)",
+                "If hydro 一樣問腰痠要痛肚子痛噁心嘔吐?",
+                "If 尿床=> 加問遺尿尿量多寡、次數與時間(前半夜或後半夜)、睡眠狀況",
+                "PE",
+                "腹部、背部、脊椎 (腫塊、deformity、spinal bafida)",
+                "腹股溝、會陰部及外生殖器 (hernia、deformity、hypospadias、prepuse、ectopic UO、testis、hydrocele…)",
+                "基本NE",
+                "檢查",
+                "U/A, U/C, 尿液比重(for 尿床)",
+                "Renal echo、bladder echo、UFM+PVR",
+                "Febrile UTI: VCUG, Tc-99m DSMA",
+                "Hydro, VUR=> VCUG, Tc-99m DSMA, Tc-99m MAG3, diuretic nephrogram, \u000bMRI ( if susp. structural abnormality or spinal cord abnormaly)",
+                "LUTD治療失敗=> UDS/VUDS",
+                "Chromosome & endocrine survey (DSD、hypospadias with UDT)"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "小兒Uro基本評估通則\n•問診\n•Background：產檢狀況、產前超音波、羊水量、出生史、發育史、小兒精神科(LUTD)\n、家族史、有無systemic disease、UTI history(有無發燒）、割包皮否\n•症狀：排尿症狀(痛急頻漏不出來)、排尿時程、尿床、排便狀況、便秘否？\n•行為模式：如廁訓練、食慾喝水的狀況\n•問卷：排尿日誌(至少兩天）、DVSS(for LUTD)、\n紀錄兩周夜間排尿量及第一次起床尿量(for尿床）\n•Ifhydro 一樣問腰痠要痛肚子痛噁心嘔吐？\n•1尿床=＞加問遺尿尿量多寡、次數與時間(前半夜或後半夜)、睡眠狀況\n•PE\n•腹部、背部、脊椎（腫塊、deformity、spinal bafida)\n•腹股溝、會陰部及外生殖器 (hernia、deformity 、hypospadias、prepuse 、ectopic\nUO、testis 、hydrocele..)\n•基本NE\n•檢查\n•U/A, U/C,尿液比重(for 尿床）\n• Renal echo、bladder echo、UFM+PVR\n• Febrile UTI: VCUG, Tc-99m DSMA\n• Hydro, VUR=> VCUG, Tc-9gm DSMA, Tc-99m MAG3, diuretic nephrogram,\nMRI (if susp. structural abnormality or spinal cord abnormaly)\n• LUTD治療失敗=＞ UDS/UDS\n• Chromosome & endocrine survey (DSD、hypospadias with UDT)"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "Pediatric UTI（診斷/VCUG/DMSA/治療）",
+          "slide_count": 9,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 3,
+              "text": [
+                "Pediatric UTI"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "Pediatric UTI"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "Pediatric UTI",
+                "一歲以下男生多, 一歲以上女生多",
+                "較少由大腸桿菌（E.coli）所引發 (70-90%)",
+                "較高的機率引發敗血症",
+                "Sterile pyuria成因: incomplete abx治療, TB/Clamydia感染, stone, foreign body刺激",
+                "取尿方式: 尿套(不建議, 偽陽性高 85-99%), clean catch(偽陽性 5%), 中段尿, 導尿, 恥骨上穿刺"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Pediatric UTI\n•一歲以下男生多，一歲以上女生多\n•較少由大腸桿菌（E.coli）所引發 (70-90%)\n•較高的機率引發敗血症\n•sterile pyuria成因：incamplete abx治療，TB/Clamydia感染，\nstone, foreign body刺激\n•取尿方式：尿套（不建議，偽陽性高 85-99%),clean catch(備陽\n性 5%)，中段尿，導尿，恥骨上穿刺"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "可自主排尿兒童考慮有無LUTD/BBD/DES並處理, 有包莖且有APN的考慮割包皮",
+                "< 1 y/o",
+                "第一次感染",
+                "大於一歲男童若超音波無異常",
+                "第一次感染後不需要VCUG/DMSA",
+                "TUA 2020",
+                "(參考Campbell",
+                "改良)",
+                "DMSA",
+                "VCUG, DMSA可同時做,也可先安排DMSA 的檢查，若有腎臟皮質顯像缺損時再追加VCUG(top down approach, 減少直接做VCUG查出一堆clinical insignificant的VUR), DMSA建議感染後三到六個月做 (Campbell: 4-6M)",
+                "Voiding diary, Bowel hx and Defecation Diary, U/A, U/C",
+                "Renal echo, bladder echo, PVR(if自主排尿)",
+                "abx",
+                "LUTD: Lower urinary tract dysfunction",
+                "BBD: Bladder and bowel dysfunction",
+                "DES: Dysfunctional elimination syndrome"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "首次泌尿道感染\nwoiding diary, Bowel hx and Defecation Diary, U/A, U/C\n超音波檢查\n（上段及下段泌尿道）\nRenal echo, bladder echo, PVR(f自主排尿)\nTUA 2020\n(參考\nCampbell\n改良）\nVCUG,DMSA可同時做,也可先安排\nDMSA 的檢杳，若有腎臟皮質顯像缺\n損時再追加VCUG(top down approach,\n減少直接做vCUG查出一堆cinical\ninsignificant的VUR),DMSA建議感染後\n三到六個月做 (Campbell:4-6M)\nLUTD: Lower urinary tract dysfunction\nBBD: Bladder and bowel dysfunction\nDES: Dysfunctional elimination syndrome\n無明顯異常\nabx\n12個月以上男童\n嬰兒/女童\n<1y/a\n第一决感染\n若反覆感染：\n考率影像檢杳\n排除回流！\nVCUG / DMSA\n大於一歲男童若超\n音波無異常\n第一次感染後不需\n要VCUG/DMSA\n可自主排尿兒童考慮有無\nLUTD/BBD/DES並處理，有包莖\n且有APN的考慮割包皮\n上泌尿道阻\n寒/腎水腫\n複雜性泌尿道感染\n積極監控＋靜脈\n抗生素\n反應良好\n嚴重感染\n反應不佳\n排除回流\nDMSA\nVCUG\n考慮尿液分流\n(diversion)\n圖1 首次泌尿道感染並發燒處理流程圖"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Bowel History",
+                "Timing",
+                "Frequency",
+                "Consistency",
+                "Pain",
+                "Bleeding",
+                "soiling"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Bowel History\n•Timing\n•Frequency\n• Consistency\n• Pain\n•Bleeding\n• soiling\nType 1\nBristol Stool Chart\nSeparate hard lumps, like nuts\n(hard to pass)\nTpe 2\nSausage-shaped but lumpy\nJype 3\nLike a sausage but with\ncracks on the surface\nType 4\nLike a sausage or snake,\nsmooth and soft\nJype 5\nSoft blobs with clear-cut\nedges\nType 6\nFluffy pieces with ragged\nedges. a mushy stool\nType 7\nWatery. no solid pieces.\nEntirely Liquid"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Voiding Cystourethrogram(VCUG)",
+                "又叫做micturating cystourethrography, 先放尿管用顯影劑把膀胱灌脹, 再請病人自行解尿, 期間不斷照X-ray",
+                "用來檢查bladder, urethra(主要是post. urethra, ant.urethra用retrograde urethrography)有無異常的anatomy和VUR",
+                "常用於小孩",
+                "VUR",
+                "Posterior urethral valve with VUR"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "Voiding Cystourethrogram (VCUG)\n•又叫做micturating cystourethrography，先放尿管用顯影劑把膀\n胱灌脹，再請病人自行解尿，期間不斷照X-ray\n•用來檢查bladder,urethra(主要是post. urethra, ant.urethra用\nretrograde urethrography)有無異常的anatomy和VUR\n•常用於小孩\nVUR\nPosterior urethral valve with VUR"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "DMSA",
+                "用的是Tc-99m DMSA (2,3 dimercaptosuccinic acid), 會和cortex的proximal tubules的sulfhydryl groups結合",
+                "是一個static scan(DTPA和MAG3是dynamic scan)",
+                "用來偵測scarring(cold spot)和acute pyelonephritis(cortical defect, 因為direct tubular defect due to bacterial infection)",
+                "常用於小孩",
+                "看皮質功能(cold spot = renal scar) → Tc-99m DMSA",
+                "看排泄功能(腎功能) → Tc-99m MAG3 (ERPF) / Tc-99m DTPA (eGFR)",
+                "看有沒有obstruction → Lasix nephrogram(MAG3 or DTPA 加打Lasix)",
+                "看T1/2>20min",
+                "Cold spot in renal scarring",
+                "Cortical defect in APN"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "DMSA\n看皮質功能(cold spot =renal scar) > Tcggm DMSA\n看排泄功能（腎功能）＞ Tc-9gm MAG3 (ERPF) / Tc-99m DTPA (eGFR)\n看有沒有obstruction > Lasix nephrogram(MAG3 or DTPA 加打 Lasix)\n看T1/2>20min\n•用的是Tc-ggm DMSA (2,3 dimercaptosuccinic acid)，會和cortex的\nproximal tubules的sulfhydryl groups結合\n•是一個static scan(DTPA和MAG3是dynamic scan)\n•用來偵測scarring(cold spot)和acute pyelonephritis(cortical\ndefect, 因為direct tubular defect due to bacterial infection)\n•常用於小孩\nCold spot in renal scarring\nCortical defect in APN"
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "小兒抗生素治療原則",
+                "口服或IV anti？",
+                "-年紀較小, 感染情況較嚴重(sepsis), 複雜性UTI(合併anatomy問題例如hydro), 合併較嚴重nausea/vomiting/diarrhea, 無法口服藥物或喝水要用IV anti",
+                "Anti duration？",
+                "-7-14天優於1-3天, TUA建議4-7天, 但仍須個別考量不同情況",
+                "哪些兒童需要長期服用預防性抗生素？",
+                "-High risk of UTI, renal scarring, LUTD patients"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "小兒抗生素治療原則\n•口服或IV anti?\n-年紀較小，感染情況較嚴重(sepsis)，複雜性UTI(合併anatomy闆\n顯例如hydrol 盒併較嚴童nausea/vomiting/diarrhea，無法口服\n藥物或喝水愛角N anti\n• Anti duration ?\n-7-14天優於1-3天，TUA建議4-7天，但仍須個別考量不同情況\n•哪些兒童需要長期服用預防性抗生素？\n-High risk of UTl, renal scarring, LUTD patients"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "大於一歲男童若超音波無異常",
+                "第一次感染後不需要VCUG/DMSA",
+                "小於一歲 或是 女童",
+                "都要做VCUG/DMSA"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch09_pediatric/render/sh10.webp",
+              "ocr_text": "建議\n證據\n等級\n強\n評估兒童泌尿道感染，須包括完整的病史詢問、臨床症\n狀評估及理學檢查。\n於合併發燒或反覆的泌尿道感染病童，需排除膀胱一腸\n強\n道失調症候群，並在懷疑有相關症狀時儘速治療。\n對於嬰兒而言，恥骨上抽吸是取得尿液檢體最有效的工\n強\n具。雖然膀胱導尿方式收集有較高的污染機會，也可考\n慮。\n在未經排尿訓練的病童，因其較高的偽陽性機率，不建\n強\n議使用塑膠尿袋進行檢體搜集。但可考慮以乾淨接尿\nclean-catch ）的方式採集尿意檢體。\n尿液試紙可以快速地得到結果，但必須小心判讀。離心弱\n尿液的顯微鏡檢仍是檢驗膿尿的標方式。流動成像系\n統的成果與人工鏡檢的效果相當\n大於一歲男童若超音波無異常\n第一次感染後不需要vCUG/DMSA\n小於一歲 或是女童\n都要做VCUG/DMSA\n證擄\n建議\n等級\n病人的年紀、是否有全身性的感染、疾病的嚴重程度、\n強\n是否能配合口服、是否有嘔吐、腹瀉等腸胃道症狀、病\n患配合程度（compliance）、是否為複雜性泌尿道感\n染，都是決定以口服或靜脈施予抗生素時的重要考量。\n以四至七日的口服或靜脈藥物治療泌尿道感染。\n於泌尿道感染的高風險族群、後天腎臟損傷、或有下泌\n強\n強\n尿道症狀的病童，應給予長時間的預防性抗生素治療。\n於複雜性泌尿道感染病童應給予靜脈廣效型抗生素治\n療。\n泌尿道感染合併發燒嬰兒，應以超音波排除無論是上段 強\n或下段的泌尿道阻塞。\n所有泌尿道感染合併發燒的嬰兒，都應於首次感染期過\n強\n後進行 VCUG 或 DSMA + VCUG（若DSMA 有異常）\n的檢查。若為一歲以上男童，若有兩次以上的泌尿道感\n染，仍須排除是否有膀胱輸尿管逆流。"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Methods to reduce recurrent UTI",
+                "治療LUTD/BBD/DES",
+                "Phimosis的病人做Circumcision (insufficient evidence但TUA有建議)",
+                "會陰部照顧(清潔、不要穿太緊的內褲)",
+                "長期服用預防性抗生素(High risk of UTI, renal scarring, LUTD patients)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Methods to reduce recurrent UTI\n•治療LUTD/BBD/DES\n•Phimosis的病人做Circumcision (insufficient evidence但TUA\n有建議）\n•會陰部照顧（清潔、不要穿太緊的内褲）\n•長期服用預防性抗生素(High risk of UTl, renal scarring,\nLUTD patients)"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "LUTD / BBD / DES",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 12,
+              "text": [
+                "LUTD/BBD/DES",
+                "LUTD: Lower urinary tract dysfunction",
+                "BBD: Bladder and bowel dysfunction",
+                "DES: Dysfunctional elimination syndrome",
+                "已經會自主排尿的小孩才會有的情況"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "LUTD/BBD/DES\nLUTD: Lower urinary tract dysfunction\nBBD: Bladder and bowel dysfunction\nDES: Dysfunctional elimination syndrome\n已經會自主排尿的小孩才會有的情況"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "何謂LUTD/BBD/DES(Campbell)",
+                "LUTD/BBD/DES是集合名詞, 泛指在排除神經解剖異常之後小孩在排尿與排便相關的functional disorders",
+                "與影響正常排尿排便的behavioral factor有關",
+                "這個集合名詞包含了以下情況：Overactive bladder, Voiding postponement, Underactive bladder, Dysfunctional voiding, Primary bladder neck dysfunction, Giggle incontinence(小孩笑的時候漏尿), Vaginal reflux, Pollakiuria(小孩的daytime frequency), Enuresis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "何謂LUTD/BBD/DES(Campbell)\n•LUTD/BBD/DES是集合名詞，泛指在排除神經解剖異常之\n後小孩在排尿與排便相關的functional disorders\n•與影響正常排尿排便的behavioral factor有關\n•這個集合名詞包含了以下情況：Overactive bladder,\nVoiding postponement, Underactive bladder, Dysfunctional\nvoiding, Primary bladder neck dysfunction, Giggle\niincontinence(小孩笑的時候漏尿), Vaginal reflux,\npollakiuria(/小孩的davtime frequency), Enuresis"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "小孩排尿障礙該評估",
+                "History",
+                "排尿時程、排尿症狀、如廁訓練、大便情況、泌尿道感染、精神病史、家族史、出生史、發育史",
+                "問卷：Dysfunctional Voiding Symptom Score questionnaire(DVSS)",
+                "Voiding diary",
+                "PE:Vincent’s curtsy sign, 下背部、會陰部、外生殖器、神經學檢查",
+                "U/A、U/C",
+                "Renal echo, Bladder echo(Bladder wall thickness)",
+                "Uroflowmetry/PVR",
+                "Hydro就要問羊水",
+                "排尿就要問大便",
+                "如果初步治療失敗"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "小孩排尿障礙該評估\nHydro就要問羊水\n排尿就要問大便\n• History\n•排尿時程、\n耩謈嬖桯家费蜃在埜生塑呵嬰齊鱼大便情況、泌辰道威染、精\n••問卷：Dysfunctional Voiding Symptom Score\nquestionnaire(DVSS)\n•Voiding diary\n•羅灣腦置”scurtsy sen，下育部、會陰部一外生直器 、神\n•UA、U/C\n•Renal echo, Bladder echo(Bladder wall thickness)\n• Uroflowmetry/PVR\nSELECTIVE 如果初步治療失敗\nVideo-urodynamics\nMagnetic resonance imaging of lumbosacral spine\nCystoscopy\nSomatosensory evoked potential and electromyography"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "(參考) Dysfunctional Voiding Symptom Score questionnaire (DVSS)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "（參考） Dysfunctional Voiding Symptom\nScore questionnaire (DVSS)\nOver the last month\nAlmost\nnever\n。\n0\nLess than\nhalf the\ntime\n1\n1\n1. 1have had wet clothes or wet underwear during the day.\n2. When I wet myself, my underwear is soaked.\n3. 1 miss having a bowel movement every day.\n4. Ihave to push tor my bowel movements to come out.\n5. l only go to the bathroom one or two times each day.\n6. 1 can hold onto my pee by crossing my legs, squatting, or\ndoing the \"pee dance.\n7. When Ihave to pee, I cannot wait.\n8. 1have to push to pee.\n9. When l pee it hurts.\n10. Parents to answer. Has your child experienced something\nstresstul like the example below?\nTOTAL\n0\nAbout half\nthe time\n2\n2\n2\n2\n2\n2\nAlmost\nevery\ntime\n3\n3\n3\n3\n3\n3\nNot\navailable\nNA\nNA\nNA\nNA\nNA\nNA\n1\n1\nNO (0)\n2\n2\n3\n3\nNA\nNA\nYES (3)"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Vincent’s curtsy sign",
+                "有urge syndrome 的小朋友會用蹲姿以腳跟來壓迫尿道避免尿失禁"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "Vincent's curtsy sign\n有urge syndrome 的小朋\n友會用蹲姿以腳跟來壓\n迫尿道避免尿失禁\nFigure 136-5. Vincent's curtsy sign."
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "小孩PVR多少以上是異常的？",
+                "4 to 6 years",
+                "A single PVR >30 mL或 >21% of bladder capacity",
+                "Repetitive PVR >20 mL 或 >10% of bladder capacity",
+                "7 to 12 years",
+                "A single PVR >20 mL or 15% of EBC",
+                "repetitive PVR >10 mL or 6% of EBC",
+                "ICCS : Estimated bladder capacity = (Age+1) x 30",
+                "年紀越大",
+                "尿應該排的越乾淨"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "小孩PVR多少以上是異常的？\n•4to 6 years\n•A single PVR >30ml或 >21% of bladder capacity\n• Repetitive PVR >20mL 或 >10% of bladder capacity\n• 7to 12 years\n•A single PVR >20 ml or 15% of EBC\n•repetitive PVR >10ml or 6% of EBC\n• ICCS : Estimated bladder capacity = (Age+1)× 30\n年紀越大\n尿應該排的越乾淨"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "Management(因為是functional disorder的大集合,只能見招拆招)",
+                "保守治療",
+                "增加水份和纖維攝取來改善bowel dysfunction和便秘",
+                "(EAU: Bowel的問題要比LUTD優先處理)",
+                "定時排尿/toilet training +/- biofeedback",
+                "藥物",
+                "Alpha blocker",
+                "Antimuscarinic",
+                "CIC if needed",
+                "Botox injection",
+                "Neuromodulation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Management(因為是functional\ndisorder的大集合,只能見招拆招）\n•保守治療\n•增加水份和纖維攝取來改善bowel dysfunction和便秘\n(EAU:Bowel的問題要比LUTD優先處理）\n•定時排尿/toilet training +/-biofeedback\n•藥物\n• Alpha blocker\n•Antimuscarinic\n• CICif needed\n• Botox iniection\n• Neuromodulation"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "Prenatal & Postnatal Hydronephrosis",
+          "slide_count": 12,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 19,
+              "text": [
+                "Prenatal/Postnatal/Pediatric hydronephrosis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Prenatal/Postnatal/Pediatric\nhydronephrosis"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "Prenatal hydronephrosis",
+                "大約16-18周左右pre-natal sonography可以檢查到hydronephrosis, 28周最 sensitive",
+                "定義: AP diameter≥4mm就是mild(Campbell)",
+                "AP diameter≥7mm(Oxford handbook)",
+                "3% of all pregnancies involve a urinary tract anomaly"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "Prenatal hydronephrosis\n•奇總子fab恩东专发指城telaafegrapny可以檢查到\n•定義：AP diameter≥4mm就是mild(Campbell)\nAP diameterz7mm(Oxford handbook)\nTABLE 124-2 Definition of Antenatal Hydronephrosis\nby Anterior Posterior Diameter and Estimated Severity\nPercentage Range\nDEGREE\nMild\nModerate\nSevere\nANTEROPOSTERIOR\nDIAMETER\nSECOND\nTRIMESTER\n4 to <7mm\n7 to ≤10mm\n＞10mm\nTHIRD\nTRIMESTER\n4 to <9mm\n9to ≤15mm\n＞15mm\nSEVERITY\n56.7%-88.0%\n10.2%-29.8%\n1.5%-13.4%\n• 3% of all pregnancies involve a urinary tract anomaly"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "Prenatal echo的目的",
+                "Prenatal echo目的是要預測post-natal hydronephrosis可能性(36%)",
+                "越嚴重的Prenatal hydronephrosis出生後UPJO, PUV (posterior urethral valve)的比率就越高",
+                "VUR則看不出相關性"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "Prenatal echo的目的\n•Prenatalecho目的是要預測post-natal hydronephrosis可能性\n(36%）\n•越嚴重的Prenatal hydronephrosis出生後UPJO,PUV\n(posterior urethral valve )的比率就越高\n•VUR則看不出相關性\nTABLE 124-3 Risk of Pathology by Degree of Antenatal Hydronephrosis\nDEGREE OF ANTENATAL HYDRONEPHROSIS (% [95% CJ*)\nMILD-MODERATE\nMILD (N=587)\n(N=213)\nMODERATE\n(N =235)\nMODERATE-SEVERE\n(N=179)\nSEVERE\n(N=94)\nTREND P\nVALUE+\n11.9(4.5.28.0)\n4.9 (2.0, 11.9)\n39.0(32.6. 45.7\n13.6(9.6, 18.9)\n45.1 (25.3. 66.6)\n17.0 (7.6,33.9)\n72.1 (47.6.88.0)\n36.9 (17.9, 61.0\n88.3(53.7,98.0\n54.3 (21.7, 83.6)\n≤.001\n<.001\nPOSTNATAL\nPATHOLOGY\nAny pathology\nUreteropelvic\njunction\nobstruction\nVesicourethral reflux\nPosterior urethral\nvalves\nUreteral obstruction\nOther‡\n4.4 (1.5. 12.1)\n0.2(0.0, 1.4)\n1.2 (0.2,8.0)\n1.2 (0.3, 4.0)\n10.8 (7.3.15.7\n0.9 (0.2, 3.7)\n11.7(8.1,16.8)\n1.9 (0.7,4.9\n14.0 (7.1.25.9)\n0.9 (0.2,2.9\n9.8(6.3,14.9)\n3.4(0.5, 19.4)\n12.3 (8.4.17.7)\n6.7 2.5,16.6\n10.6 (7.4,15.0)\n5.6 (3.0,10.2)\n8.5 (4.7. 15.0)\n5.3 (1.2, 21.0)\n55.3 (1.4,18.2)\n14.9(3.6, 44.9)\n.10\n＜.001\n.025\n.002"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Prenatal hydronephrosis cause",
+                "Transient/physiologic最常見",
+                "再來是UPJO和VUR",
+                "PUV佔1%左右"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "Prenatal hydronephrosis cause\n•Transient/physiologic最\n常見\n•再來是UPJO和VUR\n•PUV佔1%左右\nTable 16.5 Clinically significant causes of antenatal hydronephrosis\nCause\nPUIO\n(see p.702-3\nIUR\nsee 9p.692-5\nMegaureter\n(see 9 p.696-7)\nMCDK\n(see Ep.706)\nincidence (%)\nUSS features\n11\nMost have RPD >15mm, with no ureteric\ndilatation. Bilateral in 10-40%\n9\nUreter dilated to bladder t dilatation of\npelvicalyceal system\nDilated ureter >7mm; left side affected\nmore commonly than right side\nKidney is replaced by cysts of varying size;\n30% risk of abnormalicy in the contralateral\nkidney.ie. Pujo. VUR\nUreterocele\n(see 3 p. 700-1)\nCystic area in the bladder, usually associated\nwith a duplex kidney and hydronephrosis\ndue to obstruction or reflux\nPUV\nBilateral hydroureteronephrosis and\ndistended, thick-walled bladder, dilated\nposterior urethra, oligohydramnios, and\npulmonary hypoplasia\nPaa soured from Woodward M. Frank D 2002) Postraral maragerere of anereal\nhydronephrosis. BjU lnt 89:149-56."
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Prenatal hydronephrosis management",
+                "如果已經可以生產就生下來(Early delivering has no indication), postnatal再去survey",
+                "還不能生就考慮Intrauterine intervention, 也就是Vesico-amniotic shunting(是穿刺膀胱不是腎臟)",
+                "Indication: 膀胱漲＋兩側hydro+羊水少(oligohydrominos)",
+                "Will not improve renal development (kidney早已發育)",
+                "Improve lung function(羊水有surfactant可幫助lung發育, 另外膀胱腎臟消下去也減少頂到肺)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Prenatal hydronephrosis management\n•如果已經可以生產就生下來(Early\ndelivering has no indlication), postnatal再去\nsurvey\n。還不能生就考慮Intrauterine intervention,\n也就是Vesico-amniotic shunting(是穿刺膀\n胱不是腎臟）\n•Indication:膀胱漲＋兩側hydro+羊水少\n(oligohydrominos)\n•will not improve renal\ndevelopment (kidney早已發育）\n•Improve lung function(羊水有\nsurfactant可幫助lung發育，另外膀\n胱腎臟消下去也減少頂到肺）\nFetal\nbladder\nMaternal\nabdomen\nAmniotic\nspace\nUterine\nwall\nC\nVesicoamniotic\nshunt\nFigure 124-19. Diagram showing technique of fetal vesicoamniotic\nshunt placement. The fetal bladder is initially reached with needle,\nand a large-bore introducing sheath is passed into the bladder\n(A). Within this sheath, the shunt is passed (B and C). lt is a double-\npigtail shunt with holes at each end allowing free drainage between\nthe bladder and amniotic space (D). (From Peters CA. Surgical man-\nagement of fetal uropathies. In: Marshall FF, editor. Textbook of\noperative urology. Philadelphia: Saunders; 1996. p. 1063.)"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Postnatal hydronephrosis etiology",
+                "單側: Transient/physiologic, unilateral VUR, UPJO, UVJO, megaureter",
+                "雙側: Transient/physiologic, PUV(posterior urethral valve), urethral atresia, bilateral VUR, bilateral UPJO or UVJO",
+                "@ Transient/physiologic最常見"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Postnatal hydronephrosis\netiology\n•單側：Transient/physiologic, unilateral VUR, UPJo, UvJO,\nmesaureter\n•雙側：Transient/physiologic, PUV(posterior urethral valve),\nurethral atresia, bilateral VUR, bilateral UPJo or uvJo\n@ Transient/ physiologic最常見"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "Grading system",
+                "第一級則是pelvis被撐開而已, 第二級只有major calyx擴裝, 第三級major/minor calyx都擴張, 第四級cortex/parencyma變薄"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "Grading system\nSFU grade 1\nSFU grade 2\nSFU grade 3\nSFU grade 4\nUrine barely\nsplits sinus\nFull pelvis,\nmaior calyces\ndilated\nUniformly dilated\nminor calyces,\nparenchyma spared\nParenchymal\ncompromise\n第一級則是pelvis被撐開而已，第二級只有major calyx擴裝，第三級major/minor calyx都擴張，第四級\ncortex/ parencyma變薄"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "判定流程:",
+                "APRPD ≧15mm, Peripheral calyceal dilation(Gr.3), ureter dilation=> P2以上",
+                "Parenchyma 變薄(Gr.4)、外觀不正常、膀胱不正常 => P3",
+                "Postnatal urinary tract dilation (UTD) Risk 分級",
+                "ADRPD: Anterior-posterior renal pelvic diameter"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "Postnatal urinary tract dilation (UTD) Risk 分級\nPOSTNATAL PRESENTATION\n≥48 hours\nAPRPD\n10 to <15mm\n＞48 hours\nAPRPD\n≥15mm\n＞48 hours\nAPRPD\n≥15mm\nADRPD: Anterior-posterior\nrenal pelvic diameter\nCentral\ncalyceal dilation\nParenchymal\nthickness normal\nParenchymal\nappearance normal\nUreters\nnormal\nBladder\nnormal\nPeripheral\ncalyceal dilation\nParenchymal\nthickness normal\nParenchymal\nappearance normal\nUreters\nabnormal\nBladder\nnormal\nPeripheral\ncalyceal dilation\nParenchymal\nthickness abnl\nParenchymal\nappearance abnl\nUreters\nabnormal\nBladder\nabnormal\nUTD P1:\nLOW RISK\nUTD P2:\nJINTERMEDIATE RISK\nUTD P3:\nHIGH RISK\n判定流程：\nA\nAPRPD ≥15mm, Peripheral calyceal dilation(Gr.3), ureter dilation=>\nP2以上\nParenchyma 變薄(Gr.4）、外觀不正常、膀胱不正常二＞P3"
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "B1\nB2\nAPD 6mm\nP1\nAPD 15mm\nC2\nP2\nD1\nD2\n552 cmjUPiNE\n235 em\nAPD 23 mm\nRIGNT KID\nSUPINE\nP3"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Postnatal hydronephrosis management",
+                "(接續prenatal發現hydronephrosis)",
+                "History",
+                "產前超音波的發現、羊水量",
+                "產後：UTI history, circumcision, incontinence",
+                "PE：腹部腫塊、膀胱、spinal bifida、外生殖器異常",
+                "檢查與治療：",
+                "若產前單側腎水腫：（比較沒有定論）",
+                "比較不急，48小時以後做renal /bladder echo即可，4週後再follow一次, 若還是Hydro考慮VCUG(評估逆流和posterior urethral valve)和Lasix nephrogram(4-6週做, 評估是否真的是obstruction)來找原因",
+                "治療：無需緊急處理，找到原因後依照不同疾病做處理",
+                "若產前雙側腎水腫：",
+                "必須盡快做renal /bladder echo和VCUG(評估逆流和posterior urethral valve)",
+                "治療：",
+                "Bladder decompression",
+                "Prophylactic antibiotic (amoxicillin, 10 to 25 mg/kg/day)",
+                "找到原因後依照不同疾病做處理",
+                "Hydro就要問羊水",
+                "排尿障礙就要問大便"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "Postnatal hydronephrosis management\n（接續prenatal發現hydronephrosis)\n• Historv\nHydro就要問羊水\n•產前超音波的發現、羊水量\n排尿障礙就要問大便\n•產後：UTIhistory, circumcision, incontinence\n•PE：腹部腫塊、膀胱、spinal bifida、外生殖器異常\n•檢查與治療\n^。著產前單側腎水腫：（比較沒有定論）\n•比較不急，48小時以後做renal /bladder echo即可，4週後再follow一\n•治療：無需緊急處理，找到原因後依照不同疾病做處理\n•若產前雙側腎水腫：\n•必須盡快做renal /bladder echo 和VCUG(評估逆流和posterior urethral\nvalve)\n•治療：\n•Bladder decompression\n• Prophylactic antibiotic (amoxicillin, 10 to 25 mg/kg/ day)\n•找到原因後依照不同疾病做處理"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "Lasix nephrogram/Diuretics Renogram\u000b(Tc-99m MAG3/Tc-99m DTPA + Lasix)",
+                "時機點與目的：4-6週做,區分1.生理性水腫還是真的有阻塞 2.判斷兩邊腎功能的比例(split renal function, Tc-99m MAG3用eGFR算GFR, Tc-99m DTPA用ERPF算GFR, MAG3會經由腎絲球過濾和腎小管再吸收再排泄, 而DTPA100%由腎絲球過濾腎小管不會再吸收, 在小孩或是poor renal function的病人MAG3優於DTPA)",
+                "@單做Tc-99m MAG3/Tc-99m DTPA renogram就是只看split renal function",
+                "核子醫學藥物注射前15分鐘,必須補充生理食鹽水15mL/kg,至少30分鐘;整個檢查過程中,持續保持4mL/kg/ 小時生理食鹽水注射。過程中不放尿管(但要適度排空)",
+                "注射核子藥物後的10-15分會打利尿劑，建議劑量:",
+                "小於一歲：1 mL/kg 體重",
+                "一至十六歲：0.5 mL/kg 體重，劑量至多 40 mL",
+                "Obstruction -> cortex的diuretics T1/2 大於 20min",
+                "Split renal function: 正常兩邊應該要差不多(45-55%), GFR總和應該大於lower limit of age的GFR",
+                "看皮質功能(cold spot = renal scar) → Tc-99m DMSA",
+                "看排泄功能(腎功能) → Tc-99m MAG3 (ERPF) / Tc-99m DTPA (eGFR)",
+                "看有沒有obstruction → Lasix nephrogram(MAG3 or DTPA 加打Lasix)",
+                "看diuretics T1/2>20min"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "Lasix nephrogram/Diuretics Renogram\nTc-99m MAG3/Tc-99m DTPA + Lasix)\n•時機點與且的：4-6週做,區分1.生理性水腫還是真的有阻塞2.判斷兩邊腎\n由腎絲球過濾腎小管不會再吸收，在小孩或是poorrenalfunction的病人\nMAG3優於DTPA)\n@單做TC- g9m MAG3/Tc-9gm DTPA renogram就是只看split renal function\n•核子醫學藥物注射前15分鐘,必須補充生理食鹽水15mL/kg,至少30分鐘;整\n個檢查過程中,持續保持4mL/kg/小時生理食鹽水注射。過程中不放家管(但\n要適度排空)\n••注射核子藥物後的10-15分會打利尿劑，建議劑量：\n•小於一歲：1ml/kg 體重\n•一至十六歲：0.5 ml/kg 體重，劑量至多 40ml\n• Obstruction ->cortex的diuretics T1/2 大於 20min\n•Split renal function: 芷常兩邊應該要差不多(45-55%)，GFR總和應該大於\nlower limit of age的GFR\n看皮質功能(cold spot = renal scar) ≥ Tc-99m DMSA\n看排泄功能(腎功能）＞ TCg9m MAG3 (ERPF) / Tc-9gm DTPA (eGFR)\n看有沒有obstruction > Lasix nephrogram(MAG3 or DTPA 加打Lasix)\n看diuretics T1/2>20min"
+            },
+            {
+              "slide_num": 30,
+              "text": [
+                "Left obstruction",
+                "Split renal function: 比例兩邊差不多",
+                "Lasix nephrogram (Tc99M-MAG3)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "2 sechrame\nPerfusion 0-30s\n20 seconds fram\nUptake Interval\ncounts/ sec\ncounts/ sec\n120日\n800\n400\n1699\n1298\n06\n466\n30\nLt Kidney\n28\n20\n(LT Kidney-BKG)\n(lt Cortex-BKG)\nLasix nephrogram\n(Tc99M-MAG3)\nRT Kidney\nRortic\n39\nseC\nPerfusion\n(RT kidney-BKG)\n(RT Cortex-BKG)\n30\nmin\nFunction\n69\nGates GFR\nAge:23.9 Years\nHeight:(cm): 152.\nWeight:(kg):54.\nRadiopharmaceutical: TCDTPA\nIniected dose:(mCi): 10.24\nDiuretic: Yes\nDiuretic dose (mg):20.\nDiuretic time (min): 25.\nBSA (m^2): 1.49\nGFR mlmin: 99.61\nscaled GFR ml/min: 115.32\nMean normal GFR for age: 115.\nLower limit of GFR for age: 88.\nKidney\nLert\nKidney Area (cm^2):\nKidney depth (cm):\nPerfusion% (int)：\nPerfusion% (S1o)：\nUptake% (int):\nGFR:\n60.88\n5.39\n60.33\n59.12\n53.13\n52.92\nTime to peak:\nPeak to 1/2 peak:\n30min/peak ratio:\n30min/min ratio:\nDiuretic T112:\n27.97\n28.61\n.95\n203\n28.61\nCortex\nTime to peak:\nPeak to 1/2 peak:\n30min/peak ratio:\n30min/3min ratio:\nDiuretic T1/2:\n1.63\n75.89\n.75\n79\n75.89\nRight\n49.92\n5.42\n39.67\n40.88\n46.87\n46.69\n19.97\n16.33\n.77\n151\n12.5\n1.6:\n15\n15\nLeft obstruction\nPostvoid Image\nSplit renal\nfunction:\n比例兩邊\n差不多"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "尿床 (Enuresis)",
+          "slide_count": 9,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 31,
+              "text": [
+                "尿床(Enuresis)",
+                "定義: Discrete episodes of urinary incontinence during sleep in children over 5 years of age in the absence of congenital or acquired neurologic disorders",
+                "15%在五歲會有尿床, 每年有15%會改善,到15歲剩1~2%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "尿床(Enuresis)\n•定義：Discrete episodes of urinary incontinence during sleep in\nchildren over 5 years of age in the absence of congenital or\nacquired neurologic disorders\n•15%在五歲會有尿床，每年有15%會改善,到15歲剩1~2%"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "分類 -1",
+                "Monosymptomatic (MSE)",
+                "Without any other LUTS and without a history of bladder dysfunction",
+                "Nonmonosymptomatic (NMSE) more common",
+                "Enuresis with any daytime LUTS",
+                "Daytime LUTS : include daytime incontinence (not obligatory), frequency, genital or LUT pain, and holding maneuvers (i.e., strategies to postpone voiding).",
+                "30%-50%有行為問題"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "分類-1\n•Monosymptomatic (MSE)\n• Without any other LUTS and without a history of bladder\ndysfunction\n•Nonmonosymptomatic (NMSE) more common\n• Enuresis with any daytime LUTs\n• Davtime LUTS : include davtime incontinence (not\nobligatory), frequency, genital or LUT pain, and holding\nmaneuvers (i.e., strategies to postpone voiding).\n• 30%-50%有行為問題"
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "分類 -2",
+                "Primary enuresis",
+                "Enuresis always present",
+                "佔80%",
+                "Secondary enuresis",
+                "Enuresis started after >six months of dry",
+                "佔20%",
+                "Causes:",
+                "stressful event (e.g., parental divorce, birth of a sibling, sexual abuse)",
+                "organic cause (e.g., UTI, diabetes, obstructive sleep apnea, neurogenic bladder)",
+                "psychological cause (e.g., ADHD or conduct disorder)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "分類-2\n• Primary enuresis\n•Enuresis always present\n•佔80%\n• Secondary enuresis\n•Enuresis started after >six months of dry\n•佔20%\n• Causes:\n•stressful event (e.g., parental divorce, birth of a sibling,\nsexual abuse)\n• organic cause (e.g., UTl, diabetes, obstructive sleep\napnea, neurogenic bladder)\n• psychological cause (e.g., ADHD or conduct disorder)"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Mono-symptom尿床原因",
+                "夜間多尿(小兒定義: 夜間尿量多>130% estimated bladder capacity)",
+                "夜間膀胱容積減少或活性增加",
+                "不易喚醒",
+                "@Maturational delay in the ultimate development of bladder control"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss33.webp",
+              "hidden": false,
+              "ocr_text": "Mono-symptom尿床原因\n！•夜間多尿(小兒定義：夜間尿量多>130% estimated\nbladder capacity)\n1．夜間膀胱容積減少或活性增加\n1.不易喚醒\n@Maturational delay in the ultimate development of bladder\ncontrol"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "尿床評估",
+                "病史",
+                "白天有沒有頻尿、急尿、尿失禁、喝水的習慣、便秘。",
+                "遺尿尿量多寡、次數與時間(前半夜或後半夜)",
+                "夜間睡眠狀態",
+                "PE:腹部、會陰部、外生殖器檢查。",
+                "Voiding diary(診斷夜間多尿, NPi>30%)",
+                "U/A",
+                "如果合併其他排尿症狀, 考慮urine SG, UFR/PVR"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss34.webp",
+              "hidden": false,
+              "ocr_text": "尿床評估\n•病史\n•白天有沒有頻尿、急尿、尿失禁、喝水的習慣、便秘。\n•遺尿尿量多寡、次數與時間(前半夜或後半夜)\n•夜間睡眠狀態\n•PE:腹部、會陰部、外生殖器檢查。\n•voiding diary(診斷夜間多尿， NP≥30%)\n•U/A\n•如果合併其他排尿症狀，考慮urine SG, UFR/PVR\n預期膀胱容量是（年紀+1）×30cC\n體重25公斤 •每日水分攝取：10×100+ (25-10)×50=1750\n＄1歲以後每日尿量大約(毫升)=600＋年齡×100\n，夜間排尿量總合末大於預期膀胱容量30%以上，不像nocturnal\npolyuria"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "MSE Management",
+                "5歲以上再治療",
+                "Urotherapy (AUA update):告訴病人這是正常的,會改善.提供資訊給病人及家屬告訴病人是可以治療的",
+                "Conservative treatment: 白天喝水，規則解尿，睡前解尿，治療便秘",
+                "If 夜間多尿：",
+                "DDAVP",
+                "劑量: 建議初始劑量為睡前(1小時)0.2 mg，Max 0.4 mg  (成人夜間多尿症仿單寫0.1起始)",
+                "鼻噴劑較易造成水中毒，不建議用",
+                "If 夜間膀胱容量下降或過動：",
+                "第一線->Alarm treatment 鬧鐘治療",
+                "第二線->Anti-muscarininc agent (maximum voided volume at night <70% EBC, 包括Oxbu (5mg) , Tolterodine (2mg), Propiverine (第一線使用0.4mg/kg)）",
+                "第三線->TCA (Imipramine/Tofranil, 9歲以上使用, 睡前10-25mg)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss35.webp",
+              "hidden": false,
+              "ocr_text": "MSE Management\n•5歲以上再治療\n•发景響养优人是当发器義區病人造是正糖的，𥂝政琶,提供貧訊給病人\n•Conservgtve treatment:冒奚喝水，規則解尿，睡前解尿．治療便秘\n•4夜間多尿：\n• DDAVP\n•劑量;建議初姈劑曇為睡前(1小時)0.2mg：Max 0.4mg（成人夜間多\n造發聚市毒，不建議用\n鬧鐘 V§ 抗利尿激素\n•正常夜間尿量正常膀胱容量\n。兩者皆可 Either alarm or desmopressin\n•正常夜間尿量膀胱容量小\n。鬧鐘治療\n•夜間多尿正常膀胱容量\n。抗利尿激素\n•夜間多尿膀胱容量小\n。合併兩者 Combine therapy\n•1夜間膀胱容量下降或過動：\n•第一線->Alarm treatment 鬧鐘治療\n：素二般sApe nusearipinc epsen Imgimug voided welumae線使\n≤70%EBC， 包括Oxbu(5mg), Tolterodine (2mg), Propiverine (第一\n用0.4mg/kg)）\n•第三線-＞TCA (Imipramine/Tofranil, 9歲以上使用，睡前10-25mg)"
+            },
+            {
+              "slide_num": 37,
+              "text": [
+                "NMSE Management"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss36.webp",
+              "hidden": false,
+              "ocr_text": "NMSE Management\n•治療便秘\n•治療其他排尿症狀\n。排尿障礙、頻尿\n•行為問題須轉診\n。解決以上問題，同單一症狀尿床治療原則"
+            },
+            {
+              "slide_num": 38,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss37.webp",
+              "hidden": false,
+              "ocr_text": "閙鐘治療 Alarm Therapy\n•原理：偵測尿濕發出聲音、震動或光線\n。理論：將膀胱脹尿即解尿的訊號，轉變為膀胱脹\n尿起床尿尿\nWireless Alar Unit\nSensor\n-Glazener CM, Evans JH, Peto RE. Alarm interventions for nocturnal enuresis in children. The Cochrane database of systematic reviews. 2005\n(2)：CD002911.\n-photo : http://en.wikipedia.org/wiki/Bedwetting_alarm"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "2/3尿床兒童有效，其中50%停用仍有效"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss38.webp",
+              "hidden": false,
+              "ocr_text": "閙鐘治療 Alarm Therapy\n•治療時間\n。2-12居\n•治療成功定義\n。無尿床14天\n•立即叫醒/延遲叫醒 Immediate/Delay alarm (3min)\n。立即叫醒較佳\n。叫醒兒童優於叫醒父母\n•穿戴式鬧鐘優於床墊式\n•電極式Electric shock alarm：有燒傷案例，停用\n•2/3尿床兒童有效，其中50%停用仍有效"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "VU Reflux：診斷與分級",
+          "slide_count": 10,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 40,
+              "text": [
+                "VU reflux"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss39.webp",
+              "hidden": false,
+              "ocr_text": "vUreflux"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "VU reflex",
+                "Prevalence: 0.4–1.8% (1%) in normal children.",
+                "Incidence",
+                "70% in infants with UTI",
+                "30-50% in children with UTI",
+                "Boy > Girl, 29% vs 14%",
+                "Primary VUR原因：Circumferential intravesical layer有缺陷(內縱中環外縱)",
+                "VUR can be an inherited condition",
+                "siblings - noninvasively screening for cortical abnormalities first",
+                "screening for reflux if history of compounding factors such as UTI or BBD",
+                "遺傳傾向於體顯性",
+                "PAX2 gene, ACE, AGTR2",
+                "(未證實是主要因素)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss40.webp",
+              "hidden": false,
+              "ocr_text": "vUreflex\n•Prevalence: 0.4-1.8% (1%) in normal children.\n• Incidence\n•70% in infants with UTl\n• 30-50% in children with UTI\n•Boy > Girl, 29% v$ 14%\n•Primary VUR原因：Circumferential intravesical layer有缺陷(內縱中環外縱）\n• VUR can be an inherited condition\n•siblings- noninvasively screening for cortical abnormalities first\n• screening for reflux if history of compounding factors such as UTI or BBD\n•遺傳傾向於體顯性\nKEY POINTS: SCREENING, INHERITANCE,\nAND GENETICS\n•PAX2 sene, ACE, AGTR2\n• The prevalence of reflux is higher in siblings.\n(未證實是主要因素）\n• There is a tendency for an autosomal dominant pattern of\ninheritance.\n• Probably many genes are involved.\n• It cannot be assumed that all cortical abnormalities in reflux-\ning siblings are acquired. The lack of prospective studies\nshould temper the notion of mass screening of siblings."
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "Campbell 說不需要Survey VUR",
+                "直接先Survey可能的腎臟損傷",
+                "(上一頁, 參考看看)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss41.webp",
+              "hidden": false,
+              "ocr_text": "Campbell說不需要survey VUR\n直接先Survey可能的腎臟損傷\n（上一頁，參考看看）\n3.13.2.3 Recommendations for paediatric screening of vUR\nRecommendations\nInform parents of children with vesicoureteric reflux (VUR) that siblings and offspring have a  Strong\nhigh prevalence of VUR.\nUse renal ultrasound (US) for screening of sibling(s).\nUse voiding cystourethrography if there is evidence of renal scarring on US or a history of\nurinary tract infection.\nDo not screen older toilet-trained children since there is no added value in screening for\nVUR.\nStrength rating\nStrong\nWeak\nWeak"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "VUR grading",
+                "I \t到輸尿管",
+                "II \t到 pelvis與 calyx",
+                "III \tureter微脹, pelvis與calyx微blunting",
+                "IV \t中等脹 U開始tortuous",
+                "V\t很脹很tortuous,papillary看不出來"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss42.webp",
+              "hidden": false,
+              "ocr_text": "VUR grading\n到輸尿管\n到 pelvis與 calyx\nureter微脹，pelvis與\ncalyx微blunting\n中等脹U開始\ntortuous\n很脹很\ntortuous,papillary看不出來\nTABLE 137-3 International Classification of\nVesicoureteral Reflux\nGRADE\nDESCRIPTION\n1\n2\n3\n4\n5\nInto a nondilated ureter\nInto the pelvis and calyces without dilation\nMild-to-moderate dilation of the ureter, renal pelvis,\nand calyces with minimal blunting of the fornices\nModerate ureteral tortuosity and dilation of the\npelvis and calyces\nGross dilation of the ureter, pelvis, and calyces; loss\nof papillary impressions; and ureteral tortuosity\nGRADES OF REFLUX\nFigure 137-3. International classification of vesicoureteral reflux."
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "VUR type",
+                "Primary VUR : inadequate closure of UVJ",
+                "intra-vesicle ureter 較短 (正常人length:diameter = 5:1)",
+                "anti-reflux的功能較差",
+                "Secondary VUR : 1.大部分是因為high intravesical pressure, often with BOO or bladder poor compliance 2.inflammatory process(UTI, stone) 3. UVJ異常(開過刀, ureterocele)",
+                "48% to 70% of PUV patients"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss43.webp",
+              "hidden": false,
+              "ocr_text": "VUR type\n• Primary VUR : inadequate closure of UVJ\n•intra-vesicle ureter 較短（正常人length:diameter = 5:1)\n•anti-reflux的功能較差\n•Secondary VUR:1.大部分是因為high intravesical pressure, often with Boo or\nbladder poor compliance 2.inflammatory process(UT1, stone) 3.UVJ異常(開過\nJ,ureterocele)\n• 48% to 70% of PUV patients\nTYPE\nPrimary\nPrimary associated with other\nmalformations of the ureterovesical\njunction\nSecondary to increased intravesical\npressure\nSecondary to infilammatory\nprocesses\nCAUSE\nCongenital incompetence of\nthe valvular mechanism of\nthe vesicoureteral junction\nUreteral duplication\nUreterocele with duplication\nUreteral ectopia\nParaureteral diverticula\nNeuropathic bladder\nNonneuropathic bladder\ndysfunction\nBladder outlet obstruction\nSevere bacterial cystitis\nForeign bodies\nVesical calculi\nClinical cystitis\nSurgery\nSecondary to surgical procedures\ninvolving the ureterovesical\niunction"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "Risk factor of renal scarring/",
+                "Spontaneous resolution/VUR syndrome",
+                "Risk factor for renal scarring in patients",
+                "LUTD/BBD(易recurrent UTI)",
+                "Recurrent febrile UTI",
+                "Secondary VUR",
+                "Spontaneous resolution",
+                "Young patient with low-grade reflux",
+                "80% of low-grade and 50% of grade 3 reflux will resolve spontaneously, high grade 則<25%",
+                "Resolution rate 整體來說約20% per year, 並不會隨著年紀增加而有太大變動",
+                "VUR syndrome是一個臨床症候群, 包含Posterior Urethral valve, Unilateral VU reflux, Renal dysplasia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss44.webp",
+              "hidden": false,
+              "ocr_text": "Risk factor of renal scarring/\nSpontaneous resolution/VUR syndrome\n•Risk factor for renal scarring in patients\n•LUTD/BBD(易recurrent UTI\n• Recurrent febrile UTl\n• Secondary VUR\n• Spontaneous resolution\n• Young patient with low-grade reflux\n• 80% of low-grade and 50% of grade 3 reflux will resolve\nspontaneously, high grade 則≤25%\n•Resolution rate 整體來說約20% per year,並不會隨著年紀增加而\n有太大變動\n•vUR syndrome是一個臨床症候群，包含Posterior Urethral valve,\nUnilateral VU reflux, Renal dysplasia"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "About BBD in VUR(AUA)",
+                "BBD is by far one of the most critical and modifiable variables that affect VUR management and UTIs",
+                "BBD is associated with",
+                "a higher incidence of UTIs while on antibiotic prophylaxis",
+                "a higher incidence of UTIs after surgical correction",
+                "less VUR resolution at 24 months from diagnosis",
+                "reduced success of endoscopic surgery",
+                "did not reduce the success of open surgical reflux correction",
+                "About LUTD in VUR",
+                "Among toilet-trained children, those with both LUTD and VUR are at higher risk of developing recurrent UTIs than children with isolated VUR"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss45.webp",
+              "hidden": false,
+              "ocr_text": "About LUTD in VUR\n• Among toilet-trained children, those with both LUTD and VUR\nare at higher risk of developing recurrent UTls than children with\nisolated VuR\nAbout BBD in VUR(AUA)\n• BBD is by far one of the most critical and modifiable variables\nthat affect VUR management and UTIs\n•BBD is associated with\n• a higher incidence of UTIs while on antibiotic prophylaxis\n• a higher incidence of UTIs after surgical correction\n• less VUR resolution at 24 months from diagnosis\n• reduced success of endoscopic surgery\n•did not reduce the success of open sursical reflux correction"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "About LUTD in VUR",
+                "History",
+                "Urgency, wetting, constipation or holding maneuvers",
+                "Evaluation",
+                "Voiding charts, uroflowmetry and residual urine",
+                "Any patient with LUTD and a history of febrile UTI – VCUG",
+                "Any patient failed therapy for LUTD – UDS",
+                "Combining a urodynamic study with VCUG (VUDS)",
+                "Among toilet-trained children, those with both LUTD and VUR are at higher risk of developing recurrent UTIs than children with isolated VUR"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch09_pediatric/render/sh47.webp",
+              "ocr_text": "About LUTD in VUR\n•History\n•Urgency, wetting, constipation or holding maneuvers\n•Evaluation\n• Voiding charts, uroflowmetry and residual urine\n• Any patient with LUTD and a history of febrile UTI - VCUG\n• Any patient failed therapy for LUTD -UDs\n• combining a urodynamic study with VcUG (vUDS)\n• Among toilet-trained children, those with both LUTD and\nVUR are at higher risk of developing recurrent UTls than\nchildren with isolated VUR"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "High risk -四個都要有才是high risk (STSG)",
+                "Symptomatic (fever, UTI)",
+                "Post Toilet training",
+                "Renal Scar (+)",
+                "High Grade (IV-V)",
+                "(LUTD不是必要條件)",
+                "Low risk",
+                "No renal scar",
+                "Low grade reflux (I- III)",
+                "沒有LUTD",
+                "Moderate risk - others",
+                "要分上面的risk就要完成一些評估：有沒有fever/UTI症狀, 有無LUTD(Voiding diary, UFR/PVR), 有無renal scar(DMSA renogram)",
+                "VCUG發現VUR之後, 下一步？",
+                "->分primary還是secondary VUR",
+                "->Secondary VUR要先找原因並處理",
+                "->Primary VUR則繼續分Risk group(EAU及TUA guideline)來決定治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss46.webp",
+              "hidden": false,
+              "ocr_text": "VCUG發現VUR之後，下一步？\n-二分primary還是secondary VUR\n-=Secondary VUR要先找原因並處理\n-≥Primary VUR則繼續分 Risk group(EAU及TUA guideline)來決定治\n•High risk-四個都要有才是high risk (STSG)\n•Symptomatic (fever, UTI)\n• Post Toilet training\n•Renal Scar +\n• High Grade (Iv-V)\nLLUTD不是必要條件）\n• Low risk\n• No renal scar\n• Low grade reflux (I-11)\n•沒有LUTD\n• Moderate risk - others\nrenogram)"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "VUR其他的risk factor"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss47.webp",
+              "hidden": false,
+              "ocr_text": "VUR其\n他的risk\nfactor\nRisk factor\nGender\nAge\nRace\nLow risk\nMale\nover 5y\nHigh risk\nFemale\nUnder iy\nAfro-American\nCauscasian\nLaterality\nUnilateral\nBilateral\nGrade\nBBD\nGrade I-ll\nGrade lll-V\nNo\nScars\nPresentation\nNo\nPrenatal\nhydronephrosis\nYes\nYes\nMultiple febrile\nUTIs\nFig. 29.19. Risk factors and risk groups for vesicoureteral reflux. (Modified\nfrom Hidas G, Nam A, Soltani T, et al. Primary vesico-ureteric reflux: The\nneed for individualised risk stratification. Arab J Urol. 2013;11[11:8-12.)"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "VU Reflux：治療（CAP/Endoscopic/Open）",
+          "slide_count": 13,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 50,
+              "text": [
+                "High risk VUR 治療(EAU/TUA)",
+                "Symptomatic (fever/UTI)",
+                "Post Toilet training",
+                "Renal Scar (+)",
+                "High Grade (IV-V)",
+                "Breakthrough infection: 在使用CAP的期間出現UTI",
+                "open/endoscopic surgery",
+                "有LUTD就要處理LUTD",
+                "都要用CAP(single daily low dose, 晚上給藥)",
+                "break through UTI或持續VUR就開刀(open做reinplant/endoscopic打Deflux)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss48.webp",
+              "hidden": false,
+              "ocr_text": "High risk VUR 治療(EAU/TUA)\n風險\n臨床表現\n起始治療\n評論\n追蹤\n分級\n高度 有症狀的男性或\n一律先用持續預防  有高機率必須及早| 必須對於泌尿道感\n風險 是排尿訓練後的 性抗生素 (CAP)\n介入治療\n染及下泌尿道功能\n女性，同時有高度 治療下泌尿道功能\n異常給予更積極地\n逆流（第四到五異常：在农破國染\n追蹤；六個月後要\n級）、腎臌異常及\n或持續碰流時寸考\n進行完整的重新評\n下泌尿道功能異常\n慮介入治療\n估\n高度 有症狀的男性或\n開腹手術比內視鏡  術後的VCUG 只在\n風險  是排尿訓練後的\n手術的治療效果佳\n有需要時再進行；\nopen/endoscopic surgery\n女性，筒時省嵩度\n腎臌耍逭蹤到青春\n逆流（第四到五\n期為止\n級）、腎臟異常但\nBreakthrough infection:在\n使用CAP的期間出現UTI\n無下泌尿道功能異\n有LUTD就要處理LUTD\n都要用CAP(single daily low dose,晚上給藥）\nbreak through UT1或持續VUR就開刀(open\n做reinplant/endoscopic打 Deflux)\nSymptomatic\n(fever/UT\nPost Toilet training\nRenal Scar +\nHigh Grade (N-V)"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "Medium risk VUR 治療",
+                "分成high grade VUR和low grade VUR兩大類, high grade治療明確, 跟high risk VUR一樣, low grade VUR治療有爭議, CAP可用可不用",
+                "另外, EAU說一歲以內都要給CAP"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss49.webp",
+              "hidden": false,
+              "ocr_text": "Medium risk\nVUR 治療\n1. 分成high grade\nvUR和low grade\nVUR兩大類,high\ngrade治療明確，跟\nhigh risk VUR一樣，\nlow grade VUR治\n療有爭議,CAP可\n用可不用\n2.另外，EAU說一歲\n以內都要給CAP\n風險\n臨床表現\n起始治療\n評論\n追蹤\n分級\n中度 有症狀的男性或是先用持續預防性抗\n男性有較高機會自|追蹤泌尿道感染及腎\n風險 排尿训練前的女 生素(CAP)，在\n然緩解\n臟水腫；12-24 倜月\n性，同時有高度逆\n突破感染或持續逆\n後完整的重新評估\n流及腎臟異常\n流時可考慮介入治\n療\n中度\n無症狀的病人（產\n總是先用持續預防\n風險|前診斷腎水腫或病 性抗生素 (CAP)\n人兄弟姊妹），同 治療下泌尿道功能\n時有高度道流及腎異常：在突破感染\n追蹤泌尿道感染及\n腎臟水腫；12-24\n個月後完整的重新\n評估\n臌異常\n或持續逆流時可考\n慮介入治療\n中度\n有症狀的男性或是|總是先用持續預防\n對於持續有下泌尿追蹤泌尿道感染、\n風險 排尿訓練後的女  性抗生素 (CAP)\n道功能異常的病| 下泌尿道功能異常\n性，同時有高度逆 治療下泌尿道功能人，除了排尿訓練  及腎臟狀況；排尿\n流、腎臟正常但有\n異常；在突破感染| 治療 (urotherpay )\n訓練治療成功後進\n下泌尿道功能異常\n或持續逆流時可考\n外，必須考慮介入 行完整的重新評估\n慮介入治療\n治療，但目前治療\n的選擇仍有很大爭\n議\n中度  有症狀的男性或是 治療選擇有爭議，\n風險排尿訓練後的女 內視鏡治療可以是\n性，同時有低度逆\n個選項。如果有下\n流、腎臟異常、有 泌尿道功能異常需\n或無下泌尿道功能|給予治療\n異常\n中度| 所有有症狀的病 總是先治療下泌尿\n風險 人，腎臟正常但有 道功能異常，可以\n低度逆流、有下泌使用或不使用持\n尿道功能異常\n續預防性抗生素\n(CAP）\n追蹤泌尿道感染、\n下泌尿道功能異常\n和腎臟狀態到青舂\n期為止\n追蹤泌尿道感染、\n下泌尿道功能異常"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "Low risk VUR 治療",
+                "分成有症狀和沒症狀兩大類, 都可以不治療或是給CAP",
+                "另外, EAU說一歲以內都要給CAP"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss50.webp",
+              "hidden": false,
+              "ocr_text": "Low risk VUR 治療\n風險\n臨床表現\n起始治療\n評論\n追蹤\n分級\n低度 所有有症狀的病\n不需治療或給予持| 如果決定不給予治|追蹤泌尿道感染\n風險人，腎臟正常但有\n續預防性抗生素療，必須告訴照顧\n低度逆流、無下泌\n(CAP)\n者感染的風險\n尿道功能異常\n低度| 所有無症狀的病 不需治療或對嬰兒  如果決定不給予治|追蹤泌尿道感染\n風險| 人，腎臟正常但有\n給予持續預防性抗療，必須告訴照顧\n低度逆流\n生素 （CAP)\n者感染的風險\n1．分成有症狀和沒症狀兩大類，都可以不治療\n或是給CAP\n2.另外，EAU說一歲以内都要給CAP"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "小補充：CAP 只能改善感染不能改善scar/CKD risk。晚上給比較好(藥泡在膀胱時間久)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss51.webp",
+              "hidden": false,
+              "ocr_text": "Recommendations\nlnitially treat all patients diagnosed within the first year of life with continuous antibiotic\nprophylaxis, regardless of the grade of reflux or presence of renal scars.\nOffer immediate, parenteral antibiotic treatment for febrile breakthrough infections.\nOffer definitive surgical or endoscopic correction to patients with frequent breakthrough\nlinfections.\nOffer open surgical correction to patients with persistent high-grade reflux and endoscopic\ncorrection for lower grades of reflux.\nInitially manage all Children presenting at age one to five years conservatively.\nOffer surgical repair to children above the age of one presenting with high-grade reflux and\nabnormal renal parenchyma.\nOffer close surveillance without antibiotic prophylaxis to children presenting with lower\ngrades of reflux and without symptoms.\nEnsure that a detailed investigation for the presence of lower urinary tract dysfunction\n(LUTD) is done in all and especially in children after toilet-training. If LUTD is tound, the\ninitial treatment should always be for LUTD.\nOffer surgical correction, if parents prefer definitive therapy to conservative management.\nStrength rating\nWeak\nStrong\nWeak\nStrong\nStrong\nI Weak\nStrong\nStrong\nStrong\n小補充：CAP 只能改善感染不能改善scar/ CKD risk。晚上給比較好(藥泡在膀胱\n時間久）"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "Endoscopic surgery",
+                "Endoscopic injection of bulking agents",
+                "intramural part of the ureter in a submucosal location",
+                "成功率70% but High recurrence rate: 20% in 2 years",
+                "Content: polytetrafluoroethylene (PTFE or Teflon), collagen, autologous fat, polydimethylsiloxane, silicone, chondrocytes, dextranomer/hyaluronic acid (Deflux)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss52.webp",
+              "hidden": false,
+              "ocr_text": "Endoscopic surgery\n• Endoscopic injection of bulking agents\n•intramural part of the ureter in a submucosal location\n•成功率70% but High recurrence rate: 20% in 2 years\n• Content: polytetrafluoroethylene (PTFE or Teflon), collagen,\nautologous fat, polydimethylsiloxane, silicone, chondrocytes,\ndextranomer /hyaluronic acid (Deflux)"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "Open surgery of VUR",
+                "手術原則: 術的過程要小心減少bladder ureter 的injury 及血液供應, 避免ureter kinking, tension free. Antireflux, tunnel : lumen =5:1",
+                "Intravesical",
+                "Supra-hiatal",
+                "Politano-Leadbetter",
+                "Paquin Technique",
+                "Infra-hiatal",
+                "Cohen cross-trigonal",
+                "Glenn-Anderson",
+                "Extravesical",
+                "Lich-Gregoir"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss53.webp",
+              "hidden": false,
+              "ocr_text": "Open surgery of VUR\n•委体厦點 術的過程要小心減 bladder wretsr 的iniury 及血液\n避免ureter kinking, tension free. Antireflux, tunnel : lumen\n•Intravesical\n•Supra-hiatal\n• Politano-Leadbetter\n• Paquin Technique\n• Infra-hiatal\n• Cohen cross-trigonal\n• Glenn-Anderson\n•Extravesical\n• Lich-Gregoir"
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "Politano-Leadbetter\u000b(intravesical suprahiatal reimplantation)",
+                "Best choice",
+                "在原本UO的內側原本的tunnel上方(suprahiatal)做一條submucosal tunnel, 跟trigone同走向",
+                "優點：可還原anatomy, 未來要做URS也可行。long tunnel。",
+                "缺點 – 輸尿管可能會kinking"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss54.webp",
+              "hidden": false,
+              "ocr_text": "Politano-Leadbetter\n(intravesical suprahiatal reimplantation)\n• Best choice\n•在原本UO的内側原本的\ntunnel上方(suprahiatal)做\n一條submucosal tunne,跟\ntrigone 同走向\n•優點：可還原anatomy, 未\n來要做URS也可行。long\ntunnel。\n•缺點-輸尿管可能會\nkinking\nC\nD\nFigure 137-17. Politano-Leadbetter technique. A, Typical approach to the bladder for reimplan-\ntation. A transverse, lower abdominal incision (dashed line) is made along a skin crease one\nor two tingerbreadths above the symphysis pubis. B, Fine sutures are placed above and below\nthe ureteric oritice for handling. A teeding tube in the ureter alds in the initial dissection. C. A\nneedle-tip cautery outiines a circumferential incision around the orifice. D. Tenotomy scissors\nInitially establish the plane of dissection Inferiorly, where ureteral damage can be avolded. The\nplane is then carrled around the ureter.\nContinued"
+            },
+            {
+              "slide_num": 57,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss55.webp",
+              "hidden": false,
+              "ocr_text": "G\nFigure 137-17, cont'd E, With the aid of a lighted suction tip and two Senn retractors, a fine\ngauze dissector is used to sweep the peritoneum from the posterior bladder wall. F, After\nsweeping the peritoneum away, a blunt right-angle clamp indents the bladder from behind at\na new hiatus approximately 2.5 cm superior and somewhat medial to the original hiatus. G, The\nclamp is incised on from within and generously spread to make certain that the new hiatus is\nwide enough. H, A second right-angle clamp follows the first from within the bladder to the\noriginal hiatus.\nFigure 137-17, cont'd 1, The right-angle clamp grasps the stay suture, and the ureter is pulled\nthrough the new hiatus. J, The inferior lip of muscle at the new hiatus is divided for a few mil-\nlimeters to eliminate any ureteral angulation at its entrance to the submucosal tunnel that is\ncreated with scissors. K, The ureter is brought through the new tunnel to the original hiatus.\nL, The ureter is anastomosed to the original hiatus in the classic Politano-Leadbetter technique.\nProximal mucosa can be closed over the ureter to give the tunnel additional length. M, Ureteral\nadvancement is also hepful, especially if the original hiatus is laterally posrtioned. A second\nsubmucosal tunnel can be created toward the bladder neck to place the new orifice in a more\ninferior position and gain additional length for the reimplant. (A to D and F to M, from Retik AB.\nColodny AH, Bauer SB. Pediatric urology. In: Paulson DF, editor. Genitourinary surgery, vol. 2.\nNew York: Churchill Livingstone; 1984. p. 757-63; E, from Keating MA, Retik AB. Management\nof failures of ureteroneocystostomy. In: McDougal ws, edrtor. Difficult problems in urologic\nsurgery. Chicago: Year Book; 1989. p. 121.)"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "Cohen cross-trigonal",
+                "(intravesical infrahiatal reimplantation)",
+                "在原本UO的內側原本的tunnel下方(infraahiatal)做一條submucosal tunnel, 跟trigone同走向",
+                "優點：簡單, 成功率高(>95%), 小膀胱可做",
+                "缺點 – 輸尿管角度改變,之後要走URS或放ureter catheter很難"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss56.webp",
+              "hidden": false,
+              "ocr_text": "Cohen cross-trigonal\n(intravesical infrahiatal reimplantation)\n•在原本UO的內側原本的\ntunnel下方(infraahiatal)做\n一條submucosaltunnel,跟\ntrigone同走向\n•優點：簡單，成功率高\n(>95%)，小膀胱可做\n•缺點一輸尿管角度改變，之\n後要走URS或放ureter\ncatheter很難\nB\nFigure 137-19. Cohen cross-trigonal technique, unilateral reimplan-\ntation. After the ureter is freed (A), a submucosal tunnel is made, with\nthe new mucosal hiatus iust above the contralateral ureteral orifice\n(B). (From Retik AB, Colodny AH, Bauer SB. Pediatric urology. In:\nPaulson DF, editor. Genitourinary surgery, vol. 2. New York: Churchil\nLivingstone; 1984. p. 764.)"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "Glenn-Anderson \u000b(intravesical infrahiatal reimplantation)",
+                "用原本的tunnel把UO延伸到靠近bladder neck",
+                "優點：類似原本anatomy, 未來要做URS也可行, 不會kinking",
+                "缺點 – tunnel能夠延伸的距離有限(受限於UO到BN的距離)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss57.webp",
+              "hidden": false,
+              "ocr_text": "Glenn-Anderson\n(intravesical infrahiatal reimplantation)\n•用原本的tunnel把UO延伸\n到靠近bladder neck\n•優點：類似原本anatomy,\n未來要做URS也可行，不會\nkinking\n•缺點-tunnel能夠延伸的\n距離有限(受限於U0到BN的\n距離)\n5\n6\nFigure 137-18. Glenn-Anderson technique. The ureter is mobilized\nand advanced beneath a new submucosal tunnel. (From Glenn JF,\nAnderson EE. Distal tunnel ureteralreimplantation.J Urol 1967;97:623.)"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "Lich-Gregoir \u000b(extravesical detrusorrhaphy technique 重接)",
+                "膀胱不打開, 把膀胱從外面開一個tunnel再把輸尿管埋進去重接",
+                "優點：簡單, 膀胱不用打開(減少血尿, bladder spasm",
+                "缺點 – 術後20%病人會短暫排尿功能不佳"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss58.webp",
+              "hidden": false,
+              "ocr_text": "Lich-Gregoir\n(extravesical detrusorrhaphy technique 重接）\n•膀胱不打開，把膀胱\n從外面開一個tunnel\n再把輸尿管埋進去\n重接\n•優點：簡單，膀胱不\n用打開(減少血尿，\nbladder spasm\n•缺點一術後20%病人\n會短暫排尿功能不佳\nabaralad\nHeogostric\nB\nC"
+            },
+            {
+              "slide_num": 61,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss59.webp",
+              "hidden": false,
+              "ocr_text": "E\nFigure 137-21. Modified Lich-Gregoirldetrusonhaphy technique. A, The ureter is identified and\ngently grasped after ligation of the obliterated hypogastric artery. B, The ureter is circumter-\nentially mobilized at its intersection with the bladder by incising the detrusor at the level of the\nureteral hiatus. C, The serosal and muscular layers of the bladder (4 to 5 cm) are opened along\na straight course cephalad and lateral from the ureterovesical junction to create the trough for\nreimplantation. A tacking suture aids in orientation. D, The bladder mucosa is elevated off\nmuscle wall, and vest-type sutures are placed from the detrusor at the distal limit of dissection\nto the proximal ureteral adventitia and back again through the same tissue planes. Tying of the\nvest sutures advances and anchors the ureter onto the trigone. E, Reapproximation of the\ndetrusor creates a long submucosal tunnel and completes the repair. (From Peters C, Retik\nAB. Ureteral reimplantation including megaureter repair. In Marshall FF, editor. Textbook of\noperative urology. Philadelphia: Saunders; 1996. p. 868-70.)"
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Complications",
+                "Early Complications",
+                "Obstruction(Twisting/Kinking of ureter)",
+                "Tunnel related, hematoma",
+                "Persistent Reflux",
+                "bladder inflammation and bladder dysfunction",
+                "Contralateral Reflux",
+                "本來就有一開始沒發現或新出現(大約10%病人接受re-implantation後對側新發生VUR, 70%會自己緩解, 追蹤即可, 有infection or scar 再治療)",
+                "Long-term complication",
+                "Obstruction",
+                "Anatomy 設計不良",
+                "Recurrent or Persistent Reflux",
+                "high-grade reflux",
+                "Anatomy 設計不良",
+                "failure to recognize secondary reflux"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss60.webp",
+              "hidden": false,
+              "ocr_text": "Complications\n• Early Complications\n• Obstruction(Twisting/Kinking of ureter)\n•Tunnel related, hematoma\n• Persistent Reflux\n• bladder inflammation and bladder dysfunction\n• Contralateral Reflux\n•本來就有一開始沒發現或新出現(大約10%病人接受re-implantation後\n對側新發生VUR，70%會自己緩解，追蹤即可，有infection or scar 再治\n•Long-term complication\n• Obstruction\n•Anatomy 設計不良\n• Recurrent or Persistent Reflux\n• high-grade reflux\n•Anatomy 設計不良\n• failure to recognize secondary reflux"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "Megaureter",
+          "slide_count": 3,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 63,
+              "text": [
+                "Megaureter"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss61.webp",
+              "hidden": false,
+              "ocr_text": "Megaureter"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "定義/分類/治療",
+                "定義：輸尿管擴張為表現, 直徑大於7 mm(小孩輸尿管正常直徑很少超過 5 mm)",
+                "分類: 大致上根據病因及表現來區分不同類型",
+                "Primary: 導因於輸尿管的內在原因, 多塞在遠端輸尿管或UVJ",
+                "Secondary: 導因於膀胱的影響 (神經性膀胱, BOO, VUR, 感染)",
+                "=> 新生兒可以先考慮保守性藥物治療, 有機會spontaneous resolution (85%), Resolution 的可能性和輸尿管擴張的直徑成反比",
+                "=> 手術適應症:",
+                "反覆有症狀UTI",
+                "超音波上progressive dilation",
+                "differential renal function <40%  (表腎臟有輕至中度損害)",
+                "追蹤過程中  differential renal function 下降> 5%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss62.webp",
+              "hidden": false,
+              "ocr_text": "定義/分類/治療\n•定義：輸尿管擴張為表現，直徑大於7mm(小孩輸尿管正常直徑很少超過\n5 mm)\n•分類：大致上根據病因及表現來區分不同類型\n•Primary:導因於輸尿管的内在原因，多塞在遠端輸尿管或uvJ\n•Secondary:導因於膀胱的影響（神經性膀胱，BO0,VUR, 感染）\n二新生兒可以先考慮保守性藥物治療，有機會spontaneous resolution (85%)，\nResolution 的可能性和輸尿管擴張的直徑成反比\n=手術適應症：\n•反覆有症狀UTI\n••超音波 上progressive dilation\n•differential renal function <40%（表腎臟有輕至中度損害）\n•追蹤過程中 differential renal function 下降>5%"
+            },
+            {
+              "slide_num": 65,
+              "text": [
+                "手術方式",
+                "@ 著重在輸尿管的tailor, 以達到較適當的長寬比, 有利於有效的收縮, 並且重種達到抗逆流效果",
+                "Folding: 只適合中度擴張直徑 <1.7 cm, 手術完容易bulky 較難重種",
+                "Plication: 適合中度擴張, 血流保存較好, 輸尿管壁完整, 減少缺血狹窄",
+                "Exicision: 適合嚴重擴張或較厚的輸尿管, 缺點會影響血流造成併發",
+                "手術併發症",
+                "阻塞 => stenting, repeat ureteroneocystostomy",
+                "persistent dilatation => repeat stenting, reimplantation",
+                "V-U reflux",
+                "low grade: 保守治療",
+                "high grade: subureteric injection, if failed and recurrent febrile , revision surgery"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss63.webp",
+              "hidden": false,
+              "ocr_text": "•手術方式\n@著重在輸尿管的tailor，以達到較適當的長寬比，有利於有效的收縮，並\n且重種達到抗逆流效果\n•Folding: 只適合中度擴張直徑<1.7cm，手術完容易bulky較難重種\n•Plication：適合中度擴張，血流保存較好，輸尿管壁完整,減少缺血狹窄\n•Exicision: 適合嚴重擴張或較厚的輸尿管，缺點會影響血流造成併發\n•手術併發症\n1.阻塞=>stenting, repeat ureteroneocystostomy\n2. persistent dilatation => repeat stenting, reimplantation\n3. V-Ureflux\n•low grade: 保守治療\n•high grade: subureteric injection, if failed and recurrent febrile , revision surgery\nFiqure 133-22 Kalicinski folding technique. Ureteral folding tech-\nnique. A running suture is longitudinally woven through the mega-\nureter to create two lumens. This isolates the best-vascularized\nportion as a functional ureter (catheter within) and excludes redun-\ndancy. The redundant portion is then folded, and the two are tacked\ntogether with interrupted sutures. (From Kalicinski ZH, Kansy J,\nKotarbinska B, et al. Surgery of megaureters: modification ot Hen-\ndren's operation. J Pediatr Surg 1977:12:183.)\nFigure 133-21. Starr plication. Ureteral plication is performed over\nthe appropriate catheter, with interrupted 5-0 monofilament resorb\nable sutures placed in Lembert fashion (after Starr). (From Keating\nMA, Retik AB. Management of failures of ureteroneocystostomy. In:\nMcDougal ws, editor. Difficult problems in urologic surgery. Chicago:\nYear Book Medical: 1989 。. 131\nFiguro 133-23. Excisional tapering. Tapering is done over an 8-Frred\nNSber ca tiotof m nfante apeoro Fe patnefor  oldor childran ane\nadults. After vascularity is defined, special atraumatic clamps =\npacor sher re aarovor. Eaovy ae Samps nesp revrac tne poren\naforoor fo bre asperaer. wines saescarpatoeal. f ts important ms\nhe reseet too much ureter. Ranning 5no monomtamant resorbsit\nWuture la raed ioroopproaimnato rrnor g oxf raemee tards of tho urel\nis aistal third is closed with intarrrntad artures to\nallow for\nsnorening."
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "UPJO",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 66,
+              "text": [
+                "Ureteropelvic junction obstruction (UPJO)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss64.webp",
+              "hidden": false,
+              "ocr_text": "Ureteropelvic\njunction obstruction\n(UPJo)"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "UPJO cause",
+                "Intrinsic factor (常見於infant):",
+                "Adynamic segment of the ureter",
+                "Valvular mucosal fold",
+                "Ureteral stricture(inadequate fetal recanalization)",
+                "Acquired : urothelial malignancy, stone, postinflammatory or postoperative scarring or ischemia",
+                "Extrinsic factor(常見於childhood and adolescence)",
+                "Aberrant vessel compression to lower pole (ex: renal posterior segment a.走renal pelvis前面)",
+                "High ureter insertion"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss65.webp",
+              "hidden": false,
+              "ocr_text": "UPJO cause\n•lntrinsic factor（常見於infant)：\n• Adynamic segment of the ureter\n• valvular mucosal fold\n•Ureteral stricture(inadequate fetal recanalization)\n• Acquired : urothelial malignancy, stone, postinflammatory or\npostoperative scarring or ischemia\n•Extrinsic factor(常見於childhood and adolescence)\n• Aberrant vessel compression to lower pole (ex:renal posterior\nsegment a.走renal pelvis前面）\n•High ureter insertion\nFigure 133-1. Intrinsic narrowing of upper ureter contributing to ure-\nteropelvic junction obstruction.\nFigure 133-2. A lower pole crossing vessel contributes to significant\nkinking at ureteropelvic and resultant intermittent obstruction. Often,\nwhen the ureter is mobilized, no evidence of intrinsic narrowing is\nfound. However, dismembering and moving of the ureter anteriorly\nto the vessel prevents recurrence of the symptoms.\nA\nB\nFigure 133-3. A and B, Duplex kidney with stenosis of the lower ureteropelvic junction.\nA V-plasty can resolve the problem."
+            },
+            {
+              "slide_num": 68,
+              "text": [
+                "UPJO presentation/survey",
+                "Left side predominant, bilateral 10-40%",
+                "Presentations",
+                "Antenatal hydronephrosis(most common)",
+                "flank pain, GI symptom/constipation, worsening of renal function",
+                "Failure to thrive, feeding difficulties",
+                "Survey: Ultrasound, IVP, CT scan, Lasix nephrogram, DTPA/MAG3 renogram",
+                "CT + 3D 重組看有無外因性壓迫",
+                "Lasix nephrogram(Diuretic renal scan)看有無obstructive nephropathy",
+                "DTPA/MAG3 renogram看split renal function",
+                "Varicocele, torsion",
+                "Renal agenesis, UPJO",
+                "左邊比較多",
+                "Undecended testis",
+                "右邊比較多"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss66.webp",
+              "hidden": false,
+              "ocr_text": "UPJO presentation/survey\n• Left side predominant, bilateral 10-40%\nVaricocele, torsion\nRenal agenesis,\nUJO\n左邊比較多\n• Presentations\n• Antenatal hydronephrosis(most common)\nUndecended testis\n•flank pain, Gl symptom/constipation, worsening of ren舟褣He乾帝\n• Failure to thrive, feeding difficulties\n• survey: Utrasound, IVP, CT scan, Lasix nephrogram,\nDTPA/MAG3 renogram\n•CT+3D 重組看有無外因性壓迫\n•Lasix nephrogram(Diuretic renal scan)看有無obstructive\nnephropathy\n•DTPA/MAG3 renogram看split renal function"
+            },
+            {
+              "slide_num": 69,
+              "text": [
+                "Management",
+                "Asymptomatic就觀察就好",
+                "Surgery(大約1/3要開刀)->Endopyelotomy, Laparoscopic/open pyeloplasty",
+                "Surgical indication:",
+                "有症狀",
+                "一開始就單側腎功能< 40%，腎功能下降大於10%",
+                "Gr IV hydronephrosis",
+                "Image 上hydronephrosis持續惡化",
+                "感染 (有CAP時有break through infection)",
+                "Poor drainage function after the administration of furosemide",
+                "Megaureter surgical indication",
+                "反覆有症狀UTI",
+                "超音波上progressive dilation",
+                "differential renal function <40%",
+                "追蹤過程中 differential renal function 下降> 5%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss67.webp",
+              "hidden": false,
+              "ocr_text": "Management\nMegaureter surgical indication\n反覆有症狀UTI\n超音波 上progressive dilation\ndifferential renal function <40%\n追蹤過程中 differential renal function 下隆>\n5%\n•Asymptomatic就觀察就好\n•Surgerv(大約1/3要開刀）->Endopyelotomy, Laparoscopic/open\npyeloplasty\n• Surgical indication:\n•有症狀\n•一開始就單側腎功能<40%，腎功能下隆大於10%\n• Gr lv hydronephrosis\n•mage 上hydronephrosis持續惡化\n•感染（有CAP時有break through infection)\n• Poor drainage function after the administration of furosemide"
+            },
+            {
+              "slide_num": 70,
+              "text": [
+                "Pyeloplasty (Open/Lapa)",
+                "Dismembered 有切除窄縮組織(為gold standard!)，nondismembered 則是保留窄縮組織進行整形",
+                "Dismembered pyeloplasty",
+                "Anderson-Hynes dismembered pyeloplasty",
+                "Nondismembered pyeloplasty",
+                "Foley Y-V plasty",
+                "Vertical flap technique",
+                "Spiral flap technique"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss68.webp",
+              "hidden": false,
+              "ocr_text": "Pyeloplasty (Open/Lapa)\n。Dismembered 有切除窄縮組織（為gold standardl)\n，nondismembered 則是保留窄縮組織進行整形\n• Dismembered pyeloplasty\n• Anderson-Hynes dismembered pyeloplasty\n•Nondismembered pyeloplasty\n•Foley Y-V plasty\n• Vertical flap technique\n• Spiral flap technique"
+            },
+            {
+              "slide_num": 71,
+              "text": [
+                "Megacalycosis",
+                "Nonobstructive enlargement of calyces resulting from malformation of the renal papillae",
+                "The renal pelvis is not dilated, nor is its wall thickened, and the UPJ is normally funneled without evidence of obstruction",
+                "Congenital and has been diagnosed prenatally",
+                "男:女= 6:1; Bilateral disease has been seen almost exclusively in males, whereas segmental unilateral involvement occurs only in females",
+                "only in Caucasians",
+                "不會progression, 腎功能也不會惡化"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss69.webp",
+              "hidden": false,
+              "ocr_text": "Megacalycosis\n•Nonobstructive enlargement of calyces resulting from\nmalformation of the renal papillae\n•The renal pelvis is not dilated, nor is its wall thickened, and\nthe UPJis normally funneled without evidence of\nobstruction\n• Congenital and has been diagnosed prenatally\n•男：女=6:1;Bilateral disease has been seen almost\nexclusively in males, whereas segmental unilateral\ninvolvement occurs only in females\n•only in Caucasians\n•不會progression，腎功能也不會惡化"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "Posterior Urethral Valve",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 72,
+              "text": [
+                "Posterior urethral valve (PUV)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss70.webp",
+              "hidden": false,
+              "ocr_text": "Posterior urethral\nvalve (PUv)"
+            },
+            {
+              "slide_num": 73,
+              "text": [
+                "Type of PUV",
+                "Young’s classification:",
+                "Type 1:  most common, 兩片leaflet從veru遠端長出來在external sphincter之前fuse起來",
+                "Type 2: diaphragm type, 在veru近端的6 點鐘方向有連結",
+                "Type 3: 在veru遠端形成annular ring"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss71.webp",
+              "hidden": false,
+              "ocr_text": "Type of PUv\n•Young's classification:\n•Type 1:most common，兩片leaflet從veru遠端長出來在\nexternal sphincter之前fuse起來\n•Type 2: diaphragm type， 在veru近端的6點鐘方向有連結\n•Type 3:在veru遠端形成annular ring\n85x413\nTvpe 1\nTvpe 2\nTvpe 3"
+            },
+            {
+              "slide_num": 74,
+              "text": [
+                "PUV incidence/presentation",
+                "Incidence: 1.6-2.1 per 10000",
+                "Most common etiology of urinary obstruction in newborn",
+                "一歲時 Cre <0.8是預測low risk for CKD",
+                "造成Life threatening 的情況",
+                "羊水減少 → 影響肺部發育(羊水有surfactant)",
+                "Severe hydronephrosis → 壓迫到lung",
+                "最終造成 lung agenesis → 新生兒死亡最常見的原因",
+                "Potter’s syndrome",
+                "Presentations",
+                "Antenatal: renal echo->bilateral hydronephrosis",
+                "Childhood: recurrent UTI, enuresis, LUTD",
+                "VCUG/echo-> keyhole sign(是PUV的表",
+                "徵但非PUV獨有)",
+                "Keyhole sign: posterior urethra擴張, 是PUV的表徵但非PUV獨有"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss72.webp",
+              "hidden": false,
+              "ocr_text": "PUV incidence/presentation\n• Incidence: 1.6-2.1 per 10000\n• Most common etiology of urinary obstruction in\nnewborn\n•一歲時Cre <0.8是預測low risk for CKD\n•造成Lite threatenipg的情況\n•羊水減少 ＞影響肺部發育(羊水有surfactant)\n• Severe hydronephrosis ＞壓迫到lung\n麖醫造成 Tme pgemesis一 新生兒苑七最常見的\n•Potter's syndrome\n• Presentations\n• Antenatal: renal echo->bilateral hydronephrosis\n• Childhood: recurrent UTl, enuresis, LUTD\nVCUG/echo->keyhole sign(是PUV的表\n徵但非PUV獨有）\nCAUDAL\nURINARRY BLADDER\nKeyhole sign: posterior urethra擴張，\n是PUv的表徵但非PUv獨有"
+            },
+            {
+              "slide_num": 75,
+              "text": [
+                "PUV Management",
+                "Prenatal",
+                "同prenatal hydronephrosis的management(這時候還不會確定是PUV, 只能猜測, 例如膀胱漲＋兩側hydro)",
+                "Postnatal",
+                "同postnatal hydronephrosis的survey和management",
+                "Transurethral valve ablation : 4-6周等baby穩定後才做"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss73.webp",
+              "hidden": false,
+              "ocr_text": "PUV Management\n•Prenatal\n•同prenatal hydronephrosis的management(這時候還不\n會確定是PUV,只能猜測，例如膀胱漲＋ 兩側hydro）\n•Postnatal\n•同postnatal hydronephrosis的survey和management\n•Transurethral valve ablation：4-6周等baby穩定後才做\nCYBTOBCOPIC VALVE ABLATION"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "Duplex / Ectopic Ureter",
+          "slide_count": 5,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 76,
+              "text": [
+                "Duplex ureter",
+                "Ectopic ureter",
+                "Ureterocele"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss74.webp",
+              "hidden": false,
+              "ocr_text": "Duplex ureter\nEctopic ureter\nUreterocele"
+            },
+            {
+              "slide_num": 77,
+              "text": [
+                "Upper pole 的輸尿管開口會比較medial and distal(Weigert-Meyer rule), 或是不在trigone(ectopic)",
+                "Complete duplex 合併異常 = ectopic ureter(upper pole較容易), ureterocele(upper pole較容易), VUR(lower pole較容易)",
+                "Incomplete dulplex 合併= ureterouretal reflux, UPJO of lower moiety",
+                "Complete/Incomplete duplex ureter"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss75.webp",
+              "hidden": false,
+              "ocr_text": "Complete/ncomplete duplex ureter\nNormal\nHigh partial\nLow partal\nComplete\nComplete with\nobstructing\nureterocele\nComplete with\nextravesical\nectopic ureter\n1. Upper pole 的輸尿管開口會比較medial and distal(Weigert-Meyer rule),\n或是不在trigone(ectopic)\n2. Complete duplex 合併異常 =ectopic ureter(upper pole較容易)，\nureterocele(upper pole較容易)，VUR(lower pole較容易）\n3. Incomplete dulplex 合併=ureterouretal reflux, UPjO of lower moiety"
+            },
+            {
+              "slide_num": 78,
+              "text": [
+                "Weigert-Meyer Rule",
+                "在**雙輸尿管系統（duplicated system）**中：",
+                "上腎極（upper pole） 的輸尿管常伴隨輸尿管異位ureterocele，其開口位置 較下腎極輸尿管口更尾側（caudal）",
+                "→ 晚一點從mesonephric duct發芽 → 隨著urogenital sinus的發展，它的開口會被往更內側與更下方擠壓",
+                "常見異常: 異位輸尿管、ureterocele、obstruction",
+                "下腎極（lower pole） 的輸尿管口則插入正常或靠近三角區的位置。",
+                "→ 早發芽 → 開口停留在較外側與較上方的位置",
+                "常見異常: VUR",
+                "影片解釋怎麼轉的\u000bhttps://youtu.be/tH_-19ZD2R8?si=eLYNqTngLrO4tUtP"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss76.webp",
+              "hidden": false,
+              "ocr_text": "Weigert-Meyer Rule\n•在**雙輸尿管系統(duplicated svstem）**中：\n•上腎極（upper pole）的輸尿管常伴隨輸尿管異位ureterocele，其開口\n位置 較卞腎極輸尿管口更尾側(caudal)\n＞晚一點從mesonephric duct發芽 二隨著urogenital sinus的發展，它的開\n口會被往更内側與更下方擠壓\n常見異常：異位輸尿管、ureterocele、obstruction\n•下腎極(lower pole）的輸尿管口則插入正常或靠近三角區的位置。\n＞早發芽 ＞開口停留在較外側與較上方的位置\n常見異常：VUR\n彯片解釋怎麼轉的\nhttps://youtu.be/tH -19ZD2R8?si=eLYNgTngLro4tUtP"
+            },
+            {
+              "slide_num": 79,
+              "text": [
+                "Ectopic ureter",
+                "Ureter的開口不在trigone, 可能在bladder neck, urethra, 或不在urinary tract(SV, vas, vagina, uterus)(可以是single或duplex)",
+                "Duplex systems, the ectopic ureter belongs to the upper pole ureter",
+                "In boys, never below the external sphincter, 所以不會漏尿 症狀: UTI",
+                "posterior urethra (47%)",
+                "prostatic utricle (10%)",
+                "seminal vesicles (33%)",
+                "vas deferens or ejaculatory ducts (10%)",
+                "In girls, 症狀: continuous wetting(持續漏尿)",
+                "Urethra, from the bladder neck to the meatus (35%)",
+                "Urethral meatus(Gartner Duct Abnormalities)",
+                "Vaginal vestibule (34%)",
+                "Vagina (25%)",
+                "Uterus and Fallopian tube (6%)",
+                "Rectum"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss77.webp",
+              "hidden": false,
+              "ocr_text": "Ectopic ureter\n•Ureter的開口不在trigone，可能在bladder neck, urethra， 或不在urinary\ntract(SV, vas, vagina, uterus)(可以是single或duplex）\n•Duplex systems, the ectopic ureter belongs to the upper pole ureter\n•In bovs, never below the external sphincter，所以以 不會漏尿 症狀：UTI\n•posterior urethra (47%)\n• prostatic utricle (10%)\n• seminal vesicles (33%\n• vas deferens or ejaculatory ducts (10%)\n•Ingirls,症狀：continuous wetting(持續漏尿）\n•Urethra, from the bladder neck to the meatus (35%)\n• Urethral meatus( Gartner Duct Abnormalities)\n• Vaginal vestibule (34%)\n• Vagina (25%)\n• Uterus and Fallopian tube (6%)\n•Rectum"
+            },
+            {
+              "slide_num": 80,
+              "text": [
+                "Ectopic ureter survey/treatment"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss78.webp",
+              "hidden": false,
+              "ocr_text": "Ectopic ureter survey/treatment\nEctopic ureter\nDiagnosis\nUse US, DMSA scan, vCUG or MRl for a definitive\ndliagnosis.\nTreatment In non-functioning moieties with recurrent infections,\nheminephro-ureterectomy is a definitive solution.\nUreteral reconstruction (ureteral re-implantation/\nureteroureterostomy/ureteropyelostomy and upper-\npole ureterectomy are other therapeutic option\nespecially in cases in which the upper pole has\nfunction worth preserving.\n3\n3\nWeak\nWeak"
+            }
+          ]
+        },
+        {
+          "id": "t12",
+          "title": "Ureterocele",
+          "slide_count": 7,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 81,
+              "text": [
+                "Ureterocele epidemiology/presentation",
+                "女生比男生多 (4-7倍)",
+                "Cystic dilatation in the intravesical part of the submucosal ureter, 可能造成obstruction",
+                "如果在Duplex systems, ureterocele通常會在upper pole ureter",
+                "兩個form: Orthotopic form, Ectopic form"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss79.webp",
+              "hidden": false,
+              "ocr_text": "Ureterocele epidemiology/presentation\n•女生比男生多(4-7倍）\n• Cystic dilatation in the intravesical\nBartof the submucosal ureter,可能\n造成obstruction\n•如果在Duplex systems, ureterocele\n通常會在upper pole ureter\n•兩個form: Orthotopic form, Ectopic\nform\nDuplex System\nwith Upper Pole\nObstruction\nSecondary to\na Ureterocele\nKidney\nUpper Pole\ndreter\nLower Pole\ndreter\nBladder\nUreter\nUreterocele\nObstructing\nUreterocele\n• Bladder wall"
+            },
+            {
+              "slide_num": 82,
+              "text": [
+                "Orthotopic (intravesical) form",
+                "Completely located in the bladder",
+                "15% case",
+                "No or only mild obstruction",
+                "Mostly combined with a single kidney system",
+                "可能造成VU reflux: 50% on the ipsilateral side, 20% on the contralateral side, Reflux into the ureterocele is uncommon"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss80.webp",
+              "hidden": false,
+              "ocr_text": "Orthotopic (intravesical) form\nCompletely located in the bladder\n• 15% case\nNo or only mild obstruction\nMostly combined with a single\nkidney system\n•可能造成vU reflux:50% on the\nipsilateral side, 20% on the\ncontralateral side, Reflux into the\nureterocele is uncommon\n-Bladder Wall\ninary Bladder\nUreterocele"
+            },
+            {
+              "slide_num": 83,
+              "text": [
+                "Ectopic (extravesical) form",
+                "就是Ectopic ureter合併ureterocele, 所以UO開口自然在bladder neck或urethra, 所以ureterocele 也會延伸到bladder neck 或 urethra",
+                "分成兩個type:",
+                "->sphincteric type: 開口在bladder neck或urethra, 通常會在ext. sphincter之前",
+                "->caeco-ureterocele type: 只在女性, ureterocele prolapse到urethra和anterior vaginal wall之間",
+                "常常造成obstruction, 可能大到造成對側ureter obstruction",
+                "The most common form of ureterocele (> 80%)",
+                "如果合併duplex system, ureterocele那一條所在的upper pole ureter常常dysplasia, 所以non-function",
+                "如果合併duplex system, 同側另一條ureter會被ureterocele抬起來, 可能會有VUR或obstruction形成megaureter",
+                "有50% 對側也會renal duplication",
+                "Extravesical form一樣是從intravesical part of ureter膨大, 只是ureterocele的位置已經延伸到超出膀胱到bladder neck或urethra"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss81.webp",
+              "hidden": false,
+              "ocr_text": "Ectopic (extravesical) form\n•就是Ectopic ureter合併ureterocele，所以UO開口\n自然在bladderneck或urethra,所l以ureterocele\n也會延伸到bladder neck 或 urethra\n•分成兩個type：\n-ssphincteric tvpe：開口在bladder neck或urethra,\n通常會在ext.sphincter之前\n-scaeco-ureterocele type:只在女性, ureterocele\nprolapse到urethra和anterior vaginal wall之間\n•常常造成obstruction，可能大到造成對側ureter\n。bstruction\n•The most common form of ureterocele (> 80%)\n•如果合併duplex system, ureterocele那一條所在\n的upper pole ureter常常dysplasia，所以non-\nfunction\n•如果合併duplex system，同側另一條ureter會被\nureterocele拾起來，可能會有VUR或obstruction\n形成megaureter\n•有50%對側也會renal duplication\nExtravesicalform一樣是從\nintravesical part of ureter\n膨大，只是ureterocele的\n位置已經延伸到超出膀胱\n到bladder neck或urethra"
+            },
+            {
+              "slide_num": 84,
+              "text": [
+                "Ureterocele 治療",
+                "如有症狀如反覆泌尿到感染或是膀胱阻塞需考慮手術治療",
+                "如果無症狀可以保守追蹤治療"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss82.webp",
+              "hidden": false,
+              "ocr_text": "Ureterocele 治療\n•如有症狀如反覆泌尿到感染或是膀胱阻塞需考慮手術治療\n•如果無症狀可以保守追蹤治療\nTABLE 134-1 Options for Ureterocele Management\nPROCEDURE\nTransurethral incision\nIDEAL INDICATIONS\nInfant\nLarge ureterocele with VUR\nUpper pole nephrectomy\nOlder patient\nLarge nonfunctioning upper\npole\nNo VUR\nADVANTAGES\nOutpatient procedure\nEffective decompression\nOccasionally definitive\nMay be definitive\nRemoves pathology\nAvoids bladder level surgery\nUreteroureterostomy or\nureteropyelostomy\nUreterocele excision and\ncommon sheath\nreimplantation\nOlder patient\nFunctioning upper pole\nNo VUR\nReflux\nFunctioning upper pole\nwithout significant dilation\nUTI. urinary tract infection: VUR. vesicoureteral reflux.\nDrains obstructed segment with\nlittle risk of obstruction or UTI\nLIMITATIONS\nMay produce reflux into\nureterocele segment,\nnecessitating bladder surgery\nMay not be definitive\nSignificant surgery\nRisk to lower pole\nMay still require lower surgery\nin bladder\nLeaves ureterocele in bladder\nMay develop reflux\nEliminates obstruction and\nreflux, removes ureterocele\nNo renal risk\nComplex surgery\nRisk to vagina and bladder neck\nMay require ureteral tapering"
+            },
+            {
+              "slide_num": 85,
+              "text": [
+                "小兒",
+                "2025EAU"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss83.webp",
+              "hidden": false,
+              "ocr_text": "2025EAU\n小兒"
+            },
+            {
+              "slide_num": 86,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss84.webp"
+            },
+            {
+              "slide_num": 87,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch09_pediatric/render/ss85.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

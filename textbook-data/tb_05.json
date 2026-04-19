@@ -1,0 +1,1375 @@
+{
+  "id": "tb_05",
+  "number": "V",
+  "title": "外生殖器癌",
+  "icon": "🔬",
+  "sections": [
+    {
+      "id": "tb_05_01",
+      "title": "外生殖器癌",
+      "source_file": "4-1 外生殖器癌(2025).pptx",
+      "total_slides": 82,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "外生殖器基礎解剖",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "外生殖basics"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "外生殖basics"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "胚胎學",
+                "Wolffian duct: SEED \u000b(epi 一路到EJ duct/SV complex)",
+                "Seminal vesicle",
+                "Epididymis (含 appendix)",
+                "Ejaculatory duct",
+                "Vas Deference",
+                "Mullerian duct",
+                "Utricle",
+                "Appendix (testicular)",
+                "Urogenital sinus",
+                "Prostate"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "胚胎學\n• Wolffian duct: SEED\nlepi一路到E duct/SV complex)\n•Seminal vesicle\n• Epididymis（含 appendix)\n• Ejiaculatory duct\n• Vas Deference\n• Mullerian duct\n•Utricle\n• Appendix (testicular)\n• Urogenital sinus\n• Prostate\nAppendix of\nepididymis\nAppendox of\nlestis\nSeminiferous\ntubules\nSeptum\nEpididvmis\nDuctu\nefterenti\nradidyms\nVas\ndeferens\nVas\naberrans\nsupenor\nVas\naberrans\ninferior"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "Right 低: 85%",
+                "length 3-5 cm, width 3 cm, depth 2.5 cm; volume 15-25 mL",
+                "Testis volume: interstitial tissue 20-30%, germ line cells 70-80%",
+                "Testicular a = int. spermatic a, from aorta",
+                "Deferential a= vas a., from sup. vesical a, from int. iliac a",
+                "Cremasteric a = ext. spermatic a, from inf. epigastric a, from ext. iliac a.",
+                "testis biopsies in the medial or lateral surfaces of the upper pole to minimize the risk of vascular injury",
+                "Nerve:",
+                "ANS: renal and aortic plexuses and course alongside the gonadal vessels",
+                "genital br of the genitofemoral nerve => sensation of tunica vaginalis and scrotum",
+                "＠造成chronic orchialgia的原因",
+                "傷到perivasal complex, posterior periarterial/lipomatous complex, intracremasteric complex",
+                "Testis anatomy",
+                "如果傷到psoas major上的神經(Ex. RPLND, nephrectomy, psoas hitch)，就可能傷到genitofemoral nerve (genital branch: Cremasteric reflex + scrotal sensational femoral branch: Anterior fermroal sensation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Testis anatomy\n•Right 低：85%\n•length 3-5 cm, width 3 cm, depth 2.5 cm; volume 15-\n25mL\n•Testis volume: interstitial tissue 20-30%,germ line\ncells 70-80%\n•Testicular a = int. spermatic a, from aorta\n• Deferential a= vas a., from sup. vesical a, from int. ili\nCremasteric a.\nVasal a\nEpididymal-\ndeferential loop\nSuperior vesical a.\ninternal\nHiac a.\nInferior\nepigastric\nVas\ndeferens\nVasal\nEpididymal a.\nTesticular-\nCremasteric-vasal\nepldidymal\nanastomosis\nanastomosis\nTesticular a.\nFlgure 21-5. Collateral arterial circulation to the testis. (From Hinman F Jr. Atlas of urosurgical\nanatomy. Philadelphia: Saunders; 1993. p. 497)\n• Cremasteric a = ext. spermatic a, from inf. epigastric a,\nfrom ext. iliac a.\n•testis biopsies in the medial or lateral surfaces of the upper\npole to minimize the risk of vascular injury\n如果傷到psoas major上的神經(Ex. RPLND, nephrectomy,\npsoas hitch），就可能傷到genitofemoral nerve (genital\n• Nerve:\nbranch: Cremasteric reflex + scrotal sensational femoral\nbranch: Anterior fermroal sensation\n• ANS: renal and avrue piexuses ariu luur se alungside the\ngonadal vessels\n• genital br of the genitofemoral nerve => sensation of tunica\nvaginalis and scrotum\n@造成chronic orchialgia的原因\n•傷到perivasal complex, posterior\nperiarterial/lipomatous complex, intracremasteric\ncomplex\nExt. iliacv.\nInt\ningspermallcr\nSup.vesical V.\n- Ext. spermatic V.\nVas\nHypogastric V.-\nPampinifom\nplexus\nExt.\nring\n- Int. epigastric V.\nSup. epigastric v.\n-Sup. circumflex v.\nTestis\nSup. and deep\npudendal w.\nFemoral v.\nInt.\npudendal V.\nCremasteric V.\nFiqure 21-7. Venous drainaae of the testis and epididymis. Note con-\nnectons between the pampinitom plexus and the saphenous, inter-\nnal illac, and external iliac veins."
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Scrotum and spermatic cord",
+                "Scrotum layers : 7層"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "Scrotum and spermatic cord\nScrotum lavers : 7層\nScrotum\nAbdominal\nSkin(下面是Dartos muscle)\nDartos fascia(繞到後方變成\nColles fascia)\nExternal spermatic fascia\nskin(下面是Camper's fat)\nScarpa's fascia\nCremastor m.\nPenile\nSkin\nDartos\nInternal spermatic fascia\nExternal oblique m.\nInternal oblique +\ntransversus abdomins m.\nTransversalis fascia\nBuck's fascia\nParietal tunica vaginalis\nPeritoneum\nVisceral tunica vaginalis\nPeritoneum\nfatty layer\n(Campers fascia)\nmembranous layer\n(Scarpa's fascial\nInf. layer\nof urogenital\ndiaphragm\ndartos muscle\nThe superficial perineal\npouch is a compartment\nbounded by the\nsuperficial perineal fascia CROSS SECTION\n(Colles' fascia), the\nperineal membrane\n(inferior fascia of the\nurogenital diaphragm),\nand the ischiopubic\nramus\nSkin\nDartos\nExt. spermatic fascia\nCremasteric\n(middle spermatic)\nfascia\n(cromaster m.)\nInt. spermatic fascia\nEpididymis\nSIDE VIEW\nTestis\nTunica\nVisceral\nvaginalis 1 Parietal\nSkin\nDartos\nExt. spermatic fascia\nCremasteric (middile\nspermatic) fascia\n(cremaster m.)\nInt. spermatic fascia\nTunica vaginalis communis\nPampiniform plexus\nEpididymis"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Posterior urethra trauma尿或血會往哪裡跑？",
+                "Dartos fascia",
+                "Butterfly hematoma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Posterior urethra trauma尿或血會\n往哪裡跑？\nBuck's fascia\nScarpa's\nfascia\nBuck's fascla\nButterfly\nhematom\nRupture of urethra in\nthe shaft of the penis\n(no rupture of Buck's fascia)\nDartos\nfascia\nRupture of urethra\nat bulb (rupture of\nBuck's fascia)"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "testis淋巴回流原則",
+                "Lymphatic 大方向: 下到上, 右到左",
+                "The left testis drains to the left para-aortic nodes with some drainage to the interaortocaval nodes. There is no significant drainage to the right paracaval nodes",
+                "The  right testis drains primarily to the interaortocaval nodes with some drainage to the right paracaval nodes. The left para-aortic region receives a small but appreciable amount of lymphatic drainage from the right testis, consistent with the aforementioned right-to-left flow."
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "testis淋巴回流原則\n•Lymphatic 大方向：下到上，右到左\n• The left testis drains to the left para-aortic nodes with\nsome drainage to the interaortocaval nodes. There is no\nsignificant drainage to the right paracaval nodes\n• The right testis drains primarily to the interaortocaval\nnodes with some drainage to the right paracaval nodes.\nThe left para-aortic region receives a small but appreciable\namount of lymphatic drainage from the right testis,\nconsistent with the aforementioned right-to-left flow."
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "LN: superficial inguinal nodes on the ipsilateral side.",
+                "Scrotal lymphatics do not cross the midline",
+                "Scrotum 血流/淋巴"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "scrotum 血流/淋巴\n血\n液\n神\n經\nanterior scrotal wall\nposterior scrotal wall\nexternal pudendal arteries\n(femorala)\n-> ant. Scrotal a.\n(run parallel to the rugae and\ndo not cross the median\nraphe.)\nInternal pudendal arteries\n(int. iliac a)\n-> post scrotal a.\nilioinguinal and genitofemoral\nperineal nerves (pudendal n)\nlnerves （支配cremaster m., ant posterior femoral cutaneous\nscrotum)\nnerve (S3)。\nLN: superficial inguinal nodes on the ipsilateral side.\nScrotal lymphatics do not cross the midline"
+            },
+            {
+              "slide_num": 9,
+              "text": [
+                "Scrotal enlargement/Hydrocele",
+                "Scrotal enlargement",
+                "D/D: hydrocele, testis cancer, epididymo-orchitis, indirect hernia +/- bowel content, scrotal edema(心肝腎不好albumin低造成skin/soft tissue積水)",
+                "Image: scrotal echo, +/- CT",
+                "Hydrocele",
+                "tunica vaginalis的parietal和visceral later之間的space積水",
+                "communicating: inguinal的processus vaginalis沒關好",
+                "cause: ascites流下去(伴隨hydrocele of cord)",
+                "non-communicating: primary vs secondary",
+                "primary: idiopathic",
+                "secondary: infection, testis tumor, trauma, filariasis(infection with the filarial worm Wuchereria bancrofti, obstruction of lymphatic ducts",
+                "Treatment:",
+                "communicating: herniorrhaphy",
+                "non-communicating:",
+                "primary-> hydrocelectomy",
+                "secondary-> treat secondary cause, then hydrocelectomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "Scrotal enlargement/Hydrocele\n•Scrotal enlargement\n•D/D:hydrocele, testis cancer, epididymo-orchitis, indirect hernia +/-bowel\ncontent,scrotal edema(心肝腎不好allbumin低造成skin/soft tissue積水）\n• Image: scrotal echo, +/- CT\n• Hydrocele\n•tunica vaginalis的parietal和visceralllater之間的space積水\n•communicating: inguinal的processus vaginalis沒關好\n•cause: ascites流下去(伴隨hydrocele of cord)\n• non-communicating: primary vs secondary\n• primary: idiopathic\n• secondary: infection, testis tumor, trauma, filariasis(infection with the\nfilarial worm wuchereria bancrofti, obstruction of lymphatic ducts\n•Treatment:\n• communicating:herniorrhaphy\n•non-communicating:\n•primary->hydrocelectomy\n•secondary->treat secondary cause, then hydrocelectomy"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "睪丸癌：特徵與診斷",
+          "slide_count": 9,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 10,
+              "text": [
+                "Testicular cancer"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Testicular cancer"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Testicular cancer characteristics",
+                "Risk factors",
+                "白人",
+                "Cryptorchidism",
+                "Family history of testis cancer",
+                "Personal history of testis cancer",
+                "Intratubular germ cell neoplasm (ITGCN)     most GCTs arise from ITGCN",
+                "Testicular dysgenesis",
+                "Klinefelter’s syndrome",
+                "Campbell Walsh Urology",
+                "EAU and NCCN",
+                "Only shown in NCCN",
+                "microlithiasis在一般族群沒有顯著差異",
+                "但在有得過GCT的病人另一邊若有microlithiasis則該側會增加風險"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Testicular cancer characteristics\n• Risk factors\nmicrolithiasis在一般族群沒有顯著差異\n•白人\n但在有得過GCT的病人另一邊若有\nmicrolithiasis則該側會增加風險\n• Cryptorchidism\n• Family history of testis cancer\nCampbell Walsh Urology\n•Personal history of testis cancer\nEAUand NCCN\n• Intratubular germ cell neoplasm (ITGCN)」 most GCTs arise from ITGCN\n• Testicular dysgenesis\n• Klinefelter's syndrome\n7 Only shown in NcCw\nUse of Tumor Markers for Specific Cell Types\nof Testicular Cancer\nGERM CELL\nSEMINOMA----.\nB-HCG*\n-------1---------NON-SEMINOMA\nCHORIOCARCINOMA\nB-HCG\n--------------1----------1-----•\nYOLK SAC\nEMBRYONAL\nAFP\nAFP + B-HCG\nTERATOMA\nNo marker\n-----------\nTERATOCARCINOMA\nAFP + B-HCG"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "Testicular cancer characteristics",
+                "大多數testis cancer 都是 Germ cell tumors (GCTs), 分seminoma and nonseminoma",
+                "Chromosome 12p “複製”有關 (70%)",
+                "GCTs 有5% extragonadal, 多發生在中線結構 (後腹腔/縱膈腔)",
+                "GCT患者中，沒有腫瘤的另一側 5-9% 有共存 ITGCN",
+                "雙側GCT的機率 : 2.5%(70%–80% 的雙側 GCT 為 metachronous tumors,平均相隔5-6年）/ 轉移癌15%雙側/Lymphoma 35%雙側",
+                "Seminoma 佔 52-56%",
+                "most common in adult(20-50, peak 40-50), 7% HCG↑, 0% AFP, 30-50Y, 對RT敏感",
+                "Non-seminoma GCT (NSGCT)佔 44-48%",
+                "Yolk sac tumor: Rare, 100% AFP, 0% HCG, 0-3Y",
+                "Teratoma: 38% AFP,  25% HCG , 0-3Y and 10-30Y(teratoma marker各篇paper差異很大...), most common in 0-3 y/o,小孩子的 mature teratoma被視為benign, immature有惡性的可能,對化療resistant （成人的不論mature 或immature都以潛在惡性處理，都應做radical O + RPLND)",
+                "Embryonal carcinoma: most common NSGCT in adult, 70% AFP, 60% HCG, 15-30Y) (未分化程度最高)",
+                "Choriocarcinoma (Rare, 100% HCG , 0% AFP, 20-30Y, 血行轉移brain)（最常見",
+                "肺cannonball,腦,肝）",
+                "成人Seminoma最多",
+                "成人NSGCT, Embryonal carcinoma最多",
+                "0-3Y Teratoma最多",
+                "年紀記法:YTECS (YT咿係Senior)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "Testicular cancer characteristics\n•大多數testis cancer 都是 Germ cell tumors (GCTs)，分seminoma and nonseminoma\n•Chromosome 12p “複製”有關 (70%)\n•GCTS 有5% extragonadal，多發生在中線結構（俊腹腔/縱膈腔）\n•GCT患者中，没省腫瘤的另一側5-9%有共存 ITGCN\n•雙側GCT的機率：2.5%(70%-80% 的雙侧 GCT 為metachronous tumors,平均相隔5-6年\n〕/轉移癌15%雙側/ymphoma 35%雙側\n••Seminoma 佔 52-56%\n•most common in adult(?R-50, peak 40-50), 7% HCG个,0% AFP,30-50Y，對RT敏感\n• Non-seminoma GCT (NSGCT)佔 44-48%\n• Yolk sac tumor: Rare, 100% AFP, 0% HCG, 0-3Y\n•Teratoma: 38% AFP, 25% HCG , 0-3Y and 10-30Y(teratoma marker各篇paper差異\n很大•,mest sarpmgain 0-3 y/0，小孩子的mature teratoma被視為benign，\nimmature有惡性的可能，對化療resistant（成人的不論mature 或immature都以潛\n在惡性處理，都應做radical O + RPLND)\n• Embryonal carcinoma: most common NSGCT in adult, 70% AFP, 60% HCG, 15-30Y)(\n末分化程度最高}\n• Choriocarcinoma (Rare, 100% HCG，0% AFP,20-30Y，血行轉移brain）（ 最常見\n肺cannonball,腦,肝）\n成人Seminoma最多\n成人NSGCT, Embryonal carcinoma最多\n0-3Y Teratoma最多\n年紀記法：YTECS (YT咿係Senior)"
+            },
+            {
+              "slide_num": 13,
+              "text": [
+                "Other histology",
+                "Spermatocystic seminoma",
+                "正確名稱改為Spermatocystic tumor, 完全不是seminoma",
+                "特色",
+                "Extremely rare",
+                "Older patients than other GCT (mean 54 years)",
+                "Excellent prognosis, 很少轉移",
+                "Does not arise from ITGCN and is not associated with cryptorchidism",
+                "Serum tumor markers (AFP, HCG and LDH) are not elevated",
+                "Higher chance for bilaterality (up to 9%)",
+                "Lymphoma",
+                "50歲以上最常見睪丸腫瘤 (NHK為主) Poor prognosis",
+                "約 35％的患者是雙側睪丸侵犯，25%的患者出現全身症狀。",
+                "Cystadenomas",
+                "correspondance to benign epithelial hyperplasia",
+                "常常是雙邊。30%與VHL有關",
+                "Metastasis",
+                "15% 雙側involve",
+                "最常見prostate, lung, melanoma, colon, kidney"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "Other histology\n•Spermatocystic seminoma\n•正確名稱改為Spermatocystic tumor， 完全不是seminoma\n•特色\n•Extremely rare\n• Older patients than other GCT (mean 54 years)\n•Excellent prognosis, 很少轉移\n• Does not arise from ITGCN and is not associated with cryptorchidism\n•Serum tumor markers (AFP, HCG and LDH) are not elevated\n• Higher chance for bilaterality (up to 9%)\n•Lymphoma\n•50歲以上最常見睪丸腫瘤（NHK為主）Poor prognosis\n•約35%的患者是雙側睪丸侵犯，25%的患者出現全身症狀。\n• Cystadenomas\ncorrespondance to benign epithelial hyperplasia\n•常常是雙邊。30%與VAL有關\nMetastasis\n• 15%雙側involve\n•最常見prostate, lung, melanoma, colon, kidney"
+            },
+            {
+              "slide_num": 14,
+              "text": [
+                "Testicular stromal tumors",
+                "Sex cord stromal tumors comprise < 5% of testicular neoplasms",
+                "The incidence of benign definitive histology is high 90%",
+                "一經診斷惡性, Poor prognosis",
+                "5-year survival estimates of stage I Leydig and Sertoli cell tumors are significantly lower compared to those of stage I GCTs",
+                "Leydig cell tumor – Most common (最常mets 位置: retroperitoneal&lung)",
+                "Sertoli cell tumor – Worst outcome",
+                "Sarcoma: liposarcoma最常見, <30歲族群則是Rhabdo最常見（治療：RPLND +CCRT)",
+                "GBM(Gonadoblastoma) 雙側40%, 治療兩邊都要拿",
+                "Other: Granulosa cell, fibroma-thecoma groups",
+                "Management",
+                "An organ-sparing procedure in every small US-detected, non-palpable intra-parenchymal lesion is highly recommended",
+                "The incidence of benign definitive histology is high at approximately 80%"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "Testicular stromal tumors\n• Sex cord stromal tumors comprise ≤ 5% of testicular neoplasms\n• The incidence of benign definitive histology is high 90%\n•一經診斷惡性，Poor prognosis\n•5-year survival estimates of stage I Leydig and Sertoli cell tumors are\nsignificantly lower compared to those of stage I GCTs\n• Leydig cell tumor- Most common(最常mets 位置：retroperitoneal&lung)\n• Sertoli cell tumor - Worst outcome\n•證“9Noe  na限常見， <30毫族群則是Phabdo展常見（治\n• GBM(Gonadoblastoma） 雙側40%，治療兩邊都要拿\n• Other: Granulosa cell, fibroma-thecoma groups\n•Management\n• An organ-sparing procedure in every small US-detected, non-palpable\nintra-parenchymal lesion is highly recommended\n• The incidence of benign definitive histology is high at approximately 80%"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "Contralateral inguinal biopsy(inguinal exploration and biopsy of testis)if Contralateral cryptoorchidism, Contralateral marked atrophy, Contralateral suspicious mass",
+                "Baseline gonadal function(T/LH/FSH)",
+                "考慮testis sparing(partial orchiectomy)",
+                "sperm analysis + banking",
+                "pure seminoma的B-HCG通常不會高過1000 IU/L, AFP也不會高, 所以seminoma B-HCG超過1000或AFP升高要當作NSGCT或重新審視pathology",
+                "Testis-sparing surgery的兩大indication(NCCN)",
+                "Bilateral tumors 或Tumor in solitary testis with normal pre-op T level",
+                "摸不到且echo下<2cm(因為有80%是良性)",
+                "Campbell: prepubertal小孩因為benign tumor可能性很高, 也是TSS的indication",
+                "TSS的原則：1.也要從inguinal 2.術中要送frozen 3.frozen顯示惡性的話對側如果是正常的要改成radical orchiectomy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "•Testis-sparing surgery的兩大indlication(NCCN)\n•Bilateral tumors 或Tumor in solitary testis with normal pre-op T level\n。摸不到且echo下<2cm(因為有80%是良性）\n•Campbell:prepubertal小孩因為benign tumor可能性很高，也是TSS的indication\n。TSS的原則：1.也要從inguinal 2.術中要送frozen 3.frozen顯示惡性的話對側如果是正常\n的要改成radical orchiectomy\nNational\ncomprenensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nTesticular Cancer\nNetwork®\n考慮testis sparing(partial orchiectomy)\npure seminoma的B-HCG通常 不會高過10001u/，\nAFP也不會高，所以seminoma B-HCG超過1000或\nAFP升高要當作NSGCT或重新審視pathology\nIPure seminoma (pure\nSee\nPostdiagnostic\nseminoma histology and AFP\n1 Radical inguinal orchiectomye\nnormal: may have elevated\nWorkup and\n•H&P\n• Discuss sperm banking, if\nlbeta-hcap\nClinical Stage\nKTEST-2\n•Alpha-fetoprotein (AFP)D\nclinically indicated sperm analysis t/banking\nSuspicious\n•beta-hcGo,C\n•Discuss testicular prosthesis\ntesticular\n•LDH\n•For patients with bilateral\nmass\n•Ghemistry profiled\ntesticular abnormalities, consider\nTesticular ultrasound\ninguinal biopsyt of contralateral\ntestisg\nBaseline gonadal function(T/LH/FSH)\nNonseminomatous germ\ncell tumor (NSGCT\n(includes mixed seminomal\nnonseminoma tumors and\nseminoma histology with\nlelevated AFP\nSee\nPostdiagnostic\nWorkup and\nClinical Stage\nKTEST-6)\n•Contralateral inguinal biopsy(inguinal exploration and biopsy of testis)if Contralateral\ncryptoorchidism, Contralateral marked atrophy, Contralateral suspicious mass"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Diagnosis evaluation",
+                "Tumor marker",
+                "AFP - 只有NSGCT會高, 半衰期5-7天(所以術後5-7天抽), normal range 0-10 ng/mL",
+                "Embryonal carcinoma 90%",
+                "Yolk sac tumor 100%",
+                "Teratoma 50%",
+                "β-HCG -半衰期1.5天, normal 0-5 mIU/mL",
+                "輕微B-HCG上升(<20)可能是false positive result(hypogonadism, marijuana use)",
+                "seminoma通常不會高過1000 IU/L , seminoma 30%, choricocarcinoma 100%",
+                "S1中β-HCG的定義是<5000IU/L, 所以seminoma幾乎不可能會S2",
+                "LDH -半衰期不固定，約24小時, normal 140-271 IU/L",
+                "不應當做治療的考量標準, 尤其在seminoma",
+                "miRNA371 (seminoma: >95%, non seminoma:>95%)",
+                "Ultrasound of both testes",
+                "若有摸到睪丸腫瘤，或有後腹腔腫瘤合併或不合併升高的tumor markers(沒摸到睪丸腫瘤)",
+                "Microlithiasis in sonography",
+                "In general population, the significance of microlithiasis is unclear",
+                "In men with history of GCT, microlithiasis of the contralateral testis is associated with an increased risk of ITGCN (但NCCN不建議切片)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "Diagnosis evaluation\n•Tumor marker\n•AFP -只有NSGCT會高，半衰期5-7天（所以術後5-7天抽)，normal range 0-10 ng/ml\n• Embryonal carcinoma 90%\n• Yolk sac tumor 100%\n• Teratoma 50%\n•B-HCG-半衰期1.5天，normal 0-5 mlU/mL\n•輕微B-HCG 上升(<20)可能是false positive result(hypogonadism, marijuana use)\n•seminoma通常不會高過1000 1U/L,seminoma 30%,choricocarcinoma 100%\n•S1中B-HCG的定義是<50001U/L，所以seminoma幾乎不可能會＄2\n•LDH-半衰期不固定•約24小時，normal 140-271 1U/\n不應當做治療的考量標準，尤其在seminoma\n• miRNA371 (seminoma: >95%, non seminoma:>95%)\n• Utrasound of both testes\n•若有摸到睪丸腫瘤，或有後腹腔腫瘤合併或不合併升高的tumor markers(沒摸到睪\n丸腫瘤）\n• Microlithiasis in sonography\n•In general population, the significance of microlithiasis is unclear\n•In men with history of GCT, microlithiasis of the contralateral testis is associated\nwith an increased risk of ITGCN（但NCCN不建議切片）"
+            },
+            {
+              "slide_num": 17,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Prognostic Molecular Markers of Lymph Node Status and Survival in Penile Cancer: Current Status\nMARKER\nHuman papillomavirus (HPv)\np16NK4s\nROLE\nHigh-risk (HR) types affect TP53 and RB function\nIncreased expression with HR-HPV\nLYMPH NODE STATUS\nContradictory studies\nTP53\nAltered or mutated expression, increased proliferation, altered apoptosis,\ndedifferentiation\nInhibits RB function, enhancing proliferation\nSerum marker function unknown\nPreliminary data correlated with increased\nmetastasis\nNot established\nCorrelates with grossly evident metastases\nCDKN2A\nSquamous cell carcinoma\nantigen (TA-4)\nKi-67\nE-cadherin\nNuclear protein associated with cycling cells\nEpithelial cell adhesion molecule lost in progression\nMMP.9\nMatrix metalloproteinase family facilitates invasion\nPredicts increased risk\nLow expression associated with nodal\nmetastasis\nNo role\nSURVIVAL\nIncreased survival a\nIncreased survival, decreased\nrecurrence b\nCorrelated with decreased survival\nNot established\nNo role\nNo role\nLow expression predicts worse survival\nHigh expression predicts recurrence"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "Impact on fertility",
+                "Impact on fertility",
+                "Sperm abnormalities and Leydig cell dysfunction are frequently found prior to orchiectomy",
+                "Chemotherapy and RT can additionally impair fertility",
+                "In patients in the reproductive age group, pre-treatment fertility assessment (T, LH, FSH) should be performed",
+                "Semen analysis and cryopreservation (before orchiectomy, chemotherapy and RT 所有治療之前) should be offered as this is the most cost-effective strategy for fertility preservation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Impact on fertility\n•Impact on fertility\n• Sperm abnormalities and Leydig cell dysfunction are frequently found\nprior to orchiectomy\n• Chemotherapy and RT can additionally impair fertility\n• In patients in the reproductive age group, pre-treatment\nfertility assessment (T, LH, FSH) should be performed\n•Semen analysis and cryopreservation (before orchiectomy,\nchemotherapy and RT 所有治療之前) should be offered as\nthis is the most cost-effective strategy for fertility preservation"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "睪丸癌：Staging",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 19,
+              "text": [
+                "Inguinal radical orchiectomy",
+                "Lymphatic channels from the testis drain into the para-aortic and inter-aorto-caval LN ascend within the spermatic cord after leaving the testis.",
+                "A trans-scrotal orchiectomy or biopsy is contraindicated",
+                "Leaves the inguinal portion of the spermatic cord intact",
+                "May alter the lymphatic drainage of the testis",
+                "increase the risk of local recurrence",
+                "Increase the risk of pelvic or inguinal LN metastasis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "Inguinal radical orchiectomy\n• Lymphatic channels from the testis drain into the para-aortic\nand inter-aorto-caval LN ascend within the spermatic cord\nafter leaving the testis.\n• A trans-scrotal orchiectomy or biopsy is contraindicated\n• Leaves the inguinal portion of the spermatic cord intact\n• May alter the lymphatic drainage of the testis\n•increase the risk of local recurrence\n•Increase the risk of pelvic or inguinal LN metastasis"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "NCCN Brain MRI in",
+                "post-op Beta-HCG > 5000 IU/L",
+                "Extensive lung metastasis",
+                "Non-pulmonary visceral metastasis",
+                "Neurological signs",
+                "術後5-7 days抽一次, 若要化療, 化療 day1那天再抽一次(staging會以化療day1那天的marker為準)",
+                "before RT, chemo"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\ncomprehensive NCCN Guidelines Version 2.2022\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\n術後5-7days抽一次，若要化療，化療 day1那天再抽一次(staging會\n以化療day1那天的marker為準）\nStage\n，IA, B™\nPure seminomah\n(pure seminoma histology\nand AFP normal; may\nhave elevated beta-hcG )\n•Abdominal/pelvic CT\n• Chest x-ray\n• Chest CTif:\n>Positive abdominal CT or\nabnormal chest x-ray\n•Repeat beta-hCG, LDH, and AFP\nsince TNM staging is based on post-\norchiectomy valuesbj\n•Brain MRI, K if clinically indicatedl\n•Recommend sperm banking, if clinically\nindicated\nbefore RT, chemo\nr Stage\nIS\nStage\nIA,P 1B\nstage\nIIC, Im\nNCCN Brain MRl in\npost-op Beta-HCG > 5000 1/\nExtensive ung metastasis\nNon-pulmonary visceral metastasis\nNeurological signs\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nSee Primary Treatment\nand FolloW-Up (TEST-3)\nSee Primary Treatment\nand FolloW-up (TEST-4)"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "NCCN定義的三個Risk factor",
+                "(用在NSGCT Stage I 治療的考量)",
+                "Lymphovascular invasion (T2)",
+                "Spermatic cord invasion (T3)",
+                "Scrotum invasion (T4)",
+                "**但是T2還有其他定義",
+                "**LVI在Testis為T2, Penile為T1b",
+                "包括discontinuous spermatic cord invasion",
+                "retes testis旁的soft tissue",
+                "visceral tunica vaginalis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "NCCN定義的三個Risk factor\nAmerican Joint Committee on Cancer (AJCc)\nTNM Staging Classification for Testis Cancer 8th ed., 2017\n（用在NSGCT Stage 1 治療的考量）\n1.Lymphovascular invasion (T2)\n2.Spermatic cord invasion (T3)\nTable 1. Definitions for T, N, M\n3.Scrotum invasion (T4)\nClinical T Primary Tumor\n**但是T2還有其他定義\ncTX\nPrimary tumor cannot be assessed\n** LVI在Testis 為T2,Penile為T1b\ncTO\nNo evidence of primary tumor\n¢Tis\nGerm cell neoplasia in situ\nCT4\nTumor invades scrotum with or without vascular/lymphatic invasion\nNote: Except for Tis confirmed by biopsy and T4, the extent of the primary tumor is classified\nby radical orchiectomy. TX may be used for other categories for clinical staging.\nPathological T Primary Tumor\npTX\npTO\npTis\npT1\npT1a\npT1b*\npT2\nPrimary tumor cannot be assessed\nNo evidence of primary tumor\nGerm cell neoplasia in situ\nTumor limited to testis (including rete testis invasion) without lymphovascular invasion\nTumor smaller than 3 cm in size\nTumor 3 cm or larger in size\nTumor limited to testis (including rete testis invasion) with lymphovascular invasion\nOR\nretes testis旁的soft tissue\nvisceral tunica vaginalis\nTumor invading hilar soft tissue or epididymis or penetratina visceral mesothelial laver\ncovering the external surtace of tunica albuginea with or without lymphovascular invasion\npT3\npT4\nTumor directly invades spermatic cord soft tissue with or without lymphovascular invasion\nTumor invades scrotum with orwithout lymphovascular invasion\n*Subclassification of pT1 applies only to pure seminoma.\n^包括discontinuous spermatic cord invasion"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Testis N判定（N1, N2, N3)",
+                "術前c大小 (≤2cm, 2-5cm, >5cm)",
+                "術後p大小 (≤2cm and ≤5顆,  2-5cm or >5顆 or ENE, >5cm)",
+                "Penile N判定",
+                "術前顆數 (1, 2/bilateral, fixed/pelvic)",
+                "術後顆數 (2,3/bilateral, ENE/pelvic)",
+                "ENE為pN3",
+                "如果retroperitoneal LN mets equivocal, 4-6週後再repeat image來staging"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Clinical N\nCNX\nCNO\ncN1\nCN2\ncN3\nRegional Lymph Nodes\nRegional lymph nodes cannot be assessed\nNo regional lymph node metastasis\nMetastasis with a lymph node mass ②cm or smaller in greatest\ndimension\nOR\nMultiple lymph nodes, none larger than 2 cm in greatest\ndimension\nMetastasis with a lymph node mass larger than 2 cm but not\nlarger than ⑤ cm in greatest dimension\nOR\nMultiple lymph nodes, any one mass larger than 2 cm but not\nlarger than 5 cm in greatest dimension\nMetastasis with a lymph node mass larger than 5 cm in\ngreatest dimension\nPathological N Regional Lymph Nodes\npNX\npNO\npN1\nRegional lymph nodes cannot be assessed\nNo regional lymph node metastasis\nMetastasis with a lymph node mass ②om or smaller in\ngreatest dimension and less than or equal to (fivenodes\npositive, none larger than 2 cm in greatest dimension\npN2\nMetastasis with a lymph node mass larger than 2 cm but\nnot larger than 5 cm in greatest dimension; or more than\nave nodes positive none larger than 5 cm; or evidence of\nextranodal extension of tumor\npN3\nMetastasis with a lymph node mass larger than 5 cm in\ngreatest dimension\n如果retroperitoneal LN mets equivocal, 4-5週後\n再repeat image來staging\nTestis N判定(N1, N2, N3)\n術前c大小(≤2cm, 2-5cm, >5cm)\n術後口大小(≤2cm and ≤5顆，2-5cm or>5顆 or ENE,\n＞5cm)\nPenile N判定\n術前顆數 (1,2/bilateral, fixed/pelvic)\n術後顆數 (2,3/bilateral, ENE/ pelvic)\nENE為pN3"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "LN有明確定義會成為M",
+                "Bladder cancer",
+                "Above common iliac – M1a",
+                "Testicular cancer",
+                "Non-retroperitoneal LN – M1a",
+                "Prostate cancer",
+                "Non-regional LN – M1a",
+                "Normal range:",
+                "AFP 0-10",
+                "LDH 140-270",
+                "HCG 0-5"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Distant Metastasis\nMo\nM1\nNo distant metastasis\nDistant metastasis\nMla Non-retroperitoneal nodal or pulmonary metastases\nM1b Non-pulmonary visceral metastases\nNormal range:\nAFP 0-10\nLDH 140-270\nS\nSerum Markers\nHCG 0-5\nSX Marker studies not available or not performed\nS0 Marker study levels within normal limits\nS1 LDH<1.5x N* and hcG (mlU/mL) <5,000\nand AFP (ng/mL) <1,000\nS2 LDH 1.5-10 x N* or hcG (mlu/mL) 5,000-50,000\norAFP (ng/mL) 1,000-10,000\nS3 LDH>10x N* or hcG (mlU/mL) >50,000\nOrAFP (ng/mL)＞ 10,000\nLN有明確定義會成為M\nBladder cancer\nAbove common iliac - M1a\nTesticular cancer\nNon-retroperitoneal LN - M1a\nProstate cancer\nNon-regional LN - M1a"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "判定流程",
+                "1. 只要N0 M0 (無轉移)→ Stage I",
+                "N0M0S0 → Stage I",
+                "N0M0S1-3 → Stage IS",
+                "2. M0 S0-1 N(+)(橫膈下LN)→ Stage II",
+                "N1 → Stage IIA",
+                "N2 → Stage IIB",
+                "N3 → Stage IIC",
+                "3. M, S2/S3(遠端轉移 or S2以上) → Stage III",
+                "M1a → Stage IIIA",
+                "S2＋N(+) → Stage IIIB",
+                "M1b / S3＋N(+) → Stage IIIC",
+                "易混淆：S2N0->stage 1S, S2N(+)->stage 3B",
+                "S3N0->stage 1S, S3N(+)->stage 3C"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "American Joint Committee on Cancer (AJCC)\nTNM Staging Classification for Testis Cancer 8th ed., 2017\nTable 2. AJCC Prognostic Stage Groups\nT\nN\nM\nS\nStage 0\npTis\nMo\nSO\nStage l pT1-T4\nSX\nStage lA pT1\nSO\nStage IB pT2\nSO\npT3\nSO\npT4\nSO\nStage Is Any pT/TX NO\nS1-3\nStage II\nAny pT/TX N1-3\nMO\nSX\nStage IA Any pT/TX N1\nAny pT/TX\nN1\nStage IIB Any pT/TX N2\nAny pT/TX N2\nStage IIC Any pT/TX N3\nAny pT/TX N3\nS1\nStage lll Any pT/TX Any\nSase taa Aoy orT sor N\nSX\nAny pT/TX Any N M1a S1\nStage IIB Any pT/TX N1-3\nMo\nS2\nAnv DT/TX AnvN M1a\nS2\nStage IIC Any pT/TX N1-3 MO\nS3\nAny pT/TX Any N Mla S3\nAny pT/TX AnyN\nM1b Any S\n判定流程\n1. 只要NO MO（無轉移)≥ Stage |\nNOMOSO -> Stage l\nNOM0S1-3 一> Stage IS\n2.Mo SO-1 N(+)（橫膈下LN)> Stage 11\nN1 ≥ Stage IA\nN2 -> Stage IIB\nN3 >Stage IIC\n3. M,S2/$3（遠端轉移 or S2以 上）≥ Stage 1ll\nMla > Stage IIlA\nS2 +N(+)=Stage IIB\nM1b / S3+ N(+)≥ Stage IIC\n昜混淆：S2NO--stage 1S, S2N(+)-=stage 3B\nS3NO->stage 1S, S3N(+)->stage 3C"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "Seminoma 治療",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 25,
+              "text": [
+                "建議給chemo前的 4週內再做一次A+P image+CXR",
+                "若只是輕微HCG, LDH升高, 建議repeat tumor marker, 真的是stage 1S, 建議給chemo, 但NCCN沒說要給什麼怎麼給",
+                "適用於tumor>4cm或rete testis involvement(T2 at least)",
+                "adjuvant chemo或RT都可能有late toxicity(尤其RT會增加secondary cancer risk), 因此目前最prefer surveillance",
+                "RT範圍是同側後腹腔LN(paraaortic LN)",
+                "1A:T1N0M0S0",
+                "1B:T2-4N0M0S0",
+                "TanyN0M0S1-3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nCLINICAL\nSTAGE\nPuuteu sy nsiallg Vilailg ou o1<1<U44.44.5 Am. Lopyiuiysu<iauorlal Lorpielleiisive ualicel relworn, inc\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\n建議給chemo前的 4週内再做一次A+P image+CxR\nPRIMARY TREATMENTI\nFOLLOW-UP\nadjuvant chemo或RT都可能有late toxicity(尤 其RT會增加secondary cancer risk),因此目前最prefer surveillance\nISurveillance for pT1-pT3 tumors\n(strongly preferred)\nt See Follow-up for Seminoma, Table 1 (TEST-A 1 of3) 一\nNCCN Guidelines Inde\nTable of Contents\nDiscussior\nRECURRENCE\nStage\nA, IB\nlor\n適用於tumor>4cm或rete testis involvement(T2 at least)\n* Single-agent carboplatinj,k\n(area under the curve [AUC1=7x 1\nlcycle or AuC =7x 2 cycles)\n1A:T1NOMOSO\n1B:T2-4NOMOSO\norRT範圍是同側後腹腔LN(paraaortic LN)\nSee Follow-up for Seminoma, Table 2 (TEST-A 1 of 3)一+\nFor recurrence,\ntreat according to\nextent of disease at\nrelapse®,P\nRadiation therapy(RT):\nStage\nIS9\nTanyNOMOS1-3\n• See Follow-up for Seminoma, Table 2 (TEST-A1of3)一\nRepeat elevated serum tumor marker\nmeasurementb and assess with imaging):\n+ • Chest/abdomen/pelvis (CIA/P) CT (with contrast)\nor MRI (with and without contrast) to scan for\nevaluable diseaseg,n\n若只是輕微HCG,LDH升高，建議repeat tumor marker，真的\n是stage 1S,建議給chemo，但NCCN沒說要給什麼怎麼給"
+            },
+            {
+              "slide_num": 26,
+              "text": [
+                "Follow-up 不一定要抽tumor marker",
+                "超過五年沒復發: 不要做CT"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\nComprehensive NCCN Guidelines Version 2.2025\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\n超過五年沒復發：不要做CT\nFOLLOW-UP FOR SEMINOMA\nFollow-up 不一定\n要抽tumor marker\nTable 1 Clinical Stage I Seminoma: Surveillance After Orchiectomy\n1\n2\nYear\n3\n4\n5\nH&pa,b\nEvery 4-6mo\nEvery 6 mo\nEvery 6-12 mo\nAnnually\nAnnually\nAbdomen t Pelvis\nCTC or MRIQ\nEvery 4-6 mo\nEvery 6 mo\nEvery 6-12 mo\nEvery 12-24 mo\nChest X-Ray\nAs clinically indicated, consider chest CT with contrast in symptomatic patients.\nTable 2 Clinical Stage I Seminoma: Surveillance After Adjuvant Treatment (Chemotherapy or Radiation)\nYear\n1\n2\n3\n4\nH&pa,b\nEvery 6-12 mo\nEvery 6-12 mo\nAnnually\nAnnually\nAnnually\nAbdomen t Pelvis\nCTC or MRId\nAnnually\nAnnually\nAnnually\nAs clinically indicated\nChest X-Ray\nAs clinically indicated, consider chest CT with contrast in symptomatic patients."
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                ">50 y/o或腎功能差或lung不好的話就不要用bleomycin, EP就好 (bleomycin有肺纖維化的副作用）",
+                "建議給chemo前的 4週內再做一次A+P image+CXR",
+                "N1/N2",
+                "nonbulky IIB, LN <3 cm in transaxial long axis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\n建議給chemo前的 4週内再做一次A+P image+CxR\nCLINICAL\nSSTAGE\nPRIMARY TREATMENTI\nFOLLOW-UP\nRECURRENCE\nIRT to include para-aortic and ipsilateral iliac\nlymph nodes to a dose of 30 Gy (1-2 cm) or 36 Gy\nnonbulky 1IB,\n(2-3 cm)\nLN <3cm in\nor\nFirst-line chemotherapys:\ntransaxlal -3 cmr -+\nBEPu for 3 cycles or EP for 4 cycles\nlong axis\nor\nor\nSee Follow-up for Seminoma,\nTable 3 (TEST-A 2 of 3)\nSee Follow-up for Seminoma,_+\nTable 3 (TEST-A 2 of 3)\nSee Follow-up for Seminoma,\nNerve-sparing RPLND'V,W (category 2B for 2-3 cm) — + Table 4 (TEST-A 2 of 3) or\n5 (TEST-A 3 of 3\nICarboplatin + RTXY (category 2B)\nSee Follow-up for Seminoma,\nTable 3 (TEST-A 2 of2)\nFor recurrence, trea'\naccording to extent\ndisease at relapseo\nStage\nIIA/IBh,9\nN1/N2\n3-5cm -+ Firstuline chemotherapy::\nSee Follow-up for Seminoma,\nIBEpu for 3 cycles or EP for 4 cycles\nTable 6 (TEST-A 3 of 3)\n＞50x/0或腎功能差或lung不好的話就不要用bleomycin, EP就好\n(bleomycin有肺纖維化的副作用）"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "建議給chemo前的 4週內再做一次A+P image+CXR",
+                "stage 3C(M1b) 有非lung的臟器轉移",
+                "stage 2, 3A 3B",
+                "stage 3C(M1b) : 有非lung的臟器轉移",
+                "IGCCCG post-op risk分類",
+                "沒有非lung的臟器轉移",
+                "seminoma 沒有poor  risk !!!!!"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "Risk Status\nGood Risk\nNational\ncomorenensive NCCN Guidelines Version 2.2025\nNCCN\nI Cancer\nTesticular Cancer - Pure Seminoma\nNetwork®\nIIntermediate\nRisk\nCLINICAL\nSSTAGEZ\nPRIMARY TREATMENTi\n建議給chemo前的 4週内再做一次A+P image+CXR\nPoor Risk\nseminoma IGCCCG post-op risk分類\nAAny primary site\nand\nNo nonpulmonary visceral metastases\nand\nNormal AFP\nAny hcG\nAny LDH\n沒有非lung的\n臟器轉移\nAny primary site\nand\nand\nNormal AFP\nAny hcG\nAny LDH\nNonpulmonary visceral metastases\nstage 3C(M1b)：有\n非lung的臟器轉移\nNo patients classified as poor\nprognosis\nseminoma 沒有poor risk I!!\nFirst-line chemotherapys:\nGood riskbb,cc +\nBEPu for 3 cycles (category 1)\nstage 2, 3A 3B\nSStage\nIc, maa\nIPost First-Line\nChemotherapy\nManagement\nland Follow-up (SEM-5)\nIntermediate\nriskZ,bb\nstage 3C(M1b) 有非\nlung的臟器轉移"
+            },
+            {
+              "slide_num": 29,
+              "text": [
+                "tumor marker 不一定要抽",
+                "沒復發過五年CT/MRI 不用"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "Comprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\ntumor marker 不一定\n要抽\n沒復發過五年CT/MRI\n不用\nFOLLOW-UPFOR SEMINOMA\nTable 3 Clinical Stage IIA and Non-Bulky IB Seminoma: Surveillance After Radiotherapy or Chemotherapy or Bothf\nYear\n1\n2\n3\n4\n5€\nH&pa,b\nEvery 3 mo\nEvery 6 mo\nEvery 6 mo\nEvery 6 mo\nEvery 6 mo\nCT9 or MRIQ\nof Abdomen +\nPelvis\nAt 3 mo, then\nat 9 or 12 mo\nAnnually\nAnnually\nAs clinically indicated\nIf Recurrer\nextent of d\nChest x-Rayh\nEvery 6 mo\nEvery 6 mo\nAs clinically indicated\nTable 4 Clinical Stage ll Seminoma: Surveillance After Primary RPLND and NOT Treated with Adjuvant Chemotherapy\nYear\n1\n2\n3\n4\nH&pa,b\nEvery 4 mo\nEvery 6 mo\nEvery 6mo\nEvery 6 mo\nEvery 6 mo\nCT9 or MRId\nof Abdomen +\nPelvis\nEvery 4 mo\nEvery 6 mo\nAnnually\nAs clinically indicated\nIf Recurrer\nextent of d\nChest x-Ravh\nEvery 4 mo\nEvery 6 mo\nAnnually\nAs clinically indicated"
+            },
+            {
+              "slide_num": 30,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nNetwork®\nTesticular Cancer - Pure Seminoma\nFOLLOW-UP FOR SEMINOMA\nTable 5 Clinical Stage II Seminoma: Surveillance After Primary RPLND and Treated with Adjuvant Chemotherapy\n1\n2\nYear\n3\n4\n5€\nH&pa,b\nEvery 3 mo\nvery 6 mo\nEvery 6 mo\nEvery 6mo\nEvery 6 mo\nCT9 or MRId\nof Abdomen +\nPelvis\nEvery 6 mo\nAnnually\nAs clinically indicated\nChest x-Rayh\nEvery 6 mo\nAnnually\nAs clinically indicated\nTable 6 Bulky Clinical Stage IB, IIC, and Stage Ill Seminoma: Surveillance After Chemotherapy\n1\n2\nYear\n3\n4\n5e\nH&P and\nMarkersb\nEvery 2-4 mo\nEvery 3-6 mo\nEvery 6 mo\nEvery 6 mo\nAnnually\nCT9,li,k or MRId of\nAbdomen/Pelvis\nEvery 4 mo\nEvery 6 mo\nAnnually\nAnnually\nAs clinically\nindicated\nChest X-rayh\nEvery 4 mol\nEvery 6 mo\nAnnually\nIf R\nextE\nIf Rer\nThera"
+            },
+            {
+              "slide_num": 31,
+              "text": [
+                "EP, TIP, VIP, VelP",
+                "PETCT 如果residual >3cm可考慮, 執行時間要在C/T後六周",
+                "Clinical trial (preferred)",
+                "• Chemotherapy",
+                "Conventional-dose second-line chemotherapy",
+                "(VeIP for 4 cycles or TIP for 4 cycles)",
+                "High-dose chemotherapy(Carboplatin/etoposide, Paclitaxel/ifosfamide/carboplatin/etoposide)",
+                "• Recommend sperm banking if clinically",
+                "indicatednn"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nTesticular Cancer - Pure Seminoma\nNetwork®\nSTAGE IA, IIB, IIC, MIAFTER FIRST LINE\nTREATMENT WITH CHEMOTHERAPY\nPOST FIRST-LINE\nCHEMOTHERAPY\nMANAGEMENT\nFOLLOW-UP\nRECURRENCE\n•CIA/P CT\nor MRIdd\n•Serum\ntumor\nmarkers\nNo residual mass or\nresidual mass\n≤3 cm and normal\nserum AFP and\nIbeta-hcG\n- Surveillance\nISurveillance\nor\nNegativel\nindeterminate\n-+ surveillance\nIResidual\nmass\n(>3cmy\nand\nnormal\nserum\nAFPand\nIbeta-hcGl\nConsider\n-FDC-PETI\nCTfrom skul\nbase to mid-\nthigh (6 wks\nor more post-\nIchemotherapy)\nPositiveee,ff\nPETCT 如果residual >3cm可考慮\n1Pro卦每號學露春＄T後六周\nSecond-Line\ngrowing mass or\ntherapy (SEM-6)\nlrising markers)°\nRepeat\nimaging in 6-8\nweeks9g\nor\nResection of\nresidual mass\nor\nIBiopsy\nSee Follow-up\nfor Seminoma,\nTable 3\nTEST-A2of 3)\nlor 6 (TEST-A 3\nlof 3)\nComplete\nresection\nPositive\nfor viable\nseminomahh\nncomplete\nresection\nor\npositive\nbiopsy\nor\nIProgression\nINegative\nfor viable\nseminomahh\nlFor\nrecurrence,\nsee Second-Line\nITherapy (SEM-6)\nSee Follow-up for\nSeminoma, Table 6\n(TEST-A 3 of 3)\nConsider 2 cycles\nof adiuvant\nchemotherapyii\nEP, TIP, VIP, VelP\nSecond-Line\n1Therapy\nISEM-6)\nSee Follow-up for\nSeminoma, Table 6\nKTEST-A 3 of 3)\nClinical trial (preferred)\n•Chemotherapv\nConventional-dose second-line chemotherapy\n(VelP for 4 cycles or TIP for 4 cycles)\nHigh-dose chemotherapy(Carboplatin/etoposide, Paclitaxel/ifosfamide/carboplatin/etoposide)\n•Recommend sperm banking if clinically\nindicatednn\nRecurrence,\nSee Second-Line\nITherapy (SEM-6)"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "International Germ Cell Cancer Collaborative Group"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "International Germ Cell Cancer\nCollaborative Group\nRisk Status\nGood Risk\nNonseminoma\nTesticular or retroperitoneal primary\ntumorc\nand\nRISK CLASSIFICATION FOR ADVANCED DISEASE\n(post-orchiectomy)a,b\nSeminoma\nAny primary site\nand\nNormal AFP\nAny hcG\nAny LDHd\nNo nonpulmonary visceral metastases\nNo nonpulmonary visceral metastases and\nand\nPost-orchiectomy markers- all of:\nAFP < 1,000 ng/mL\nhcG <5,000 1U/L\nLDH<1.5x upper limit of normal\nIntermediate\nTesticular or retroperitoneal primary\nRisk\ntumorc\nand\nand\nPost-orchiectomy markers- any of:\nAny primary site\nand\nNo nonpulmonary visceral metastases\nand\nNormal AFP\nAny hcG\nAny LDH\nNonpulmonary visceral metastases\nAFP 1,000-10,000 ng/mL\nhcG 5,000-50,000 1/L\nLDH 1.5-10 x upper limit of normal\nPoor Risk\nMediastinal primary tumors\nor\nNo patients classified as poor\nprognosis\nNonpulmonary visceral metastases\nor\nPost-orchiectomy markers- any of:\nAFP >10,000 ng/mL\nhcG > 50,000 1U/\nLDH >10x upper limit of normal\nChemotherapy Regimens\nBEP for 3 cycles\nor\nEP for 4 cycles\nBEP for 4 cycles\nor\nVIP for 4 cycles\nBEP for 4 cycles\nor\nVIP for 4 cycles"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Nonseminoma 治療",
+          "slide_count": 15,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 33,
+              "text": [
+                "Nonseminoma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss33.webp",
+              "hidden": false,
+              "ocr_text": "Nonseminoma"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "Brain MRI in",
+                "post-op Beta-HCG > 5000 IU/L",
+                "post-op AFP >10000 IU/L",
+                "Extensive lung metastasis",
+                "Non-pulmonary visceral metastases",
+                "Neurological signs",
+                "Choricocarcinoma",
+                "LVI, pT3, pT4",
+                "術後5-7 days抽一次, 若要化療, 化療 day1那天再抽一次(staging會以化療day1那天的marker為準)",
+                "直接就要chest CT(pure seminoma是有條件才做)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss34.webp",
+              "hidden": false,
+              "ocr_text": "comprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nPATHOLOGIC DIAGNOSIS\nPOSTDIAGNOSTIC WORKUPC\nNCCNG\nTa\nCLINICAL STAGE\nStage I with and\n, without risk\nfactorsg,h\nLVl, pT3, pT4\n+ Primary Treatment\nNSGCT (includes mixed\nseminomalnonseminoma\ntumors and seminoma\nhistology with elevated AFP)\n術後5-7days抽一次，若要化療，化療day1那天再\n抽一次(staging會以化療day1那天的rparker為準）\n直接就要chest CT(pure seminoma是有條件才做）\nI• CIA/P CT or MRId\n•Repeat beta-hCG, LDH, AFP\nbecause staging is based on post-\norchiectomy valuesa,e\n• Brain MRl,• if clinically indicated\n•Recommend sperm banking, if\nclinically indicated\n+ Stage llA, IB\n+ Primary Treatment\na Mildly elevated. non-rising AFP levels may not indicate presence of germ cell tumor.\nDecisions to treat should not be based solely on AFP values <20 nglmL. More highly\nelevated AFP levels generally indicate the presence of nonseminomatous tumor\nelements. Further workup should be considered berore initating treatment tor midly\nBrain MRlin\npost-op Beta-HCG > 5000 1/\npost-op AFP >10000 1U/\nExtensive lung metastasis\nNon-pulmonary visceral metastases\nNeurological signs\nChoricocarcinoma\nStage Is, IIC,\nIA,9 1B,9\nIC,9 and brain\nImetastasis\n+ Primary Treatment"
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "LVI, pT3, pT4",
+                "teratoma的話建議做",
+                "teratoma的話建議做",
+                "建議給chemo前的 4週內再做一次A+P image+CXR"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss35.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprenensive NCCN Guidelines Version 2.2025\nNCCN Cancer\nTesticular Cancer - Nonseminoma\nNetwork®\nCLINICAL\nSTAGE\n建議給chemo前的 4週内再做一次\nA+P image+CXR\nStage I without\nrisk factorsh,i\nPRIMARY TREATMENTI\nSurveillance (preferred)\nor\nNerve-sparing. RPLND\nteratoma的話建議做\nor\nAdjuvant chemotherapyk:\n1BEP for 1 cycle\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nt See Follow-up for Nonseminoma, Table 7 (TEST-B 10f 3)\n+ Postsurgical Management (NSEM-5)\nt See Follow-up for Nonseminoma, Table 9 (TEST-B 2 of3)\nStage | with\nFisk factorshli\nLV, pT3, pT4\nStage.\nIS\nHighly elevated\nlor persistently\nrising markersa\nSurveillance\nlor\nAdjuvant chemotherapyk:\n-BEP for 1 cycle\nor\nINerve-sparing RPLNDI\nteratoma的話建議做\n+ Primary Treatment (NSEM-6)\n= See Follow-up for Nonseminoma, Table & ITEST-B 1 of 3)\n• See Follow-up for Nonseminoma, Table 9 ITEST-B 2 of 3)\n+ Postsurgical Management (NSEM-5)\nBEP = Bleomycin/etoposide/cisplatin"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "TEST B 1/3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss36.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\nComprenensive NCCN Guidelines Version 2.2022\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nTEST B 1/3\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nFOLLOW-UP FOR NONSEMINOMA\nNo single follow-up plan is appropriate for all patients. The follow-up for nonseminoma tables is to provide guidance, and should be modified for the\nindividual patient based on sites of disease, biology of disease, and length of time on treatment and may be extended beyand E years at the disaretion ofthe\nphysician. Reassessment of disease activity should be performed in patients with new or worsening signs or symptoms of disease, regardless of the time\ninterval from previous studies. Further study is required to define optimal follow-up duration.\nTable 5 Clinical Stage I without Risk Factors,a NSGCT: Active Surveillance\nYear (at month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 2 mo\nEvery 3 mo\nEvery 4-6mo\nEvery 6mo\nAnnually\nAbdominal\n‡Pelvic CTCd Every 4-6 mo\nEvery 6 mo\nAnnually\nAs clinically indicated\nIf Recurrence, see TEST-13.\nChest x-raye\nAt mo 4 and\n12\nAnnually\nAnnually\nAnnually\nAs clinically\nindicated\nTable 6 Clinical Stage I with Risk Factors,a NSGCT: Active Surveillance\nYear (at month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 2 mo\nEvery 3 mo\nEvery 4-6mo\nEvery 6 mo\nAnnually\nAbdominal\n‡Pelvic CTc,d\nEvery 4 mo\nEvery 4-6 mo\nEvery 6 mo\nAnnually\nAs clinically\nindicated\nIf Recurrence, see TEST-13.\nChest x-raye\nvery 4 mo\nEvery 4-6 mo\nEvery 6 mo\nAnnually\nAs clinically\nindicated"
+            },
+            {
+              "slide_num": 37,
+              "text": [
+                "TEST B 2/3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss37.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprehensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nTEST B 2/3\nFOLLOW-UP FOR NONSEMINOMA\nTable Z Clinical Stage IA/B NSGCT: Treated with 1 Cycle of Adjuvant BEP Chemotherapy or Primary RPLND\nYear lat month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 3 mo\nEvery 3 mo\nEvery 6mo\nEvery 6 mo\nAnnually\nAbdominal t\nPelvic CTa,d\nIf Recurrence, see IEST-13.\nAnnually\nAnnuallyf\nChest x-raye\nEvery 6-12 mo\nAnnually\nTable & Clinical Stage ILIl NSGCT: Surveillance After Complete Response to Chemotherapy 士 Postchemotherapy RPLND9\nYear (at month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 2 mo\nEvery 3 mo\nEvery 6mo\nEvery 6mo\nEvery 6 mol\nAbdominal +\nPelvic CTC,d,h\nEvery 6 mo\nEvery 6-12 mo\nAnnually\nAs clinically indicatedk\nIf Recurrence, see TEST-13.\nChest x-raye,l\nEvery 6 mo\nEvery 6 mo\nAnnually\nAnnually!\nNCCN Guidelines Index\nTable of Contents\nDiscussion"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Teratoma predominant",
+                "建議給chemo前的 4週內再做一次A+P image+CXR",
+                ">50 y/o或腎功能差或lung不好的話就不要用bleomycin, EP就好",
+                "怕有micrometastasis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss38.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nCLINICAL STAGE\nPRIMARY TREATMENT\nStage\nHAlm\nStage\n!Bm\nNerve-sparing RPLND\n建議給chemo前的4週內再做一次A+P image+CXR\nPostsurgical\n•Management (NSEM-5)\n， Markers negative\nor\n4 Persistent marker\nelevationa\nPost First-Line\nFirst-line chemotherapyn:\n+ Chemotherapy\nIBEP for 3 cycles or EP for 4 cycles°\n＞50v/0或腎功能差或lung不好的話就不要用bleomycin,\nmafegp—時 INSEM-4)\n- Primary Treatment (NSEM-6)\n怕有micrometastasis\n/First-line chemotherapy\":\nBEP for 3 cycles or EP for 4 cycleso\nPost First-Line\n+ Chemotherapy\nManagement (NSEM-4)\nILymph node metastases,\nwithin lymphatic drainage\nsites\nor\nMarkers\n丿negative\nNerve-sparing RPLND/ in highly\nselected casesP Teratoma predominant\nPostsurgical\nManagement (NSEM-51\n4 /Multifocal, symptomatic, or\nllymph node metastases with\nlaberrant lymphatic drainage |\nIFirst-line chemotherapyl:\nBEP for 3 cycles or EP for 4 cycleso\nPost First-Line\n+ Chemotherapy\nManagement (NSEM-4)\n4 persistent marker elevationa\n+ Primary Treatment (NSEM-6)\nBEP = Bleomycin/etoposidelcisplatin\nEP = Etoposide/cisplatin"
+            },
+            {
+              "slide_num": 39,
+              "text": [
+                "Stage IIA, IIB, S0",
+                "NSEM 4"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss39.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nPOST FIRST-LINE CHEMOTHERAPY MANAGEMENT\nNSEM 4\nNegative markers\nwith no mass or\nlresidual mass <1\ncm (transaxial\nlergads) on CT\nlor MRI9\nSurveillance\n【preferred)\nor\nNerve-sparing\nbilateral RPLNDJ\nlin selected cases\"\nKcategory 2B)\nStage IA, IIB, SO\nStage IlA,\nIB treated\nwith first-line\nchemotherapy\n•Abdomen/\npelvis CTor\nMRIC,d\n+• Consider\nchest CT or\nMRIC,dor\nchest x-ray\nTeratoma or\n1necrosis\nResidual\nembryonal,\nyolk sac,\nchoriocarcinoma,\nor seminoma\nlelement\nNegative markers\nwith residual mass\n≥1 cm (transaxial\nllong axis) on CT\nlor MRI9\nNerve-sparing\n1bilaterai RPLNDi\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nFOLLOW-UP\n+ Surveillance\nIChemotherapy\n(preferred) for\n2 cycles (EP or\nTIP or viP or\nVelPyn,s\nor\nSurveillance for\nlselect patientst\nSee Follow-\nup for\n- Nonseminoma,\nTable 10\nTEST-B 2 of 3)\nISee Follow-\nup for\n+ Nonseminoma,\nTable 10\nTEST-B 2of 3)"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "NSEM 5",
+                "Teratoma",
+                "Teratoma"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss40.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 5\nNCCN\nNational\ncamprenensive NCCN Guidelines Version 2.2025\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nPOSTSURGICAL MANAGEMENT\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nFOLLOW-UP\n4pNO\n+ Surveillance\npN1\nISurveillance (preferred)\nor\nIChemotherapyn: EP for 2 cycles F\nSee Follow-up for Nonseminoma,\n• Table g (IEST-B 2 of3)\nSee Follow-up for Nonseminoma,\n+ Table 9 (TEST-B 2of 3) or 12 (TEST-B\n3 of3)\n• See Follow-up for Nonseminoma,\nTable 11 (TEST-B 3 of 3)\nStage IA, 1IB with and\nwithout risk factors,n\nIA, IIB treated with\nprimary nerve-sparing\nRPLND\npN24\nIChemotherapy\"：EP for 2 cycles -\nor Teratoma\n|Surveillance\npN34\nIChemotherapy\"Y\nor Teratoma\n+ Surveilancew\nSee Follow-up for Nonseminoma,\nTable 11 (TEST-B 3 of 3)\nSee Follow-up for Nonseminoma,\nTable 12 (TEST-B 3 o1 3)\nSee Follow-up for Nonseminoma,\nTable 11 (TEST-B 3 of3)\nSee Follow-up for Nonseminoma,\nTable 12 (TEST-B 3of 3)\nh Risk factors for recurrence include lymphovascular invasion or invasion of spermatic cord or scrotum. Some centers consider predominance of embryonal carcinoma\nas an additional risk factor for relapse.\nnFirst-Line Chemotherapy Regimens for Germ Cell Tumors (TEST-E).\nu Surveillance is preferred for patients who have pure teratoma.\nV This is a rare circumstance. Due to the limited available data, the Panel could not reach a consensus as to the optimal regimen. BEP for 2-3 cycles or EP for 2-4\ncycles can be considered.\nwCT or MRI of abdomen/pelvis or chest x-ray 2-3 months after surgery."
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "TEST B 3/3"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss41.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nTEST B 3/3\nFOLLOW-UP FOR NONSEMINOMA\nTable 9 Pathologic Stage IA/B NSGCT: Post-Primary RPLND and Treated with Adjuvant Chemotherapy\nYear (at month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 6 mo\nEvery 6 mo\nAnnually\nAnnually\nAnnually\nAbdominal/\nPelvic CTC,d,m\n4 mo after\nRPLND\nAs clinically indicated\nChest x-ray®\nEvery 6 mo\nAnnually\nAnnually\nAnnually\nAnnually\nTable 10 Pathologic Stage IIA/B NSGCT: Post-Primary RPLND and NOT Treated with Adjuvant ChemotherapyP\nYear (at month intervals)\n1\n2\n3\n4\n5\nH&P and\nmarkersb\nEvery 2 mo\nEvery 3 mo\nEvery 4 mo\nEvery 6 mo\nAnnually\nAbdominal/\nPelvic CTC,d\nAt 3-4 moo\nAnnually\nAs clinically indicated\nChest x-raye\nEvery 2-4 mo\nEvery 3-6\nmo\nAnnually\nAnnually\nAnnually\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nIf Recurrence, see TEST-13.\nIf Recurrence, see TEST-13."
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "IGCCCG post-op risk分類",
+                "Mediastinal / 肺外 /",
+                "S3",
+                "S1",
+                "S2"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss42.webp",
+              "hidden": false,
+              "ocr_text": "IGCCCG post-op risk分類\nRisk Status\nGood Risk\nNonseminoma\nTesticular or retroperitoneal primary\ntumorc\nand\nand\nS1\nPost-orchiectomy markers-all of:\nAFP < 1,000 ng/mL\nhcG <5,000 1U/L\nLDH <1.5x upper limit of normal\nIntermediate I Testicular or retroperitoneal primary\nRisk\ntumorC\nand\nand\nS2\nPost-orchiectomy markers- any of:\nAFP 1,000-10,000 ng/mL\nhcG 5,000-50,000 1U/L\nLDH 1.5-10 x upper limit of normal\nPoor Risk\nMediastinal primary tumors\n。r\nNonpulmonary visceral metastases\nMediastinal/\n肺外/\nS3\nor\nPost-orchiectomy markers- any of:\nAFP >10,000 ng/mL\ni hcG > 50,000 1U/L\n1LDH >10x upper limit of normal\nRISK CLASSIFICATION FOR ADVANCED DISEASE\n(post-orchiectomyja,b\nSeminoma\nAny primary site\nand\nNo nonpulmonary visceral metastases\nNo nonpulmonary visceral metastases and\nNormal AFP\nAny hcG\nAny LDHd\nNonpulmonary visceral metastases\nNo nonpulmonary visceral metastases and\nAny primary site\nand\nNormal AFP\nAny hcG\nAny LDH\nNo patients classified as poor\nprognosis\nChemotherapy Regimens\nBEP for 3 cycles\nor\nEP for 4 cycles\nBEP for 4 cycles\nor\nVIP for 4 cycles\nBEP for 4 cycles\n。r\nVIP for 4 cycles"
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "S2",
+                "Mediastinal",
+                "肺外",
+                "S3",
+                "S1",
+                "IGCCCG post-op risk分類",
+                "intermediate/poor (S2以上) 給強一點C/T : BEP多一輪(4) or VIP(4)",
+                "response 很好(marker-, residual<1cm) 可surveillance/ 之前有NorM 可RPLND",
+                "partial response (residual mass, +- marker)",
+                "marker- 要把剩餘mass切掉!!!",
+                "NSEM 6"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss43.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 6\nintermediate/poor (S2以上）給強一點C/T：BEP多一輪(4) or VIP(4)\nresponse 很好(marker-,residual<1cm）可surveillance/ 之前有NorM 可RPLND\npartial response (residual mass, +- marker)\nmarker-要把剩餘mass切掉！！！\nNational\ncomorenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nCLINICAL\nSTAGE\nPRIMARY TREATMENTX\nPOSTCHEMOTHERAPY\nMANAGEMENT\nGood riskY:\nStage Is\nStage IlA\nStage IIB\nStage Ic\nStage HlA\nFirst-line\nIchemotherapyl:\nBEP for 3 cycleso\n-(category 1)\nEP for 4 cycles\ncategory 1)\nISee Discussion\nNegative markers1 It orginal\nstage,\nwith\nastage Is\nno mass or\nresidual mass <1\ncm (transaxial\nllong axis) on CT\nscans\nIf original\nstage,\nITany N1-3,\nM0-1\nSurveillance\nSurveillance\nlor\nNerve-sparing\nbilateral\nRPLNDJ\nin selected casesr\nI(category 2B)\nRisk Status\nIGcCCG post-op risk分類\nNonseminoma\nGood Risk\nTesticular or retroperitoneal primary\ntumor\nand\nS1\nNo nonpulmonary visceral metastases\nand\nPost-orchiectomy markers- all of:\nAFP < 1.000 ng/mL\nhcG<5,000 iu/L\nLDH<1.5 x upper limit of normal\nIntermediate\nRisk\nTesticular or retroperitoneal primary\ntumor\nand\nS2\nNo nonpulmonary visceral metastases\nand\nPost-orchiectomy markers- any of:\nAFP 1,000-10,000 ng/mL\nhcG5.000-50.000 iu/L\nLDH 1.5-10 x upper limit of normal\nPoor Risk\nMediastinal primary tumor\nor\nMediastina lenpumonary wiscerel metastases\n肺外\nS3\nPost-orchiectomy markers- any of:\nAFP > 10,000 ng/mL\nhcG > 50,000 iu/L\nLDH >10x upper limit of normal\n-\nsee\nFollow-wp for\nFor recurrence,\n- Nonseminoma, -+\nsee Second -Line\nITable 10\nITherapy (NSEM-8)\nKTEST-B 2 of 3)\nintermediate\nrisk and poor\nrisky,z,D:\nStage flB\nStage flIc\nBrain\nmetastases\nFirst-line\nIchemotherapyn:\nBEP for 4 cycleso,aa\n(category 1,\npreterred\nor\nVP for 4 cycles\n(category 1)\nPartial response, residual masses with\nnormal AFP and beta-hcG levels\nOR\nPartial response, residual masses with\nlabnormal AFP andlor beta-hcG levelsbb\nIFirst-line chemotherapy as for poor-risk\ndiseasenZ+ RTt surgery, if clinically indicated\nPostchemotherapy Management (NSEM-7)\nBEP = Bleomycin/etoposide/cisplatin\nEP = Etoposide/cisplatin\nVIP = Etoposidelifosfamide/cisplatin"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "NSEM 7",
+                "Marker一直爬的話, 考慮做brain imaging去r/o brain mets和testicular ultrasound去r/o對側testis cancer",
+                "all of the residual masses have <10% viable cancer cells in the resected tissue",
+                "類似上方normal marker 流程",
+                "marker正常",
+                "要去切mass, patho 是teratoma/壞死 可AS; embryo/yolk/seminoma 要給2cycles P系列化療",
+                "marker 不正常",
+                "升很快要找來源(brain,對側蛋?)/給二線治療",
+                "高但穩定可AS"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss44.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 7\nNational\nvensive NCCN Guidelines Version 2.2025\nTesticular Cancer - Nonseminoma\nRESPONSE AFTER\nPRIMARY TREATMENT\nPOSTCHEMOTHERAPY\nMANAGEMENT\nTeratoma or necrosis\nSurveillance\nPartial response,\nresidual masses\nwith normal AFP\nand beta-hcG levels\nISurgical\nresection of\nall resid ual\nmasses bb,dd\nResidual embryonal,\nlyolk sac,\nchoriocarcinoma, or\nseminoma element\nIChemotherapy (preferred)\nfor 2 cycles (Epee or TIP\nor vip or velpyn,s\nor\nSurveillance for select\nIpatients'\nElevated and rising AFP\nandlor beta-hCG levelsa\nSecond-Line\nTherapy ITEST-F)\n2 Marker一直爬的話，考慮做brain imaging去r/obrain\nPartial\nmets 和testicular ultrasound去r/o對側testis cancer\nresponse,\nresidual\nmasses with\nElevated but stable AFP\nabnormal\nandlor beta-hcG levelsa\nClose surveillance\nAFP andlor\nbeta-ncG\nlevels DD,cc\n4 Teratoma or\n-+ Surveillance\nMildly\nnecrosis\nIConsider\nelevated and\n1normalizing\nsurgical\nresection of\nAFP and/\nall residual\nlor beta-hcG\nmassesbb\nllevelsa\n類似上方normal\nmarker 流程\nIResidual\nembryonal,\nayolk sac,\nchorio-\ncarcinoma,\nor seminoma\nelement\nChemotherapy (preferred) for\n2 cycles (Epee or TIP or vip or\nVelPyn,5\nor\nSurveillance for select\nIpatientst\nall ofthe residual masses\nhave <10% viable cancer\ncells in the resected tissue\nmarker正常\n要去切mass, patho 是teratoma/壞\n死 可AS; embryo/yolk/seminoma\n要給2cvcles P系列化療\nmarker 不正常\n升很快要找來源(brain,對側蛋?)/\n給二線治療\n高但穩定可AS\nSee\nFor\nFollow-up for\nrecurrence,\n+Nonseminoma, F+ see Second-\nITable 10\nILine Therapy\nKTEST-B 2of3)\nKNSEM-8)\nEP =Etoposide/cisplatin\nTIP = Paclitaxel/ifosfamide/cisplatin\nVIP = Etoposide/ifosfamide/cisplatin\nVelP = Vinblastinelifosfamide/cisplatin"
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "NSEM 8",
+                "recur 看時間切兩年, 先確定完成primart tx",
+                "早期復發<2: 參加trial, C/T(傳統或Highdose)",
+                "晚期復發>2: 去切乾淨, 不能切去trial, C/T(傳統或Highdose)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss45.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 8\nNational\nComprenensive NCCN Guidelines Version 2.2025\nNCCN Cancer\nTesticular Cancer - Nonseminoma\nNetwork®\nRECURRENCEff\nSECOND-LINE THERAPYx,99\nrecur 看時間切兩年，先確定完成\nprimart tx\n早期復發<2：參加trial， C/T(傳統或\nHighdose)\n晚期復發2：去切乾淨，不能切去\ntrial,C/T（傳統或Highdose）\nFULLUVV-Ur\n×\nEarly relapse (recurrence\n≤2 years after completion of\nA Iprimary treatment)\n•Clinical trial (preferred)\n• Chemotherapy®\n> Conventional-dose therapy (VelP for 4 cycles or\nTIP for 4 cycles)\n＞High-dose chemotherapy\n• Consider surgical treatment if resectable with\nnormal or mildly elevated markersbb\n• Recommend sperm banking if clinically indicated\nPrior first-line\nchemotherapy\nPost Second-\nLine Therapy\nManagement\nKNSEM-9)\nILate relapse (recurrence >2\nyears after completion of\nlprimary treatment)\nNo prior first-line chemotherapy\nPrior adjuvant therapy\n(1 cycle of BEP only)\nSurgical treatment, if resectable, regardless of\nmarkers (preferred)\n•Clinical trial, if unresectable\n•Chemotherapy®\n> Conventional-dose therapy (VelP for 4 cycles or\nTIP for 4 cycles)\n>High-dose chemotherapyhh\n• Recommend sperm banking if clinically indicated\nTreat per risk status on (NSEM-6)\nand\nRecommend sperm banking if clinically\nlindicated\n-+ First-line chemotherapy (NSEM-6)\n•TIP = Paclitaxellifosfamide/cisplatin\n•VelP = Vinblastinelifosfamide/cisplatin"
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "NSEM 9",
+                "2線完看response",
+                "CR marker-,no mass 就追蹤",
+                "PR marker- 手術切剩餘mass 然後追蹤",
+                "PR marker+",
+                "升很快給三線治療",
+                "高但穩定可AS"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss46.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 9\nNational\ncomorenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nRECURRENCEff\nComplete response,\nnegative markers\nwith no massor\nsresidual mass <1cm\nKtransaxial long axis)\nlon CT scans\nPrior\nsecond-\ntine\ntherapy\nIPartial response,\nresidual masses with\nsnormal AFP and beta-\nIhcG levels\nPOST SECOND-LINE THERAPY\nMANAGEMENTx,99\nSurveillance\nor\nNerve-sparing bilateral RPLND\nlin selected cases (category 2B)\nTeratoma\nornecrosis\nSurgical\nresection of\nall residual\nmasses.dd\nIResidual\nlembryonal,\nyolk sac,\nIchoriocarcinoma,\nlor seminoma\nelement\n2線完看response\nCR marker,no mass 就追蹤\nPR marker- 手術切剩餘mass 然\n後追蹤\nPR marker+\n升很快給三線治療\n高但穩定可As\n-+ Surveillance\n+ Surveillance\nElevated and rising AFP\n4 andlor beta-hcG levea\nIPartial\nresponse,\nresidual\nmasses with\nabnormal\nAFP andlor\nbeta-hcG\nllevels,aa\n- Surveillance\nThird-Line\nTherapy\nKTEST-G\n-+ Surveillance\nSurveillance\nSee Follow-\nFor\nup for\nrecurrence,\n-Nonseminoma,\n- see Third-\nTable 10\nLine Therapy\nITEST-B 2of 31\nKNSEM-10)\nElevated but stable AFP\nandlor beta-hCG levelsa\nmildly\n4 elevated and\nInormalizing\nAFP andl\nor beta-hcG\nllevelsa\nConsider\nsurgical\n-+ resection of\nall residual\nmassesl\nTeratoma\nor necrosis\nResidual embryonal,\nyolk sac,\n- Surveillance\nchoriocarcinoma, or\nseminoma element"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "NSEM 10"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss47.webp",
+              "hidden": false,
+              "ocr_text": "NSEM 10\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nTesticular Cancer - Nonseminoma\nNetwork®\nRECURRENCE'f\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nTHIRD-LINE THERAPYx,9g\nPrior first- and second-line\nconventional-dose chemotherapy\nPrior\nsecond-line\nchemotherapy\n+ Prior high-dose chemotherapy\nLate relapse\nKrecurrence >2 years after completion\nlof second-line chemotherapy)\nClinical trial\nHigh-dose chemotherapy (preferred)il\nor\nIConsider surgical treatment if solitary site\nClinical trial (preferred)\nor\nConventional-dose third-line chemotherapyll\nlor\nIConsider surgical treatment if solitary site\nor\nMolecular testing (including MSI/MMR and TMB testing) for\nlbiomarker driven therapy if progressionil.kk\nISurgical treatment, if resectable (preferred)\nor\nChemotherapyit\n• Conventional-dose therapy\nI• High-dose chemotherapy (if not previously received)"
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "RPLND 與考古題",
+          "slide_count": 11,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 48,
+              "text": [
+                "治療大方向整理",
+                "SGCT 可放療 NSGCT 手術不放療",
+                "Stage I(T1~T3)優先都是AS（SGCT: T1-T3, NSGCT: IA), 化療都是1個cycle (SGCT: Carbo, NSGCT:BEP*1)",
+                "手術或RT 優先治療較輕疾病、Chemo優先治療較重疾病(SGCT:>4cm or T2以上,NSGCT: T2以上）",
+                "Chemo完下一步就是CT (PETCT 如果residual >3cm可考慮, 執行時間要在C/T後六周)",
+                "SGCT:Surveillance",
+                "NSGCT",
+                "沒有residual 且maker低 => 可AS , primary N(+)M(+) 則可開刀 (NSGCT)",
+                "有residual但marker不高或正常=> 可開刀",
+                "Teratoma 不化療",
+                "其他可化療(通常2 cycle EP, VIP, TIP, VeIP(二線))",
+                "有residual maker持平 => OBS",
+                "有residual maker更高=> second line",
+                "RPLND後(RPLND 建議前四周內要有CT)",
+                "N0,N1=> AS為主, N1可adjuvant chemo(2cycle)",
+                "N2=> adjuvant chemo(2cycle BEP)",
+                "N3=> 當clinical stage IIC (BEP 3cycle)",
+                "Marker (+), intermediate risk, poor risk=> 一線直接化療",
+                "Recur前無化療=> 照marker (+)做 (SGCT: IIIb以前： good risk, IIIC: intermediate risk; NSGCT: good risk: IS-IIIA-> BEPx3 or EPx4, I/P risk: IIIB-IIIC:BEPx4, VIPx4)",
+                "Recur 前有化療=> late recurrence 可考慮手術(early: clinical trial)",
+                "二線三線可以是high dose/conventional dose交替, 但clinical trial位階都比化療前面",
+                "Surveilliance都用同一種image (CT就用CT MRI就用MRI) CXR要跟A+P CT一起，Chest CT除非有不正常的CXR/A+P CT才做!!"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss48.webp",
+              "hidden": false,
+              "ocr_text": "治療大方向整理\n• SGCT 可放療 NSGCT 手術不放療\n•stage (T1~T3)優先都是AS （ SGCT： T1-T3,NSGCT： IA)，化療都是1個cycle (SGCT: Carbo, NSGCT:BEP* 1)\n•手術或T優先治療較輕疾病、Chemo優先治療較重疾病(SGCT:>4cm or T2 以 上,NSGCT: T2以上）\n• Chemo完下一步就是CT(PETCT 如果residual >3cm可考慮，執行時間要在C/T後六周）\n• SGCT:Surveillance\n•NSGCT\n沒有residual 且maker低二＞可AS,primary N(+)M(+)則可開刀 (NSGCT)\n有residual但marker不高或正常=>可開刀\nTeratoma 不化療\n•其他可化療(通常2 cycle EP, VIP, TIP, VeIP(二線））\n• 有residual maker持平二>OBS\n• 有residual maker更高=>second line\n• RPLND後(RPLND 建議前四周內要有CT)\n• NO,N1=>AS為主，N1叮adjuvant chemo(2cycle)\n• N2=>adjuvant chemo(2cycle BEP)\n•N3=>當dlinical stage IIC (BEP 3cycle)\nMarker (+), intermediate risk, poor risk=>一線直接化療\n•Recur前無化療二>照marker（+)做(SGCT： 11b以前：good risk, IlC: intermediate risk; NSGCT: good\nrisk: IS-11A-> BEPx3 or EPx4, I/P risk: IIB-IIC:BEPx4, VIPx4)\n• Recur 前有化療=＞late recurrence 可考慮手術(early:clinical trial)\n•二線三線可以是high dlose/conventional dose 交替，但clinical trial位階都比化療前面\n能义大品配已要厚政，種mese (CT就用CT MRl就用MRI) CXR要跟A+P CT一起，ChestCT除非有不正"
+            },
+            {
+              "slide_num": 49,
+              "text": [
+                "RPLND indication",
+                "NSGCT",
+                "Stage I: (可做, 但不太推)",
+                "EAU: low risk 🡪surveillance, high risk 🡪 C/T",
+                "若病患不願意打C/T或不適合C/T才考慮手術",
+                "NCCN: IA 🡪surveillance (preferred), IB🡪 surveillance, C/T, RPLND",
+                "Stage IIA/IIB:",
+                "Marker-negative",
+                "IIA (LN<2cm)🡪 RPLND or C/T",
+                "IIB(LN2-5cm): C/T or RPLND (multifocal或不在正常淋巴引流路徑上只能打C/T)",
+                "選擇C/T後有 residual mass 者 (>1cm建議做，<1cm可考慮但prefer surveillance)",
+                "Stage IIA/IIB with S1, IIC, III 接受primary chemotherapy後",
+                "Complete response – 可考慮做RPLND",
+                "Partial or incomplete response – marker正常或稍高可考慮"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss49.webp",
+              "hidden": false,
+              "ocr_text": "RPLND indication\n•NSGCT\n•Stagel：（可做，但不太推）\n•EAU: Iow risk @surveillance, high risk C/T\n•若病患不願意打C/T或不適合C个才考慮手術\n•NCCN: IA @surveillance (preferred), 1B@ surveillance, C/T, RPLND\n• Stage IA/IB:\n• Marker-negative\n• IA (LN<2cm)回 RPLND Or C/T\n•UB(LN? ESM):C/T Or RPLND(multifocal或不在正常淋巴引1流路\n徑上只能打C/T)\n•選擇C/T後有residual mass 者（>1cm建議做，<1cm可考慮但\nprefer surveillance)\n•stage IA/NB with si， 1Ic, 1ll 接受primary chemotherapy爱\n•Complete response- 可考慮做RPLND\n• partial or incomplete response -marker 正常或稍高可考慮"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "Full bilateral template RPLND",
+                "Minimal invasive (lap./Robot) data尚缺乏=> 暫不推",
+                "範圍： The renal hilar vessels (Superiorly)",
+                "Ureters (laterally)",
+                "Common iliac arteries (Inferiorly)",
+                "NCCN建議做full bilateral RPLND, 而哪些criteria的病人可以考慮做modified unilateral template PC-RPLND(只做full template範圍內的特定幾個區塊, ex: right or left）?",
+                "Well-defined lesion measuring ≤ 5 cm confined to the primary landing zone of the primary tumor on imaging before and after chemotherapy",
+                "Normal post-chemotherapy serum tumor markers",
+                "IGCCCG good/intermediate risk",
+                "在LN清得乾淨的前提下盡量做nerve-sparing RPLND來保護射精功能, 用split and roll technique"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss50.webp",
+              "hidden": false,
+              "ocr_text": "Full bilateral template RPLND\n• Minimal invasive (lap./ Robot) data尚缺乏=>暫不推\n•範圍：The renal hilar vessels (Superiorly)\nUreters (aterally)\nCommon iliac arteries (Inferiorly)\n•NCCN建議做full bilateral RPLND，而哪些criteria的病人可以考慮做modified\nunilateral template PC-RPLND(只做full template 範圍內的特定幾個區塊,ex：\nright or left)?\nwell-defined lesion measuring $ 5 cm confined to the primary landing\nzone of the primary tumor on imaging before and after chemotherapy\n• Normal post-chemotherapy serum tumor markers\n• IGCCCG good/intermediate risk\n•在LN清得乾淨的前提下盡量做nerve-sparing RPLND來保護射精功能，用split\nand roll technique"
+            },
+            {
+              "slide_num": 51,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss51.webp",
+              "hidden": false,
+              "ocr_text": "Renal vessels\nUreters\nCommon iliac\narteries\nA\nB\n2016\nSchool of Medicine\nIndiana University\nFigure 35-7. Retroperitoneal lymph node dissection templates. A, Modified unilateral\ntemplates-right-sided shaded in yellow, left-sided shaded in purple. B, Modified bilateral\ntemplate-shaded area. (© 2016 Section of Medical Illustration in the Office of Visual Media at\nthe Indiana University School of Medicine. Published by Elsevier Inc. All rights reserved.)"
+            },
+            {
+              "slide_num": 52,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss52.webp",
+              "hidden": false,
+              "ocr_text": "B\nLi postganglionic\nefferent nerve\nSuperior\nhypogastric\nplexus\nAorta\nIVC\nL1, L2, and L3\npostganglionic\nsympathetic nerves\nDivided\nlumbar\nartery\n⑨2016\nschool of Medicine\nIndiana University\nFigure 35-4. Nerve-sparing technique. A, Location of right-sided postganglionic sympathetic\nnerves. B, Location of left-sided postganglionic sympathetic nerves. C, Right-sided nerve-\nsparing technique with ligated lumbar arteries. IVC, inferior vena cava. (@ 2016 Section of\nMedical Hllustration in the Office of Visual Media at the Indiana University School of Medicine.\nPublished by Elsevier Inc. All rights reserved.)"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "“Split and Roll” technique: 可以保護神經, 避免影響到射精"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss53.webp",
+              "hidden": false,
+              "ocr_text": "\"Split and Roll technique：可以\n保護神經,避免影響到射精\nGonadal vein\nstump\nGallbladder\nDuodenum\nFigure 36-5. Fibrofatty tissue overlying the inferior vena cava being\nincised to initiate the ssplit and roll technique. The duodenum has\nbeen reflected medially, and the spermatic vein stump has been\nclipped and divided."
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "RPLND complications",
+                "除了上述，Campbell原文尚有：",
+                "Lymphocele (rare in symptomatic, 0-1.7%)",
+                "Venous thromboembolism (<1%)",
+                "Neurologic complications  (paraplegia, 2.2% in one report)",
+                "Retrograde ejaculation !!!",
+                "傷到 來自T10–L2的postganglionic fibers"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss54.webp",
+              "hidden": false,
+              "ocr_text": "RPLND complications\nTABLE 35-7 Complications of Retroperitoneal Lymph Node Dissection\nPRIMARY RPLND\nBANIEL\nET AL, 1994\nHEIDENREICH\nET AL, 2003\nSUBRAMANIAN\nET AL, 2010\nNo. patients\nOverall complications (%)\nMajor complications (%)\nMortality (%)\nMajor pulmonary (%)\nMinor pulmonary (%)\nChylous ascites (%)\nSymptomatic lymphocele (%)\nleus (%)\nWound infection (%)\nPulmonary embolism (%)\nUreteral injury (%)\nSmall bowel obstruction (%)\nPostoperative hemorrhage (%)\n478\n10.6\n8.2\n239\n19.7\n5.4\n112\n24\n3\n1.9\n0.2\n0.2\n0.2\nNR\n4.8\n。\n0.2\n2.3\n0.8\n0.4\n2.1\n1.7\n2.1\n5.4\n0.8\n0.4\n0.4\n0.8\n0.9\n3.6\n2\n。\n17.9\n0.9\n0.9\n0.9\n2.7\n除了上述，Campbell原文尚有：\n• Lymphocele (rare in symptomatic, 0-1.7%)\n• Venous thromboembolism (<1%)\n•Neurologic complications (paraplegia, 2.2% in one report)\nRetrograde ejaculation !!！傷到來自T10-12的postganglionic fibers\nPC-RPLND\nBANIEL ET AL,\n1995b\n603\n20.7\nNS\n0.8\n5.1\n5.1\n2\n1.7\n2.2\n4.8\n0.1\n0.9\n2.3\n0.3\nSUBRAMANIAN\nET AL, 2010\n96\n32\n3.1\n3.1\n2\n1\n20.8\n4\n3.1\n1.8\n1"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "考古題",
+                "根據NCCN guideline, NSGCT stage 2A, 2B的病人在化療後於什麼情境下會建議要做RPLND (又稱作PC-RPLND)?",
+                "Negative markers, residual retroperitoneal mass (>=1cm) on CT scan",
+                "Negative markers, residual mass (<1cm) on CT scan in selected cases",
+                "計畫執行post chemotherapy RPLND時，哪些criteria的病人可以考慮做modified unilateral template PC-RPLND?",
+                "Well-defined lesion measuring ≤ 5 cm confined to the primary landing zone of the primary tumor on imaging before and after chemotherapy",
+                "Normal post-chemotherapy serum tumor markers",
+                "IGCCCG good/intermediate risk"
+              ],
+              "has_exam_question": true,
+              "hidden": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/sh55.webp",
+              "ocr_text": "考古題\n•根據NCCN guideline, NSGCT stage 2A,2B的病人在化療後於\n什麼情境下會建議要做RPLND（又稱作PC-RPLND)？\n•Negative markers, residual retroperitoneal mass (>=1cm) on CT scan\n• Negative markers, residual mass (<1cm) on CT scan in selected cases\n•計畫執行post chemotherapy RPLND時，哪些criteria的病人\n司以考慮做modified unilateral template PC-RPLND?\n• well-defined lesion measuring s 5 cm confined to the primary landing\nzone of the primary tumor on imaging before and after chemotherapy\n• Normal post-chemotherapy serum tumor markers\n• IGCCCG good/intermediate risk"
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "考古題",
+                "20 y/o 男性, 半年前摸到右側睪丸腫瘤，有慢慢變大趨勢來求診,最近有輕微右腳無力情形",
+                "抽血結果: AFP: 300ng/mL  bHCG 6000 IU/L   LDH: 600",
+                "開完刀病理報告是:  pure seminoma with tunica vaginalis invasion 請問術後該做哪些work up?",
+                "再抽一次post-OP 的tumor markers(術後5-7天抽)",
+                "A+P CT, CXR for staging，chest CT if懷疑",
+                "另外生殖資料以及精子保存的作業",
+                "bHCG > 5000, 考慮 Brain MRI",
+                "沒有bone pain，暫不考慮bone scan"
+              ],
+              "has_exam_question": true,
+              "hidden": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/sh56.webp",
+              "ocr_text": "考古題\n•20v/。男性，半年前摸到右側睪丸腫瘤，有慢慢變大趨勢\n來求診,最近有輕微右腳無力情彤\n•抽血結果：AFP: 300ng/mL bHCG 6000 1U/L LDH: 600\n•開完刀病理報告是：pure seminoa with tunica vaginalis invasion\n請問術後該做哪些work up?\n•再抽一次post OP 的tumor markers(術後5-7天抽）\n• AtP CT, CXR for staging• chest CTif懷疑\n•另外生殖資料以及精子保存的作業\n•bHCG ＞5000，考慮 Brain MRl\n••沒有bone pain，暫不考慮bone scan"
+            },
+            {
+              "slide_num": 57,
+              "text": [
+                "考古題",
+                "CT看到3顆2-4cm不等的pelvic LNs，無其他遠處轉移, patho T2, NSGCT, 術後tumor marker S1, 請問診斷 stage(TNM)? 哪種risk group?下一步該怎麼治療?",
+                "cT2N2M0S1 🡪 Stage IIB, S1, good risk",
+                "術後marker (+) 🡪 Chemotherapy (BEP 3 cycles, or EP 4 cycles)",
+                "病人接受完整的chemo後 tumor marker: 都回到正常值，CT 沒有看到淋巴結了， 請問下一步?",
+                "此病人為complete response",
+                "Surveillance",
+                "nerve-sparing bilateral RPLND"
+              ],
+              "has_exam_question": true,
+              "hidden": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/sh57.webp",
+              "ocr_text": "考古題\n•CT看到3顆2-4cm不等的pelvic LNs ：無其他遠處轉移，patho\nT2, NSGCT, 術後tumor marker $1,請問診斷 stage(TNM)？哪種\nrisk group？下一步該怎麼治療？\n•cT2N2MOS1 @ Stage IB, $1, good risk\n•術後marker (+)回Chemotherapy (BEP 3 cycles, or EP 4 cycles)\n••病人接受完整的chemo後 tumor marker:都回到正常值，CT\n沒有看到淋巴結了，請問下一步？\n••此病人為complete response\n•Surveillance\n•nerve-sparing bilateral RPLND"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "Testicular cancer",
+                "Risk factor有哪些?",
+                "什麼時候要做對側的biopsy? 怎麼做? 如果有怎麼治療?",
+                "要做哪些檢查? Bone scan? Brain MRI? tumor marker? Infertility?",
+                "Stage ?",
+                "Testicular cancer怎麼治療",
+                "Stage I seminoma / NSGCT risk 怎麼分? 怎麼治療?",
+                "Stage IS seminoma / NSGCT 治療?",
+                "Stage IIA/IIB, IIC/III seminoma / NSGCT risk怎麼分? 怎麼治療?",
+                "Post RPLND 根據病理報告怎麼治療?",
+                "Post chemotherapy seminoma / NSGCT 怎麼追蹤與治療?",
+                "RPLND template",
+                "Chemotherapy regimen ? 怎麼考量?"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss55.webp",
+              "hidden": false,
+              "ocr_text": "Testicular cancer\n•Risk factor有哪些？\n••什麼時候要做對側的biopsy？怎麼做？如果有怎麼治療？\n•要做哪些檢查？ Bone scan? Brain MRI? tumor marker? Infertility?\n• Stage ?\n•Testicular cancer怎麼治療\n•Stage 1 seminoma / NSGCT risk 怎麼分？怎麼治療？\n•Stage IS seminoma / NSGCT 治療？\n•Stage llA/11B, IIC/ll seminoma / NSGCT risk怎麼分？怎麼治療？\n• Post RPLND 根據病理報告怎麼治療？\n•Post chemotherapy seminoma / NSGCT 怎麼追蹤與治療？\n• RPLND template\n• Chemotherapy regimen ？ 怎麼考量？"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "陰莖解剖與危險因子",
+          "slide_count": 5,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 59,
+              "text": [
+                "Penile anatomy",
+                "Penile cancer"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss56.webp",
+              "hidden": false,
+              "ocr_text": "Penile anatomy\nPenile cancer"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "Layers: skin, Dartos, Bucks, tunica albuginea(glans沒有",
+                "superficial arterial system (penile skin) : femoral a. ->external pudendal arteries",
+                "deep arterial system: int iliac a. ->internal pudendal arteries -> penile a.->dorsal a. , cavernous a(deep a.), and bulbourethral a. => bulbar & dorsal 形成anastomosis 供應CS(bulbourethral為主)和glans(dorsal a.為主), cavernosus a.就供應CC",
+                "Vein: preprostatic plexus",
+                "Somatic sensory: Dorsal n. -> pudendal n. -> S2-S4. perineal nerve supply the ventrum of the penis as distally as the glans",
+                "Parasympathetic(S2-S4):Pelvic plexus->cavernous n.",
+                "Sympathetic(T11-L2): 兩套, Pelvic plexus->cavernous n., pudendal n.-> dorsal n.",
+                "(不進penis) Somatic motor: pudendal n.-> ishiocavernosus/bulbocavernosus m.(幫助rigid erection)",
+                "permeable septum separates the corpora cavernosa, => free communication between the vascular spaces of the corpora bodies.",
+                "NAVAN",
+                "Penile anatomy",
+                "Superficial dorsal vein 與Deep dorsal vein/dorsal artery/dorsal nerve (以上三個同一層), 兩群的分界為Buck fascia"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss57.webp",
+              "hidden": false,
+              "ocr_text": "Penile anatomy\n•Layers:skin, Dartos, Bucks, tunica albuginea(glans沒有\n• superficial arterial system (penile skin) : femorala.-\n>external pudendal arteries\n• deep arterial system: int iliac a. ->internal pudendal\narteries -> penile a.->dorsal a., cavernous a(deep a.), and\nbulbourethral a. => bulbar & dorsal 形成anastomosis供\n應c(bulbourethral為主)和glans(dorsal a.為主），\ncavernosus a.就供應CC\n• Vein: preprostatic plexus\nSuperficial and deep dorsal vein •\nDorsal artery.\n• Somatic sensory: Dorsal n. -> pudendal n. -> S2-54.\nperineal nerve supply the ventrum of the penis as distally\nas the glans\nFascicles of dorsal nerve .\nSkin-\nSupericial\n(dartos) tascia\n• Parasympathetic(S2-$4):Pelvic plexus->cavernous n.\n• Sympathetic(T11-L2)：兩套，Pelvic plexus-=cavernous n.,\npudendal n.-> dorsal n.\n•（不進penis) Somatic motor: pudendal n.->\nishiocavernosus/bulbocavernosus m.(幫助rigid erection)\nDeep (Buck)\ntascia\nDorsal Artery\nCavernous Artery\n-Hypogastric nerve\nPelvic plexus\n• Somatic motor\nPre-synaptic pprasympathetic\nPost-synaptic parasympathetic\nSympathetic\nSomatic sensory\nCavernous Nerve\nDorsal Nerve\nPenis\nIschiocavernosus\nBulbosponaiosus (aka\nbulbocavernosus)\nTransverse perineal\nmuscles\nNAVAN\n- Subtunical space\nCavernosal artery\n- Erectile tissue\n- Tunica albuginea:\nOuter longitudinal laver\nInner crcular layer\nCorpus spongiosum\nUrethral Artery\nBulbar Artery\nPenile Artery\nReuneal Artery\nInternal Pudendal Artery\nPelvic Nerve\nTo Urinan\nSphincter\nPudendal\nnerve\nSuperficial dorsal vein 與Deep dorsal vein/dorsal\narterv/dorsal nerve(以上三個同一層)，兩群的分\n界為Buck fascia\npermeable septum separates the corpora\ncavernosa, => free communication between the\nvascular spaces of the corpora bodies."
+            },
+            {
+              "slide_num": 61,
+              "text": [
+                "Risk factors for penile cancer",
+                "要小時候割才能降低 （只減少invasive penile tumor, 並不會減少CIS)",
+                "Malignant: HPV-16,18,31,33,35,39"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss58.webp",
+              "hidden": false,
+              "ocr_text": "Risk factors for penile cancer\nTable 1: Recognised aetiological and epidemiological risk factors for penile cancer\nRisk factors\n要小時候割才能隆低（只減少\nPhimosis\ninvasive penile tumor,並不會減少CIS)\nChronic penile Inflammation (balanoposthrtis\nrelated to phimosis), lichen sclerosus\nSporalene and ultraviolet A phototherapy for\nvarious dermatological conditions such as\npsoriasis\nSmoking\nHPV infection, condylomata acuminate\nMalignant: HPV-16,18,31,33,35,39\nRural areas, low socio-economc status,\nunmarried\nMultiple sexual partners, early age of first\nintercourse\nRelevance\nOdds ratio 11-16 vs. no phimosis\nRisk\nIncidence rate ratio 9.51 with >250 treatments\nRef\n[22-241\n251\n26]\nFive-fold increased risk (95% Confidence\ninterval (Cl): 2.0-10.1) vs. non-smokers\n22.4% in verrucous squamous cell carcinoma\n36-66.3% in basaloid-warty\n[22,23，\n1271\n1[13,28]\n1129-321\nThree to five -fold increased risk of penile cancer 121,23,\n331"
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Human Papillomavirus, HPV",
+                "Condyloma and low grade papilloma: HPV-6,11,42,44.",
+                "Malignant disease: HPV-16(most),18,31,33,35,39.",
+                "病毒具有Tumor virus transforming protein (E6,E7)會抑制tumor suppressor gene products TP53 and pRB => E6抑制TP53, E7抑制pRB",
+                "可能形成Bowenoid papulosis (組織學上類似SCC in situ 即Bowen disease，但表現是良性)",
+                "多發生於年輕男性的penile shaft，大多數情況下不會進展為侵襲性疾病",
+                "Topical treatment for condyloma: Imiquimod cream (immune modulator that enhances natural killer cell activity)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss59.webp",
+              "hidden": false,
+              "ocr_text": "Human Papillomavirus, HPV\n• Condyloma and low grade papilloma: HPV-5,11,42,44.\n•Malignant disease: HPV-16(most),18,31,33,35,39.\n•病毒具有Tumor virus transforming protein (E6,E7)會抑制tumgr\nsuppressor gene products TP53 and PRB二＞E6抑制TP53，E7抑制\npRB\n•可能形成Bowenoid papulosis（組織學上類似SCC in situ 即Bowen\ndisease，但表現是良性)\n多發生於年輕男性的penile shaft，大多數情況下不會進展為侵襲性疾病\n• Topical treatment for condyloma: Imiquimod cream (immune\nmodulator that enhances natural killer cell activity)"
+            },
+            {
+              "slide_num": 63,
+              "text": [
+                "Premalignant lesion",
+                "Penile intraepithelial lesion (就是CIS. 不治療5%會變成invasive)",
+                "長在penile shaft叫做Bowen’s disease",
+                "長在glans叫Erythroplasia of Queyrat\u000b記: 龜頭羅馬拼音= Q",
+                "Giant Condyloma Acuminatum= Buschke-Lowenstein tumor or Verrucous carcinoma (名字很帥，長得很大很可怕，但其實很溫馴）",
+                "Local invasive, destroys adjacent structures by compression",
+                "No malignant change nor metastasis.",
+                "Treatment : resection, R/T無效",
+                "Paget’s disease",
+                "Cutaneous horn"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss60.webp",
+              "hidden": false,
+              "ocr_text": "Premalignant lesion\n• Penile intraepithelialllesion （(就是CIS.不治療5%會變成invasive)\n•長在penile shaft叫做Bowen's disease\n•長在glans叫Erythroplasia of Queyrat\n記：龜頭羅馬拼音=Q\n• Giant Condyloma Acuminatum= Buschke-Lowenstein tumor or\nVerrucous carcinoma（名字很帥，長得很大很可怕，但其實很溫馴）\n• Local invasive, destroys adjacent structures by compression\n• No malignant change nor metastasis.\n•Treatment :resection, R/T無效\n• Paget's disease\n• Cutaneous horn"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "陰莖癌前病變與 Staging",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 64,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss61.webp",
+              "hidden": false,
+              "ocr_text": "Table 4: Premalignant penile lesions (precursor lesions)\nLesions sporadically associated with squamous cell carcinoma (SCC) of the penis:\nBowenoid papulosis of the penis (HPV related)\nLichen sclerosis\nPremalignant lesions (up to one-third transform to invasive SCC):\n• Penile intraepithelial lesions\nGiant condylomata (Buschke-Lowenstein)\n• Bowen's disease\n• Paget's disease (intradermal ADk\nTable 5: Classification of intra-epithelial neoplasia (PelN)\nNon-HPV-related PelN\n• o Differentiated PelN\n• HPV-related PelN\n• 。 Basaloid PelN\nWarty PeIN\nWarty-basaloid PelN\n•other rare patterns of PelN (pleomorphic, spindle, clear cell, pagetoid)"
+            },
+            {
+              "slide_num": 65,
+              "text": [
+                "好發位置: 34.5% on glans, 13.2% of prepuce"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss62.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprehensive NCCN Guidelines Version 2.2022\nNCCN Cancer\nPenile Cancer\nNetwork®\nNCCN Guidelines Index\nJable of Contents\nDiscussion\nAmerican Joint Committee on Cancer (AJCC)\nTNM Staging System for Penile Cancer (8th ed., 2017)\nTable 1. Definitions for T, N, M\n好發位置：34.5% on glans, 13.2% of prepuce\nT\nTX\nT0\nPrimary Tumor\nPrimary tumor cannot be assessed\nSkin\nDartos fascia\nBuck's fascia.\nTunica albuginea\nNo evidence of primary tumor\nTis\nTa\nT1\nCarcinoma in situ (Penile intraepithelial neoplasia [PelN])\nNoninvasive localized squamous cell carcinoma\nGlans: Tumor invades lamina propria\nForeskin: Tumor invades dermis, lamina propria, or dartos fascia\nShaft: Tumor invades connective tissue between epidermis and corpora regardless of location\nAll sites with or without lymphovascular invasion or perineural invasion and is or is not high\ngrade\nTla Tumor is without lymphovascular invasion or perineural invasion and is not high grade\n(.e., grade 3 or sarcomatoid)\nT1b Tumor exhibits lymphovascular invasion andior perineural invasion or is high grade\n(.e., grade 3 or sarcomatoid)\nT2\nTumor invades into lcorpus spongiosum (either glans or ventral shaft ) with or without urethral\ninvasion\nT3\nTumor invades into lcorpora cavernosum (including tunica albuginea) with or without urethral\ninvasion\nT4\nTumor invades into adjacent structures (i.e., scrotum, prostate, pubic bone)"
+            },
+            {
+              "slide_num": 66,
+              "text": [
+                "Penile N判定",
+                "術前顆數 (1, 2/bilateral, fixed/pelvic)",
+                "術後顆數 (2, 3/bilateral, ENE/pelvic)",
+                "ENE為pN3 (Testicular cancer ENE是pN2)",
+                "Extranodal Extension"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss63.webp",
+              "hidden": false,
+              "ocr_text": "Extranggal ExRBgiBhal Lymph Nodes (Clinical stage Detinition)\nCNX Regional lymph nodes cannot be assessed\nCNo No palpable or visibly enlarged inguinal lymph nodes\ncN1 Palpable mobile unilateral inguinal lymph node\ncN2 Palpable mobile ≥2 unilateral inguinal nodes or bilateral inguinal lymph nodes\ncN3 Palpable fixed inguinal nodal mass or pelvic lymphadenopathy unilateral or bilateral\nN\nRegional Lymph Nodes (Pathologic Stage\nDefinition)\npNX Lymph node metastasis cannot be established\npNO No lymph node metastasis\npN1\n≤2 unilateral inguinal metastases, no ENE\npN2\n≥3 unilateral inguinal metastases or bilateral\nmetastases\npN3 ENE of lymph node metastases or pelvic lymph\nnode metastases\nM\nDistant Metastasis\nMo No distant metastasis\nM1 Distant metastasis\nPenile N判定\n術前顆數 (1,2/bilateral, fixed/pelvic)\n術後顆數 (2,3/bilateral, ENE/pelvic)\nENE為pN3 (Testicular cancer ENE是\npN2)"
+            },
+            {
+              "slide_num": 67,
+              "text": [
+                "判定流程",
+                "1. T1b 很重要, T1b以上 → Stage II",
+                "T1b, T2 → Stage IIA",
+                "T3 → Stage IIB",
+                "2. T1-T3, N1-N2 → Stage III",
+                "N1 → Stage IIIA",
+                "N2 → Stage IIIB",
+                "3. T4 / N3 / M1→ Stage IV"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss64.webp",
+              "hidden": false,
+              "ocr_text": "T\nStage Ois\nStage oa\nStage l\nStage IlA\nTis\nTa\nT1a\nT1b\nM\nMO\nMO\nMO\nMO\nT2\nMO\nT3\nStage IIB\nStage IllA\nT1-3\nStage lIB\nT1-3\nStage lV\nMO\nMo\nMO\nT4\nAny N\nMO\nAny T\nN3\nMo\nAny T Any N M1\n判定流程\n1.T16 很重要，T1b以上 = Stage ll\nT1b, T2 ≥ Stage IIA\nT3 -> Stage 11B\n2. T1-T3, N1-N2 > Stage l\nN1 - Stage IIA\nN2 -> Stage IIIB\n3.T4 / N3 / M1> Stage /V"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "陰莖癌 Primary Tumor 治療",
+          "slide_count": 4,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 68,
+              "text": [
+                "distal prepuce: circumcision only",
+                "penile shaft: wide excision+/- circumcision +/- skin graft",
+                "if positive surgical margin->re-resection",
+                "imiquimod cream or 5-FU cream",
+                "Wide local excision的改版方式，把cancer skin一層一層切下來送micro直到tumor free，可以保留較多penis但也最易recurrence, 適合長在penile root的表淺lesion(可避免total penectomy)",
+                "術中要送cavernosal bed和urethra stump的frozen確定margin negative",
+                "先塗乙酸, 若有HPV(+)會讓lesion變白, laser可用KTP, CO2或NdYAG",
+                "Bulky lymph node指 體積大、明顯腫大的LN"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss65.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nPenile Cancer\nNetwork®\nPRIMARY EVALUATION\ndistal prepuce: circumcision only\npenile shaft: wide excision+/ - circumcision +/- skin graft\nif positive surgical margin->re-resection\nCLINICAL\nDIAGNOSIS\nimiquimod cream\nor 5-FUcream\nPRIMARIY TREATMENT\n先塗二\n會讓le\n可用K\nSuspicious\npenile lesiona\n•History and physical (H&P)\n> Risk factors\nBalanitis, chronic\ninflammation, penile trauma,\nlack of neonatal circumcision,\ntobacco use, lichen sclerosus,\npoor hygiene, sexually\ntransmitted disease (eg,\nhuman immunodeficiency\nvirus (Hiv))\n> Lesion characteristics\n• Diameter, location, number of\nlesions, morphology (papillary,\nnodular, ulcerous, or flat),\nrelationship to other structures\n(submucosal, corpora\nspongiosa, cavernosa, andlor\nurethra)\n•Histologic diagnosis\nPunch, excisional, or incisional\nbiopsy\nAssess human papillomavirus\n(HPV) status\nITopical therapy®\nor\nWide local excisiont\nPenile\nor\nintraepithelia_+\nLaser therapyb (category 2B)\nsreaRaalRta\nlor\nComplete glansectomy' (category 2B)\nor\nMohs surgery in select casesb\nUcategory 2B)\nWide local excision的改版方\n式，把cancer skin一層一層\n切下來送micro直到tumor\nfree ，可以保留較多penis但\n也最易recurrence,適合長在\npenile root的表淺lesion(可避\n免total penectomy)\n術中要送cavernosal bed\n和urethra stump的frozen\n確定margin negative\nBulky lymph node\n的 N\n≥T1\n• Primary Treatment (PN-2)"
+            },
+            {
+              "slide_num": 69,
+              "text": [
+                "術中要送frozen確定margin negative"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss66.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprenensive NCCN Guidelines Version 2.2025 術中要送frozen確定\nNCCN Cancer\nPenile Cancer\nmargin negative\nNetwork®\nPATHOLOGIC DIAGNOSIS\nNCCN Guidelines\nTable of Co\nDisc\n• pT1a\nT1\npT1b\nT2 or greater\nPRIMARY TREATMENT\nIWide local excisionb\nor\nPartialpenectomvEd\nor\nGlansactomfin select casesb\nor\nMohs surgery in select cases) (category 2B)\nor\nLaser therapy' (category 25)\nor\nIRTd (category 2B)\nWide local excisionb\nlor\nPartial penectomycd\nlor\n• Total penectomyc,d\nor\nRTd (category 2B)\nor\nIChemo/RTd,e (category 3)\nIPartial penectomyc.d\nor\nTotal penectomyc,d\nor\nRTd (category 2B)\nor\nIChemo/RTd,e (category 3)\nIManagement of\nINon-Palpable Inguinal\nLymph Nodes (PN-3)\nIManagement of\nPalpable Non-Bulky\nIInguinal Lymph Nodes\n(PN-4)"
+            },
+            {
+              "slide_num": 70,
+              "text": [
+                "Local therapy整理",
+                "Topical: 只能用在PeIN/Ta",
+                "Laser & Mohs & Glansectomy : PeIN/Ta~T1a",
+                "Wide excision: PeIN/Ta~T1",
+                "Partial P & RT :T1以上皆可",
+                "Total P & CCRT: T1b以上皆可"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss67.webp",
+              "hidden": false,
+              "ocr_text": "Local therapy整理\n•Topical：只能用在PelN/Ta\n• Laser & Mohs & Glansectomy : PelN/Ta~T1a\n•Wide excision: PelN/Ta~T1\n•Partial P &FT:T1以上皆可\n•Total P & CCRT: T1b以上皆可"
+            },
+            {
+              "slide_num": 71,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss68.webp",
+              "hidden": false,
+              "ocr_text": "Table 10:Summary of reported complications and oncological outcomes of local treatments*\nTreatment\nND:YAG laser\nC02 laser\nLasers (unspecified)\nMoh's micrographic\nsurgery\nGlans resurfacing\nGlansectomy\nPartial penectomy\nBrachytherapy\nExternal beam\nradiotherapy\nComplications\nn.r.\nBleeding, meatal\nstenosis, both ≤ 1%\nBleeding 8%，\nlocal infection 2%\nLocal infection 3%，\nMeatal stenosis 6%\nIn.r.\nn.r.\nn.r.\nMeatal stenosis >\n40%\nUrethral stenosis\n20-35%, Glans\nnecrosis 10-20%\nLocal\nrecurrence\n10-48%\n14-23%\n111-26%\n32\n4-6%\n8%\n14-13%\n10-30%\nn.r.\nNodal\nrecurrence\n121%\n12-4%\nCancer-specific References\ndeaths\n2-9%\n12%\n8%\nn.r.\n9%\n114-19%\nn.r.\nIn.r.\nIn.r.\n2-3%\n13-4%\nn.r\nn.r.\n11-27%\nIn.r.\nn.r.\n[94-96, 102]\n1191-931\n1 104-1071\n1[108-1101\n188, 111, 112,\n1351\n1[113,114]\n193, 117, 119,\n11201\n[122,123, 125]\n123,127,128,\n1132,133]"
+            }
+          ]
+        },
+        {
+          "id": "t10",
+          "title": "陰莖癌淋巴結處理與 ILND",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 72,
+              "text": [
+                "可考慮superficial and modified ILND+術中frozen(因為Penile lymphatics drain: superficial ILN-> deep ILN -> iliac)，但只能cN0, 都無法或不要手術的人考慮EBRT",
+                "DSNB biopsy有positive就還是要做ILND",
+                "A+P CT or MRI with contrast",
+                "Chest x-ray or CT with contrast",
+                "單側ILN >=2 or ENE: unilateral PLND",
+                "雙側ILN >=4: bilateral PLND",
+                "T1b 以上（高風險，即G3、LVI＋等）患者：建議手術 staging，可選 sentinel LN biopsy（DSNB）或 modified inguinal lymphadenectomy（ILND）"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss69.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nPenile Cancer\nNetwork®\nMANAGEMENT OF NON-PALPABLE INGUINAL LYMPH NODES\nNODAL\nSTATUS\nRISK STRATIFICATION\nBASED ON PRIMARY\nLESION\nIMAGING\nNC\nTREATMENTC\nLow risk\n(PeIN, Ta,\nf\nT1a)\n- Surveillance (PN-8)\nNon-palpable\ninguinal\nlymph nodes\n可考慮superficial and modified ILND+術中frozen（因為Penile lymphatics drain:\nsuperficial ILN->deep ILN->iliac)•但只能CN0，都無法或不要手術的人考慮EBRT\nIntermediate/High\nrisk\n•T1b\nI•Any T2 or greater\nA+P CTor MRI with contrast\nChest x-ray or CT with contrast\n|Cross-sectional\n-imaging of chest/\nJabdomen/pelvis9\nT1b 以上（高風險．即G3、LVI+等）患者：建議手術\nstaging，可選 sentinel LN biopsy (DSNB ）或 modified\ninguinal lymphadenectomy ( IND )\n單側LN>=2 or ENE: unilateral PLND\n雙側ILN >=4: bilateral PLND\nBilateral inguinal\nllymph node dissection\nKILND)h,I\nor\nBilateral dynamic\nsentinel node biopsy\nKDSNBy.k\nDSNB biopsy 有positive就還是要做ILND\nSu"
+            },
+            {
+              "slide_num": 73,
+              "text": [
+                "摸的到LN就要做C+A+P",
+                "摸不到LN就是T1b以上要做",
+                "Penis lymph drainage 不會只流一邊",
+                "ILND一定是做兩邊, PLND則可做單邊",
+                "雙側ILN或",
+                ">=4 ILN要雙側PLND",
+                "A+P CT or MRI",
+                "CXR or chest CT",
+                "+/- PET/CT",
+                "T1, HG, LVI, Perineural invasion, >50% poor undifferentiated",
+                "若淋巴結 單側、可移動且 <4 cm，同時主原發腫瘤屬於高風險（≥T2 或 Grade ≥ G3），可直接進行 ILND（inguinal lymph node dissection），不一定需預先做切片或 FNA",
+                "30-60%pt 一診斷就有palpable LN"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss70.webp",
+              "hidden": false,
+              "ocr_text": "National\nComprehensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nPenile Cancer\nNetwork®\n30-60%pt一診斷就有palpable LN\nPenis lymph drainage 不會只流一邊\nIND一定是做兩邊，PLND則可做單邊\nMANAGEMENT OF PALPABLE NON-BULKY INGUINAL LYMPH NODES\nNODAL\nSTATUS\nIMAGING\nRISK STRATIFICATION\nBASED ON PHYSICAL/\nIMAGING FINDINGS\nTREATMENTC\nExcisional biopsy\nNegative-tlor\nSurveillance\nNegative\n若淋巴結單側、可移動且 <4cm\n，同時主原發腫瘤屬於高風險（\n二T2 或 Grade ≥ G3 ） •可直接\n進行 LND ( inguinal lymph\nnode dissection） ，不一定需\n預先做切片或 FNA\nPositive\n雙側儿或\n>=41LN要雙側PLNI\nlLow-riskl | Percutaneous\nprimary\n-lmph node\nIUnilaterall llesion\nbiopsyP\nllymph\nnode(s)\n<4 cm\nmobilejnl\nHigh-risk\nprimary\nllesiono\nT1, HG, LVI,\nPerineural invasion,\n=50% POOT\nundifferentiated\n中\nBilateral ILND\nPositive--• Consider\nneoadjuvant\nTIP (paclitaxel,\nitosfamide,\ncisplatin)\nchemotherapye\nfollowed by\nI ILND\npN1\nA+P CTor MRI\nCXR or chest CT\n+/- PET/CT\nUnilateral lymph node(s) 24 cm (fixed or mobile)\nPalpable\nCross-sectional\ninguinal\nLimaging of\n-Unilateral lymph node(s) <4 cm (fixed)\nlymph\nchestabdomen/\nlor\nor\nnodesl\nI lpelvis9,m\nIBilateral lymph nodes (fixed or mobile)\nDN2-3+\nManagement\nof Palpable\nBuky inguinal\nLymph Nodes\nKPN-5)\nPelvic 1ymph\nnode dissection\n(PLND)S士 (if pelvic\nnodes positive,\nadjuvant RTd or\nchemotherapy®\ncategory 2B].\nor chemo/RTd,e\n[category 2B])\nor\n• Chemo/RTd,e\n(category 2B)\nor\n•Chemotherapye\n(category 2B)\nSurvei\n(PN-8)\n*Enlarged pelvic lymph nodes\nManagement of\nEnlarged Pelvic\nlLymph Nodes (PN-7)\n摸的到LN就要做C+A+P\n摸不到LN就是T1b以上要做\nAdjuvant Chemotherapy Following ILND or PLND\nPreferred Regimen\n•TIP\nOther Recommended Reqimen\n•5-FU + cisplatin$35\nRadiosensitizing Agents and Combinations 13(Chemoradiotherapy)\nPreferred Regimens\n•Cisplatin alone, or in combination with 5-FU3.5,14\n•Mitomycin C in combination with 5-FU15\nOther Recommended Regimens\n•Capecitabine 16,17"
+            },
+            {
+              "slide_num": 74,
+              "text": [
+                "大方向:",
+                "都先做Biopsy, 若 negative, 需做Excisional biopsy排除",
+                "Positive下一步就是評估能否NAC, 可以就是NAC+ILND+/-PLND (bil. Or Fixed比較嚴重就是+PLDN)",
+                "若positive 不手術就是RT/CCRT",
+                "Penis lymph drainage 不會只流一邊",
+                "ILND一定是做兩邊, PLND則可做單邊",
+                "單側2-3 ILN要單側PLND",
+                "雙側ILN或",
+                ">=4 ILN要雙側PLND",
+                "若淋巴結 ≥4 cm（bulky）或為固定性（fixed），則需先做 FNA/bx，再根據結果決定是否 neoadjuvant chemo 再手術"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss71.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nPenile Cancer\nNetwork®\nMANAGEMENT OF PALPABLE BULKY INGUINAL LYMPH NODES\nNODE STATUS\nLYMPH NODES\nTREATMENT\n單側2-3 1LN要單側PLND\nINeoadjuvant TIP\nchemotherapy® followed by\n雙側LN或\nIND (preferred), consider\n>=4 1LN要雙側PLND\nPLND\nor\nPositive—\nINDC (preferred), consider\nPLNDC (in patients not\nUnilateral\nleligible for TIP)\nlymph\nPercutaneous /\nInodes\nI+lymph node\nor\n24 cm\nIbiopsyP\n(mobiley\nRTd\nlor\nIChemo/RTd,e\nPenis lymph drainage 不會只流一選\nILND一定是做兩邊，PLND則可做單邊\n0-1 positive nodes\nwith viable disease\n4\n≥2\npositive\nnodes or\nextranodal\nlextension\nAdjuvant\nchemotherapye (if not\nalready given)\nandlor\n•If pelvic nodes\npositive, adjuvant\nRTd\nor\n• Chemo/RTd.e (category\n2B)\nSurv\nKPN-\nPalpable bulky\ninguinal lymph\nnode(s):\nUnilateral 24\ncm (fixed or\nmobile)\nor\nUnilateral\nlymph node(s)\n≤4 cm (fixed)\nor\nBilateral (fixed\normobile)\nNegative\n+ Excisional\nbiopsy\nNegative —+ Surveillance (PN-8)\nPositive —+ Treatment (PN-6)\nIUnilateral\nlymph nodes\n(fixedn or\nbilateral lymph\nnodes (fixed\nlor mobile)\n(PN-6)\n若淋巴結 ≥4 cm （bulky）或為固定性 (fixed\n），則需先做 FNA/bx，再根據結果決定是否\nneoadjuvant chemo 再手術\n大方向：\n都先做Biopsy，若 negative,需做Excisional biopsy排除\nPositive下一步就是評估能否NAC，可以就是NAC+ILND+/-PLND\n(bil.Or Fixed比較嚴重就是+PLDN)\n若positive 不手術就是RT/CCRT"
+            },
+            {
+              "slide_num": 75,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss72.webp",
+              "hidden": false,
+              "ocr_text": "NCCN\nCancer\nNetwork®\ncomprenensive NCCN Guidelines Version 2.2025\nPenile Cancer\nNC\nMANAGEMENT OF PALPABLE BULKY INGUINAL LYMPH NODES\nNODE STATUS\nLYMPH NODES\nTREATMENT\nNegative\nExcisional\nbiopsy\nNegative -+ Surveillance (PN-8)\nPositive\nPalpable bulky\nlinguinal lymph\nnodes: Unilateral\nllymph nodes\n(fixedn or\nlbilateral lymph\nInodes (fixed or\nImobile)\nPercutaneous\nlymph node\nbiopsyP\nNo\nresponse\nNo Response/Disease\n-+ progression (PN-10\nNeoadiuvant\nTIP\nIchemotherapye\nPositive ，\nINot eligible for\nneoadiuvant\nlchemotherapy |\nlILNDC (preferred)\nland\nResponse -+\nPLNDC,9 (preferred)\nor\nRTG\nlor\nIChemo/RTd,e\nConside\nRTor\nchemo/\nRT if\n-+extranoc\nextensio\nIcategor\n12B)\n+Surveill"
+            },
+            {
+              "slide_num": 76,
+              "text": [
+                "ILND",
+                "Penile lymphatics drain: superficial ILN-> deep ILN -> iliac)",
+                "Standard ILND(會切斷隱靜脈)",
+                "上 inguinal ligament",
+                "下 fossa ovalis(saphenous vein opening)",
+                "外 medical border of sartorius muscle",
+                "內 adductor longus muscle",
+                "Modified ILND(保留隱靜脈)",
+                "上 inguinal ligament(同standard)",
+                "下 fossa ovalis(同standard)",
+                "外 femoral artery",
+                "內 adductor longus muscle(同standard)",
+                "Superficial ILND",
+                "Removal of those nodes superficial to the fascia lata.",
+                "Superficial ILN: fascia lata之上/ Deep ILN: fascia lata之下",
+                "@Laparoscopic vs open ILND: less morbidity; efficacy 相當",
+                "@Femoral triangle: inguinal ligament(上), sartorius muscle(外), adductor longus muscle(內)",
+                "saphenous vein"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss73.webp",
+              "hidden": false,
+              "ocr_text": "ILND\n• Penile lymphatics drain: superficial ILN->deep ILN ->\niliac)\n•Standard ILND（會切斷隱靜脈）\n•上inguinal ligament\n•下 fossa ovalis(saphenous vein opening)\n•外 medical border of sartorius muscle\n•內 adductor longus muscle\n•Modified ILND（保留隱靜脈）\n• 上inguinal ligament(同standard)\n•下 fossa ovalis(同standard)\n•外femoral artery\n•內 adductor longus muscle(同standard)\n•SuperficialILND\n• Removal of those nodes superficial to the fascia\nata.\n• Superficial ILN: fascia lataz 上/ Deep ILN: fascia lata\n@Laparascppic Vs open ILND: less morbidity; efficacy 相筐\n@Femoral triangle: inguinal ligament(上),sartorius muscle(外），\nadductor longus muscle(内）\nSiper icial iiac circam fles wessels\nFemoral reree\nSiperficial epigastric eeseele\nSuperfcial ealernal pudencial eeascls\nDeep external pudendal vessels\nTraclas\nInouzaak\nGreat sanhenous eei\nsaphenous vein"
+            },
+            {
+              "slide_num": 77,
+              "text": [
+                "ILND 併發症",
+                "Phlebitis, pulmonary embolism/VTE, wound infection, skin necrosis, lymphedema (scrotum and lower limbs), lymphocele formation",
+                "預防靜脈與淋巴相關併發症：用modified ILND(保留saphenous vein), stockings, bandaging, inguinal pressure dressings or vacuum suction and prophylactic antibiotics(for 1 week)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss74.webp",
+              "hidden": false,
+              "ocr_text": "IND 併發症\n•Phlebitis, pulmonary embolism/VTE, wound infection, skin necrosis,\nlymphedema (scrotum and lower limbs), lymphocele formation\n。預防靜脈與淋巴相關併發症：用modified ILND(保留saphenous vein)，\nstockings, bandaging, inguinal pressure dressings or vacuum suction and\nprophylactic antibiotics(for 1 week)"
+            },
+            {
+              "slide_num": 78,
+              "text": [
+                "先做biopsy",
+                "陽性可以開刀則neoadjuvant C/T 完再f/u, Stable或更好則PLND +ILND",
+                "不能開刀就CCRT",
+                "@ PLND: obturator, external iliac, internal iliac",
+                "bilateral ILND + ipsilateral/bilateral PLND(bilateral if >=4 ILN)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss75.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprehensive NCCN Guidelines Version 2.2025\nNCCN Cancer\nPenile Cancer\nNetwork®\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nMANAGEMENT OF ENLARGED PELVIC LYMPH NODES\nNODE STATUS\nLYMPH NODES\nTREATMENT\nNegative\nISee management depending on inguinal lymph\nnode status:\nNon-Palpable Inguinal Lymph Nodes (PN-3)\n-or\nPalpable Non-Bulky Inguinal Lymph Nodes (PN-4)\nor\nbilateral ILND +\nipsilateral/bilateral\nPLND(bilateral if >=4 1LN)\nIPalpable Bulky Inguinal Lymph Nodes (PN-5)\nPelvic\nlymph\nnodes\nenlarged' I\nPercutaneous\nllymph node\n-+ biopsy,P if\ntechnically\nlfeasible'\nCross-sectional\nSurgical\n-•Neoadjuvant TIP\n• imaging of\ncandidate\nchemotherapye\nchest/abdomen\nlpelvis9,m\nConsider\npostoperative\nRT or chemo/\nStable or\nclinical\nConsolidation -RT if pN2-3\n|Surveillance\nsurgery'\nor presence\nresponse\nPN-8\nof extranodal\nextension\nIcategory 2B) |\nPositive\nDisease\nprogression or\nInon-resectable\nINo Response/Disease\n-+ Progression on Management\nlof Metastatic Disease (PN-10)\nNon-surgical + Chemo/RTd.e\ncandidate\n• Surveillance (PN-8)\n先做biopsy\n陽性可以開刀則neoadjuvant C/T 完再f/u，stable或更\n好則PLND +ILND\n不能開刀就CCRT\n@ PLND:obturator, external iliac, internal iliac"
+            },
+            {
+              "slide_num": 79,
+              "text": [
+                "cN0, low risk",
+                "primary lesion PE",
+                "inguinal PE+/- echo(太胖不好摸或開過刀的)",
+                "PN-7"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss76.webp",
+              "hidden": false,
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2022\nNCCN\nCancer\nPenile Cancer\nNetwork®\nPN-7\nSURVEILLANCE SCHEDULE\nANATOMIC SITE\nINITIAL TREATMENT\nSURVEILLANCEW\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nTopical or local\ntherapy\n1• Clinical examxy\n•Years 1-2:every smo, then\n> Years 3-5: every 6 ma. then\n• Years 5-10:every 12 ma\nPrimary\nlesion\nprimary\nlesion PE\nPartial or radical\npenectomy\ncNO, low risk\npNXV\n| Clinical examxy\n• Years 1-2: every 6 mo, then\n，Years 3-10: every 12 mo\ninguinal PE+/-\nFor patients with\n• echo(太胖不好摸\nIrecurrence at\n1• Clinical examx*\n或開過刀的）\nleither local or\nYears 1-2:every 6 mo, then\n+distant sites, see\n＞Years 3-4:every 12 mo\nManagement of\nRecurrent\nIDisease (PN-8)\nLymph\nnodes\n+pNO, N1\nA pN2, N3\nI• Clinical exam,xy CT abdomen/pelvis and\nchest radiograph\nvears 1-2: every 6 mo, then\nYears 3-4: every 12mo\nClinical exam,xY CT abdomen/pelvis, and\nchest Cr\n•Year 1:every 3 mo, then\n•Years 2-4: every 6 mo"
+            }
+          ]
+        },
+        {
+          "id": "t11",
+          "title": "陰莖癌復發與化療",
+          "slide_count": 3,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 80,
+              "text": [
+                "簡單說就是重新staging再用前面的方式治療一次",
+                "如果開過ILND/RT =>就C/T, ILND, 或CCRT(no previous RT)",
+                "if pelvic LN +"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss77.webp",
+              "ocr_text": "National\ncomprenensive NCCN Guidelines Version 2.2025\nNCCN\nCancer\nPenile Cancer\nNetwork®\nMANAGEMENT OF RECURRENT DISEASE\nNCCN Guidelines Index\nTable of Contents\nDiccission\n簡單說就是重新staging再用前面的方式治療一次\n如果開過ILND/RT 二>就C/T,ILND，或CCRT(no previous RT)\nRecurrence of\npenile lesion\nafter initial penile\nsparing treatment\n• Treat according to recurrence stage\n(PN-1 and PN-2)\n|Single,|\nmobile,\n≤4 cm\nllymph\nInode\nIPercutaneous\n-lmph node\nbiopsyP\nNegative\nPositive -+ILNDC\nNo prior inguinal\nImphadenectomyK\nlor RT\nLocal recurrence\nin inguinal region\npN1\nSurveillance\n(PN-8)\nIPLNDC,d\nI(adiuvant if pelvic LN +\nchemotherapye or\nIchemo/RTI,e [category\n12B])\npN2-3 一+\nor\nchemo/RTd.e (category\n2B)\nor\nChemotherapy®\nKcategory 2B)\nTreatment for Unilateral Lymph\n• Nodes (Fixed) or Bilateral Lymph\nINode(s) (Fixed or Mobile) (PN-5)\n4 1prior inguinal\nlymphadenectomy\nlor RT\n1Fixed node, 24 cm\nInode, or CN2/N3\nldisease\nPercutaneous\n-+lymph node\nbiopsyP\nIChemotherapye followed by ILND\nor\nJILNDC\nor\nIChemo/RT (if no prior RT)d,e\n+ Surveillance (PN-8)"
+            },
+            {
+              "slide_num": 81,
+              "text": [
+                "Paclitaxel, Ifosfomide, Cisplatin",
+                "primary lesion surgery+ bilateral ILND +/- ipsilateral/bilateral PLND(bilateral if >=4 ILN)"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss78.webp",
+              "ocr_text": "NCCN\nNational\ncomprenensive NCCN Guidelines Version 2.2025\nCancer\nPenile Cancer\nNetwork®\nMANAGEMENT OF METASTATIC DISEASE\nNCCN Guidelines Index\nTable of Contents\nDiscussion\nCompletel\npartial response\nlor stable\nprimary lesion surgery+ bilateral ILND +/-\nipsilateral/ bilateral PLND (bilateral if >=4 1LN)\n— Consolidation surgeryt\n•Surveillance\n(N-8)\nMetastatic\nNenastaafce - Sfeteole\nchemotherapye,yz\nCross-sectional\nimaging of\nchestabdomenl\nlpelvis9\nINo responsel\nDisease\nlprogression\nIConsider subsequent-line systemic therapye\nor\nConsider RTd for local control\nandlor\nClinical trial\nandlor\nBest supportive care\nINCCN Guidelines for Palliative Care)\nFirst-line Systemic Therapy for Metastatic/Recurrent Disease\nPreferred Regimen\n•TIP\nPaclitaxel, Ifosfomide, Cisplatin\nOther Recammended Regimen\n•5-FU+ cisplatin\nSubsequent-line Systemic Therapy for Metastatic/Recurrent Disease\nPreferred Regimen\n•Clinical trial\n•Pembrolizumab, if unresectable or metastatic, microsatellite instability -high\n(MSI-Hor mismatch repair-deficient (dMMR) tumor that has progressed following\nprior treatment and no satisfactory arternative treatment options, 5.7,8 or if\ntumor mutational burden-high (TMB-H), TMB 210 mut/Mb in patients who have\nprogressed on previously approved lines of therapy:\nUseful in Certain Circumstances\n•Paclitaxel\n•Cetuximab"
+            },
+            {
+              "slide_num": 82,
+              "text": [
+                "Penile cancer",
+                "Risk factor有哪些? 哪些是premalignant lesion",
+                "Primary lesion 怎麼處理 ?",
+                "Stage ?",
+                "Penile cancer怎麼治療",
+                "Non-palpable inguinal LN, risk怎麼分類? (Low risk : Tis/Ta/T1a, I/H: T1b以上)",
+                "有哪些輔助檢查?(T1b以上 C/A/P CT) 怎麼治療?",
+                "Palpable inguinal LN, 怎麼治療? 有哪些輔助檢查?  (Papable就要做C/A/P CT) (unilateral 的話就分low -risk primary 則excisional) （若是high-risk primary則neoadjuvant + ILND若N1可追蹤 若 pN2-3則要PLND, adjuvant C/T, CCRT: Cisplatin alone, or in combination with 5-FU3,4,14",
+                "• Mitomycin C in combination with 5-FU15)",
+                "ILND template? 要不要neoadjuvant chemotherapy ?",
+                "ILND後根據病理報告下一步怎麼治療 ?",
+                "Chemotherapy regimen ?"
+              ],
+              "has_exam_question": true,
+              "hidden": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss79.webp",
+              "ocr_text": "Penile cancer\n•Risk factor有哪些？哪些是premalignant lesion\n•Primary lesion 怎麼處理？\n•Stage ?\n•Penile cancer怎麼治療\n•Non-palpable inguinal LN,risk 怎麼分類？(Low risk : Tis/Ta/T1a, I/H: T1b\n以上\n•有哪些輔助檢查?（T1b以上 C/A/P CT) 怎麼治療？\n•Palpable inguinal LN,怎廖治療？有哪些輔助檢套？(Papable就要做\nCA/P CT) (unilateral 的話就分low -risk primary 則excisional)（若是\nhigh-risk primarv則neoadjuvant + ILND若N1可追蹤 若 pN2-3則要PLND，\nadjuvant C/T, CCRT: Cisplatin alone, or in combination with 5-FU3,4, 14\n• • Mitomycin Cin combination with 5-FU15)\n•ILND template？ 要不要neoadjuvant chemotherapy?\n•ILND後根據病理報告下一步怎麼治療？\n• Chemotherapy regimen ?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

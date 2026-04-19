@@ -1,0 +1,1072 @@
+{
+  "id": "tb_11",
+  "number": "XI",
+  "title": "急症與併發症",
+  "icon": "🚨",
+  "sections": [
+    {
+      "id": "tb_11_01",
+      "title": "急症與併發症",
+      "source_file": "11 急症與併發症 (2022).pptx",
+      "total_slides": 64,
+      "topics": [
+        {
+          "id": "t01",
+          "title": "Acute Scrotal Pain & Testicular Torsion",
+          "slide_count": 11,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 2,
+              "text": [
+                "Acute scrotal pain",
+                "Acute scrotal pain differential diagnosis",
+                "Spermatic cord/Testicular torsion",
+                "Appendix testis / Appendix epididymis torsion"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss02.webp",
+              "hidden": false,
+              "ocr_text": "Acute scrotal pain\nAcute scrotal pain differential diagnosis\nSpermatic cord/Testicular torsion\nAppendix testis / Appendix epididymis torsion"
+            },
+            {
+              "slide_num": 3,
+              "text": [
+                "Differential diagnosis",
+                "40-60%, Most seen",
+                "20-30%",
+                "5-15%",
+                "cremaster m. spasm",
+                "在tunica vaginalis裡面轉",
+                "在tunica vaginalis外面轉"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss03.webp",
+              "hidden": false,
+              "ocr_text": "Differential diagnosis\nBOX 146-2 Differential Diagnosis of Pediatric\nAdolescent Acute Scrotal Pain\nAppendage torsion\nAppendix testis 40-60%, Most sesn\nOther appendage (epididymis, paradidymis, vas aberrans)\nSpermatic cord torsion 20-30%\nTntravaginal, acute or intermittent 在tunica vaginalis裡 面轉\nExtravaginal 在tunica vaginalis外面轉\nEpicidymitis 5-15%\nInfectious\nUrinary tract infection\nSexually transmitted disease\n?Viral\nSterile or traumatic\nScrotal edema or erythema\nDiaper dermatitis, insect bite, or other skin lesions\nIdiopathic scrotal edema\nOrchitis\nAssociated with epididymitis with or without abscess\nVasculitis (e.g., Henoch-Schonlein purpura)\nViral illness (mumps)\nTrauma\nHematocele or scrotal contusion or testis rupture\nHernia or hydrocele\nInguinal hernia with or without incarceration\nCommunicating hydrocele\nEncysted hydrocele with or without torsion\nAssociated with acute abdominal pathology (e.g., appendici-\ntis, peritonitis)\nVaricocele\nIntrascrotal mass\nCystic dysplasia or tumor of testis\nEpididymal cyst, spermatocele or tumor\nOther paratesticular tumors\ncremaster m. spasm\nMusculoskeletal pain from inguinal tendonitis or muscle strain\nReferred pain (e.g., ureteral calculus or anomaly)"
+            },
+            {
+              "slide_num": 4,
+              "text": [
+                "Acute scrotal pain evaluation",
+                "->New onset of pain, swelling, tenderness of intra-scrotal content",
+                "Hx",
+                "Always assume torsion",
+                "痛多久, 突然痛慢慢痛？, any precipitating factor(trauma, 激烈運動), 伴隨的症狀(fever/chills, 血尿, flank pain…)",
+                "PE",
+                "Tenderness point?, 睪丸高度有無對稱貨high riding, Mass?",
+                "Prehn sign (捧LP疼痛減輕 = Positive = favor epididymitis)",
+                "Cremasteric reflex (消失 = favor torsion), Open book sign(翻開睪丸疼痛減輕= favor torsion)",
+                "Scrotal echo with color Doppler",
+                "High resolution echo improved sensitivity/specificity, 96% / 99%, color doppler ~76%",
+                "Evaluate testis/epididymis blood flow, hematoma, testicular mass, varicocele"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch11_emergency/render/ss04.webp",
+              "hidden": false,
+              "ocr_text": "Acute scrotal pain evaluation\n->New onset of pain, swelling, tenderness of intra-scrotal content\n•Hx\n• Alwavs assume torsion\n•痛多久,突然痛慢慢痛?,any precipitating factor(traura, 激烈運動），伴随\n的症狀(fever/chills， 血尿,flank pain.)\n•PF\n•Tenderness point?，畢丸高度有無對稱貨high riding, Mass?\n•Prehn sign (捧LP疼痛減輕=Positive =favor epididymitis)\n•cremasteric reflex (消失=favor torsion), Open book sign(翻開睪丸疼痛減\n輕=favor torsion)\n•Scrotal echo with color Doppler\n•High resolution echo improved sensitivity/specificity, 96% / 99%, color\ndoppler ~76%\n•Evaluate testis/ epididymis blood flow, hematoma, testicular mass, varicocele"
+            },
+            {
+              "slide_num": 5,
+              "text": [
+                "Spermatic cord/Testicular torsion",
+                "Epidemiology and Classification",
+                "2.Extravaginal torsion:佔testicular torsion的5%, 好發於新生兒和infant, 又叫做Perinatal Testicular Torsion, 機制是因為新生兒的tunica vaginalis和gubernaculum沒有連得很緊, 發現時可能好幾個禮拜了(懷孕期間就torsion)",
+                "Bell-clapper deformity: Tunica vaginalis(上圖紅色) 包覆太近端, 造成testis容易intravaginal torsion",
+                "Epidemiology",
+                "1:4000, left side predominant, rarely bilateral",
+                "出生時就兩側扭轉佔11-21%",
+                "旋轉超過360度缺血超過24小時100%會萎縮",
+                "Classification:",
+                "1.Intravaginal torsion: 佔testicular torsion的95%, 90%有Bell-clapper deformity, peak 12-16 y/o, 機制是因為青春期睪丸重量快速增加加上突然一個cremaster reflex上提睪丸",
+                "Intermittent Intravaginal Spermatic Cord Torsion",
+                "Defined as sudden onset of unilateral testicular pain of short duration with spontaneous resolution",
+                "是否要做bilateral orchidopexy->elective"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss05.webp",
+              "hidden": false,
+              "ocr_text": "Spermatic cord/Testicular torsion\nEpidemiology and Classification\n•Epidemiology\n•1:4000, left side predominant,\nrarely bilateral\n•出生時就兩側扭轉佔11-21%\n•旋轉超過360度缺血超過24小\n時100%會萎縮\n• Classification:\n1.Intravaginal torsion：佔testicular\ntorsion的95%，90%有Bell-clapper\nNormal\nBell-clapper anomaly\nIntravaginal torsion\ndeformity, peak 12-16y/0,機制是\n因為青春期睪丸重量快速增加加\n上突然一個cremaster reflex上提睪\nBell-clapper deformity: Tunica vaginalis(上圖紅色） 包覆\n太近端，造成testis容易intravaginal torsion\n丸\n2.Extravaginal torsion:佔testicular torsion的5%，好發於\nIntermittent Intravaginal Spermatic Cord Torsion\n新生兒和infant，又叫做Perinatal Testicular Torsion， 機\n•Defined as sudden onset of unilateral testicular\npain of short duration with spontaneous\n制是因為新生兒的tunica vaginalis和gubernaculum沒有\nresolution\n連得很緊，發現時可能好幾個禮拜了（懷孕期間就\n•是否要做bilateral orchidopexy->elective\ntorsion)"
+            },
+            {
+              "slide_num": 6,
+              "text": [
+                "Spermatic cord/Testicular torsion",
+                "Survey",
+                "History & PE",
+                "睪丸疼痛時間69%小於12小時(epididymitis 69%大於12小時), Nausea/vomit, prior episodes, scrotal edema, dysuria/fever uncommon",
+                "Tenderness, abnormal orientation (horizontal, high riding testis/shortened cord), absent cremasteric reflex, positive open book sign",
+                "Diagnostic tools (scrotal color Doppler, high-resolution)",
+                "Reduced / absent testis flow and testis heterogenicity(壞死一陣子)",
+                "high riding testis"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss06.webp",
+              "hidden": false,
+              "ocr_text": "Spermatic cord/Testicular torsion\nSurvey\n•History & PE\n•睪丸疼痛時間69%小於12小時(epididymitis 69%\n大於12小時)， Nausea/vomit, prior episodes,\nscrotal edema, dysuria/fever uncommon\n•Tenderness, abnormal orientation (horizontal,\nhigh riding testis/ shortened cord), absent\ncremasteric reflex, positive open book sign\n•Diagnostic tools (scrotal color Doppler, high-\nresolution)\n•Reduced / absent testis flow and testis\nheterogenicity(壞死一陣子）\nhigh riding testis"
+            },
+            {
+              "slide_num": 7,
+              "text": [
+                "Management of spermatic cord torsion",
+                "(Surgical emergency)",
+                "診斷確定是torsion或是診斷不確定(testis blood flow equivocal)都要緊急處理",
+                "手動復位: 可以先嘗試手動復位睪丸扭轉, 成功的定義是不痛了且超音波血流恢復, 但即使成功還是要安排bilateral orhcipexy",
+                "Scrotal exploration:",
+                "打開患側scrotum, 若有torsion(intravaginal or extravaginal?), 可嘗試扭轉回來(轉幾度?)並泡熱水,再看看顏色是否變得紅潤, 也掃echo看是否有恢復血流, 有恢復就orchidopexy, 沒恢復就orchidectomy",
+                "對側也要做orchiopexy",
+                "TUA(2020): 24小時內有懷疑或不確定的都要開刀(4-8小時就開始缺血壞死了所以盡量在8小時內開), 24小時以上的可以選擇性開刀(這邊是否要orchipexy/orchidectomy仍有爭議)",
+                "@如果是新生兒發生懷疑extravaginal torsion是否要馬上開刀是有爭議的(因為常常已經torsion一陣子了開了不一定救的回,而且新生兒麻醉風險高)",
+                "Follow up: 要追蹤使否有infertility的情形以gonadal hormone level",
+                "Prognosis: Semen density is often within the normal range but correlates with shorter duration of torsion and reduced atrophy"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch11_emergency/render/ss07.webp",
+              "hidden": false,
+              "ocr_text": "Management of spermatic cord torsion\n(Surgical emergency)\n•診斷確定是torsion或是診斷不確定(testis blood flow equivocal)都要緊急\n處理\n•手動復位：可以先嘗試手動復位睪丸扭轉，成功的定義是不痛了且超音波\n血流恢復，但即使成功還是要安排bilateral orhcipexy\n•Scrotal exploration:\n交 打開患側scrotum，若有torsion(intravaginal or extravagina/?)，可嘗試扭\n轉回來(轉幾度？並泡熱水,再看看顏色是否變得紅潤，也掃echo看是否\n有恢復血流，有恢復就orchidopexy，沒恢復就orchidectomy\n*對側也要做orchiopexy\n* TUA(2020)：24小時内有懷疑或不確定的都要開刀（4-8小時就開始缺血\n壞死了所以盡量在8小時内開)，24小時以上的可以選擇性開刀（這邊是\n否要orchipexy/orchidectomy仍有爭議）\n@如果是新生兒發生懷疑extravaginal torsion是否要馬上開刀是有爭議的(\n因為常常已經torsion一陣子了開了不一定救的回,而且新生兒麻醉風險高）\n•Follow up:要追蹤使否有infertility的情形以gonadal hormone level\n•Prognosis: Semen density is often within the normal range but correlates\nwith shorter duration of torsion and reduced atrophy"
+            },
+            {
+              "slide_num": 8,
+              "text": [
+                "Cremaster reflex",
+                "機轉",
+                "刺激大腿內側，由ilioinguinal nerve (L1)接收訊號",
+                "由genital femoral nerve(L1-2)的genital branch 造成cremaster m. 收縮",
+                "臨床應用",
+                "Testicular torsion時，Cremaster reflex 會消失",
+                "Retropubic sling or inguinal hernia 手術可能傷到ilioinguinal nerve"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss08.webp",
+              "hidden": false,
+              "ocr_text": "Cremaster reflex\n•機轉\n•刺激大腿內側，由ilioinguinal nerve (L1)\n接收訊號\n•由genital femoral nerve(L1-2)的genital\nbranch 造成cremaster m.收縮\n•臨床應用\n•Testicular torsion時，Cremaster reflex 會\n淌失\n•Retropubic sling or inguinal hernia 手術可\n能傷到ilioinguinal nerve\nPsoas muscle、\nHiohypogastric nerve ~\nHioinguinal nerve ~\nGenitofemoral nerve\nExternal inguinal ring\nllioinguinal nerve\nGenital branch\nGenitofemoral\nnerve\nFemoral branch"
+            },
+            {
+              "slide_num": 9,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh09.webp",
+              "ocr_text": "TABLE 33-4 Branches of the Lumbosacral Plexus\nBRANCH\nSubcostal\nliohypogastric\nlioinguinal\nORIGIN\nAnterior ramus T12\nAnterior ramus L1\nAnterior ramus L1\nSPINAL\nSEGMENTS\nT12\n丨1\nL1\nGenitofemoral\nAnterior rami L1 and L2 L1, L2\nLateral cutaneous\nnerve of the thigh\nObturator\nAnterior rami L2 and L3 L2, L3\nAnterior rami L2-L4\nL2-14\nFemoral\nAnterior rami L2-L4\nL2-L4\nMOTOR FUNCTION\nMuscles of abdominal wall\nInternal oblique and\ntransversus abdominis\nInternal obligue and\ntransversus abdominis\nGenital branch: male\ncremasteric muscle\nNone\nObturator externus, pectineus,\nand muscles in medial\ncompartment of thigh\nliacus, pectineus, and\nmuscles in anterior\ncompartment of thigh\nSENSORY FUNCTION\nSkin over hip\nPosterolateral gluteal skin and skin\nin pubic region\nSkin in upper medial thigh and\nthe skin over either the root of the\npenis and anterior scrotum or the\nmons pubis and labium majus\nGenital branch: skin of anterior\nscrotum or skin of mons pubis\nand labium majus\nFemoral branch: skin of upper\nanterior thigh\nSkin on anterior and lateral thigh to\nthe knee\nSkin on medial aspect of thigh\nSkin on anterior thigh and medial\nsurtace of leg"
+            },
+            {
+              "slide_num": 10,
+              "text": [
+                "Appendix testis / Appendix epididymis torsion",
+                "Most common cause of acute scrotum in prepubertal children",
+                "Epidemiology",
+                "Peak 7-12 y/o",
+                "History & PE",
+                "Similar to torsion",
+                "“Blue dot” sign (ischemic appendix), tenderness at superior portion (early)",
+                "Diagnostic tools",
+                "Rarely show abnormalities (appendix has no blood supply)",
+                "Commonly showed hyperperfusion of epididymis",
+                "Management (NOT emergency)",
+                "Self-limiting, rarely recurrent episodes",
+                "Pain control, ice-packing, limit physical activity",
+                "Surgical exploration only in those testicular torsion is suspected"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss09.webp",
+              "hidden": false,
+              "ocr_text": "Appendix testis / Appendix epididymis torsion\n•Most common cause of acute scrotum in\nprepubertal children\n•Epidemiology\n•Peak 7-12 v/o\n•History & PE\nDuctu\ndidymis\nefierente\n•Similar to torsion\nAppendix of\nepidi dymis\n•Blue dot” sign (ischemic appendix), tenderness\nAppendox of\nlestis\nat superior portion (early)\n•Diagnostic tools\n•Rarely show abnormalities (appendix has no\nblood supply)\n•Commonly showed hyperperfusion of\nSeminiferous\ntubules\nepididymis\n•Management (NOT emergency)\nSeptum\n•Self-limiting, rarely recurrent episodes\n•Pain control, ice-packing, limit physical activity\n• Surgical exploration only in those testicular\ntorsion is suspected\nVas\ndeterens\nVas\naberrans\nsupenor\nVas\naberrans\niterior"
+            },
+            {
+              "slide_num": 11,
+              "text": [
+                "Question",
+                "有關睪丸扭轉 (testicular torsion), 何者為非?",
+                "睪丸扭轉是急性睪丸疼痛 (acute scrotum) 最常見的原因",
+                "睪丸扭轉可以細分為: acute intravaginal torsion, intermittent intravaginal torsion, and extravaginal torsion",
+                "常見的理學檢查包括: 睪丸疼痛, 睪丸異常方向 (橫向), 提睪肌反射 (cremasteric reflex) 異常",
+                "超音波可以提共睪丸整體結構, 血流供應狀況及其他解剖細節",
+                "當臨床高度懷疑睪丸扭轉就必須要按排緊急陰囊探查手術 (scrotum exploration)",
+                "Ans: A",
+                "Campbell 11th edition Chap. 146 p. 3388-3393"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch11_emergency/render/ss10.webp",
+              "hidden": false,
+              "ocr_text": "Question\n•有關畢丸扭轉 (testicular torsion)，何者為非？\na) 睪丸扭轉是急性畢丸疼痛(acute scrotum） 最常見的原因\n6） 睪丸扭轉可以細分為：acute intravaginal torsion，\nintermittent intravaginal torsion, and extravaginal torsion\n常見的理學檢查包括：睪丸疼痛，睪丸異常方向（橫向)，\n提睪肌反射(cremasteric reflex) 異常\nd)超意波可以提共睪丸整體結構，血流供應狀況及其他解\n剖細節\n當臨床高度懷疑睪丸扭轉就必須要按排緊急陰囊探查手\n術 (scrotum exploration)\nAns: A\nCampbell 11th edition Chap. 146 p. 3388-3393"
+            },
+            {
+              "slide_num": 12,
+              "text": [
+                "Question",
+                "何者是急性睪丸疼痛 (Acute scrotum) 最常見的原因?",
+                "Testicular (spermatic cord) torsion",
+                "Torsion of appendix testis",
+                "Epididymitis",
+                "Trauma (scrotal contusion or testicular rupture)",
+                "Hernia or hydrocele",
+                "Ans: B\u000bCampbell 11th edition Chap. 146 p. 3388-3393"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch11_emergency/render/ss11.webp",
+              "hidden": false,
+              "ocr_text": "Question\n•何者是急性睪丸疼痛(Acute scrotum) 最常見的原因？\na) Testicular (spermatic cord) torsion\nb) Torsion of appendix testis\nEpididymitis\nd) Trauma (scrotal contusion or testicular rupture)\ne) Hernia or hydrocele\nAns: B\nCampbell 11th edition Chap.146 p. 3388-3393"
+            }
+          ]
+        },
+        {
+          "id": "t02",
+          "title": "Chronic Scrotal Pain",
+          "slide_count": 1,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 13,
+              "text": [
+                "Chronic scrotal pain D/D",
+                "Testis tumor/cancer",
+                "UTI/chronic bacterial prostatitis/chronic epididymitis/STD",
+                "Previous trauma",
+                "Previous operation: hernia, varicocele, vasectomy, hydrocele, orchiectomy, lapa NU/RN(injury to gonadal v.)",
+                "Referred pain: ureter stone",
+                "CPPS",
+                "DM neuropathy",
+                "Polyarteritis nodosa"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss12.webp",
+              "hidden": false,
+              "ocr_text": "Chronic scrotal pain D/D\n•Testis tumor/cancer\nwTI/chronic bacterial prostatitis/chronic epididymitis/STD\n•Previous trauma\n•Previous operation: hernia, varicocele, vasectomy, hydrocele,\norchiectomy, lapa NU/RN(injury to gonadal v.)\n•Referred pain: ureter stone\n•CPPS\n•DM neuropathy\n•Polvarteritis nodosa"
+            }
+          ]
+        },
+        {
+          "id": "t03",
+          "title": "Priapism：分類、評估與治療",
+          "slide_count": 17,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 14,
+              "text": [
+                "Priapism",
+                "TUA定義: 陰莖在沒有性幻想或性刺激下持續勃起超過4小時",
+                "分成Ischemic(最常見)/nonischemic/shuttering"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss13.webp",
+              "hidden": false,
+              "ocr_text": "Priapism\n•TUA定義：陰莖在沒有性幻想或性刺激下持續勃起超過4小時\n•分成lschemic(最常見)/nonischemic/shuttering"
+            },
+            {
+              "slide_num": 15,
+              "text": [
+                "Ischemic Priapism 概論",
+                "Detumescence的venous outflow受阻(Veno-Occlusive), CC裡面壓力過大, 導致Little or no cavernous arterial inflow(Low-Flow)",
+                "三個機制: 1.Neurotransmitter(NO)分泌過多, 2.draining venules被塞住 (ex: sickle cell disease->佔1/3原因, leukemia, or excessive use of intravenous parenteral lipids), 3.cavernosal a. smooth muscle舒張過久(最常見: PGE1注射, PDE5 inhibitor, sickle cell disease)",
+                "Risk factor: Sickle Cell Disease/thalassemia/血液疾病, medication(Alpha-blocker, PDE5 inhibitor, PGE1, Methylphenidate medications->ADHD drugs)",
+                "表現: painful rigid erection, glans/corpus spongiosum(CS) not rigid",
+                "Penile ABG: dark blood/acidosis(PH<7.25)/hypercapnia(pCO2>60)/hypoxia(pO2<30) (隨著時間內部的血流會越來越hypoxia, hypercarbia, and acidosis, 所以是emergency)",
+                "Color Doppler: 緩慢或幾乎沒有artery flow",
+                "超過48到72小時才治療可以消除erection, 但對於保護勃起功能已經沒什麼幫助",
+                "4hr: carvernosal sm.m 失去收縮能力",
+                "12 hr: interstitial edema",
+                "24 hr:  sinusoidal endothelium, exposure of the basement membrane, and thrombocyte adherence.",
+                "48 hr:  thrombus can be found in the sinusoidal spaces, and smooth muscle necrosis with fibroblast-like cell transformation"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss14.webp",
+              "hidden": false,
+              "ocr_text": "Ischemic Priapism 概論\n4hr: carvernosal sm.m 失去收縮能力\n12 hr:interstitial edema\n24 hr: sinusoidal endothelium, exposure of the\nbasement membrane, and thrombocyte\nadherence.\n48 hr: thrombus can be found in the sinusoidal\nspaces, and smooth muscle necrosis with\nfibroblast-like cell transformation\n•Detumescence的venous outflow受阳(Veno-Occlusive)，CC裡面壓力過大，導致\nLittle or no cavernous arterial inflow(Low-Flow)\n•三個機制：1.Neurotransmitter(NO)分泌過多,2.draining venules 被塞佳 (ex: sickle\ncell disease->佔1/3原因,leukemia, or excessive use of intravenous parenteral\nlipids), 3.cavernosal a. smooth muscle舒張過久(最常見：PGE1注射，PDES inhibitor，\nsickle cell disease)\n•Risk factor: Sickle Cell Disease/thalassemia/血液疾病,medication(Alpha-blocker,\nPDE5 inhibitor, PGE1, Methylphenidate medications->ADHD drugs\n•表現：painful rigid erection, glans/corpus spongiosum(CS) not rigid\n•Penile ABG: dark blood/acidosis(PH<7.25)/hypercapnia(pCO2>60)/hypoxia(pO2<30)\n（隨著時間內部的血流會越來越hypoxia,hypercarbia, and acidosis,所以以是\nemergency)\n•color Doppler：缓慢或幾乎沒有artery flow\n•超過48到72小時才治療可以消除erection，但對於保護勃起功能己經沒什麼幫助"
+            },
+            {
+              "slide_num": 16,
+              "text": [
+                "Sickle cell disease如何造成priapism",
+                "機制1: Sickle cell disease的blood比較黏稠(viscous) -> corpus cavernosum(CC)的vein被塞住 -> venous outflow下降 -> ischemic priapism",
+                "機制2: 慢性溶血-> free hemoglobin增加 -> NO被free hemoglobin吸收用掉 -> NO下降 -> cGMP減少 -> basal PDE5減少 -> 之後勃起的時候cGMP降解不掉-> ischemic priapism",
+                "＠可以長期服用Sildenafil(Viagra)來增加basal cGMP和basal PDE5以預防priapism"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss15.webp",
+              "hidden": false,
+              "ocr_text": "Sickle cell disease如何造成priapism\n•機制1： Sickle cell disease的blood比較黏稱\n(viscous)-> corpus cavernosum(CC的vein被塞\n住-＞venous outflow下降->ischemic priapism\nCell free zone\nNO\nNormal\nBasal no activity\n, Guanylate\ncyclase\n5GMP, GTP\nCGMP\n•機制2：慢性溶血-＞free hemoglobin增加 -＞NO\n被free hemoglobin吸收用掉-二NO下降-＞\nCGMP減少-＞basal PDE5減少-＞之後勃起的\n時候cGMP隆解不掉->ischemic priapism\n@可以長期服用Sildenafil(Viagra)來增加basal\nCGMP和basalPDE5以預防priapism\nUntreated priapism\nSildenafil treated\nNO\ncavernosal nerve\nstimulation\nGuanylate\ncyclase\nGuanylate\ncyclase\n5GMR, GTP\nCGMP\n5GMP, GTP cGMP\nIPDE5\nPDE51\n丁\nSildenafil\nUnchecked cGMP\nProlonged erection\nBaseline PDE5 increased\nNormal detumescence\nJNO-一>\nGuanvlate\ncyclase\nSickle cel\n5GMP, GTP\nLcGMP\nJPDES\nSmooth muscle\nEndothelium\nNitric oxide\nNitrate\nFrce hemoglobin"
+            },
+            {
+              "slide_num": 17,
+              "text": [
+                "Stuttering Priapism 概論",
+                "A variant of ischaemic priapism characterised by recurrent and intermittent episodes of short-lived, self-limiting painful erections of typically less than 4 h duration",
+                "Contemporary science implicates hemolysis and reduced NO in the pathogenesis of pulmonary hypertension, leg ulcers, priapism, and stroke in patients with SCD.",
+                "Usually in men with sickle cell disease (SCD)",
+                "Commonly reported precipitants",
+                "Stuttering nocturnal or early morning erections",
+                "Dehydration",
+                "Fever",
+                "Exposure to cold"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss16.webp",
+              "hidden": false,
+              "ocr_text": "stuttering Priapism 概論\n•A variant of ischaemic priapism characterised by recurrent and\nintermittent episodes of short-lived, self-limiting painful erections of\ntypically less than 4 h duration\n•Contemporary science implicates hemolysis and reduced NO in the\npathogenesis of pulmonary hypertension, leg ulcers, priapism, and\nstroke in patients with SCD.\n•Usually in men with sickle cell disease (SCD)\n•Commonly reported precipitants\n• stuttering nocturnal or early morning erections\n•Dehydration\noFever\n•Exposure to cold"
+            },
+            {
+              "slide_num": 18,
+              "text": [
+                "Nonischemic Priapism 概論",
+                "有不受控制的cavernosal arterial inflow(Arterial, high flow)持續進入corpus cavernosum, 造成持續勃起",
+                "機制:可能因為一個penis的blunt trauma或penetrating injury導致Cavernosal artery和corpus cavernosum之間產生fistula(在trauma後24小時就可能產生), 導致動脈血持續注入corpus cavernosum, 造成priapism",
+                "Risk factor: perineal/penis trauma",
+                "Presentation: non-painful erection(usually not rigid, but may be rigid after sexual stimulation)",
+                "Penile ABG: bright red",
+                "Color Doppler: 在fistula附近有turbulent flow"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Nonischemic Priapism 概論\n•有不受控制的cavernosal arterial inflow(Arterial, high flow)持續進人\ncorpus cavernosum， 造成持續勃起\n•機制：可能因為一個penis的blunt trauma或penetrating injurv導致\nCavernosal artery和corpus cavernosum之間產生fistula(在trauma後24\n小時就可能產生），導致動脈血持續注人corpus cavernosum，造成\npriapism\n•Risk factor: perineal/penis trauma\n•Presentation: non-painful erection(usually not rigid, but may be rigid\nafter sexual stimulation)\n•Penile ABG: bright red\n•color Doppler：在fistula附近有turbulent flow"
+            },
+            {
+              "slide_num": 19,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh19.webp",
+              "ocr_text": "BOx 28-1 Causes of Priapism\n∞-ADRENERGIC RECEPTOR ANTAGONISTS\nPrazosin, terazosin, doxazosin, tamsulosin\nANTIANXIETY AGENT\nI Hydroxyzine\nHEMATOLOGIC DYSCRASIAS\nSickle cell disease, thalassemia, granulocytic leukemia, myeloid\nleukemia, lymphocytic leukemia, muitiple myeloma, hemoglo-\nbin Olmsted variant, fat emboli associated with hyperaimen-\ntation, hemodialysis, glucose-6-phosphate dehydrogenase\ndeficiency\nANTICOAGULANTS\nHeparin, warfarin\nHORMONES\nGonadotropin-releasing hormone, testosterone\nANTIDEPRESSANTS AND ANTIPSYCHOTICS\nTrazodone, bupropion, fluoxetine, sertraline, lithium, clozapine, ris-\nperidone, olanzapine, chlorpromazine, thioridazine, phenothi-\nazines\nINFECTIOUS (TOXIN-MEDIATED) CAUSES\nScorpion sting, spider bite, rabies, malaria\nMETABOLIC CONDITIONS\nANTIHYPERTENSIVES\nAmyloidosis, Fabry disease, gout\nHydralazine, guanethidine, propranolol\nNEOPLASTIC CAUSES (METASTATIC OR REGIONAL\nATTENTION-DEFICIT/HYPERACTIVITY DISORDER AGENTS\nINFILTRATION)\nMethylphenidates (Concerta, Daytrana, Focalin, Metadate, Methy-Prostate, urethra, testis, bladder, rectum, lung. kidney\nlin, Quilivant, Ritalin)\nAtomoxetine (Strattera)\nRECREATIONAL DRUGS\nAlcohol, cocaine (intranasal and topical), crack cocaine, marijuana\nNEUROGENIC CONDITIONS\nSyphilis, spinal cord injury, cauda equina compression, autonomic\nneuropathy, lumbar disk herniation, spinal stenosis, cerebral\nvascular accident, brain tumor, spinal anesthesia, cauda equina\nsyndrome\nGENITOURINARY CONDITIONS\nStraddle injury, coital injury, pelvic trauma, kick to penis or perineum, VASOACTIVE ERECTILE AGENTS\narteriovenous or arteriocavernous bypass surgery, urinary\nPapaverine, phentolamine, prostaglandin E1, oral phosphodiester-\nretention\nase type 5 inhibitors, combination intracavernous therapy"
+            },
+            {
+              "slide_num": 20,
+              "text": [
+                "Priapism survey",
+                "Hx: 多久了(>4 hours?), 疼痛(painful->ischemic, not painful->nonischemic) , 用藥史 Trauma(nonischemic), baseline erectile function,underlying(sickle cell disease, 凝血疾病)",
+                "PE: rigid erection(ischemic) or not (nonischemic)",
+                "Lab:",
+                "Penile ABG(dark blood/acidosis/hypercapnia/hypoxia->ischemic, bright red->nonischemic)",
+                "CBC/DC, coagulation profile, Sickle cell workup",
+                "Imaging",
+                "Color Doppler(緩慢或幾乎沒有artery flow->ischemic, 在fistula附近有turbulent flow->nonischemic)",
+                "MRI角色: arteriolar-sinusoidal fistula, extent of tissue thrombous and smooth muscle infarction, intracorporal malignancy / metastasis"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch11_emergency/render/ss18.webp",
+              "hidden": false,
+              "ocr_text": "Priapism survey\n•Hx:多久了(>4hours?)，疼痛(painful-sischemic, not painful-\nsnonischemnic)，用藥史 Trauma(nonischemic), baseline erectile\nfunction,underlying(sickle cell disease, 凝血疾病)\n•PE:rigid erection(ischemic) or not (nonischemic)\n•Lab:\n•Penile ABG(dark blood/acidosis/hypercapnia/hypoxia->ischemic,\nbright red->nonischemic)\n•CBC/DC, coagulation profile, Sickle cell workup\n•Imaging\n•color Doppler(缓慢或幾乎沒有artery flow-sischemic， 在fistula附近\n有turbulent flow->nonischemic)\n•MRI角色：arteriolar-sinusoidal fistula, extent of tissue thrombous\nand smooth muscle infarction, intracorporal malignancy / metastasis"
+            },
+            {
+              "slide_num": 21,
+              "text": [
+                "<4hrs, 可給口服sympathomimetic drugs (etilefrine, pseudoephedrine, phenylpropanolamine, and terbutaline)3",
+                "可治療28-36%的caes"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss19.webp",
+              "hidden": false,
+              "ocr_text": "Figure 6: Differential diagnosis of priapism\nProlonged erection\nfor >4 hours\nlschaemic\npriapism\nHistory\nPenile\nblood gas\nanalysis\nPenile\nDoppler Us\nHistory\nPainful, rigid\nerection\nDark blood;\nhypoxia,\nhypercapnia\nand acidosis\nSluggish or\nnon-existent\nblood flow\nPerineal or\npenile trauma;\npainless,\nfluctuating\nerection\n＜4hrs， 可給口服sympathomimetic drugs\n(etilefrine, pseudoephedrine,\nphenylpropanolamine, and terbutaline)3\n可治療28-36%的caes\nNon-ischaemic\npriapism\nPenile\nblood gas\nanalysis\nPenile\nDoppler Us\nBright red\nblood;\narterial blood\nBas values\nNormal arterial\nflow and\nmay show\nturbulent flow\nat the site of\na fistula"
+            },
+            {
+              "slide_num": 22,
+              "text": [
+                "Ischemic priapism treatment(TUA)",
+                "手術順序:(超過36小時直接prosthesis)",
+                "1.Distal percutaneous shunt   (CC-glans)                                              2.Distal open shunt              (CC-glans)                               3.Proximal open shunt                           (CC-CS or CC-dorsal/saphenous v.)                    4.Penile prosthesis                          (may preserve penile length, 建議於acute episode時做, 有distal shunt的話要關起來, 不能裝distally  expanding AMS 700 LGX cylinders)",
+                "手術原則:relief venous outflow, re-establish artery  inflow, evacuation of thrombus, shunt patency",
+                "Phenylephrine(要監測血壓心電圖), Etilephrine, Methline blue, Adrenaline, Terbutaline",
+                "用大號針從3或9點鐘進針以避免傷害背側血管與神經",
+                "(expert opinion) 如果priapism last >72hrs, shunting 就要被考慮",
+                "但手術併發症發生率比一般人高"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss20.webp",
+              "hidden": false,
+              "ocr_text": "Ischemic priapism treatment(TUA)\nDorsal artery\nDorsal veins\nlnitial conservative measures\n• Local anaesthesia of the penis\n用大號針從3或9點鐘進針以避免傷害背側血管與神經\n•Insert wide bore butterfy (16-18 G) through the glans into the corpora cavernosa\n• Aspirate cavernosal blood until bright red arterial blood is obtained\nDorsal nerve\nCorpora\ncavernosa\nUrethra\nCavernosal irrigation\n•Irrigate with 0.90% w/v saline solution\nCorpus spongiosum\nIntracavernosal therapy\nPhenylephrine(要監測血壓心電圖)，Etilephrine,\n•lnect intracavernosal aarenoceptor agonist Methline blue, Adrenaline, Terbutaline\n•Current first-line therapy is phenvlephrine* with aliquots of 200 wg being injected every 3-5\nminutes until detumescence is achieved (maximum dose of phenylephrine is 1mg within 1 hour)*\n(expert opinion）如果priapism last>72hrs, shunting 就要被考慮\nSurgical therapy\n手術原則:relief venous outflow,re-establish artery\n•Surgical shunting\ninflow, evacuation of thrombus, shunt patency\n• Consider primary penile implantation if priapism has been present for more than 36 hours\n但手術併發症發生率比一般人高\n手術順序!(超過36小時直接\nprosthesis)\n1.Distal percutaneous shunt (CC-\nglans)\n2.Distal open shunt\nglans)\nopen shunt\nCC-\n3.Proximal\nCC-Csor\nCC-dorsal/ saphenous v.)\n4.Penile prosthesis\n(mav preserve penile length,建議於\nacute episode 時做，有distal shunt的\n話要關起來，不能裝\ndistally expanding AMS 700 LGX"
+            },
+            {
+              "slide_num": 23,
+              "text": [
+                "Distal percutaneous shunt",
+                "Distal open shunt",
+                "建立一個從海綿體（corpora cavernosa）到龜頭（glans penis）之間的通道（shunt）"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss21.webp",
+              "hidden": false,
+              "ocr_text": "Distal percutaneous shunt\n建立三福在和 1ofgcacemoss）到顾頭(elans penie） 之間的通道Distl gpen shunt\nPercutaneous Techniques\nWinter\nCorpora caversa\nBiopsy needle\nTunica\nErectile tissue\nCore of tissue romoved\nEbbeho\nNo. 11 scalpet\nT-shunt\nNo. 10 scalpel\nCorpora cavemosa\nDirection of scalpel rofation\nUratnra\n@MAYO\n2009"
+            },
+            {
+              "slide_num": 24,
+              "text": [
+                "Proximal open shunt(CC to CS)",
+                "(Quackel/Sachers shunt)",
+                "Proximal open shunt(CC to saphenous vein)",
+                "(Grayhack shunt)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss22.webp",
+              "hidden": false,
+              "ocr_text": "Proximal open shunt(CC to Cs)\n(Quackel/Sachers shunt)\nProximal open shunt(CC to saphenous vein)\n(Grayhack shunt)"
+            },
+            {
+              "slide_num": 25,
+              "text": [
+                "原文"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh25.webp",
+              "ocr_text": "原文\nKEY POINTS: SURGICAL MANAGEMENT\nOFISCHEMIC PRIAPISM\n• Shunt surgery should be considered for all patients with\nischemic priapism in whom aspiration and ICI of d-\nadrenergics has failed.\n• Patients should be counseled that erectile function out-\ncomes decline significantly when ischemic priapism has\nlasted longer than 24 hours and that complete ED is antici-\npated if ischemic priapism persists for longer than 36 hours.\n• The objective of shunt surgery is reoxygenation of the\ncavernous smooth muscle.\n• The key factors determining successful surgical reversal of\nischemic priapism are evacuation of thrombus, patency of\nshunt, and resumption of cavernous inflow.\n• A distal cavernoglanular shunt should be the frst choice of\nshunting procedures.\n• Percutaneous distal shunting is less invasive than open distal\nshunting and may be performed with local anesthetics.\n• There are a number of distal shunting procedures, and the\nsurgeon should be familiar with these procedures and their\ncomplications.\n• Open distal shunting should be considered if percutaneous\nshunting fails. There are no comparative trials of safety, effi-\ncacy, or erectile function outcomes for percutaneous versus\nopen distal shunting techniques.\n• If distal shunting fails, then proximal shunting is recom-\nmended. Proximal shunting establishes a communication\nbetween the CC and corpus spongiosum at the base of the\npenis. The surgeon must be aware of the unique anatomic\nrelationship between the corpus spongiosum and urethra.\n• Shunting may also be accomplished with vein grafting\nto the CC. Venous shunts have increased the risk of\nthromboembolism.\n• After medical or surgical reversal of ischemic priapism,\npenile tumescence rather than complete flaccidity may be\nevident. A phenomenon of conversion from ischemic pria-\npism to HFP has been described. In cases in which the\nexamination findings may be equivocal, CDu or cavernous\nblood gas is recommended to demonstrate patency of the\nshunt and restoration of caverous inflows.\n• After shunting, follow up with the patient regarding erectile\nfunction and any subsequent ED therapies."
+            },
+            {
+              "slide_num": 26,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh26.webp",
+              "ocr_text": "KEY POINTS: SURGICAL MANAGEMENT OF ISCHEMIC\nPRIAPISM WITH IMMEDIATEPENILEIMPLANT\n•The natural history of untreated ischemic priapism or pria-\npism refractory to interventions is severe fibrosis, penile\nlength loss, and complete ED.\nThe advantages of early penile implantation in the acute\nmanagement of ischemic priapism are preservation of penile\nlength and easier insertion.\n• Document baseline erectile function, duration of priapism,\nhistory of stuttering, and prior interventions.\n• Consider penile prosthesis in the following circumstances:\n• Aspiration and sympathomimetic ICI have failed.\n• Distal and proximal shunting procedures have failed.\n• Ischemia has been present for longer than 36 hours.\n• Consider an MRI before surgery or corporal biopsy at the\ntime of implant to document corporal smooth muscle\nnecrosis.\n• There are higher rates of revision surgery and complications\nnoted in priapism cases resulting from infection, urethral\ninjury, device migration, and device erosion."
+            },
+            {
+              "slide_num": 27,
+              "text": [
+                "Shuttering priapism treatment",
+                "ADT(GnRH agonist/antagonist +/- antiandrogen): block testosterone effect on penis",
+                "α-adrenergic agonist, Baclofen (GABA receptor), Gabapentin, Digoxin: 只有常頻繁或無法控制的人才用, 睡前使用",
+                "PDE5 inhibitor: 可能造成priapism, 但是daily use可以用來治療, 軟的時候才能用)",
+                "Intracavernosal injection(alpha agonist)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss23.webp",
+              "hidden": false,
+              "ocr_text": "Shuttering priapism treatment\n•ADT(GnRH agonist/antagonist +/- antiandrogen): block testosterone\neffect on penis\n•a-adrenergic agonist, Baclofen (GABA receptor), Gabapentin,\nDigoxin:只有常頻繁或無法控制的人才用，睡前使用\n•PDE5 inhibitor:可能造成priapism，但是daily use可以用來治療,軟\n的時候才能用）\n•lntracavernosal injection (alpha agonist)"
+            },
+            {
+              "slide_num": 28,
+              "text": [
+                "Nonischemic priapism management",
+                "Conservative therapy:",
+                "壓迫會陰部特定位置(internal pudendal a.)",
+                "ADT(for成人)",
+                "Successful rate: 62%",
+                "Selective arterial embolization:",
+                "塞Internal pudendal artery(Penile arteriography before embolization)",
+                "Successful rate : 89 - 100%",
+                "A single treatment had a recurrence rate of 30%, may require retreatment",
+                "The most notable side effect of bilateral arterial embolization is ED(Normal post-embolization erectile function in 75% - 86% )",
+                "Surgical ligation of fistula:",
+                "if embolization failed"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss24.webp",
+              "hidden": false,
+              "ocr_text": "Nonischemic priapism management\n• Conservative therapy:\n•壓迫會陰部特定位置(internal pudendal a)\n•ADT(for成人）\n•Successful rate: 62%\n• Selective arterial embolization:\n•塞Internal pudendal artery(Penile\narteriography before embolization)\n• Successful rate : 89 - 100%\n•A single treatment had a recurrence rate of\n30%，may require retreatment\n•The most notable side effect of bilateral\narterial embolization is ED(Normal post-\nembolization erectile function in 75%-86%）\n•Surgical ligation of fistula:\noif embolization failed\nDorsal nerve of penis\nDorsal artery of penis\nScrotum-\n- Dcep artery of penis\nPosterior scrotal artery\n-Artery of bulb\n- Perineal artery\n- inferior rectal artery\nZintornal pudondal\nartery"
+            },
+            {
+              "slide_num": 29,
+              "text": [],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh29.webp",
+              "ocr_text": "KEY POINTS: EVALUATION AND MANAGEMENT\nOF HIGH-FLOW PRIAPISM\n• Arterial priapism is not an emergency and may be managed\nexpectantly.\n•Diagnosis of HFP is best made by penile or perineal CDu.\n• Penile aspiration and injection of o-adrenergic agents is not\nrecommended for HFP.\n• Angioembolization should be preceded by a thorough dis-\ncussion of chances for spontaneous resolution, risks of\ntreatment-related ED, and lack of significant consequences\nexpected from delaying interventions.\n• Overall success rates with embolization are high, although\na single treatment carries a recurrence rate of 30% t0 40%.\n• When angioembolization fails or is conuraindicated, surgical\nigation is reasonable.\n• Formation of a pseudocapsule at the site of a sinusoidal\nfistula may take weeks to months after trauma.\nCDu guidance is recommended during exploration to locate\nfstulae."
+            },
+            {
+              "slide_num": 30,
+              "text": [
+                "Conclusion",
+                "Initial diagnosis (high flow vs. low flow)",
+                ">4hr, History and PE, 用藥史, trauma, baseline性功能",
+                "CBC, coagulation profile, Penile blood gas",
+                "Low flow = EMERGENCY",
+                "Aspiration (Dx and Tx)",
+                "Diluted sympathomimetics drugs",
+                "Surgical shunt",
+                "Early implant ( > 36hr refractory)",
+                "High flow = NOT emergency",
+                "Conservative 自己好的機率很高",
+                "Arterial embolization 成功機率也很高, 但可能要repeat"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh30.webp",
+              "ocr_text": "Conclusion\nelnitial diagnosis (high flow vs. low flow)\n•>4hr, History and PE，用藥史，trauma, baseline性功能\n•CBC, coagulation profile, Penile blood gas\n•Low flow =EMERGENCY\n• Aspiration (Dx and Tx)\n• Diluted sympathomimetics drugs\n•Surgical shunt\n• Early implant ( >36hr refractory)\n•High flow = NOT emergency\n•Conservative 自己好的機率很高\n•Arterial embolization 成功機率也很高，但可能要repeat"
+            }
+          ]
+        },
+        {
+          "id": "t04",
+          "title": "Vesicovaginal Fistula",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 31,
+              "text": [
+                "Vaginal fistula",
+                "Vesicovaginal fistula",
+                "Ureterovaginal fistula"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss25.webp",
+              "hidden": false,
+              "ocr_text": "Vaginal fistula\nVesicovaginal fistula\nUreterovaginal fistula"
+            },
+            {
+              "slide_num": 32,
+              "text": [
+                "Vesicovaginal fistula",
+                "與泌尿道相通的包含uretero-vaginal, vesicovaginal和urethrovaginal fistula",
+                "12% patient合併ureteral injury, 須做upper tract image",
+                "Hx: persistent vaginal discharge, urinary incontinence",
+                "PE/vaginal examination: 看是否有 fistula 、其深度、位置、大小，PV 摸是否有 mass",
+                "Special exam: simple/double dye test",
+                "Image: VCUG (evaluate small fistula), CTU, Ultrasound, IVU, Cystography, RP, MRI",
+                "Further examination: vaginoscopy, cystoscopy"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss26.webp",
+              "hidden": false,
+              "ocr_text": "Vesicovaginal fistula\n•與泌尿道相通的包含uretero-vaginal，\nvesicovaginal和urethrovaginal fistula\n•12% patient合併ureteral injury，須做\nupper tract image\nBox 89-3\nEtiology of Vesicovaginal Fistula\n•Hx: persistent vaginal discharge,\nurinary incontinence\n•PE/vaginal examination：看是否有\nfistula、其深度、位置、大小，pV\n摸是否有 mass\n•Special exam: simple/double dye test\n•mage: VcuG (evaluate small fistulla),\nCTU, Ultrasound, IVU, Cystography,\nRP, MRI\n•Further examination: vaginoscopy,\ncystoscopy\nTraumatic\nPostsurgical\nAbdominal hysterectomy\nVaginal hysterectomy\nAnti-incontinence surgery\nAnterior vaginal wall prolapse surgery (e.g., colporrhaphy)\nVaginal biopsy\nBladder biopsy, endoscopic resection, laser therapy\nother pelvic surgery (e.g., vascular, rectal)\nExternal trauma (e.g., penetrating, pelvic fracture, sexual)\nRadiation therapy\nAdvanced pelvic malignancy\nInfectious or inflammatory cause\nForeign body\nObstetric\nObstructed labor\nForceps laceration\nUterine rupture\nCesarean section iniury to bladder\nCongenital"
+            },
+            {
+              "slide_num": 33,
+              "text": [
+                "3 swab/double dye/simple dye test",
+                "Dye test(3 swab test)",
+                "分別塞入上中下三塊棉紗，膀胱打dye依照染色的紗布位置判斷fistula的位置",
+                "上:須懷疑uretero-vaginal fistula(urine)",
+                "中:Vesico-vaginal fistula(blue)",
+                "下:Urethro-vaginal fistula(blue)/ urinary incontinence",
+                "Double dye/tampon test",
+                "用吃的phenazopyridine再加上膀胱打blue dye，看紗布被染什麼顏色評估fistula 的位置(orange->ureteral/blue->vesical)",
+                "Simple dye test",
+                "評估是否有廔管, 是double dye test的簡化版, 只需要膀胱灌注methylene blue或indigo carmin, 於陰道置紗布或棉條, 若有染色代表是vesicovaginal或urethrovaginal fistula"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss27.webp",
+              "hidden": false,
+              "ocr_text": "3 swab/double dye/ simple dye test\n• Dye test(3 swab test)\n•分別塞人上中下三塊棉紗，膀胱打dye依照染色的紗布位置判斷fistula的位置\n•上：須懷疑uretero-vaginal fistula(urine)\n•中：Vesico-vaginal fistula(blue)\n• 下:Urethro-vaginal fistula(blue)/ urinary incontinence\n• Double dye/tampon test\n•用吃的phenazopyridine再加上膀\n胱打blue dye，看紗布被染什麼顏\n色評估fistula 的位置(orange-\n>ureteral/blue->vesical)\n• Simple dye test\nUreter\n•評估是否有廔管，是double dye test的\nSwabs in\nvagina\n簡化版，只需要膀胱灌洼methylene\nblue或indigo carmin， 於陰道置紗布或\n棉條，若有染色代表是vesicovaginal或\nMethylene blue\nurethrovaginal fistula"
+            },
+            {
+              "slide_num": 34,
+              "text": [
+                "有找到fistula才做膀胱鏡",
+                "Vesicovaginal fistula survey"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss28.webp",
+              "hidden": false,
+              "ocr_text": "Vesicovaginal fistula survey\nPatient with suspected VVF due to urinary leakage\nHistory and Physical Examination + dye test\n有找到fistula才做膀胱鏡\nYes\nCystoscopy =\n‡biopsy\nVVF\nfound\nEvaluate for ureteral injury\n(CT, RPG, IVU, etc.)\nYes\nNO\nVF repair\nVVF located?\nNo\nVCUG,\ncystography\nVVF\nnot found\nEvaluate for\nureterovaginal fistula\n(imaging, etc.)\nYes\nNo\nVVF repair and\nureteral repair\nConsider other\ncauses (e.g., urinary\nincontinence, vaginitis, etc.) fistula\nRepair\nureterovaginal\nFigure 89-9. Algorithm for the diagnosis of vesicovaginal fistula\nIVF). CT, computed tomography; IVU, intravenous urography; RPG,\nretrograde pyelography; vCUG, voiding cystourethrogram."
+            },
+            {
+              "slide_num": 35,
+              "text": [
+                "Vesicovaginal fistula treatment",
+                "@Conservative: Foley 2-3 週，並可加上 anticholinergic medication, 若failure還是要surgery(超過 3 週fistula 很難自行癒合)",
+                "@TUR electrocoagulation:       若有以下情況，則電燒的失敗機會很高且可能會擴大",
+                "A thin vesicovaginal septum",
+                "Large VVF",
+                "Nonoblique fistula tract",
+                "Significant inflammation around the fistula tract",
+                "Delay repair: 3-6個月,treat ongoing infection or inflammation at the level of the vaginal cuff"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss29.webp",
+              "hidden": false,
+              "ocr_text": "Vesicovaginal fistula treatment\n@conservative: Foley 2-3\n週，並可加上\nanticholinergic\nmedication, 若failure還是\n要surgery(超過 3週fistula\n狼難目衍瘉合\n@TUR electrocoagulation:\n若有以下情況，則電燒\n的失敗機會很高宜守能\n會擴犬\n- A thin vesicovaginal\nseptum\nLarge VVF\n- Nonoblique fistula\ntract\nSignificant\ninflammation around\nthe fistula tract\nConfirmed VVF without ureteral in jury\nUncomplicated\n(.e., small, postsurgical)\nComplex (radiated, large, etc.)\n<3-5mm in diameter\n≥5-mm diameter\nTrial of conservative therapy:\nCatheter,= fulguration\nEvaluate for delaved repair\n(infection, unstable, etc.)\nDelay repair:3-6個月\n,treat ongoing infection\nor inflammation at the\nlevel of the vaginal cuff\nRepair\nPersistent VVF\nImmediate open repair\nSuccess\nAbdominal\nVaginal\nTransvesical\nFigure 89-11. Algorithm for management of vesicovaginal fistula\n(F)."
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "Transvaginal vs abdominal repair",
+                "優勢: 不用開肚子, 住院時間短,開刀時間短, 出血少, 疼痛少, 可以取用local flap(Martius flap), 可同時做incontinence surgery",
+                "Martius Flap: labia fat pad, 適合遠端低位的VVF, transvaginal repair在用的",
+                "血流供應: inferiorly: internal  pudendal artery",
+                "superiorly: external pudendal  artery",
+                "laterally: obturator  artery",
+                "Peritoneal Flap: 適合高位high-lying VVF, transvaginal和abdominal都可用",
+                "Omentum flap:  大網膜皮瓣,用在abdominal repair"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss30.webp",
+              "hidden": false,
+              "ocr_text": "Transvaginal vs abdominal repair\nTABLE 89-1 Abdominal versus Transvaginal Repair of Vesicovaginal Fistula\nABDOMINAL\nTRANSVAGINAL\nIncision\nAbdominal incision\nTiming of repair (elapsed time\nOften delayed 3-6 months.\nfrom fistula creation\nExposure\nVaginal incision(s) can be done immediately in the\nabsence of infection or other complications.\nFistula located low on the trigone or near Fistula located high at the vaginal cuff may be\nthe bladder neck may be difficult to\ndifficult to expose transvaginally.\nexpose transabdominally.\nLocation of ureters relative to\nFistula located near ureteric orifice may\nfistula tract\nnecessitate reimplantation.\nSexual function\nNo change in vaginal depth.\nUse of adjunctive flaps\nOmentum, peritoneal flap, rectus\nabdominis tlap.\nRelative indications\nLarge fistulae, location high in a deep\nReimplantation may not be necessary even if\nfistula tract is located near ureteric orifice.\nRisk of vaginal shortening (e.g., Latzko technique).\nLabial fat pad (Martius fat pad), peritoneal flap,\ngluteal skin or gracilis myocutaneous flap.\nUncomplicated fistulae, low fistulae.\nnarrow vagina, radiation fistulae, failed\ntransvaginal approach, small-capacity\nbladder requiring augmentation, need\nfor ureteral reimplantation, inability to\n優勢：不用開肚子，住院時間短，開刀時間短，\n出血少,疼痛少，可以取用local flap(Martius\nflap)，可同時做incontinence surgery\nplace patient in the lithotomy position.\n• Martius Flap: labia fat pad,適合遠端低位的VVF, transvaginal repair在用的\n•血流供應：inferiorly:internal pudendal artery\nsuperiorly:external pudendal artery\nlaterally: obturator artery\n• Peritoneal Flap:適合高位high-lying VVF, transvaginal和abdominal都可用\n• Omentum flap：大網膜皮瓣，用在abdominal repair\nsdomxl\npudondal\nPranah al\nobturator\nInternat\npudendal"
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Ureterovaginal Fistula",
+          "slide_count": 2,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 37,
+              "text": [
+                "Ureterovaginal fistula",
+                "Risk factors: endometriosis, obesity, pelvic inflammatory disease, and radiation therapy and pelvic  malignancy",
+                "最常見原因: 婦產科手術導致 injury to the distal ureter"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss31.webp",
+              "hidden": false,
+              "ocr_text": "Ureterovaginal fistula\n• Risk factors: endometriosis, obesity,\npelvic inflammatory disease, and\nradiation therapy and pelvic\nmalignancy\n•最常見原因：婦產科手術導致 injury\nto the distal ureter\nBOX 89-6 Etiology of Ureterovaginal Fistula\nGYNECOLOGIC SURGERY\nOTHER PELVIC SURGICAL PROCEDURES\nTHER CAUSES\nLocally advanced malignancy\nRadiation therapy\nPelvic trauma\nChronic inflammatory diseases (e.g., actinomycosis)"
+            },
+            {
+              "slide_num": 38,
+              "text": [
+                "Ureterovaginal fistula survey and treatment"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss32.webp",
+              "hidden": false,
+              "ocr_text": "Ureterovaginal fistula survey and treatment\nSuspect ureterovaginal fistula\nExclude VVF (Cystoscopy + vcuG, double dye test)\nConfirm diagnosis (IVP 士 RPGICT\nAttempt stent placement\nUnsuccessful\nSurgical repair\n(ureteroneocystostomy)\nSuccessful placement\nRemove stent in 4-6 weeks\nRepeat imaging\n、Persistent fistula\nResolution\nof fistula\nFigure 89-38. Algorithm for diagnosis and management of ure-\nterovaginal fistula. CT, computed tomography; IVP, intravenous\npyelography; RPG, retrograde pyelography; vCUG, voiding cystoure-\nthrography; VVF, vesicovaginal fistula."
+            }
+          ]
+        },
+        {
+          "id": "t06",
+          "title": "腹腔鏡 Injuries（氣腹/血管/腸/胰/Chylous）",
+          "slide_count": 10,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 39,
+              "text": [
+                "腹腔鏡相關injuries"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss33.webp",
+              "hidden": false,
+              "ocr_text": "腹腔鏡相關injiuries"
+            },
+            {
+              "slide_num": 40,
+              "text": [
+                "腹腔鏡建立氣腹的兩種方式",
+                "Closed technique (Veress needle)",
+                "Palmer’s technique: 從left subcostal margin進針",
+                "Open Access technique(Mini-lapa)",
+                "Hasson technique",
+                "Palmer’s technique"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss34.webp",
+              "hidden": false,
+              "ocr_text": "腹腔鏡建立氣腹的兩種方式\n• Closed technique (Veress needle)\n•Palmer's technique: 從left subcostal\nmargin進針\n• Open Access technique(Mini-lapa)\n• Hasson technique\nAnesthesi\nmachine\nAnesihesiolooisl\n1mhitcal\nCO.\nX-alternative sites\nHemostat\nelevating\n2nd\n-pntrnpaitprv\ninstriment\nfablel\nSurg!\nlowel ciips\n1Stavsuture\nin linea alba\nFree intraperitoneal\nTrocar port\nSaline\nirrigation\nPalmer's technique\nCO, gas\nsr\nintrapentoneal\nPelvis\nBlunt\nobturator"
+            },
+            {
+              "slide_num": 41,
+              "text": [
+                "Versus needle technique注意事項",
+                "以下四個都確認過才能開氣",
+                "Aspiration test : Negative",
+                "Injection test: Easy injection of saline",
+                "Recovery test: Negative aspiration of saline",
+                "Saline drop test: Positive drop of saline",
+                "可以用towel clips或Allis clamps Stabilize abdominal wall fascia, 但不要提起來, 因為這樣只會增加 fascia和peritoneum之間的space, 不會增加intra-abdominal space"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss35.webp",
+              "hidden": false,
+              "ocr_text": "Versus needlle technique注意事項\nAspiration Test\nB\nA\naspiration\nof filuid or\ntissue\n•以下四個都確認過才能開\n氣\n• Aspiration test :\nNegative\n•injection test: Easy\niniection of saline\n• Recovery test: Negative\naspiration of saline\n•Saline drop test:\nPositive drop of saline\nmaterial is\naspirated\nA\nmoderate\nresistance\nto liquid\ninjection\nlnjection Test\nB\nincreased\nresistance to\nliquid injection\nA\nno liquid is\nrecovered\npositive\nresult\nRecovery Test\nB\nthe liquid\niniected is\nrecovered\nnegative\nresult\nA\nliquid\ndisappears\npositive\nresult\nSaline Drop Test\nB\nliquid remains\ninside the\nneedle and\nneedle\nball rises\nnegative\nresuit\nIV\npositive\nresult\nnegative\nresult\npositive\nresult\nnegative\nresult\n•可以用towel clips或Alis clamps Stabilize abdomninal wall fascia， 但不要提起來，\n因為這樣只會增加fascia 和peritoneum之間的space，不會增加intra-abdominal\nspace"
+            },
+            {
+              "slide_num": 42,
+              "text": [
+                "建立氣腹complication",
+                "Gas embolism",
+                "原因: Veress needle puncture到血管，緊接著又灌氣",
+                "S/S:  sudden hypoxia, hypercarbia,hypotension, arrhythmia, or cyanosis during insufflation",
+                "治療:",
+                "Immediate cessation of insufflation and prompt desufflation of the peritoneal cavity.",
+                "姿勢換成left lateral decubitus, head-down position (i.e., right side up) in hopes of minimizing right ventricular outflow problems and forcing the air emboli to rise into the apex of the right ventricle.",
+                "Hyperventilated with 100% oxygen.",
+                "考慮 hyperbaric oxygen, cardiopulmonary bypass",
+                "Advancement of a central venous line into the right side of the heart with subsequent attempts to aspirate gas may rarely be helpful."
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss36.webp",
+              "hidden": false,
+              "ocr_text": "建立氣腹complication\nGas embolism\n•原因：veress needle puncture到血管，緊接著又灌氣\n• S/S: sudden hypoxia, hypercarbia,hypotension, arrhythmia, or cyanosis\nduring insufflation\n•治療：\n•lmmediate cessation of insufflation and prompt desufflation of the\nperitoneal cavity.\n•姿勢換成left lateral decubitus, head-down position (i.e, right side up)\nin hopes of minimizing right ventricular outflow problems and forcing\nthe air emboli to rise into the apex of the right ventricle.\n•Hyperventilated with 100% oxygen.\n•考慮 hyperbaric oxygen, cardiopulmonary bypass\n•Advancement of a central venous line into the right side of the heart with\nsubsequent attempts to aspirate gas may rarely be helpful."
+            },
+            {
+              "slide_num": 43,
+              "text": [
+                "建立氣腹complication",
+                "Barotrauma",
+                "Cause: Prolonged elevated pressures (>15 mm Hg) may result in barotrauma",
+                "Sign:",
+                "hypotension: owing to decreased cardiac output secondary to an acute drop in venous return caused by compression of the vena cava.",
+                "pneumothorax or pneumomediastinum: because of high ventilation pressures.",
+                "hiatal hernia: Increased intra-abdominal pressures",
+                "Management: desufflate the abdomen"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss37.webp",
+              "hidden": false,
+              "ocr_text": "建立氣腹complication\nBarotrauma\n• Cause: Prolonged elevated pressures (>15 mm Hg) may result in barotrauma\n• Sign:\n• hypotension: owing to decreased cardiac output secondary to an acute\ndrop in venous return caused by compression of the vena cava.\n• pneumothorax or pneumomediastinum: because of high ventilation\npressures.\n• hiatal hernia: Increased intra-abdominal pressures\n• Management: desufflate the abdomen"
+            },
+            {
+              "slide_num": 44,
+              "text": [
+                "腹腔鏡complications"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss38.webp",
+              "hidden": false,
+              "ocr_text": "腹腔鏡complications\nTABLE 10-3 Major Complications of Transperitoneal\nAbdominal Surgery\nTOTAL PROCEDURES\nOverall complications\nIntraoperative/postoperative\nDeath\nVascular injury\nBowel injury\nAdjacent organ injury\nConversion rate\n894*（100%\nABDOMINAL)\n13.2%\n5.7%/7.5%\n0.2%\n2.8%\n1.1%\n1.1%\n1.7%\n1311+ (84%\nPELVIC)\n22.6%\n3.6%/19%\n0%\n0.5%\n1.2%\n0.8%\n1.7%\n*Data from Parsons JK, Varkarakis l, Rha KH, et al. Complications of\nabdominal urologic laparoscopy: longitudinal five-year analysis. Urology\n2004;63:27-32."
+            },
+            {
+              "slide_num": 45,
+              "text": [
+                "Vascular injury",
+                "Veress needle 最常見的injury-  left common iliac vein.",
+                "腹壁與後腹腔器官平均距離為6公分，但瘦小的病人可以只距離2公分。Trendelenburg position會讓 aortic bifurcation 更靠近腹壁",
+                "新手或是之前開過刀懷疑腹壁沾黏的病人建議使用Hasson technique(mini-lapa)",
+                "Veress needle如果刺到artery, 應將versus needle留著先不抽出，開闢另外一個新的灌氣途徑, 從新建立penumoperitoneum, 再進去檢查, 沿著varess needle看有沒有在流血, 也要把壓力調成5mmHg來低壓測試",
+                "Trocar若刺到動脈, Trocar留在原處, 轉成open找CVS來修補, trocar留著可多少compression及協助辨認出血點, 應於conversion後再移除。",
+                "如果懷疑是int. iliac 或IMA 出血，可以考慮ligation (有collateral)",
+                "後腹腔confined的血腫不應該打開",
+                "手術造成vascular injury的risk factor:　previous abdominal surgery, concomitant abdominal pathology, obesity, and aberrant vascular anatomy",
+                "Nerve injury",
+                "Psoas hitch 最常傷到 genitofemoral nerve. Femoral nerve 也有可能",
+                "Psoas hitch縫合採與tendon平行之縫合不會傷到神經",
+                "Obturator nerve: adduction, 傷到需要修補 (7-0 nonabsorbable sutures).",
+                "Vascular/Nerve injury"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss39.webp",
+              "hidden": false,
+              "ocr_text": "vascular/Nerve injury\n• Vascular injury\n•Veress needle 最常見的injury-left common iliac vein.\n•腹壁與後腹腔器官平均距離為6公分，但瘦小的病人可以只距離2公分。\nTrendelenburg position會讓 aortic bifurcation 更靠近腹壁\n•新手或是之前開過刀懷疑腹壁沾黏的病人建議使用Hasson technique(mini-lapa)\n•Veress needle如果刺到artery，應將versus needle留著先不抽出，開闢另外一個新\n的灌氣途徑，從新建立penumoperitoneum，再進去檢查，沿著varess needle看有沒\n有在流血，也要把壓力調成5mmHg來低壓測試\n•Trocar若刺到動脈，Trocar留在原處，轉成open找CVS來修補，trocar留著可多少\ncompression及協助辨認出 血點，應於conversion後再移除。\n•如果懷疑是int. iliac 或IVA 出血，可以考慮ligation （有collateral)\n•後腹腔confined的血腫不應該打開\n•手術造成vascular injury的risk factor: previous abdominal surgery, concomitant\nabdominal pathology, obesity, and aberrant vascular anatomy\n•Nerve injury\n•Psoas hitch 最常傷到 genitofemoral nerve. Femoral nerve 也有可能\n•Psoas hitch縫合採與tendon平行之縫合不會傷到神經\n•Obturator nerve:adduction，傷到需要修補 (7-0 nonabsorbable sutures)."
+            },
+            {
+              "slide_num": 46,
+              "text": [
+                "Bowel injury",
+                "原因: 不適當的觸發器械, 碰著另一個器械fire, 打洞的時候誤傷, capacitive coupling(電容耦合)",
+                "使用optical trocars或Hasson technique可以減少bowel injury",
+                "Monopolar 電燒深度可達2cm以上, Bipolar較安全",
+                "S/S: fever, nausea, signs of peritonitis, 症狀通常發生在術後24~48小時(要bowel necrosis要18天), 所以只要術後一天以上有發燒合併肚子帳或痛就要保持警戒",
+                "Lab: WBC normal or low, drain amylase上升",
+                "Image: standing abdomen X-ray -> ileus,",
+                "CT -> peri-bowel air collection(perforation)",
+                "Management: 5-7天後才發現的可以先嘗試conservative treatment(antibiotics, elemental diet), 若症狀/lab沒改善或worsening peritonitis, 就要open surgical exploration",
+                "air collection"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss40.webp",
+              "hidden": false,
+              "ocr_text": "Bowel iniury\n•原因：不適當的觸發器械，碰著另一個器械tire，打洞的時候誤傷，\ncapacitive coupling(電容耦合）\n•使用optical trocars或Hasson technique 可以減少bowel injury\n•Monopolar 電燒深度可達2cm以 上，Bipolar較安全\n• S/S:fever, nausea, signs of peritonitis,症狀通常發生在術後24~48小時(\n要bowel necrosis要18天)，所以只要術後一天以上有發燒合併肚子帳\n或痛就要保持警戒\n•Lab: WBC normal or low, drain amylase 上升\n• lmage: standing abdomen x-ray ->ileus,\nCT -> peri-bowel air collection(perforation)\nair collection\n•Management: 5-7天後才發現的可以先嘗試conservative\ntreatment(antibiotics, elemental diet)，若症狀/lab沒改善或worsening\nperitonitis, 就要open surgical exploration\nb0"
+            },
+            {
+              "slide_num": 47,
+              "text": [
+                "Pancreatic Injury",
+                "2.1% for radical left nephrectomy, 8.6% for left adrenalectomy",
+                "75%都是術後才發現",
+                "預防方式: widely dissect the line of Toldt and the splenophrenic attachments.",
+                "Lab: Drain的amylase/lipase會升高",
+                "治療:",
+                "Superficial injury: bowel rest, parenteral nutrition, octreotide(decrease pancreatic secretions, 但有研究指出octreotide可能會有較高的 fistula formation)",
+                "Deeper injuries: Surgical repair or isolation with a GIA stapler",
+                "injury to the tail: distal pancreatectomy",
+                "injury is to the pancreatic duct: repaired and surgical drains left.",
+                "uncertainty of pancreatic injury: leaving closed-suction surgical drains behind"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss41.webp",
+              "hidden": false,
+              "ocr_text": "Pancreatic lnjury\n•2.1% for radical left nephrectomy, 8.6% for left adrenalectomy\n•75%郩是術後才發現\n•預防方式：widely dissect the line of Toldt and the splenophrenic attachments.\n•Lab:Drain的amylase/lipase會升高\n•治療：\n•Superficial injury: bowel rest, parenteral nutrition, octreotide(decrease\npancreatic secretions，但有研究指出octreotide可能會有較高的fistula\nformation)\n• Deeper injuries: Surgical repair or isolation with a GlA stapler\n• injury to the tail: distal pancreatectomy\n• injury is to the pancreatic duct: repaired and surgical drains left.\n• uncertainty of pancreatic injury: leaving closed-suction surgical drains\nbehind"
+            },
+            {
+              "slide_num": 48,
+              "text": [
+                "Chylous Ascites",
+                "S/S: increase of abdominal girth, fullness, anorexia, and weight gain",
+                "Lab: Drain會乳白色, high protein (>3 g/dL), high TG(2~8倍血漿)",
+                "Image: CT scan",
+                "治療:",
+                "先Paracentesis不要放drain, 如果累積太快再放drain, drain PRN開就好不要continuous drain!!",
+                "Octreotide",
+                "飲食控制:",
+                "very low-fat, high-protein diet,",
+                "中鏈脂肪酸可以吃(中鏈脂肪酸被吸收後，會以游離脂肪酸和甘油的形式，經肝門靜脈運輸到肝臟，能夠減少乳糜小球的製造), 避免長鏈脂肪酸",
+                "如果飲食無法改善=> NPO + PPN",
+                "改善後very low-fat diet 仍要維持四周"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss42.webp",
+              "hidden": false,
+              "ocr_text": "Chylous Ascites\n•S/S: increase of abdominal girth, fullness,\nanorexia, and weight gain\n•Lab: Drain會乳白色，high protein (>3 g/dL), high\nTG(2~8倍血漿）\nCisterna chdfi\nIntestinal\nlymphatic\n•Image: CT scan\n•治療：\n•先Paracentesis不要放drain，如果累積太快再\n放drain, drain PRN開就好不要continuous\ndrain!!\n• Octreotide\n•飲食控制：\n• very low-fat, high-protein diet,\n•中鏈脂肪酸可以吃(中鏈脂肪酸被吸收後，會以游離脂肪酸和甘油\n的形式．經肝門靜脈運輸到肝臟，能夠減少乳糜小球的製造)，避免\n長鏈脂肪酸\n•如果飲食無法改善=>NPO + PPN\n•改善後very low-fat diet 仍要維持四周"
+            }
+          ]
+        },
+        {
+          "id": "t07",
+          "title": "止血器材與出血風險管理",
+          "slide_count": 8,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 49,
+              "text": [
+                "腹腔鏡止血器械與材料"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh49.webp",
+              "ocr_text": "腹腔鏡止血器械與材料\nLaparoscopic Satinsky clamp\nTen-millimeter suction/irrigation tip\nEndo Stitch device with 4-0 absorbable suture\nLapra-Ty clip applier and a packet of Lapra-Ty clips\nSix-inch length of 4-0 vascular suture on an SH needle with a Lapra-Ty clip\npreplaced on the end\nTwo laparoscopic needle drivers\nTopical hemostatic agent of choice"
+            },
+            {
+              "slide_num": 50,
+              "text": [
+                "常用止血藥之原理"
+              ],
+              "has_exam_question": false,
+              "hidden": true,
+              "slide_image": "images/textbook/ch11_emergency/render/sh50.webp",
+              "ocr_text": "Agent\nTisseel\nCrossSeal\nFloSeal\nEndoAvetine\nBioGlue\nCoseal\n常用止血藥之原理\nManufacturer\n(time to set up)\nBaxter, Glendale, CA\n(20 min)\nJohnson & Johnson, New\nBrunswick, NJ\n(mmediate)\nBaxter, Glendale, CA\n（2 min)\nActive ingredients\nKey uses/properties\nFibrinogen\nCacl\nAprotinin\nThrombin\nFibrinogen\nCaCl\nAprotinin\nThrombin\nTopical hemostasis\nTissue glue\nTopical hemostasis\nTissue glue\nCrosslinked gelatin granules Topical hemostasis\nThrombin\nDavol, Cranston, Rl\nAvetine Microfibrillar\nTopical hemostasis\n(lmmediate)\ncollagen powder\nCryoLife Inc., Kennesaw, Bovine serum albumin and\nTissue sealant\nGA (lmmediate)\nglutaraldehyde\nBaxter, Glendale, CA\nTwo polyethylene glycol\nTissue sealant\n(lmmediate)\npolymers"
+            },
+            {
+              "slide_num": 51,
+              "text": [
+                "預防手術前後流血",
+                "手術前後停抗凝血/抗血小板藥",
+                "2014 AUA guideline ->主軸",
+                "2020 EAU guideline  ->主軸",
+                "2021 EHRA guideline -> 針對NOAC"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss43.webp",
+              "hidden": false,
+              "ocr_text": "預防手術前後流血\n手術前後停抗凝血/抗血小板藥\n2014 AUA guideline ->主軸\n2020 EAU guideline ->主軸\n2021 EHRA guideline ->針對NOAC"
+            },
+            {
+              "slide_num": 52,
+              "text": [
+                "手術流血risk(EHRA 2021)",
+                "Renal bx, TRUSP bx",
+                "AUA: Laser TURP可以算是low risk"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss44.webp",
+              "hidden": false,
+              "ocr_text": "手術流血risk(EHRA 2021)\nMinor risk interventions (i.e. infrequent bleeding and with low clinical impact)\nDental extractions (1-3 teeth), paradontal surgery, implant positioning, subgingival scalling/cleaning\nCataract or glaucoma intervention\nEndoscopy without biopsy or resection\nSSuperficial surgery (e.g. abscess incision; small dermatologic excisions, skin biopsy)\nPacemaker or ICD implantation (except complex procedures)\nElectrophysiological study or catheter ablation (except complex procedures)\nRoutine elective coronary/peripheral artery intervention (except complex procedures)\nIntramuscular injection (e.g. vaccination)\nLow-risk interventions (i.e. infrequent bleeding or with non-severe clinical impact)\nComplex dental procedures\nEndoscopy with simple biopsy\nAUA: Laser TURP可以算是low risk\nSmall orthopaedic surgery (foot, hand, arthroscopy,..)\nHigh-risk interventions (.e. frequent bleeding and/or with important clinical impact)\nCardiac surgery\nPeripheral arterial revascularization surgery (e.8. aortic aneurysm repair, vascular bypass)\nComplex invasive cardiological interventions, including lead extraction, (epicardial) VT ablation, chronic total occlusion PCl etc.\nNeurosurgery\nSpinal or epidural anaesthesia; lumbar diagnostic puncture\nComplex endoscopy (e.g. multiple/large polypectomy, ERCP with sphincterotomy etc.)\nAbdominal surgery (incl. liver biopsy)\nThoracic surgery\nMajor urologic surgery/biopsy (incl. kidney)\nI Renal bx, TRUSP bx\nExtracorporeal shockwave lithotripsy\nMajor orthopaedic surgery"
+            },
+            {
+              "slide_num": 53,
+              "text": [
+                "使用antiplatelet/anticoagulant的high risk族群",
+                "(停用會出事)",
+                "使用antiplatelet的high risk族群(=易AMI/Stroke的病人):",
+                "drug-eluting stent placement within 6 months; bare metal stent placement within 1.5 months; transient ischemic attack (TIA) or stroke within 30 days(EAU)",
+                "drug-eluting stent placement within 12 months; bare metal stent placement within 3 months(AUA)",
+                "使用anticoagulant的high risk族群(=易VTE/PE的病人):",
+                "1個月內有new VTE, severe thrombophilia, such as antithrombin deficiency and antiphospholipid antibody syndrome, high-risk mechanical prosthetic heart valves(EAU)",
+                "mechanical mitral valve replacement or a mechanical aortic valve with any risk factor such as  atrial fibrillation, previous thromboembolism, left ventricular dysfunction, hypercoagulable conditions, older generation thrombogenic valves, mechanical tricuspid valves or more than one mechanical valve(AUA)"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss45.webp",
+              "hidden": false,
+              "ocr_text": "使用antiplatelet/anticoagulant的high risk族群\n（停用會出事）\n•使用antiplatelet的high risk族群(=易AMl/Stroke的病人)\ndrug-eluting stent placement within 6 months; bare metal stent placement\nwithin 1.5 months; transient ischemic attack (TIA) or stroke within 30 days(EAU)\ndrug-eluting stent placement within 12 months; bare metal stent placement\nwithin 3 months(AUA)\n•使用anticoagulant的high risk族群（=易VTE/PE的病人)：\n-1個月內有new VTE, severe thrombophilia, such as antithrombin deficiency and\nantiphospholipid antibody syndrome, high-risk mechanical prosthetic heart\nvalves(EAU)\nmechanical mitral valve replacement or a mechanical aortic valve with any risk\nfactor such as atrial fibrillation, previous thromboembolism, left ventricular\ndysfunction, hypercoagulable conditions, older generation thrombogenic valves,\nmechanical tricuspid valves or more than one mechanical valve(AUA)"
+            },
+            {
+              "slide_num": 54,
+              "text": [
+                "術前用的是Antiplatelet",
+                "手術流血risk高，非使用antiplatelet的high risk族群 -> 停藥(AUA)",
+                "手術流血risk高，是使用antiplatelet的high risk族群 -> 延後手術直到不是antiplatelet的high risk(EAU)，不能延後就不要停(EAU)或是跟CV/neuro doctor討論(AUA)或bridging(李仁光: 同anticoagulant)",
+                "手術流血risk低 ，非使用antiplatelet的high risk族群-> 應該不用停但guideline沒講到",
+                "手術流血risk低 ，是使用antiplatelet的high risk族群-> 建議不要停(AUA,但講的有點模糊）",
+                "@若有停藥何時吃回Antiplatelet？",
+                "Restarting when bleeding is no longer a serious risk – typically four days post-surgery (EAU) ＝ 沒血尿或drain不紅就吃回去"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss46.webp",
+              "hidden": false,
+              "ocr_text": "術前用的是Antiplatelet\n1. 手術流血risk高，非使用antiplatelet的high risk族群-＞停藥(AUA)\nCOx inhibitors\nASpirin\n(3-7 days)\nAntiplatelet agents\nArterialdisease,seldom\nvenous thromboss\nGlycoprotein llb/llla inhibitors\nADP inhibitors\nIAbciximab\n(5days)\nEptifibatide\n1 (5 days)\nlTirofiban\n(5days)\nClopidogrel (5 days)\nPrasugrel\n(5(-7) days)\nITicagrelor\n(5days)\n2. 手術流血risk高，是使用antiplatelet的high risk族群一二延後手術直到不\n是antiplatelet的high risk(EAU），不能延後就不要停(EAU)或是跟\nCV/neuro doctor討論（AUA)或bridging(李仁光：同anticoagulant)\n3. 手術流血risk低 ，非使用antiplatelet的high risk族群-＞應該不用停但\nguideline 沒講到\n4. 手術流血risk低，是使用antiplatelet的high risk族群-二建議不要停(AUA,\n但講的有點模糊\n@若有停藥何時吃回 Antiplatelet?\nRestarting when bleeding is no longer a serious risk - typically four days post-surgery\n(EAU）=沒血尿或drain不紅就吃回去"
+            },
+            {
+              "slide_num": 55,
+              "text": [
+                "術前用的是Anticoagulant",
+                "手術流血risk高，非使用anticoagulant的high risk族群 -> 停藥(AUA/EAU)",
+                "AUA: 5 days"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss47.webp",
+              "hidden": false,
+              "ocr_text": "術前用的是Anticoagulant\n1.手術流血risk高，非使用anticoagulant的high risk族群-＞停藥\n(AUA/FAIN\nDirect thrombin inhibitors\nIndirectthrombin inhibitors\nAnticoagulant agents\nAtrialfibrilla ion and venous\nthrombosis seldom arterial\nthrombosis\nVitamin K antagonists\nDirect Xa inhibitors\nDabigatran (1-3 days)\nTUHF\n(12hours)\nLMWH\n(12-24hours)\nFondaparinux (24 hours)\nWarfarin\n(3-5days) AUA: 5 days\n[Apixiban\n(1-3 days)\nEdoxaban\n（1-3 days)\nRivaroxaban (1-3 days)\nApixaban - Edoxaban -\nRivaroxaban\nDabigatran\nNo perioperative bridging with LMWH / UFH\nMinor risk procedures: - Perform procedure at NOAC trough level (i.e., 12 h / 24 h after last intake).\n- Resume same day or latest next day.\nLow risk\nHigh risk\nLow risk\nCrCl 280 ml/min\n≥24h\n≥48 h\nCrC 50-79ml/min\n≥36h\n≥72h\n≥24h\nCrC1 30-49ml/min\n≥48h\n≥96h\nCrC1 15-29ml/min\nNot indicated\nNot indicated\n≥36h\nCrCl <15 ml/min\nNo official indication for use\nHigh risk\n≥48h"
+            },
+            {
+              "slide_num": 56,
+              "text": [
+                "術前用的是Anticoagulant",
+                "2.   手術流血risk高，是使用anticoagulant的high risk族群 -> Wafarin的話就Briging therapy with LMWH or low dose Dabigatran (EAU/AUA/EHRA)，NOAC的話就停藥(EHRA)",
+                "@何時吃回Anticoagulant？",
+                "Minor risk: 不用停(EHRA)",
+                "Low risk: 一天後吃回去",
+                "High risk: 兩到三天後吃回去",
+                "3. 手術流血risk低 ，非使用anticoagulant的high risk族群-> minor risk不停藥，low risk停藥",
+                "4.手術流血risk低 ，是使用anticoagulant的high risk族群-> 應該不用停但guideline沒講到"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss48.webp",
+              "hidden": false,
+              "ocr_text": "術前用的是Anticoagulant\n2. 手術流血risk高，是使用anticoagulant的high risk族群一＞Wafarin的話就\nBriging therapy with LMwH or low dose Dabigatran (EAU/AU A/EHRA)，\nNOAC的話就停藥(EHRA)\n3. 手術流血risk低，\n非使用anticoagulant\n的high risk族群＞\nminor risk不停藥，\nlow risk停藥\n4.手術流血risk低，\n是使用anticoagulant\n的high risk族群-＞應\n該不用停但guideline\n沒講到\nDabigatran\nApixaban - Edoxaban -\nRivaroxaban\nNo perioperative bridging with LMWH / UFH\nMinor risk procedures: - Perform procedure at NOAC trough level (i.e., 12 h / 24 h after last intake).\n- Resume same day or latest next day.\nLow risk\nHigh risk\nLow risk\nHigh risk\nCrC1 280 ml/min\n≥24h\n≥48 h\nCrCl 50-79ml/min\n≥36h\n≥72h\n≥24h\n≥48h\nCrC1 30-49ml/min\n≥48h\n≥96h\nCrCl 15-29 ml/min\nNot indicated\nNot indicated\n≥36h\nCrCl <15 ml/min\nNo official indication for use\n@何時吃回Anticoagulant?\nMinor risk:不用停(EHRA)\nILow risk：一天後吃回去\nHigh risk: 兩到三天後吃回去"
+            }
+          ]
+        },
+        {
+          "id": "t08",
+          "title": "VTE / PE 預防與治療",
+          "slide_count": 6,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 57,
+              "text": [
+                "預防手術前後VTE/PE",
+                "手術前後加抗凝血藥",
+                "2021 EAU guideline  ->主軸",
+                "2021 NCCN guideline ->主軸"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss49.webp",
+              "ocr_text": "預防手術前後VTE/PE\n手術前後加抗凝血藥\n2021 EAU guideline ->主軸\n2021 NCCN guideline ->主軸"
+            },
+            {
+              "slide_num": 58,
+              "text": [
+                "VTE預防措施",
+                "Mechanical",
+                "Mobilization",
+                "Compression stockings",
+                "Intermittent pneumatic compression device (IPCD)",
+                "Venous foot pumps (VFP)",
+                "Pharmacological",
+                "Indirect thrombin inhibitor: Unfractionated heparin(UFH), Low molecular weight heparin(LMWH/Clexane), Fondaparinux",
+                "Vitamin K antagonist: Warfarin",
+                "NOAC: Newer oral anticoagulants",
+                "Direct thrombin inhibitor: Dabigatran",
+                "Direct Xa inhibitors: Apixaban, Edoxaban, Rivaroxaban"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss50.webp",
+              "ocr_text": "VTE預防措施\nPharmacological agent\nDosage*\nLow molecular weight heparins:\nDalteparin\nEnoxaparin\nTinzaparin\nUnfractionated heparin\nFondaparinuxt\n5,000 1U injection once a day\n40 mg injection once a day\n13,500/4,500 1U injection once a day\n5,000 lU injection two or three times a day\n12.5 mg injection once a day\nDirect acting oral anticoagulantst:\nDabigatran\nApixaban\nEdoxaban\nRivaroxaban\n220 ma tablet once a day\n12.5ma tablet once a dav\n30 mg tablet once a day\n110 mg tablet once a day\n* Dosages may not apply in renal impairment.\nt Fondaparinux and direct acting oral anticoagulants have not been sufficiently studied in urology to warrant\non-label use for post-surgery thromboprophylaxis.\n•Mechanical\n• Mobilization\n• Compression stockings\n• Intermittent pneumatic compression device (IPCD)\n• Venous foot pumps (VFP)\n•Pharmacological\n• Indirect thrombin inhibitor: Unfractionated heparin(UFH), Low\nmolecular weight heparin(LMWH/Clexane), Fondaparinux\n• Vitamin K antagonist: Warfarin\n• NOAC: Newer oral anticoagulants\n• Direct thrombin inhibitor: Dabigatran\n• Direct Xa inhibitors: Apixaban, Edoxaban, Rivaroxaban"
+            },
+            {
+              "slide_num": 59,
+              "text": [
+                "依照不同手術和VTE risk去決定",
+                "Open/Laparoscopic surgery/Robot:",
+                "Robot: High risk兩者都要，low/medium都是mechanical就好",
+                "Open/Laparoscopic: mechanical 和pharmacological都要",
+                "TURP/PCNL: High risk才要mechanical",
+                "手術後第一天開始thromboprophylaxis, 使用4周(發生VTE風險在第1天和第4周一樣高)",
+                "VTE預防措施什麼時候要用?要用多久?",
+                "@NCCN: 高危險者-> 有VTE病史, 手術兩小時以上, 癌症Advanced stage, 手術後臥床, 年紀大於60歲, 肥胖BMI>30",
+                "@NCCN: 高危險者使用extended prophylaxis(LMWH) for 4 weeks"
+              ],
+              "has_exam_question": true,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss51.webp",
+              "ocr_text": "VTE預防措施什 麼時候要用？要用多久？\n•依照不同手術和VTE risk去決定\nLow risk\nMedium risk\nHigh risk\nRisk\nNo risk factors\nAny one of the following:\nage 75 years or more;\nBody mass index 35 or more;\nIVTE in 1st degree relative (parent, full sibling. or child).\nPrior VTE\nLikelihood of VTE\n1×\n2x\n4x\nPatients with any combination of two or more risk factors\n• Open/Laparoscopic surgery/Robot:\n•Robot: High risk兩者都要，low/medium都是mechanical就好\n• Open/Laparoscopic: mechanical 和pharmacological都要\n•TURP/PCNL: High risk才要mechanical\n•手術後第一天關始thromboprophylaxis,使用4周(發生VTE風險在第1\n天和第4周一樣高）\n@NCCN：高危險者-二有VTE病史，手術兩小時以上,癌症Advanced\nstage, 手術後臥床，年紀大於60歲，肥胖BMI>30\n@NCCN： 高危險者使用extended prophylaxis(LMWH) for 4 weeks"
+            },
+            {
+              "slide_num": 60,
+              "text": [
+                "Pulmonary embolism",
+                "Clinical presentation",
+                "症狀: Dyspnea(73%), 肋膜性胸痛(66%), 咳嗽",
+                "Sign: Tachypnea (70%), Rales (51%), 心跳快, collapse",
+                "區分 PE 和 pneumonia: 採用Well’s score",
+                "S/S, 覺得像PE, HR快, 不動,手術, 血痰, PE病史, 癌症病史"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss52.webp",
+              "ocr_text": "Pulmonary embolism\n• Clinical presentation\n•症狀：Dyspnea(73%)，肋膜性胸痛(66%)，咳嗷\n•Sign: Tachypnea (70%), Rales(51%)，心跳快，collapse\nClinical signs and symptoms of DVT\nNo 0\nPE is #1 diagnosis OR equally likely\nNo 0\n區分 PE 和pneumonia：\n採用wel's score\nS/s,覺得像PE,HR快，不\n動,手術，血痰,PE病史，\n癌症病史\nHeart rate > 100\nNo 0\n1mmobilization at least 3 days OR surgery in\nthe previous 4 weeks\nNo 0\nPrevious, objectively diagnosed PE Or DVT\nNo o\nHemoptysis\nNo o\nMalignancy w/ treatment within 6 months or\npalliative\nNo o\nYes +3\nYes +3\nYes +1.5\nYes +1.5\nYes +1.5\nYes +1\nYes +1"
+            },
+            {
+              "slide_num": 61,
+              "text": [
+                "Pulmonary embolism",
+                "survey",
+                "Well’s score (2-6) 且 D-dimer高 => chest CTA"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss53.webp",
+              "ocr_text": "Pulmonary\nembolism\nsurvey\nIntermediate probability of PE\n(eg, Wells score 2 to 6)*\nMeasure D-Dimer level\n(using a\n•sensitive\"'\n\" assay 1\nD-dimer <500 ng/ mL\n(fibrinogen equivalent units)\nD-dimer ≥500 ng/mL\n(fibrinogen equivalent units)\nIpulmonary embolism likely\nexcluded. No further testing\ngenerally required.\nCT pulmonary\nangiography\nfeasible?A\nYes\nNo\nWell's score (2-6）且 D-dimer高\n=> chest CTA\nCT pulmonary\nangiography\nPositive\nNegative\nInconclusive\nventilation perfusior\nscanning feasible? 5"
+            },
+            {
+              "slide_num": 62,
+              "text": [
+                "Pulmonary embolism治療",
+                "血循穩定",
+                "給抗凝血劑: Clexane, Heparin",
+                "若不能給抗凝血 -> 裝IVC filter",
+                "血循不穩定",
+                "Resuscitation",
+                "可以給thrombolytic agents溶掉血栓",
+                "若不能給thrombolytic agents -> thrombectomy (surgical or catheter)"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss54.webp",
+              "ocr_text": "Pulmonary embolism治療\n•血循穩定\n•給抗凝血劑：Clexane, Heparin\n•若不能給抗凝血一＞裝IvCfilter\n•血循不穩定\n• Resuscitation\n•可以給thrombolytic agents溶掉血栓\n•若不能給thromboivtic agents -> thrombectory (surgical or catheter)"
+            }
+          ]
+        },
+        {
+          "id": "t09",
+          "title": "Clavien-Dindo 與洗腎病人手術注意",
+          "slide_count": 2,
+          "has_exam_questions": true,
+          "has_hjh_content": false,
+          "slides": [
+            {
+              "slide_num": 63,
+              "text": [
+                "Gr I: 症狀治療(藥物)、利尿劑、電解質、debridement",
+                "Gr II: 除了Gr I之外的藥物治療、輸血、TPN",
+                "Gr III: 需要開刀, IIIa: 不用全麻, IIIb: 全麻",
+                "Gr IV: 生命危險, IVa: 單一器官dysfunction(包含洗腎)  IVb: 多重器官衰竭",
+                "Gr V: 死亡"
+              ],
+              "has_exam_question": false,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss55.webp",
+              "ocr_text": "TABLE 17.1 The Clavien Dindo Classification\nGRADES\nDEFINITION\nGrade I\nGrade I1\nGrade iI\nrade llla\nGrade llb\nGrade IV\nGrade IVa\nGrade IVb\nGrade V\nSuffix “d”\nAny deviation from the normal postoperative course without the need for pharmacologic treatment or surgical,\nendoscopic, and radiologic interventions\nAllowed therapeutic regimens are: drugs as antiemetics, antipyretics, analgesics, diuretics, and electrolytes and\nphysiotherapy. This grade also includes wound infections opened at the bedside.\nRequiring pharmacologic treatment with drugs other than such allowed for grade 1 complications.\nBlood transfusions and total parenteral nutrition are also included.\nRequiring surgical, endoscopic, or radiologic intervention\nIntervention not under general anesthesia\nIntervention under general anesthesia\nLife-threatening complication (including CNS complications)) requiring ICACU management\nSingle-organ dysfunction (including dialysis)\nMultiorgan dysfunction\nDeath of a patient\nIf the patients suffers from a complication at the time of discharge, the suffix \"d” (for \"disability') is added to the\nrespective grade of complication. This label indicates the need tor a follow-up to tully evaluate the complication.\nCNS, Central nervous system; IC, intermediate care; ICU, intensive care unit.\neThe treatment modality used to correct a certain complication remains the cornerstone of this classification. There are seven grades, and some subdivi-\nsions of some grades allow pooling of the rare and severe complications.\n°Brain hemorrhage, ischemic stroke, subarrachnoidal bleeding, but excluding transient ischemic attack (TIA).\nrl：症狀治療(藥物）、利尿劑、電解質、debridement\nGrl：除了Grl之外的藥物治療、輸血、TPN\nGrll:需要開刀，lla：不用全麻, lllb:全麻\nGrIV:生命危險，Va:單一器官dysfunction(包含洗腎)NVb：多重器官衰竭\nGrV:死亡"
+            },
+            {
+              "slide_num": 64,
+              "text": [
+                "洗腎病人施行重大手術須注意事項",
+                "Patient specific (尋找並控制共病)",
+                "利用詳細的詢問病史(透析的原因, 透析多久了, 穩不穩定, 有否出現併發症, 是否有代謝症候群, 有沒有在服用甚麼藥物要不要繼續吃, 有無抽菸…)，",
+                "身體檢查(有沒有edema, 血壓心跳呼吸音…)，",
+                "Procedure specific:",
+                "大手術須注意凝血功能，透析病人容易出現 platelet dysfunction(抽PFA-100)",
+                "凝血功能矯正: 術前考慮Estrogen 0.625g 4 tab QID，手術當天大夜cryoprecipitate 10U, 叫刀掛上4amp DDAVP",
+                "Anesthesia specific:",
+                "術前評估透析結果是否適當, 抽血檢測BUN, Cr.及血中離子(尤其血鉀)",
+                "手術安排在透析治療的隔天，病人體內的水分離子會較為正常。透析後手術前，可再檢測血中鉀離子、血色素或血氧、PH值等作為術中處置的參考。",
+                "術後隔日再進行透析治療，將因手術治療而導致的身體異常排除",
+                "BP維持<140/90, CHF/arrhythmia的可能要安排cardiac echo, ischemia heart的可能要安排運動心電圖, Sugar要控制在200以下, 有 Asthma/COPD 則建議做lung function test, Nutrition方面術前albumin>3.5, Hb維持在10以上, platelet維持在5-10萬以上(5萬以下要預防性輸血小板)",
+                "Major operation 後24小時內的休克，若排除出血造成的 hypovolemic shock，哪一種原因最容易造成休克而需要急救 ?  高血鉀"
+              ],
+              "has_exam_question": true,
+              "hidden": false,
+              "slide_image": "images/textbook/ch11_emergency/render/ss56.webp",
+              "ocr_text": "洗腎病人施行重大手術須注意事項\n•Patient specific (尋找並控制共病)\n•利用詳細的詢問病史(透析的原因，透析多久了，穩不穩定，有否出現併發症，是否有\n代謝症候群，有沒有在服用甚麼藥物要不要繼續吃，有無抽菸.）•\n•身體檢查(有沒有edema，血壓心跳呼吸音…)，\n• Procedure specific:\n•大手術須注意凝血功能，透析病人容易出現 platelet dvsfunction(抽PFA-100）\n•凝血功能矯正：術前考慮Estrogen 0.625g 4 tab QID，手術當天大夜crvoprecipitate\n10U，叫刀掛上4amp DDAvP\nMajor operation 後24小時內的休克，若排除出血造成的 hypovolemic\nshock•哪一種原因最容易造成休克而需要急救？高血鉀\n• Anesthesia specific:\n•術前評估透析結果是否適當，抽血檢測BUN,Cr.及血中離子(尤其血鉀）\n•手術安排在透析治療的隔天，病人體内的水分離子會較為正常。透析後手術前，\n可再檢測血中鉀離子、血色素或血氧、PH值等作為術中處置的參考。\n•術後隔日再進行透析治療，將因手術治療而導致的身體異常排除\n•BP維持<140/90,CHF/arrhythmia的可能要 安排cardiac echo,ischernia heart的可能要安\n排運動心電圖，Sugar要控制在200以下，有 Asthma/COPD 則建議做lung function test,\nNutrtion方面術前allbumin>3.5,Hb維持在10以 上，platelet維持在5-10萬以上(5萬以下\n要預防性輸血小板）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
