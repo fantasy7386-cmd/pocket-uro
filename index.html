@@ -457,6 +457,51 @@
       min-height: 280px;
       overflow-y: auto;
     }
+    .md-toolbar {
+      display: flex; gap: 4px;
+      margin-bottom: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    .md-toolbar button {
+      min-width: 38px; height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+      background: var(--c-surface);
+      color: var(--c-text);
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .md-toolbar button:active { background: var(--c-surface-alt); transform: scale(.95); }
+    .md-toolbar .sep {
+      width: 1px; align-self: stretch;
+      background: var(--c-border);
+      flex-shrink: 0;
+    }
+    .md-cheatsheet {
+      font-size: 11px; color: var(--c-text-muted);
+      margin-top: 4px; line-height: 1.6;
+      padding: 6px 10px;
+      background: var(--c-surface-alt);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--c-border);
+    }
+    .md-cheatsheet code {
+      background: rgba(0,0,0,.05);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 10px;
+    }
+    body[data-theme="dark"] .md-cheatsheet code { background: rgba(255,255,255,.08); }
+
     .md-tabs {
       display: flex; gap: 4px; margin-bottom: 8px;
     }
@@ -1395,6 +1440,112 @@
   }
 
   /* ======================================================
+     Markdown editor helpers (toolbar / keyboard shortcuts)
+  ====================================================== */
+  function mdToolbarHTML() {
+    return `
+      <div class="md-toolbar" role="toolbar" aria-label="Markdown formatting">
+        <button type="button" title="Bold (Cmd/Ctrl+B)" onclick="window.__mdWrap('**','**')"><b>B</b></button>
+        <button type="button" title="Italic (Cmd/Ctrl+I)" onclick="window.__mdWrap('*','*')"><i>I</i></button>
+        <button type="button" title="Inline code" onclick="window.__mdWrap('\`','\`')">&lt;/&gt;</button>
+        <div class="sep"></div>
+        <button type="button" title="Heading 2" onclick="window.__mdPrefix('## ')">H2</button>
+        <button type="button" title="Heading 3" onclick="window.__mdPrefix('### ')">H3</button>
+        <button type="button" title="Sub-header (orange, doctor-tag style)" onclick="window.__mdPrefix('#### ')">H4</button>
+        <div class="sep"></div>
+        <button type="button" title="Bullet list" onclick="window.__mdPrefix('- ')">• list</button>
+        <button type="button" title="Numbered list" onclick="window.__mdPrefix('1. ')">1. list</button>
+        <button type="button" title="Quote" onclick="window.__mdPrefix('> ')">❝</button>
+        <div class="sep"></div>
+        <button type="button" title="Doctor tag" onclick="window.__mdDoctorTag()">[醫師]</button>
+        <button type="button" title="Insert table" onclick="window.__mdTable()">▦ table</button>
+        <button type="button" title="Horizontal rule" onclick="window.__mdInsert('\\n\\n---\\n\\n')">—</button>
+        <button type="button" title="Link" onclick="window.__mdLink()">🔗</button>
+      </div>
+      <div class="md-cheatsheet">
+        <strong>Quick:</strong>
+        <code>**bold**</code>
+        <code>*italic*</code>
+        <code>## heading</code>
+        <code>- bullet</code>
+        <code>[小黃]</code>
+        · 換行空一行＝新段落
+      </div>
+    `;
+  }
+
+  function getMdTextarea() {
+    return document.getElementById('te-md');
+  }
+
+  function mdWrapSelection(before, after) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart, end = ta.selectionEnd;
+    const sel = ta.value.substring(start, end);
+    const placeholder = sel || 'text';
+    const newText = before + placeholder + after;
+    ta.setRangeText(newText, start, end, 'select');
+    if (sel) {
+      ta.setSelectionRange(start + before.length, start + before.length + sel.length);
+    } else {
+      ta.setSelectionRange(start + before.length, start + before.length + placeholder.length);
+    }
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function mdPrefixLine(prefix) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart;
+    const val = ta.value;
+    const lineStart = val.lastIndexOf('\n', start - 1) + 1;
+    ta.setRangeText(prefix, lineStart, lineStart, 'end');
+    ta.setSelectionRange(start + prefix.length, start + prefix.length);
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function mdInsertAt(text) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart, end = ta.selectionEnd;
+    ta.setRangeText(text, start, end, 'end');
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  window.__mdWrap = mdWrapSelection;
+  window.__mdPrefix = mdPrefixLine;
+  window.__mdInsert = mdInsertAt;
+  window.__mdDoctorTag = function() {
+    const name = prompt('Doctor initials (e.g. 小黃, HJH):');
+    if (!name) return;
+    mdInsertAt('[' + name.trim() + ']');
+  };
+  window.__mdTable = function() {
+    mdInsertAt('\n\n| Header 1 | Header 2 |\n|----------|----------|\n| cell 1   | cell 2   |\n| cell 3   | cell 4   |\n\n');
+  };
+  window.__mdLink = function() {
+    const url = prompt('Link URL:');
+    if (!url) return;
+    const text = prompt('Link text:', url) || url;
+    mdInsertAt('[' + text + '](' + url + ')');
+  };
+
+  // Keyboard shortcuts (mostly useful on desktop / iPad with keyboard)
+  document.addEventListener('keydown', (e) => {
+    if (!(e.metaKey || e.ctrlKey)) return;
+    const ta = getMdTextarea();
+    if (!ta || document.activeElement !== ta) return;
+    const k = e.key.toLowerCase();
+    if (k === 'b') { e.preventDefault(); mdWrapSelection('**', '**'); }
+    else if (k === 'i') { e.preventDefault(); mdWrapSelection('*', '*'); }
+    else if (k === 'k') { e.preventDefault(); window.__mdLink(); }
+  });
+
+  /* ======================================================
      Markdown rendering (Tips & Guide + Textbook notes)
   ====================================================== */
   let markedConfigured = false;
@@ -1583,7 +1734,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.2 · undo · sync preview · line-item notes editor</div>
+        <div class="brand-tag" id="brand-tag">v2.3 · Markdown toolbar · B/I/list/table/link · Cmd+B shortcut</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2257,6 +2408,7 @@
         </div>
         <div class="edit-field">
           <label>Markdown content</label>
+          ${mdToolbarHTML()}
           <div class="md-tabs">
             <button class="active" onclick="window.__mdTab('edit')">Edit</button>
             <button onclick="window.__mdTab('preview')">Preview</button>
@@ -2670,6 +2822,7 @@
         <h2 style="font-size:19px;margin-bottom:12px">Topic notes · ${esc(topic.title)}</h2>
         <div class="edit-field">
           <label>Notes (Markdown; rendered above primary content)</label>
+          ${mdToolbarHTML()}
           <div class="md-tabs">
             <button class="active" onclick="window.__mdTab('edit')">Edit</button>
             <button onclick="window.__mdTab('preview')">Preview</button>
@@ -2772,6 +2925,7 @@
         </div>
         <div class="edit-field">
           <label>Markdown content</label>
+          ${mdToolbarHTML()}
           <div class="md-tabs">
             <button class="active" onclick="window.__mdTab('edit')">Edit</button>
             <button onclick="window.__mdTab('preview')">Preview</button>
