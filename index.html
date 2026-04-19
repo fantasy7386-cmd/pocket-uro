@@ -1804,7 +1804,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.4.3 · viewer-aware Settings — admin-only sections hidden for URO code</div>
+        <div class="brand-tag" id="brand-tag">v2.4.4 · Preview-as-viewer actually hides admin sections now</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3590,16 +3590,26 @@
   }
 
   function renderSyncPanel() {
-    const adminView = isAdminCode();
-    setHeader(adminView ? 'Settings · Sync' : 'Settings');
+    // isAdmin() respects Preview-as-viewer toggle; isAdminCode() is the raw code tier.
+    const admin        = isAdmin();
+    const adminCode    = isAdminCode();
+    const isPreviewing = adminCode && !admin;
+    const isRealView   = !adminCode;
+    setHeader(admin ? 'Settings · Sync' : 'Settings');
     const dirty = dirtyDatasets();
     const hasToken = !!localStorage.getItem(LS.TOKEN);
     viewEl().innerHTML = `
       <a class="back-btn" href="#/">← Home</a>
-      <h2 style="font-size:22px;margin-bottom:12px">${adminView ? 'Sync to GitHub' : 'Settings'}</h2>
-      ${!adminView ? `
+      <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
+      ${isRealView ? `
         <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
           You're signed in with a viewer code (<code>${esc(currentCode())}</code>). Admin-only settings (GitHub token, sync, submission URL) are hidden.
+        </div>
+      ` : ''}
+      ${isPreviewing ? `
+        <div style="padding:10px 14px;background:#fff5d6;border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span>👁 Preview as viewer — admin-only settings are hidden. Your code <code>${esc(currentCode())}</code> is still admin.</span>
+          <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
         </div>
       ` : ''}
       <div class="sync-panel">
@@ -3632,7 +3642,7 @@
           </div>
         ` : ''}
       </div>
-      ${adminView ? adminSyncSectionsHTML(hasToken, dirty) : ''}
+      ${admin ? adminSyncSectionsHTML(hasToken, dirty) : ''}
       <div class="sync-panel">
         <h3>Data · Reload from server</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -3643,7 +3653,7 @@
           <button class="btn btn-secondary btn-block" onclick="window.__reloadFromServer()">🔄 Reload from server</button>
         </div>
       </div>
-      ${adminView ? `
+      ${admin ? `
       <div class="sync-panel">
         <h3>Submission form URL (optional)</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -3675,7 +3685,7 @@
         <div class="dl-progress" id="dl-progress" style="display:none"><div class="dl-progress-bar" id="dl-progress-bar"></div></div>
         <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px"></div>
       </div>
-      ${adminView ? `
+      ${admin ? `
       <div class="sync-panel">
         <h3>Export JSON (offline backup)</h3>
         <div class="action-bar" style="margin:0;flex-wrap:wrap">
