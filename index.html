@@ -1799,7 +1799,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v2.4 · unsaved warning · text-only edit · search debounce · partial sync</div>
+        <div class="brand-tag" id="brand-tag">v2.4.1 · submission URL accepts mailto: / tel:</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3629,7 +3629,11 @@
           If set, Home shows a "📝 Suggest content" link pointing here (for residents to suggest additions without editing).
         </div>
         <div class="edit-field" style="margin-bottom:8px">
-          <input type="url" id="submission-url-input" value="${escAttr(submissionUrl())}" placeholder="https://forms.gle/...">
+          <input type="text" id="submission-url-input" value="${escAttr(submissionUrl())}" placeholder="https://forms.gle/… or mailto:you@x.com?subject=…" inputmode="url" autocapitalize="off" autocorrect="off">
+        </div>
+        <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:8px;line-height:1.5">
+          Accepts <code>https://</code> form URLs or <code>mailto:</code> / <code>tel:</code>.<br>
+          Example: <code>mailto:you@example.com?subject=Pocket%20URO%20建議&body=類別：%0A標題：%0A內容：</code>
         </div>
         <div class="action-bar" style="margin:0">
           <button class="btn btn-secondary" onclick="window.__saveSubmissionUrl()">Save URL</button>
@@ -3728,8 +3732,8 @@
 
   window.__saveSubmissionUrl = function() {
     const url = (el('submission-url-input').value || '').trim();
-    if (url && !/^https?:\/\//i.test(url)) {
-      return showToast('URL must start with http:// or https://', 'error');
+    if (url && !/^(https?:|mailto:|tel:)/i.test(url)) {
+      return showToast('URL must start with http://, https://, mailto:, or tel:', 'error');
     }
     if (url) localStorage.setItem(LS_SUBMISSION_KEY, url);
     else     localStorage.removeItem(LS_SUBMISSION_KEY);
