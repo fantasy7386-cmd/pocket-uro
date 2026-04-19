@@ -980,7 +980,7 @@
         {
           "id": "t07b",
           "title": "馬蹄腎結石",
-          "slide_count": 3,
+          "slide_count": 2,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -1012,27 +1012,6 @@
               "hidden": true,
               "slide_image": "images/textbook/ch01_stone/render/s1_h52.webp",
               "ocr_text": "110-112\n關於馬蹄腎(horseshoe kidnevs)的敘述，下列何者錯誤？\n(A)其結石發生率約為 20%，尤其易在腎盂及 下腎盞(lower pole calyx)產生結石\n(B）如果腎結石大於兩公分，馬蹄腎病人接受經皮腎造廔碎石 (PCNL)的結石廓清率\n比正常腎臟病人差，併發症也較多\n（C)針對一公分的上腎盞結石，若無水腎可選擇體外震波處理\n(D)其輸尿管與腎盂輸尿管接合處(ureteropelvic junction)比 起正常腎臟更高位且靠\n內側，易受峽部(isthmus)血管壓迫產 生水腎\n(E）其上腎盞較靠背側及外側，比起下腎盞更適合建立 PCNL 通道"
-            },
-            {
-              "slide_num": 51,
-              "text": [
-                "Renal stone in horseshoe kidney",
-                "馬蹄腎發生率約1/400 live births",
-                "結石發生率15-20%患者，最常見為calcium oxalate",
-                "最常見的位置為renal pelvis和posterior lower pole calyx",
-                "結構上renal pelvis較長且前傾、UPJ高位、上段輸尿管須跨過isthmus所以導致urine stasis而結石",
-                "1.5cm以下非lower pole結石可以SWL或URS，SWL在馬蹄腎中比正常腎臟，需要更多次的治療次數，且須排除UPJO。",
-                "2cm以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常為從posterior upper calyx進入，因腎臟位置前傾且向內，建議有術前CT評估，通常在12th rib下，故鮮少需要supracostal access，肋膜損傷為罕見。",
-                "補充：horseshoe kidney常常合併出現的異常",
-                "男性：undecendented testis, hypospadias",
-                "女性：Bicornuate uterus and, a septate vagina,",
-                "VUR",
-                "UPJO"
-              ],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch01_stone/render/s1_s50.webp",
-              "hidden": false,
-              "ocr_text": "Renal stone in horseshoe kidney\n•馬蹄腎發生率約1/400 live births\n•結石發生率15-20%患者，最常見為calcium oxalate\n•最常見的位置為renalpelvis和posterior lower pole q竖\n•結構上renal pelvis較長且前傾、UP高位、上段輸尿管須跨過\nisthmus所以導致urine stasis而結石\n•1.5cm以 下非lower pole結石可以SWL或URS，SWL在馬蹄腎中\n比正常腎臟，需要更多次的治療次數，且須排除UPJO。\n•2cm以以上者最佳為PCNL，且治療結果與正常腎臟差不多，最常\n為從posterior upper calyx進入，因腎臟位置前傾且向內，建議\n有術前CT評估，通常在12thrib下 ，故鮮少需要supracostal\naccess，肋膜損傷為罕見。\n補充：horseshoe kidney常常合併出現的異常\n-\n男性：undecendented testis, hypospadias\n-女性：Bicornuate uterus and, a septate vagina,\nVUR\nUpJO"
             }
           ]
         },

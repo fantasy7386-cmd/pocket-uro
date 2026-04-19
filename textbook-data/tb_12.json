@@ -329,7 +329,7 @@
         {
           "id": "t03",
           "title": "輸尿管外傷：分級、修復原則與術式",
-          "slide_count": 23,
+          "slide_count": 22,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -605,16 +605,6 @@
               "slide_image": "images/textbook/ch12_trauma/render/ss23.webp",
               "hidden": false,
               "ocr_text": "Open/Lapa ureter repair選擇\n•先看defect長度，看有哪些選擇，ex: 7cm就不能選UNC\n•再依照位置做最後決定\nTechnique\nUreteroureterostomy\nDefect length (cm)\n2-3\nUreteroneocystostomy(UNC)\n4-5\npsaos hitch\n6-10\nBoari flap\n12-15\nRenal descensus\nTransureteroureterostomy\nlleal Ureteral Substitution\nAutotransplantation\n5-8\n不限\n不限\n不限\nCampbell-Walsh Urology, 11, p1575"
-            },
-            {
-              "slide_num": 23,
-              "text": [
-                "Ureteral injury"
-              ],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch12_trauma/render/ss11.webp",
-              "hidden": false,
-              "ocr_text": "Ureteral injury"
             }
           ]
         },
