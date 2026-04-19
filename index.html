@@ -18,11 +18,13 @@
   <style>
     /* ============ Design tokens ============ */
     :root {
+      /* Module colors (stable across themes) */
       --c-patient-ed: #2980b9;
       --c-ppu-notes: #27ae60;
       --c-tips: #e67e22;
       --c-textbook: #8e44ad;
 
+      /* Light theme (default) */
       --c-bg: #f5f5f7;
       --c-surface: #ffffff;
       --c-surface-alt: #fafafa;
@@ -30,11 +32,26 @@
       --c-text-muted: #7f8c8d;
       --c-border: #e5e5ea;
       --c-header: #1a1a2e;
+      --c-header-text: #ffffff;
       --c-danger: #e74c3c;
       --c-success: #27ae60;
       --c-warning: #f39c12;
       --c-info: #3498db;
       --c-accent: var(--c-info);
+      --c-highlight-bg: #ffe680;
+      --c-highlight-fg: #2c3e50;
+      --c-hjh-bg-start: #fff5cc;
+      --c-hjh-bg-end: #ffe680;
+      --c-hjh-fg: #8b5a00;
+      --c-hjh-border: #f0d986;
+      --c-hjh-accent: #f1c40f;
+      --c-hjh-note-bg: #fffaed;
+      --c-hjh-card-bg: #fffbe6;
+
+      /* Typography */
+      --font-read: 15px;         /* body text / markdown / articles */
+      --font-read-lg: 17px;      /* list-card titles when enlarged */
+      --font-ui: 15px;           /* UI controls */
 
       --radius: 12px;
       --radius-sm: 8px;
@@ -45,6 +62,36 @@
       --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
       --shadow-md: 0 2px 6px rgba(0,0,0,.08);
     }
+
+    /* Dark theme override */
+    body[data-theme="dark"] {
+      --c-bg: #0f1419;
+      --c-surface: #1a1f2e;
+      --c-surface-alt: #141821;
+      --c-text: #e8eaed;
+      --c-text-muted: #8b95a5;
+      --c-border: #2a3040;
+      --c-header: #000000;
+      --c-header-text: #e8eaed;
+      --c-info: #5dade2;
+      --c-highlight-bg: #d4a413;
+      --c-highlight-fg: #1a1a2e;
+      --c-hjh-bg-start: #3d3018;
+      --c-hjh-bg-end: #5a4520;
+      --c-hjh-fg: #ffd85a;
+      --c-hjh-border: #5a4520;
+      --c-hjh-accent: #ffd85a;
+      --c-hjh-note-bg: #1f1a0e;
+      --c-hjh-card-bg: #1a1810;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+      --shadow-md: 0 2px 6px rgba(0,0,0,.4);
+    }
+
+    /* Font scale variants */
+    body[data-font-scale="small"]  { --font-read: 13px; --font-read-lg: 15px; --font-ui: 14px; }
+    body[data-font-scale="normal"] { --font-read: 15px; --font-read-lg: 17px; --font-ui: 15px; }
+    body[data-font-scale="large"]  { --font-read: 17px; --font-read-lg: 19px; --font-ui: 16px; }
+    body[data-font-scale="xlarge"] { --font-read: 19px; --font-read-lg: 21px; --font-ui: 17px; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -100,8 +147,8 @@
       background: var(--c-surface);
       border-bottom: 1px solid var(--c-border);
       display: flex; align-items: center;
-      padding: 0 12px;
-      gap: 8px;
+      padding: 0 8px;
+      gap: 4px;
     }
     .app-header h1 {
       font-size: 17px; font-weight: 600; flex: 1; text-align: center;
@@ -200,7 +247,7 @@
     }
     .list-card:active { background: var(--c-surface-alt); }
     .list-card .title {
-      font-size: 15px; font-weight: 500; flex: 1;
+      font-size: var(--font-read); font-weight: 500; flex: 1;
       overflow: hidden;
     }
     .list-card .meta {
@@ -241,7 +288,7 @@
       padding: 20px;
       border: 1px solid var(--c-border);
       white-space: pre-wrap;
-      font-size: 15px;
+      font-size: var(--font-read);
       line-height: 1.75;
       word-break: break-word;
     }
@@ -322,7 +369,7 @@
     .insert-btn:hover { opacity: 1; border-color: var(--c-border); }
 
     /* ============ Tips Markdown renderer ============ */
-    .markdown-body { font-size: 15px; line-height: 1.75; }
+    .markdown-body { font-size: var(--font-read); line-height: 1.75; }
     .markdown-body h1 { font-size: 22px; margin: 16px 0 8px; font-weight: 700; }
     .markdown-body h2 { font-size: 19px; margin: 14px 0 6px; font-weight: 700; }
     .markdown-body h3 { font-size: 16px; margin: 12px 0 4px; font-weight: 700; }
@@ -471,7 +518,7 @@
       background: var(--c-surface-alt);
       border: 1px solid var(--c-border);
       border-radius: var(--radius-sm);
-      font-size: 14px; line-height: 1.6;
+      font-size: var(--font-read); line-height: 1.6;
     }
     .slide-ocr ul { margin-left: 18px; }
     .slide-ocr .ocr-label {
@@ -482,10 +529,10 @@
     }
     .topic-notes {
       margin-bottom: 12px; padding: 12px 14px;
-      background: #fffaed;
-      border: 1px solid #f0d986;
+      background: var(--c-hjh-note-bg);
+      border: 1px solid var(--c-hjh-border);
       border-radius: var(--radius-sm);
-      font-size: 14px;
+      font-size: var(--font-read);
     }
     .topic-notes .notes-label {
       font-size: 11px; font-weight: 700;
@@ -506,11 +553,11 @@
     .topic-badge.exam { background: #fff3cd; color: #b87800; }
     .topic-badge.text-only { background: #e8d8f0; color: #5e2670; }
     .topic-badge.hjh {
-      background: linear-gradient(135deg, #fff5cc, #ffe680);
-      color: #8b5a00; font-weight: 700;
-      border: 1px solid #f0d986;
+      background: linear-gradient(135deg, var(--c-hjh-bg-start), var(--c-hjh-bg-end));
+      color: var(--c-hjh-fg); font-weight: 700;
+      border: 1px solid var(--c-hjh-border);
     }
-    .list-card.hjh { border-left: 4px solid #f1c40f; background: linear-gradient(90deg, #fffbe6 0%, var(--c-surface) 50%); }
+    .list-card.hjh { border-left: 4px solid var(--c-hjh-accent); background: linear-gradient(90deg, var(--c-hjh-card-bg) 0%, var(--c-surface) 50%); }
     .sync-badge {
       position: absolute; top: 6px; right: 4px;
       background: var(--c-danger); color: #fff;
@@ -591,7 +638,8 @@
       vertical-align: middle;
     }
     mark.highlight {
-      background: #ffe680; color: inherit; padding: 0 2px; border-radius: 3px;
+      background: var(--c-highlight-bg); color: var(--c-highlight-fg);
+      padding: 0 2px; border-radius: 3px;
     }
 
     /* ============ Sync panel ============ */
@@ -716,7 +764,8 @@
     <header class="app-header" id="app-header" hidden>
       <button class="icon-btn" id="btn-back" aria-label="back">←</button>
       <h1 id="app-title">Pocket URO</h1>
-      <button class="icon-btn" id="btn-sync" aria-label="sync" style="position:relative">⚙</button>
+      <button class="icon-btn" id="btn-theme" aria-label="theme">🌙</button>
+      <button class="icon-btn" id="btn-sync" aria-label="sync" style="position:relative">🔄</button>
       <button class="icon-btn" id="btn-home" aria-label="home">🏠</button>
     </header>
     <div class="update-banner hidden" id="update-banner">
@@ -786,6 +835,72 @@
     },
     favorites: [],    // [{module, id, title, ts}]
   };
+
+  /* ======================================================
+     Theme + font-scale (persisted)
+  ====================================================== */
+  const THEME_KEY = 'puro_theme';       // 'light' | 'dark' | 'auto'
+  const FONT_KEY  = 'puro_font_scale';  // 'small' | 'normal' | 'large' | 'xlarge'
+
+  function currentTheme() {
+    return localStorage.getItem(THEME_KEY) || 'auto';
+  }
+  function resolveTheme(mode) {
+    if (mode === 'dark' || mode === 'light') return mode;
+    // auto: follow prefers-color-scheme
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function applyTheme() {
+    const effective = resolveTheme(currentTheme());
+    document.body.dataset.theme = effective;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', effective === 'dark' ? '#000000' : '#1a1a2e');
+    const btn = document.getElementById('btn-theme');
+    if (btn) btn.textContent = effective === 'dark' ? '☀️' : '🌙';
+  }
+  function setTheme(mode) {
+    localStorage.setItem(THEME_KEY, mode);
+    applyTheme();
+  }
+  // Apply immediately so dark theme renders before body is visible
+  document.body.dataset.theme = resolveTheme(currentTheme());
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => {
+      if (currentTheme() === 'auto') applyTheme();
+    });
+  }
+
+  function currentFontScale() {
+    return localStorage.getItem(FONT_KEY) || 'normal';
+  }
+  function applyFontScale() {
+    document.body.dataset.fontScale = currentFontScale();
+  }
+  function setFontScale(s) {
+    localStorage.setItem(FONT_KEY, s);
+    applyFontScale();
+  }
+  document.body.dataset.fontScale = currentFontScale();
+
+  /* ======================================================
+     Haptic feedback (iOS PWA + Android)
+  ====================================================== */
+  function haptic(kind) {
+    try {
+      if (navigator.vibrate) {
+        if (kind === 'light') navigator.vibrate(8);
+        else if (kind === 'medium') navigator.vibrate(15);
+        else if (kind === 'error') navigator.vibrate([20, 40, 20]);
+        else if (kind === 'success') navigator.vibrate([8, 30, 8]);
+        else navigator.vibrate(8);
+      }
+    } catch {}
+  }
+  // Global listener: light haptic on any button tap
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('button, .module-card, .list-card, .fav-btn, .kw-tag');
+    if (b) haptic('light');
+  }, true);
 
   /* ======================================================
      DOM helpers
@@ -882,13 +997,22 @@
     const code = el('gate-input').value.trim().toUpperCase();
     if (VALID_CODES.includes(code)) {
       localStorage.setItem(LS.ACCESS, code);
+      haptic('success');
       openApp();
     } else {
+      haptic('error');
       el('gate-error').textContent = '員編無效';
     }
   }
   el('gate-submit').addEventListener('click', gateSubmit);
   el('gate-input').addEventListener('keydown', e => { if (e.key === 'Enter') gateSubmit(); });
+
+  // Attempt to focus gate input on boot (iOS PWA requires user gesture for keyboard,
+  // but the focus ring helps visual affordance)
+  setTimeout(() => {
+    const gi = document.getElementById('gate-input');
+    if (gi && !document.getElementById('gate').classList.contains('hidden')) gi.focus();
+  }, 50);
 
   /* ======================================================
      Admin detection
@@ -1216,6 +1340,15 @@
   });
   el('btn-home').addEventListener('click', () => navigate('#/'));
   el('btn-sync').addEventListener('click', () => navigate('#/sync'));
+  el('btn-theme').addEventListener('click', () => {
+    // Cycle light → dark → auto → light
+    const order = ['light', 'dark', 'auto'];
+    const now = currentTheme();
+    const next = order[(order.indexOf(now) + 1) % order.length];
+    setTheme(next);
+    const labels = { light: 'Light theme', dark: 'Dark theme', auto: 'Auto (follows system)' };
+    showToast(labels[next]);
+  });
 
   function setHeader(title) {
     el('app-title').textContent = title || 'Pocket URO';
@@ -1229,6 +1362,12 @@
   }
 
   /* Lightbox / slide zoom */
+  // Close on hashchange so navigating away dismisses the lightbox cleanly
+  window.addEventListener('hashchange', () => {
+    const lb = document.getElementById('lightbox');
+    if (lb && !lb.classList.contains('hidden')) closeLightbox();
+  });
+
   window.__openLightbox = function(src, caption) {
     const lb = el('lightbox');
     const img = el('lb-img');
@@ -1312,7 +1451,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.6 · tap slide to zoom · lightbox with pinch</div>
+        <div class="brand-tag" id="brand-tag">v2.0 · dark mode · A-size · haptic · bug fixes</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1474,7 +1613,7 @@
         <div class="article-body">${esc(a.text || '')}</div>
         ${a.keywords && a.keywords.length ? `
           <div class="article-keywords">
-            ${a.keywords.map(k => `<span class="kw-tag">${esc(k)}</span>`).join('')}
+            ${a.keywords.map(k => `<a class="kw-tag" href="#/search?q=${encodeURIComponent(k)}" style="cursor:pointer">${esc(k)}</a>`).join('')}
           </div>
         ` : ''}
         ${a.pdf_url ? `<div class="article-source">Source: <a href="${escAttr(a.pdf_url)}" target="_blank" rel="noopener">${esc(a.pdf_url)}</a></div>` : ''}
@@ -2541,7 +2680,6 @@
     if (f.module === 'education') return '#/education/a/' + f.id;
     if (f.module === 'notes')     return '#/notes/s/' + f.id;
     if (f.module === 'tips')      {
-      // Find the subsection's chapter
       for (const s of state.tips.sections) {
         if (s.subsections && s.subsections.some(x => x.id === f.id)) {
           return '#/tips/sub/' + s.id + '/' + f.id;
@@ -2550,17 +2688,33 @@
       return '#/tips';
     }
     if (f.module === 'textbook') {
-      // Find the chapter that contains this topic (may require loading each chapter)
+      // Check cached tbChapter to find topic's chapter (if already loaded)
       for (const tbId of TB_CHAPTER_IDS) {
         if (state.tb[tbId]) {
           const found = findTopic(tbId, f.id);
           if (found) return '#/textbook/t/' + tbId + '/' + f.id;
         }
       }
-      return '#/textbook';
+      // Not loaded yet — delegate to async resolver via javascript: href
+      return 'javascript:window.__openFavTextbook(\'' + encodeURIComponent(f.id) + '\')';
     }
     return '#/';
   }
+
+  window.__openFavTextbook = async function(topicIdEnc) {
+    const topicId = decodeURIComponent(topicIdEnc);
+    showToast('Locating topic…');
+    for (const tbId of TB_CHAPTER_IDS) {
+      try {
+        await loadChapter(tbId);
+        if (findTopic(tbId, topicId)) {
+          navigate('#/textbook/t/' + tbId + '/' + topicId);
+          return;
+        }
+      } catch {}
+    }
+    showToast('Topic no longer exists', 'error');
+  };
 
   /* ======================================================
      Global search
@@ -2708,6 +2862,21 @@
       <a class="back-btn" href="#/">← Home</a>
       <h2 style="font-size:22px;margin-bottom:12px">Sync to GitHub</h2>
       <div class="sync-panel">
+        <h3>Appearance</h3>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Theme:</span>
+          ${['light','dark','auto'].map(m => `
+            <button class="btn ${currentTheme()===m?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:6px 14px;font-size:13px" onclick="window.__setThemeClick('${m}')">${m==='light'?'☀️ Light':m==='dark'?'🌙 Dark':'🤖 Auto'}</button>
+          `).join('')}
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Text size:</span>
+          ${[['small','A',13],['normal','A',15],['large','A',17],['xlarge','A',19]].map(([k,L,px]) => `
+            <button class="btn ${currentFontScale()===k?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:4px 10px;font-size:${px}px" onclick="window.__setFontClick('${k}')">${L}</button>
+          `).join('')}
+        </div>
+      </div>
+      <div class="sync-panel">
         <h3>Role</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
           Authenticated code: <strong><code>${esc(currentCode())}</code></strong>
@@ -2754,6 +2923,9 @@
       </div>
     `;
   }
+
+  window.__setThemeClick = function(m) { setTheme(m); router(); };
+  window.__setFontClick  = function(s) { setFontScale(s); router(); };
 
   window.__setToken = async function() {
     localStorage.removeItem(LS.TOKEN);
