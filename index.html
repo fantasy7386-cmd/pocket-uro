@@ -82,7 +82,9 @@
       font-size: 18px; padding: 14px 16px; border: none; border-radius: var(--radius);
       width: 100%; max-width: 280px; margin-bottom: 12px;
       text-align: center; letter-spacing: 2px;
+      color: #2c3e50; background: #fff; caret-color: #2c3e50;
     }
+    .gate input::placeholder { color: #9aa0b4; }
     .gate button {
       font-size: 16px; padding: 14px 36px; border: none; border-radius: var(--radius);
       background: var(--c-danger); color: #fff; min-width: 160px; font-weight: 600;
@@ -503,6 +505,20 @@
     }
     .topic-badge.exam { background: #fff3cd; color: #b87800; }
     .topic-badge.text-only { background: #e8d8f0; color: #5e2670; }
+    .topic-badge.hjh {
+      background: linear-gradient(135deg, #fff5cc, #ffe680);
+      color: #8b5a00; font-weight: 700;
+      border: 1px solid #f0d986;
+    }
+    .list-card.hjh { border-left: 4px solid #f1c40f; background: linear-gradient(90deg, #fffbe6 0%, var(--c-surface) 50%); }
+    .sync-badge {
+      position: absolute; top: 6px; right: 4px;
+      background: var(--c-danger); color: #fff;
+      font-size: 10px; font-weight: 700;
+      min-width: 16px; height: 16px;
+      border-radius: 8px; padding: 0 4px;
+      display: flex; align-items: center; justify-content: center;
+    }
 
     /* ============ Buttons ============ */
     .btn {
@@ -627,6 +643,7 @@
     <header class="app-header" id="app-header" hidden>
       <button class="icon-btn" id="btn-back" aria-label="back">←</button>
       <h1 id="app-title">Pocket URO</h1>
+      <button class="icon-btn" id="btn-sync" aria-label="sync" style="position:relative">⚙</button>
       <button class="icon-btn" id="btn-home" aria-label="home">🏠</button>
     </header>
     <div class="update-banner hidden" id="update-banner">
@@ -833,6 +850,20 @@
     state.notes = nOv.data; state.sources.notes = nOv.source;
     const tOv = loadLocalOverride(LS.TIPS, tipsSrv);
     state.tips = tOv.data; state.sources.tips = tOv.source;
+    normalizeData();
+  }
+
+  function normalizeData() {
+    // Fix PPu Notes Roman numbering (source data has XII → XIV gap).
+    // Display-only renumber; does NOT mark dirty (user didn't edit).
+    if (state.notes && state.notes.sections) {
+      const romans = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
+      state.notes.sections.forEach((s, i) => {
+        const want = i < romans.length ? romans[i] : String(i + 1);
+        s.number = want;
+        s.full_title = want + '. ' + s.title;
+      });
+    }
   }
 
   async function loadChapter(tbId) {
@@ -1047,10 +1078,41 @@
     else navigate('#/');
   });
   el('btn-home').addEventListener('click', () => navigate('#/'));
+  el('btn-sync').addEventListener('click', () => navigate('#/sync'));
 
   function setHeader(title) {
     el('app-title').textContent = title || 'Pocket URO';
+    updateSyncBadge();
   }
+  function updateSyncBadge() {
+    const btn = el('btn-sync');
+    if (!btn) return;
+    const n = dirtyDatasets().length;
+    btn.innerHTML = '⚙' + (n > 0 ? '<span class="sync-badge">' + n + '</span>' : '');
+  }
+
+  /* Edge-swipe-back gesture (PWA standalone mode has no Safari swipe) */
+  (function installEdgeSwipe() {
+    let x0 = null, y0 = null;
+    document.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      if (t.clientX < 30) { x0 = t.clientX; y0 = t.clientY; }
+      else { x0 = null; }
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - x0;
+      const dy = Math.abs(t.clientY - y0);
+      if (dx > 80 && dy < 60) {
+        if (location.hash && location.hash !== '#/' && location.hash !== '#') {
+          if (history.length > 1) history.back();
+          else navigate('#/');
+        }
+      }
+      x0 = null;
+    }, { passive: true });
+  })();
 
   /* ======================================================
      Home
@@ -1074,7 +1136,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.0 · 4 modules · offline ready</div>
+        <div class="brand-tag">v1.1 · HJH + edge-swipe + sync-always-visible</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -1884,10 +1946,12 @@
     const isText = t.type === 'text_only';
     const badges = [];
     if (t.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
+    if (t.has_hjh_content) badges.push('<span class="topic-badge hjh">💛 HJH</span>');
     if (isText) badges.push('<span class="topic-badge text-only">📄 Text</span>');
     const meta = isText ? ((t.markdown_content || '').length + ' chars') : ((t.slide_count || (t.slides ? t.slides.length : 0)) + ' slides');
+    const cardClass = t.has_hjh_content ? 'list-card hjh' : 'list-card';
     return `
-      <a class="list-card" href="#/textbook/t/${esc(tbId)}/${esc(t.id)}">
+      <a class="${cardClass}" href="#/textbook/t/${esc(tbId)}/${esc(t.id)}">
         <div style="flex:1;min-width:0">
           <div class="title" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${esc(t.title)}${badges.join('')}</div>
           <div class="meta">${meta}</div>
@@ -1932,6 +1996,7 @@
 
     const badges = [];
     if (topic.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
+    if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">💛 HJH</span>');
     if (topic.type === 'text_only') badges.push('<span class="topic-badge text-only">📄 Text</span>');
 
     const notesHTML = topic.notes ? `
@@ -2475,8 +2540,11 @@
         });
       }).catch(err => console.warn('SW registration failed', err));
     });
+    let reloadingForUpdate = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      // New SW activated
+      if (reloadingForUpdate) return;
+      reloadingForUpdate = true;
+      location.reload();
     });
   }
   el('btn-update-reload').addEventListener('click', () => {
