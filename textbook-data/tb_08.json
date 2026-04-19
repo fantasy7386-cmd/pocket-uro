@@ -162,7 +162,7 @@
         {
           "id": "t02",
           "title": "Infertility：初步與進階評估",
-          "slide_count": 10,
+          "slide_count": 11,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -330,6 +330,17 @@
               "slide_image": "images/textbook/ch08_male_repro/render/s1_s18.webp",
               "hidden": false,
               "ocr_text": "Infertility survey流程\n(Nature review 2005)\nHistory\nPhysical examination\nSemen analysis x 2\nNormal\nAbnormal\nFemale evaluation\nHormone evaluati\n生抽IAHFSH/FIPRI\n之後走流程\nEliminate gonadotoxins\nAbnormal\nNormal\nFurther evaluation based\non semen analysis\n有Az0ospernia就走Azoospermia的流程\nNot Improved\nImproved\nTreat\nfemale factor\n除了AzooSpermia\n的其他精液異常\nAzoospermia\nTreat\nfemale factor\nUnexplained infertility:\nAntisperm antibodies\nSperm chromatin structure\nSperm penetration or hemizona assay\nDNA fragmentation assay: SCSA, TUNEL, Comet assay, SCD test"
+            },
+            {
+              "slide_num": 2,
+              "text": [
+                "益生菌用在NOA病人身上",
+                "ED和CAD之間的關係"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s02.webp",
+              "hidden": false,
+              "ocr_text": "EAU2.5 MagRD. Spory\nLactobacillus plantarum 1008 revitalizes testicular health and sperm\ndevelopment in obese male mice model\n1 21-24 March 2025\nFor 16 weeks, and mice randomly chosen from the HFC group were later treated with a probiotic (LP1008) for the final\n8 weeks of HFP feeding (high-fat diet+ LP1008, n = 12).\nNormalized impact (Higher = Worse outcome)\nComparison of Health Outcomes between HFC and HFP Groups\nHFdGroup\nHFP Group (LP1008)\n0.0\nBlood Cholesterol\nInsulin Resistance'\nLiver Function (AST/ALT/LPS)'\nTestosterone\nSperm Quality\nAntioxidant Enzymes\nOxidative Stress'\npoptosis/inflammation\nGut Microbiote Balance\nHealeh Parameters\nwww.eauz3.org\nLiuetal\n益生菌用在NOA病公是\nJ ssocaon\nEAU25 MADRID. SPAN\nPredictive Value of Penile Doppler Ultrasound Impairments for Major\n21-24 Morch 2025\nCardiovascular Events in Patients Refractory to PDE5-1 Therapy: A Longitudinal\nAnalysis\nSurvival curves\n1.00\n8 0.75\n号 a.50\nLog-Rank p =0.032\n0.25\nProba\n0.00\nED和CAD之間的關係\n60\n80\n20\n40\nTime\nPSV>35cm/s PSV<35cm/s\nwww.eau25.org\nSartori et al\nof Uralogy\n。"
             }
           ]
         },
@@ -687,35 +698,10 @@
         {
           "id": "t05",
           "title": "Vasectomy & Vasovasotomy",
-          "slide_count": 7,
+          "slide_count": 6,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
-            {
-              "slide_num": 36,
-              "text": [
-                "HypoHypo:",
-                "Consider MRI to r/o pituitary tumor if 頭痛視力模糊神經異常",
-                "->先HCG(=LH)3-6個月, check sperm, 沒效加上rFSH (=FSH)",
-                "->hMG (LH+FSH activity) 3-6個月, check sperm",
-                "->SERMs (clomiphene) 3-6個月, check sperm",
-                "->if failed, mTESE/TESE + Assisted conception",
-                "HyperHypo: 治療同primary testicular failure",
-                "Androgen resistance: 排除antiandrogen drug, anabolic steroid use",
-                "Hyperprolactinemia:",
-                "Consider MRI to r/o pituitary tumor",
-                "Dopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)",
-                "NOA的hormone abnormality treatment",
-                "(針對生育功能)",
-                "hCG (1500~2000 IU) SC, 2~3 times/week",
-                "FSH (75U) or rhFSH (100~150U) SC, 2~3 times/week",
-                "Onset of spermatogenesis: 3~6 months"
-              ],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch08_male_repro/render/s1_s36.webp",
-              "hidden": false,
-              "ocr_text": "NOA的hormone abnormality treatment\n（針對生育功能）\n• HypoHypo:\nConsider MRl to r/o pituitary tumor if 頭痛視力模糊神經異常\n-二先HCG(=LH)3-6個月，check sperm， 沒效加上rFSH(=FSH)\n-二hG (LH+FSH activity) 3-5個月，check sperm\n-SSERMS (clomiphene） 3-6個月，Check sperm\n-sif failed, mTESE/TESE + Assisted conception\nI •hcG (1500~2000 1U) SC, 2~3 times/week\n•FSH (75U)or rhFSH (100~150U) SC, 2~3 times/ week\n• Onset of spermatogenesis: 3~6 months\n• HyperHypo：治療同primary testicular failure\n• Androgen resistance：排除antiandrogen drug, anabolic steroid use\n• Hyperprolactinemia:\nconsider MRI to r/o pituitary tumor\nDopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)"
-            },
             {
               "slide_num": 37,
               "text": [
@@ -811,7 +797,7 @@
         {
           "id": "t06",
           "title": "Hypogonadism（分類/Klinefelter/Kallmann/LOH/TRT）",
-          "slide_count": 17,
+          "slide_count": 18,
           "has_exam_questions": true,
           "has_hjh_content": false,
           "slides": [
@@ -1099,6 +1085,31 @@
               "has_exam_question": false,
               "slide_image": "images/textbook/ch08_male_repro/render/s1_s59.webp",
               "ocr_text": "Follow up after TRT\n•Follow up頻率：3m,6m, 12m, then Q12m(TUA)\n•全身性：general symptoms, Tlevel, Hct, lipid, GOT/GPT\n•Urology: PSA, DRE, LUTS (IPSS)\n•特殊考量：CHF, sleep apnea, and BMD 1-2 yrs(in men with osteoporosis\nor low-trauma fracture)\n•給TRT會Testicular hypofunction，一般在停止TRT 12到15個月\n後testicularhypofunction會恢復，但造精功能不一定能恢復"
+            },
+            {
+              "slide_num": 36,
+              "text": [
+                "HypoHypo:",
+                "Consider MRI to r/o pituitary tumor if 頭痛視力模糊神經異常",
+                "->先HCG(=LH)3-6個月, check sperm, 沒效加上rFSH (=FSH)",
+                "->hMG (LH+FSH activity) 3-6個月, check sperm",
+                "->SERMs (clomiphene) 3-6個月, check sperm",
+                "->if failed, mTESE/TESE + Assisted conception",
+                "HyperHypo: 治療同primary testicular failure",
+                "Androgen resistance: 排除antiandrogen drug, anabolic steroid use",
+                "Hyperprolactinemia:",
+                "Consider MRI to r/o pituitary tumor",
+                "Dopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)",
+                "NOA的hormone abnormality treatment",
+                "(針對生育功能)",
+                "hCG (1500~2000 IU) SC, 2~3 times/week",
+                "FSH (75U) or rhFSH (100~150U) SC, 2~3 times/week",
+                "Onset of spermatogenesis: 3~6 months"
+              ],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s1_s36.webp",
+              "hidden": false,
+              "ocr_text": "NOA的hormone abnormality treatment\n（針對生育功能）\n• HypoHypo:\nConsider MRl to r/o pituitary tumor if 頭痛視力模糊神經異常\n-二先HCG(=LH)3-6個月，check sperm， 沒效加上rFSH(=FSH)\n-二hG (LH+FSH activity) 3-5個月，check sperm\n-SSERMS (clomiphene） 3-6個月，Check sperm\n-sif failed, mTESE/TESE + Assisted conception\nI •hcG (1500~2000 1U) SC, 2~3 times/week\n•FSH (75U)or rhFSH (100~150U) SC, 2~3 times/ week\n• Onset of spermatogenesis: 3~6 months\n• HyperHypo：治療同primary testicular failure\n• Androgen resistance：排除antiandrogen drug, anabolic steroid use\n• Hyperprolactinemia:\nconsider MRI to r/o pituitary tumor\nDopamine agonist(bromocriptine/Parlodel) and (cabergoline/Dostinex)"
             }
           ]
         }
@@ -1113,29 +1124,10 @@
         {
           "id": "t07",
           "title": "勃起生理（CC/CS/Glans/Detumescence）",
-          "slide_count": 10,
+          "slide_count": 8,
           "has_exam_questions": true,
           "has_hjh_content": false,
           "slides": [
-            {
-              "slide_num": 2,
-              "text": [
-                "益生菌用在NOA病人身上",
-                "ED和CAD之間的關係"
-              ],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch08_male_repro/render/s2_s02.webp",
-              "hidden": false,
-              "ocr_text": "EAU2.5 MagRD. Spory\nLactobacillus plantarum 1008 revitalizes testicular health and sperm\ndevelopment in obese male mice model\n1 21-24 March 2025\nFor 16 weeks, and mice randomly chosen from the HFC group were later treated with a probiotic (LP1008) for the final\n8 weeks of HFP feeding (high-fat diet+ LP1008, n = 12).\nNormalized impact (Higher = Worse outcome)\nComparison of Health Outcomes between HFC and HFP Groups\nHFdGroup\nHFP Group (LP1008)\n0.0\nBlood Cholesterol\nInsulin Resistance'\nLiver Function (AST/ALT/LPS)'\nTestosterone\nSperm Quality\nAntioxidant Enzymes\nOxidative Stress'\npoptosis/inflammation\nGut Microbiote Balance\nHealeh Parameters\nwww.eauz3.org\nLiuetal\n益生菌用在NOA病公是\nJ ssocaon\nEAU25 MADRID. SPAN\nPredictive Value of Penile Doppler Ultrasound Impairments for Major\n21-24 Morch 2025\nCardiovascular Events in Patients Refractory to PDE5-1 Therapy: A Longitudinal\nAnalysis\nSurvival curves\n1.00\n8 0.75\n号 a.50\nLog-Rank p =0.032\n0.25\nProba\n0.00\nED和CAD之間的關係\n60\n80\n20\n40\nTime\nPSV>35cm/s PSV<35cm/s\nwww.eau25.org\nSartori et al\nof Uralogy\n。"
-            },
-            {
-              "slide_num": 3,
-              "text": [],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch08_male_repro/render/s2_s03.webp",
-              "hidden": false,
-              "ocr_text": "EAU25 upme seous\nA randomized comparison between Selution SLR™m sirolimus-eluting balloon and\nplain old balloon angioplasty in patients with distal internal pudendal-penile artery\n21-24 March 2025\ndisease, erectile dysfunction and/ or lower urinary tract symptoms: the PERFECT-\nSELUTION first-in-man study\nComparison of Clinical Outcomes between SEB and PoB Groups\nBinary Restenosis\nFollow-up Diameter Stenosis\nClinical Success at 8 Months\n100r\n80\n60\nPercentage (%)\nPercentage (%)\n20\n。\n100，\n80\n60\n40\n20-\n。\n100r\nPercentage (%)\n80\n60\n40\n20\n0\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nwww.eau25.org\nWang T-D.\nEuropean\nof Urology"
-            },
             {
               "slide_num": 4,
               "text": [
@@ -1409,7 +1401,7 @@
         {
           "id": "t09",
           "title": "ED：治療（PDE5i/ICI/VED/Prosthesis）",
-          "slide_count": 10,
+          "slide_count": 11,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -1624,6 +1616,14 @@
               "slide_image": "images/textbook/ch08_male_repro/render/s2_s29.webp",
               "hidden": false,
               "ocr_text": "Tsupplement for ED\n• Prevalence of hypogonadism in men with ED ranges from 23%\nto 47%\n• Current recommendations suggest that a short (e.8., 3-month)\ntherapeutic trial is justified, and if no response, testosterone\nadministration should be discontinued\n• Combination therapy with phosphodiesterase type 5 inhibitors\n(PDE5-1) is a highly debated topic"
+            },
+            {
+              "slide_num": 3,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch08_male_repro/render/s2_s03.webp",
+              "hidden": false,
+              "ocr_text": "EAU25 upme seous\nA randomized comparison between Selution SLR™m sirolimus-eluting balloon and\nplain old balloon angioplasty in patients with distal internal pudendal-penile artery\n21-24 March 2025\ndisease, erectile dysfunction and/ or lower urinary tract symptoms: the PERFECT-\nSELUTION first-in-man study\nComparison of Clinical Outcomes between SEB and PoB Groups\nBinary Restenosis\nFollow-up Diameter Stenosis\nClinical Success at 8 Months\n100r\n80\n60\nPercentage (%)\nPercentage (%)\n20\n。\n100，\n80\n60\n40\n20-\n。\n100r\nPercentage (%)\n80\n60\n40\n20\n0\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nSEB Group\nPOB Group\nwww.eau25.org\nWang T-D.\nEuropean\nof Urology"
             }
           ]
         },

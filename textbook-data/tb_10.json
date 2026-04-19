@@ -362,7 +362,7 @@
         {
           "id": "t04",
           "title": "EPN / XGPN / CPN",
-          "slide_count": 10,
+          "slide_count": 11,
           "has_exam_questions": true,
           "has_hjh_content": false,
           "slides": [
@@ -528,16 +528,7 @@
               "slide_image": "images/textbook/ch10_infection/render/ss29.webp",
               "hidden": false,
               "ocr_text": "×GPN stage and management\n•Stage l: the disease is confined to the renal parenchyma only\n•Stage ll:extension to perirenal fat\n• Stage Il: extension to perirenal and pararenal spaces or diffuse\nretroperitoneum\n•Management: Nephrectomy(因為有infection 和cancer risk, 非\nemergent, 因為本來就放很久了）"
-            }
-          ]
-        },
-        {
-          "id": "t05",
-          "title": "Abscess（Renal / Perinephric / Retroperitoneal）& Pyonephrosis",
-          "slide_count": 7,
-          "has_exam_questions": false,
-          "has_hjh_content": false,
-          "slides": [
+            },
             {
               "slide_num": 30,
               "text": [
@@ -549,7 +540,16 @@
               "slide_image": "images/textbook/ch10_infection/render/ss30.webp",
               "hidden": false,
               "ocr_text": "EPN\nVS\nXGPN\nitems\nPathogen\nPredisposing\nPresentation\nEpidemiology\nRadiology\nManagement\nEmphysematou\ns pyelnephritis\nE.Coli\nDM\nFever, vomiting,\nflank pain\nAdult only\nTissue gas\nSurgical\nemergency\nxGp\nProteus\nmirabilis\nObstructing\nnephrolithiasis\nFlank pain,\nfever, malaise\nAny age, peak\n5th ~7th\ndecades\nReniform\nmass with\ncentral\ncalcification\nRule out\nmalignancy"
-            },
+            }
+          ]
+        },
+        {
+          "id": "t05",
+          "title": "Abscess（Renal / Perinephric / Retroperitoneal）& Pyonephrosis",
+          "slide_count": 6,
+          "has_exam_questions": false,
+          "has_hjh_content": false,
+          "slides": [
             {
               "slide_num": 31,
               "text": [

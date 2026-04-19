@@ -148,7 +148,7 @@
         {
           "id": "t02",
           "title": "睪丸癌：特徵與診斷",
-          "slide_count": 9,
+          "slide_count": 8,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -307,14 +307,6 @@
               "slide_image": "images/textbook/ch05_genital_ca/render/ss16.webp",
               "hidden": false,
               "ocr_text": "Diagnosis evaluation\n•Tumor marker\n•AFP -只有NSGCT會高，半衰期5-7天（所以術後5-7天抽)，normal range 0-10 ng/ml\n• Embryonal carcinoma 90%\n• Yolk sac tumor 100%\n• Teratoma 50%\n•B-HCG-半衰期1.5天，normal 0-5 mlU/mL\n•輕微B-HCG 上升(<20)可能是false positive result(hypogonadism, marijuana use)\n•seminoma通常不會高過1000 1U/L,seminoma 30%,choricocarcinoma 100%\n•S1中B-HCG的定義是<50001U/L，所以seminoma幾乎不可能會＄2\n•LDH-半衰期不固定•約24小時，normal 140-271 1U/\n不應當做治療的考量標準，尤其在seminoma\n• miRNA371 (seminoma: >95%, non seminoma:>95%)\n• Utrasound of both testes\n•若有摸到睪丸腫瘤，或有後腹腔腫瘤合併或不合併升高的tumor markers(沒摸到睪\n丸腫瘤）\n• Microlithiasis in sonography\n•In general population, the significance of microlithiasis is unclear\n•In men with history of GCT, microlithiasis of the contralateral testis is associated\nwith an increased risk of ITGCN（但NCCN不建議切片）"
-            },
-            {
-              "slide_num": 17,
-              "text": [],
-              "has_exam_question": false,
-              "slide_image": "images/textbook/ch05_genital_ca/render/ss17.webp",
-              "hidden": false,
-              "ocr_text": "Prognostic Molecular Markers of Lymph Node Status and Survival in Penile Cancer: Current Status\nMARKER\nHuman papillomavirus (HPv)\np16NK4s\nROLE\nHigh-risk (HR) types affect TP53 and RB function\nIncreased expression with HR-HPV\nLYMPH NODE STATUS\nContradictory studies\nTP53\nAltered or mutated expression, increased proliferation, altered apoptosis,\ndedifferentiation\nInhibits RB function, enhancing proliferation\nSerum marker function unknown\nPreliminary data correlated with increased\nmetastasis\nNot established\nCorrelates with grossly evident metastases\nCDKN2A\nSquamous cell carcinoma\nantigen (TA-4)\nKi-67\nE-cadherin\nNuclear protein associated with cycling cells\nEpithelial cell adhesion molecule lost in progression\nMMP.9\nMatrix metalloproteinase family facilitates invasion\nPredicts increased risk\nLow expression associated with nodal\nmetastasis\nNo role\nSURVIVAL\nIncreased survival a\nIncreased survival, decreased\nrecurrence b\nCorrelated with decreased survival\nNot established\nNo role\nNo role\nLow expression predicts worse survival\nHigh expression predicts recurrence"
             },
             {
               "slide_num": 18,
@@ -1063,7 +1055,7 @@
         {
           "id": "t08",
           "title": "陰莖癌前病變與 Staging",
-          "slide_count": 4,
+          "slide_count": 5,
           "has_exam_questions": false,
           "has_hjh_content": false,
           "slides": [
@@ -1115,6 +1107,14 @@
               "slide_image": "images/textbook/ch05_genital_ca/render/ss64.webp",
               "hidden": false,
               "ocr_text": "T\nStage Ois\nStage oa\nStage l\nStage IlA\nTis\nTa\nT1a\nT1b\nM\nMO\nMO\nMO\nMO\nT2\nMO\nT3\nStage IIB\nStage IllA\nT1-3\nStage lIB\nT1-3\nStage lV\nMO\nMo\nMO\nT4\nAny N\nMO\nAny T\nN3\nMo\nAny T Any N M1\n判定流程\n1.T16 很重要，T1b以上 = Stage ll\nT1b, T2 ≥ Stage IIA\nT3 -> Stage 11B\n2. T1-T3, N1-N2 > Stage l\nN1 - Stage IIA\nN2 -> Stage IIIB\n3.T4 / N3 / M1> Stage /V"
+            },
+            {
+              "slide_num": 17,
+              "text": [],
+              "has_exam_question": false,
+              "slide_image": "images/textbook/ch05_genital_ca/render/ss17.webp",
+              "hidden": false,
+              "ocr_text": "Prognostic Molecular Markers of Lymph Node Status and Survival in Penile Cancer: Current Status\nMARKER\nHuman papillomavirus (HPv)\np16NK4s\nROLE\nHigh-risk (HR) types affect TP53 and RB function\nIncreased expression with HR-HPV\nLYMPH NODE STATUS\nContradictory studies\nTP53\nAltered or mutated expression, increased proliferation, altered apoptosis,\ndedifferentiation\nInhibits RB function, enhancing proliferation\nSerum marker function unknown\nPreliminary data correlated with increased\nmetastasis\nNot established\nCorrelates with grossly evident metastases\nCDKN2A\nSquamous cell carcinoma\nantigen (TA-4)\nKi-67\nE-cadherin\nNuclear protein associated with cycling cells\nEpithelial cell adhesion molecule lost in progression\nMMP.9\nMatrix metalloproteinase family facilitates invasion\nPredicts increased risk\nLow expression associated with nodal\nmetastasis\nNo role\nSURVIVAL\nIncreased survival a\nIncreased survival, decreased\nrecurrence b\nCorrelated with decreased survival\nNot established\nNo role\nNo role\nLow expression predicts worse survival\nHigh expression predicts recurrence"
             }
           ]
         },

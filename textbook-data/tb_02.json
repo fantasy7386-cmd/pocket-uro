@@ -2529,7 +2529,7 @@
         {
           "id": "t21",
           "title": "mCSPC：定義與 Trials",
-          "slide_count": 62,
+          "slide_count": 63,
           "has_exam_questions": false,
           "has_hjh_content": true,
           "slides": [
@@ -4569,13 +4569,29 @@
               "has_exam_question": false,
               "slide_image": "images/textbook/ch02_prostate/render/hjh_p076.webp",
               "ocr_text": "AMPLITUDE: Conclusions\n•The AMPLITUDE trial met its primary end point of rPFS, with likely greatest\nbenefit in patients with BRCA alterations\n• Improvements in rPFS are supported by a statistically significant benefit in\ntime to symptomatic progression and a trend toward improved os\n• The safety profile of niraparib + AAP was consistent with that previously\nobserved in the MAGNITUDE trial,1 with a ≤5% increase in patients\ndiscontinuing treatment due to toxicity than in those receiving placebo\n• AMPLITUDE supports early genomic testing and niraparib + AAP as a new\ntreatment option for patients with mCSPC and HRR gene alterations\n1. Chi kN.J Clin Oncol. 2023;41:3339-3351.\n2025 ASCO\nANNUAL MEETING\nTong\n#ASCO25\nPRESENTED BY: Prof. Gerhardt Attard, MD, FRCP, PhD\nPrpepntation ic nranortv af thp aihor and Aseo permiccion ronrirpd for roiicp contpnt normiccianshacmo\nContent of this pre sentation is the property of the author, licensed by ASCO. Permis sion required for reuse.\nCIINCIANCAIA-Y\nKNOWLEDGE CONQUERS CANCER"
+            },
+            {
+              "slide_num": 94,
+              "text": [
+                "PARP inhibitor",
+                "2025ASCO",
+                "AMPLITUDE: Nira vs Abi (mHSPC, HRR+ group)",
+                "70% High volume",
+                "rPFS: BRCAm=> HR=0.52,  HRR=> HR:0.6??",
+                "OS:immature",
+                "S.E.: anemia"
+              ],
+              "has_exam_question": true,
+              "slide_image": "images/textbook/ch02_prostate/render/s2_s91.webp",
+              "hidden": false,
+              "ocr_text": "PARP inhibitor\n2025ASCO\nAMPLITUDE: Nira vs Abi (mHSPC, HRR+ group)\n70% High volume\nrPFS: BRCAm=> HR=0.52， HRR=> HR:0.6？?\nOS:immature\nS.E.: anemia"
             }
           ]
         },
         {
           "id": "t22",
           "title": "nmCRPC Trials（PROSPER / SPARTAN / ARAMIS）",
-          "slide_count": 26,
+          "slide_count": 25,
           "has_exam_questions": true,
           "has_hjh_content": true,
           "slides": [
@@ -4646,22 +4662,6 @@
               "slide_image": "images/textbook/ch02_prostate/render/s2_s90.webp",
               "hidden": false,
               "ocr_text": "3 Key Clinical Trials in\nnmCRPC(PSAD≤10 mo)\n有個ADA拿PEN寫說要做SPA\nSPARTAN\nApalutamide\nPROSPER\nEnzalutamide\nARAMIS\nDarolutamide\nThe NEW ENGLAND JOURNALOTMEDICINE\nORIGINALARTICLE\nApalutamide Treatment and Metastasis-free\nSurvival in Prostate Cancer\nMatthewRsmithMpPh.pFredsadM.\nimonChowanury.m.b.\nB.. Fh.b.tephaneoudard.m..r..\nBorisA.Fadaschik.MpuleNgmt.Mp.bavdoimosup.P.b\nPaul N.Mainwanng. M.B..B.S.M.DalYoulLee,M.D.\nHiroii Uemura. M.D. Ph.D.Angela Lopez-Gitiitx.M.D. geralyn c. Trudel. Ph.D\nByronM.tspina. Bo.rouylhu.P.b.rouncrark.m.o.\nwvayneK. Kickolt.M.D.Margaretx.ruM.b.andEric.smallM.b.\nforthe SPARANinvestigatorst\nThe NEW ENGLAND\nJOURNAL o MEDICINE\nUNE4S.4018\nEnzalutamide in Men with Nonmetastatic, Castration-Resistant\nProstate Cancer\nMaha Hussain, M D., Karim Fieazi, M.0, ph. D, Fred Saad, M.D, Per Rathen borg. M.D, Ncal Shore, M.D..\nUbirajara Ferrera, M.D, Ph.D., Petro lvashchenko, M.D. Eren Demirtan, Ph.D, Katharina Modelska, M.D. Ph.D.\nDe phung. a. S. Andrew xrrvoshik. M.D. Pn D. and Cora N. Sternberg. M D.\nTHe NEW ENGLAND JOURNAL OfMEDICINE\nORIGINAL ARTICLE\nDarolutamide in Nonmetastatic,\nCastration-Resistant Prostate Cancer\nKarim Fizazi, M.D., Neal Shore, M.D., Teuvo L. Tammela, M.D., Ph.D.,\nAlbertas Ulys, M.D., Egils Vjaters, M.D., Sergey Polyakov, M.D.,\nMindaugas Jievaltas, M.D., Murilo Luz, M.D. Boris Alekseev, M.D. Iris Kuss, M.D.,\nChristian Kappeler, Ph.D,, Amir Snapir, M.D., Ph.D., Toni Sarapohja, M.Sc..\nand Matthew R. Smith, M.D.. Pn.D., for the ARAMIS Investigators*\nmOCRPC\nSpartan\nARAMIS\nPROSPER\n3\n3\n3\nmOCRPC\nmOCRPC\nmOCRPC\nApalutamide\ndarolutamide\nEnzalutamide\nADT alone\nADT alone\nADT alone\nMOCRPC(PSADT<=10m）有MFS (HR0.28, +24M)。 有OS(but HRO.78,+14M). 有psa PFS\nMOCRPC(PSADT<=10m） 有MFS (HR0.41. +22M).有OS,有PFS\nMOCRPC(PSADT <=10m）有MFS (HR0.29, +224)。 有OS(HR0.73,+10M)。 原psa PFS"
-            },
-            {
-              "slide_num": 94,
-              "text": [
-                "PARP inhibitor",
-                "2025ASCO",
-                "AMPLITUDE: Nira vs Abi (mHSPC, HRR+ group)",
-                "70% High volume",
-                "rPFS: BRCAm=> HR=0.52,  HRR=> HR:0.6??",
-                "OS:immature",
-                "S.E.: anemia"
-              ],
-              "has_exam_question": true,
-              "slide_image": "images/textbook/ch02_prostate/render/s2_s91.webp",
-              "hidden": false,
-              "ocr_text": "PARP inhibitor\n2025ASCO\nAMPLITUDE: Nira vs Abi (mHSPC, HRR+ group)\n70% High volume\nrPFS: BRCAm=> HR=0.52， HRR=> HR:0.6？?\nOS:immature\nS.E.: anemia"
             },
             {
               "slide_num": 95,
