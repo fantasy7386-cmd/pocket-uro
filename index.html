@@ -612,6 +612,79 @@
     }
     .sync-panel .dirty-list li { list-style: disc; }
 
+    /* ============ Lightbox (slide zoom) ============ */
+    .lightbox {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.95);
+      z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0;
+      touch-action: pinch-zoom;
+      -webkit-user-select: none; user-select: none;
+    }
+    .lightbox.hidden { display: none; }
+    .lightbox .lb-close {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + 12px);
+      right: 12px;
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      font-size: 28px; line-height: 1;
+      border-radius: 50%;
+      z-index: 2001;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lightbox .lb-caption {
+      position: fixed;
+      bottom: calc(env(safe-area-inset-bottom, 0) + 12px);
+      left: 50%; transform: translateX(-50%);
+      background: rgba(255,255,255,.12);
+      color: #fff; font-size: 13px;
+      padding: 6px 14px; border-radius: 14px;
+      z-index: 2001;
+      max-width: 90%;
+      text-align: center;
+      pointer-events: none;
+    }
+    .lightbox .lb-img-wrap {
+      width: 100%; height: 100%;
+      overflow: auto;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lightbox img {
+      display: block;
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      touch-action: pinch-zoom;
+      transition: transform .2s ease;
+      transform-origin: center center;
+      cursor: zoom-in;
+    }
+    .lightbox img.zoomed {
+      max-width: none; max-height: none;
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+    .lightbox .lb-hint {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + 20px);
+      left: 50%; transform: translateX(-50%);
+      background: rgba(255,255,255,.12);
+      color: #fff; font-size: 11px;
+      padding: 4px 10px; border-radius: 10px;
+      z-index: 2001;
+      pointer-events: none;
+      opacity: .8;
+    }
+    .slide-frame img {
+      cursor: zoom-in;
+      -webkit-tap-highlight-color: rgba(142,68,173,.2);
+    }
+
     /* ============ Update toast ============ */
     .update-banner {
       position: sticky; top: var(--header-height); z-index: 50;
@@ -654,6 +727,16 @@
   </div>
 
   <div class="toast hidden" id="toast"></div>
+
+  <!-- Slide lightbox -->
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Slide zoom">
+    <div class="lb-hint">double-tap / pinch to zoom · tap outside to close</div>
+    <button class="lb-close" id="lb-close" aria-label="close">×</button>
+    <div class="lb-img-wrap" id="lb-wrap">
+      <img id="lb-img" alt="">
+    </div>
+    <div class="lb-caption hidden" id="lb-caption"></div>
+  </div>
 
   <script src="lib/marked.min.js?v=3"></script>
   <script>
@@ -1145,6 +1228,45 @@
     btn.innerHTML = '⚙' + (n > 0 ? '<span class="sync-badge">' + n + '</span>' : '');
   }
 
+  /* Lightbox / slide zoom */
+  window.__openLightbox = function(src, caption) {
+    const lb = el('lightbox');
+    const img = el('lb-img');
+    const cap = el('lb-caption');
+    img.src = src;
+    img.classList.remove('zoomed');
+    if (caption) { cap.textContent = caption; cap.classList.remove('hidden'); }
+    else { cap.classList.add('hidden'); }
+    lb.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  function closeLightbox() {
+    el('lightbox').classList.add('hidden');
+    el('lb-img').src = '';
+    document.body.style.overflow = '';
+  }
+  el('lb-close').addEventListener('click', closeLightbox);
+  el('lightbox').addEventListener('click', (e) => {
+    // Close when tapping backdrop (not the image or close button)
+    if (e.target.id === 'lightbox' || e.target.id === 'lb-wrap') closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !el('lightbox').classList.contains('hidden')) closeLightbox();
+  });
+  // Double-tap to toggle 2× on the image itself
+  (function installDoubleTap() {
+    const img = el('lb-img');
+    let lastTap = 0;
+    img.addEventListener('click', (e) => {
+      const now = Date.now();
+      if (now - lastTap < 320) {
+        img.classList.toggle('zoomed');
+        e.stopPropagation();
+      }
+      lastTap = now;
+    });
+  })();
+
   /* Edge-swipe-back gesture (PWA standalone mode has no Safari swipe) */
   (function installEdgeSwipe() {
     let x0 = null, y0 = null;
@@ -1190,7 +1312,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag">v1.5.1 · search fix · AND-term · collapsible HJH</div>
+        <div class="brand-tag">v1.6 · tap slide to zoom · lightbox with pinch</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2155,7 +2277,7 @@
       <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px #f1c40f"' : ''}>
         <div class="slide-frame" style="position:relative">
           ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
-          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager">
+          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))} · ${idx + 1}/${slides.length}')">
         </div>
         <div class="slide-controls">
           <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
@@ -2283,7 +2405,7 @@
         <h2 style="font-size:18px;margin-bottom:8px">OCR · ${esc(found.topic.title)}</h2>
         <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">Slide ${slideIdx + 1} of ${slides.length} · editing <code>text[]</code>. Raw <code>ocr_text</code> is not modified.</div>
         <div class="slide-frame" style="margin-bottom:12px">
-          <img src="${escAttr(s.slide_image || '')}" alt="slide ${s.slide_num}">
+          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))}')">
         </div>
         <div class="edit-field">
           <label>Caption lines (one per line)</label>
