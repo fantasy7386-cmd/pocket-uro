@@ -1764,11 +1764,16 @@
   }
   window.__mdImage = function() {
     if (!getMdTextarea()) { showToast('請先點擊內文區再插入圖片', 'error'); return; }
+    // iOS Safari requires the file input to be in the DOM for .click() to
+    // open the native photo picker. Non-attached inputs silently fail.
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/*';
+    input.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;pointer-events:none';
+    const cleanup = () => { if (input.parentNode) input.parentNode.removeChild(input); };
     input.addEventListener('change', async (ev) => {
       const file = ev.target.files && ev.target.files[0];
+      cleanup();
       if (!file) return;
       try {
         showToast('處理圖片中…');
@@ -1781,7 +1786,10 @@
         showToast('圖片插入失敗：' + (err.message || err), 'error');
       }
     });
+    document.body.appendChild(input);
     input.click();
+    // Safety cleanup if user cancels (no change event fires)
+    setTimeout(cleanup, 60000);
   };
 
   // Keyboard shortcuts (mostly useful on desktop / iPad with keyboard)
@@ -2074,7 +2082,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.6.4 · search input focus-loss fix · image upload in ALL 4 modules</div>
+        <div class="brand-tag" id="brand-tag">v3.6.5 · iOS image picker fix (attach to DOM) · search focus fix · image upload all 4</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">

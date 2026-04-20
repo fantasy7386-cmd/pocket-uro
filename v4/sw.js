@@ -3,7 +3,7 @@
 // Pocket URO v4 Service Worker — scope: /pocket-uro/v4/
 // Shares parent (/pocket-uro/) data + images via cross-path fetch interception.
 
-const CACHE_VERSION = 'pocket-uro-v4.0.2-alpha-fix5';
+const CACHE_VERSION = 'pocket-uro-v4.0.2-alpha-fix6';
 
 // Core assets — v4 shell + parent shared JSON that the v4 page depends on.
 // Paths here use v4/ prefix because SW fetch URLs are absolute.
