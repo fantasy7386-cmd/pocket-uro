@@ -2074,7 +2074,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.6.3 · image upload in ALL 4 modules · Patient Ed → markdown · PPu Notes section.notes</div>
+        <div class="brand-tag" id="brand-tag">v3.6.4 · search input focus-loss fix · image upload in ALL 4 modules</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3669,7 +3669,13 @@
         if (v) params.push('q=' + encodeURIComponent(v));
         if (only) params.push('only=' + only);
         const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
-        if (location.hash !== hash) location.replace(hash);
+        // Use history.replaceState (does NOT fire hashchange) instead of
+        // location.replace (fires hashchange → router → renderSearch → input
+        // DOM replaced → focus lost mid-typing). doSearch re-renders only
+        // #search-results so the input element stays intact.
+        if (location.hash !== hash) {
+          history.replaceState(null, '', (location.pathname + location.search + hash));
+        }
         doSearch(v, only);
       }, 220);
     });
