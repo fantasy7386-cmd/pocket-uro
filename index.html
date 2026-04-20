@@ -947,15 +947,6 @@
 </head>
 <body>
 
-  <!-- ============ Access gate ============ -->
-  <div class="gate" id="gate">
-    <h1>Pocket URO</h1>
-    <p>Urology reference · residents only</p>
-    <input type="text" id="gate-input" placeholder="員編" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="text">
-    <button id="gate-submit">進入</button>
-    <div class="error" id="gate-error"></div>
-  </div>
-
   <!-- ============ App shell ============ -->
   <div id="app" hidden>
     <header class="app-header" id="app-header" hidden>
@@ -1001,21 +992,35 @@
   /* ======================================================
      Config
   ====================================================== */
-  // Admin codes: full editing + sync permissions
-  const ADMIN_CODES = ['ADMIN', '123944', 'Y08594'];
-  // Viewer codes: share with residents / other users — read-only, cannot escalate
-  const VIEWER_CODES = ['URO'];
-  const VALID_CODES = [...ADMIN_CODES, ...VIEWER_CODES];
+  // Admin auth — viewer-default model (v3.6+ / v4.0.2+):
+  // - No gate on app open; everyone enters as viewer
+  // - Admin unlocks via Settings → enters username + password
+  // - Password hashed client-side with SHA-256(salt + pw)
+  // - Client-side only; true data security is the GitHub token (separate)
+  const ADMIN_USERS = ['123944', 'Y08594'];
+  const ADMIN_PW_HASH = '12f29e25d6a1521a315895523a4f18ee2ff11e9c6f6d2db0009631148da257ca';
+  const ADMIN_SALT = 'pocket-uro-2026-puro-salt-v5';
+  async function sha256Hex(s) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+  async function verifyAdminAuth(username, password) {
+    if (!ADMIN_USERS.includes(username)) return false;
+    const hash = await sha256Hex(ADMIN_SALT + password);
+    return hash === ADMIN_PW_HASH;
+  }
   const GH_REPO = 'fantasy7386-cmd/pocket-uro';
   const LS = {
-    ACCESS: 'puro_access_code',
+    ACCESS: 'puro_access_code',        // (legacy, unused post v3.6 — keep key for cleanup)
+    ADMIN_UNLOCKED: 'puro_admin_unlocked',  // 'yes' after successful sign-in
+    ADMIN_USER: 'puro_admin_user',     // '123944' or 'Y08594'
     TOKEN: 'puro_gh_token',
-    ADMIN: 'puro_admin_mode',      // 'on' | 'off' (user toggle override)
+    ADMIN: 'puro_admin_mode',          // 'off' = admin in preview-as-viewer mode
     FAVS: 'puro_favorites',
-    DATA: 'puro_data_json',        // local override for Patient Ed
-    NOTES: 'puro_notes_json',      // local override for PPu Notes
-    TIPS: 'puro_tips_json',        // local override for Tips & Guide
-    TB_PREFIX: 'puro_tb_',         // local override for textbook chapter: puro_tb_tb_01
+    DATA: 'puro_data_json',
+    NOTES: 'puro_notes_json',
+    TIPS: 'puro_tips_json',
+    TB_PREFIX: 'puro_tb_',
     RECENT_SEARCH: 'puro_recent_search',
   };
   const MODULES = [
@@ -1315,62 +1320,30 @@
   }
 
   /* ======================================================
-     Access gate
+     Boot: no gate (viewer default). openApp shows shell + boots.
   ====================================================== */
-  function gateCheck() {
-    // Auto-login via URL param: ?code=URO (or any valid code)
-    const qs = new URLSearchParams(location.search);
-    const urlCode = (qs.get('code') || '').toUpperCase();
-    if (urlCode && VALID_CODES.includes(urlCode)) {
-      localStorage.setItem(LS.ACCESS, urlCode);
-      // Clean URL to avoid token-sharing reused as bookmark with code still in query
-      const clean = location.pathname + (location.hash || '');
-      history.replaceState(null, '', clean);
-      openApp();
-      return true;
-    }
-    const saved = (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
-    if (saved && VALID_CODES.includes(saved)) {
-      openApp();
-      return true;
-    }
-    return false;
-  }
   function openApp() {
-    el('gate').classList.add('hidden');
+    const g = el('gate');
+    if (g) g.classList.add('hidden');
     el('app').hidden = false;
     el('app-header').hidden = false;
     boot();
   }
-  function gateSubmit() {
-    const code = el('gate-input').value.trim().toUpperCase();
-    if (VALID_CODES.includes(code)) {
-      localStorage.setItem(LS.ACCESS, code);
-      haptic('success');
-      openApp();
-    } else {
-      haptic('error');
-      el('gate-error').textContent = '員編無效';
-    }
+  // Legacy gateCheck preserved as a no-op for call-site compatibility
+  function gateCheck() {
+    openApp();
+    return true;
   }
-  el('gate-submit').addEventListener('click', gateSubmit);
-  el('gate-input').addEventListener('keydown', e => { if (e.key === 'Enter') gateSubmit(); });
-
-  // Attempt to focus gate input on boot (iOS PWA requires user gesture for keyboard,
-  // but the focus ring helps visual affordance)
-  setTimeout(() => {
-    const gi = document.getElementById('gate-input');
-    if (gi && !document.getElementById('gate').classList.contains('hidden')) gi.focus();
-  }, 50);
 
   /* ======================================================
      Admin detection
   ====================================================== */
   function currentCode() {
-    return (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
+    return (localStorage.getItem(LS.ADMIN_USER) || 'VIEWER').toUpperCase();
   }
   function isAdminCode() {
-    return ADMIN_CODES.includes(currentCode());
+    // Renamed semantic: "is admin authenticated"; kept name for caller compatibility
+    return localStorage.getItem(LS.ADMIN_UNLOCKED) === 'yes';
   }
   function isAdmin() {
     // Admin code users can temporarily preview as viewer (LS.ADMIN === 'off'),
@@ -1388,6 +1361,39 @@
     } else {
       localStorage.setItem(LS.ADMIN, 'off');
     }
+    router();
+  };
+
+  window.__unlockAdmin = async function() {
+    const uEl  = el('admin-user-input');
+    const pwEl = el('admin-pw-input');
+    const errEl = el('admin-signin-error');
+    if (!uEl || !pwEl) return;
+    const username = (uEl.value || '').trim();
+    const password = pwEl.value || '';
+    const showErr = (msg) => {
+      if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
+    };
+    if (!username || !password) { showErr('請輸入帳號與密碼'); return; }
+    try {
+      const ok = await verifyAdminAuth(username, password);
+      if (!ok) { showErr('帳號或密碼錯誤'); pwEl.value = ''; return; }
+      localStorage.setItem(LS.ADMIN_UNLOCKED, 'yes');
+      localStorage.setItem(LS.ADMIN_USER, username);
+      localStorage.removeItem(LS.ADMIN); // clear preview-as-viewer flag
+      showToast('Admin unlocked — welcome ' + username, 'success');
+      router();
+    } catch (e) {
+      showErr('Sign-in failed: ' + (e && e.message || e));
+    }
+  };
+
+  window.__lockAdmin = function() {
+    if (!confirm('Sign out of admin? You can still use the app as a viewer.')) return;
+    localStorage.removeItem(LS.ADMIN_UNLOCKED);
+    localStorage.removeItem(LS.ADMIN_USER);
+    localStorage.removeItem(LS.ADMIN);
+    showToast('Signed out');
     router();
   };
 
@@ -1980,7 +1986,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.5 · remote kill-switch (app-status.json) · v3.4 data unchanged</div>
+        <div class="brand-tag" id="brand-tag">v3.6 · viewer-open + admin sign-in (user/pw) · v3.4 data unchanged</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3919,12 +3925,12 @@
       <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
       ${isRealView ? `
         <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
-          You're signed in with a viewer code (<code>${esc(currentCode())}</code>). Admin-only settings (GitHub token, sync, submission URL) are hidden.
+          Viewer mode — browse everything, no sign-in needed. Admin sign-in (below) unlocks editing + GitHub sync.
         </div>
       ` : ''}
       ${isPreviewing ? `
         <div style="padding:10px 14px;background:#fff5d6;border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
-          <span>👁 Preview as viewer — admin-only settings are hidden. Your code <code>${esc(currentCode())}</code> is still admin.</span>
+          <span>👁 Preview as viewer — admin-only settings are hidden. Signed in as <code>${esc(currentCode())}</code>.</span>
           <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
         </div>
       ` : ''}
@@ -3944,19 +3950,36 @@
         </div>
       </div>
       <div class="sync-panel">
-        <h3>Role</h3>
-        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
-          Authenticated code: <strong><code>${esc(currentCode())}</code></strong>
-          <span style="padding:1px 8px;background:${isAdminCode() ? '#fff5d6' : '#eef4fa'};color:${isAdminCode() ? '#8b5a00' : 'var(--c-text-muted)'};border-radius:8px;font-size:11px;margin-left:4px">${isAdminCode() ? 'admin code' : 'viewer code'}</span>
-          <br>
-          Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer'}</strong>.
-          ${isAdminCode() ? (isAdmin() ? 'All edit/sync buttons enabled.' : 'Previewing as viewer.') : 'Shared code — cannot enable editing from this device.'}
-        </div>
-        ${isAdminCode() ? `
-          <div class="action-bar" style="margin:0">
-            <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Preview as viewer' : 'Back to admin'}</button>
+        <h3>Admin sign-in</h3>
+        ${adminCode ? `
+          <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+            Signed in as <strong><code>${esc(currentCode())}</code></strong>
+            <span style="padding:1px 8px;background:#fff5d6;color:#8b5a00;border-radius:8px;font-size:11px;margin-left:4px">admin</span>
+            <br>
+            Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer (preview)'}</strong>.
+            ${isAdmin() ? 'All edit/sync buttons enabled.' : 'Previewing as viewer — toggle below to restore admin.'}
           </div>
-        ` : ''}
+          <div class="action-bar" style="margin:0;gap:8px">
+            <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Preview as viewer' : 'Back to admin'}</button>
+            <button class="btn btn-danger" onclick="window.__lockAdmin()">Sign out</button>
+          </div>
+        ` : `
+          <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:10px">
+            Viewers can browse freely — no password needed. Only admins need to sign in to edit content and sync to GitHub.
+          </div>
+          <div class="edit-field" style="margin-bottom:8px">
+            <label>Username</label>
+            <input type="text" id="admin-user-input" placeholder="員編" autocapitalize="off" autocomplete="username" autocorrect="off" spellcheck="false" inputmode="text" style="width:100%;padding:10px 12px;border:1px solid var(--c-border);border-radius:var(--radius);font-size:15px;background:var(--c-surface);color:var(--c-text)">
+          </div>
+          <div class="edit-field" style="margin-bottom:10px">
+            <label>Password</label>
+            <input type="password" id="admin-pw-input" placeholder="password" autocapitalize="off" autocomplete="current-password" autocorrect="off" spellcheck="false" style="width:100%;padding:10px 12px;border:1px solid var(--c-border);border-radius:var(--radius);font-size:15px;background:var(--c-surface);color:var(--c-text)">
+          </div>
+          <div class="action-bar" style="margin:0">
+            <button class="btn btn-primary btn-block" onclick="window.__unlockAdmin()">🔓 Unlock admin</button>
+          </div>
+          <div id="admin-signin-error" style="display:none;font-size:12px;color:var(--c-danger,#B3261E);margin-top:8px"></div>
+        `}
       </div>
       ${admin ? adminSyncSectionsHTML(hasToken, dirty) : ''}
       ${admin ? `
