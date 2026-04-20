@@ -469,6 +469,15 @@
     .markdown-body p { margin: 8px 0; }
     .markdown-body ul, .markdown-body ol { margin: 8px 0 8px 22px; }
     .markdown-body li { margin: 4px 0; }
+    .markdown-body img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px auto;
+      border-radius: 6px;
+      border: 1px solid var(--c-border);
+      cursor: zoom-in;
+    }
     .markdown-body code {
       background: rgba(230,126,34,.12);
       color: #b06418;
@@ -1683,6 +1692,7 @@
         <button type="button" title="Insert table" onclick="window.__mdTable()">▦ table</button>
         <button type="button" title="Horizontal rule" onclick="window.__mdInsert('\\n\\n---\\n\\n')">—</button>
         <button type="button" title="Link" onclick="window.__mdLink()">🔗</button>
+        <button type="button" title="Insert image (resize + embed)" onclick="window.__mdImage()">📷 image</button>
       </div>
       <div class="md-cheatsheet">
         <strong>Quick:</strong>
@@ -1691,7 +1701,8 @@
         <code>## heading</code>
         <code>- bullet</code>
         <code>[小黃]</code>
-        · 換行空一行＝新段落
+        <code>📷 image</code>
+        · 換行空一行＝新段落 · 圖片最大 1600px、自動壓縮
       </div>
     `;
   }
@@ -1754,6 +1765,55 @@
     if (!url) return;
     const text = prompt('Link text:', url) || url;
     mdInsertAt('[' + text + '](' + url + ')');
+  };
+
+  // Image picker: resize on-device (max 1600px wide, JPEG 80%) then embed as
+  // base64 data URL inside the markdown. Tap image in view mode → lightbox zoom.
+  function resizeImageToDataUrl(file, maxWidth, quality) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const img = new Image();
+        img.onload = () => {
+          const scale = Math.min(1, maxWidth / img.width);
+          const w = Math.max(1, Math.round(img.width * scale));
+          const h = Math.max(1, Math.round(img.height * scale));
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, w, h);
+          ctx.drawImage(img, 0, 0, w, h);
+          const mime = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
+          resolve(canvas.toDataURL(mime, quality));
+        };
+        img.onerror = () => reject(new Error('無法解碼圖片'));
+        img.src = ev.target.result;
+      };
+      reader.onerror = () => reject(new Error('無法讀取檔案'));
+      reader.readAsDataURL(file);
+    });
+  }
+  window.__mdImage = function() {
+    if (!getMdTextarea()) { showToast('請先點擊內文區再插入圖片', 'error'); return; }
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.addEventListener('change', async (ev) => {
+      const file = ev.target.files && ev.target.files[0];
+      if (!file) return;
+      try {
+        showToast('處理圖片中…');
+        const dataUrl = await resizeImageToDataUrl(file, 1600, 0.8);
+        const kb = Math.round(dataUrl.length * 0.75 / 1024);
+        const alt = (file.name || 'image').replace(/\.[^.]+$/, '').slice(0, 40);
+        mdInsertAt('\n\n![' + alt + '](' + dataUrl + ')\n\n');
+        showToast('圖片已插入（約 ' + kb + ' KB）', 'success');
+      } catch (err) {
+        showToast('圖片插入失敗：' + (err.message || err), 'error');
+      }
+    });
+    input.click();
   };
 
   // Keyboard shortcuts (mostly useful on desktop / iPad with keyboard)
@@ -1948,6 +2008,14 @@
     if (lb && !lb.classList.contains('hidden')) closeLightbox();
   });
 
+  // Markdown images (data URLs or remote) → open in existing lightbox on tap
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.markdown-body img');
+    if (!img) return;
+    e.preventDefault();
+    window.__openLightbox(img.src, img.alt || '');
+  });
+
   window.__openLightbox = function(src, caption) {
     const lb = el('lightbox');
     const img = el('lb-img');
@@ -2038,7 +2106,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix2 · PWA scope fix + doctor-tags in tips titles</div>
+        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix3 · image upload + PWA scope fix + doctor-tags</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
