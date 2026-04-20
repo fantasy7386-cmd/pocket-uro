@@ -129,29 +129,6 @@
     a { color: var(--c-info); text-decoration: none; }
     ::selection { background: var(--c-accent); color: #fff; }
 
-    /* ============ Access gate ============ */
-    .gate {
-      position: fixed; inset: 0; z-index: 1000;
-      background: var(--c-header); color: #fff;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      padding: 20px;
-    }
-    .gate.hidden { display: none; }
-    .gate h1 { font-size: 32px; margin-bottom: 6px; font-weight: 700; }
-    .gate p { color: #9aa0b4; margin-bottom: 28px; font-size: 14px; }
-    .gate input {
-      font-size: 18px; padding: 14px 16px; border: none; border-radius: var(--radius);
-      width: 100%; max-width: 280px; margin-bottom: 12px;
-      text-align: center; letter-spacing: 2px;
-      color: #2c3e50; background: #fff; caret-color: #2c3e50;
-    }
-    .gate input::placeholder { color: #9aa0b4; }
-    .gate button {
-      font-size: 16px; padding: 14px 36px; border: none; border-radius: var(--radius);
-      background: var(--c-danger); color: #fff; min-width: 160px; font-weight: 600;
-    }
-    .gate .error { color: #ff8a80; font-size: 14px; margin-top: 16px; min-height: 20px; }
-
     /* ============ App shell ============ */
     #app[hidden] { display: none; }
 
@@ -803,6 +780,34 @@
       max-width: 90%;
       display: flex; align-items: center; gap: 12px;
     }
+    /* Custom confirm modal (replaces native confirm() for action dialogs) */
+    .confirm-backdrop {
+      position: fixed; inset: 0; z-index: 3000;
+      background: rgba(10, 15, 28, 0.55);
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .confirm-backdrop.hidden { display: none; }
+    .confirm-modal {
+      background: var(--c-surface); color: var(--c-text);
+      border-radius: var(--radius);
+      padding: 20px;
+      max-width: 360px; width: 100%;
+      box-shadow: 0 12px 36px rgba(0,0,0,.25);
+      border: 1px solid var(--c-border);
+    }
+    .confirm-modal .confirm-msg {
+      font-size: 15px; line-height: 1.6;
+      margin-bottom: 16px;
+      white-space: pre-wrap;
+    }
+    .confirm-modal .confirm-actions {
+      display: flex; gap: 8px; justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .confirm-modal .confirm-actions .btn {
+      min-width: 84px;
+    }
     .toast .toast-action {
       padding: 4px 12px;
       background: rgba(255,255,255,.2);
@@ -1038,6 +1043,19 @@
 
   <div class="toast hidden" id="toast"></div>
 
+  <!-- Custom confirm modal (Promise-based replacement for native confirm() —
+       used for delete/action dialogs. Navigation guard still uses native
+       confirm() because hashchange needs synchronous cancellation.) -->
+  <div class="confirm-backdrop hidden" id="confirm-backdrop" role="dialog" aria-modal="true">
+    <div class="confirm-modal">
+      <div class="confirm-msg" id="confirm-msg"></div>
+      <div class="confirm-actions">
+        <button class="btn btn-secondary" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-primary" id="confirm-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Slide lightbox -->
   <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Slide zoom">
     <div class="lb-hint">double-tap / pinch to zoom · tap outside to close</div>
@@ -1095,7 +1113,6 @@
   }
   const GH_REPO = 'fantasy7386-cmd/pocket-uro';
   const LS = {
-    ACCESS: 'puro_access_code',        // (legacy, unused post v4.0.2 — keep key for cleanup)
     ADMIN_UNLOCKED: 'puro_admin_unlocked',  // 'yes' after successful sign-in
     ADMIN_USER: 'puro_admin_user',     // '123944' or 'Y08594'
     TOKEN: 'puro_gh_token',
@@ -1226,6 +1243,60 @@
   }
   function escAttr(s) { return esc(s); }
 
+  // v3.7.1: Wraps localStorage.setItem with quota-exceeded handling.
+  // Returns true on success, throws a descriptive Error on quota failure so
+  // save handlers can roll back and surface the error instead of silent loss.
+  function safeSetItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (e) {
+      const isQuota =
+        e && (e.name === 'QuotaExceededError' ||
+              e.code === 22 || e.code === 1014);
+      if (isQuota) {
+        const sizeKB = Math.round((value || '').length / 1024);
+        throw new Error('localStorage 額度已滿（單次寫入約 ' + sizeKB + ' KB）。請先 Sync to GitHub 或移除圖片後重試。');
+      }
+      throw e;
+    }
+  }
+
+  // Promise-based confirm dialog. Replaces native confirm() for styled UX.
+  // For navigation guards that need SYNC decisions (hashchange), continue
+  // using native confirm(). Call sites with simple yes/no are async now.
+  function showConfirm(message, options) {
+    return new Promise((resolve) => {
+      options = options || {};
+      const backdrop = el('confirm-backdrop');
+      const msgEl    = el('confirm-msg');
+      const okBtn    = el('confirm-ok');
+      const cancelBtn= el('confirm-cancel');
+      msgEl.textContent = message;
+      okBtn.textContent = options.okLabel || 'OK';
+      cancelBtn.textContent = options.cancelLabel || 'Cancel';
+      okBtn.className = 'btn ' + (options.danger ? 'btn-danger' : 'btn-primary');
+      const done = (result) => {
+        backdrop.classList.add('hidden');
+        okBtn.onclick = null;
+        cancelBtn.onclick = null;
+        backdrop.onclick = null;
+        document.removeEventListener('keydown', onKey, true);
+        resolve(result);
+      };
+      const onKey = (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); done(false); }
+        else if (e.key === 'Enter') { e.preventDefault(); done(true); }
+      };
+      okBtn.onclick = () => done(true);
+      cancelBtn.onclick = () => done(false);
+      backdrop.onclick = (e) => { if (e.target === backdrop) done(false); };
+      document.addEventListener('keydown', onKey, true);
+      backdrop.classList.remove('hidden');
+      setTimeout(() => okBtn.focus(), 20);
+    });
+  }
+
   function showToast(msg, kind, opts) {
     const t = toastEl();
     t.className = 'toast ' + (kind || '');
@@ -1247,21 +1318,38 @@
 
   // Wrap any Save button so the user gets immediate feedback (haptic + button
   // flip to "✓ Saved" + disabled) before the save handler runs. Prevents the
-  // "did that work?" double-tap problem reported 2026-04-20.
+  // "did that work?" double-tap problem reported 2026-04-20. Pass `this` as btn.
   window.__saveFb = function(btn, saveFn) {
     if (!btn || btn.disabled) return;
     btn.disabled = true;
     const orig = btn.textContent;
     btn.textContent = '⏳ Saving…';
-    haptic('success');
+    const restore = () => {
+      btn.textContent = orig;
+      btn.disabled = false;
+    };
     try {
       const r = saveFn();
+      // Save handler returns explicit `false` on validation failure — restore
+      // button immediately so user can correct and retry. Only flash "✓ Saved"
+      // on truthy-or-undefined return (successful save).
+      if (r === false) {
+        restore();
+        haptic('error');
+        return r;
+      }
+      haptic('success');
       btn.textContent = '✓ Saved';
-      setTimeout(() => { if (btn.isConnected) { btn.textContent = orig; btn.disabled = false; } }, 1500);
+      // If save handler navigates away, this restore never runs — fine.
+      setTimeout(() => { if (btn.isConnected) restore(); }, 1500);
       return r;
     } catch (e) {
-      btn.textContent = orig; btn.disabled = false;
-      throw e;
+      restore();
+      haptic('error');
+      const msg = (e && e.message) || '儲存失敗';
+      showToast(msg, 'error', { duration: 5000 });
+      // Don't rethrow — error surfaced to user already
+      return false;
     }
   };
 
@@ -1491,8 +1579,8 @@
     }
   };
 
-  window.__lockAdmin = function() {
-    if (!confirm('Sign out of admin? You can still use the app as a viewer.')) return;
+  window.__lockAdmin = async function() {
+    if (!await showConfirm('Sign out of admin? You can still use the app as a viewer.', { okLabel: 'Sign out', danger: true })) return;
     localStorage.removeItem(LS.ADMIN_UNLOCKED);
     localStorage.removeItem(LS.ADMIN_USER);
     localStorage.removeItem(LS.ADMIN);
@@ -1597,26 +1685,29 @@
 
   function markDirty(dataset) {
     // dataset: 'data' | 'notes' | 'tips' | 'tb_XX'
+    // v3.7.1: uses safeSetItem which throws descriptive Error on quota.
+    // Save handlers wrap markDirty in try/catch to roll back in-memory state
+    // on failure (see __saveArticle et al.).
     const now = new Date().toISOString();
     if (dataset === 'data') {
       state.data._updated_at = now;
       state.sources.data = 'local';
-      localStorage.setItem(LS.DATA, JSON.stringify(state.data));
+      safeSetItem(LS.DATA, JSON.stringify(state.data));
     } else if (dataset === 'notes') {
       state.notes._updated_at = now;
       state.notes.updated = now.slice(0, 10);
       state.sources.notes = 'local';
-      localStorage.setItem(LS.NOTES, JSON.stringify(state.notes));
+      safeSetItem(LS.NOTES, JSON.stringify(state.notes));
     } else if (dataset === 'tips') {
       state.tips._updated_at = now;
       state.tips.updated = now.slice(0, 10);
       state.sources.tips = 'local';
-      localStorage.setItem(LS.TIPS, JSON.stringify(state.tips));
+      safeSetItem(LS.TIPS, JSON.stringify(state.tips));
     } else if (dataset.startsWith('tb_')) {
       const tb = state.tb[dataset];
       tb._updated_at = now;
       state.sources.tb[dataset] = 'local';
-      localStorage.setItem(LS.TB_PREFIX + dataset, JSON.stringify(tb));
+      safeSetItem(LS.TB_PREFIX + dataset, JSON.stringify(tb));
     }
   }
 
@@ -1854,22 +1945,44 @@
       reader.readAsDataURL(file);
     });
   }
-  // v3.7.0 architecture: images separated from markdown.
+  // Extract legacy inline ![](data:...) images from markdown text so old
+  // content gets migrated automatically on first edit.
+  // v3.7.1: more robust regex + escape-aware + dedup by data URL
   function extractInlineImages(md) {
     if (!md) return { text: '', images: [] };
     const images = [];
+    const seenData = new Set();
+    // Match `![alt](data:...)` but skip when preceded by backslash (escaped
+    // markdown). `[^)]*` is fine because base64 data URLs don't contain ')'.
     const text = String(md).replace(
-      /!\[([^\]]*)\]\(data:[^)]+\)/g,
-      (match, alt) => {
-        const m = match.match(/\(data:[^)]+\)/);
-        const data = m ? m[0].slice(1, -1) : '';
-        if (data) images.push({ data, alt: alt || '', caption: '' });
-        return '';
+      /(^|[^\\])!\[([^\]]*)\]\((data:[^)]+)\)/g,
+      (match, prefix, alt, data) => {
+        if (!seenData.has(data)) {
+          seenData.add(data);
+          images.push({ data, alt: alt || '', caption: '' });
+        }
+        return prefix; // keep the non-backslash prefix, remove the image markup
       }
     ).replace(/\n{3,}/g, '\n\n').trim();
     return { text, images };
   }
 
+  // Dedup helper: merge an array from entity.images[] with freshly-migrated
+  // images, skipping duplicates by data URL. Used in every edit screen render
+  // to prevent double-add after legacy-migrate + re-save loops.
+  function dedupImages(arr) {
+    const seen = new Set();
+    const out = [];
+    for (const img of (arr || [])) {
+      if (!img || !img.data) continue;
+      if (seen.has(img.data)) continue;
+      seen.add(img.data);
+      out.push(img);
+    }
+    return out;
+  }
+
+  // Edit-session image buffer. Populated on edit screen open, consumed on save.
   let _editorImages = [];
   function setEditorImages(arr) {
     _editorImages = Array.isArray(arr) ? arr.map(x => ({ data: x.data || '', alt: x.alt || '', caption: x.caption || '' })) : [];
@@ -1900,14 +2013,14 @@
     }
     host.innerHTML = _editorImages.map((img, i) => `
       <div class="edit-image-item">
-        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         <input type="text" placeholder="caption (optional)" value="${escAttr(img.caption || '')}" oninput="window.__editImgCap(${i}, this.value)">
         <button class="btn btn-danger" onclick="window.__rmEditorImg(${i})" style="min-height:unset;padding:4px 8px;font-size:12px;width:100%;margin-top:4px">✕ Remove</button>
       </div>
     `).join('');
   }
-  window.__rmEditorImg = function(i) {
-    if (!confirm('Remove this image?')) return;
+  window.__rmEditorImg = async function(i) {
+    if (!await showConfirm('Remove this image?', { danger: true, okLabel: 'Remove' })) return;
     _editorImages.splice(i, 1);
     renderEditorImageGallery();
     markEditorDirty();
@@ -1915,17 +2028,24 @@
   window.__editImgCap = function(i, val) {
     if (_editorImages[i]) { _editorImages[i].caption = val; markEditorDirty(); }
   };
+
+  // Render attachments below markdown text in VIEW mode
   function renderAttachments(images) {
     if (!images || !images.length) return '';
     return '<div class="attachments">' + images.map(img => `
       <figure class="attachment">
-        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         ${img.caption ? `<figcaption>${esc(img.caption)}</figcaption>` : ''}
       </figure>
     `).join('') + '</div>';
   }
 
   window.__mdImage = function() {
+    // v3.7.1: capture the editor buffer reference at click time. If user
+    // navigates to a different edit screen before the picker resolves, the
+    // captured buffer is no longer active — abort to prevent the image from
+    // landing in the wrong entity.
+    const capturedBuffer = _editorImages;
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/*';
@@ -1935,9 +2055,18 @@
       const file = ev.target.files && ev.target.files[0];
       cleanup();
       if (!file) return;
+      if (capturedBuffer !== _editorImages) {
+        showToast('編輯頁已切換，圖片未加入。請重開編輯頁再試。', 'error', { duration: 4000 });
+        return;
+      }
       try {
         showToast('處理圖片中…');
         const dataUrl = await resizeImageToDataUrl(file, 1600, 0.8);
+        // Guard again after async resize (user may navigate during processing)
+        if (capturedBuffer !== _editorImages) {
+          showToast('編輯頁已切換，圖片未加入。', 'error', { duration: 4000 });
+          return;
+        }
         const kb = Math.round(dataUrl.length * 0.75 / 1024);
         const alt = (file.name || 'image').replace(/\.[^.]+$/, '').slice(0, 40);
         _editorImages.push({ data: dataUrl, alt, caption: '' });
@@ -1977,15 +2106,20 @@
     });
     markedConfigured = true;
   }
+  // Cache last parse result. Helps when same content re-renders on back/forward
+  // or after an image add doesn't change the markdown. Cache size 1 is enough
+  // because view mode shows one doc at a time.
+  let _renderMdCache = { md: null, html: null };
   function renderMd(md) {
     if (typeof marked === 'undefined') return '<pre>' + esc(md) + '</pre>';
+    if (md === _renderMdCache.md) return _renderMdCache.html;
     configureMarked();
-    const html = marked.parse(md || '');
-    // Post-process doctor tags [XXX] → <span class="doctor-tag">XXX</span>
-    return html.replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) => {
-      // Avoid replacing markdown link syntax (followed by `(`)
+    const parsed = marked.parse(md || '');
+    const html = parsed.replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) => {
       return '<span class="doctor-tag">' + esc(txt) + '</span>';
     });
+    _renderMdCache = { md, html };
+    return html;
   }
 
   // Render a plain-text title that may contain `[名字]` doctor tags (often
@@ -2243,7 +2377,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.3-alpha · images separated from markdown · legacy auto-migrate</div>
+        <div class="brand-tag" id="brand-tag">v4.0.4-alpha · quota guard · save feedback fix · picker race fix · dedup · SW LRU · custom confirm · 死 code 清理</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2431,10 +2565,10 @@
     bindFavButtons();
   }
 
-  window.__deleteArticle = function(artId) {
+  window.__deleteArticle = async function(artId) {
     const a = state.data.articles.find(x => x.id === artId);
     if (!a) return;
-    if (!confirm('Delete article "' + a.title + '"?')) return;
+    if (!await showConfirm('Delete article "' + a.title + '"?', { danger: true, okLabel: 'Delete' })) return;
     deleteWithUndo('data', 'Deleted: ' + a.title, () => {
       state.data.articles = state.data.articles.filter(x => x.id !== artId);
       const cat = state.data.categories.find(c => c.id === a.category);
@@ -2454,7 +2588,7 @@
     }
     const migrated = extractInlineImages(a.text || '');
     const cleanText = migrated.text;
-    const allImgs = (a.images || []).concat(migrated.images);
+    const allImgs = dedupImages((a.images || []).concat(migrated.images));
     setHeader(isNew ? 'New article' : 'Edit', { label: isNew ? 'Articles' : (a.title || 'Article'), href: isNew ? '#/education' : ('#/education/a/' + a.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2500,30 +2634,37 @@
     const images = getEditorImages();
     const keywords = el('ed-keywords').value.split(',').map(s => s.trim()).filter(Boolean);
     const pdf_url = el('ed-source').value.trim();
-    if (!title) { showToast('Title required', 'error'); return; }
-    clearEditorDirty();
-    if (isNew) {
-      const newArt = { id: artId, title, category: categoryId, text, images, keywords, related: [], pdf_url, pages: null, filename: '' };
-      state.data.articles.push(newArt);
-      const cat = state.data.categories.find(c => c.id === categoryId);
-      if (cat) { cat.articles.push(artId); cat.count = cat.articles.length; }
-      state.data.total_articles = state.data.articles.length;
-    } else {
-      const a = state.data.articles.find(x => x.id === artId);
-      if (!a) { showToast('Article not found', 'error'); return; }
-      // Handle category change
-      if (a.category !== categoryId) {
-        const oldCat = state.data.categories.find(c => c.id === a.category);
-        const newCat = state.data.categories.find(c => c.id === categoryId);
-        if (oldCat) { oldCat.articles = oldCat.articles.filter(id => id !== artId); oldCat.count = oldCat.articles.length; }
-        if (newCat) { newCat.articles.push(artId); newCat.count = newCat.articles.length; }
+    if (!title) { showToast('Title required', 'error'); return false; }
+    // Snapshot pre-mutation state for rollback on quota failure
+    const snapshot = JSON.parse(JSON.stringify(state.data));
+    try {
+      if (isNew) {
+        const newArt = { id: artId, title, category: categoryId, text, images, keywords, related: [], pdf_url, pages: null, filename: '' };
+        state.data.articles.push(newArt);
+        const cat = state.data.categories.find(c => c.id === categoryId);
+        if (cat) { cat.articles.push(artId); cat.count = cat.articles.length; }
+        state.data.total_articles = state.data.articles.length;
+      } else {
+        const a = state.data.articles.find(x => x.id === artId);
+        if (!a) { showToast('Article not found', 'error'); return false; }
+        if (a.category !== categoryId) {
+          const oldCat = state.data.categories.find(c => c.id === a.category);
+          const newCat = state.data.categories.find(c => c.id === categoryId);
+          if (oldCat) { oldCat.articles = oldCat.articles.filter(id => id !== artId); oldCat.count = oldCat.articles.length; }
+          if (newCat) { newCat.articles.push(artId); newCat.count = newCat.articles.length; }
+        }
+        a.title = title; a.category = categoryId; a.text = text; a.images = images;
+        a.keywords = keywords; a.pdf_url = pdf_url;
       }
-      a.title = title; a.category = categoryId; a.text = text; a.images = images;
-      a.keywords = keywords; a.pdf_url = pdf_url;
+      markDirty('data');
+    } catch (e) {
+      state.data = snapshot;
+      throw e; // saveFb catches, shows toast, restores button
     }
-    markDirty('data');
+    clearEditorDirty();
     showToast('Saved locally ✓', 'success');
     navigate('#/education/a/' + artId);
+    return true;
   };
 
   /* ======================================================
@@ -2589,10 +2730,10 @@
     markDirty('notes');
     router();
   };
-  window.__deleteNote = function(idx) {
-    if (state.notes.sections.length <= 1) { alert('Cannot delete last section'); return; }
+  window.__deleteNote = async function(idx) {
+    if (state.notes.sections.length <= 1) { showToast('Cannot delete last section', 'error'); return; }
     const s = state.notes.sections[idx];
-    if (!confirm('Delete section "' + s.number + '. ' + s.title + '"?')) return;
+    if (!await showConfirm('Delete section "' + s.number + '. ' + s.title + '"?', { danger: true, okLabel: 'Delete' })) return;
     deleteWithUndo('notes', 'Deleted: ' + s.full_title, () => {
       state.notes.sections.splice(idx, 1);
       renumberNotes();
@@ -2678,7 +2819,7 @@
     }
     const migrated = extractInlineImages(section.notes || '');
     const cleanNotes = migrated.text;
-    const allImgs = (section.images || []).concat(migrated.images);
+    const allImgs = dedupImages((section.images || []).concat(migrated.images));
     setHeader(isNew ? 'New section' : 'Edit', { label: isNew ? 'PPu Notes' : (section.full_title || 'Section'), href: isNew ? '#/notes' : ('#/notes/s/' + section.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2783,10 +2924,10 @@
     subs.push({ title: '', items: [] });
     renderNoteSubsBlocks(subs);
   };
-  window.__delNoteSub = function(i) {
+  window.__delNoteSub = async function(i) {
     const subs = collectNoteSubs();
-    if (subs.length <= 1) { alert('Cannot delete last subsection'); return; }
-    if (!confirm('Delete subsection ' + (i + 1) + '?')) return;
+    if (subs.length <= 1) { showToast('Cannot delete last subsection', 'error'); return; }
+    if (!await showConfirm('Delete subsection ' + (i + 1) + '?', { danger: true, okLabel: 'Delete' })) return;
     subs.splice(i, 1);
     renderNoteSubsBlocks(subs);
   };
@@ -2801,29 +2942,36 @@
     const subs = collectNoteSubs();
     const notes = (el('te-md') && el('te-md').value) || '';
     const images = getEditorImages();
-    if (!title) { showToast('Title required', 'error'); return; }
-    clearEditorDirty();
-    if (isNew) {
-      const newSection = {
-        id: sid, number: '', title, full_title: title, subsections: subs, notes, images,
-      };
-      if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < state.notes.sections.length) {
-        state.notes.sections.splice(insertAfter + 1, 0, newSection);
+    if (!title) { showToast('Title required', 'error'); return false; }
+    const snapshot = JSON.parse(JSON.stringify(state.notes));
+    try {
+      if (isNew) {
+        const newSection = {
+          id: sid, number: '', title, full_title: title, subsections: subs, notes, images,
+        };
+        if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < state.notes.sections.length) {
+          state.notes.sections.splice(insertAfter + 1, 0, newSection);
+        } else {
+          state.notes.sections.push(newSection);
+        }
       } else {
-        state.notes.sections.push(newSection);
+        const s = state.notes.sections.find(x => x.id === sid);
+        if (!s) { showToast('Section not found', 'error'); return false; }
+        s.title = title;
+        s.subsections = subs;
+        s.notes = notes;
+        s.images = images;
       }
-    } else {
-      const s = state.notes.sections.find(x => x.id === sid);
-      if (!s) return showToast('Section not found', 'error');
-      s.title = title;
-      s.subsections = subs;
-      s.notes = notes;
-      s.images = images;
+      renumberNotes();
+      markDirty('notes');
+    } catch (e) {
+      state.notes = snapshot;
+      throw e;
     }
-    renumberNotes();
-    markDirty('notes');
+    clearEditorDirty();
     showToast('Saved locally ✓', 'success');
     navigate(isNew ? '#/notes' : '#/notes/s/' + sid);
+    return true;
   };
 
   /* ======================================================
@@ -2881,7 +3029,7 @@
             <a class="list-card" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
               <div style="flex:1;min-width:0">
                 <div class="title">${titleWithTags(sub.title)}</div>
-                <div class="meta">${(sub.markdown || '').length} chars Markdown</div>
+                <div class="meta">${(sub.markdown || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length} chars${sub.images && sub.images.length ? ' · ' + sub.images.length + ' img' : ''}</div>
               </div>
               <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(titlePlain(sub.title))}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
               <span class="chevron">›</span>
@@ -2926,12 +3074,12 @@
     bindFavButtons();
   }
 
-  window.__deleteTipsSub = function(chapterId, subId) {
+  window.__deleteTipsSub = async function(chapterId, subId) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return;
     const sub = chapter.subsections.find(x => x.id === subId);
     if (!sub) return;
-    if (!confirm('Delete "' + titlePlain(sub.title) + '"?')) return;
+    if (!await showConfirm('Delete "' + titlePlain(sub.title) + '"?', { danger: true, okLabel: 'Delete' })) return;
     deleteWithUndo('tips', 'Deleted: ' + titlePlain(sub.title), () => {
       chapter.subsections = chapter.subsections.filter(x => x.id !== subId);
     });
@@ -2951,7 +3099,7 @@
     }
     const migrated = extractInlineImages(sub.markdown || '');
     const cleanMd = migrated.text;
-    const allImgs = (sub.images || []).concat(migrated.images);
+    const allImgs = dedupImages((sub.images || []).concat(migrated.images));
     setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? titlePlain(chapter.title) : titlePlain(sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3018,30 +3166,37 @@
 
   window.__saveTips = function(chapterId, subId, isNew, insertAfter) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
-    if (!chapter) return showToast('Chapter not found', 'error');
+    if (!chapter) { showToast('Chapter not found', 'error'); return false; }
     const title = el('te-title').value.trim();
     const md = el('te-md').value;
     const images = getEditorImages();
-    if (!title) return showToast('Title required', 'error');
-    clearEditorDirty();
-    if (isNew) {
-      const newSub = { id: subId, title, markdown: md, images };
-      if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < chapter.subsections.length) {
-        chapter.subsections.splice(insertAfter + 1, 0, newSub);
+    if (!title) { showToast('Title required', 'error'); return false; }
+    const snapshot = JSON.parse(JSON.stringify(state.tips));
+    try {
+      if (isNew) {
+        const newSub = { id: subId, title, markdown: md, images };
+        if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < chapter.subsections.length) {
+          chapter.subsections.splice(insertAfter + 1, 0, newSub);
+        } else {
+          chapter.subsections.push(newSub);
+        }
       } else {
-        chapter.subsections.push(newSub);
+        const s = chapter.subsections.find(x => x.id === subId);
+        if (!s) { showToast('Not found', 'error'); return false; }
+        s.title = title;
+        s.markdown = md;
+        s.images = images;
       }
-    } else {
-      const s = chapter.subsections.find(x => x.id === subId);
-      if (!s) return showToast('Not found', 'error');
-      s.title = title;
-      s.markdown = md;
-      s.images = images;
+      state.tips.total_subsections = state.tips.sections.reduce((a, s) => a + s.subsections.length, 0);
+      markDirty('tips');
+    } catch (e) {
+      state.tips = snapshot;
+      throw e;
     }
-    state.tips.total_subsections = state.tips.sections.reduce((a, s) => a + s.subsections.length, 0);
-    markDirty('tips');
+    clearEditorDirty();
     showToast('Saved locally ✓', 'success');
     navigate('#/tips/sub/' + chapterId + '/' + subId);
+    return true;
   };
 
   /* ======================================================
@@ -3306,10 +3461,10 @@
     bindFavButtons();
   }
 
-  window.__deleteTopic = function(tbId, topicId) {
+  window.__deleteTopic = async function(tbId, topicId) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    if (!confirm('Delete topic "' + found.topic.title + '"?')) return;
+    if (!await showConfirm('Delete topic "' + found.topic.title + '"?', { danger: true, okLabel: 'Delete' })) return;
     deleteWithUndo(tbId, 'Deleted: ' + found.topic.title, () => {
       found.sec.topics = found.sec.topics.filter(t => t.id !== topicId);
     });
@@ -3412,10 +3567,20 @@
 
     window.__slidePrev = () => { if (idx > 0) { idx--; rerender(); } };
     window.__slideNext = () => { if (idx < slides.length - 1) { idx++; rerender(); } };
-    document.onkeydown = (e) => {
+    // v3.7.1: use addEventListener + hashchange cleanup instead of onkeydown=
+    // assignment (which would wipe other handlers). Listener removes itself
+    // when user leaves the slide viewer.
+    const slideKeyHandler = (e) => {
+      if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
       if (e.key === 'ArrowLeft')  window.__slidePrev();
-      if (e.key === 'ArrowRight') window.__slideNext();
+      else if (e.key === 'ArrowRight') window.__slideNext();
     };
+    document.addEventListener('keydown', slideKeyHandler);
+    const cleanupKeys = () => {
+      document.removeEventListener('keydown', slideKeyHandler);
+      window.removeEventListener('hashchange', cleanupKeys);
+    };
+    window.addEventListener('hashchange', cleanupKeys);
     // Initial render
     const frame = el('tb-content').querySelector('.slide-frame');
     if (frame) attachSwipe(frame);
@@ -3427,7 +3592,7 @@
     const { topic } = found;
     const migrated = extractInlineImages(topic.notes || '');
     const cleanNotes = migrated.text;
-    const allImgs = (topic.images || []).concat(migrated.images);
+    const allImgs = dedupImages((topic.images || []).concat(migrated.images));
     setHeader('Edit notes', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3463,19 +3628,31 @@
 
   window.__saveTopicNotes = function(tbId, topicId) {
     const found = findTopic(tbId, topicId);
-    if (!found) return;
-    found.topic.notes = el('te-md').value;
-    found.topic.images = getEditorImages();
-    markDirty(tbId);
+    if (!found) { showToast('Topic not found', 'error'); return false; }
+    const newNotes = el('te-md').value;
+    const newImages = getEditorImages();
+    const prevNotes = found.topic.notes;
+    const prevImages = found.topic.images;
+    try {
+      found.topic.notes = newNotes;
+      found.topic.images = newImages;
+      markDirty(tbId);
+    } catch (e) {
+      found.topic.notes = prevNotes;
+      found.topic.images = prevImages;
+      throw e;
+    }
     clearEditorDirty();
     showToast('Saved locally ✓', 'success');
     navigate('#/textbook/t/' + tbId + '/' + topicId);
+    return true;
   };
-  window.__clearNotes = function(tbId, topicId) {
+  window.__clearNotes = async function(tbId, topicId) {
     const found = findTopic(tbId, topicId);
     if (!found) return;
-    if (!confirm('Clear notes?')) return;
+    if (!await showConfirm('Clear notes and images for this topic?', { danger: true, okLabel: 'Clear' })) return;
     delete found.topic.notes;
+    delete found.topic.images;
     markDirty(tbId);
     navigate('#/textbook/t/' + tbId + '/' + topicId);
   };
@@ -3583,14 +3760,14 @@
     `).join('');
   }
 
-  window.__confirmMoveSlide = function(tbId, topicId, slideIdx, targetTopicId) {
+  window.__confirmMoveSlide = async function(tbId, topicId, slideIdx, targetTopicId) {
     const src = findTopic(tbId, topicId);
     const target = findTopic(tbId, targetTopicId);
     if (!src || !target) return showToast('Topic not found', 'error');
     const srcArr = src.topic.slides || [];
     const slide = srcArr[slideIdx];
     if (!slide) return showToast('Slide not found', 'error');
-    if (!confirm('Move slide #' + slide.slide_num + ' to "' + target.topic.title + '"?\n\n(Slide appends to end of target topic. Reversible — you can move back anytime.)')) return;
+    if (!await showConfirm('Move slide #' + slide.slide_num + ' to "' + target.topic.title + '"?\n\n(Slide appends to end of target topic. Reversible — you can move back anytime.)', { okLabel: 'Move' })) return;
     srcArr.splice(slideIdx, 1);
     target.topic.slides = target.topic.slides || [];
     target.topic.slides.push(slide);
@@ -3632,15 +3809,22 @@
 
   window.__saveOCR = function(tbId, topicId, slideIdx) {
     const found = findTopic(tbId, topicId);
-    if (!found) return;
+    if (!found) { showToast('Topic not found', 'error'); return false; }
     const slides = (found.topic.slides || []).filter(s => !s.hidden);
     const target = slides[slideIdx];
-    if (!target) return;
+    if (!target) { showToast('Slide not found', 'error'); return false; }
     const lines = el('ocr-text').value.split('\n').map(s => s.trim()).filter(Boolean);
-    target.text = lines;
-    markDirty(tbId);
+    const prevText = target.text;
+    try {
+      target.text = lines;
+      markDirty(tbId);
+    } catch (e) {
+      target.text = prevText;
+      throw e;
+    }
     clearEditorDirty();
     showToast('Slide OCR saved ✓', 'success');
+    return true;
   };
 
   function renderTbNewTextTopic(tbId, secIdx, accent) {
@@ -3692,7 +3876,7 @@
     const { topic } = found;
     const migrated = extractInlineImages(topic.markdown_content || '');
     const cleanMd = migrated.text;
-    const allImgs = (topic.images || []).concat(migrated.images);
+    const allImgs = dedupImages((topic.images || []).concat(migrated.images));
     setHeader('Edit content', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3734,31 +3918,46 @@
 
   window.__saveEditTextTopic = function(tbId, topicId) {
     const found = findTopic(tbId, topicId);
-    if (!found) return showToast('Topic not found', 'error');
+    if (!found) { showToast('Topic not found', 'error'); return false; }
     const title = el('tb-edit-title').value.trim();
     const md = el('te-md').value;
     const exam = el('tb-edit-exam').checked;
-    if (!title) return showToast('Title required', 'error');
-    found.topic.title = title;
-    found.topic.markdown_content = md;
-    found.topic.images = getEditorImages();
-    found.topic.has_exam_questions = !!exam;
-    markDirty(tbId);
+    const images = getEditorImages();
+    if (!title) { showToast('Title required', 'error'); return false; }
+    const prev = {
+      title: found.topic.title,
+      md: found.topic.markdown_content,
+      images: found.topic.images,
+      exam: found.topic.has_exam_questions,
+    };
+    try {
+      found.topic.title = title;
+      found.topic.markdown_content = md;
+      found.topic.images = images;
+      found.topic.has_exam_questions = !!exam;
+      markDirty(tbId);
+    } catch (e) {
+      found.topic.title = prev.title;
+      found.topic.markdown_content = prev.md;
+      found.topic.images = prev.images;
+      found.topic.has_exam_questions = prev.exam;
+      throw e;
+    }
     clearEditorDirty();
     showToast('Saved ✓', 'success');
     navigate('#/textbook/t/' + tbId + '/' + topicId);
+    return true;
   };
 
   window.__saveNewTextTopic = function(tbId, secIdx) {
     const ch = state.tb[tbId];
     const sec = ch && ch.sections && ch.sections[secIdx];
-    if (!sec) return;
+    if (!sec) { showToast('Section not found', 'error'); return false; }
     const title = el('tb-new-title').value.trim();
     const md = el('te-md').value;
     const exam = el('tb-new-exam').checked;
     const images = getEditorImages();
-    if (!title) return showToast('Title required', 'error');
-    clearEditorDirty();
+    if (!title) { showToast('Title required', 'error'); return false; }
     const topic = {
       id: 't_extra_' + Date.now(),
       type: 'text_only',
@@ -3769,9 +3968,16 @@
     };
     sec.topics = sec.topics || [];
     sec.topics.push(topic);
-    markDirty(tbId);
+    try {
+      markDirty(tbId);
+    } catch (e) {
+      sec.topics.pop();
+      throw e;
+    }
+    clearEditorDirty();
     showToast('Topic added ✓', 'success');
     navigate('#/textbook/c/' + tbId + '/s/' + secIdx);
+    return true;
   };
 
   /* ======================================================
@@ -4406,8 +4612,8 @@
     await ensureToken();
     router();
   };
-  window.__clearToken = function() {
-    if (!confirm('Remove GitHub token from this device?')) return;
+  window.__clearToken = async function() {
+    if (!await showConfirm('Remove GitHub token from this device?', { danger: true, okLabel: 'Remove' })) return;
     localStorage.removeItem(LS.TOKEN);
     showToast('Token removed');
     router();
@@ -4418,7 +4624,7 @@
   window.__discardLocal = async function() {
     const dirty = dirtyDatasets();
     if (!dirty.length) return;
-    if (!confirm('Discard ' + dirty.length + ' local change(s) and reload from server? This cannot be undone.')) return;
+    if (!await showConfirm('Discard ' + dirty.length + ' local change(s) and reload from server? This cannot be undone.', { danger: true, okLabel: 'Discard' })) return;
     for (const d of dirty) {
       if (d.id === 'data')       { localStorage.removeItem(LS.DATA); state.sources.data = 'server'; }
       else if (d.id === 'notes') { localStorage.removeItem(LS.NOTES); state.sources.notes = 'server'; }
@@ -4465,9 +4671,9 @@
     const messageEl = el('kill-status-message');
     const message = (messageEl ? messageEl.value : '').trim();
     const label = active ? 'ACTIVATE' : 'LOCK OUT';
-    if (!confirm('Set service status to ' + label + '?\n\n' +
+    if (!await showConfirm('Set service status to ' + label + '?\n\n' +
                  (active ? 'All users regain access on next app open.'
-                         : 'All installed PWAs will lock out on next open with the message above.'))) return;
+                         : 'All installed PWAs will lock out on next open with the message above.'), { okLabel: label })) return;
     const payload = {
       active: !!active,
       message: message,
@@ -4524,10 +4730,10 @@
     showToast('Reset to built-in default', 'success');
     router();
   };
-  window.__clearSubmissionUrl = function() {
+  window.__clearSubmissionUrl = async function() {
     // Distinct from default: empty string = "explicitly disabled on this device"
     // so Home won't show the link even though the built-in default exists.
-    if (!confirm('Hide the Suggest-content link on this device? (Default is a mailto: to the project admin. Choosing OK hides it; leave blank to use default.)')) return;
+    if (!await showConfirm('Hide the Suggest-content link on this device?\n\n(Default is a mailto: to the project admin. Choosing Hide hides it on this device.)', { okLabel: 'Hide' })) return;
     localStorage.setItem(LS_SUBMISSION_KEY, '');
     showToast('Submission link hidden on this device', 'success');
     router();
