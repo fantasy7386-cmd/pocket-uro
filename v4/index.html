@@ -1029,7 +1029,7 @@
     ADMIN_UNLOCKED: 'puro_admin_unlocked',  // 'yes' after successful sign-in
     ADMIN_USER: 'puro_admin_user',     // '123944' or 'Y08594'
     TOKEN: 'puro_gh_token',
-    ADMIN: 'puro_admin_mode',      // 'on' | 'off' (user toggle override)
+    ADMIN: 'puro_admin_mode',          // 'off' = admin in preview-as-viewer mode
     FAVS: 'puro_favorites',
     DATA: 'puro_data_json',        // local override for Patient Ed
     NOTES: 'puro_notes_json',      // local override for PPu Notes
@@ -4332,21 +4332,6 @@
       gateCheck();
     }
   });
-
-  /* Guarded-out original boot — replaced by checkAppStatus().then() above */
-  if (false && new URLSearchParams(location.search).has('reset')) {
-    Promise.all([
-      caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
-      'serviceWorker' in navigator
-        ? navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister())))
-        : Promise.resolve(),
-    ]).finally(() => {
-      localStorage.clear();
-      location.replace(location.pathname);
-    });
-  } else {
-    gateCheck();
-  }
 
   /* ======================================================
      Boot (after gate passed)

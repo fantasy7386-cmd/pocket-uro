@@ -4323,22 +4323,6 @@
     }
   });
 
-  /* Original reset handler (guarded out, replaced above) — keeping empty block
-     ensures the original IF below is never reached. */
-  if (false && new URLSearchParams(location.search).has('reset')) {
-    Promise.all([
-      caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
-      'serviceWorker' in navigator
-        ? navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister())))
-        : Promise.resolve(),
-    ]).finally(() => {
-      localStorage.clear();
-      location.replace(location.pathname);
-    });
-  } else {
-    gateCheck();
-  }
-
   /* ======================================================
      Boot (after gate passed)
   ====================================================== */
