@@ -1,0 +1,6 @@
+{
+  "active": true,
+  "message": "",
+  "updated_at": "2026-04-20T00:00:00Z",
+  "_comment": "Remote kill-switch. Set active=false to lock out all installed PWAs. Message shown to users. Admin bypasses via ?admin-override=1"
+}

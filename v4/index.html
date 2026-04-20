@@ -1296,6 +1296,39 @@
   }
 
   /* ======================================================
+     Remote kill-switch — shared with v3.4 via ../app-status.json
+     (base href="../" makes 'app-status.json' resolve to /pocket-uro/app-status.json)
+  ====================================================== */
+  async function checkAppStatus() {
+    if (new URLSearchParams(location.search).has('admin-override')) return true;
+    try {
+      const resp = await fetch('app-status.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!resp.ok) return true;
+      const status = await resp.json();
+      if (status.active === false) {
+        showLockoutPage(status.message || 'Pocket URO 已暫停使用。');
+        return false;
+      }
+      return true;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  function showLockoutPage(msg) {
+    document.body.innerHTML =
+      '<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#F6F7F9;color:#0B1F3A;text-align:center;-webkit-font-smoothing:antialiased">' +
+        '<div style="font-size:64px;margin-bottom:20px">📴</div>' +
+        '<h1 style="font-size:24px;margin-bottom:12px;font-weight:600">Pocket URO 暫停使用</h1>' +
+        '<p style="font-size:15px;color:#6B7791;max-width:340px;line-height:1.6;margin:0">' + (msg || '').replace(/</g, '&lt;') + '</p>' +
+        '<p style="font-size:12px;color:#9aa0a6;margin-top:40px;max-width:320px">如有需要請聯繫管理員。已下載的內容已失效。</p>' +
+        '<a href="?admin-override=1" style="font-size:10px;color:#ccc;margin-top:80px;text-decoration:none;letter-spacing:2px">·</a>' +
+      '</div>';
+    document.body.style.background = '#F6F7F9';
+    document.title = 'Pocket URO — 暫停';
+  }
+
+  /* ======================================================
      Access gate
   ====================================================== */
   function gateCheck() {
@@ -1961,7 +1994,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0-alpha · Clinical design refresh (paths: ../data.json, SW scope /v4/)</div>
+        <div class="brand-tag" id="brand-tag">v4.0.1-alpha · Clinical + remote kill-switch</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3889,6 +3922,7 @@
     // isAdmin() respects Preview-as-viewer toggle; isAdminCode() is the raw code tier.
     const admin        = isAdmin();
     const adminCode    = isAdminCode();
+    if (admin) setTimeout(loadKillStatusIntoPanel, 50);
     const isPreviewing = adminCode && !admin;
     const isRealView   = !adminCode;
     setHeader(admin ? 'Settings · Sync' : 'Settings', { label: 'Home', href: '#/' });
@@ -3938,6 +3972,29 @@
         ` : ''}
       </div>
       ${admin ? adminSyncSectionsHTML(hasToken, dirty) : ''}
+      ${admin ? `
+      <div class="sync-panel" style="border-color:var(--c-danger)">
+        <h3>🛡️ Remote kill-switch</h3>
+        <div id="kill-status-loading" style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">Loading current status…</div>
+        <div id="kill-status-body" style="display:none">
+          <div style="font-size:13px;margin-bottom:8px">
+            Current: <strong id="kill-status-current">—</strong>
+            <span style="color:var(--c-text-muted);font-size:11px;margin-left:8px">updated <span id="kill-status-updated">—</span></span>
+          </div>
+          <div class="edit-field" style="margin-bottom:10px">
+            <label>Lockout message (shown to all users when locked)</label>
+            <textarea id="kill-status-message" style="min-height:60px" placeholder="Pocket URO 已暫停使用。如有需要請聯繫..."></textarea>
+          </div>
+          <div class="action-bar" style="margin:0;gap:8px">
+            <button class="btn btn-success" onclick="window.__setServiceStatus(true)">✓ Activate</button>
+            <button class="btn btn-danger" onclick="window.__setServiceStatus(false)">⚠ Lock out all users</button>
+          </div>
+          <div style="font-size:11px;color:var(--c-text-muted);margin-top:8px;line-height:1.5">
+            Writes <code>app-status.json</code> to GitHub. Applies to BOTH v3.4 and v4 installs. Admin override via <code>?admin-override=1</code> URL.
+          </div>
+        </div>
+      </div>
+      ` : ''}
       <div class="sync-panel">
         <h3>Data · Reload from server</h3>
         <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
@@ -4034,6 +4091,51 @@
     }
     router();
   };
+  /* Kill-switch admin panel */
+  async function loadKillStatusIntoPanel() {
+    const loading = el('kill-status-loading');
+    const body = el('kill-status-body');
+    if (!loading || !body) return;
+    try {
+      const resp = await fetch('app-status.json?t=' + Date.now(), { cache: 'no-store' });
+      const st = resp.ok ? await resp.json() : { active: true, message: '', updated_at: '—' };
+      const current = el('kill-status-current');
+      const updated = el('kill-status-updated');
+      const msgIn   = el('kill-status-message');
+      if (current) {
+        current.textContent = st.active === false ? '🔴 LOCKED OUT' : '🟢 ACTIVE';
+        current.style.color = st.active === false ? 'var(--c-danger)' : 'var(--c-success)';
+      }
+      if (updated) updated.textContent = st.updated_at || '—';
+      if (msgIn && !msgIn.value) msgIn.value = st.message || '';
+      loading.style.display = 'none';
+      body.style.display = '';
+    } catch (e) {
+      loading.textContent = 'Failed to load status: ' + e.message;
+    }
+  }
+  window.__setServiceStatus = async function(active) {
+    const messageEl = el('kill-status-message');
+    const message = (messageEl ? messageEl.value : '').trim();
+    const label = active ? 'ACTIVATE' : 'LOCK OUT';
+    if (!confirm('Set service status to ' + label + '?\n\n' +
+                 (active ? 'All users regain access on next app open.'
+                         : 'All installed PWAs will lock out on next open with the message above.'))) return;
+    const payload = {
+      active: !!active,
+      message: message,
+      updated_at: new Date().toISOString(),
+    };
+    try {
+      await ghPutFile('app-status.json', payload,
+        'Service status: ' + (active ? 'ACTIVATE' : 'LOCKED'));
+      showToast('Service status: ' + label + ' ✓', 'success');
+      loadKillStatusIntoPanel();
+    } catch (e) {
+      showToast('Failed: ' + e.message, 'error');
+    }
+  };
+
   window.__reloadFromServer = async function() {
     const dirty = dirtyDatasets();
     if (dirty.length && !confirm('You have ' + dirty.length + ' unsynced edit(s). Reload will discard them. Continue?')) return;
@@ -4187,9 +4289,27 @@
   });
 
   /* ======================================================
-     ?reset escape hatch
+     Kill-switch gate — before gateCheck. If locked, page is replaced.
   ====================================================== */
-  if (new URLSearchParams(location.search).has('reset')) {
+  checkAppStatus().then(ok => {
+    if (!ok) return;
+    if (new URLSearchParams(location.search).has('reset')) {
+      Promise.all([
+        caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
+        'serviceWorker' in navigator
+          ? navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister())))
+          : Promise.resolve(),
+      ]).finally(() => {
+        localStorage.clear();
+        location.replace(location.pathname);
+      });
+    } else {
+      gateCheck();
+    }
+  });
+
+  /* Guarded-out original boot — replaced by checkAppStatus().then() above */
+  if (false && new URLSearchParams(location.search).has('reset')) {
     Promise.all([
       caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
       'serviceWorker' in navigator
