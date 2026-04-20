@@ -2105,7 +2105,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.6.6 · save feedback (haptic + button state + bigger toast) · iOS picker fix · search focus fix</div>
+        <div class="brand-tag" id="brand-tag">v3.6.7 · HOTFIX: edit hang on image-heavy content (debounce + data-URL stripping in preview)</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2839,9 +2839,23 @@
     }
   };
   window.__mdUpdate = function() {
-    const md = el('te-md').value;
-    const pv = el('te-preview');
-    if (pv) pv.innerHTML = renderMd(md);
+    // Debounce preview re-render: 300ms after last keystroke. Prevents iOS
+    // hang on content with embedded base64 images (each keystroke would
+    // otherwise re-parse + re-innerHTML a 500KB+ data URL).
+    clearTimeout(window.__mdUpdate._timer);
+    window.__mdUpdate._timer = setTimeout(() => {
+      const ta = el('te-md');
+      const pv = el('te-preview');
+      if (!ta || !pv) return;
+      // Strip base64 data URLs from PREVIEW rendering — huge strings in
+      // innerHTML are what actually causes the hang. View mode (post-save)
+      // still renders images fully. Preview shows placeholder.
+      const mdLight = ta.value.replace(
+        /!\[([^\]]*)\]\(data:[^)]+\)/g,
+        '**[📷 $1]** *(image attached)*'
+      );
+      pv.innerHTML = renderMd(mdLight);
+    }, 300);
   };
 
   window.__saveTips = function(chapterId, subId, isNew, insertAfter) {

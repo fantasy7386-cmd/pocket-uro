@@ -2136,7 +2136,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix7 · save feedback + iOS picker fix + search focus fix</div>
+        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix8 · HOTFIX: edit hang on image-heavy content</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2871,9 +2871,19 @@
     }
   };
   window.__mdUpdate = function() {
-    const md = el('te-md').value;
-    const pv = el('te-preview');
-    if (pv) pv.innerHTML = renderMd(md);
+    // Debounce preview re-render: 300ms after last keystroke. Prevents iOS
+    // hang on content with embedded base64 images.
+    clearTimeout(window.__mdUpdate._timer);
+    window.__mdUpdate._timer = setTimeout(() => {
+      const ta = el('te-md');
+      const pv = el('te-preview');
+      if (!ta || !pv) return;
+      const mdLight = ta.value.replace(
+        /!\[([^\]]*)\]\(data:[^)]+\)/g,
+        '**[📷 $1]** *(image attached)*'
+      );
+      pv.innerHTML = renderMd(mdLight);
+    }, 300);
   };
 
   window.__saveTips = function(chapterId, subId, isNew, insertAfter) {
