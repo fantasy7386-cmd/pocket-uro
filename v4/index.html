@@ -1004,6 +1004,27 @@
   'use strict';
 
   /* ======================================================
+     PWA scope fix (v4.0.2-alpha-fix1)
+     ─────────────────────────────────────────────────────
+     Problem: <base href="../"> (line 11) resolves `<a href="#/foo">` clicks
+     against /pocket-uro/ (parent), which is OUTSIDE the v4 PWA scope
+     /pocket-uro/v4/. iOS PWAs break out to Safari when nav leaves scope.
+
+     Fix: intercept hash-only anchor clicks BEFORE browser resolves them, set
+     location.hash directly (the .hash setter operates on the current document
+     URL, bypassing <base>).
+  ====================================================== */
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    if (location.hash !== href) location.hash = href;
+    else window.dispatchEvent(new HashChangeEvent('hashchange')); // force rerender on same-hash click
+  }, true);
+
+  /* ======================================================
      Config
   ====================================================== */
   // Admin auth — viewer-default model (v4.0.2+):
@@ -1999,7 +2020,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.2-alpha · Clinical + viewer-open + admin sign-in</div>
+        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix1 · PWA scope fix (hash interceptor)</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
