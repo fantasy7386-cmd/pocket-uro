@@ -1757,6 +1757,24 @@
     });
   }
 
+  // Render a plain-text title that may contain `[名字]` doctor tags (often
+  // wrapped in backticks like `` `[小黃]` `` in source JSON). Returns safe HTML.
+  function titleWithTags(title) {
+    if (title == null) return '';
+    const cleaned = String(title).replace(/`(\[[^\[\]\n]{1,12}\])`/g, '$1');
+    return esc(cleaned).replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) =>
+      '<span class="doctor-tag">' + esc(txt) + '</span>'
+    );
+  }
+  // Plain-text version for textContent contexts (setHeader, alert/confirm, alt):
+  // strips the backtick+bracket wrappers but keeps the name visible.
+  function titlePlain(title) {
+    if (title == null) return '';
+    return String(title)
+      .replace(/`(\[[^\[\]\n]{1,12}\])`/g, '$1')
+      .replace(/\[([^\[\]\n]{1,12})\]/g, '$1');
+  }
+
   /* ======================================================
      Router
   ====================================================== */
@@ -1986,7 +2004,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.6 · viewer-open + admin sign-in (user/pw) · v3.4 data unchanged</div>
+        <div class="brand-tag" id="brand-tag">v3.6.1 · doctor-tags in tips titles · viewer-open + admin sign-in</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2562,7 +2580,7 @@
             <a class="list-card" href="#/tips/s/${esc(s.id)}">
               <div style="width:36px;font-weight:700;color:${accent};font-size:15px">${esc(s.number)}</div>
               <div style="flex:1;min-width:0">
-                <div class="title">${esc(s.title)}</div>
+                <div class="title">${titleWithTags(s.title)}</div>
                 <div class="meta">${(s.subsections || []).length} subsections</div>
               </div>
               <span class="chevron">›</span>
@@ -2576,21 +2594,21 @@
   function renderTipsChapter(chapterId, accent) {
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     if (!chapter) return renderNotFound();
-    setHeader(chapter.full_title, { label: 'Tips & Guide', href: '#/tips' });
+    setHeader(titlePlain(chapter.full_title), { label: 'Tips & Guide', href: '#/tips' });
     const admin = isAdmin();
     const subs = chapter.subsections || [];
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
-        <h2 style="font-size:20px;margin-bottom:12px">${esc(chapter.full_title)}</h2>
+        <h2 style="font-size:20px;margin-bottom:12px">${titleWithTags(chapter.full_title)}</h2>
         <div class="list-section">
           ${subs.map((sub, i) => `
             <a class="list-card" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
               <div style="flex:1;min-width:0">
-                <div class="title">${esc(sub.title)}</div>
+                <div class="title">${titleWithTags(sub.title)}</div>
                 <div class="meta">${(sub.markdown || '').length} chars Markdown</div>
               </div>
-              <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(sub.title)}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
+              <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(titlePlain(sub.title))}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
               <span class="chevron">›</span>
             </a>
             ${admin ? `<button class="insert-btn" onclick="location.hash='#/tips/new/${esc(chapterId)}?after=${i}'">＋ insert subsection after</button>` : ''}
@@ -2610,15 +2628,15 @@
     const chapter = state.tips.sections.find(s => s.id === chapterId);
     const sub = chapter && chapter.subsections.find(x => x.id === subId);
     if (!chapter || !sub) return renderNotFound();
-    setHeader(sub.title, { label: chapter.title, href: '#/tips/s/' + chapterId });
+    setHeader(titlePlain(sub.title), { label: titlePlain(chapter.title), href: '#/tips/s/' + chapterId });
     const admin = isAdmin();
     const fav = isFav('tips', subId);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
-          <h2 style="flex:1;font-size:20px;line-height:1.3">${esc(sub.title)}</h2>
-          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(subId)}" data-fav-title="${escAttr(sub.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+          <h2 style="flex:1;font-size:20px;line-height:1.3">${titleWithTags(sub.title)}</h2>
+          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(subId)}" data-fav-title="${escAttr(titlePlain(sub.title))}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
         </div>
         <div class="markdown-body">${renderMd(sub.markdown || '')}</div>
         ${admin ? `
@@ -2637,8 +2655,8 @@
     if (!chapter) return;
     const sub = chapter.subsections.find(x => x.id === subId);
     if (!sub) return;
-    if (!confirm('Delete "' + sub.title + '"?')) return;
-    deleteWithUndo('tips', 'Deleted: ' + sub.title, () => {
+    if (!confirm('Delete "' + titlePlain(sub.title) + '"?')) return;
+    deleteWithUndo('tips', 'Deleted: ' + titlePlain(sub.title), () => {
       chapter.subsections = chapter.subsections.filter(x => x.id !== subId);
     });
     navigate('#/tips/s/' + chapterId);
@@ -2655,7 +2673,7 @@
       if (!orig) return renderNotFound();
       sub = JSON.parse(JSON.stringify(orig));
     }
-    setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? chapter.title : (sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
+    setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? titlePlain(chapter.title) : titlePlain(sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -3629,7 +3647,7 @@
         const hay = sub.title + ' ' + (sub.markdown || '');
         if (matchAllTerms(hay, terms)) {
           results.tips.push({
-            id: sub.id, title: chapter.number + '. ' + chapter.title + ' › ' + sub.title,
+            id: sub.id, title: chapter.number + '. ' + titlePlain(chapter.title) + ' › ' + titlePlain(sub.title),
             preview: previewAround(sub.markdown || '', terms),
             href: '#/tips/sub/' + chapter.id + '/' + sub.id,
           });
