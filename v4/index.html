@@ -2106,7 +2106,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix3 · image upload + PWA scope fix + doctor-tags</div>
+        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix4 · image upload in ALL 4 modules · Patient Ed markdown + PPu section.notes</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2259,7 +2259,9 @@
     const cat = state.data.categories.find(c => c.id === a.category);
     setHeader(a.title, { label: cat ? cat.name_en : 'Articles', href: '#/education/c/' + a.category });
     const fav = isFav('education', a.id);
-    const bodyHTML = highlight ? highlightText(a.text || '', highlight) : esc(a.text || '');
+    // Patient Ed body is Markdown as of v3.6.3. Existing plain-text articles
+    // render unchanged. Highlight dropped for body (mark.js × markdown conflict).
+    const bodyHTML = '<div class="markdown-body">' + renderMd(a.text || '') + '</div>';
     const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2271,7 +2273,7 @@
         <div class="article-meta-row">
           <span>${esc(cat ? cat.name_zh : a.category)}</span>
           ${a.pages ? `<span>${a.pages} pages</span>` : ''}
-          <span>${(a.text || '').length.toLocaleString()} chars</span>
+          <span>${(a.text || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length.toLocaleString()} chars${/!\[[^\]]*\]\(data:/.test(a.text || '') ? ' + images' : ''}</span>
         </div>
         <div class="article-body">${bodyHTML}</div>
         ${a.keywords && a.keywords.length ? `
@@ -2328,8 +2330,9 @@
           </select>
         </div>
         <div class="edit-field">
-          <label>Content</label>
-          <textarea id="ed-text" class="plain" style="min-height:300px" oninput="markEditorDirty()">${esc(a.text || '')}</textarea>
+          <label>Content (Markdown)</label>
+          ${mdToolbarHTML()}
+          <textarea id="te-md" style="min-height:300px" oninput="window.__mdUpdate && window.__mdUpdate(); markEditorDirty();">${esc(a.text || '')}</textarea>
         </div>
         <div class="edit-field">
           <label>Keywords (comma separated)</label>
@@ -2350,7 +2353,7 @@
   window.__saveArticle = function(artId, isNew) {
     const title = el('ed-title').value.trim();
     const categoryId = el('ed-category').value;
-    const text = el('ed-text').value;
+    const text = el('te-md').value;  // v4.0.2-alpha-fix4: Patient Ed body is markdown
     const keywords = el('ed-keywords').value.split(',').map(s => s.trim()).filter(Boolean);
     const pdf_url = el('ed-source').value.trim();
     if (!title) { showToast('Title required', 'error'); return; }
@@ -2495,6 +2498,11 @@
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(sid)}" data-fav-title="${escAttr(s.full_title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
         </div>
         <div class="article-body" style="white-space:normal">${body}</div>
+        ${s.notes ? `
+          <div class="markdown-body" style="margin-top:18px;padding:14px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius)">
+            ${renderMd(s.notes)}
+          </div>
+        ` : ''}
         ${isAdmin() ? `
           <div class="action-bar">
             <button class="btn btn-primary" onclick="location.hash='#/notes/edit/${esc(sid)}'">Edit section</button>
@@ -2533,6 +2541,12 @@
         <div class="edit-field">
           <label>Subsections</label>
           <div id="ne-subs"></div>
+        </div>
+        <div class="edit-field">
+          <label>Section notes (Markdown, optional)</label>
+          <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:6px">Free-form notes below the subsections. Supports Markdown + 📷 images (海報、衛教單張).</div>
+          ${mdToolbarHTML()}
+          <textarea id="te-md" style="min-height:200px" oninput="window.__mdUpdate && window.__mdUpdate(); markEditorDirty();">${esc(section.notes || '')}</textarea>
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
@@ -2633,11 +2647,12 @@
   window.__saveNote = function(sid, isNew, insertAfter) {
     const title = el('ne-title').value.trim();
     const subs = collectNoteSubs();
+    const notes = (el('te-md') && el('te-md').value) || '';
     if (!title) { showToast('Title required', 'error'); return; }
     clearEditorDirty();
     if (isNew) {
       const newSection = {
-        id: sid, number: '', title, full_title: title, subsections: subs,
+        id: sid, number: '', title, full_title: title, subsections: subs, notes,
       };
       if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < state.notes.sections.length) {
         state.notes.sections.splice(insertAfter + 1, 0, newSection);
@@ -2649,6 +2664,7 @@
       if (!s) return showToast('Section not found', 'error');
       s.title = title;
       s.subsections = subs;
+      s.notes = notes;
     }
     renumberNotes();
     markDirty('notes');
@@ -3728,20 +3744,25 @@
     };
 
     // Patient Ed — carry query into article page so highlights persist
+    // Strip data URLs (embedded images) from search haystack so base64 doesn't
+    // pollute matches or preview snippets.
+    const stripDataUrls = (s) => (s || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '[image]');
     for (const a of state.data.articles) {
-      const hay = a.title + ' ' + (a.text || '') + ' ' + (a.keywords || []).join(' ');
+      const textForSearch = stripDataUrls(a.text);
+      const hay = a.title + ' ' + textForSearch + ' ' + (a.keywords || []).join(' ');
       if (matchAllTerms(hay, terms)) {
         results.education.push({
           id: a.id,
           title: a.title,
-          preview: previewAround(a.text || '', terms),
+          preview: previewAround(textForSearch, terms),
           href: '#/education/a/' + a.id + '?q=' + encodeURIComponent(q),
         });
       }
     }
     // PPu Notes
     for (const s of state.notes.sections) {
-      const flat = s.full_title + ' ' + (s.subsections || []).map(sub => sub.title + ' ' + (sub.items || []).join(' ')).join(' ');
+      const notesForSearch = stripDataUrls(s.notes);
+      const flat = s.full_title + ' ' + (s.subsections || []).map(sub => sub.title + ' ' + (sub.items || []).join(' ')).join(' ') + ' ' + notesForSearch;
       if (matchAllTerms(flat, terms)) {
         results.notes.push({ id: s.id, title: s.full_title, preview: previewAround(flat, terms), href: '#/notes/s/' + s.id });
       }
@@ -3749,11 +3770,12 @@
     // Tips & Guide
     for (const chapter of state.tips.sections) {
       for (const sub of (chapter.subsections || [])) {
-        const hay = sub.title + ' ' + (sub.markdown || '');
+        const subMdForSearch = stripDataUrls(sub.markdown);
+        const hay = sub.title + ' ' + subMdForSearch;
         if (matchAllTerms(hay, terms)) {
           results.tips.push({
             id: sub.id, title: chapter.number + '. ' + titlePlain(chapter.title) + ' › ' + titlePlain(sub.title),
-            preview: previewAround(sub.markdown || '', terms),
+            preview: previewAround(subMdForSearch, terms),
             href: '#/tips/sub/' + chapter.id + '/' + sub.id,
           });
         }
@@ -3772,7 +3794,7 @@
           let matched = false;
           let matchedIsHidden = false;
 
-          const topicHay = t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '');
+          const topicHay = t.title + ' ' + stripDataUrls(t.notes) + ' ' + stripDataUrls(t.markdown_content);
           if (matchAllTerms(topicHay, terms)) {
             matched = true;
             preview = previewAround(topicHay, terms);
