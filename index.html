@@ -739,13 +739,15 @@
 
     /* ============ Toast ============ */
     .toast {
-      position: fixed; bottom: 20px; left: 50%;
+      /* Anchored ABOVE the sticky action-bar so Save feedback is visible on
+         edit screens. Safe-area inset accounts for iPhone home indicator. */
+      position: fixed; bottom: calc(env(safe-area-inset-bottom, 0) + 90px); left: 50%;
       transform: translateX(-50%);
       background: var(--c-header); color: #fff;
-      padding: 12px 20px;
+      padding: 14px 22px;
       border-radius: var(--radius);
-      font-size: 14px; z-index: 500;
-      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+      font-size: 15px; font-weight: 600; z-index: 2000;
+      box-shadow: 0 6px 20px rgba(0,0,0,.25);
       max-width: 90%;
       display: flex; align-items: center; gap: 12px;
     }
@@ -1169,6 +1171,27 @@
     clearTimeout(showToast._t);
     showToast._t = setTimeout(() => t.classList.add('hidden'), opts.duration || 2600);
   }
+
+  // Wrap any Save button so the user gets immediate feedback (haptic + button
+  // flip to "✓ Saved" + disabled) before the save handler runs. Prevents the
+  // "did that work?" double-tap problem reported 2026-04-20. Pass `this` as btn.
+  window.__saveFb = function(btn, saveFn) {
+    if (!btn || btn.disabled) return;
+    btn.disabled = true;
+    const orig = btn.textContent;
+    btn.textContent = '⏳ Saving…';
+    haptic('success');
+    try {
+      const r = saveFn();
+      btn.textContent = '✓ Saved';
+      // If save handler navigates away, this restore never runs — fine.
+      setTimeout(() => { if (btn.isConnected) { btn.textContent = orig; btn.disabled = false; } }, 1500);
+      return r;
+    } catch (e) {
+      btn.textContent = orig; btn.disabled = false;
+      throw e;
+    }
+  };
 
   /* ======================================================
      Editor dirty flag + unsaved-changes guard
@@ -2082,7 +2105,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v3.6.5 · iOS image picker fix (attach to DOM) · search focus fix · image upload all 4</div>
+        <div class="brand-tag" id="brand-tag">v3.6.6 · save feedback (haptic + button state + bigger toast) · iOS picker fix · search focus fix</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2319,7 +2342,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveArticle('${esc(a.id)}', ${isNew})">Save</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveArticle('${esc(a.id)}', ${isNew}))">Save</button>
         </div>
       </div>
     `;
@@ -2525,7 +2548,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveNote('${esc(section.id)}', ${isNew}, ${section._insertAfter !== undefined ? section._insertAfter : 'null'})">Save</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveNote('${esc(section.id)}', ${isNew}, ${section._insertAfter !== undefined ? section._insertAfter : 'null'}))">Save</button>
         </div>
       </div>
     `;
@@ -2796,7 +2819,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew},${sub._insertAfter !== undefined ? sub._insertAfter : 'null'})">Save</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew},${sub._insertAfter !== undefined ? sub._insertAfter : 'null'}))">Save</button>
         </div>
       </div>
     `;
@@ -3252,7 +3275,7 @@
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-danger" onclick="window.__clearNotes('${esc(tbId)}','${esc(topicId)}')">Clear</button>
-          <button class="btn btn-success" onclick="window.__saveTopicNotes('${esc(tbId)}','${esc(topicId)}')">Save</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveTopicNotes('${esc(tbId)}','${esc(topicId)}'))">Save</button>
         </div>
       </div>
     `;
@@ -3303,7 +3326,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Done</button>
-          <button class="btn btn-success" onclick="window.__saveOCR('${esc(tbId)}','${esc(topicId)}',${slideIdx})">Save this slide</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveOCR('${esc(tbId)}','${esc(topicId)}',${slideIdx}))">Save this slide</button>
         </div>
       </div>
     `;
@@ -3474,7 +3497,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveNewTextTopic('${esc(tbId)}',${secIdx})">Add</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveNewTextTopic('${esc(tbId)}',${secIdx}))">Add</button>
         </div>
       </div>
     `;
@@ -3515,7 +3538,7 @@
         </div>
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
-          <button class="btn btn-success" onclick="window.__saveEditTextTopic('${esc(tbId)}','${esc(topicId)}')">Save</button>
+          <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveEditTextTopic('${esc(tbId)}','${esc(topicId)}'))">Save</button>
         </div>
       </div>
     `;
