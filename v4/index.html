@@ -478,6 +478,44 @@
       border: 1px solid var(--c-border);
       cursor: zoom-in;
     }
+    .attachments {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-top: 20px;
+    }
+    .attachment { flex: 1 1 300px; max-width: 100%; margin: 0; }
+    .attachment img {
+      width: 100%; height: auto; border-radius: 6px;
+      border: 1px solid var(--c-border); cursor: zoom-in; display: block;
+    }
+    .attachment figcaption {
+      font-size: 12px; color: var(--c-text-muted);
+      margin-top: 6px; text-align: center;
+    }
+    .editor-images {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 8px;
+    }
+    .edit-image-item {
+      width: 130px;
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: 6px;
+      background: var(--c-surface-alt);
+    }
+    .edit-image-item img {
+      width: 100%; height: 90px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: zoom-in; display: block;
+    }
+    .edit-image-item input {
+      width: 100%; font-size: 11px;
+      margin-top: 6px; padding: 4px 6px;
+      border: 1px solid var(--c-border);
+      border-radius: 4px;
+      background: var(--c-surface); color: var(--c-text);
+      box-sizing: border-box;
+    }
     .markdown-body code {
       background: rgba(230,126,34,.12);
       color: #b06418;
@@ -1816,10 +1854,78 @@
       reader.readAsDataURL(file);
     });
   }
+  // v3.7.0 architecture: images separated from markdown.
+  function extractInlineImages(md) {
+    if (!md) return { text: '', images: [] };
+    const images = [];
+    const text = String(md).replace(
+      /!\[([^\]]*)\]\(data:[^)]+\)/g,
+      (match, alt) => {
+        const m = match.match(/\(data:[^)]+\)/);
+        const data = m ? m[0].slice(1, -1) : '';
+        if (data) images.push({ data, alt: alt || '', caption: '' });
+        return '';
+      }
+    ).replace(/\n{3,}/g, '\n\n').trim();
+    return { text, images };
+  }
+
+  let _editorImages = [];
+  function setEditorImages(arr) {
+    _editorImages = Array.isArray(arr) ? arr.map(x => ({ data: x.data || '', alt: x.alt || '', caption: x.caption || '' })) : [];
+    renderEditorImageGallery();
+  }
+  function getEditorImages() {
+    return _editorImages.filter(x => x && x.data).map(x => ({ data: x.data, alt: x.alt || '', caption: x.caption || '' }));
+  }
+  function editorImageGalleryHTML() {
+    return `
+      <div class="edit-field">
+        <label id="editor-images-label">Images (attachments)</label>
+        <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:6px">
+          Tap 📷 image in the toolbar above to add photos. Images render below the text on the reading page.
+        </div>
+        <div class="editor-images" id="editor-images"></div>
+      </div>
+    `;
+  }
+  function renderEditorImageGallery() {
+    const host = el('editor-images');
+    if (!host) return;
+    const lbl = el('editor-images-label');
+    if (lbl) lbl.textContent = 'Images (' + _editorImages.length + ')';
+    if (_editorImages.length === 0) {
+      host.innerHTML = '<div style="color:var(--c-text-muted);font-size:12px;padding:8px 0">尚無圖片。</div>';
+      return;
+    }
+    host.innerHTML = _editorImages.map((img, i) => `
+      <div class="edit-image-item">
+        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" onclick="window.__openLightbox(this.src, this.alt)">
+        <input type="text" placeholder="caption (optional)" value="${escAttr(img.caption || '')}" oninput="window.__editImgCap(${i}, this.value)">
+        <button class="btn btn-danger" onclick="window.__rmEditorImg(${i})" style="min-height:unset;padding:4px 8px;font-size:12px;width:100%;margin-top:4px">✕ Remove</button>
+      </div>
+    `).join('');
+  }
+  window.__rmEditorImg = function(i) {
+    if (!confirm('Remove this image?')) return;
+    _editorImages.splice(i, 1);
+    renderEditorImageGallery();
+    markEditorDirty();
+  };
+  window.__editImgCap = function(i, val) {
+    if (_editorImages[i]) { _editorImages[i].caption = val; markEditorDirty(); }
+  };
+  function renderAttachments(images) {
+    if (!images || !images.length) return '';
+    return '<div class="attachments">' + images.map(img => `
+      <figure class="attachment">
+        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" onclick="window.__openLightbox(this.src, this.alt)">
+        ${img.caption ? `<figcaption>${esc(img.caption)}</figcaption>` : ''}
+      </figure>
+    `).join('') + '</div>';
+  }
+
   window.__mdImage = function() {
-    if (!getMdTextarea()) { showToast('請先點擊內文區再插入圖片', 'error'); return; }
-    // iOS Safari requires the file input to be in the DOM for .click() to
-    // open the native photo picker. Non-attached inputs silently fail.
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = 'image/*';
@@ -1834,15 +1940,16 @@
         const dataUrl = await resizeImageToDataUrl(file, 1600, 0.8);
         const kb = Math.round(dataUrl.length * 0.75 / 1024);
         const alt = (file.name || 'image').replace(/\.[^.]+$/, '').slice(0, 40);
-        mdInsertAt('\n\n![' + alt + '](' + dataUrl + ')\n\n');
-        showToast('圖片已插入（約 ' + kb + ' KB）', 'success');
+        _editorImages.push({ data: dataUrl, alt, caption: '' });
+        renderEditorImageGallery();
+        markEditorDirty();
+        showToast('圖片已加入（約 ' + kb + ' KB），文字區不受影響', 'success');
       } catch (err) {
         showToast('圖片插入失敗：' + (err.message || err), 'error');
       }
     });
     document.body.appendChild(input);
     input.click();
-    // Safety cleanup if user cancels (no change event fires)
     setTimeout(cleanup, 60000);
   };
 
@@ -2136,7 +2243,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.2-alpha-fix8 · HOTFIX: edit hang on image-heavy content</div>
+        <div class="brand-tag" id="brand-tag">v4.0.3-alpha · images separated from markdown · legacy auto-migrate</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2289,10 +2396,11 @@
     const cat = state.data.categories.find(c => c.id === a.category);
     setHeader(a.title, { label: cat ? cat.name_en : 'Articles', href: '#/education/c/' + a.category });
     const fav = isFav('education', a.id);
-    // Patient Ed body is Markdown as of v3.6.3. Existing plain-text articles
-    // render unchanged. Highlight dropped for body (mark.js × markdown conflict).
     const bodyHTML = '<div class="markdown-body">' + renderMd(a.text || '') + '</div>';
+    const attachmentsHTML = renderAttachments(a.images);
     const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
+    const textCharCount = (a.text || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length;
+    const imgCount = (a.images || []).length + ((a.text || '').match(/!\[[^\]]*\]\(data:[^)]+\)/g) || []).length;
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
@@ -2303,9 +2411,9 @@
         <div class="article-meta-row">
           <span>${esc(cat ? cat.name_zh : a.category)}</span>
           ${a.pages ? `<span>${a.pages} pages</span>` : ''}
-          <span>${(a.text || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length.toLocaleString()} chars${/!\[[^\]]*\]\(data:/.test(a.text || '') ? ' + images' : ''}</span>
+          <span>${textCharCount.toLocaleString()} chars${imgCount ? ' · ' + imgCount + ' image' + (imgCount === 1 ? '' : 's') : ''}</span>
         </div>
-        <div class="article-body">${bodyHTML}</div>
+        <div class="article-body">${bodyHTML}${attachmentsHTML}</div>
         ${a.keywords && a.keywords.length ? `
           <div class="article-keywords">
             ${a.keywords.map(k => `<a class="kw-tag" href="#/search?q=${encodeURIComponent(k)}" style="cursor:pointer">${esc(k)}</a>`).join('')}
@@ -2339,11 +2447,14 @@
   function renderArticleEdit(artId, isNew, accent, defaultCatId) {
     let a;
     if (isNew) {
-      a = { id: 'art_' + Date.now(), title: '', category: defaultCatId || (state.data.categories[0] && state.data.categories[0].id), text: '', pages: null, keywords: [], related: [], pdf_url: '', filename: '' };
+      a = { id: 'art_' + Date.now(), title: '', category: defaultCatId || (state.data.categories[0] && state.data.categories[0].id), text: '', pages: null, keywords: [], related: [], pdf_url: '', filename: '', images: [] };
     } else {
       a = state.data.articles.find(x => x.id === artId);
       if (!a) return renderNotFound();
     }
+    const migrated = extractInlineImages(a.text || '');
+    const cleanText = migrated.text;
+    const allImgs = (a.images || []).concat(migrated.images);
     setHeader(isNew ? 'New article' : 'Edit', { label: isNew ? 'Articles' : (a.title || 'Article'), href: isNew ? '#/education' : ('#/education/a/' + a.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2362,8 +2473,9 @@
         <div class="edit-field">
           <label>Content (Markdown)</label>
           ${mdToolbarHTML()}
-          <textarea id="te-md" style="min-height:300px" oninput="window.__mdUpdate && window.__mdUpdate(); markEditorDirty();">${esc(a.text || '')}</textarea>
+          <textarea id="te-md" style="min-height:300px" oninput="markEditorDirty();">${esc(cleanText)}</textarea>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="edit-field">
           <label>Keywords (comma separated)</label>
           <input type="text" id="ed-keywords" value="${escAttr((a.keywords || []).join(', '))}" placeholder="keyword1, keyword2" oninput="markEditorDirty()">
@@ -2378,18 +2490,20 @@
         </div>
       </div>
     `;
+    setEditorImages(allImgs);
   }
 
   window.__saveArticle = function(artId, isNew) {
     const title = el('ed-title').value.trim();
     const categoryId = el('ed-category').value;
-    const text = el('te-md').value;  // v4.0.2-alpha-fix4: Patient Ed body is markdown
+    const text = el('te-md').value;
+    const images = getEditorImages();
     const keywords = el('ed-keywords').value.split(',').map(s => s.trim()).filter(Boolean);
     const pdf_url = el('ed-source').value.trim();
     if (!title) { showToast('Title required', 'error'); return; }
     clearEditorDirty();
     if (isNew) {
-      const newArt = { id: artId, title, category: categoryId, text, keywords, related: [], pdf_url, pages: null, filename: '' };
+      const newArt = { id: artId, title, category: categoryId, text, images, keywords, related: [], pdf_url, pages: null, filename: '' };
       state.data.articles.push(newArt);
       const cat = state.data.categories.find(c => c.id === categoryId);
       if (cat) { cat.articles.push(artId); cat.count = cat.articles.length; }
@@ -2404,7 +2518,7 @@
         if (oldCat) { oldCat.articles = oldCat.articles.filter(id => id !== artId); oldCat.count = oldCat.articles.length; }
         if (newCat) { newCat.articles.push(artId); newCat.count = newCat.articles.length; }
       }
-      a.title = title; a.category = categoryId; a.text = text;
+      a.title = title; a.category = categoryId; a.text = text; a.images = images;
       a.keywords = keywords; a.pdf_url = pdf_url;
     }
     markDirty('data');
@@ -2533,6 +2647,7 @@
             ${renderMd(s.notes)}
           </div>
         ` : ''}
+        ${renderAttachments(s.images)}
         ${isAdmin() ? `
           <div class="action-bar">
             <button class="btn btn-primary" onclick="location.hash='#/notes/edit/${esc(sid)}'">Edit section</button>
@@ -2552,6 +2667,8 @@
         title: '',
         full_title: '',
         subsections: [{ title: '', items: [''] }],
+        notes: '',
+        images: [],
         _insertAfter: (insertAfterIdx !== undefined ? insertAfterIdx : -1),
       };
     } else {
@@ -2559,6 +2676,9 @@
       if (!orig) return renderNotFound();
       section = JSON.parse(JSON.stringify(orig));
     }
+    const migrated = extractInlineImages(section.notes || '');
+    const cleanNotes = migrated.text;
+    const allImgs = (section.images || []).concat(migrated.images);
     setHeader(isNew ? 'New section' : 'Edit', { label: isNew ? 'PPu Notes' : (section.full_title || 'Section'), href: isNew ? '#/notes' : ('#/notes/s/' + section.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2574,10 +2694,11 @@
         </div>
         <div class="edit-field">
           <label>Section notes (Markdown, optional)</label>
-          <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:6px">Free-form notes below the subsections. Supports Markdown + 📷 images (海報、衛教單張).</div>
+          <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:6px">Free-form notes below the subsections. Images go in the separate gallery below.</div>
           ${mdToolbarHTML()}
-          <textarea id="te-md" style="min-height:200px" oninput="window.__mdUpdate && window.__mdUpdate(); markEditorDirty();">${esc(section.notes || '')}</textarea>
+          <textarea id="te-md" style="min-height:200px" oninput="markEditorDirty();">${esc(cleanNotes)}</textarea>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveNote('${esc(section.id)}', ${isNew}, ${section._insertAfter !== undefined ? section._insertAfter : 'null'}))">Save</button>
@@ -2585,6 +2706,7 @@
       </div>
     `;
     renderNoteSubsBlocks(section.subsections);
+    setEditorImages(allImgs);
   }
 
   function renderNoteSubsBlocks(subs) {
@@ -2678,11 +2800,12 @@
     const title = el('ne-title').value.trim();
     const subs = collectNoteSubs();
     const notes = (el('te-md') && el('te-md').value) || '';
+    const images = getEditorImages();
     if (!title) { showToast('Title required', 'error'); return; }
     clearEditorDirty();
     if (isNew) {
       const newSection = {
-        id: sid, number: '', title, full_title: title, subsections: subs, notes,
+        id: sid, number: '', title, full_title: title, subsections: subs, notes, images,
       };
       if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < state.notes.sections.length) {
         state.notes.sections.splice(insertAfter + 1, 0, newSection);
@@ -2695,6 +2818,7 @@
       s.title = title;
       s.subsections = subs;
       s.notes = notes;
+      s.images = images;
     }
     renumberNotes();
     markDirty('notes');
@@ -2790,6 +2914,7 @@
           <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(subId)}" data-fav-title="${escAttr(titlePlain(sub.title))}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
         </div>
         <div class="markdown-body">${renderMd(sub.markdown || '')}</div>
+        ${renderAttachments(sub.images)}
         ${admin ? `
           <div class="action-bar">
             <button class="btn btn-primary" onclick="location.hash='#/tips/edit/${esc(chapterId)}/${esc(subId)}'">Edit</button>
@@ -2824,6 +2949,9 @@
       if (!orig) return renderNotFound();
       sub = JSON.parse(JSON.stringify(orig));
     }
+    const migrated = extractInlineImages(sub.markdown || '');
+    const cleanMd = migrated.text;
+    const allImgs = (sub.images || []).concat(migrated.images);
     setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? titlePlain(chapter.title) : titlePlain(sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -2842,19 +2970,21 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();">${esc(sub.markdown || '')}</textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();">${esc(cleanMd)}</textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
             </div>
           </div>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew},${sub._insertAfter !== undefined ? sub._insertAfter : 'null'}))">Save</button>
         </div>
       </div>
     `;
+    setEditorImages(allImgs);
     window.__mdUpdate();
   }
 
@@ -2891,10 +3021,11 @@
     if (!chapter) return showToast('Chapter not found', 'error');
     const title = el('te-title').value.trim();
     const md = el('te-md').value;
+    const images = getEditorImages();
     if (!title) return showToast('Title required', 'error');
     clearEditorDirty();
     if (isNew) {
-      const newSub = { id: subId, title, markdown: md };
+      const newSub = { id: subId, title, markdown: md, images };
       if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < chapter.subsections.length) {
         chapter.subsections.splice(insertAfter + 1, 0, newSub);
       } else {
@@ -2905,6 +3036,7 @@
       if (!s) return showToast('Not found', 'error');
       s.title = title;
       s.markdown = md;
+      s.images = images;
     }
     state.tips.total_subsections = state.tips.sections.reduce((a, s) => a + s.subsections.length, 0);
     markDirty('tips');
@@ -3106,11 +3238,10 @@
       const md = topic.markdown_content || '';
       let rendered = renderMd(md);
       if (highlight) {
-        // Naive highlight inside rendered HTML — wrap text matches
         const safe = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         rendered = rendered.replace(new RegExp('(?![^<]*>)(' + safe + ')', 'gi'), '<mark class="highlight">$1</mark>');
       }
-      content = `<div class="markdown-body">${rendered}</div>`;
+      content = `<div class="markdown-body">${rendered}</div>` + renderAttachments(topic.images);
     } else {
       if (!visibleSlides.length) {
         content = '<div class="placeholder"><div class="big">📄</div><strong>No visible slides</strong></div>';
@@ -3139,10 +3270,11 @@
       </details>
     ` : '';
 
-    const notesHTML = topic.notes ? `
+    const notesHTML = (topic.notes || (topic.images && topic.images.length && topic.type !== 'text_only')) ? `
       <div class="topic-notes">
         <div class="notes-label">📝 Notes</div>
-        <div class="markdown-body">${renderMd(topic.notes)}</div>
+        ${topic.notes ? `<div class="markdown-body">${renderMd(topic.notes)}</div>` : ''}
+        ${topic.type !== 'text_only' ? renderAttachments(topic.images) : ''}
       </div>
     ` : '';
 
@@ -3293,6 +3425,9 @@
     const found = findTopic(tbId, topicId);
     if (!found) return renderNotFound();
     const { topic } = found;
+    const migrated = extractInlineImages(topic.notes || '');
+    const cleanNotes = migrated.text;
+    const allImgs = (topic.images || []).concat(migrated.images);
     setHeader('Edit notes', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3307,13 +3442,14 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="Add guideline updates, personal annotations, etc.">${esc(topic.notes || '')}</textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="Add guideline updates, personal annotations, etc.">${esc(cleanNotes)}</textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
             </div>
           </div>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-danger" onclick="window.__clearNotes('${esc(tbId)}','${esc(topicId)}')">Clear</button>
@@ -3321,6 +3457,7 @@
         </div>
       </div>
     `;
+    setEditorImages(allImgs);
     window.__mdUpdate();
   }
 
@@ -3328,6 +3465,7 @@
     const found = findTopic(tbId, topicId);
     if (!found) return;
     found.topic.notes = el('te-md').value;
+    found.topic.images = getEditorImages();
     markDirty(tbId);
     clearEditorDirty();
     showToast('Saved locally ✓', 'success');
@@ -3537,12 +3675,14 @@
             </div>
           </div>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveNewTextTopic('${esc(tbId)}',${secIdx}))">Add</button>
         </div>
       </div>
     `;
+    setEditorImages([]);
     window.__mdUpdate();
   }
 
@@ -3550,6 +3690,9 @@
     const found = findTopic(tbId, topicId);
     if (!found || found.topic.type !== 'text_only') return renderNotFound();
     const { topic } = found;
+    const migrated = extractInlineImages(topic.markdown_content || '');
+    const cleanMd = migrated.text;
+    const allImgs = (topic.images || []).concat(migrated.images);
     setHeader('Edit content', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3571,19 +3714,21 @@
           </div>
           <div class="md-editor">
             <div class="md-pane" id="mdp-edit">
-              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty()">${esc(topic.markdown_content || '')}</textarea>
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty()">${esc(cleanMd)}</textarea>
             </div>
             <div class="md-pane hidden" id="mdp-preview">
               <div class="md-preview markdown-body" id="te-preview"></div>
             </div>
           </div>
         </div>
+        ${editorImageGalleryHTML()}
         <div class="action-bar action-bar-sticky">
           <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
           <button class="btn btn-success" onclick="window.__saveFb(this, () => window.__saveEditTextTopic('${esc(tbId)}','${esc(topicId)}'))">Save</button>
         </div>
       </div>
     `;
+    setEditorImages(allImgs);
     window.__mdUpdate();
   }
 
@@ -3596,6 +3741,7 @@
     if (!title) return showToast('Title required', 'error');
     found.topic.title = title;
     found.topic.markdown_content = md;
+    found.topic.images = getEditorImages();
     found.topic.has_exam_questions = !!exam;
     markDirty(tbId);
     clearEditorDirty();
@@ -3610,6 +3756,7 @@
     const title = el('tb-new-title').value.trim();
     const md = el('te-md').value;
     const exam = el('tb-new-exam').checked;
+    const images = getEditorImages();
     if (!title) return showToast('Title required', 'error');
     clearEditorDirty();
     const topic = {
@@ -3618,6 +3765,7 @@
       title,
       has_exam_questions: !!exam,
       markdown_content: md,
+      images,
     };
     sec.topics = sec.topics || [];
     sec.topics.push(topic);
