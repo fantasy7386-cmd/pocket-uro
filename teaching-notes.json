@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-03-27",
+  "updated": "2026-04-20",
   "author": "PPu Teaching Faculty",
   "total_sections": 13,
   "sections": [
@@ -352,7 +352,7 @@
         {
           "title": "1. TURP / TUEP 後 PSA",
           "items": [
-            "TURP / TUEP 後，PSA 可能降至約 1 左右。",
+            "TURP / TUEP 後，PSA 可能降至約 1 左右（1.7）。",
             "因此術後 PSA 的解讀應以新的 baseline 為主，不能直接拿術前數值比較。"
           ]
         },
@@ -449,9 +449,9 @@
     },
     {
       "id": "tn_12",
-      "number": "XIV",
+      "number": "XIII",
       "title": "快速複習版",
-      "full_title": "XIV. 快速複習版",
+      "full_title": "XIII. 快速複習版",
       "subsections": [
         {
           "title": "",
