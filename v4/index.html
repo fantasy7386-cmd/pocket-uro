@@ -1,0 +1,4223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket URO v4 (Clinical)</title>
+
+  <!-- Base rewrites relative paths to parent (/pocket-uro/) so shared data.json,
+       textbook-data/, images/, lib/ all resolve to v3.4 assets without duplication.
+       v4-specific files (manifest, icons, sw) use explicit v4/ prefix. -->
+  <base href="../">
+
+  <link rel="manifest" href="v4/manifest.json?v=4">
+  <link rel="icon" href="v4/icon-192.png?v=4">
+  <link rel="apple-touch-icon" href="v4/apple-touch-icon.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="v4/apple-touch-icon.png?v=4">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Pocket URO">
+  <meta name="theme-color" content="#0A1648">
+
+  <style>
+    /* ============ Design tokens ============ */
+    :root {
+      /* Module accents — Clinical: desaturated, used as 6px dots / 28-30px badge chips */
+      --c-patient-ed: #2E5C8A;
+      --c-ppu-notes:  #2E7D4E;
+      --c-tips:       #B05A1C;
+      --c-textbook:   #6B3A8A;
+
+      /* Light theme (Clinical default) */
+      --c-bg:          #F6F7F9;
+      --c-surface:     #FFFFFF;
+      --c-surface-alt: #FAFBFC;
+      --c-text:        #0B1F3A;
+      --c-text-2:      #3A4A63;
+      --c-text-muted:  #6B7791;
+      --c-border:      #E3E7EE;
+      --c-border-2:    #EDEFF4;
+      --c-header:      #FFFFFF;
+      --c-header-text: #0B1F3A;
+      --c-danger:      #B3261E;
+      --c-success:     #0F7B3E;
+      --c-warning:     #B26A00;
+      --c-info:        #0B3D91;
+      --c-primary:     #0B3D91;
+      --c-primary-soft:#E8EEF9;
+      --c-accent:      var(--c-primary);
+      --c-highlight-bg:#FFF3BF;
+      --c-highlight-fg:#0B1F3A;
+      --c-hjh-bg-start:#FFF8E1;
+      --c-hjh-bg-end:  #FFE5A3;
+      --c-hjh-fg:      #854D0E;
+      --c-hjh-border:  #F0D986;
+      --c-hjh-accent:  #B26A00;
+      --c-hjh-note-bg: #FFFBEB;
+      --c-hjh-card-bg: #FFF8E1;
+
+      /* Typography */
+      --font-read: 15px;         /* body text / markdown / articles */
+      --font-read-lg: 17px;      /* list-card titles when enlarged */
+      --font-ui: 15px;           /* UI controls */
+
+      --radius: 12px;
+      --radius-sm: 8px;
+      --tap-target: 44px;
+      --max-width: 820px;
+      --header-height: 56px;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md: 0 2px 6px rgba(0,0,0,.08);
+    }
+
+    /* Dark theme override (Clinical dark variant) */
+    body[data-theme="dark"] {
+      --c-bg:          #0A0F1C;
+      --c-surface:     #141B2D;
+      --c-surface-alt: #0D1423;
+      --c-text:        #E8EEF9;
+      --c-text-2:      #9BA7C2;
+      --c-text-muted:  #6B7791;
+      --c-border:      #243049;
+      --c-border-2:    #1A2238;
+      --c-header:      #0A0F1C;
+      --c-header-text: #E8EEF9;
+      --c-primary:     #6690FF;
+      --c-primary-soft:#1A2A55;
+      --c-info:        #6690FF;
+      --c-accent:      #6690FF;
+      --c-highlight-bg:#D4A413;
+      --c-highlight-fg:#0A0F1C;
+      --c-hjh-bg-start:#2D2410;
+      --c-hjh-bg-end:  #4A3A15;
+      --c-hjh-fg:      #FFD85A;
+      --c-hjh-border:  #4A3A15;
+      --c-hjh-accent:  #FFD85A;
+      --c-hjh-note-bg: #1F1A0E;
+      --c-hjh-card-bg: #1A1810;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+      --shadow-md: 0 2px 6px rgba(0,0,0,.4);
+    }
+
+    /* Font scale variants */
+    body[data-font-scale="small"]  { --font-read: 13px; --font-read-lg: 15px; --font-ui: 14px; }
+    body[data-font-scale="normal"] { --font-read: 15px; --font-read-lg: 17px; --font-ui: 15px; }
+    body[data-font-scale="large"]  { --font-read: 17px; --font-read-lg: 19px; --font-ui: 16px; }
+    body[data-font-scale="xlarge"] { --font-read: 19px; --font-read-lg: 21px; --font-ui: 17px; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei",
+                   sans-serif;
+      background: var(--c-bg);
+      color: var(--c-text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    body {
+      min-height: 100vh;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    button { font: inherit; cursor: pointer; color: inherit; background: none; border: none; }
+    input, textarea, select { font: inherit; color: inherit; }
+    a { color: var(--c-info); text-decoration: none; }
+    ::selection { background: var(--c-accent); color: #fff; }
+
+    /* ============ Access gate ============ */
+    .gate {
+      position: fixed; inset: 0; z-index: 1000;
+      background: var(--c-header); color: #fff;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 20px;
+    }
+    .gate.hidden { display: none; }
+    .gate h1 { font-size: 32px; margin-bottom: 6px; font-weight: 700; }
+    .gate p { color: #9aa0b4; margin-bottom: 28px; font-size: 14px; }
+    .gate input {
+      font-size: 18px; padding: 14px 16px; border: none; border-radius: var(--radius);
+      width: 100%; max-width: 280px; margin-bottom: 12px;
+      text-align: center; letter-spacing: 2px;
+      color: #2c3e50; background: #fff; caret-color: #2c3e50;
+    }
+    .gate input::placeholder { color: #9aa0b4; }
+    .gate button {
+      font-size: 16px; padding: 14px 36px; border: none; border-radius: var(--radius);
+      background: var(--c-danger); color: #fff; min-width: 160px; font-weight: 600;
+    }
+    .gate .error { color: #ff8a80; font-size: 14px; margin-top: 16px; min-height: 20px; }
+
+    /* ============ App shell ============ */
+    #app[hidden] { display: none; }
+
+    .app-header {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--header-height);
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 8px;
+      gap: 4px;
+    }
+    .app-header h1 {
+      font-size: 16px; font-weight: 600; text-align: center;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      padding: 0 4px;
+    }
+    .app-header .parent-link {
+      display: flex; align-items: center; gap: 2px;
+      color: var(--c-info);
+      font-size: 15px;
+      text-decoration: none;
+      padding: 8px 6px;
+      border-radius: 8px;
+      min-height: var(--tap-target);
+      max-width: 100%;
+      overflow: hidden;
+      justify-self: start;
+    }
+    .app-header .parent-link.hidden { visibility: hidden; pointer-events: none; }
+    .app-header .parent-link:active { background: rgba(0,0,0,.06); }
+    .app-header .parent-link .chev {
+      font-size: 22px; font-weight: 600; line-height: 1;
+      flex-shrink: 0;
+    }
+    .app-header .parent-link .label {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .app-header .more-btn {
+      width: var(--tap-target); height: var(--tap-target);
+      border-radius: 50%; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      justify-self: end;
+      position: relative;
+    }
+    .app-header .more-btn:active { background: rgba(0,0,0,.06); }
+    .app-header .more-btn .dot-badge {
+      position: absolute; top: 6px; right: 4px;
+      width: 16px; height: 16px;
+      background: var(--c-danger); color: #fff;
+      border-radius: 8px; font-size: 10px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .more-menu {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + var(--header-height) + 6px);
+      right: 8px;
+      min-width: 220px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      z-index: 500;
+      overflow: hidden;
+    }
+    .more-menu.hidden { display: none; }
+    .more-menu a, .more-menu button {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      text-align: left;
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--c-text);
+      font-size: 15px;
+      text-decoration: none;
+      border-bottom: 1px solid var(--c-border);
+      cursor: pointer;
+    }
+    .more-menu a:last-child, .more-menu button:last-child { border-bottom: none; }
+    .more-menu a:active, .more-menu button:active { background: var(--c-surface-alt); }
+    .more-menu .icon {
+      font-size: 18px; width: 24px; text-align: center; flex-shrink: 0;
+    }
+    .more-menu .badge-inline {
+      margin-left: auto;
+      font-size: 11px; padding: 2px 8px;
+      background: var(--c-danger); color: #fff;
+      border-radius: 8px; font-weight: 700;
+    }
+    .more-menu-backdrop {
+      position: fixed; inset: 0; z-index: 499;
+      background: transparent;
+    }
+    .more-menu-backdrop.hidden { display: none; }
+
+    #view {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px;
+      padding-bottom: 80px;
+    }
+
+    /* ============ Module view header ============ */
+    .module-view[data-accent] {
+      --accent: var(--module-accent);
+    }
+    .module-header-strip {
+      height: 4px; width: 100%;
+      background: var(--accent, var(--c-border));
+      margin-bottom: 16px; border-radius: 2px;
+    }
+
+    /* ============ Home ============ */
+    .brand {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 6px 0 14px;
+    }
+    .brand-name { font-size: 26px; font-weight: 700; }
+    .brand-tag { font-size: 12px; color: var(--c-text-muted); }
+
+    .search-bar {
+      width: 100%; padding: 12px 16px; border: 1px solid var(--c-border);
+      border-radius: var(--radius); font-size: 16px;
+      background: var(--c-surface); margin-bottom: 16px;
+      -webkit-appearance: none; appearance: none;
+    }
+
+    .home-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    }
+    @media (min-width: 768px) { .home-grid { gap: 16px; } }
+
+    .module-card {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      padding: 16px;
+      border-left: 6px solid var(--accent, #333);
+      border-top: 1px solid var(--c-border);
+      border-right: 1px solid var(--c-border);
+      border-bottom: 1px solid var(--c-border);
+      min-height: 120px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      text-align: left;
+      transition: transform .08s ease;
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+    }
+    .module-card:active { transform: scale(.97); }
+    .module-card .icon { font-size: 24px; }
+    .module-card .name { font-size: 15px; font-weight: 600; margin-top: 10px; }
+    .module-card .count { font-size: 12px; color: var(--c-text-muted); margin-top: 2px; }
+
+    .home-actions {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 20px; padding: 8px 0;
+      font-size: 13px;
+    }
+    .home-actions a { color: var(--c-text-muted); text-decoration: underline; }
+    .home-actions .admin-tag {
+      font-size: 11px; padding: 2px 8px; border-radius: 10px;
+      background: var(--c-header); color: #fff;
+    }
+
+    /* ============ Generic list items ============ */
+    .list-section {
+      margin-top: 8px;
+    }
+    .list-card {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border: 1px solid var(--c-border);
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 12px;
+      cursor: pointer;
+      color: inherit; text-decoration: none;
+      min-height: var(--tap-target);
+    }
+    .list-card:active { background: var(--c-surface-alt); }
+    .list-card .title {
+      font-size: var(--font-read); font-weight: 500; flex: 1;
+      overflow: hidden;
+    }
+    .list-card .meta {
+      font-size: 12px; color: var(--c-text-muted);
+      margin-top: 2px;
+    }
+    .list-card .chevron { color: var(--c-text-muted); font-size: 18px; }
+    .list-card .badge {
+      background: var(--accent, var(--c-border));
+      color: #fff; font-size: 11px; padding: 2px 8px;
+      border-radius: 10px; font-weight: 600;
+      white-space: nowrap;
+    }
+    .list-card .fav-btn {
+      font-size: 18px; opacity: .35; width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+    }
+    .list-card .fav-btn.active { opacity: 1; }
+
+    /* ============ Empty state / placeholder ============ */
+    .placeholder {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--c-text-muted);
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--c-border);
+    }
+    .placeholder .big { font-size: 40px; margin-bottom: 12px; }
+    .placeholder strong { color: var(--c-text); display: block; margin-bottom: 6px; font-size: 17px; }
+    .placeholder small { font-size: 13px; }
+
+    /* ============ Article view ============ */
+    .article-body {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid var(--c-border);
+      white-space: pre-wrap;
+      font-size: var(--font-read);
+      line-height: 1.75;
+      word-break: break-word;
+    }
+    .article-meta-row {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      font-size: 12px; color: var(--c-text-muted);
+      margin-bottom: 12px;
+    }
+    .article-meta-row span {
+      padding: 2px 8px; background: var(--c-surface); border-radius: 10px;
+      border: 1px solid var(--c-border);
+    }
+    .article-keywords {
+      margin-top: 16px;
+      display: flex; flex-wrap: wrap; gap: 6px;
+    }
+    .kw-tag {
+      font-size: 12px; padding: 4px 10px;
+      background: var(--c-surface); border: 1px solid var(--c-border);
+      border-radius: 10px; color: var(--c-text-muted);
+    }
+    .article-source {
+      margin-top: 16px; padding: 10px 14px;
+      background: var(--c-surface); border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      font-size: 12px; color: var(--c-text-muted);
+    }
+    .article-source a { word-break: break-all; }
+
+    /* ============ Notes / Tips editors ============ */
+    .edit-field { margin-bottom: 16px; }
+    .edit-field label {
+      display: block; font-size: 12px; font-weight: 600;
+      color: var(--c-text-muted); margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: .5px;
+    }
+    .edit-field input[type="text"],
+    .edit-field input[type="url"],
+    .edit-field select,
+    .edit-field textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      background: var(--c-surface);
+      font-size: 15px;
+    }
+    .edit-field textarea {
+      min-height: 160px; resize: vertical;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+      font-size: 14px; line-height: 1.6;
+    }
+    .edit-field textarea.plain {
+      font-family: inherit; font-size: 15px;
+    }
+    .subsection-block {
+      background: var(--c-surface); border: 1px solid var(--c-border);
+      border-radius: var(--radius); padding: 14px; margin-bottom: 8px;
+      position: relative;
+    }
+    .subsection-block .sub-idx {
+      position: absolute; top: -10px; left: 12px;
+      background: var(--c-header); color: #fff;
+      font-size: 11px; padding: 2px 8px; border-radius: 10px;
+    }
+    .subsection-block .sub-delete {
+      position: absolute; top: 8px; right: 8px;
+      color: var(--c-danger); font-size: 16px; padding: 4px 8px;
+    }
+    .insert-btn {
+      display: block; width: 100%; padding: 4px 0;
+      color: var(--c-success); font-size: 14px;
+      border: 1px dashed transparent;
+      border-radius: var(--radius-sm);
+      margin: 4px 0;
+      opacity: .5;
+    }
+    .insert-btn:hover { opacity: 1; border-color: var(--c-border); }
+
+    /* ============ Tips Markdown renderer ============ */
+    .markdown-body { font-size: var(--font-read); line-height: 1.75; }
+    .markdown-body h1 { font-size: 22px; margin: 16px 0 8px; font-weight: 700; }
+    .markdown-body h2 { font-size: 19px; margin: 14px 0 6px; font-weight: 700; }
+    .markdown-body h3 { font-size: 16px; margin: 12px 0 4px; font-weight: 700; }
+    .markdown-body h4 {
+      font-size: 14px; margin: 12px 0 4px; font-weight: 700;
+      color: var(--c-tips); text-transform: uppercase; letter-spacing: .5px;
+    }
+    .markdown-body p { margin: 8px 0; }
+    .markdown-body ul, .markdown-body ol { margin: 8px 0 8px 22px; }
+    .markdown-body li { margin: 4px 0; }
+    .markdown-body code {
+      background: rgba(230,126,34,.12);
+      color: #b06418;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 90%;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    }
+    .markdown-body pre {
+      background: var(--c-header); color: #e8e8e8;
+      padding: 12px; border-radius: var(--radius-sm);
+      overflow-x: auto; margin: 10px 0;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+      font-size: 13px;
+    }
+    .markdown-body pre code { background: none; color: inherit; padding: 0; }
+    .markdown-body blockquote {
+      border-left: 3px solid var(--c-tips);
+      padding: 2px 12px;
+      color: var(--c-text-muted);
+      margin: 10px 0;
+    }
+    .markdown-body table {
+      border-collapse: collapse;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    .markdown-body th, .markdown-body td {
+      border: 1px solid var(--c-border);
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .markdown-body th { background: var(--c-surface-alt); font-weight: 600; }
+    .markdown-body hr {
+      border: none; border-top: 1px solid var(--c-border); margin: 16px 0;
+    }
+    .markdown-body strong { font-weight: 700; }
+    .markdown-body em { font-style: italic; }
+    .doctor-tag {
+      display: inline-block;
+      font-size: 11px; padding: 1px 6px;
+      background: var(--c-tips); color: #fff;
+      border-radius: 8px; font-weight: 600;
+      margin: 0 2px; vertical-align: middle;
+    }
+
+    /* Markdown editor: split pane */
+    .md-editor {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 768px) {
+      .md-editor {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .md-editor textarea {
+      width: 100%;
+      min-height: 280px;
+      padding: 12px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      background: var(--c-surface);
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+      font-size: 14px; line-height: 1.6;
+      resize: vertical;
+    }
+    .md-preview {
+      padding: 12px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      min-height: 280px;
+      overflow-y: auto;
+    }
+    .md-toolbar {
+      display: flex; gap: 4px;
+      margin-bottom: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    .md-toolbar button {
+      min-width: 38px; height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+      background: var(--c-surface);
+      color: var(--c-text);
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+    .md-toolbar button:active { background: var(--c-surface-alt); transform: scale(.95); }
+    .md-toolbar .sep {
+      width: 1px; align-self: stretch;
+      background: var(--c-border);
+      flex-shrink: 0;
+    }
+    .md-cheatsheet {
+      font-size: 11px; color: var(--c-text-muted);
+      margin-top: 4px; line-height: 1.6;
+      padding: 6px 10px;
+      background: var(--c-surface-alt);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--c-border);
+    }
+    .md-cheatsheet code {
+      background: rgba(0,0,0,.05);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 10px;
+    }
+    body[data-theme="dark"] .md-cheatsheet code { background: rgba(255,255,255,.08); }
+
+    .md-tabs {
+      display: flex; gap: 4px; margin-bottom: 8px;
+    }
+    .md-tabs button {
+      flex: 1; padding: 8px 12px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      background: var(--c-surface);
+      font-size: 13px;
+    }
+    .md-tabs button.active {
+      background: var(--c-tips); color: #fff; border-color: var(--c-tips);
+    }
+    @media (min-width: 768px) {
+      .md-tabs { display: none; }
+      .md-editor .md-pane { display: block !important; }
+    }
+    @media (max-width: 767px) {
+      .md-editor .md-pane.hidden { display: none; }
+    }
+
+    /* ============ Textbook slide viewer ============ */
+    .slide-viewer {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 12px;
+    }
+    .slide-frame {
+      position: relative;
+      background: #000;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 200px;
+    }
+    .slide-frame img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .slide-controls {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; margin-top: 8px;
+    }
+    .slide-controls button {
+      padding: 10px 14px;
+      background: var(--c-textbook); color: #fff;
+      border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600;
+    }
+    .slide-controls button[disabled] { opacity: .4; }
+    .slide-counter {
+      font-size: 13px; color: var(--c-text-muted);
+      min-width: 60px; text-align: center;
+    }
+    .slide-ocr {
+      margin-top: 12px; padding: 10px 12px;
+      background: var(--c-surface-alt);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-read); line-height: 1.6;
+    }
+    .slide-ocr ul { margin-left: 18px; }
+    .slide-ocr .ocr-label {
+      font-size: 11px; font-weight: 600;
+      color: var(--c-text-muted);
+      text-transform: uppercase; letter-spacing: .5px;
+      margin-bottom: 4px;
+    }
+    .topic-notes {
+      margin-bottom: 12px; padding: 12px 14px;
+      background: var(--c-hjh-note-bg);
+      border: 1px solid var(--c-hjh-border);
+      border-radius: var(--radius-sm);
+      font-size: var(--font-read);
+    }
+    .topic-notes .notes-label {
+      font-size: 11px; font-weight: 700;
+      color: var(--c-warning);
+      text-transform: uppercase; letter-spacing: .5px;
+      margin-bottom: 6px;
+    }
+    .topic-header {
+      display: flex; align-items: center;
+      gap: 10px; margin-bottom: 12px;
+    }
+    .topic-header .title { flex: 1; font-size: 17px; font-weight: 600; }
+    .topic-header .badges { display: flex; gap: 4px; }
+    .topic-badge {
+      font-size: 11px; padding: 2px 7px;
+      border-radius: 10px; font-weight: 600;
+    }
+    .topic-badge.exam { background: #fff3cd; color: #b87800; }
+    .topic-badge.text-only { background: #e8d8f0; color: #5e2670; }
+    .topic-badge.hjh {
+      background: linear-gradient(135deg, var(--c-hjh-bg-start), var(--c-hjh-bg-end));
+      color: var(--c-hjh-fg); font-weight: 700;
+      border: 1px solid var(--c-hjh-border);
+    }
+    .list-card.hjh { border-left: 4px solid var(--c-hjh-accent); background: linear-gradient(90deg, var(--c-hjh-card-bg) 0%, var(--c-surface) 50%); }
+    .sync-badge {
+      position: absolute; top: 6px; right: 4px;
+      background: var(--c-danger); color: #fff;
+      font-size: 10px; font-weight: 700;
+      min-width: 16px; height: 16px;
+      border-radius: 8px; padding: 0 4px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ============ Buttons ============ */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 600;
+      min-height: var(--tap-target);
+      border: 1px solid transparent;
+      transition: transform .08s ease, background .15s ease;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn-primary { background: var(--c-info); color: #fff; }
+    .btn-secondary { background: var(--c-surface); color: var(--c-text); border-color: var(--c-border); }
+    .btn-success { background: var(--c-success); color: #fff; }
+    .btn-danger { background: var(--c-danger); color: #fff; }
+    .btn-ghost { background: transparent; color: var(--c-text-muted); }
+    .btn-block { display: flex; width: 100%; }
+
+    .action-bar {
+      display: flex; gap: 8px; margin: 16px 0;
+      flex-wrap: wrap;
+    }
+    .action-bar .btn { flex: 1; min-width: 100px; }
+    .action-bar-sticky {
+      position: sticky; bottom: 0;
+      background: var(--c-bg);
+      padding: 12px 0;
+      margin-top: 20px;
+      border-top: 1px solid var(--c-border);
+    }
+
+    /* ============ Back button ============ */
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 0;
+      color: var(--c-info);
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    /* ============ Toast ============ */
+    .toast {
+      position: fixed; bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--c-header); color: #fff;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      font-size: 14px; z-index: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+      max-width: 90%;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .toast .toast-action {
+      padding: 4px 12px;
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: .5px;
+      cursor: pointer;
+    }
+    .toast .toast-action:active { background: rgba(255,255,255,.35); }
+    .note-item-row {
+      display: flex; gap: 4px; margin-bottom: 4px;
+      align-items: center;
+    }
+    .note-item-row input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      background: var(--c-surface);
+      font-size: var(--font-read);
+    }
+    .note-item-row .item-del {
+      color: var(--c-danger);
+      padding: 6px 10px;
+      font-size: 14px;
+      opacity: .6;
+    }
+    .note-item-row .item-del:active { opacity: 1; }
+    .toast.hidden { display: none; }
+    .toast.success { background: var(--c-success); }
+    .toast.error { background: var(--c-danger); }
+
+    /* ============ Favorites / Search ============ */
+    .result-group-header {
+      font-size: 12px; font-weight: 700;
+      color: var(--c-text-muted);
+      text-transform: uppercase; letter-spacing: .5px;
+      margin: 16px 0 6px; padding: 0 4px;
+    }
+    .result-module-badge {
+      display: inline-block;
+      font-size: 10px; padding: 1px 6px;
+      border-radius: 8px; color: #fff;
+      margin-right: 4px; font-weight: 600;
+      vertical-align: middle;
+    }
+    mark.highlight {
+      background: var(--c-highlight-bg); color: var(--c-highlight-fg);
+      padding: 0 2px; border-radius: 3px;
+    }
+
+    /* ============ Sync panel ============ */
+    .sync-panel {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+    .sync-panel h3 {
+      font-size: 14px; font-weight: 700; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .sync-panel .dirty-list {
+      font-size: 13px; color: var(--c-text-muted);
+      margin: 8px 0; padding-left: 16px;
+    }
+    .sync-panel .dirty-list li { list-style: disc; }
+
+    /* ============ Topic thumbnails ============ */
+    .topic-thumb {
+      width: 48px; height: 36px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--c-surface-alt);
+      border: 1px solid var(--c-border);
+    }
+    @media (max-width: 380px) { .topic-thumb { width: 40px; height: 30px; } }
+
+    /* ============ Search filter chips ============ */
+    .search-filters {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 8px 0 4px;
+    }
+    .search-filter-chip {
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-size: 12px; font-weight: 600;
+      border: 1px solid var(--c-border);
+      background: var(--c-surface);
+      color: var(--c-text-muted);
+      cursor: pointer;
+    }
+    .search-filter-chip.active {
+      background: var(--chip-accent, var(--c-accent));
+      color: #fff;
+      border-color: var(--chip-accent, var(--c-accent));
+    }
+
+    /* ============ Download progress ============ */
+    .dl-progress {
+      margin-top: 8px;
+      height: 6px;
+      background: var(--c-surface-alt);
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--c-border);
+    }
+    .dl-progress-bar {
+      height: 100%;
+      background: var(--c-info);
+      width: 0%;
+      transition: width .2s ease;
+    }
+
+    /* ============ Lightbox (slide zoom) ============ */
+    .lightbox {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.95);
+      z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0;
+      touch-action: pinch-zoom;
+      -webkit-user-select: none; user-select: none;
+    }
+    .lightbox.hidden { display: none; }
+    .lightbox .lb-close {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + 12px);
+      right: 12px;
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      font-size: 28px; line-height: 1;
+      border-radius: 50%;
+      z-index: 2001;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lightbox .lb-caption {
+      position: fixed;
+      bottom: calc(env(safe-area-inset-bottom, 0) + 12px);
+      left: 50%; transform: translateX(-50%);
+      background: rgba(255,255,255,.12);
+      color: #fff; font-size: 13px;
+      padding: 6px 14px; border-radius: 14px;
+      z-index: 2001;
+      max-width: 90%;
+      text-align: center;
+      pointer-events: none;
+    }
+    .lightbox .lb-img-wrap {
+      width: 100%; height: 100%;
+      overflow: auto;
+      display: flex; align-items: center; justify-content: center;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lightbox img {
+      display: block;
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      touch-action: pinch-zoom;
+      transition: transform .2s ease;
+      transform-origin: center center;
+      cursor: zoom-in;
+    }
+    .lightbox img.zoomed {
+      max-width: none; max-height: none;
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+    .lightbox .lb-hint {
+      position: fixed;
+      top: calc(env(safe-area-inset-top, 0) + 20px);
+      left: 50%; transform: translateX(-50%);
+      background: rgba(255,255,255,.12);
+      color: #fff; font-size: 11px;
+      padding: 4px 10px; border-radius: 10px;
+      z-index: 2001;
+      pointer-events: none;
+      opacity: .8;
+    }
+    .slide-frame img {
+      cursor: zoom-in;
+      -webkit-tap-highlight-color: rgba(142,68,173,.2);
+    }
+
+    /* ============ Update toast ============ */
+    .update-banner {
+      position: sticky; top: var(--header-height); z-index: 50;
+      background: var(--c-info); color: #fff;
+      padding: 10px 14px; font-size: 13px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px;
+    }
+    .update-banner.hidden { display: none; }
+    .update-banner button {
+      padding: 4px 12px; background: rgba(255,255,255,.2);
+      border-radius: var(--radius-sm); font-size: 12px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Access gate ============ -->
+  <div class="gate" id="gate">
+    <h1>Pocket URO</h1>
+    <p>Urology reference · residents only</p>
+    <input type="text" id="gate-input" placeholder="員編" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="text">
+    <button id="gate-submit">進入</button>
+    <div class="error" id="gate-error"></div>
+  </div>
+
+  <!-- ============ App shell ============ -->
+  <div id="app" hidden>
+    <header class="app-header" id="app-header" hidden>
+      <a class="parent-link hidden" id="btn-parent" href="#/">
+        <span class="chev">‹</span><span class="label"></span>
+      </a>
+      <h1 id="app-title">Pocket URO</h1>
+      <button class="more-btn" id="btn-more" aria-label="more" aria-haspopup="true">⋯</button>
+    </header>
+    <div class="more-menu-backdrop hidden" id="more-backdrop"></div>
+    <nav class="more-menu hidden" id="more-menu" role="menu">
+      <a href="#/" role="menuitem"><span class="icon">🏠</span>Home</a>
+      <a href="#/search" role="menuitem"><span class="icon">🔍</span>Search</a>
+      <a href="#/favorites" role="menuitem"><span class="icon">⭐</span>Favorites <span id="more-fav-count" style="margin-left:auto;color:var(--c-text-muted);font-size:12px"></span></a>
+      <a href="#/hjh" role="menuitem"><span class="icon">💡</span>HJH only</a>
+      <a href="#/quiz" role="menuitem"><span class="icon">📝</span>Quiz</a>
+      <a href="#/sync" role="menuitem"><span class="icon">⚙</span>Settings <span id="more-sync-badge" class="badge-inline" style="display:none"></span></a>
+      <button id="more-theme" role="menuitem"><span class="icon" id="more-theme-icon">🌙</span><span id="more-theme-label">Theme: auto</span></button>
+    </nav>
+    <div class="update-banner hidden" id="update-banner">
+      <span>New version available</span>
+      <button id="btn-update-reload">Reload</button>
+    </div>
+    <div id="view"></div>
+  </div>
+
+  <div class="toast hidden" id="toast"></div>
+
+  <!-- Slide lightbox -->
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Slide zoom">
+    <div class="lb-hint">double-tap / pinch to zoom · tap outside to close</div>
+    <button class="lb-close" id="lb-close" aria-label="close">×</button>
+    <div class="lb-img-wrap" id="lb-wrap">
+      <img id="lb-img" alt="">
+    </div>
+    <div class="lb-caption hidden" id="lb-caption"></div>
+  </div>
+
+  <script src="lib/marked.min.js?v=4"></script>
+  <script>
+  'use strict';
+
+  /* ======================================================
+     Config
+  ====================================================== */
+  // Admin codes: full editing + sync permissions
+  const ADMIN_CODES = ['ADMIN', '123944', 'Y08594'];
+  // Viewer codes: share with residents / other users — read-only, cannot escalate
+  const VIEWER_CODES = ['URO'];
+  const VALID_CODES = [...ADMIN_CODES, ...VIEWER_CODES];
+  const GH_REPO = 'fantasy7386-cmd/pocket-uro';
+  const LS = {
+    ACCESS: 'puro_access_code',
+    TOKEN: 'puro_gh_token',
+    ADMIN: 'puro_admin_mode',      // 'on' | 'off' (user toggle override)
+    FAVS: 'puro_favorites',
+    DATA: 'puro_data_json',        // local override for Patient Ed
+    NOTES: 'puro_notes_json',      // local override for PPu Notes
+    TIPS: 'puro_tips_json',        // local override for Tips & Guide
+    TB_PREFIX: 'puro_tb_',         // local override for textbook chapter: puro_tb_tb_01
+    RECENT_SEARCH: 'puro_recent_search',
+  };
+  const MODULES = [
+    { id: 'education', name: 'Patient Education', icon: '📘', accent: '#2980b9' },
+    { id: 'notes',     name: 'PPu Notes',         icon: '📗', accent: '#27ae60' },
+    { id: 'tips',      name: 'Tips & Guide',      icon: '📙', accent: '#e67e22' },
+    { id: 'textbook',  name: 'Textbook',          icon: '📕', accent: '#8e44ad' },
+  ];
+  // Default built-in mailto channel. Per-device Settings override takes priority.
+  const SUBMISSION_URL_DEFAULT =
+    'mailto:fantasy7386@gmail.com?subject=Pocket%20URO%20建議&body=姓名：%0A單位：%0A類別（Patient%20Ed%20/%20PPu%20Notes%20/%20Tips%20/%20Textbook）：%0A標題：%0A建議內容：%0A參考資料：';
+  const LS_SUBMISSION_KEY = 'puro_submission_url';
+  function submissionUrl() {
+    const v = localStorage.getItem(LS_SUBMISSION_KEY);
+    // Empty string in localStorage = user explicitly cleared; treat as disabled
+    if (v === '') return '';
+    return v || SUBMISSION_URL_DEFAULT;
+  }
+
+  /* ======================================================
+     State
+  ====================================================== */
+  const state = {
+    data: null,       // {categories, articles, glossary, ...}
+    notes: null,      // {sections, ...}
+    tips: null,       // {sections, ...}
+    tb: {},           // tb_01 → chapter obj (lazy)
+    sources: {        // 'server' | 'local'
+      data: 'server',
+      notes: 'server',
+      tips: 'server',
+      tb: {},
+    },
+    favorites: [],    // [{module, id, title, ts}]
+  };
+
+  /* ======================================================
+     Theme + font-scale (persisted)
+  ====================================================== */
+  const THEME_KEY = 'puro_theme';       // 'light' | 'dark' | 'auto'
+  const FONT_KEY  = 'puro_font_scale';  // 'small' | 'normal' | 'large' | 'xlarge'
+
+  function currentTheme() {
+    return localStorage.getItem(THEME_KEY) || 'auto';
+  }
+  function resolveTheme(mode) {
+    if (mode === 'dark' || mode === 'light') return mode;
+    // auto: follow prefers-color-scheme
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function applyTheme() {
+    const effective = resolveTheme(currentTheme());
+    document.body.dataset.theme = effective;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', effective === 'dark' ? '#000000' : '#1a1a2e');
+    const btn = document.getElementById('btn-theme');
+    if (btn) btn.textContent = effective === 'dark' ? '☀️' : '🌙';
+  }
+  function setTheme(mode) {
+    localStorage.setItem(THEME_KEY, mode);
+    applyTheme();
+  }
+  // Apply immediately so dark theme renders before body is visible
+  document.body.dataset.theme = resolveTheme(currentTheme());
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => {
+      if (currentTheme() === 'auto') applyTheme();
+    });
+  }
+
+  function currentFontScale() {
+    return localStorage.getItem(FONT_KEY) || 'normal';
+  }
+  function applyFontScale() {
+    document.body.dataset.fontScale = currentFontScale();
+  }
+  function setFontScale(s) {
+    localStorage.setItem(FONT_KEY, s);
+    applyFontScale();
+  }
+  document.body.dataset.fontScale = currentFontScale();
+
+  /* ======================================================
+     Haptic feedback (iOS PWA + Android)
+  ====================================================== */
+  // Detect haptic support. iOS Safari doesn't implement navigator.vibrate, so this is
+  // a pure no-op on iPhone / iPad — the Web Vibration API is Android / desktop only.
+  const _hapticSupported = ('vibrate' in navigator) && typeof navigator.vibrate === 'function';
+  function haptic(kind) {
+    if (!_hapticSupported) return;
+    try {
+      if (kind === 'light') navigator.vibrate(8);
+      else if (kind === 'medium') navigator.vibrate(15);
+      else if (kind === 'error') navigator.vibrate([20, 40, 20]);
+      else if (kind === 'success') navigator.vibrate([8, 30, 8]);
+      else navigator.vibrate(8);
+    } catch {}
+  }
+  // Only install the global listener if the API exists — saves a tick per click on iOS.
+  if (_hapticSupported) {
+    document.addEventListener('click', (e) => {
+      const b = e.target.closest('button, .module-card, .list-card, .fav-btn, .kw-tag');
+      if (b) haptic('light');
+    }, true);
+  }
+
+  /* ======================================================
+     DOM helpers
+  ====================================================== */
+  const el  = (id) => document.getElementById(id);
+  const viewEl = () => el('view');
+  const toastEl = () => el('toast');
+
+  function esc(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function escAttr(s) { return esc(s); }
+
+  function showToast(msg, kind, opts) {
+    const t = toastEl();
+    t.className = 'toast ' + (kind || '');
+    opts = opts || {};
+    const action = opts.action;
+    if (action) {
+      t.innerHTML = '<span></span><button class="toast-action">' + esc(action.label) + '</button>';
+      t.firstChild.textContent = msg;
+      t.querySelector('.toast-action').onclick = () => {
+        try { action.onClick(); } finally { t.classList.add('hidden'); }
+      };
+    } else {
+      t.textContent = msg;
+    }
+    t.classList.remove('hidden');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => t.classList.add('hidden'), opts.duration || 2600);
+  }
+
+  /* ======================================================
+     Editor dirty flag + unsaved-changes guard
+  ====================================================== */
+  let _editorDirty = false;
+  let _lastHash = location.hash;
+  let _navGuard = false;
+
+  function markEditorDirty() { _editorDirty = true; }
+  function clearEditorDirty() { _editorDirty = false; }
+  window.markEditorDirty  = markEditorDirty;
+  window.clearEditorDirty = clearEditorDirty;
+
+  function confirmLeave() {
+    if (!_editorDirty) return true;
+    return confirm('有未儲存變更，確定離開？');
+  }
+
+  window.__cancelEdit = function() {
+    if (confirmLeave()) {
+      clearEditorDirty();
+      history.back();
+    }
+  };
+
+  window.addEventListener('beforeunload', (e) => {
+    if (_editorDirty) {
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
+
+  // Guard hashchange: if leaving an edit screen with unsaved changes and user declines,
+  // revert the hash to the previous value (causes a second hashchange we need to skip).
+  window.addEventListener('hashchange', () => {
+    if (_navGuard) { _navGuard = false; _lastHash = location.hash; return; }
+    if (_editorDirty && location.hash !== _lastHash && !confirmLeave()) {
+      _navGuard = true;
+      location.hash = _lastHash;
+      return;
+    }
+    _lastHash = location.hash;
+  });
+
+  /* Undo framework — snapshot whole dataset, restore on demand */
+  const _undo = { snapshot: null, dataset: null, timer: null };
+  function deleteWithUndo(dataset, label, mutateFn) {
+    const src = dataset === 'data'  ? state.data
+              : dataset === 'notes' ? state.notes
+              : dataset === 'tips'  ? state.tips
+              : state.tb[dataset];
+    const snap = JSON.parse(JSON.stringify(src));
+    mutateFn();
+    markDirty(dataset);
+    clearTimeout(_undo.timer);
+    _undo.snapshot = snap;
+    _undo.dataset = dataset;
+    _undo.timer = setTimeout(() => { _undo.snapshot = null; _undo.dataset = null; }, 5500);
+    showToast(label, null, {
+      duration: 5000,
+      action: { label: 'UNDO', onClick: () => __undoDelete() },
+    });
+  }
+  function __undoDelete() {
+    if (!_undo.snapshot) return;
+    const ds = _undo.dataset;
+    if (ds === 'data')       { state.data = _undo.snapshot; localStorage.setItem(LS.DATA, JSON.stringify(state.data)); }
+    else if (ds === 'notes') { state.notes = _undo.snapshot; localStorage.setItem(LS.NOTES, JSON.stringify(state.notes)); }
+    else if (ds === 'tips')  { state.tips = _undo.snapshot; localStorage.setItem(LS.TIPS, JSON.stringify(state.tips)); }
+    else if (ds && ds.startsWith('tb_')) { state.tb[ds] = _undo.snapshot; localStorage.setItem(LS.TB_PREFIX + ds, JSON.stringify(state.tb[ds])); }
+    _undo.snapshot = null; _undo.dataset = null;
+    showToast('Restored', 'success');
+    router();
+  }
+  window.__undoDelete = __undoDelete;
+
+  function toTerms(query) {
+    if (!query) return [];
+    const arr = Array.isArray(query) ? query : String(query).trim().split(/\s+/);
+    return arr.map(t => String(t).trim()).filter(Boolean);
+  }
+
+  function matchAllTerms(text, terms) {
+    if (!terms || !terms.length) return false;
+    const low = (text || '').toLowerCase();
+    return terms.every(t => low.includes(String(t).toLowerCase()));
+  }
+
+  function highlightText(text, query) {
+    if (!query) return esc(text);
+    const terms = toTerms(query);
+    if (!terms.length) return esc(text);
+    let out = esc(text);
+    for (const t of terms) {
+      const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp(escaped, 'gi'), m => '<mark class="highlight">' + m + '</mark>');
+    }
+    return out;
+  }
+
+  function isHJHSlide(s) {
+    return typeof s.slide_num === 'string' && /^HJH/i.test(s.slide_num);
+  }
+  function hjhSlideLabels(slides) {
+    return slides.filter(isHJHSlide).map(s => String(s.slide_num).replace(/^HJH-?/i, ''));
+  }
+
+  function previewAround(text, query, radius = 80) {
+    if (!text || !query) return '';
+    const terms = toTerms(query);
+    if (!terms.length) return '';
+    const low = text.toLowerCase();
+    let bestIdx = -1, bestTerm = null;
+    for (const t of terms) {
+      const idx = low.indexOf(t.toLowerCase());
+      if (idx >= 0 && (bestIdx === -1 || idx < bestIdx)) { bestIdx = idx; bestTerm = t; }
+    }
+    if (bestIdx < 0) return '';
+    const from = Math.max(0, bestIdx - radius);
+    const to = Math.min(text.length, bestIdx + bestTerm.length + radius);
+    let snippet = text.slice(from, to);
+    if (from > 0) snippet = '…' + snippet;
+    if (to < text.length) snippet = snippet + '…';
+    return highlightText(snippet, terms);
+  }
+
+  /* ======================================================
+     Access gate
+  ====================================================== */
+  function gateCheck() {
+    // Auto-login via URL param: ?code=URO (or any valid code)
+    const qs = new URLSearchParams(location.search);
+    const urlCode = (qs.get('code') || '').toUpperCase();
+    if (urlCode && VALID_CODES.includes(urlCode)) {
+      localStorage.setItem(LS.ACCESS, urlCode);
+      // Clean URL to avoid token-sharing reused as bookmark with code still in query
+      const clean = location.pathname + (location.hash || '');
+      history.replaceState(null, '', clean);
+      openApp();
+      return true;
+    }
+    const saved = (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
+    if (saved && VALID_CODES.includes(saved)) {
+      openApp();
+      return true;
+    }
+    return false;
+  }
+  function openApp() {
+    el('gate').classList.add('hidden');
+    el('app').hidden = false;
+    el('app-header').hidden = false;
+    boot();
+  }
+  function gateSubmit() {
+    const code = el('gate-input').value.trim().toUpperCase();
+    if (VALID_CODES.includes(code)) {
+      localStorage.setItem(LS.ACCESS, code);
+      haptic('success');
+      openApp();
+    } else {
+      haptic('error');
+      el('gate-error').textContent = '員編無效';
+    }
+  }
+  el('gate-submit').addEventListener('click', gateSubmit);
+  el('gate-input').addEventListener('keydown', e => { if (e.key === 'Enter') gateSubmit(); });
+
+  // Attempt to focus gate input on boot (iOS PWA requires user gesture for keyboard,
+  // but the focus ring helps visual affordance)
+  setTimeout(() => {
+    const gi = document.getElementById('gate-input');
+    if (gi && !document.getElementById('gate').classList.contains('hidden')) gi.focus();
+  }, 50);
+
+  /* ======================================================
+     Admin detection
+  ====================================================== */
+  function currentCode() {
+    return (localStorage.getItem(LS.ACCESS) || '').toUpperCase();
+  }
+  function isAdminCode() {
+    return ADMIN_CODES.includes(currentCode());
+  }
+  function isAdmin() {
+    // Admin code users can temporarily preview as viewer (LS.ADMIN === 'off'),
+    // but viewer codes can never escalate. Only admin codes / GH token grant admin.
+    if (isAdminCode() && localStorage.getItem(LS.ADMIN) === 'off') return false;
+    if (isAdminCode()) return true;
+    if (localStorage.getItem(LS.TOKEN)) return true;
+    return false;
+  }
+  window.__toggleAdmin = function() {
+    // Only admin-code users may toggle. Viewers' button is not rendered.
+    if (!isAdminCode()) return;
+    if (localStorage.getItem(LS.ADMIN) === 'off') {
+      localStorage.removeItem(LS.ADMIN);
+    } else {
+      localStorage.setItem(LS.ADMIN, 'off');
+    }
+    router();
+  };
+
+  /* ======================================================
+     Favorites
+  ====================================================== */
+  function loadFavs() {
+    try {
+      const raw = localStorage.getItem(LS.FAVS);
+      state.favorites = raw ? JSON.parse(raw) : [];
+    } catch { state.favorites = []; }
+  }
+  function saveFavs() {
+    localStorage.setItem(LS.FAVS, JSON.stringify(state.favorites));
+  }
+  function isFav(module, id) {
+    return state.favorites.some(f => f.module === module && f.id === id);
+  }
+  function toggleFav(module, id, title) {
+    const idx = state.favorites.findIndex(f => f.module === module && f.id === id);
+    if (idx >= 0) {
+      state.favorites.splice(idx, 1);
+      showToast('Removed from favorites');
+    } else {
+      state.favorites.unshift({ module, id, title, ts: Date.now() });
+      showToast('Added to favorites', 'success');
+    }
+    saveFavs();
+  }
+
+  /* ======================================================
+     Data loading
+  ====================================================== */
+  async function loadJSON(path) {
+    const resp = await fetch(path + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('fetch ' + path + ' ' + resp.status);
+    return resp.json();
+  }
+
+  function loadLocalOverride(key, server) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return { data: server, source: 'server' };
+      const local = JSON.parse(raw);
+      // Only use local if strictly newer (tracked via _updated_at)
+      if (local && local._updated_at && server._updated_at && local._updated_at > server._updated_at) {
+        return { data: local, source: 'local' };
+      }
+      if (local && local._updated_at && !server._updated_at) {
+        return { data: local, source: 'local' };
+      }
+      // Otherwise trust server
+      localStorage.removeItem(key);
+      return { data: server, source: 'server' };
+    } catch {
+      localStorage.removeItem(key);
+      return { data: server, source: 'server' };
+    }
+  }
+
+  async function loadCore() {
+    const [dataSrv, notesSrv, tipsSrv] = await Promise.all([
+      loadJSON('data.json'),
+      loadJSON('teaching-notes.json'),
+      loadJSON('tips-guide.json'),
+    ]);
+    const dOv = loadLocalOverride(LS.DATA, dataSrv);
+    state.data = dOv.data; state.sources.data = dOv.source;
+    const nOv = loadLocalOverride(LS.NOTES, notesSrv);
+    state.notes = nOv.data; state.sources.notes = nOv.source;
+    const tOv = loadLocalOverride(LS.TIPS, tipsSrv);
+    state.tips = tOv.data; state.sources.tips = tOv.source;
+    normalizeData();
+  }
+
+  function normalizeData() {
+    // Fix PPu Notes Roman numbering (source data has XII → XIV gap).
+    // Display-only renumber; does NOT mark dirty (user didn't edit).
+    if (state.notes && state.notes.sections) {
+      const romans = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
+      state.notes.sections.forEach((s, i) => {
+        const want = i < romans.length ? romans[i] : String(i + 1);
+        s.number = want;
+        s.full_title = want + '. ' + s.title;
+      });
+    }
+  }
+
+  async function loadChapter(tbId) {
+    if (state.tb[tbId]) return state.tb[tbId];
+    const server = await loadJSON('textbook-data/' + tbId + '.json');
+    const key = LS.TB_PREFIX + tbId;
+    const ov = loadLocalOverride(key, server);
+    state.tb[tbId] = ov.data;
+    state.sources.tb[tbId] = ov.source;
+    return state.tb[tbId];
+  }
+
+  function markDirty(dataset) {
+    // dataset: 'data' | 'notes' | 'tips' | 'tb_XX'
+    const now = new Date().toISOString();
+    if (dataset === 'data') {
+      state.data._updated_at = now;
+      state.sources.data = 'local';
+      localStorage.setItem(LS.DATA, JSON.stringify(state.data));
+    } else if (dataset === 'notes') {
+      state.notes._updated_at = now;
+      state.notes.updated = now.slice(0, 10);
+      state.sources.notes = 'local';
+      localStorage.setItem(LS.NOTES, JSON.stringify(state.notes));
+    } else if (dataset === 'tips') {
+      state.tips._updated_at = now;
+      state.tips.updated = now.slice(0, 10);
+      state.sources.tips = 'local';
+      localStorage.setItem(LS.TIPS, JSON.stringify(state.tips));
+    } else if (dataset.startsWith('tb_')) {
+      const tb = state.tb[dataset];
+      tb._updated_at = now;
+      state.sources.tb[dataset] = 'local';
+      localStorage.setItem(LS.TB_PREFIX + dataset, JSON.stringify(tb));
+    }
+  }
+
+  function dirtyDatasets() {
+    const arr = [];
+    if (state.sources.data === 'local') arr.push({ id: 'data', label: 'Patient Education', path: 'data.json' });
+    if (state.sources.notes === 'local') arr.push({ id: 'notes', label: 'PPu Notes', path: 'teaching-notes.json' });
+    if (state.sources.tips === 'local') arr.push({ id: 'tips', label: 'Tips & Guide', path: 'tips-guide.json' });
+    for (const tbId of Object.keys(state.sources.tb)) {
+      if (state.sources.tb[tbId] === 'local') {
+        arr.push({ id: tbId, label: 'Textbook ' + tbId, path: 'textbook-data/' + tbId + '.json' });
+      }
+    }
+    return arr;
+  }
+
+  /* ======================================================
+     GitHub sync
+  ====================================================== */
+  async function ensureToken() {
+    let token = localStorage.getItem(LS.TOKEN);
+    if (token) return token;
+    const t = prompt(
+      '首次同步：輸入 GitHub Personal Access Token。\n\n' +
+      '建立路徑：github.com/settings/tokens\n' +
+      'Scope: public_repo\n\n' +
+      '僅儲存在此裝置的 localStorage。'
+    );
+    if (!t) return null;
+    token = t.trim();
+    localStorage.setItem(LS.TOKEN, token);
+    return token;
+  }
+
+  async function ghPutFile(path, obj, message) {
+    const token = await ensureToken();
+    if (!token) throw new Error('No token');
+    const headers = {
+      'Authorization': 'token ' + token,
+      'Accept': 'application/vnd.github+json',
+    };
+    // Get existing SHA
+    const getResp = await fetch(
+      'https://api.github.com/repos/' + GH_REPO + '/contents/' + path,
+      { headers }
+    );
+    if (getResp.status === 401) {
+      localStorage.removeItem(LS.TOKEN);
+      throw new Error('Invalid token');
+    }
+    let sha = null;
+    if (getResp.ok) {
+      const j = await getResp.json();
+      sha = j.sha;
+    } else if (getResp.status !== 404) {
+      throw new Error('Get SHA failed: ' + getResp.status);
+    }
+    const payload = JSON.stringify(obj, null, 2);
+    const content = btoa(unescape(encodeURIComponent(payload)));
+    const putBody = { message, content };
+    if (sha) putBody.sha = sha;
+    const putResp = await fetch(
+      'https://api.github.com/repos/' + GH_REPO + '/contents/' + path,
+      { method: 'PUT', headers, body: JSON.stringify(putBody) }
+    );
+    if (!putResp.ok) {
+      const err = await putResp.json().catch(() => ({ message: 'unknown' }));
+      throw new Error('Push failed: ' + (err.message || putResp.status));
+    }
+    return true;
+  }
+
+  async function syncAll() {
+    const dirty = dirtyDatasets();
+    if (!dirty.length) {
+      showToast('Nothing to sync');
+      return;
+    }
+    const today = new Date().toISOString().slice(0, 10);
+    const succeeded = [];
+    const failed = [];
+    for (const d of dirty) {
+      try {
+        let payload;
+        if (d.id === 'data')       payload = state.data;
+        else if (d.id === 'notes') payload = state.notes;
+        else if (d.id === 'tips')  payload = state.tips;
+        else if (d.id.startsWith('tb_')) payload = state.tb[d.id];
+        const clone = JSON.parse(JSON.stringify(payload));
+        delete clone._updated_at;
+        await ghPutFile(d.path, clone, 'Update ' + d.label + ' ' + today);
+        // Clear local override for this one
+        if (d.id === 'data')       { localStorage.removeItem(LS.DATA);    state.sources.data = 'server'; }
+        else if (d.id === 'notes') { localStorage.removeItem(LS.NOTES);   state.sources.notes = 'server'; }
+        else if (d.id === 'tips')  { localStorage.removeItem(LS.TIPS);    state.sources.tips = 'server'; }
+        else if (d.id.startsWith('tb_')) { localStorage.removeItem(LS.TB_PREFIX + d.id); state.sources.tb[d.id] = 'server'; }
+        delete payload._updated_at;
+        succeeded.push(d.label);
+      } catch (e) {
+        failed.push({ label: d.label, error: e.message });
+        // Continue trying remaining files instead of aborting
+      }
+    }
+    if (failed.length === 0) {
+      showToast('Synced ' + succeeded.length + ' file(s) ✓', 'success');
+    } else if (succeeded.length === 0) {
+      showToast('Sync failed: ' + failed[0].error, 'error', { duration: 5000 });
+    } else {
+      showToast('Partial: ' + succeeded.length + ' synced, ' + failed.length + ' failed', 'error', { duration: 5000 });
+    }
+    router();
+  }
+
+  /* ======================================================
+     Markdown editor helpers (toolbar / keyboard shortcuts)
+  ====================================================== */
+  function mdToolbarHTML() {
+    return `
+      <div class="md-toolbar" role="toolbar" aria-label="Markdown formatting">
+        <button type="button" title="Bold (Cmd/Ctrl+B)" onclick="window.__mdWrap('**','**')"><b>B</b></button>
+        <button type="button" title="Italic (Cmd/Ctrl+I)" onclick="window.__mdWrap('*','*')"><i>I</i></button>
+        <button type="button" title="Inline code" onclick="window.__mdWrap('\`','\`')">&lt;/&gt;</button>
+        <div class="sep"></div>
+        <button type="button" title="Heading 2" onclick="window.__mdPrefix('## ')">H2</button>
+        <button type="button" title="Heading 3" onclick="window.__mdPrefix('### ')">H3</button>
+        <button type="button" title="Sub-header (orange, doctor-tag style)" onclick="window.__mdPrefix('#### ')">H4</button>
+        <div class="sep"></div>
+        <button type="button" title="Bullet list" onclick="window.__mdPrefix('- ')">• list</button>
+        <button type="button" title="Numbered list" onclick="window.__mdPrefix('1. ')">1. list</button>
+        <button type="button" title="Quote" onclick="window.__mdPrefix('> ')">❝</button>
+        <div class="sep"></div>
+        <button type="button" title="Doctor tag" onclick="window.__mdDoctorTag()">[醫師]</button>
+        <button type="button" title="Insert table" onclick="window.__mdTable()">▦ table</button>
+        <button type="button" title="Horizontal rule" onclick="window.__mdInsert('\\n\\n---\\n\\n')">—</button>
+        <button type="button" title="Link" onclick="window.__mdLink()">🔗</button>
+      </div>
+      <div class="md-cheatsheet">
+        <strong>Quick:</strong>
+        <code>**bold**</code>
+        <code>*italic*</code>
+        <code>## heading</code>
+        <code>- bullet</code>
+        <code>[小黃]</code>
+        · 換行空一行＝新段落
+      </div>
+    `;
+  }
+
+  function getMdTextarea() {
+    return document.getElementById('te-md');
+  }
+
+  function mdWrapSelection(before, after) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart, end = ta.selectionEnd;
+    const sel = ta.value.substring(start, end);
+    const placeholder = sel || 'text';
+    const newText = before + placeholder + after;
+    ta.setRangeText(newText, start, end, 'select');
+    if (sel) {
+      ta.setSelectionRange(start + before.length, start + before.length + sel.length);
+    } else {
+      ta.setSelectionRange(start + before.length, start + before.length + placeholder.length);
+    }
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function mdPrefixLine(prefix) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart;
+    const val = ta.value;
+    const lineStart = val.lastIndexOf('\n', start - 1) + 1;
+    ta.setRangeText(prefix, lineStart, lineStart, 'end');
+    ta.setSelectionRange(start + prefix.length, start + prefix.length);
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  function mdInsertAt(text) {
+    const ta = getMdTextarea();
+    if (!ta) return;
+    const start = ta.selectionStart, end = ta.selectionEnd;
+    ta.setRangeText(text, start, end, 'end');
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  window.__mdWrap = mdWrapSelection;
+  window.__mdPrefix = mdPrefixLine;
+  window.__mdInsert = mdInsertAt;
+  window.__mdDoctorTag = function() {
+    const name = prompt('Doctor initials (e.g. 小黃, HJH):');
+    if (!name) return;
+    mdInsertAt('[' + name.trim() + ']');
+  };
+  window.__mdTable = function() {
+    mdInsertAt('\n\n| Header 1 | Header 2 |\n|----------|----------|\n| cell 1   | cell 2   |\n| cell 3   | cell 4   |\n\n');
+  };
+  window.__mdLink = function() {
+    const url = prompt('Link URL:');
+    if (!url) return;
+    const text = prompt('Link text:', url) || url;
+    mdInsertAt('[' + text + '](' + url + ')');
+  };
+
+  // Keyboard shortcuts (mostly useful on desktop / iPad with keyboard)
+  document.addEventListener('keydown', (e) => {
+    if (!(e.metaKey || e.ctrlKey)) return;
+    const ta = getMdTextarea();
+    if (!ta || document.activeElement !== ta) return;
+    const k = e.key.toLowerCase();
+    if (k === 'b') { e.preventDefault(); mdWrapSelection('**', '**'); }
+    else if (k === 'i') { e.preventDefault(); mdWrapSelection('*', '*'); }
+    else if (k === 'k') { e.preventDefault(); window.__mdLink(); }
+  });
+
+  /* ======================================================
+     Markdown rendering (Tips & Guide + Textbook notes)
+  ====================================================== */
+  let markedConfigured = false;
+  function configureMarked() {
+    if (markedConfigured || typeof marked === 'undefined') return;
+    marked.setOptions({
+      gfm: true,
+      breaks: false,
+      tables: true,
+    });
+    markedConfigured = true;
+  }
+  function renderMd(md) {
+    if (typeof marked === 'undefined') return '<pre>' + esc(md) + '</pre>';
+    configureMarked();
+    const html = marked.parse(md || '');
+    // Post-process doctor tags [XXX] → <span class="doctor-tag">XXX</span>
+    return html.replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) => {
+      // Avoid replacing markdown link syntax (followed by `(`)
+      return '<span class="doctor-tag">' + esc(txt) + '</span>';
+    });
+  }
+
+  /* ======================================================
+     Router
+  ====================================================== */
+  function navigate(hash) {
+    if (location.hash === hash) router();
+    else location.hash = hash;
+  }
+  function parseHash() {
+    const raw = (location.hash || '#/').replace(/^#\/?/, '');
+    const [pathPart, queryPart] = raw.split('?');
+    const parts = pathPart.split('/').filter(Boolean);
+    const query = {};
+    if (queryPart) {
+      for (const kv of queryPart.split('&')) {
+        const [k, v] = kv.split('=');
+        query[decodeURIComponent(k)] = decodeURIComponent(v || '');
+      }
+    }
+    return { parts, query };
+  }
+
+  function router() {
+    const { parts, query } = parseHash();
+    const module = parts[0];
+
+    try {
+      if (!module) return renderHome();
+      if (module === 'favorites') return renderFavorites();
+      if (module === 'search') return renderSearch(query.q || '', query.only || '');
+      if (module === 'sync') return renderSyncPanel();
+      if (module === 'hjh') return renderHJHBrowse();
+      if (module === 'quiz') return renderQuiz();
+      if (module === 'education') return routeEducation(parts.slice(1), query);
+      if (module === 'notes') return routeNotes(parts.slice(1));
+      if (module === 'tips') return routeTips(parts.slice(1), query);
+      if (module === 'textbook') return routeTextbook(parts.slice(1), query);
+      renderNotFound();
+    } catch (e) {
+      viewEl().innerHTML = '<div class="placeholder"><div class="big">⚠️</div><strong>Error</strong><small>' + esc(e.message) + '</small></div>';
+      console.error(e);
+    }
+  }
+
+  window.addEventListener('hashchange', router);
+
+  /* ======================================================
+     Header controls
+  ====================================================== */
+  /* Parent-link ("< Parent Title") navigation — iOS-style */
+  el('btn-parent').addEventListener('click', (e) => {
+    if (!confirmLeave()) { e.preventDefault(); return; }
+    clearEditorDirty();
+    // Let the href navigate naturally
+  });
+
+  /* More menu — hosts Home / Search / Favorites / HJH / Quiz / Settings / Theme */
+  function closeMoreMenu() {
+    el('more-menu').classList.add('hidden');
+    el('more-backdrop').classList.add('hidden');
+  }
+  function openMoreMenu() {
+    updateMoreThemeLabel();
+    updateMoreCounts();
+    el('more-menu').classList.remove('hidden');
+    el('more-backdrop').classList.remove('hidden');
+  }
+  el('btn-more').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const hidden = el('more-menu').classList.contains('hidden');
+    if (hidden) openMoreMenu(); else closeMoreMenu();
+  });
+  el('more-backdrop').addEventListener('click', closeMoreMenu);
+  el('more-menu').addEventListener('click', (e) => {
+    // Close menu after any click inside (links will navigate on their own)
+    setTimeout(closeMoreMenu, 0);
+  });
+  el('more-theme').addEventListener('click', (e) => {
+    e.preventDefault();
+    const order = ['light', 'dark', 'auto'];
+    const now = currentTheme();
+    const next = order[(order.indexOf(now) + 1) % order.length];
+    setTheme(next);
+    const labels = { light: 'Light theme', dark: 'Dark theme', auto: 'Auto (follows system)' };
+    showToast(labels[next]);
+  });
+
+  function updateMoreThemeLabel() {
+    const icon = el('more-theme-icon');
+    const lbl  = el('more-theme-label');
+    const now = currentTheme();
+    if (icon) icon.textContent = now === 'dark' ? '☀️' : now === 'auto' ? '🤖' : '🌙';
+    if (lbl)  lbl.textContent  = 'Theme: ' + now;
+  }
+  function updateMoreCounts() {
+    const favC = el('more-fav-count');
+    if (favC) favC.textContent = state.favorites.length ? '(' + state.favorites.length + ')' : '';
+    const syncB = el('more-sync-badge');
+    const n = dirtyDatasets().length;
+    if (syncB) {
+      if (n > 0) { syncB.style.display = ''; syncB.textContent = n + ' unsynced'; }
+      else       { syncB.style.display = 'none'; }
+    }
+    // Also reflect unsynced count as a red dot on the header More button
+    const moreBtn = el('btn-more');
+    if (moreBtn) {
+      const existing = moreBtn.querySelector('.dot-badge');
+      if (n > 0) {
+        if (existing) existing.textContent = n;
+        else moreBtn.insertAdjacentHTML('beforeend', '<span class="dot-badge">' + n + '</span>');
+      } else if (existing) {
+        existing.remove();
+      }
+    }
+  }
+
+  /* setHeader(title, parent?) — parent = { label, href } or null for root pages */
+  function setHeader(title, parent) {
+    el('app-title').textContent = title || 'Pocket URO';
+    const pl = el('btn-parent');
+    if (parent && parent.label) {
+      pl.classList.remove('hidden');
+      pl.querySelector('.label').textContent = parent.label;
+      pl.setAttribute('href', parent.href || '#/');
+    } else {
+      pl.classList.add('hidden');
+      pl.setAttribute('href', '#/');
+    }
+    updateMoreCounts();
+  }
+  // Back-compat: keep updateSyncBadge name as an alias so older calls don't break
+  function updateSyncBadge() { updateMoreCounts(); }
+
+  /* Lightbox / slide zoom */
+  // Close on hashchange so navigating away dismisses the lightbox cleanly
+  window.addEventListener('hashchange', () => {
+    const lb = document.getElementById('lightbox');
+    if (lb && !lb.classList.contains('hidden')) closeLightbox();
+  });
+
+  window.__openLightbox = function(src, caption) {
+    const lb = el('lightbox');
+    const img = el('lb-img');
+    const cap = el('lb-caption');
+    img.src = src;
+    img.classList.remove('zoomed');
+    if (caption) { cap.textContent = caption; cap.classList.remove('hidden'); }
+    else { cap.classList.add('hidden'); }
+    lb.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  function closeLightbox() {
+    el('lightbox').classList.add('hidden');
+    el('lb-img').src = '';
+    document.body.style.overflow = '';
+  }
+  el('lb-close').addEventListener('click', closeLightbox);
+  el('lightbox').addEventListener('click', (e) => {
+    // Close when tapping backdrop (not the image or close button)
+    if (e.target.id === 'lightbox' || e.target.id === 'lb-wrap') closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !el('lightbox').classList.contains('hidden')) closeLightbox();
+  });
+  // Double-tap to toggle 2× on the image itself
+  (function installDoubleTap() {
+    const img = el('lb-img');
+    let lastTap = 0;
+    img.addEventListener('click', (e) => {
+      const now = Date.now();
+      if (now - lastTap < 320) {
+        img.classList.toggle('zoomed');
+        e.stopPropagation();
+      }
+      lastTap = now;
+    });
+  })();
+
+  /* Edge-swipe-back gesture (PWA standalone mode has no Safari swipe) */
+  (function installEdgeSwipe() {
+    let x0 = null, y0 = null;
+    document.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      if (t.clientX < 30) { x0 = t.clientX; y0 = t.clientY; }
+      else { x0 = null; }
+    }, { passive: true });
+    document.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - x0;
+      const dy = Math.abs(t.clientY - y0);
+      if (dx > 80 && dy < 60) {
+        // Prefer parent-link (iOS navigation stack semantics); fall back to history.back
+        const pl = el('btn-parent');
+        if (pl && !pl.classList.contains('hidden')) {
+          if (!confirmLeave()) { x0 = null; return; }
+          clearEditorDirty();
+          const href = pl.getAttribute('href') || '#/';
+          location.hash = href;
+        } else if (location.hash && location.hash !== '#/' && location.hash !== '#') {
+          if (history.length > 1) history.back();
+          else navigate('#/');
+        }
+      }
+      x0 = null;
+    }, { passive: true });
+  })();
+
+  /* ======================================================
+     Home
+  ====================================================== */
+  function renderHome() {
+    setHeader('Pocket URO');
+    const counts = {
+      education: state.data ? state.data.articles.length : 0,
+      notes: state.notes ? state.notes.sections.length : 0,
+      tips: state.tips ? state.tips.sections.reduce((a, s) => a + (s.subsections ? s.subsections.length : 0), 0) : 0,
+      textbook: state.data ? 12 : 0, // known chapter count
+    };
+    const countLabel = {
+      education: counts.education + ' articles',
+      notes: counts.notes + ' sections',
+      tips: counts.tips + ' subsections',
+      textbook: counts.textbook + ' chapters',
+    };
+    const admin = isAdmin();
+    const dirty = dirtyDatasets();
+    viewEl().innerHTML = `
+      <div class="brand">
+        <div class="brand-name">Pocket URO</div>
+        <div class="brand-tag" id="brand-tag">v4.0-alpha · Clinical design refresh (paths: ../data.json, SW scope /v4/)</div>
+      </div>
+      <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
+      <div class="home-grid">
+        ${MODULES.map(m => `
+          <a class="module-card" style="--accent:${m.accent}" href="#/${m.id}">
+            <div class="icon">${m.icon}</div>
+            <div>
+              <div class="name">${esc(m.name)}</div>
+              <div class="count">${esc(countLabel[m.id] || '')}</div>
+            </div>
+          </a>
+        `).join('')}
+      </div>
+      <div class="home-actions">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
+          <a href="#/hjh" style="color:var(--c-hjh-fg);font-weight:600">💡 HJH only</a>
+          <a href="#/quiz">📝 Quiz</a>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
+        </div>
+      </div>
+      <div style="margin-top:10px;padding:12px 14px;background:${admin ? '#fff5d6' : '#eef4fa'};border:1px solid ${admin ? '#f0d986' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div style="font-size:13px">
+          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
+          <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
+            Code: <code>${esc(currentCode())}</code> ·
+            ${isAdminCode() ? (admin ? 'Your code grants admin. Edit / +New / Delete enabled.' : 'Preview as viewer — tap to restore admin.') : 'Shared code — read-only, cannot enable editing.'}
+          </div>
+        </div>
+        ${isAdminCode() ? `<button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Preview as viewer' : 'Back to admin'}</button>` : ''}
+      </div>
+      ${submissionUrl() ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${escAttr(submissionUrl())}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
+    `;
+    const input = el('home-search');
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = input.value.trim();
+        if (q) navigate('#/search?q=' + encodeURIComponent(q));
+      }
+    });
+  }
+
+  function renderNotFound() {
+    setHeader('Not Found', { label: 'Home', href: '#/' });
+    viewEl().innerHTML = `
+      <div class="placeholder">
+        <div class="big">🤔</div>
+        <strong>Page not found</strong>
+        <small><a href="#/">Go home</a></small>
+      </div>`;
+  }
+
+  /* ======================================================
+     Patient Education
+  ====================================================== */
+  function routeEducation(parts, query) {
+    const accent = '#2980b9';
+    query = query || {};
+    if (!parts.length) return renderEducationCategories(accent);
+    if (parts[0] === 'c' && parts[1]) return renderEducationArticles(parts[1], accent);
+    if (parts[0] === 'a' && parts[1] && parts[2] === 'edit') return renderArticleEdit(parts[1], false, accent);
+    if (parts[0] === 'a' && parts[1]) return renderArticle(parts[1], accent, query.q || '');
+    if (parts[0] === 'new') return renderArticleEdit(null, true, accent, parts[1]);
+    renderNotFound();
+  }
+
+  function renderEducationCategories(accent) {
+    setHeader('Patient Education', { label: 'Home', href: '#/' });
+    const admin = isAdmin();
+    const cats = state.data.categories;
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div class="list-section">
+          ${cats.map(c => `
+            <a class="list-card" href="#/education/c/${esc(c.id)}">
+              <div style="flex:1">
+                <div class="title">${esc(c.name_en)}</div>
+                <div class="meta">${esc(c.name_zh)} · ${c.articles.length} articles</div>
+              </div>
+              <span class="chevron">›</span>
+            </a>
+          `).join('')}
+        </div>
+        ${admin ? `
+          <div class="action-bar">
+            <button class="btn btn-success btn-block" onclick="location.hash='#/education/new'">+ New article</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  function renderEducationArticles(catId, accent) {
+    const cat = state.data.categories.find(c => c.id === catId);
+    if (!cat) return renderNotFound();
+    setHeader(cat.name_en, { label: 'Patient Education', href: '#/education' });
+    const articles = cat.articles.map(id => state.data.articles.find(a => a.id === id)).filter(Boolean);
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:20px;margin-bottom:4px">${esc(cat.name_en)}</h2>
+        <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${esc(cat.name_zh)} · ${articles.length} articles</div>
+        <div class="list-section">
+          ${articles.map(a => articleListCard(a, accent)).join('')}
+        </div>
+        ${isAdmin() ? `
+          <div class="action-bar">
+            <button class="btn btn-success btn-block" onclick="location.hash='#/education/new/${esc(catId)}'">+ New article in this category</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  function articleListCard(a, accent) {
+    const fav = isFav('education', a.id);
+    return `
+      <div class="list-card" onclick="event.target.closest('.fav-btn')||(location.hash='#/education/a/${esc(a.id)}')">
+        <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" aria-label="fav">${fav ? '⭐' : '☆'}</button>
+        <div style="flex:1;min-width:0">
+          <div class="title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(a.title)}</div>
+          <div class="meta">${esc(a.category)} · ${a.pages || '—'}p</div>
+        </div>
+        <span class="chevron">›</span>
+      </div>`;
+  }
+
+  function bindFavButtons() {
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const m = btn.dataset.favModule, id = btn.dataset.favId, t = btn.dataset.favTitle || '';
+        toggleFav(m, id, t);
+        router();
+      });
+    });
+  }
+
+  function renderArticle(artId, accent, highlight) {
+    const a = state.data.articles.find(x => x.id === artId);
+    if (!a) return renderNotFound();
+    const cat = state.data.categories.find(c => c.id === a.category);
+    setHeader(a.title, { label: cat ? cat.name_en : 'Articles', href: '#/education/c/' + a.category });
+    const fav = isFav('education', a.id);
+    const bodyHTML = highlight ? highlightText(a.text || '', highlight) : esc(a.text || '');
+    const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">
+          <h2 style="flex:1;font-size:22px;line-height:1.3">${titleHTML}</h2>
+          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+        </div>
+        <div class="article-meta-row">
+          <span>${esc(cat ? cat.name_zh : a.category)}</span>
+          ${a.pages ? `<span>${a.pages} pages</span>` : ''}
+          <span>${(a.text || '').length.toLocaleString()} chars</span>
+        </div>
+        <div class="article-body">${bodyHTML}</div>
+        ${a.keywords && a.keywords.length ? `
+          <div class="article-keywords">
+            ${a.keywords.map(k => `<a class="kw-tag" href="#/search?q=${encodeURIComponent(k)}" style="cursor:pointer">${esc(k)}</a>`).join('')}
+          </div>
+        ` : ''}
+        ${a.pdf_url ? `<div class="article-source">Source: <a href="${escAttr(a.pdf_url)}" target="_blank" rel="noopener">${esc(a.pdf_url)}</a></div>` : ''}
+        ${isAdmin() ? `
+          <div class="action-bar">
+            <button class="btn btn-primary" onclick="location.hash='#/education/a/${esc(a.id)}/edit'">Edit</button>
+            <button class="btn btn-danger" onclick="window.__deleteArticle('${esc(a.id)}')">Delete</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  window.__deleteArticle = function(artId) {
+    const a = state.data.articles.find(x => x.id === artId);
+    if (!a) return;
+    if (!confirm('Delete article "' + a.title + '"?')) return;
+    deleteWithUndo('data', 'Deleted: ' + a.title, () => {
+      state.data.articles = state.data.articles.filter(x => x.id !== artId);
+      const cat = state.data.categories.find(c => c.id === a.category);
+      if (cat) { cat.articles = cat.articles.filter(id => id !== artId); cat.count = cat.articles.length; }
+      state.data.total_articles = state.data.articles.length;
+    });
+    navigate('#/education/c/' + a.category);
+  };
+
+  function renderArticleEdit(artId, isNew, accent, defaultCatId) {
+    let a;
+    if (isNew) {
+      a = { id: 'art_' + Date.now(), title: '', category: defaultCatId || (state.data.categories[0] && state.data.categories[0].id), text: '', pages: null, keywords: [], related: [], pdf_url: '', filename: '' };
+    } else {
+      a = state.data.articles.find(x => x.id === artId);
+      if (!a) return renderNotFound();
+    }
+    setHeader(isNew ? 'New article' : 'Edit', { label: isNew ? 'Articles' : (a.title || 'Article'), href: isNew ? '#/education' : ('#/education/a/' + a.id) });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:20px;margin-bottom:12px">${isNew ? 'New article' : 'Edit: ' + esc(a.title)}</h2>
+        <div class="edit-field">
+          <label>Title</label>
+          <input type="text" id="ed-title" value="${escAttr(a.title)}" placeholder="Article title" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label>Category</label>
+          <select id="ed-category" onchange="markEditorDirty()">
+            ${state.data.categories.map(c => `<option value="${esc(c.id)}" ${c.id === a.category ? 'selected' : ''}>${esc(c.name_en)} / ${esc(c.name_zh)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="edit-field">
+          <label>Content</label>
+          <textarea id="ed-text" class="plain" style="min-height:300px" oninput="markEditorDirty()">${esc(a.text || '')}</textarea>
+        </div>
+        <div class="edit-field">
+          <label>Keywords (comma separated)</label>
+          <input type="text" id="ed-keywords" value="${escAttr((a.keywords || []).join(', '))}" placeholder="keyword1, keyword2" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label>Source URL (original reference, optional)</label>
+          <input type="url" id="ed-source" value="${escAttr(a.pdf_url || '')}" placeholder="https://..." oninput="markEditorDirty()">
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveArticle('${esc(a.id)}', ${isNew})">Save</button>
+        </div>
+      </div>
+    `;
+  }
+
+  window.__saveArticle = function(artId, isNew) {
+    const title = el('ed-title').value.trim();
+    const categoryId = el('ed-category').value;
+    const text = el('ed-text').value;
+    const keywords = el('ed-keywords').value.split(',').map(s => s.trim()).filter(Boolean);
+    const pdf_url = el('ed-source').value.trim();
+    if (!title) { showToast('Title required', 'error'); return; }
+    clearEditorDirty();
+    if (isNew) {
+      const newArt = { id: artId, title, category: categoryId, text, keywords, related: [], pdf_url, pages: null, filename: '' };
+      state.data.articles.push(newArt);
+      const cat = state.data.categories.find(c => c.id === categoryId);
+      if (cat) { cat.articles.push(artId); cat.count = cat.articles.length; }
+      state.data.total_articles = state.data.articles.length;
+    } else {
+      const a = state.data.articles.find(x => x.id === artId);
+      if (!a) { showToast('Article not found', 'error'); return; }
+      // Handle category change
+      if (a.category !== categoryId) {
+        const oldCat = state.data.categories.find(c => c.id === a.category);
+        const newCat = state.data.categories.find(c => c.id === categoryId);
+        if (oldCat) { oldCat.articles = oldCat.articles.filter(id => id !== artId); oldCat.count = oldCat.articles.length; }
+        if (newCat) { newCat.articles.push(artId); newCat.count = newCat.articles.length; }
+      }
+      a.title = title; a.category = categoryId; a.text = text;
+      a.keywords = keywords; a.pdf_url = pdf_url;
+    }
+    markDirty('data');
+    showToast('Saved locally ✓', 'success');
+    navigate('#/education/a/' + artId);
+  };
+
+  /* ======================================================
+     PPu Notes
+  ====================================================== */
+  function routeNotes(parts) {
+    const accent = '#27ae60';
+    if (!parts.length) return renderNotesList(accent);
+    if (parts[0] === 's' && parts[1]) return renderNoteDetail(parts[1], accent);
+    if (parts[0] === 'edit' && parts[1]) return renderNoteEdit(parts[1], false, accent);
+    if (parts[0] === 'new') return renderNoteEdit(null, true, accent, parts[1] ? parseInt(parts[1]) : -1);
+    renderNotFound();
+  }
+
+  function renderNotesList(accent) {
+    setHeader('PPu Notes', { label: 'Home', href: '#/' });
+    const admin = isAdmin();
+    const sections = state.notes.sections;
+    const lastIdx = sections.length - 1;
+    const dirty = state.sources.notes === 'local';
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
+        <div class="list-section">
+          ${sections.map((s, i) => `
+            <div style="position:relative">
+              <a class="list-card" href="#/notes/s/${esc(s.id)}">
+                <div style="width:36px;font-weight:700;color:${accent};font-size:15px">${esc(s.number)}</div>
+                <div style="flex:1;min-width:0">
+                  <div class="title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(s.title)}</div>
+                  <div class="meta">${s.subsections.length} subsections</div>
+                </div>
+                <button class="fav-btn ${isFav('notes', s.id) ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(s.id)}" data-fav-title="${escAttr(s.full_title)}">${isFav('notes', s.id) ? '⭐' : '☆'}</button>
+                ${admin ? `
+                  <div style="display:flex;flex-direction:column;gap:2px;margin-left:6px">
+                    ${i > 0 ? `<button onclick="event.preventDefault();event.stopPropagation();window.__moveNote(${i},-1)" style="font-size:12px;opacity:.5;padding:2px">▲</button>` : ''}
+                    ${i < lastIdx ? `<button onclick="event.preventDefault();event.stopPropagation();window.__moveNote(${i},1)" style="font-size:12px;opacity:.5;padding:2px">▼</button>` : ''}
+                    <button onclick="event.preventDefault();event.stopPropagation();window.__deleteNote(${i})" style="font-size:12px;opacity:.5;padding:2px;color:var(--c-danger)">✕</button>
+                  </div>
+                ` : ''}
+                <span class="chevron">›</span>
+              </a>
+              ${admin ? `<button class="insert-btn" onclick="location.hash='#/notes/new/${i}'">＋ insert section below</button>` : ''}
+            </div>
+          `).join('')}
+        </div>
+        ${admin ? `
+          <div class="action-bar">
+            <button class="btn btn-success btn-block" onclick="location.hash='#/notes/new'">+ New section at end</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  window.__moveNote = function(idx, dir) {
+    const arr = state.notes.sections;
+    if (idx + dir < 0 || idx + dir >= arr.length) return;
+    [arr[idx], arr[idx + dir]] = [arr[idx + dir], arr[idx]];
+    renumberNotes();
+    markDirty('notes');
+    router();
+  };
+  window.__deleteNote = function(idx) {
+    if (state.notes.sections.length <= 1) { alert('Cannot delete last section'); return; }
+    const s = state.notes.sections[idx];
+    if (!confirm('Delete section "' + s.number + '. ' + s.title + '"?')) return;
+    deleteWithUndo('notes', 'Deleted: ' + s.full_title, () => {
+      state.notes.sections.splice(idx, 1);
+      renumberNotes();
+    });
+    router();
+  };
+
+  function renumberNotes() {
+    const romans = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
+    state.notes.sections.forEach((s, i) => {
+      s.number = i < romans.length ? romans[i] : String(i + 1);
+      s.full_title = s.number + '. ' + s.title;
+      if (s.subsections) {
+        s.subsections.forEach((sub, j) => {
+          if (sub.title) {
+            sub.title = sub.title.replace(/^\d+\.\s*/, '');
+            sub.title = (j + 1) + '. ' + sub.title;
+          }
+        });
+      }
+    });
+    state.notes.total_sections = state.notes.sections.length;
+  }
+
+  function renderNoteDetail(sid, accent) {
+    const s = state.notes.sections.find(x => x.id === sid);
+    if (!s) return renderNotFound();
+    setHeader(s.full_title, { label: 'PPu Notes', href: '#/notes' });
+    const fav = isFav('notes', sid);
+    let body = '';
+    for (const sub of s.subsections) {
+      body += '<div style="margin-bottom:16px">';
+      if (sub.title) body += '<h4 style="font-size:15px;font-weight:700;color:var(--c-ppu-notes);margin-bottom:6px">' + esc(sub.title) + '</h4>';
+      if (sub.items && sub.items.length) {
+        body += '<ul style="margin-left:20px">';
+        for (const it of sub.items) body += '<li style="margin:4px 0">' + esc(it) + '</li>';
+        body += '</ul>';
+      }
+      body += '</div>';
+    }
+    const idx = state.notes.sections.indexOf(s);
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
+          <h2 style="flex:1;font-size:21px;line-height:1.3">${esc(s.full_title)}</h2>
+          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(sid)}" data-fav-title="${escAttr(s.full_title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+        </div>
+        <div class="article-body" style="white-space:normal">${body}</div>
+        ${isAdmin() ? `
+          <div class="action-bar">
+            <button class="btn btn-primary" onclick="location.hash='#/notes/edit/${esc(sid)}'">Edit section</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  function renderNoteEdit(sid, isNew, accent, insertAfterIdx) {
+    let section;
+    if (isNew) {
+      section = {
+        id: 'tn_' + Date.now(),
+        number: '',
+        title: '',
+        full_title: '',
+        subsections: [{ title: '', items: [''] }],
+        _insertAfter: (insertAfterIdx !== undefined ? insertAfterIdx : -1),
+      };
+    } else {
+      const orig = state.notes.sections.find(x => x.id === sid);
+      if (!orig) return renderNotFound();
+      section = JSON.parse(JSON.stringify(orig));
+    }
+    setHeader(isNew ? 'New section' : 'Edit', { label: isNew ? 'PPu Notes' : (section.full_title || 'Section'), href: isNew ? '#/notes' : ('#/notes/s/' + section.id) });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">${isNew ? 'New section' : 'Edit: ' + esc(section.title)}</h2>
+        <div class="edit-field">
+          <label>Section title</label>
+          <input type="text" id="ne-title" value="${escAttr(section.title)}" placeholder="e.g. LUTS、排尿機轉" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label>Subsections</label>
+          <div id="ne-subs"></div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveNote('${esc(section.id)}', ${isNew}, ${section._insertAfter !== undefined ? section._insertAfter : 'null'})">Save</button>
+        </div>
+      </div>
+    `;
+    renderNoteSubsBlocks(section.subsections);
+  }
+
+  function renderNoteSubsBlocks(subs) {
+    const host = el('ne-subs');
+    host.innerHTML = subs.map((sub, i) => noteSubBlockHTML(sub, i)).join('')
+      + `<button class="insert-btn" onclick="window.__addNoteSub()">＋ add subsection</button>`;
+  }
+
+  function noteSubBlockHTML(sub, i) {
+    const items = sub.items || [];
+    const itemsHTML = items.map((it, j) => noteItemRowHTML(i, j, it)).join('');
+    return `
+      <div class="subsection-block" data-sub-idx="${i}">
+        <span class="sub-idx">Sub ${i + 1}</span>
+        <button class="sub-delete" onclick="window.__delNoteSub(${i})">✕</button>
+        <div class="edit-field" style="margin-bottom:8px">
+          <label>Title</label>
+          <input type="text" class="ne-sub-title" value="${escAttr(sub.title || '')}" placeholder="1. 某子章節" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field" style="margin-bottom:0">
+          <label>Items (${items.length})</label>
+          <div class="ne-items" data-sub-idx="${i}">
+            ${itemsHTML}
+          </div>
+          <button class="insert-btn" style="margin-top:4px" onclick="window.__addNoteItem(${i})">＋ add item</button>
+        </div>
+      </div>
+      <button class="insert-btn" onclick="window.__insertNoteSubAfter(${i})">＋ insert after</button>
+    `;
+  }
+
+  function noteItemRowHTML(subIdx, itemIdx, itemText) {
+    return `
+      <div class="note-item-row" data-item-idx="${itemIdx}">
+        <input type="text" class="ne-item-input" value="${escAttr(itemText)}" placeholder="item ${itemIdx + 1}" oninput="markEditorDirty()">
+        <button class="item-del" onclick="window.__delNoteItem(${subIdx}, ${itemIdx})">✕</button>
+      </div>
+    `;
+  }
+
+  function collectNoteSubs() {
+    const blocks = document.querySelectorAll('#ne-subs .subsection-block');
+    const subs = [];
+    blocks.forEach(b => {
+      const title = b.querySelector('.ne-sub-title').value.trim();
+      const items = [];
+      b.querySelectorAll('.note-item-row .ne-item-input').forEach(inp => {
+        const v = inp.value.trim();
+        if (v) items.push(v);
+      });
+      subs.push({ title, items });
+    });
+    return subs;
+  }
+
+  window.__addNoteItem = function(subIdx) {
+    const subs = collectNoteSubs();
+    subs[subIdx].items.push('');
+    renderNoteSubsBlocks(subs);
+    // Focus the new input
+    setTimeout(() => {
+      const rows = document.querySelectorAll(`#ne-subs .subsection-block[data-sub-idx="${subIdx}"] .ne-item-input`);
+      if (rows.length) rows[rows.length - 1].focus();
+    }, 0);
+  };
+  window.__delNoteItem = function(subIdx, itemIdx) {
+    const subs = collectNoteSubs();
+    subs[subIdx].items.splice(itemIdx, 1);
+    renderNoteSubsBlocks(subs);
+  };
+
+  window.__addNoteSub = function() {
+    const subs = collectNoteSubs();
+    subs.push({ title: '', items: [] });
+    renderNoteSubsBlocks(subs);
+  };
+  window.__delNoteSub = function(i) {
+    const subs = collectNoteSubs();
+    if (subs.length <= 1) { alert('Cannot delete last subsection'); return; }
+    if (!confirm('Delete subsection ' + (i + 1) + '?')) return;
+    subs.splice(i, 1);
+    renderNoteSubsBlocks(subs);
+  };
+  window.__insertNoteSubAfter = function(i) {
+    const subs = collectNoteSubs();
+    subs.splice(i + 1, 0, { title: '', items: [] });
+    renderNoteSubsBlocks(subs);
+  };
+
+  window.__saveNote = function(sid, isNew, insertAfter) {
+    const title = el('ne-title').value.trim();
+    const subs = collectNoteSubs();
+    if (!title) { showToast('Title required', 'error'); return; }
+    clearEditorDirty();
+    if (isNew) {
+      const newSection = {
+        id: sid, number: '', title, full_title: title, subsections: subs,
+      };
+      if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < state.notes.sections.length) {
+        state.notes.sections.splice(insertAfter + 1, 0, newSection);
+      } else {
+        state.notes.sections.push(newSection);
+      }
+    } else {
+      const s = state.notes.sections.find(x => x.id === sid);
+      if (!s) return showToast('Section not found', 'error');
+      s.title = title;
+      s.subsections = subs;
+    }
+    renumberNotes();
+    markDirty('notes');
+    showToast('Saved locally ✓', 'success');
+    navigate(isNew ? '#/notes' : '#/notes/s/' + sid);
+  };
+
+  /* ======================================================
+     Tips & Guide
+  ====================================================== */
+  function routeTips(parts, query) {
+    const accent = '#e67e22';
+    query = query || {};
+    if (!parts.length) return renderTipsList(accent);
+    if (parts[0] === 's' && parts[1]) return renderTipsChapter(parts[1], accent);
+    if (parts[0] === 'sub' && parts[1] && parts[2]) return renderTipsSub(parts[1], parts[2], accent);
+    if (parts[0] === 'edit' && parts[1] && parts[2]) return renderTipsEdit(parts[1], parts[2], false, accent);
+    if (parts[0] === 'new' && parts[1]) {
+      const after = query.after !== undefined ? parseInt(query.after) : -1;
+      return renderTipsEdit(parts[1], null, true, accent, after);
+    }
+    renderNotFound();
+  }
+
+  function renderTipsList(accent) {
+    setHeader('Tips & Guide', { label: 'Home', href: '#/' });
+    const dirty = state.sources.tips === 'local';
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
+        <div class="list-section">
+          ${state.tips.sections.map(s => `
+            <a class="list-card" href="#/tips/s/${esc(s.id)}">
+              <div style="width:36px;font-weight:700;color:${accent};font-size:15px">${esc(s.number)}</div>
+              <div style="flex:1;min-width:0">
+                <div class="title">${esc(s.title)}</div>
+                <div class="meta">${(s.subsections || []).length} subsections</div>
+              </div>
+              <span class="chevron">›</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTipsChapter(chapterId, accent) {
+    const chapter = state.tips.sections.find(s => s.id === chapterId);
+    if (!chapter) return renderNotFound();
+    setHeader(chapter.full_title, { label: 'Tips & Guide', href: '#/tips' });
+    const admin = isAdmin();
+    const subs = chapter.subsections || [];
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:20px;margin-bottom:12px">${esc(chapter.full_title)}</h2>
+        <div class="list-section">
+          ${subs.map((sub, i) => `
+            <a class="list-card" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
+              <div style="flex:1;min-width:0">
+                <div class="title">${esc(sub.title)}</div>
+                <div class="meta">${(sub.markdown || '').length} chars Markdown</div>
+              </div>
+              <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(sub.title)}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
+              <span class="chevron">›</span>
+            </a>
+            ${admin ? `<button class="insert-btn" onclick="location.hash='#/tips/new/${esc(chapterId)}?after=${i}'">＋ insert subsection after</button>` : ''}
+          `).join('')}
+        </div>
+        ${admin ? `
+          <div class="action-bar">
+            <button class="btn btn-success btn-block" onclick="location.hash='#/tips/new/${esc(chapterId)}'">+ New subsection at end</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  function renderTipsSub(chapterId, subId, accent) {
+    const chapter = state.tips.sections.find(s => s.id === chapterId);
+    const sub = chapter && chapter.subsections.find(x => x.id === subId);
+    if (!chapter || !sub) return renderNotFound();
+    setHeader(sub.title, { label: chapter.title, href: '#/tips/s/' + chapterId });
+    const admin = isAdmin();
+    const fav = isFav('tips', subId);
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
+          <h2 style="flex:1;font-size:20px;line-height:1.3">${esc(sub.title)}</h2>
+          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(subId)}" data-fav-title="${escAttr(sub.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+        </div>
+        <div class="markdown-body">${renderMd(sub.markdown || '')}</div>
+        ${admin ? `
+          <div class="action-bar">
+            <button class="btn btn-primary" onclick="location.hash='#/tips/edit/${esc(chapterId)}/${esc(subId)}'">Edit</button>
+            <button class="btn btn-danger" onclick="window.__deleteTipsSub('${esc(chapterId)}','${esc(subId)}')">Delete</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  window.__deleteTipsSub = function(chapterId, subId) {
+    const chapter = state.tips.sections.find(s => s.id === chapterId);
+    if (!chapter) return;
+    const sub = chapter.subsections.find(x => x.id === subId);
+    if (!sub) return;
+    if (!confirm('Delete "' + sub.title + '"?')) return;
+    deleteWithUndo('tips', 'Deleted: ' + sub.title, () => {
+      chapter.subsections = chapter.subsections.filter(x => x.id !== subId);
+    });
+    navigate('#/tips/s/' + chapterId);
+  };
+
+  function renderTipsEdit(chapterId, subId, isNew, accent, insertAfterIdx) {
+    const chapter = state.tips.sections.find(s => s.id === chapterId);
+    if (!chapter) return renderNotFound();
+    let sub;
+    if (isNew) {
+      sub = { id: 'tg_' + chapterId.replace('tg_', '') + '_' + Date.now(), title: '', markdown: '', _insertAfter: (insertAfterIdx !== undefined ? insertAfterIdx : -1) };
+    } else {
+      const orig = chapter.subsections.find(x => x.id === subId);
+      if (!orig) return renderNotFound();
+      sub = JSON.parse(JSON.stringify(orig));
+    }
+    setHeader(isNew ? 'New subsection' : 'Edit', { label: isNew ? chapter.title : (sub.title || 'Subsection'), href: isNew ? ('#/tips/s/' + chapterId) : ('#/tips/sub/' + chapterId + '/' + sub.id) });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">${isNew ? 'New in: ' + esc(chapter.title) : 'Edit: ' + esc(sub.title)}</h2>
+        <div class="edit-field">
+          <label>Subsection title</label>
+          <input type="text" id="te-title" value="${escAttr(sub.title)}" placeholder="e.g. Stone 處置流程">
+        </div>
+        <div class="edit-field">
+          <label>Markdown content</label>
+          ${mdToolbarHTML()}
+          <div class="md-tabs">
+            <button class="active" onclick="window.__mdTab('edit')">Edit</button>
+            <button onclick="window.__mdTab('preview')">Preview</button>
+          </div>
+          <div class="md-editor">
+            <div class="md-pane" id="mdp-edit">
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();">${esc(sub.markdown || '')}</textarea>
+            </div>
+            <div class="md-pane hidden" id="mdp-preview">
+              <div class="md-preview markdown-body" id="te-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveTips('${esc(chapterId)}','${esc(sub.id)}',${isNew},${sub._insertAfter !== undefined ? sub._insertAfter : 'null'})">Save</button>
+        </div>
+      </div>
+    `;
+    window.__mdUpdate();
+  }
+
+  window.__mdTab = function(which) {
+    const ep = el('mdp-edit'), pp = el('mdp-preview');
+    const btns = document.querySelectorAll('.md-tabs button');
+    if (which === 'edit') {
+      ep.classList.remove('hidden'); pp.classList.add('hidden');
+      btns[0].classList.add('active'); btns[1].classList.remove('active');
+    } else {
+      ep.classList.add('hidden'); pp.classList.remove('hidden');
+      btns[0].classList.remove('active'); btns[1].classList.add('active');
+      window.__mdUpdate();
+    }
+  };
+  window.__mdUpdate = function() {
+    const md = el('te-md').value;
+    const pv = el('te-preview');
+    if (pv) pv.innerHTML = renderMd(md);
+  };
+
+  window.__saveTips = function(chapterId, subId, isNew, insertAfter) {
+    const chapter = state.tips.sections.find(s => s.id === chapterId);
+    if (!chapter) return showToast('Chapter not found', 'error');
+    const title = el('te-title').value.trim();
+    const md = el('te-md').value;
+    if (!title) return showToast('Title required', 'error');
+    clearEditorDirty();
+    if (isNew) {
+      const newSub = { id: subId, title, markdown: md };
+      if (insertAfter !== null && insertAfter !== undefined && insertAfter >= 0 && insertAfter < chapter.subsections.length) {
+        chapter.subsections.splice(insertAfter + 1, 0, newSub);
+      } else {
+        chapter.subsections.push(newSub);
+      }
+    } else {
+      const s = chapter.subsections.find(x => x.id === subId);
+      if (!s) return showToast('Not found', 'error');
+      s.title = title;
+      s.markdown = md;
+    }
+    state.tips.total_subsections = state.tips.sections.reduce((a, s) => a + s.subsections.length, 0);
+    markDirty('tips');
+    showToast('Saved locally ✓', 'success');
+    navigate('#/tips/sub/' + chapterId + '/' + subId);
+  };
+
+  /* ======================================================
+     Textbook
+  ====================================================== */
+  const TB_CHAPTER_IDS = ['tb_01','tb_02','tb_03','tb_04','tb_05','tb_06','tb_07','tb_08','tb_09','tb_10','tb_11','tb_12'];
+
+  async function routeTextbook(parts, query) {
+    const accent = '#8e44ad';
+    query = query || {};
+    if (!parts.length) return renderTextbookHome(accent);
+    if (parts[0] === 'c' && parts[1]) {
+      await loadChapter(parts[1]);
+      if (parts[2] === 's' && parts[3]) return renderTbSection(parts[1], parseInt(parts[3]), accent);
+      return renderTbChapter(parts[1], accent);
+    }
+    if (parts[0] === 't' && parts[1] && parts[2]) {
+      await loadChapter(parts[1]);
+      const opts = {
+        slideIdx: query.slide !== undefined ? parseInt(query.slide) : 0,
+        highlight: query.q || '',
+      };
+      return renderTbTopic(parts[1], parts[2], accent, opts);
+    }
+    if (parts[0] === 'edit-notes' && parts[1] && parts[2]) {
+      await loadChapter(parts[1]);
+      return renderTbTopicNotesEdit(parts[1], parts[2], accent);
+    }
+    if (parts[0] === 'edit-ocr' && parts[1] && parts[2] && parts[3] !== undefined) {
+      await loadChapter(parts[1]);
+      return renderTbOCREdit(parts[1], parts[2], parseInt(parts[3]), accent);
+    }
+    if (parts[0] === 'new-text' && parts[1] && parts[2] !== undefined) {
+      await loadChapter(parts[1]);
+      return renderTbNewTextTopic(parts[1], parseInt(parts[2]), accent);
+    }
+    if (parts[0] === 'edit-text' && parts[1] && parts[2]) {
+      await loadChapter(parts[1]);
+      return renderTbEditTextTopic(parts[1], parts[2], accent);
+    }
+    if (parts[0] === 'move' && parts[1] && parts[2] && parts[3] !== undefined) {
+      await loadChapter(parts[1]);
+      return renderTbMoveSlide(parts[1], parts[2], parseInt(parts[3]), accent);
+    }
+    renderNotFound();
+  }
+
+  function renderTextbookHome(accent) {
+    setHeader('Textbook Knowledge', { label: 'Home', href: '#/' });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div class="home-grid" id="tb-grid">
+          ${TB_CHAPTER_IDS.map(id => `
+            <a class="module-card" style="--accent:${accent}" href="#/textbook/c/${esc(id)}">
+              <div class="icon">📕</div>
+              <div>
+                <div class="name" id="tb-name-${esc(id)}">${esc(id)}</div>
+                <div class="count" id="tb-count-${esc(id)}">loading…</div>
+              </div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    // Lazy-resolve chapter titles
+    TB_CHAPTER_IDS.forEach(id => {
+      loadChapter(id).then(ch => {
+        const nm = el('tb-name-' + id);
+        const ct = el('tb-count-' + id);
+        if (nm) nm.textContent = (ch.icon ? ch.icon + ' ' : '') + ch.title;
+        if (ct) {
+          const topics = (ch.sections || []).reduce((a, s) => a + (s.topics ? s.topics.length : 0), 0);
+          ct.textContent = (ch.sections ? ch.sections.length : 0) + ' sections · ' + topics + ' topics';
+        }
+      }).catch(() => {
+        const ct = el('tb-count-' + id);
+        if (ct) ct.textContent = '(load failed)';
+      });
+    });
+  }
+
+  function renderTbChapter(tbId, accent) {
+    const ch = state.tb[tbId];
+    if (!ch) return renderNotFound();
+    setHeader((ch.icon ? ch.icon + ' ' : '') + ch.title, { label: 'Textbook', href: '#/textbook' });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:21px;margin-bottom:12px">${esc(ch.icon || '')} ${esc(ch.number)}. ${esc(ch.title)}</h2>
+        <div class="list-section">
+          ${(ch.sections || []).map((s, i) => `
+            <a class="list-card" href="#/textbook/c/${esc(tbId)}/s/${i}">
+              <div style="flex:1;min-width:0">
+                <div class="title">${esc(s.title)}</div>
+                <div class="meta">${(s.topics || []).length} topics · ${s.total_slides || '?'} slides</div>
+              </div>
+              <span class="chevron">›</span>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTbSection(tbId, secIdx, accent) {
+    const ch = state.tb[tbId];
+    const sec = ch && ch.sections && ch.sections[secIdx];
+    if (!sec) return renderNotFound();
+    setHeader(sec.title, { label: ch.title, href: '#/textbook/c/' + tbId });
+    const admin = isAdmin();
+    const dirty = state.sources.tb[tbId] === 'local';
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:20px;margin-bottom:4px">${esc(sec.title)}</h2>
+        ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
+        <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${(sec.topics || []).length} topics · from ${esc(sec.source_file || '')}</div>
+        <div class="list-section">
+          ${(sec.topics || []).map(t => topicListCard(tbId, t, accent)).join('')}
+        </div>
+        ${admin ? `
+          <div class="action-bar">
+            <button class="btn btn-success btn-block" onclick="location.hash='#/textbook/new-text/${esc(tbId)}/${secIdx}'">+ New text-only topic in this section</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+    bindFavButtons();
+  }
+
+  function topicListCard(tbId, t, accent) {
+    const fav = isFav('textbook', t.id);
+    const isText = t.type === 'text_only';
+    const badges = [];
+    if (t.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
+    if (t.has_hjh_content) badges.push('<span class="topic-badge hjh">HJH</span>');
+    if (isText) badges.push('<span class="topic-badge text-only">📄 Text</span>');
+    let meta;
+    if (isText) {
+      meta = (t.markdown_content || '').length + ' chars';
+    } else {
+      const all = t.slides || [];
+      const hiddenCount = all.filter(s => s.hidden).length;
+      meta = all.length + ' slides' + (hiddenCount ? ` · ${hiddenCount}📎 補充` : '');
+    }
+    const cardClass = t.has_hjh_content ? 'list-card hjh' : 'list-card';
+
+    // Mini thumbnail from first non-hidden slide (fallback to first of any)
+    const all = t.slides || [];
+    const firstSlide = all.find(s => !s.hidden) || all[0];
+    const thumbHTML = (!isText && firstSlide && firstSlide.slide_image)
+      ? `<img class="topic-thumb" src="${escAttr(firstSlide.slide_image)}" alt="" loading="lazy">`
+      : (isText ? '<div class="topic-thumb" style="display:flex;align-items:center;justify-content:center;font-size:18px">📄</div>' : '');
+
+    return `
+      <a class="${cardClass}" href="#/textbook/t/${esc(tbId)}/${esc(t.id)}">
+        ${thumbHTML}
+        <div style="flex:1;min-width:0">
+          <div class="title" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${esc(t.title)}${badges.join('')}</div>
+          <div class="meta">${meta}</div>
+        </div>
+        <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="textbook" data-fav-id="${esc(t.id)}" data-fav-title="${escAttr(t.title)}">${fav ? '⭐' : '☆'}</button>
+        <span class="chevron">›</span>
+      </a>`;
+  }
+
+  function findTopic(tbId, topicId) {
+    const ch = state.tb[tbId];
+    if (!ch) return null;
+    for (let si = 0; si < (ch.sections || []).length; si++) {
+      const sec = ch.sections[si];
+      const ti = (sec.topics || []).findIndex(t => t.id === topicId);
+      if (ti >= 0) return { ch, sec, secIdx: si, topic: sec.topics[ti], topicIdx: ti };
+    }
+    return null;
+  }
+
+  function renderTbTopic(tbId, topicId, accent, opts) {
+    opts = opts || {};
+    const initialSlideIdx = Math.max(0, opts.slideIdx || 0);
+    const highlight = opts.highlight || '';
+    const found = findTopic(tbId, topicId);
+    if (!found) return renderNotFound();
+    const { ch, sec, secIdx, topic } = found;
+    setHeader(topic.title, { label: sec.title, href: '#/textbook/c/' + tbId + '/s/' + secIdx });
+    const fav = isFav('textbook', topicId);
+    const admin = isAdmin();
+
+    let content = '';
+    // All slides visible (including PPT-hidden, badged as supplementary)
+    const visibleSlides = (topic.slides || []);
+    if (topic.type === 'text_only') {
+      const md = topic.markdown_content || '';
+      let rendered = renderMd(md);
+      if (highlight) {
+        // Naive highlight inside rendered HTML — wrap text matches
+        const safe = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        rendered = rendered.replace(new RegExp('(?![^<]*>)(' + safe + ')', 'gi'), '<mark class="highlight">$1</mark>');
+      }
+      content = `<div class="markdown-body">${rendered}</div>`;
+    } else {
+      if (!visibleSlides.length) {
+        content = '<div class="placeholder"><div class="big">📄</div><strong>No visible slides</strong></div>';
+      } else {
+        const startIdx = Math.min(initialSlideIdx, visibleSlides.length - 1);
+        content = renderSlideViewerHTML(tbId, topicId, visibleSlides, startIdx, highlight);
+      }
+    }
+
+    const badges = [];
+    if (topic.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
+    if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">HJH</span>');
+    if (topic.type === 'text_only') badges.push('<span class="topic-badge text-only">📄 Text</span>');
+
+    // HJH slide summary for quick navigation
+    const hjhLabels = hjhSlideLabels(visibleSlides);
+    const hjhSummary = hjhLabels.length ? `
+      <details class="hjh-summary" style="margin-bottom:10px">
+        <summary style="padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:13px;color:#8b5a00;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
+          <span><strong>${hjhLabels.length} HJH slide${hjhLabels.length > 1 ? 's' : ''}</strong> in this topic</span>
+          <span style="font-size:11px;opacity:.7">tap to show ▸</span>
+        </summary>
+        <div style="padding:8px 4px;display:flex;flex-wrap:wrap;gap:6px">
+          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="padding:4px 10px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none;font-size:12px">${esc(String(s.slide_num))}</a>` : '').join('')}
+        </div>
+      </details>
+    ` : '';
+
+    const notesHTML = topic.notes ? `
+      <div class="topic-notes">
+        <div class="notes-label">📝 Notes</div>
+        <div class="markdown-body">${renderMd(topic.notes)}</div>
+      </div>
+    ` : '';
+
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <div class="topic-header">
+          <div class="title">${esc(topic.title)}</div>
+          <div class="badges">${badges.join('')}</div>
+          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="textbook" data-fav-id="${esc(topicId)}" data-fav-title="${escAttr(topic.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+        </div>
+        ${notesHTML}
+        ${hjhSummary}
+        <div id="tb-content">${content}</div>
+        ${admin ? `
+          <div class="action-bar">
+            ${topic.type === 'text_only'
+              ? `<button class="btn btn-primary" onclick="location.hash='#/textbook/edit-text/${esc(tbId)}/${esc(topicId)}'">Edit content</button>`
+              : `<button class="btn btn-secondary" onclick="window.__ocrEditPrompt('${esc(tbId)}','${esc(topicId)}')">Edit OCR</button>`
+            }
+            <button class="btn btn-primary" onclick="location.hash='#/textbook/edit-notes/${esc(tbId)}/${esc(topicId)}'">Edit notes</button>
+            <button class="btn btn-danger" onclick="window.__deleteTopic('${esc(tbId)}','${esc(topicId)}')">Delete topic</button>
+          </div>
+        ` : ''}
+      </div>
+    `;
+
+    if (topic.type !== 'text_only') bindSlideViewer(tbId, topicId, initialSlideIdx, highlight);
+    bindFavButtons();
+  }
+
+  window.__deleteTopic = function(tbId, topicId) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    if (!confirm('Delete topic "' + found.topic.title + '"?')) return;
+    deleteWithUndo(tbId, 'Deleted: ' + found.topic.title, () => {
+      found.sec.topics = found.sec.topics.filter(t => t.id !== topicId);
+    });
+    navigate('#/textbook/c/' + tbId + '/s/' + found.secIdx);
+  };
+
+  window.__ocrEditPrompt = function(tbId, topicId) {
+    // Show a simple slide picker overlay: for now, navigate to slide 0 editor
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const slides = (found.topic.slides || []).filter(s => !s.hidden);
+    if (!slides.length) return;
+    // Pick currently-viewing slide from DOM
+    const cur = parseInt(el('tb-slide-index') ? el('tb-slide-index').textContent : 1) - 1;
+    const idx = Math.max(0, Math.min(slides.length - 1, cur));
+    navigate('#/textbook/edit-ocr/' + tbId + '/' + topicId + '/' + idx);
+  };
+
+  function renderSlideViewerHTML(tbId, topicId, slides, idx, highlight) {
+    const s = slides[idx];
+    highlight = highlight || '';
+    const textLines = (s.text || []).map(t => highlight ? highlightText(t, highlight) : esc(t)).join('</li><li>');
+    const ocrFull = s.ocr_text ? (highlight ? highlightText(s.ocr_text, highlight) : esc(s.ocr_text)) : '';
+    const isHJH = isHJHSlide(s);
+    const isExam = !!s.has_exam_question;
+    const isHidden = !!s.hidden;
+    const admin = isAdmin();
+    return `
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
+        <div class="slide-frame" style="position:relative${isHidden ? ';opacity:.82' : ''}">
+          <div style="position:absolute;top:8px;left:8px;z-index:2;display:flex;gap:4px;flex-wrap:wrap">
+            ${isHJH  ? '<span class="topic-badge hjh"  style="font-size:12px;padding:3px 10px">HJH</span>' : ''}
+            ${isExam ? '<span class="topic-badge exam" style="font-size:12px;padding:3px 10px">📝 Exam</span>' : ''}
+            ${isHidden ? '<span class="topic-badge" style="font-size:11px;padding:3px 10px;background:rgba(44,62,80,.75);color:#fff">📎 補充 (PPT-hidden)</span>' : ''}
+          </div>
+          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))} · ${idx + 1}/${slides.length}')">
+        </div>
+        ${isHidden ? '<div style="font-size:11px;color:var(--c-text-muted);padding:6px 10px;background:var(--c-surface-alt);border-radius:var(--radius-sm);margin-top:6px;line-height:1.5">📎 這張是原 PPT 隱藏投影片（授課時略過）。內容仍是有效知識，重要性可能較低、屬補充資料。</div>' : ''}
+        <div class="slide-controls">
+          <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
+          <div class="slide-counter">
+            <span id="tb-slide-index">${idx + 1}</span> / ${slides.length}
+            · <span style="color:${isHJH ? 'var(--c-hjh-fg)' : 'var(--c-text-muted)'};font-weight:${isHJH ? '700' : 'normal'}">#${esc(String(s.slide_num))}</span>
+          </div>
+          <button onclick="window.__slideNext()" ${idx === slides.length - 1 ? 'disabled' : ''}>Next →</button>
+        </div>
+        ${admin ? `
+          <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+            <button class="btn btn-primary" style="flex:1 1 180px;min-height:unset;padding:8px 12px;font-size:13px" onclick="location.hash='#/textbook/move/${esc(tbId)}/${esc(topicId)}/${idx}'">📂 Move to another topic…</button>
+            <button class="btn btn-secondary" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark as exam'}</button>
+            <button class="btn btn-ghost" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '∅ Unmark supplementary' : '📎 Mark supplementary'}</button>
+          </div>
+        ` : ''}
+        ${(s.text && s.text.length) ? `
+          <div class="slide-ocr" ${isHJH ? 'style="background:var(--c-hjh-card-bg);border-color:var(--c-hjh-border)"' : ''}>
+            <div class="ocr-label">${isHJH ? 'HJH · ' : ''}${isExam ? 'Exam · ' : ''}Captions</div>
+            <ul><li>${textLines}</li></ul>
+          </div>
+        ` : ''}
+        ${ocrFull ? `
+          <details class="slide-ocr" style="margin-top:8px" ${highlight ? 'open' : ''}>
+            <summary class="ocr-label" style="cursor:pointer">Raw OCR (full)${highlight ? ' — matches below' : ''}</summary>
+            <div style="white-space:pre-wrap;margin-top:6px;font-size:13px;color:var(--c-text-muted)">${ocrFull}</div>
+          </details>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  function bindSlideViewer(tbId, topicId, initialIdx, highlight) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    // All slides visible to everyone; hidden=true slides get a "補充 · PPT-hidden"
+    // visual badge so readers know they were skipped in original lecture but still
+    // contain knowledge. Filter removed per user policy: knowledge should be
+    // accessible, not suppressed.
+    const slides = (found.topic.slides || []);
+    let idx = Math.max(0, Math.min(initialIdx || 0, slides.length - 1));
+    highlight = highlight || '';
+
+    function rerender() {
+      el('tb-content').innerHTML = renderSlideViewerHTML(tbId, topicId, slides, idx, highlight);
+      // Swipe gesture
+      const frame = el('tb-content').querySelector('.slide-frame');
+      if (frame) attachSwipe(frame);
+    }
+
+    function attachSwipe(node) {
+      let x0 = null;
+      node.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; });
+      node.addEventListener('touchend', e => {
+        if (x0 === null) return;
+        const x1 = e.changedTouches[0].clientX;
+        const dx = x1 - x0;
+        if (dx < -40 && idx < slides.length - 1) { idx++; rerender(); }
+        else if (dx > 40 && idx > 0) { idx--; rerender(); }
+        x0 = null;
+      });
+    }
+
+    window.__slidePrev = () => { if (idx > 0) { idx--; rerender(); } };
+    window.__slideNext = () => { if (idx < slides.length - 1) { idx++; rerender(); } };
+    document.onkeydown = (e) => {
+      if (e.key === 'ArrowLeft')  window.__slidePrev();
+      if (e.key === 'ArrowRight') window.__slideNext();
+    };
+    // Initial render
+    const frame = el('tb-content').querySelector('.slide-frame');
+    if (frame) attachSwipe(frame);
+  }
+
+  function renderTbTopicNotesEdit(tbId, topicId, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return renderNotFound();
+    const { topic } = found;
+    setHeader('Edit notes', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">Topic notes · ${esc(topic.title)}</h2>
+        <div class="edit-field">
+          <label>Notes (Markdown; rendered above primary content)</label>
+          ${mdToolbarHTML()}
+          <div class="md-tabs">
+            <button class="active" onclick="window.__mdTab('edit')">Edit</button>
+            <button onclick="window.__mdTab('preview')">Preview</button>
+          </div>
+          <div class="md-editor">
+            <div class="md-pane" id="mdp-edit">
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="Add guideline updates, personal annotations, etc.">${esc(topic.notes || '')}</textarea>
+            </div>
+            <div class="md-pane hidden" id="mdp-preview">
+              <div class="md-preview markdown-body" id="te-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-danger" onclick="window.__clearNotes('${esc(tbId)}','${esc(topicId)}')">Clear</button>
+          <button class="btn btn-success" onclick="window.__saveTopicNotes('${esc(tbId)}','${esc(topicId)}')">Save</button>
+        </div>
+      </div>
+    `;
+    window.__mdUpdate();
+  }
+
+  window.__saveTopicNotes = function(tbId, topicId) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    found.topic.notes = el('te-md').value;
+    markDirty(tbId);
+    clearEditorDirty();
+    showToast('Saved locally ✓', 'success');
+    navigate('#/textbook/t/' + tbId + '/' + topicId);
+  };
+  window.__clearNotes = function(tbId, topicId) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    if (!confirm('Clear notes?')) return;
+    delete found.topic.notes;
+    markDirty(tbId);
+    navigate('#/textbook/t/' + tbId + '/' + topicId);
+  };
+
+  function renderTbOCREdit(tbId, topicId, slideIdx, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return renderNotFound();
+    const slides = (found.topic.slides || []).filter(s => !s.hidden);
+    const s = slides[slideIdx];
+    if (!s) return renderNotFound();
+    setHeader('Edit OCR · slide ' + (slideIdx + 1), { label: found.topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:18px;margin-bottom:8px">OCR · ${esc(found.topic.title)}</h2>
+        <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">Slide ${slideIdx + 1} of ${slides.length} · editing <code>text[]</code>. Raw <code>ocr_text</code> is not modified.</div>
+        <div class="slide-frame" style="margin-bottom:12px">
+          <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))}')">
+        </div>
+        <div class="edit-field">
+          <label>Caption lines (one per line)</label>
+          <textarea id="ocr-text" style="min-height:200px" oninput="markEditorDirty()">${esc((s.text || []).join('\n'))}</textarea>
+        </div>
+        <div class="slide-controls" style="margin-bottom:12px">
+          <button class="btn btn-secondary" onclick="location.hash='#/textbook/edit-ocr/${esc(tbId)}/${esc(topicId)}/${Math.max(0, slideIdx - 1)}'" ${slideIdx === 0 ? 'disabled' : ''}>← Prev slide</button>
+          <div class="slide-counter">${slideIdx + 1} / ${slides.length}</div>
+          <button class="btn btn-secondary" onclick="location.hash='#/textbook/edit-ocr/${esc(tbId)}/${esc(topicId)}/${Math.min(slides.length - 1, slideIdx + 1)}'" ${slideIdx === slides.length - 1 ? 'disabled' : ''}>Next slide →</button>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Done</button>
+          <button class="btn btn-success" onclick="window.__saveOCR('${esc(tbId)}','${esc(topicId)}',${slideIdx})">Save this slide</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTbMoveSlide(tbId, topicId, slideIdx, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found || !isAdmin()) return renderNotFound();
+    const admin = true;
+    // Use full slides array (admin sees hidden) so index is stable from viewer
+    const srcSlides = admin ? (found.topic.slides || []) : (found.topic.slides || []).filter(s => !s.hidden);
+    const slide = srcSlides[slideIdx];
+    if (!slide) return renderNotFound();
+
+    const ch = found.ch;
+    const allTopics = [];
+    (ch.sections || []).forEach((sec, si) => {
+      (sec.topics || []).forEach((t, ti) => {
+        if (t.id !== topicId) allTopics.push({ sec, t, si, ti });
+      });
+    });
+
+    setHeader('Move slide', { label: found.topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
+
+    const textPreview = (slide.text || []).slice(0, 3).map(esc).join(' · ');
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:18px;margin-bottom:8px">📂 Move slide to another topic</h2>
+        <div class="slide-viewer" style="padding:8px">
+          <div class="slide-frame" style="max-height:220px">
+            <img src="${escAttr(slide.slide_image || '')}" alt="" style="max-height:220px" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(slide.slide_num))}')">
+          </div>
+          <div style="margin-top:8px;font-size:13px">
+            <strong>#${esc(String(slide.slide_num))}</strong>${isHJHSlide(slide) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 6px">HJH</span>' : ''}${slide.has_exam_question ? ' <span class="topic-badge exam" style="font-size:10px;padding:1px 6px">📝 Exam</span>' : ''}
+          </div>
+          <div style="margin-top:6px;font-size:12px;color:var(--c-text-muted);line-height:1.5">
+            ${textPreview || '<em>(no captions)</em>'}
+          </div>
+          <div style="margin-top:8px;padding:8px 10px;background:var(--c-surface-alt);border-radius:var(--radius-sm);font-size:12px">
+            <strong>Currently in:</strong> ${esc(found.sec.title)} › ${esc(found.topic.title)}
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <input type="text" id="move-filter" class="search-bar" placeholder="Filter topics by title…" autocomplete="off" style="margin-bottom:4px">
+          <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:8px">Tap a topic to move the slide there (slide appended to end; you can reorder later if needed).</div>
+          <div id="move-list" class="list-section"></div>
+        </div>
+      </div>
+    `;
+    renderMoveListInto(tbId, topicId, slideIdx, allTopics);
+    const filt = el('move-filter');
+    if (filt) {
+      filt.addEventListener('input', () => {
+        const q = filt.value.trim().toLowerCase();
+        const filtered = q ? allTopics.filter(o => o.t.title.toLowerCase().includes(q) || o.sec.title.toLowerCase().includes(q)) : allTopics;
+        renderMoveListInto(tbId, topicId, slideIdx, filtered);
+      });
+    }
+  }
+
+  function renderMoveListInto(tbId, topicId, slideIdx, topics) {
+    const host = el('move-list');
+    if (!host) return;
+    if (!topics.length) { host.innerHTML = '<div class="placeholder" style="padding:20px"><small>No topics match filter</small></div>'; return; }
+    host.innerHTML = topics.map(o => `
+      <a class="list-card" href="#" onclick="event.preventDefault(); window.__confirmMoveSlide('${esc(tbId)}','${esc(topicId)}',${slideIdx},'${esc(o.t.id)}')">
+        <div style="flex:1;min-width:0">
+          <div class="title">${esc(o.t.title)}${o.t.has_hjh_content ? ' <span class="topic-badge hjh" style="font-size:9px;padding:1px 5px">HJH</span>' : ''}</div>
+          <div class="meta">${esc(o.sec.title)} · ${(o.t.slides || []).length} slides</div>
+        </div>
+        <span class="chevron">→</span>
+      </a>
+    `).join('');
+  }
+
+  window.__confirmMoveSlide = function(tbId, topicId, slideIdx, targetTopicId) {
+    const src = findTopic(tbId, topicId);
+    const target = findTopic(tbId, targetTopicId);
+    if (!src || !target) return showToast('Topic not found', 'error');
+    const srcArr = src.topic.slides || [];
+    const slide = srcArr[slideIdx];
+    if (!slide) return showToast('Slide not found', 'error');
+    if (!confirm('Move slide #' + slide.slide_num + ' to "' + target.topic.title + '"?\n\n(Slide appends to end of target topic. Reversible — you can move back anytime.)')) return;
+    srcArr.splice(slideIdx, 1);
+    target.topic.slides = target.topic.slides || [];
+    target.topic.slides.push(slide);
+    // Keep slide_count metadata in sync (used by topic list meta)
+    src.topic.slide_count = srcArr.length;
+    target.topic.slide_count = target.topic.slides.length;
+    markDirty(tbId);
+    showToast('Moved to: ' + target.topic.title, 'success');
+    // Return to source topic (if it still has slides) else its section
+    if (srcArr.length > 0) {
+      navigate('#/textbook/t/' + tbId + '/' + topicId);
+    } else {
+      navigate('#/textbook/c/' + tbId + '/s/' + src.secIdx);
+    }
+  };
+
+  window.__toggleSlideHidden = function(tbId, topicId, slideIdx) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const target = (found.topic.slides || [])[slideIdx];
+    if (!target) return;
+    const wasHidden = !!target.hidden;
+    target.hidden = !wasHidden;
+    markDirty(tbId);
+    showToast(wasHidden ? 'Slide unmarked (primary)' : 'Marked as supplementary (📎 badge shown)', 'success');
+    router();
+  };
+
+  window.__toggleSlideExam = function(tbId, topicId, slideIdx) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const target = (found.topic.slides || [])[slideIdx];
+    if (!target) return;
+    target.has_exam_question = !target.has_exam_question;
+    markDirty(tbId);
+    showToast(target.has_exam_question ? 'Marked as exam slide' : 'Unmarked', 'success');
+    router();
+  };
+
+  window.__saveOCR = function(tbId, topicId, slideIdx) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return;
+    const slides = (found.topic.slides || []).filter(s => !s.hidden);
+    const target = slides[slideIdx];
+    if (!target) return;
+    const lines = el('ocr-text').value.split('\n').map(s => s.trim()).filter(Boolean);
+    target.text = lines;
+    markDirty(tbId);
+    clearEditorDirty();
+    showToast('Slide OCR saved ✓', 'success');
+  };
+
+  function renderTbNewTextTopic(tbId, secIdx, accent) {
+    const ch = state.tb[tbId];
+    const sec = ch && ch.sections && ch.sections[secIdx];
+    if (!sec) return renderNotFound();
+    setHeader('New topic', { label: sec.title, href: '#/textbook/c/' + tbId + '/s/' + secIdx });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">New topic in ${esc(sec.title)}</h2>
+        <div class="edit-field">
+          <label>Topic title</label>
+          <input type="text" id="tb-new-title" placeholder="e.g. 2026 guideline update" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label><input type="checkbox" id="tb-new-exam" onchange="markEditorDirty()"> Has exam questions</label>
+        </div>
+        <div class="edit-field">
+          <label>Markdown content</label>
+          ${mdToolbarHTML()}
+          <div class="md-tabs">
+            <button class="active" onclick="window.__mdTab('edit')">Edit</button>
+            <button onclick="window.__mdTab('preview')">Preview</button>
+          </div>
+          <div class="md-editor">
+            <div class="md-pane" id="mdp-edit">
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty();" placeholder="# New guideline&#10;&#10;Body text..."></textarea>
+            </div>
+            <div class="md-pane hidden" id="mdp-preview">
+              <div class="md-preview markdown-body" id="te-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveNewTextTopic('${esc(tbId)}',${secIdx})">Add</button>
+        </div>
+      </div>
+    `;
+    window.__mdUpdate();
+  }
+
+  function renderTbEditTextTopic(tbId, topicId, accent) {
+    const found = findTopic(tbId, topicId);
+    if (!found || found.topic.type !== 'text_only') return renderNotFound();
+    const { topic } = found;
+    setHeader('Edit content', { label: topic.title, href: '#/textbook/t/' + tbId + '/' + topicId });
+    viewEl().innerHTML = `
+      <div class="module-view" style="--module-accent:${accent}">
+        <div class="module-header-strip" style="--accent:${accent}"></div>
+        <h2 style="font-size:19px;margin-bottom:12px">Edit text-only topic</h2>
+        <div class="edit-field">
+          <label>Topic title</label>
+          <input type="text" id="tb-edit-title" value="${escAttr(topic.title)}" oninput="markEditorDirty()">
+        </div>
+        <div class="edit-field">
+          <label><input type="checkbox" id="tb-edit-exam" ${topic.has_exam_questions ? 'checked' : ''} onchange="markEditorDirty()"> Has exam questions</label>
+        </div>
+        <div class="edit-field">
+          <label>Markdown content</label>
+          ${mdToolbarHTML()}
+          <div class="md-tabs">
+            <button class="active" onclick="window.__mdTab('edit')">Edit</button>
+            <button onclick="window.__mdTab('preview')">Preview</button>
+          </div>
+          <div class="md-editor">
+            <div class="md-pane" id="mdp-edit">
+              <textarea id="te-md" oninput="window.__mdUpdate(); markEditorDirty()">${esc(topic.markdown_content || '')}</textarea>
+            </div>
+            <div class="md-pane hidden" id="mdp-preview">
+              <div class="md-preview markdown-body" id="te-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="action-bar action-bar-sticky">
+          <button class="btn btn-secondary" onclick="window.__cancelEdit()">Cancel</button>
+          <button class="btn btn-success" onclick="window.__saveEditTextTopic('${esc(tbId)}','${esc(topicId)}')">Save</button>
+        </div>
+      </div>
+    `;
+    window.__mdUpdate();
+  }
+
+  window.__saveEditTextTopic = function(tbId, topicId) {
+    const found = findTopic(tbId, topicId);
+    if (!found) return showToast('Topic not found', 'error');
+    const title = el('tb-edit-title').value.trim();
+    const md = el('te-md').value;
+    const exam = el('tb-edit-exam').checked;
+    if (!title) return showToast('Title required', 'error');
+    found.topic.title = title;
+    found.topic.markdown_content = md;
+    found.topic.has_exam_questions = !!exam;
+    markDirty(tbId);
+    clearEditorDirty();
+    showToast('Saved ✓', 'success');
+    navigate('#/textbook/t/' + tbId + '/' + topicId);
+  };
+
+  window.__saveNewTextTopic = function(tbId, secIdx) {
+    const ch = state.tb[tbId];
+    const sec = ch && ch.sections && ch.sections[secIdx];
+    if (!sec) return;
+    const title = el('tb-new-title').value.trim();
+    const md = el('te-md').value;
+    const exam = el('tb-new-exam').checked;
+    if (!title) return showToast('Title required', 'error');
+    clearEditorDirty();
+    const topic = {
+      id: 't_extra_' + Date.now(),
+      type: 'text_only',
+      title,
+      has_exam_questions: !!exam,
+      markdown_content: md,
+    };
+    sec.topics = sec.topics || [];
+    sec.topics.push(topic);
+    markDirty(tbId);
+    showToast('Topic added ✓', 'success');
+    navigate('#/textbook/c/' + tbId + '/s/' + secIdx);
+  };
+
+  /* ======================================================
+     Favorites view
+  ====================================================== */
+  function renderFavorites() {
+    setHeader('⭐ Favorites', { label: 'Home', href: '#/' });
+    if (!state.favorites.length) {
+      viewEl().innerHTML = `
+        <div class="placeholder">
+          <div class="big">⭐</div>
+          <strong>No favorites yet</strong>
+          <small>Tap ☆ on any content item to add it here</small>
+        </div>`;
+      return;
+    }
+    const grouped = {};
+    state.favorites.forEach(f => {
+      grouped[f.module] = grouped[f.module] || [];
+      grouped[f.module].push(f);
+    });
+    let html = '';
+    for (const mod of MODULES) {
+      const items = grouped[mod.id] || [];
+      if (!items.length) continue;
+      html += `<div class="result-group-header" style="color:${mod.accent}">${mod.icon} ${esc(mod.name)} (${items.length})</div>`;
+      html += items.map(f => `
+        <a class="list-card" href="${favHref(f)}" style="border-left:4px solid ${mod.accent}">
+          <div style="flex:1;min-width:0">
+            <div class="title">${esc(f.title || f.id)}</div>
+            <div class="meta">${new Date(f.ts).toLocaleDateString()}</div>
+          </div>
+          <button class="fav-btn active" data-fav-module="${esc(f.module)}" data-fav-id="${esc(f.id)}" data-fav-title="${escAttr(f.title || '')}">⭐</button>
+        </a>
+      `).join('');
+    }
+    viewEl().innerHTML = html;
+    bindFavButtons();
+  }
+
+  function favHref(f) {
+    if (f.module === 'education') return '#/education/a/' + f.id;
+    if (f.module === 'notes')     return '#/notes/s/' + f.id;
+    if (f.module === 'tips')      {
+      for (const s of state.tips.sections) {
+        if (s.subsections && s.subsections.some(x => x.id === f.id)) {
+          return '#/tips/sub/' + s.id + '/' + f.id;
+        }
+      }
+      return '#/tips';
+    }
+    if (f.module === 'textbook') {
+      // Check cached tbChapter to find topic's chapter (if already loaded)
+      for (const tbId of TB_CHAPTER_IDS) {
+        if (state.tb[tbId]) {
+          const found = findTopic(tbId, f.id);
+          if (found) return '#/textbook/t/' + tbId + '/' + f.id;
+        }
+      }
+      // Not loaded yet — delegate to async resolver via javascript: href
+      return 'javascript:window.__openFavTextbook(\'' + encodeURIComponent(f.id) + '\')';
+    }
+    return '#/';
+  }
+
+  window.__openFavTextbook = async function(topicIdEnc) {
+    const topicId = decodeURIComponent(topicIdEnc);
+    showToast('Locating topic…');
+    for (const tbId of TB_CHAPTER_IDS) {
+      try {
+        await loadChapter(tbId);
+        if (findTopic(tbId, topicId)) {
+          navigate('#/textbook/t/' + tbId + '/' + topicId);
+          return;
+        }
+      } catch {}
+    }
+    showToast('Topic no longer exists', 'error');
+  };
+
+  /* ======================================================
+     Global search
+  ====================================================== */
+  function renderSearch(q, onlyModule) {
+    setHeader('Search', { label: 'Home', href: '#/' });
+    const only = onlyModule || '';
+    const filterChips = MODULES.map(m => `
+      <button class="search-filter-chip ${only === m.id ? 'active' : ''}" style="--chip-accent:${m.accent}" onclick="window.__setSearchFilter('${m.id}')">
+        ${m.icon} ${esc(m.name)}
+      </button>
+    `).join('') + `
+      <button class="search-filter-chip ${!only ? 'active' : ''}" style="--chip-accent:var(--c-header)" onclick="window.__setSearchFilter('')">All</button>
+    `;
+
+    const unloadedChapters = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
+    const loadAllBar = unloadedChapters.length ? `
+      <div style="margin:8px 0;padding:10px 12px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:var(--radius-sm);font-size:12px;display:flex;align-items:center;gap:8px;justify-content:space-between">
+        <span style="color:var(--c-text-muted)">📦 Textbook: ${TB_CHAPTER_IDS.length - unloadedChapters.length}/${TB_CHAPTER_IDS.length} chapters indexed. Load rest to search all.</span>
+        <button class="btn btn-secondary" style="min-height:unset;padding:6px 10px;font-size:12px" onclick="window.__loadAllChapters()">Load all</button>
+      </div>
+    ` : '';
+
+    viewEl().innerHTML = `
+      <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
+      <div class="search-filters">${filterChips}</div>
+      ${loadAllBar}
+      <div id="search-results"></div>
+    `;
+    const input = el('search-input');
+    let searchTimer = null;
+    input.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        const v = input.value.trim();
+        const params = [];
+        if (v) params.push('q=' + encodeURIComponent(v));
+        if (only) params.push('only=' + only);
+        const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
+        if (location.hash !== hash) location.replace(hash);
+        doSearch(v, only);
+      }, 220);
+    });
+    doSearch(q, only);
+  }
+
+  window.__setSearchFilter = function(moduleId) {
+    const qs = new URLSearchParams();
+    const cur = new URLSearchParams(location.hash.split('?')[1] || '');
+    if (cur.get('q')) qs.set('q', cur.get('q'));
+    if (moduleId) qs.set('only', moduleId);
+    const suffix = qs.toString();
+    location.hash = '#/search' + (suffix ? '?' + suffix : '');
+  };
+
+  window.__loadAllChapters = async function() {
+    showToast('Loading all chapters…');
+    let count = 0;
+    for (const tbId of TB_CHAPTER_IDS) {
+      if (!state.tb[tbId]) {
+        try { await loadChapter(tbId); count++; } catch {}
+      }
+    }
+    showToast('Loaded ' + count + ' chapters', 'success');
+    router();
+  };
+
+  function doSearch(q, onlyModule) {
+    const host = el('search-results');
+    if (!host) return;
+    const only = onlyModule || '';
+    if (!q || q.length < 2) {
+      host.innerHTML = '<div class="placeholder"><div class="big">🔎</div><strong>Type 2+ characters to search</strong><small>Multi-word query = AND match (all words must appear)</small></div>';
+      return;
+    }
+    const terms = toTerms(q);
+    const results = {
+      education: [], notes: [], tips: [], textbook: [],
+    };
+
+    // Patient Ed — carry query into article page so highlights persist
+    for (const a of state.data.articles) {
+      const hay = a.title + ' ' + (a.text || '') + ' ' + (a.keywords || []).join(' ');
+      if (matchAllTerms(hay, terms)) {
+        results.education.push({
+          id: a.id,
+          title: a.title,
+          preview: previewAround(a.text || '', terms),
+          href: '#/education/a/' + a.id + '?q=' + encodeURIComponent(q),
+        });
+      }
+    }
+    // PPu Notes
+    for (const s of state.notes.sections) {
+      const flat = s.full_title + ' ' + (s.subsections || []).map(sub => sub.title + ' ' + (sub.items || []).join(' ')).join(' ');
+      if (matchAllTerms(flat, terms)) {
+        results.notes.push({ id: s.id, title: s.full_title, preview: previewAround(flat, terms), href: '#/notes/s/' + s.id });
+      }
+    }
+    // Tips & Guide
+    for (const chapter of state.tips.sections) {
+      for (const sub of (chapter.subsections || [])) {
+        const hay = sub.title + ' ' + (sub.markdown || '');
+        if (matchAllTerms(hay, terms)) {
+          results.tips.push({
+            id: sub.id, title: chapter.number + '. ' + chapter.title + ' › ' + sub.title,
+            preview: previewAround(sub.markdown || '', terms),
+            href: '#/tips/sub/' + chapter.id + '/' + sub.id,
+          });
+        }
+      }
+    }
+    // Textbook (loaded chapters only) — per-slide granularity + AND-term matching.
+    // Hidden (PPT-skipped) slides ARE included — knowledge points shouldn't be
+    // excluded from search just because they were skipped in lecture; they get a
+    // 補充 tag in result title.
+    for (const tbId of Object.keys(state.tb)) {
+      const ch = state.tb[tbId];
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          let preview = '';
+          let matchedSlideIdx = -1;
+          let matched = false;
+          let matchedIsHidden = false;
+
+          const topicHay = t.title + ' ' + (t.notes || '') + ' ' + (t.markdown_content || '');
+          if (matchAllTerms(topicHay, terms)) {
+            matched = true;
+            preview = previewAround(topicHay, terms);
+          }
+
+          if (t.type !== 'text_only') {
+            const slidesAll = t.slides || [];
+            for (let si = 0; si < slidesAll.length; si++) {
+              const s = slidesAll[si];
+              const slideHay = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
+              if (matchAllTerms(slideHay, terms)) {
+                matched = true;
+                if (matchedSlideIdx === -1) {
+                  matchedSlideIdx = si;
+                  matchedIsHidden = !!s.hidden;
+                  preview = previewAround(slideHay, terms);
+                }
+              }
+            }
+          }
+
+          if (matched) {
+            let title = ch.number + '. ' + ch.title + ' › ' + t.title;
+            if (matchedSlideIdx >= 0) {
+              const s = (t.slides || [])[matchedSlideIdx];
+              const hjhTag = s && isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
+              const hidTag = matchedIsHidden ? ' <span class="topic-badge" style="font-size:10px;padding:1px 5px;background:rgba(44,62,80,.6);color:#fff">📎 補充</span>' : '';
+              title += ` — slide ${matchedSlideIdx + 1}${hjhTag}${hidTag}`;
+            }
+            const params = [];
+            if (matchedSlideIdx >= 0) params.push('slide=' + matchedSlideIdx);
+            params.push('q=' + encodeURIComponent(q));
+            const href = '#/textbook/t/' + tbId + '/' + t.id + '?' + params.join('&');
+            results.textbook.push({ id: t.id + ':' + matchedSlideIdx, title, preview, href });
+          }
+        }
+      }
+    }
+
+    // Apply module filter
+    let visibleModules = MODULES;
+    if (only) visibleModules = MODULES.filter(m => m.id === only);
+    const visibleIds = visibleModules.map(m => m.id);
+
+    const total = visibleIds.reduce((a, id) => a + results[id].length, 0);
+    if (total === 0) {
+      host.innerHTML = '<div class="placeholder"><div class="big">🔍</div><strong>No results' + (only ? ' in ' + esc(only) : '') + '</strong><small>for "' + esc(q) + '"</small></div>';
+      return;
+    }
+    let html = '<div style="font-size:13px;color:var(--c-text-muted);margin:8px 0">' + total + ' result' + (total > 1 ? 's' : '') + ' for "' + esc(q) + '"' + (only ? ' in ' + esc(only) : '') + '</div>';
+    for (const mod of visibleModules) {
+      const list = results[mod.id];
+      if (!list.length) continue;
+      html += `<div class="result-group-header" style="color:${mod.accent}">${mod.icon} ${esc(mod.name)} (${list.length})</div>`;
+      html += list.slice(0, 20).map(r => `
+        <a class="list-card" href="${r.href}" style="border-left:4px solid ${mod.accent}">
+          <div style="flex:1;min-width:0">
+            <div class="title">${highlightText(r.title, q)}</div>
+            ${r.preview ? `<div class="meta" style="margin-top:4px">${r.preview}</div>` : ''}
+          </div>
+        </a>
+      `).join('');
+      if (list.length > 20) {
+        html += `<div style="font-size:12px;color:var(--c-text-muted);text-align:center;padding:4px">…${list.length - 20} more in ${mod.name}</div>`;
+      }
+    }
+    html += '<div style="font-size:11px;color:var(--c-text-muted);text-align:center;padding:12px">Tip: textbook search only covers loaded chapters. Open a chapter first to index it.</div>';
+    host.innerHTML = html;
+  }
+
+  /* ======================================================
+     HJH browse (cross-chapter)
+  ====================================================== */
+  function renderHJHBrowse() {
+    setHeader('💡 HJH · all chapters', { label: 'Home', href: '#/' });
+    const unloaded = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
+    const rows = [];
+    for (const tbId of Object.keys(state.tb)) {
+      const ch = state.tb[tbId];
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          if (t.type === 'text_only') continue;
+          const visible = (t.slides || []).filter(s => !s.hidden);
+          for (let si = 0; si < visible.length; si++) {
+            const s = visible[si];
+            if (isHJHSlide(s)) {
+              rows.push({
+                tbId, ch, topic: t, slide: s, slideIdx: si,
+                title: ch.icon + ' ' + ch.title + ' › ' + t.title,
+                label: String(s.slide_num),
+              });
+            }
+          }
+        }
+      }
+    }
+    rows.sort((a, b) => {
+      if (a.tbId !== b.tbId) return a.tbId < b.tbId ? -1 : 1;
+      return a.label.localeCompare(b.label);
+    });
+    viewEl().innerHTML = `
+      <div style="padding:12px;background:linear-gradient(135deg,var(--c-hjh-bg-start),var(--c-hjh-bg-end));border-radius:var(--radius);margin-bottom:12px">
+        <h2 style="font-size:20px;color:var(--c-hjh-fg);margin-bottom:4px">💡 HJH slides</h2>
+        <div style="font-size:13px;color:var(--c-hjh-fg);opacity:.85">${rows.length} HJH slide${rows.length===1?'':'s'} from ${Object.keys(state.tb).length}/${TB_CHAPTER_IDS.length} loaded chapter${Object.keys(state.tb).length===1?'':'s'}</div>
+      </div>
+      ${unloaded.length ? `
+        <div style="margin-bottom:12px;padding:10px 12px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:var(--radius-sm);font-size:12px;display:flex;align-items:center;gap:8px;justify-content:space-between">
+          <span style="color:var(--c-text-muted)">${unloaded.length} chapter${unloaded.length===1?'':'s'} not yet loaded — HJH slides there won't appear</span>
+          <button class="btn btn-secondary" style="min-height:unset;padding:6px 10px;font-size:12px" onclick="window.__loadAllChapters()">Load all</button>
+        </div>
+      ` : ''}
+      ${rows.length === 0 ? '<div class="placeholder"><div class="big">💡</div><strong>No HJH slides yet</strong><small>Load chapters first (try Load all)</small></div>' : `
+        <div class="list-section">
+          ${rows.map(r => `
+            <a class="list-card hjh" href="#/textbook/t/${esc(r.tbId)}/${esc(r.topic.id)}?slide=${r.slideIdx}">
+              ${r.slide.slide_image ? `<img class="topic-thumb" src="${escAttr(r.slide.slide_image)}" alt="" loading="lazy">` : ''}
+              <div style="flex:1;min-width:0">
+                <div class="title" style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${esc(r.title)}</div>
+                <div class="meta" style="color:var(--c-hjh-fg);font-weight:600">#${esc(r.label)}</div>
+              </div>
+              <span class="chevron">›</span>
+            </a>
+          `).join('')}
+        </div>
+      `}
+    `;
+  }
+
+  /* ======================================================
+     Quiz mode (exam-question slides)
+  ====================================================== */
+  const QUIZ_STATE = { queue: [], idx: 0, seen: 0 };
+  function renderQuiz() {
+    setHeader('📝 Quiz · exam slides', { label: 'Home', href: '#/' });
+    // Collect all slides with has_exam_question from loaded chapters
+    const all = [];
+    for (const tbId of Object.keys(state.tb)) {
+      const ch = state.tb[tbId];
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          if (t.type === 'text_only') continue;
+          const visible = (t.slides || []).filter(s => !s.hidden);
+          for (let si = 0; si < visible.length; si++) {
+            const s = visible[si];
+            if (s.has_exam_question) {
+              all.push({ tbId, ch, topic: t, slide: s, slideIdx: si });
+            }
+          }
+        }
+      }
+    }
+    if (!all.length) {
+      viewEl().innerHTML = `
+        <div class="placeholder">
+          <div class="big">📝</div>
+          <strong>No exam slides in loaded chapters</strong>
+          <small>Load all chapters to get a bigger pool</small>
+          <div style="margin-top:12px"><button class="btn btn-secondary" onclick="window.__loadAllChapters()">Load all chapters</button></div>
+        </div>`;
+      return;
+    }
+    // Shuffle once per session
+    if (QUIZ_STATE.queue.length !== all.length) {
+      QUIZ_STATE.queue = all.slice().sort(() => Math.random() - 0.5);
+      QUIZ_STATE.idx = 0;
+      QUIZ_STATE.seen = 0;
+    }
+    const cur = QUIZ_STATE.queue[QUIZ_STATE.idx];
+    if (!cur) {
+      viewEl().innerHTML = `
+        <div class="placeholder">
+          <div class="big">🎉</div>
+          <strong>Quiz complete</strong>
+          <small>${QUIZ_STATE.seen} slides reviewed</small>
+          <div style="margin-top:12px"><button class="btn btn-primary" onclick="window.__quizReset()">Restart</button></div>
+        </div>`;
+      return;
+    }
+    const s = cur.slide;
+    const isHJH = isHJHSlide(s);
+    viewEl().innerHTML = `
+      <div style="margin-bottom:8px;font-size:13px;color:var(--c-text-muted);display:flex;justify-content:space-between">
+        <span>${QUIZ_STATE.idx + 1} / ${QUIZ_STATE.queue.length}</span>
+        <span>${esc(cur.ch.title)} · ${esc(cur.topic.title)}</span>
+      </div>
+      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
+        <div class="slide-frame" style="position:relative">
+          ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
+          <img src="${escAttr(s.slide_image || '')}" alt="" onclick="window.__openLightbox(this.src, 'Quiz · #${esc(String(s.slide_num))}')">
+        </div>
+        ${(s.text && s.text.length) ? `
+          <details style="margin-top:10px">
+            <summary class="ocr-label" style="cursor:pointer">Show captions</summary>
+            <div class="slide-ocr" style="margin-top:6px"><ul><li>${(s.text || []).map(t => esc(t)).join('</li><li>')}</li></ul></div>
+          </details>
+        ` : ''}
+      </div>
+      <div class="action-bar action-bar-sticky">
+        <button class="btn btn-secondary" onclick="window.__quizSkip(-1)" ${QUIZ_STATE.idx === 0 ? 'disabled' : ''}>← Prev</button>
+        <button class="btn btn-primary" onclick="window.__quizGoTo('${esc(cur.tbId)}','${esc(cur.topic.id)}',${cur.slideIdx})">View in context</button>
+        <button class="btn btn-success" onclick="window.__quizSkip(1)">Next →</button>
+      </div>
+    `;
+  }
+  window.__quizSkip = function(dir) {
+    QUIZ_STATE.idx = Math.max(0, Math.min(QUIZ_STATE.queue.length, QUIZ_STATE.idx + dir));
+    QUIZ_STATE.seen = Math.max(QUIZ_STATE.seen, QUIZ_STATE.idx);
+    router();
+  };
+  window.__quizReset = function() {
+    QUIZ_STATE.queue = []; QUIZ_STATE.idx = 0; QUIZ_STATE.seen = 0;
+    router();
+  };
+  window.__quizGoTo = function(tbId, topicId, slideIdx) {
+    navigate('#/textbook/t/' + tbId + '/' + topicId + '?slide=' + slideIdx);
+  };
+
+  /* ======================================================
+     Sync panel
+  ====================================================== */
+  function adminSyncSectionsHTML(hasToken, dirty) {
+    const dirtyList = dirty.length === 0
+      ? '<div style="font-size:13px;color:var(--c-text-muted)">No local edits waiting to sync.</div>'
+      : `
+          <ul class="dirty-list">
+            ${dirty.map(d => {
+              const obj = d.id === 'data' ? state.data : d.id === 'notes' ? state.notes : d.id === 'tips' ? state.tips : state.tb[d.id];
+              let bytes = 0;
+              try {
+                const clone = JSON.parse(JSON.stringify(obj));
+                delete clone._updated_at;
+                bytes = new Blob([JSON.stringify(clone, null, 2)]).size;
+              } catch {}
+              const kb = bytes > 0 ? (bytes / 1024).toFixed(1) + ' KB' : '?';
+              return `<li><strong>${esc(d.label)}</strong> → <code>${esc(d.path)}</code> <span style="color:var(--c-text-muted)">(${kb})</span></li>`;
+            }).join('')}
+          </ul>
+          <div class="action-bar" style="margin:0;gap:8px">
+            <button class="btn btn-secondary" onclick="window.__discardLocal()" style="flex:0 0 auto">Discard local</button>
+            <button class="btn btn-success" style="flex:1" onclick="window.__syncAll()">Sync ${dirty.length} file${dirty.length === 1 ? '' : 's'} → GitHub</button>
+          </div>
+        `;
+    return `
+      <div class="sync-panel">
+        <h3>GitHub Personal Access Token</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          ${hasToken ? 'Token is set in localStorage (this device only).' : 'No token saved yet. You will be prompted on first sync.'}
+        </div>
+        <div class="action-bar" style="margin:0">
+          ${hasToken ? '<button class="btn btn-danger" onclick="window.__clearToken()">Remove token</button>' : ''}
+          <button class="btn btn-secondary" onclick="window.__setToken()">${hasToken ? 'Replace token' : 'Set token'}</button>
+        </div>
+      </div>
+      <div class="sync-panel">
+        <h3>Pending changes (preview)</h3>
+        ${dirtyList}
+      </div>
+    `;
+  }
+
+  function renderSyncPanel() {
+    // isAdmin() respects Preview-as-viewer toggle; isAdminCode() is the raw code tier.
+    const admin        = isAdmin();
+    const adminCode    = isAdminCode();
+    const isPreviewing = adminCode && !admin;
+    const isRealView   = !adminCode;
+    setHeader(admin ? 'Settings · Sync' : 'Settings', { label: 'Home', href: '#/' });
+    const dirty = dirtyDatasets();
+    const hasToken = !!localStorage.getItem(LS.TOKEN);
+    viewEl().innerHTML = `
+      <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
+      ${isRealView ? `
+        <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
+          You're signed in with a viewer code (<code>${esc(currentCode())}</code>). Admin-only settings (GitHub token, sync, submission URL) are hidden.
+        </div>
+      ` : ''}
+      ${isPreviewing ? `
+        <div style="padding:10px 14px;background:#fff5d6;border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span>👁 Preview as viewer — admin-only settings are hidden. Your code <code>${esc(currentCode())}</code> is still admin.</span>
+          <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
+        </div>
+      ` : ''}
+      <div class="sync-panel">
+        <h3>Appearance</h3>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Theme:</span>
+          ${['light','dark','auto'].map(m => `
+            <button class="btn ${currentTheme()===m?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:6px 14px;font-size:13px" onclick="window.__setThemeClick('${m}')">${m==='light'?'☀️ Light':m==='dark'?'🌙 Dark':'🤖 Auto'}</button>
+          `).join('')}
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Text size:</span>
+          ${[['small','A',13],['normal','A',15],['large','A',17],['xlarge','A',19]].map(([k,L,px]) => `
+            <button class="btn ${currentFontScale()===k?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:4px 10px;font-size:${px}px" onclick="window.__setFontClick('${k}')">${L}</button>
+          `).join('')}
+        </div>
+      </div>
+      <div class="sync-panel">
+        <h3>Role</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Authenticated code: <strong><code>${esc(currentCode())}</code></strong>
+          <span style="padding:1px 8px;background:${isAdminCode() ? '#fff5d6' : '#eef4fa'};color:${isAdminCode() ? '#8b5a00' : 'var(--c-text-muted)'};border-radius:8px;font-size:11px;margin-left:4px">${isAdminCode() ? 'admin code' : 'viewer code'}</span>
+          <br>
+          Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer'}</strong>.
+          ${isAdminCode() ? (isAdmin() ? 'All edit/sync buttons enabled.' : 'Previewing as viewer.') : 'Shared code — cannot enable editing from this device.'}
+        </div>
+        ${isAdminCode() ? `
+          <div class="action-bar" style="margin:0">
+            <button class="btn ${isAdmin() ? 'btn-secondary' : 'btn-success'}" onclick="window.__toggleAdmin()">${isAdmin() ? 'Preview as viewer' : 'Back to admin'}</button>
+          </div>
+        ` : ''}
+      </div>
+      ${admin ? adminSyncSectionsHTML(hasToken, dirty) : ''}
+      <div class="sync-panel">
+        <h3>Data · Reload from server</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Force-refetch <code>data.json</code>, <code>teaching-notes.json</code>, <code>tips-guide.json</code> from GitHub. Textbook chapter JSONs reload on next visit.
+          ${dirty.length ? '<br><strong style="color:var(--c-warning)">⚠ You have ' + dirty.length + ' unsynced edits — reload will discard them.</strong>' : ''}
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-secondary btn-block" onclick="window.__reloadFromServer()">🔄 Reload from server</button>
+        </div>
+      </div>
+      ${admin ? `
+      <div class="sync-panel">
+        <h3>Submission form URL (optional)</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Home's <strong>📝 Suggest content</strong> link points here.
+          Built-in default is a <code>mailto:</code> to the project admin — override below if you want a different target on this device.
+        </div>
+        <div class="edit-field" style="margin-bottom:8px">
+          <input type="text" id="submission-url-input" value="${escAttr(submissionUrl())}" placeholder="https://forms.gle/… or mailto:you@x.com?subject=…" inputmode="url" autocapitalize="off" autocorrect="off">
+        </div>
+        <div style="font-size:11px;color:var(--c-text-muted);margin-bottom:8px;line-height:1.5">
+          Accepts <code>https://</code> form URLs or <code>mailto:</code> / <code>tel:</code>.
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-secondary" onclick="window.__saveSubmissionUrl()">Save URL</button>
+          <button class="btn btn-ghost" onclick="window.__resetSubmissionUrl()">Reset to default</button>
+          <button class="btn btn-danger" onclick="window.__clearSubmissionUrl()">Hide link</button>
+        </div>
+      </div>
+      ` : ''}
+      <div class="sync-panel">
+        <h3>Offline · Download all chapters</h3>
+        <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
+          Pre-fetch all 12 chapter JSONs + WebP render images (~155 MB) so the app works fully offline.
+          Loaded chapters: <strong>${Object.keys(state.tb).length} / ${TB_CHAPTER_IDS.length}</strong>
+        </div>
+        <div class="action-bar" style="margin:0">
+          <button class="btn btn-primary btn-block" id="btn-download-all" onclick="window.__downloadAll()">Download all for offline</button>
+        </div>
+        <div class="dl-progress" id="dl-progress" style="display:none"><div class="dl-progress-bar" id="dl-progress-bar"></div></div>
+        <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px"></div>
+      </div>
+      ${admin ? `
+      <div class="sync-panel">
+        <h3>Export JSON (offline backup)</h3>
+        <div class="action-bar" style="margin:0;flex-wrap:wrap">
+          <button class="btn btn-secondary" onclick="window.__exportJSON('data')">📘 data.json</button>
+          <button class="btn btn-secondary" onclick="window.__exportJSON('notes')">📗 notes</button>
+          <button class="btn btn-secondary" onclick="window.__exportJSON('tips')">📙 tips</button>
+          ${Object.keys(state.tb).map(tbId => `<button class="btn btn-secondary" onclick="window.__exportJSON('${esc(tbId)}')">📕 ${esc(tbId)}</button>`).join('')}
+        </div>
+      </div>
+      ` : ''}
+    `;
+  }
+
+  window.__setThemeClick = function(m) { setTheme(m); router(); };
+  window.__setFontClick  = function(s) { setFontScale(s); router(); };
+
+  window.__setToken = async function() {
+    localStorage.removeItem(LS.TOKEN);
+    await ensureToken();
+    router();
+  };
+  window.__clearToken = function() {
+    if (!confirm('Remove GitHub token from this device?')) return;
+    localStorage.removeItem(LS.TOKEN);
+    showToast('Token removed');
+    router();
+  };
+  window.__syncAll = async function() {
+    await syncAll();
+  };
+  window.__discardLocal = async function() {
+    const dirty = dirtyDatasets();
+    if (!dirty.length) return;
+    if (!confirm('Discard ' + dirty.length + ' local change(s) and reload from server? This cannot be undone.')) return;
+    for (const d of dirty) {
+      if (d.id === 'data')       { localStorage.removeItem(LS.DATA); state.sources.data = 'server'; }
+      else if (d.id === 'notes') { localStorage.removeItem(LS.NOTES); state.sources.notes = 'server'; }
+      else if (d.id === 'tips')  { localStorage.removeItem(LS.TIPS); state.sources.tips = 'server'; }
+      else if (d.id.startsWith('tb_')) {
+        localStorage.removeItem(LS.TB_PREFIX + d.id);
+        state.sources.tb[d.id] = 'server';
+        delete state.tb[d.id];
+      }
+    }
+    // Reload fresh from server
+    try {
+      await loadCore();
+      showToast('Reloaded from server', 'success');
+    } catch (e) {
+      showToast('Reload failed: ' + e.message, 'error');
+    }
+    router();
+  };
+  window.__reloadFromServer = async function() {
+    const dirty = dirtyDatasets();
+    if (dirty.length && !confirm('You have ' + dirty.length + ' unsynced edit(s). Reload will discard them. Continue?')) return;
+    // Clear all local overrides
+    localStorage.removeItem(LS.DATA);
+    localStorage.removeItem(LS.NOTES);
+    localStorage.removeItem(LS.TIPS);
+    for (const tbId of TB_CHAPTER_IDS) {
+      localStorage.removeItem(LS.TB_PREFIX + tbId);
+    }
+    // Reset state
+    state.sources.data = 'server';
+    state.sources.notes = 'server';
+    state.sources.tips = 'server';
+    state.sources.tb = {};
+    state.tb = {};
+    // Reload core
+    try {
+      await loadCore();
+      showToast('Reloaded from server ✓', 'success');
+    } catch (e) {
+      showToast('Reload failed: ' + e.message, 'error');
+    }
+    router();
+  };
+
+  window.__saveSubmissionUrl = function() {
+    const url = (el('submission-url-input').value || '').trim();
+    if (url && !/^(https?:|mailto:|tel:)/i.test(url)) {
+      return showToast('URL must start with http://, https://, mailto:, or tel:', 'error');
+    }
+    if (url) localStorage.setItem(LS_SUBMISSION_KEY, url);
+    else     localStorage.removeItem(LS_SUBMISSION_KEY);
+    showToast('Submission URL saved', 'success');
+    router();
+  };
+  window.__resetSubmissionUrl = function() {
+    localStorage.removeItem(LS_SUBMISSION_KEY);
+    showToast('Reset to built-in default', 'success');
+    router();
+  };
+  window.__clearSubmissionUrl = function() {
+    // Distinct from default: empty string = "explicitly disabled on this device"
+    // so Home won't show the link even though the built-in default exists.
+    if (!confirm('Hide the Suggest-content link on this device? (Default is a mailto: to the project admin. Choosing OK hides it; leave blank to use default.)')) return;
+    localStorage.setItem(LS_SUBMISSION_KEY, '');
+    showToast('Submission link hidden on this device', 'success');
+    router();
+  };
+
+  window.__downloadAll = async function() {
+    const btn = el('btn-download-all');
+    const bar = el('dl-progress-bar');
+    const box = el('dl-progress');
+    const status = el('dl-status');
+    btn.disabled = true;
+    box.style.display = 'block';
+    // Phase 1: Load all chapter JSONs — track failures
+    status.textContent = 'Loading chapter metadata…';
+    const toLoad = TB_CHAPTER_IDS.filter(id => !state.tb[id]);
+    let jsonFail = 0;
+    for (let i = 0; i < toLoad.length; i++) {
+      try { await loadChapter(toLoad[i]); } catch { jsonFail++; }
+      const pct = ((i + 1) / (toLoad.length || 1)) * 20;
+      bar.style.width = pct + '%';
+    }
+    // Phase 2: Collect all slide images
+    const images = [];
+    for (const tbId of TB_CHAPTER_IDS) {
+      const ch = state.tb[tbId];
+      if (!ch) continue;
+      for (const sec of (ch.sections || [])) {
+        for (const t of (sec.topics || [])) {
+          for (const s of (t.slides || [])) {
+            if (!s.hidden && s.slide_image) images.push(s.slide_image);
+          }
+        }
+      }
+    }
+    status.textContent = 'Caching ' + images.length + ' slide images…';
+    // Phase 3: Parallel fetch in batches — track ok vs fail
+    const BATCH = 16;
+    let done = 0, imgOk = 0, imgFail = 0;
+    for (let i = 0; i < images.length; i += BATCH) {
+      const batch = images.slice(i, i + BATCH);
+      const results = await Promise.all(batch.map(url =>
+        fetch(url).then(r => r.ok ? 'ok' : 'fail').catch(() => 'fail')
+      ));
+      results.forEach(r => { if (r === 'ok') imgOk++; else imgFail++; });
+      done += batch.length;
+      const pct = 20 + (done / images.length) * 80;
+      bar.style.width = pct + '%';
+      status.textContent = 'Cached ' + done + ' / ' + images.length + ' images…';
+    }
+    bar.style.width = '100%';
+    const summary = '✓ ' + imgOk + ' images cached' +
+      (imgFail ? ' · ⚠ ' + imgFail + ' failed' : '') +
+      (jsonFail ? ' · ⚠ ' + jsonFail + ' chapter JSONs failed' : '');
+    status.textContent = summary + '. App offline-ready.';
+    if (imgFail + jsonFail === 0) showToast('Offline cache complete', 'success');
+    else showToast('Cache partial — ' + (imgFail + jsonFail) + ' failures', 'error', { duration: 4000 });
+    btn.disabled = false;
+    btn.textContent = '✓ Done — redownload';
+  };
+
+  window.__exportJSON = function(key) {
+    let obj, filename;
+    if (key === 'data')       { obj = state.data;  filename = 'data.json'; }
+    else if (key === 'notes') { obj = state.notes; filename = 'teaching-notes.json'; }
+    else if (key === 'tips')  { obj = state.tips;  filename = 'tips-guide.json'; }
+    else if (key.startsWith('tb_')) { obj = state.tb[key]; filename = key + '.json'; }
+    if (!obj) return;
+    const clone = JSON.parse(JSON.stringify(obj));
+    delete clone._updated_at;
+    const blob = new Blob([JSON.stringify(clone, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename; a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  /* ======================================================
+     Service Worker + update banner
+  ====================================================== */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('v4/sw.js?v=4', { scope: 'v4/' }).then(reg => {
+        reg.addEventListener('updatefound', () => {
+          const nw = reg.installing;
+          if (!nw) return;
+          nw.addEventListener('statechange', () => {
+            if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+              el('update-banner').classList.remove('hidden');
+            }
+          });
+        });
+      }).catch(err => console.warn('SW registration failed', err));
+    });
+    let reloadingForUpdate = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloadingForUpdate) return;
+      reloadingForUpdate = true;
+      location.reload();
+    });
+  }
+  el('btn-update-reload').addEventListener('click', () => {
+    navigator.serviceWorker.getRegistration().then(reg => {
+      if (reg && reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      location.reload();
+    });
+  });
+
+  /* ======================================================
+     ?reset escape hatch
+  ====================================================== */
+  if (new URLSearchParams(location.search).has('reset')) {
+    Promise.all([
+      caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))),
+      'serviceWorker' in navigator
+        ? navigator.serviceWorker.getRegistrations().then(regs => Promise.all(regs.map(r => r.unregister())))
+        : Promise.resolve(),
+    ]).finally(() => {
+      localStorage.clear();
+      location.replace(location.pathname);
+    });
+  } else {
+    gateCheck();
+  }
+
+  /* ======================================================
+     Boot (after gate passed)
+  ====================================================== */
+  async function boot() {
+    loadFavs();
+    try {
+      await loadCore();
+    } catch (e) {
+      viewEl().innerHTML = '<div class="placeholder"><div class="big">⚠️</div><strong>Load failed</strong><small>' + esc(e.message) + '</small></div>';
+      console.error(e);
+      return;
+    }
+    router();
+  }
+
+  </script>
+</body>
+</html>
