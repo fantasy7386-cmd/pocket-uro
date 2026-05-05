@@ -1049,6 +1049,170 @@
       padding: 4px 12px; background: rgba(255,255,255,.2);
       border-radius: var(--radius-sm); font-size: 12px; font-weight: 600;
     }
+
+    /* ============================================================
+       Clinical home (Phase 2) — masthead, search box, dense rows
+    ============================================================ */
+    .ch-masthead {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      padding: var(--sp-12) var(--sp-8) var(--sp-8);
+      gap: var(--sp-5);
+    }
+    .ch-eyebrow {
+      font-size: var(--fs-caption-mono);
+      letter-spacing: 1.4px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .ch-title {
+      font-size: var(--fs-display);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-top: 2px;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .ch-icon-actions { display: flex; gap: var(--sp-3); flex-shrink: 0; }
+    .ch-icon-btn {
+      width: 36px; height: 36px;
+      border-radius: var(--r-button);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; padding: 0;
+      color: var(--ink2);
+      text-decoration: none;
+      transition: background .15s, border-color .15s;
+    }
+    .ch-icon-btn:active { background: var(--line2); }
+
+    .ch-search-box {
+      display: flex; align-items: center; gap: var(--sp-4);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-input);
+      padding: var(--sp-4) var(--sp-5);
+      margin: 0 var(--sp-8);
+    }
+    .ch-search-box:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-soft);
+    }
+    .ch-search-input {
+      flex: 1;
+      border: none; outline: none; background: transparent;
+      font-size: var(--fs-body);
+      color: var(--ink);
+      font-family: var(--font-system);
+      min-width: 0;
+    }
+    .ch-search-input::placeholder { color: var(--muted); }
+    .ch-search-kbd {
+      font-size: var(--fs-caption-mono);
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .ch-section-eyebrow {
+      font-size: var(--fs-caption-mono);
+      letter-spacing: 1.2px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: var(--sp-9) var(--sp-8) var(--sp-3);
+    }
+    .ch-list-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-card);
+      overflow: hidden;
+      margin: 0 var(--sp-8);
+    }
+    .ch-row {
+      display: flex; align-items: center;
+      padding: var(--sp-6);
+      border-bottom: 1px solid var(--line2);
+      text-decoration: none;
+      color: inherit;
+      gap: var(--sp-5);
+      cursor: pointer;
+      background: transparent;
+      transition: background .15s;
+    }
+    .ch-row:last-child { border-bottom: none; }
+    .ch-row:active { background: var(--line2); }
+    .ch-row-badge {
+      width: 30px; height: 30px;
+      border-radius: var(--r-row-badge);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: inset 0 0 0 0.5px rgba(255,255,255,.14), 0 1px 2px rgba(0,0,0,.06);
+      flex-shrink: 0;
+      color: #fff;
+    }
+    .ch-row-badge-hjh  { background: var(--warning); }
+    .ch-row-badge-quiz { background: var(--mod-textbook); }
+    .ch-row-body { flex: 1; min-width: 0; }
+    .ch-row-title {
+      font-weight: 600;
+      font-size: var(--fs-body);
+      letter-spacing: -0.2px;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ch-row-sub {
+      font-size: var(--fs-secondary);
+      color: var(--muted);
+      margin-top: 2px;
+      font-feature-settings: "tnum";
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ch-row-warning .ch-row-title { color: var(--warning); }
+
+    .ch-role-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--sp-4);
+      margin: var(--sp-9) var(--sp-8) 0;
+      padding: var(--sp-5) var(--sp-6);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-card);
+    }
+    .ch-role-text { font-size: 13px; min-width: 0; flex: 1; }
+    .ch-role-text strong { display: block; font-weight: 600; color: var(--ink); }
+    .ch-role-sub { display: block; font-size: var(--fs-secondary); color: var(--muted); margin-top: 2px; }
+    .ch-role-btn {
+      flex-shrink: 0;
+      padding: 8px 14px;
+      font-size: 13px; font-weight: 600;
+      border-radius: var(--r-button);
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .ch-role-btn[data-variant="ghost"] {
+      background: var(--surface);
+      color: var(--primary);
+    }
+
+    .ch-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: var(--sp-9) var(--sp-8) var(--sp-11);
+      font-size: var(--fs-caption-mono);
+      color: var(--muted);
+      gap: var(--sp-4);
+    }
+    .ch-footer a { color: var(--muted); text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -1163,11 +1327,43 @@
     RECENT_SEARCH: 'puro_recent_search',
   };
   const MODULES = [
-    { id: 'education', name: 'Patient Education', icon: '📘', accent: '#2980b9' },
-    { id: 'notes',     name: 'PPu Notes',         icon: '📗', accent: '#27ae60' },
-    { id: 'tips',      name: 'Tips & Guide',      icon: '📙', accent: '#e67e22' },
-    { id: 'textbook',  name: 'Textbook',          icon: '📕', accent: '#8e44ad' },
+    { id: 'education', name: 'Patient Education', icon: 'note',   accent: '#2980b9', unit: 'articles' },
+    { id: 'notes',     name: 'PPu Notes',         icon: 'book',   accent: '#27ae60', unit: 'sections' },
+    { id: 'tips',      name: 'Tips & Guide',      icon: 'bulb',   accent: '#e67e22', unit: 'subsections' },
+    { id: 'textbook',  name: 'Textbook',          icon: 'slides', accent: '#8e44ad', unit: 'chapters' },
   ];
+
+  /* ======================================================
+     ICON sprite — Clinical SF-Symbols-style line icons.
+     All return SVG strings for innerHTML insertion.
+     Stroke 1.7-1.8px, optically centered in 24px viewBox.
+  ====================================================== */
+  const ICON = {
+    search: (s = 18, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="${c}" stroke-width="1.8"/><path d="M15.2 15.4L20 20" stroke="${c}" stroke-width="2.2" stroke-linecap="round"/></svg>`,
+    star: (s = 18, c = 'currentColor', filled = false) =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="${filled ? c : 'none'}" aria-hidden="true"><path d="M12 3.2l2.65 5.55 6.05.82c.5.07.7.69.33 1.04l-4.4 4.12 1.08 6.04c.09.5-.44.88-.89.64L12 18.52l-5.42 2.9c-.45.23-.98-.14-.89-.64l1.08-6.04-4.4-4.12c-.37-.35-.17-.97.33-1.04l6.05-.82L11.4 3.2c.22-.47.88-.47 1.1 0z" stroke="${c}" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>`,
+    gear: (s = 18, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 8.5v-3M12 18.5v-3M5.5 12h-3M21.5 12h-3M7.4 7.4L5.3 5.3M18.7 18.7l-2.1-2.1M7.4 16.6l-2.1 2.1M18.7 5.3l-2.1 2.1" stroke="${c}" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="3.4" stroke="${c}" stroke-width="1.7"/></svg>`,
+    chev: (s = 14, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 3l4 4-4 4" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    back: (s = 20, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12.5 4l-6 6 6 6" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    book: (s = 20, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="3.5" width="15" height="17" rx="2" stroke="${c}" stroke-width="1.7"/><path d="M4.5 17.5h15" stroke="${c}" stroke-width="1.4"/><path d="M9 7h6" stroke="${c}" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+    note: (s = 20, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3.5h7.5L19 8v12a1.5 1.5 0 01-1.5 1.5h-10A1.5 1.5 0 016 20V5A1.5 1.5 0 017 3.5z" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/><path d="M14.5 3.5V7A1.5 1.5 0 0016 8.5H19" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 12.5h7M9 15.5h7M9 18.5h4.5" stroke="${c}" stroke-width="1.6" stroke-linecap="round"/></svg>`,
+    bulb: (s = 20, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.5 14.5c-1.2-1-2-2.5-2-4.3A5.5 5.5 0 0112 4.7a5.5 5.5 0 015.5 5.5c0 1.8-.8 3.3-2 4.3-.6.5-1 1.3-1 2.1v.4a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.4c0-.8-.4-1.6-1-2.1z" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 20.5h4" stroke="${c}" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+    slides: (s = 20, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="6.5" width="17" height="11" rx="2" stroke="${c}" stroke-width="1.7"/><path d="M6 4.5h12M7 20h10" stroke="${c}" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+    heart: (s = 16, c = 'currentColor', filled = false) =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="${filled ? c : 'none'}" aria-hidden="true"><path d="M12 20.3s-7-4.1-9-8.7c-1-2.3-.1-5 2-6.1 2-1 4.1-.3 5.4 1 .4.4.7.8 1 1.3.3-.5.6-.9 1-1.3 1.3-1.3 3.4-2 5.4-1 2.1 1.1 3 3.8 2 6.1-2 4.6-9 8.7-9 8.7z" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/></svg>`,
+    share: (s = 18, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5v11" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 7L12 3.5 15.5 7" stroke="${c}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 11H6.5A1.5 1.5 0 005 12.5v6A1.5 1.5 0 006.5 20h11a1.5 1.5 0 001.5-1.5v-6A1.5 1.5 0 0017.5 11H17" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/></svg>`,
+    warn: (s = 18, c = 'currentColor') =>
+      `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4l9.5 16.5h-19L12 4z" stroke="${c}" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 10v5M12 17.5v0.5" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+  };
   // Default built-in mailto channel. Per-device Settings override takes priority.
   const SUBMISSION_URL_DEFAULT =
     'mailto:fantasy7386@gmail.com?subject=Pocket%20URO%20建議&body=姓名：%0A單位：%0A類別（Patient%20Ed%20/%20PPu%20Notes%20/%20Tips%20/%20Textbook）：%0A標題：%0A建議內容：%0A參考資料：';
@@ -2402,65 +2598,102 @@
       education: state.data ? state.data.articles.length : 0,
       notes: state.notes ? state.notes.sections.length : 0,
       tips: state.tips ? state.tips.sections.reduce((a, s) => a + (s.subsections ? s.subsections.length : 0), 0) : 0,
-      textbook: state.data ? 12 : 0, // known chapter count
-    };
-    const countLabel = {
-      education: counts.education + ' articles',
-      notes: counts.notes + ' sections',
-      tips: counts.tips + ' subsections',
-      textbook: counts.textbook + ' chapters',
+      textbook: state.data ? 12 : 0,
     };
     const admin = isAdmin();
+    const signedIn = isAdminCode();
     const dirty = dirtyDatasets();
+    const lastSync = (state.tips && state.tips.updated) || (state.data && state.data.updated) || '';
+
     viewEl().innerHTML = `
-      <div class="brand">
-        <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">v4.0.4-alpha · quota guard · save feedback fix · picker race fix · dedup · SW LRU · custom confirm · 死 code 清理</div>
+      <div class="ch-masthead">
+        <div>
+          <div class="ch-eyebrow">Urology · Residents</div>
+          <div class="ch-title">Pocket URO</div>
+        </div>
+        <div class="ch-icon-actions">
+          <a class="ch-icon-btn" href="#/favorites" aria-label="Favorites">${ICON.star(18, 'var(--ink2)', state.favorites.length > 0)}</a>
+          <a class="ch-icon-btn" href="#/sync" aria-label="Settings &amp; sync">${ICON.gear(18, 'var(--ink2)')}</a>
+        </div>
       </div>
-      <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
-      <div class="home-grid">
+
+      <div class="ch-search-box">
+        ${ICON.search(18, 'var(--muted)')}
+        <input class="ch-search-input" id="home-search" placeholder="Search across all modules" autocomplete="off">
+        <span class="ch-search-kbd" title="Press Enter to search">⏎</span>
+      </div>
+
+      <div class="ch-section-eyebrow">Modules</div>
+      <div class="ch-list-card">
         ${MODULES.map(m => `
-          <a class="module-card" style="--accent:${m.accent}" href="#/${m.id}">
-            <div class="icon">${m.icon}</div>
-            <div>
-              <div class="name">${esc(m.name)}</div>
-              <div class="count">${esc(countLabel[m.id] || '')}</div>
+          <a class="ch-row" href="#/${m.id}">
+            <div class="ch-row-badge" style="background:var(--mod-${m.id})">${ICON[m.icon](17, '#fff')}</div>
+            <div class="ch-row-body">
+              <div class="ch-row-title">${esc(m.name)}</div>
+              <div class="ch-row-sub">${counts[m.id].toLocaleString()} ${esc(m.unit)}</div>
             </div>
+            ${ICON.chev(14, 'var(--muted)')}
           </a>
         `).join('')}
       </div>
-      <div class="home-actions">
-        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-          <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
-          <a href="#/hjh" style="color:var(--c-hjh-fg);font-weight:600">💡 HJH only</a>
-          <a href="#/quiz">📝 Quiz</a>
-        </div>
-        <div style="display:flex;gap:6px;align-items:center">
-          ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
-        </div>
-      </div>
-      <div style="margin-top:10px;padding:12px 14px;background:${admin ? '#fff5d6' : '#eef4fa'};border:1px solid ${admin ? '#f0d986' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
-        <div style="font-size:13px">
-          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
-          <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
-            ${isAdminCode()
-              ? `Signed in as <code>${esc(currentCode())}</code> · ${admin ? 'Edit / +New / Delete enabled.' : 'Preview as viewer — tap to restore admin.'}`
-              : 'No sign-in needed to browse. Sign in via Settings to edit.'}
+
+      <div class="ch-section-eyebrow">Quick</div>
+      <div class="ch-list-card">
+        <a class="ch-row" href="#/hjh">
+          <div class="ch-row-badge ch-row-badge-hjh">${ICON.bulb(17, '#fff')}</div>
+          <div class="ch-row-body">
+            <div class="ch-row-title">HJH only</div>
+            <div class="ch-row-sub">Cross-chapter knowledge points</div>
           </div>
-        </div>
-        ${isAdminCode()
-          ? `<button class="btn ${admin ? 'btn-secondary' : 'btn-success'}" style="min-height:unset;padding:8px 14px;font-size:13px" onclick="window.__toggleAdmin()">${admin ? 'Preview as viewer' : 'Back to admin'}</button>`
-          : `<a class="btn btn-primary" style="min-height:unset;padding:8px 14px;font-size:13px" href="#/sync">🔓 Admin sign-in</a>`}
+          ${ICON.chev(14, 'var(--muted)')}
+        </a>
+        <a class="ch-row" href="#/quiz">
+          <div class="ch-row-badge ch-row-badge-quiz">${ICON.note(17, '#fff')}</div>
+          <div class="ch-row-body">
+            <div class="ch-row-title">Quiz</div>
+            <div class="ch-row-sub">Random exam slides</div>
+          </div>
+          ${ICON.chev(14, 'var(--muted)')}
+        </a>
+        ${dirty.length ? `
+          <a class="ch-row ch-row-warning" href="#/sync">
+            <div class="ch-row-badge" style="background:var(--warning)">${ICON.warn(17, '#fff')}</div>
+            <div class="ch-row-body">
+              <div class="ch-row-title">${dirty.length} unsynced ${dirty.length === 1 ? 'change' : 'changes'}</div>
+              <div class="ch-row-sub">Tap to sync to GitHub</div>
+            </div>
+            ${ICON.chev(14, 'var(--muted)')}
+          </a>
+        ` : ''}
       </div>
-      ${submissionUrl() ? `<div style="text-align:center;margin-top:16px;font-size:12px;color:var(--c-text-muted)"><a href="${escAttr(submissionUrl())}" target="_blank" rel="noopener">📝 Suggest content</a></div>` : ''}
+
+      <div class="ch-role-row">
+        <div class="ch-role-text">
+          <strong>${admin ? 'Editor mode' : 'Viewer mode'}</strong>
+          <span class="ch-role-sub">${signedIn
+            ? `Signed in as <code>${esc(currentCode())}</code>${admin ? '' : ' · preview as viewer'}`
+            : 'Read-only · sign in via Settings to edit'}</span>
+        </div>
+        ${signedIn
+          ? `<button class="ch-role-btn" data-variant="ghost" onclick="window.__toggleAdmin()">${admin ? 'Preview viewer' : 'Restore admin'}</button>`
+          : `<a class="ch-role-btn" href="#/sync">Sign in</a>`}
+      </div>
+
+      <div class="ch-footer">
+        <span>v4.1.0-clinical${lastSync ? ' · synced ' + esc(lastSync) : ''}</span>
+        ${submissionUrl() ? `<a href="${escAttr(submissionUrl())}" target="_blank" rel="noopener">Suggest content</a>` : ''}
+      </div>
     `;
+
     const input = el('home-search');
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const q = input.value.trim();
-        if (q) navigate('#/search?q=' + encodeURIComponent(q));
-      }
-    });
+    if (input) {
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          const q = input.value.trim();
+          if (q) navigate('#/search?q=' + encodeURIComponent(q));
+        }
+      });
+    }
   }
 
   function renderNotFound() {
