@@ -1024,7 +1024,6 @@
       <a href="#/search" role="menuitem"><span class="icon">🔍</span>Search</a>
       <a href="#/favorites" role="menuitem"><span class="icon">⭐</span>Favorites <span id="more-fav-count" style="margin-left:auto;color:var(--c-text-muted);font-size:12px"></span></a>
       <a href="#/hjh" role="menuitem"><span class="icon">💡</span>HJH only</a>
-      <a href="#/quiz" role="menuitem"><span class="icon">📝</span>Quiz</a>
       <a href="#/sync" role="menuitem"><span class="icon">⚙</span>Settings <span id="more-sync-badge" class="badge-inline" style="display:none"></span></a>
       <button id="more-theme" role="menuitem"><span class="icon" id="more-theme-icon">🌙</span><span id="more-theme-label">Theme: auto</span></button>
     </nav>
@@ -2149,7 +2148,6 @@
       if (module === 'search') return renderSearch(query.q || '', query.only || '');
       if (module === 'sync') return renderSyncPanel();
       if (module === 'hjh') return renderHJHBrowse();
-      if (module === 'quiz') return renderQuiz();
       if (module === 'education') return routeEducation(parts.slice(1), query);
       if (module === 'notes') return routeNotes(parts.slice(1));
       if (module === 'tips') return routeTips(parts.slice(1), query);
@@ -2373,7 +2371,6 @@
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
           <a href="#/favorites">⭐ Favorites (${state.favorites.length})</a>
           <a href="#/hjh" style="color:var(--c-hjh-fg);font-weight:600">💡 HJH only</a>
-          <a href="#/quiz">📝 Quiz</a>
         </div>
         <div style="display:flex;gap:6px;align-items:center">
           ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
@@ -4308,94 +4305,6 @@
     `;
   }
 
-  /* ======================================================
-     Quiz mode (exam-question slides)
-  ====================================================== */
-  const QUIZ_STATE = { queue: [], idx: 0, seen: 0 };
-  function renderQuiz() {
-    setHeader('📝 Quiz · exam slides', { label: 'Home', href: '#/' });
-    // Collect all slides with has_exam_question from loaded chapters
-    const all = [];
-    for (const tbId of Object.keys(state.tb)) {
-      const ch = state.tb[tbId];
-      for (const sec of (ch.sections || [])) {
-        for (const t of (sec.topics || [])) {
-          if (t.type === 'text_only') continue;
-          const visible = (t.slides || []).filter(s => !s.hidden);
-          for (let si = 0; si < visible.length; si++) {
-            const s = visible[si];
-            if (s.has_exam_question) {
-              all.push({ tbId, ch, topic: t, slide: s, slideIdx: si });
-            }
-          }
-        }
-      }
-    }
-    if (!all.length) {
-      viewEl().innerHTML = `
-        <div class="placeholder">
-          <div class="big">📝</div>
-          <strong>No exam slides in loaded chapters</strong>
-          <small>Load all chapters to get a bigger pool</small>
-          <div style="margin-top:12px"><button class="btn btn-secondary" onclick="window.__loadAllChapters()">Load all chapters</button></div>
-        </div>`;
-      return;
-    }
-    // Shuffle once per session
-    if (QUIZ_STATE.queue.length !== all.length) {
-      QUIZ_STATE.queue = all.slice().sort(() => Math.random() - 0.5);
-      QUIZ_STATE.idx = 0;
-      QUIZ_STATE.seen = 0;
-    }
-    const cur = QUIZ_STATE.queue[QUIZ_STATE.idx];
-    if (!cur) {
-      viewEl().innerHTML = `
-        <div class="placeholder">
-          <div class="big">🎉</div>
-          <strong>Quiz complete</strong>
-          <small>${QUIZ_STATE.seen} slides reviewed</small>
-          <div style="margin-top:12px"><button class="btn btn-primary" onclick="window.__quizReset()">Restart</button></div>
-        </div>`;
-      return;
-    }
-    const s = cur.slide;
-    const isHJH = isHJHSlide(s);
-    viewEl().innerHTML = `
-      <div style="margin-bottom:8px;font-size:13px;color:var(--c-text-muted);display:flex;justify-content:space-between">
-        <span>${QUIZ_STATE.idx + 1} / ${QUIZ_STATE.queue.length}</span>
-        <span>${esc(cur.ch.title)} · ${esc(cur.topic.title)}</span>
-      </div>
-      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
-        <div class="slide-frame" style="position:relative">
-          ${isHJH ? '<div style="position:absolute;top:8px;left:8px;z-index:2"><span class="topic-badge hjh" style="font-size:12px;padding:3px 10px">HJH</span></div>' : ''}
-          <img src="${escAttr(s.slide_image || '')}" alt="" onclick="window.__openLightbox(this.src, 'Quiz · #${esc(String(s.slide_num))}')">
-        </div>
-        ${(s.text && s.text.length) ? `
-          <details style="margin-top:10px">
-            <summary class="ocr-label" style="cursor:pointer">Show captions</summary>
-            <div class="slide-ocr" style="margin-top:6px"><ul><li>${(s.text || []).map(t => esc(t)).join('</li><li>')}</li></ul></div>
-          </details>
-        ` : ''}
-      </div>
-      <div class="action-bar action-bar-sticky">
-        <button class="btn btn-secondary" onclick="window.__quizSkip(-1)" ${QUIZ_STATE.idx === 0 ? 'disabled' : ''}>← Prev</button>
-        <button class="btn btn-primary" onclick="window.__quizGoTo('${esc(cur.tbId)}','${esc(cur.topic.id)}',${cur.slideIdx})">View in context</button>
-        <button class="btn btn-success" onclick="window.__quizSkip(1)">Next →</button>
-      </div>
-    `;
-  }
-  window.__quizSkip = function(dir) {
-    QUIZ_STATE.idx = Math.max(0, Math.min(QUIZ_STATE.queue.length, QUIZ_STATE.idx + dir));
-    QUIZ_STATE.seen = Math.max(QUIZ_STATE.seen, QUIZ_STATE.idx);
-    router();
-  };
-  window.__quizReset = function() {
-    QUIZ_STATE.queue = []; QUIZ_STATE.idx = 0; QUIZ_STATE.seen = 0;
-    router();
-  };
-  window.__quizGoTo = function(tbId, topicId, slideIdx) {
-    navigate('#/textbook/t/' + tbId + '/' + topicId + '?slide=' + slideIdx);
-  };
 
   /* ======================================================
      Sync panel
