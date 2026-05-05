@@ -1919,6 +1919,57 @@
       padding-bottom: 0;
       border-bottom: none;
     }
+
+    /* ============================================================
+       Edit-mode banner (Phase 8 reduced) — persistent top strip when admin
+    ============================================================ */
+    .edit-banner {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex; align-items: center; gap: var(--sp-3);
+      padding: 8px var(--sp-7);
+      background: #FFF8E1;
+      border-bottom: 1px solid #F0D986;
+      color: #8b5a00;
+      font-size: 12px; font-weight: 600;
+      padding-top: calc(8px + env(safe-area-inset-top));
+      padding-left: calc(var(--sp-7) + env(safe-area-inset-left));
+      padding-right: calc(var(--sp-7) + env(safe-area-inset-right));
+    }
+    .edit-banner.hidden { display: none; }
+    .edit-banner[data-mode="preview"] {
+      background: var(--primary-soft);
+      border-bottom-color: #D6DEEF;
+      color: var(--primary);
+    }
+    .edit-banner-icon {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      animation: edit-banner-pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes edit-banner-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .edit-banner-text {
+      flex: 1; min-width: 0;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .edit-banner-btn {
+      flex-shrink: 0;
+      padding: 4px 10px;
+      font-size: 11px; font-weight: 700;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid currentColor;
+      border-radius: 12px;
+      color: inherit;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+    /* Body padding to clear the fixed banner */
+    body:has(.edit-banner:not(.hidden)) #app { padding-top: 32px; }
   </style>
 </head>
 <body>
@@ -1945,6 +1996,11 @@
     <div class="update-banner hidden" id="update-banner">
       <span>New version available</span>
       <button id="btn-update-reload">Reload</button>
+    </div>
+    <div class="edit-banner hidden" id="edit-banner">
+      <span class="edit-banner-icon">●</span>
+      <span class="edit-banner-text" id="edit-banner-text">Editor mode</span>
+      <button class="edit-banner-btn" id="edit-banner-exit">Preview viewer</button>
     </div>
     <div id="view"></div>
   </div>
@@ -3106,21 +3162,51 @@
     const module = parts[0];
 
     try {
-      if (!module) return renderHome();
-      if (module === 'favorites') return renderFavorites();
-      if (module === 'search') return renderSearch(query.q || '', query.only || '');
-      if (module === 'sync') return renderSyncPanel();
-      if (module === 'hjh') return renderHJHBrowse();
-      if (module === 'quiz') return renderQuiz();
-      if (module === 'education') return routeEducation(parts.slice(1), query);
-      if (module === 'notes') return routeNotes(parts.slice(1));
-      if (module === 'tips') return routeTips(parts.slice(1), query);
-      if (module === 'textbook') return routeTextbook(parts.slice(1), query);
+      if (!module) { renderHome(); return updateEditModeBanner(); }
+      if (module === 'favorites') { renderFavorites(); return updateEditModeBanner(); }
+      if (module === 'search') { renderSearch(query.q || '', query.only || ''); return updateEditModeBanner(); }
+      if (module === 'sync') { renderSyncPanel(); return updateEditModeBanner(); }
+      if (module === 'hjh') { renderHJHBrowse(); return updateEditModeBanner(); }
+      if (module === 'quiz') { renderQuiz(); return updateEditModeBanner(); }
+      if (module === 'education') { routeEducation(parts.slice(1), query); return updateEditModeBanner(); }
+      if (module === 'notes') { routeNotes(parts.slice(1)); return updateEditModeBanner(); }
+      if (module === 'tips') { routeTips(parts.slice(1), query); return updateEditModeBanner(); }
+      if (module === 'textbook') { routeTextbook(parts.slice(1), query); return updateEditModeBanner(); }
       renderNotFound();
+      updateEditModeBanner();
     } catch (e) {
       viewEl().innerHTML = '<div class="placeholder"><div class="big">⚠️</div><strong>Error</strong><small>' + esc(e.message) + '</small></div>';
       console.error(e);
+      updateEditModeBanner();
     }
+  }
+
+  function updateEditModeBanner() {
+    const banner = el('edit-banner');
+    if (!banner) return;
+    const adminCode = isAdminCode();
+    const adminEffective = isAdmin();
+    if (adminCode && adminEffective) {
+      banner.classList.remove('hidden');
+      banner.dataset.mode = 'edit';
+      el('edit-banner-text').textContent = 'Editor mode · tap content Edit buttons to modify';
+      el('edit-banner-exit').textContent = 'Preview viewer';
+    } else if (adminCode && !adminEffective) {
+      banner.classList.remove('hidden');
+      banner.dataset.mode = 'preview';
+      el('edit-banner-text').textContent = 'Previewing as viewer · admin content hidden';
+      el('edit-banner-exit').textContent = 'Restore admin';
+    } else {
+      banner.classList.add('hidden');
+    }
+  }
+
+  // Bind Exit button once
+  const editBannerExitBtn = el('edit-banner-exit');
+  if (editBannerExitBtn) {
+    editBannerExitBtn.addEventListener('click', () => {
+      if (typeof window.__toggleAdmin === 'function') window.__toggleAdmin();
+    });
   }
 
   window.addEventListener('hashchange', router);
