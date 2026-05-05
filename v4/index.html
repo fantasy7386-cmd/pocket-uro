@@ -1448,6 +1448,243 @@
       border-top: 1px solid var(--line);
     }
     .ct-admin-actions .btn { flex: 1; }
+
+    /* ============================================================
+       Clinical Textbook viewer (Phase 5) — header + slide frame + transcript
+    ============================================================ */
+    .tb-header {
+      padding: var(--sp-12) var(--sp-7) var(--sp-5);
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .tb-back-link {
+      display: inline-flex; align-items: center; gap: var(--sp-3);
+      color: var(--primary);
+      font-size: 13px; font-weight: 500;
+      margin-bottom: var(--sp-3);
+      text-decoration: none;
+    }
+    .tb-mod-eyebrow {
+      font-size: 10px;
+      letter-spacing: 1.2px;
+      color: var(--mod-textbook);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-1);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .tb-title-row { display: flex; align-items: flex-start; gap: var(--sp-3); }
+    .tb-topic-title {
+      flex: 1;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .tb-badges { display: flex; gap: var(--sp-2); margin-top: var(--sp-3); flex-wrap: wrap; }
+    .tb-badge {
+      font-size: 10px; font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .tb-badge-exam { background: #FEF3C7; color: #854D0E; }
+    .tb-badge-hjh  { background: #FEF3C7; color: var(--warning); border: 1px solid var(--warning); }
+    .tb-badge-text { background: var(--primary-soft); color: var(--primary); }
+
+    .tb-body { padding: var(--sp-7); }
+
+    .tb-notes {
+      margin-bottom: var(--sp-5);
+      padding: var(--sp-5) var(--sp-6);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-input);
+    }
+    .tb-notes-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-3);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .tb-hjh-summary { margin-bottom: var(--sp-3); }
+    .tb-hjh-summary > summary {
+      list-style: none; cursor: pointer;
+      padding: var(--sp-4) var(--sp-5);
+      background: #FFF8E1;
+      border: 1px solid #F0D986;
+      border-radius: var(--r-button);
+      font-size: 13px;
+      color: #8b5a00;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .tb-hjh-summary > summary::-webkit-details-marker { display: none; }
+    .tb-hjh-toggle { font-size: 11px; opacity: 0.7; }
+    .tb-hjh-chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); padding: var(--sp-3) 0; }
+    .tb-hjh-chip {
+      padding: 4px 10px;
+      background: #FFE680;
+      color: #8b5a00;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 12px;
+      font-feature-settings: "tnum";
+    }
+
+    .tb-slide-area {
+      background: transparent;
+      border-radius: var(--r-input);
+      transition: box-shadow .2s;
+    }
+    .tb-slide-area[data-hjh="1"] { box-shadow: 0 0 0 3px var(--warning); border-radius: 9px; padding: 0; }
+
+    .tb-slide-frame {
+      background: #fff;
+      border-radius: 8px;
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 2px rgba(11,31,58,0.04);
+    }
+    .tb-slide-frame[data-hidden="1"] { opacity: 0.82; }
+    .tb-slide-frame img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      display: block;
+      cursor: zoom-in;
+    }
+    .tb-slide-tags {
+      position: absolute; top: 8px; left: 8px; z-index: 2;
+      display: flex; gap: 4px; flex-wrap: wrap;
+    }
+    .tb-tag {
+      font-size: 10px; font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .tb-tag-hjh  { background: var(--warning); color: #fff; }
+    .tb-tag-exam { background: #FEF3C7; color: #854D0E; }
+    .tb-tag-supp { background: rgba(11,31,58,.75); color: #fff; }
+    .tb-slide-counter {
+      position: absolute; bottom: 8px; right: 10px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-feature-settings: "tnum";
+    }
+    .tb-supp-note {
+      font-size: 11px;
+      color: var(--muted);
+      padding: var(--sp-2) var(--sp-4);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      margin-top: var(--sp-2);
+      line-height: 1.5;
+    }
+
+    .tb-controls {
+      display: flex; gap: var(--sp-3); margin-top: var(--sp-3);
+    }
+    .tb-ctrl {
+      padding: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      font-size: 13px;
+      color: var(--ink);
+      font-family: var(--font-system);
+    }
+    .tb-ctrl-prev, .tb-ctrl-next { flex: 1; font-weight: 600; cursor: pointer; }
+    .tb-ctrl-next { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .tb-ctrl-prev:disabled, .tb-ctrl-next:disabled { opacity: 0.4; cursor: not-allowed; }
+    .tb-ctrl-idx {
+      padding: 10px var(--sp-6);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      font-size: 13px;
+      color: var(--muted);
+      font-feature-settings: "tnum";
+      display: flex; flex-direction: column; align-items: center;
+      line-height: 1.2;
+    }
+    .tb-slide-num { font-size: 10px; color: var(--muted); margin-top: 1px; }
+    .tb-slide-num[data-hjh="1"] { color: var(--warning); font-weight: 700; }
+
+    .tb-admin-slide-actions {
+      display: flex; gap: var(--sp-2);
+      margin-top: var(--sp-3);
+      flex-wrap: wrap;
+    }
+    .tb-admin-slide-actions .btn {
+      flex: 1 1 auto;
+      min-height: unset;
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .tb-transcript {
+      margin-top: var(--sp-6);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-input);
+    }
+    .tb-transcript[data-hjh="1"] { background: #FFF8E1; border-color: #F0D986; }
+    .tb-transcript-eyebrow {
+      padding: var(--sp-4) var(--sp-6);
+      border-bottom: 1px solid var(--line2);
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      cursor: default;
+    }
+    details.tb-transcript .tb-transcript-eyebrow { cursor: pointer; list-style: none; }
+    details.tb-transcript > summary::-webkit-details-marker { display: none; }
+    .tb-transcript-body { padding: var(--sp-4) var(--sp-6); }
+    .tb-transcript-line {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--ink2);
+      padding-left: 14px;
+      position: relative;
+    }
+    .tb-transcript-line::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+    .tb-raw-ocr-body {
+      white-space: pre-wrap;
+      padding: var(--sp-3) var(--sp-6);
+      font-size: 13px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .tb-admin-actions {
+      display: flex; gap: var(--sp-3);
+      margin-top: var(--sp-7);
+      padding-top: var(--sp-5);
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .tb-admin-actions .btn { flex: 1 1 auto; }
   </style>
 </head>
 <body>
@@ -3931,45 +4168,48 @@
     }
 
     const badges = [];
-    if (topic.has_exam_questions) badges.push('<span class="topic-badge exam">📝 Exam</span>');
-    if (topic.has_hjh_content)    badges.push('<span class="topic-badge hjh">HJH</span>');
-    if (topic.type === 'text_only') badges.push('<span class="topic-badge text-only">📄 Text</span>');
+    if (topic.has_exam_questions) badges.push('<span class="tb-badge tb-badge-exam">EXAM</span>');
+    if (topic.has_hjh_content)    badges.push('<span class="tb-badge tb-badge-hjh">HJH</span>');
+    if (topic.type === 'text_only') badges.push('<span class="tb-badge tb-badge-text">TEXT</span>');
 
     // HJH slide summary for quick navigation
     const hjhLabels = hjhSlideLabels(visibleSlides);
     const hjhSummary = hjhLabels.length ? `
-      <details class="hjh-summary" style="margin-bottom:10px">
-        <summary style="padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:13px;color:#8b5a00;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
-          <span><strong>${hjhLabels.length} HJH slide${hjhLabels.length > 1 ? 's' : ''}</strong> in this topic</span>
-          <span style="font-size:11px;opacity:.7">tap to show ▸</span>
+      <details class="tb-hjh-summary">
+        <summary>
+          <span><strong>${hjhLabels.length}</strong> HJH slide${hjhLabels.length > 1 ? 's' : ''} in this topic</span>
+          <span class="tb-hjh-toggle">tap ▸</span>
         </summary>
-        <div style="padding:8px 4px;display:flex;flex-wrap:wrap;gap:6px">
-          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="padding:4px 10px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none;font-size:12px">${esc(String(s.slide_num))}</a>` : '').join('')}
+        <div class="tb-hjh-chips">
+          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a class="tb-hjh-chip" href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}">${esc(String(s.slide_num))}</a>` : '').join('')}
         </div>
       </details>
     ` : '';
 
     const notesHTML = (topic.notes || (topic.images && topic.images.length && topic.type !== 'text_only')) ? `
-      <div class="topic-notes">
-        <div class="notes-label">📝 Notes</div>
+      <div class="tb-notes">
+        <div class="tb-notes-eyebrow">NOTES</div>
         ${topic.notes ? `<div class="markdown-body">${renderMd(topic.notes)}</div>` : ''}
         ${topic.type !== 'text_only' ? renderAttachments(topic.images) : ''}
       </div>
     ` : '';
 
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <div class="topic-header">
-          <div class="title">${esc(topic.title)}</div>
-          <div class="badges">${badges.join('')}</div>
-          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="textbook" data-fav-id="${esc(topicId)}" data-fav-title="${escAttr(topic.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+      <div class="tb-header">
+        <a class="tb-back-link" href="#/textbook/c/${esc(tbId)}/s/${secIdx}">${ICON.back(16, 'var(--primary)')}<span>${esc(sec.title)}</span></a>
+        <div class="tb-mod-eyebrow">TEXTBOOK · ${esc(ch.number || '')} · ${esc(sec.title)}</div>
+        <div class="tb-title-row">
+          <h2 class="tb-topic-title">${esc(topic.title)}</h2>
+          <button class="ch-icon-btn fav-btn ${fav ? 'active' : ''}" data-fav-module="textbook" data-fav-id="${esc(topicId)}" data-fav-title="${escAttr(topic.title)}" aria-label="${fav ? 'Remove from favorites' : 'Add to favorites'}">${ICON.star(18, fav ? 'var(--mod-textbook)' : 'var(--ink2)', fav)}</button>
         </div>
+        ${badges.length ? `<div class="tb-badges">${badges.join('')}</div>` : ''}
+      </div>
+      <div class="tb-body">
         ${notesHTML}
         ${hjhSummary}
         <div id="tb-content">${content}</div>
         ${admin ? `
-          <div class="action-bar">
+          <div class="tb-admin-actions">
             ${topic.type === 'text_only'
               ? `<button class="btn btn-primary" onclick="location.hash='#/textbook/edit-text/${esc(tbId)}/${esc(topicId)}'">Edit content</button>`
               : `<button class="btn btn-secondary" onclick="window.__ocrEditPrompt('${esc(tbId)}','${esc(topicId)}')">Edit OCR</button>`
@@ -4010,48 +4250,50 @@
   function renderSlideViewerHTML(tbId, topicId, slides, idx, highlight) {
     const s = slides[idx];
     highlight = highlight || '';
-    const textLines = (s.text || []).map(t => highlight ? highlightText(t, highlight) : esc(t)).join('</li><li>');
     const ocrFull = s.ocr_text ? (highlight ? highlightText(s.ocr_text, highlight) : esc(s.ocr_text)) : '';
     const isHJH = isHJHSlide(s);
     const isExam = !!s.has_exam_question;
     const isHidden = !!s.hidden;
     const admin = isAdmin();
     return `
-      <div class="slide-viewer" ${isHJH ? 'style="box-shadow:0 0 0 3px var(--c-hjh-accent)"' : ''}>
-        <div class="slide-frame" style="position:relative${isHidden ? ';opacity:.82' : ''}">
-          <div style="position:absolute;top:8px;left:8px;z-index:2;display:flex;gap:4px;flex-wrap:wrap">
-            ${isHJH  ? '<span class="topic-badge hjh"  style="font-size:12px;padding:3px 10px">HJH</span>' : ''}
-            ${isExam ? '<span class="topic-badge exam" style="font-size:12px;padding:3px 10px">📝 Exam</span>' : ''}
-            ${isHidden ? '<span class="topic-badge" style="font-size:11px;padding:3px 10px;background:rgba(44,62,80,.75);color:#fff">📎 補充 (PPT-hidden)</span>' : ''}
+      <div class="tb-slide-area" ${isHJH ? 'data-hjh="1"' : ''}>
+        <div class="tb-slide-frame" ${isHidden ? 'data-hidden="1"' : ''}>
+          <div class="tb-slide-tags">
+            ${isHJH  ? '<span class="tb-tag tb-tag-hjh">HJH</span>' : ''}
+            ${isExam ? '<span class="tb-tag tb-tag-exam">EXAM</span>' : ''}
+            ${isHidden ? '<span class="tb-tag tb-tag-supp">補充</span>' : ''}
           </div>
           <img src="${escAttr(s.slide_image || '')}" alt="slide ${esc(String(s.slide_num))}" loading="eager" onclick="window.__openLightbox(this.src, 'Slide ${esc(String(s.slide_num))} · ${idx + 1}/${slides.length}')">
+          <div class="tb-slide-counter">${idx + 1} / ${slides.length}</div>
         </div>
-        ${isHidden ? '<div style="font-size:11px;color:var(--c-text-muted);padding:6px 10px;background:var(--c-surface-alt);border-radius:var(--radius-sm);margin-top:6px;line-height:1.5">📎 這張是原 PPT 隱藏投影片（授課時略過）。內容仍是有效知識，重要性可能較低、屬補充資料。</div>' : ''}
-        <div class="slide-controls">
-          <button onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
-          <div class="slide-counter">
+        ${isHidden ? '<div class="tb-supp-note">📎 這張是原 PPT 隱藏投影片（授課時略過）。內容仍是有效知識，重要性可能較低、屬補充資料。</div>' : ''}
+        <div class="tb-controls">
+          <button class="tb-ctrl tb-ctrl-prev" onclick="window.__slidePrev()" ${idx === 0 ? 'disabled' : ''}>← Prev</button>
+          <div class="tb-ctrl-idx">
             <span id="tb-slide-index">${idx + 1}</span> / ${slides.length}
-            · <span style="color:${isHJH ? 'var(--c-hjh-fg)' : 'var(--c-text-muted)'};font-weight:${isHJH ? '700' : 'normal'}">#${esc(String(s.slide_num))}</span>
+            <span class="tb-slide-num" ${isHJH ? 'data-hjh="1"' : ''}>#${esc(String(s.slide_num))}</span>
           </div>
-          <button onclick="window.__slideNext()" ${idx === slides.length - 1 ? 'disabled' : ''}>Next →</button>
+          <button class="tb-ctrl tb-ctrl-next" onclick="window.__slideNext()" ${idx === slides.length - 1 ? 'disabled' : ''}>Next →</button>
         </div>
         ${admin ? `
-          <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
-            <button class="btn btn-primary" style="flex:1 1 180px;min-height:unset;padding:8px 12px;font-size:13px" onclick="location.hash='#/textbook/move/${esc(tbId)}/${esc(topicId)}/${idx}'">📂 Move to another topic…</button>
-            <button class="btn btn-secondary" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark as exam'}</button>
-            <button class="btn btn-ghost" style="min-height:unset;padding:8px 12px;font-size:13px" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '∅ Unmark supplementary' : '📎 Mark supplementary'}</button>
+          <div class="tb-admin-slide-actions">
+            <button class="btn btn-primary" onclick="location.hash='#/textbook/move/${esc(tbId)}/${esc(topicId)}/${idx}'">📂 Move…</button>
+            <button class="btn btn-secondary" onclick="window.__toggleSlideExam('${esc(tbId)}','${esc(topicId)}',${idx})">${isExam ? 'Unmark exam' : 'Mark exam'}</button>
+            <button class="btn btn-ghost" onclick="window.__toggleSlideHidden('${esc(tbId)}','${esc(topicId)}',${idx})">${isHidden ? '∅ Show' : '📎 Supp'}</button>
           </div>
         ` : ''}
         ${(s.text && s.text.length) ? `
-          <div class="slide-ocr" ${isHJH ? 'style="background:var(--c-hjh-card-bg);border-color:var(--c-hjh-border)"' : ''}>
-            <div class="ocr-label">${isHJH ? 'HJH · ' : ''}${isExam ? 'Exam · ' : ''}Captions</div>
-            <ul><li>${textLines}</li></ul>
+          <div class="tb-transcript" ${isHJH ? 'data-hjh="1"' : ''}>
+            <div class="tb-transcript-eyebrow">${isHJH ? 'HJH · ' : ''}${isExam ? 'EXAM · ' : ''}TRANSCRIPT</div>
+            <div class="tb-transcript-body">
+              ${(s.text || []).map(t => `<div class="tb-transcript-line">${highlight ? highlightText(t, highlight) : esc(t)}</div>`).join('')}
+            </div>
           </div>
         ` : ''}
         ${ocrFull ? `
-          <details class="slide-ocr" style="margin-top:8px" ${highlight ? 'open' : ''}>
-            <summary class="ocr-label" style="cursor:pointer">Raw OCR (full)${highlight ? ' — matches below' : ''}</summary>
-            <div style="white-space:pre-wrap;margin-top:6px;font-size:13px;color:var(--c-text-muted)">${ocrFull}</div>
+          <details class="tb-transcript tb-raw-ocr" ${highlight ? 'open' : ''}>
+            <summary class="tb-transcript-eyebrow">RAW OCR${highlight ? ' · MATCHES' : ''}</summary>
+            <div class="tb-raw-ocr-body">${ocrFull}</div>
           </details>
         ` : ''}
       </div>
@@ -4072,7 +4314,7 @@
     function rerender() {
       el('tb-content').innerHTML = renderSlideViewerHTML(tbId, topicId, slides, idx, highlight);
       // Swipe gesture
-      const frame = el('tb-content').querySelector('.slide-frame');
+      const frame = el('tb-content').querySelector('.tb-slide-frame');
       if (frame) attachSwipe(frame);
     }
 
@@ -4106,7 +4348,7 @@
     };
     window.addEventListener('hashchange', cleanupKeys);
     // Initial render
-    const frame = el('tb-content').querySelector('.slide-frame');
+    const frame = el('tb-content').querySelector('.tb-slide-frame');
     if (frame) attachSwipe(frame);
   }
 
