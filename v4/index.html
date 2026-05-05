@@ -1685,6 +1685,156 @@
       flex-wrap: wrap;
     }
     .tb-admin-actions .btn { flex: 1 1 auto; }
+
+    /* ============================================================
+       Clinical list views (Phase 6) — Tips/Notes/Edu/Favorites lists + details
+    ============================================================ */
+    .cl-header {
+      padding: var(--sp-12) var(--sp-7) var(--sp-5);
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .cl-mod-eyebrow {
+      font-size: 10px;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-1);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted);
+    }
+    .cl-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+      color: var(--ink);
+      margin: 0;
+    }
+    .cl-meta {
+      margin-top: var(--sp-2);
+      font-size: var(--fs-secondary);
+      color: var(--muted);
+    }
+    .cl-dirty-pill {
+      margin-top: var(--sp-3);
+      display: inline-block;
+      padding: 4px 10px;
+      background: #FFF8E1;
+      color: var(--warning);
+      border: 1px solid #F0D986;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .cl-detail-title-row { display: flex; align-items: flex-start; gap: var(--sp-3); }
+    .cl-detail-title {
+      flex: 1;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+      color: var(--ink);
+      margin: 0;
+    }
+    .cl-body { padding: var(--sp-7); }
+
+    .cl-num-badge {
+      width: 30px; height: 30px;
+      flex-shrink: 0;
+      border-radius: var(--r-row-badge);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-feature-settings: "tnum";
+      letter-spacing: -0.2px;
+    }
+    .cl-num-badge-roman { font-size: 11px; }
+
+    .cl-fav-mini {
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      border-radius: var(--r-button);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; padding: 0;
+      background: transparent;
+      border: none;
+      color: var(--ink2);
+    }
+    .cl-fav-mini:active { background: var(--line2); }
+
+    .cl-admin-tools {
+      display: flex; flex-direction: column; gap: 2px;
+      flex-shrink: 0;
+    }
+    .cl-admin-tools button {
+      font-size: 11px; padding: 2px 6px;
+      opacity: 0.5;
+      background: transparent;
+      cursor: pointer;
+      color: var(--ink2);
+      font-family: var(--font-system);
+    }
+    .cl-admin-tools .cl-admin-del { color: var(--danger); }
+
+    .cl-insert-btn {
+      display: block; width: calc(100% - var(--sp-5));
+      margin: 4px var(--sp-3);
+      padding: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      background: transparent;
+      border: 1px dashed var(--line);
+      border-radius: var(--r-button);
+      cursor: pointer;
+    }
+    .cl-insert-btn:hover { color: var(--primary); border-color: var(--primary); }
+
+    .cl-add-action { margin-top: var(--sp-5); }
+
+    /* Note detail content */
+    .cl-detail-content { line-height: 1.6; color: var(--ink); }
+    .cl-note-sub { margin-bottom: var(--sp-7); }
+    .cl-note-sub-title {
+      font-size: 15px; font-weight: 700;
+      color: var(--mod-notes);
+      margin: 0 0 var(--sp-2);
+    }
+    .cl-note-items {
+      margin: 0; padding-left: var(--sp-8);
+      list-style: disc;
+    }
+    .cl-note-items > li {
+      margin: var(--sp-1) 0;
+      color: var(--ink2);
+    }
+
+    /* Article detail */
+    .cl-keywords {
+      margin-top: var(--sp-7);
+      padding-top: var(--sp-5);
+      border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: var(--sp-2);
+    }
+    .cl-kw-tag {
+      padding: 4px 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 12px;
+      font-size: 12px; font-weight: 500;
+      text-decoration: none;
+    }
+    .cl-source {
+      margin-top: var(--sp-5);
+      padding-top: var(--sp-5);
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    .cl-source a { color: var(--primary); }
   </style>
 </head>
 <body>
@@ -3197,21 +3347,25 @@
     const admin = isAdmin();
     const cats = state.data.categories;
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <div class="list-section">
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-education)">PATIENT EDUCATION</div>
+        <h2 class="cl-title">All categories</h2>
+      </div>
+      <div class="cl-body">
+        <div class="ch-list-card">
           ${cats.map(c => `
-            <a class="list-card" href="#/education/c/${esc(c.id)}">
-              <div style="flex:1">
-                <div class="title">${esc(c.name_en)}</div>
-                <div class="meta">${esc(c.name_zh)} · ${c.articles.length} articles</div>
+            <a class="ch-row" href="#/education/c/${esc(c.id)}">
+              <div class="ch-row-body">
+                <div class="ch-row-title">${esc(c.name_en)}</div>
+                <div class="ch-row-sub">${esc(c.name_zh)} · ${c.articles.length} articles</div>
               </div>
-              <span class="chevron">›</span>
+              ${ICON.chev(14, 'var(--muted)')}
             </a>
           `).join('')}
         </div>
         ${admin ? `
-          <div class="action-bar">
+          <div class="cl-add-action">
             <button class="btn btn-success btn-block" onclick="location.hash='#/education/new'">+ New article</button>
           </div>
         ` : ''}
@@ -3225,15 +3379,18 @@
     setHeader(cat.name_en, { label: 'Patient Education', href: '#/education' });
     const articles = cat.articles.map(id => state.data.articles.find(a => a.id === id)).filter(Boolean);
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <h2 style="font-size:20px;margin-bottom:4px">${esc(cat.name_en)}</h2>
-        <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${esc(cat.name_zh)} · ${articles.length} articles</div>
-        <div class="list-section">
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/education">${ICON.back(16, 'var(--primary)')}<span>Patient Education</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-education)">CATEGORY · ${esc(cat.name_zh)}</div>
+        <h2 class="cl-title">${esc(cat.name_en)}</h2>
+        <div class="cl-meta">${articles.length} articles</div>
+      </div>
+      <div class="cl-body">
+        <div class="ch-list-card">
           ${articles.map(a => articleListCard(a, accent)).join('')}
         </div>
         ${isAdmin() ? `
-          <div class="action-bar">
+          <div class="cl-add-action">
             <button class="btn btn-success btn-block" onclick="location.hash='#/education/new/${esc(catId)}'">+ New article in this category</button>
           </div>
         ` : ''}
@@ -3245,14 +3402,14 @@
   function articleListCard(a, accent) {
     const fav = isFav('education', a.id);
     return `
-      <div class="list-card" onclick="event.target.closest('.fav-btn')||(location.hash='#/education/a/${esc(a.id)}')">
-        <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" aria-label="fav">${fav ? '⭐' : '☆'}</button>
-        <div style="flex:1;min-width:0">
-          <div class="title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(a.title)}</div>
-          <div class="meta">${esc(a.category)} · ${a.pages || '—'}p</div>
+      <a class="ch-row" href="#/education/a/${esc(a.id)}">
+        <div class="ch-row-body">
+          <div class="ch-row-title">${esc(a.title)}</div>
+          <div class="ch-row-sub">${esc(a.category)}${a.pages ? ' · ' + a.pages + 'p' : ''}</div>
         </div>
-        <span class="chevron">›</span>
-      </div>`;
+        <button class="cl-fav-mini fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" aria-label="${fav ? 'Remove favorite' : 'Add favorite'}">${ICON.star(16, fav ? 'var(--mod-education)' : 'var(--ink2)', fav)}</button>
+        ${ICON.chev(14, 'var(--muted)')}
+      </a>`;
   }
 
   function bindFavButtons() {
@@ -3279,26 +3436,25 @@
     const textCharCount = (a.text || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length;
     const imgCount = (a.images || []).length + ((a.text || '').match(/!\[[^\]]*\]\(data:[^)]+\)/g) || []).length;
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">
-          <h2 style="flex:1;font-size:22px;line-height:1.3">${titleHTML}</h2>
-          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/education/c/${esc(a.category)}">${ICON.back(16, 'var(--primary)')}<span>${esc(cat ? cat.name_en : 'Articles')}</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-education)">${esc(cat ? cat.name_zh : a.category)}</div>
+        <div class="cl-detail-title-row">
+          <h2 class="cl-detail-title">${titleHTML}</h2>
+          <button class="ch-icon-btn fav-btn ${fav ? 'active' : ''}" data-fav-module="education" data-fav-id="${esc(a.id)}" data-fav-title="${escAttr(a.title)}" aria-label="${fav ? 'Remove favorite' : 'Add favorite'}">${ICON.star(18, fav ? 'var(--mod-education)' : 'var(--ink2)', fav)}</button>
         </div>
-        <div class="article-meta-row">
-          <span>${esc(cat ? cat.name_zh : a.category)}</span>
-          ${a.pages ? `<span>${a.pages} pages</span>` : ''}
-          <span>${textCharCount.toLocaleString()} chars${imgCount ? ' · ' + imgCount + ' image' + (imgCount === 1 ? '' : 's') : ''}</span>
-        </div>
+        <div class="cl-meta">${a.pages ? a.pages + ' pages · ' : ''}${textCharCount.toLocaleString()} chars${imgCount ? ' · ' + imgCount + ' image' + (imgCount === 1 ? '' : 's') : ''}</div>
+      </div>
+      <div class="cl-body">
         <div class="article-body">${bodyHTML}${attachmentsHTML}</div>
         ${a.keywords && a.keywords.length ? `
-          <div class="article-keywords">
-            ${a.keywords.map(k => `<a class="kw-tag" href="#/search?q=${encodeURIComponent(k)}" style="cursor:pointer">${esc(k)}</a>`).join('')}
+          <div class="cl-keywords">
+            ${a.keywords.map(k => `<a class="cl-kw-tag" href="#/search?q=${encodeURIComponent(k)}">${esc(k)}</a>`).join('')}
           </div>
         ` : ''}
-        ${a.pdf_url ? `<div class="article-source">Source: <a href="${escAttr(a.pdf_url)}" target="_blank" rel="noopener">${esc(a.pdf_url)}</a></div>` : ''}
+        ${a.pdf_url ? `<div class="cl-source">Source: <a href="${escAttr(a.pdf_url)}" target="_blank" rel="noopener">${esc(a.pdf_url)}</a></div>` : ''}
         ${isAdmin() ? `
-          <div class="action-bar">
+          <div class="ct-admin-actions">
             <button class="btn btn-primary" onclick="location.hash='#/education/a/${esc(a.id)}/edit'">Edit</button>
             <button class="btn btn-danger" onclick="window.__deleteArticle('${esc(a.id)}')">Delete</button>
           </div>
@@ -3429,34 +3585,36 @@
     const lastIdx = sections.length - 1;
     const dirty = state.sources.notes === 'local';
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
-        <div class="list-section">
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-notes)">PPU NOTES</div>
+        <h2 class="cl-title">All sections</h2>
+        ${dirty ? '<div class="cl-dirty-pill">⚠ Local changes — unsynced</div>' : ''}
+      </div>
+      <div class="cl-body">
+        <div class="ch-list-card">
           ${sections.map((s, i) => `
-            <div style="position:relative">
-              <a class="list-card" href="#/notes/s/${esc(s.id)}">
-                <div style="width:36px;font-weight:700;color:${accent};font-size:15px">${esc(s.number)}</div>
-                <div style="flex:1;min-width:0">
-                  <div class="title" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(s.title)}</div>
-                  <div class="meta">${s.subsections.length} subsections</div>
+            <a class="ch-row" href="#/notes/s/${esc(s.id)}">
+              <div class="cl-num-badge cl-num-badge-roman">${esc(s.number)}</div>
+              <div class="ch-row-body">
+                <div class="ch-row-title">${esc(s.title)}</div>
+                <div class="ch-row-sub">${s.subsections.length} subsections</div>
+              </div>
+              <button class="cl-fav-mini fav-btn ${isFav('notes', s.id) ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(s.id)}" data-fav-title="${escAttr(s.full_title)}" aria-label="Favorite">${ICON.star(16, isFav('notes', s.id) ? 'var(--mod-notes)' : 'var(--ink2)', isFav('notes', s.id))}</button>
+              ${admin ? `
+                <div class="cl-admin-tools" onclick="event.preventDefault();event.stopPropagation()">
+                  ${i > 0 ? `<button onclick="window.__moveNote(${i},-1)" aria-label="Move up">▲</button>` : ''}
+                  ${i < lastIdx ? `<button onclick="window.__moveNote(${i},1)" aria-label="Move down">▼</button>` : ''}
+                  <button class="cl-admin-del" onclick="window.__deleteNote(${i})" aria-label="Delete">✕</button>
                 </div>
-                <button class="fav-btn ${isFav('notes', s.id) ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(s.id)}" data-fav-title="${escAttr(s.full_title)}">${isFav('notes', s.id) ? '⭐' : '☆'}</button>
-                ${admin ? `
-                  <div style="display:flex;flex-direction:column;gap:2px;margin-left:6px">
-                    ${i > 0 ? `<button onclick="event.preventDefault();event.stopPropagation();window.__moveNote(${i},-1)" style="font-size:12px;opacity:.5;padding:2px">▲</button>` : ''}
-                    ${i < lastIdx ? `<button onclick="event.preventDefault();event.stopPropagation();window.__moveNote(${i},1)" style="font-size:12px;opacity:.5;padding:2px">▼</button>` : ''}
-                    <button onclick="event.preventDefault();event.stopPropagation();window.__deleteNote(${i})" style="font-size:12px;opacity:.5;padding:2px;color:var(--c-danger)">✕</button>
-                  </div>
-                ` : ''}
-                <span class="chevron">›</span>
-              </a>
-              ${admin ? `<button class="insert-btn" onclick="location.hash='#/notes/new/${i}'">＋ insert section below</button>` : ''}
-            </div>
+              ` : ''}
+              ${ICON.chev(14, 'var(--muted)')}
+            </a>
+            ${admin ? `<button class="cl-insert-btn" onclick="location.hash='#/notes/new/${i}'">＋ Insert section below</button>` : ''}
           `).join('')}
         </div>
         ${admin ? `
-          <div class="action-bar">
+          <div class="cl-add-action">
             <button class="btn btn-success btn-block" onclick="location.hash='#/notes/new'">+ New section at end</button>
           </div>
         ` : ''}
@@ -3508,32 +3666,35 @@
     const fav = isFav('notes', sid);
     let body = '';
     for (const sub of s.subsections) {
-      body += '<div style="margin-bottom:16px">';
-      if (sub.title) body += '<h4 style="font-size:15px;font-weight:700;color:var(--c-ppu-notes);margin-bottom:6px">' + esc(sub.title) + '</h4>';
+      body += '<div class="cl-note-sub">';
+      if (sub.title) body += '<h4 class="cl-note-sub-title">' + esc(sub.title) + '</h4>';
       if (sub.items && sub.items.length) {
-        body += '<ul style="margin-left:20px">';
-        for (const it of sub.items) body += '<li style="margin:4px 0">' + esc(it) + '</li>';
+        body += '<ul class="cl-note-items">';
+        for (const it of sub.items) body += '<li>' + esc(it) + '</li>';
         body += '</ul>';
       }
       body += '</div>';
     }
-    const idx = state.notes.sections.indexOf(s);
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:12px">
-          <h2 style="flex:1;font-size:21px;line-height:1.3">${esc(s.full_title)}</h2>
-          <button class="fav-btn ${fav ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(sid)}" data-fav-title="${escAttr(s.full_title)}" style="font-size:22px">${fav ? '⭐' : '☆'}</button>
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/notes">${ICON.back(16, 'var(--primary)')}<span>PPu Notes</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-notes)">PPU NOTES · ${esc(s.number || '')}</div>
+        <div class="cl-detail-title-row">
+          <h2 class="cl-detail-title">${esc(s.title)}</h2>
+          <button class="ch-icon-btn fav-btn ${fav ? 'active' : ''}" data-fav-module="notes" data-fav-id="${esc(sid)}" data-fav-title="${escAttr(s.full_title)}" aria-label="${fav ? 'Remove favorite' : 'Add favorite'}">${ICON.star(18, fav ? 'var(--mod-notes)' : 'var(--ink2)', fav)}</button>
         </div>
-        <div class="article-body" style="white-space:normal">${body}</div>
+      </div>
+      <div class="cl-body">
+        <div class="cl-detail-content">${body}</div>
         ${s.notes ? `
-          <div class="markdown-body" style="margin-top:18px;padding:14px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius)">
-            ${renderMd(s.notes)}
+          <div class="tb-notes" style="margin-top:var(--sp-7)">
+            <div class="tb-notes-eyebrow">NOTES</div>
+            <div class="markdown-body">${renderMd(s.notes)}</div>
           </div>
         ` : ''}
         ${renderAttachments(s.images)}
         ${isAdmin() ? `
-          <div class="action-bar">
+          <div class="ct-admin-actions">
             <button class="btn btn-primary" onclick="location.hash='#/notes/edit/${esc(sid)}'">Edit section</button>
           </div>
         ` : ''}
@@ -3738,18 +3899,22 @@
     setHeader('Tips & Guide', { label: 'Home', href: '#/' });
     const dirty = state.sources.tips === 'local';
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
-        <div class="list-section">
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-tips)">TIPS &amp; GUIDE</div>
+        <h2 class="cl-title">All chapters</h2>
+        ${dirty ? '<div class="cl-dirty-pill">⚠ Local changes — unsynced</div>' : ''}
+      </div>
+      <div class="cl-body">
+        <div class="ch-list-card">
           ${state.tips.sections.map(s => `
-            <a class="list-card" href="#/tips/s/${esc(s.id)}">
-              <div style="width:36px;font-weight:700;color:${accent};font-size:15px">${esc(s.number)}</div>
-              <div style="flex:1;min-width:0">
-                <div class="title">${titleWithTags(s.title)}</div>
-                <div class="meta">${(s.subsections || []).length} subsections</div>
+            <a class="ch-row" href="#/tips/s/${esc(s.id)}">
+              <div class="cl-num-badge">${esc(s.number)}</div>
+              <div class="ch-row-body">
+                <div class="ch-row-title">${titleWithTags(s.title)}</div>
+                <div class="ch-row-sub">${(s.subsections || []).length} subsections</div>
               </div>
-              <span class="chevron">›</span>
+              ${ICON.chev(14, 'var(--muted)')}
             </a>
           `).join('')}
         </div>
@@ -3764,24 +3929,27 @@
     const admin = isAdmin();
     const subs = chapter.subsections || [];
     viewEl().innerHTML = `
-      <div class="module-view" style="--module-accent:${accent}">
-        <div class="module-header-strip" style="--accent:${accent}"></div>
-        <h2 style="font-size:20px;margin-bottom:12px">${titleWithTags(chapter.full_title)}</h2>
-        <div class="list-section">
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/tips">${ICON.back(16, 'var(--primary)')}<span>Tips &amp; Guide</span></a>
+        <div class="cl-mod-eyebrow" style="color:var(--mod-tips)">CHAPTER ${esc(chapter.number || '')}</div>
+        <h2 class="cl-title">${titleWithTags(chapter.title)}</h2>
+      </div>
+      <div class="cl-body">
+        <div class="ch-list-card">
           ${subs.map((sub, i) => `
-            <a class="list-card" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
-              <div style="flex:1;min-width:0">
-                <div class="title">${titleWithTags(sub.title)}</div>
-                <div class="meta">${(sub.markdown || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length} chars${sub.images && sub.images.length ? ' · ' + sub.images.length + ' img' : ''}</div>
+            <a class="ch-row" href="#/tips/sub/${esc(chapterId)}/${esc(sub.id)}">
+              <div class="ch-row-body">
+                <div class="ch-row-title">${titleWithTags(sub.title)}</div>
+                <div class="ch-row-sub">${(sub.markdown || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length} chars${sub.images && sub.images.length ? ' · ' + sub.images.length + ' img' : ''}</div>
               </div>
-              <button class="fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(titlePlain(sub.title))}">${isFav('tips', sub.id) ? '⭐' : '☆'}</button>
-              <span class="chevron">›</span>
+              <button class="cl-fav-mini fav-btn ${isFav('tips', sub.id) ? 'active' : ''}" data-fav-module="tips" data-fav-id="${esc(sub.id)}" data-fav-title="${escAttr(titlePlain(sub.title))}" aria-label="${isFav('tips', sub.id) ? 'Remove favorite' : 'Add favorite'}">${ICON.star(16, isFav('tips', sub.id) ? 'var(--mod-tips)' : 'var(--ink2)', isFav('tips', sub.id))}</button>
+              ${ICON.chev(14, 'var(--muted)')}
             </a>
-            ${admin ? `<button class="insert-btn" onclick="location.hash='#/tips/new/${esc(chapterId)}?after=${i}'">＋ insert subsection after</button>` : ''}
+            ${admin ? `<button class="cl-insert-btn" onclick="location.hash='#/tips/new/${esc(chapterId)}?after=${i}'">＋ Insert subsection after</button>` : ''}
           `).join('')}
         </div>
         ${admin ? `
-          <div class="action-bar">
+          <div class="cl-add-action">
             <button class="btn btn-success btn-block" onclick="location.hash='#/tips/new/${esc(chapterId)}'">+ New subsection at end</button>
           </div>
         ` : ''}
@@ -4750,38 +4918,56 @@
      Favorites view
   ====================================================== */
   function renderFavorites() {
-    setHeader('⭐ Favorites', { label: 'Home', href: '#/' });
+    setHeader('Favorites', { label: 'Home', href: '#/' });
     if (!state.favorites.length) {
       viewEl().innerHTML = `
-        <div class="placeholder">
-          <div class="big">⭐</div>
-          <strong>No favorites yet</strong>
-          <small>Tap ☆ on any content item to add it here</small>
+        <div class="cl-header">
+          <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+          <div class="cl-mod-eyebrow">FAVORITES</div>
+          <h2 class="cl-title">No favorites yet</h2>
+        </div>
+        <div class="cs-empty">
+          <div class="cs-empty-icon">${ICON.star(28, 'var(--muted)')}</div>
+          <strong>Tap a star on any content to save it here</strong>
+          <small>Favorites are persisted on this device.</small>
         </div>`;
       return;
     }
-    const grouped = {};
-    state.favorites.forEach(f => {
-      grouped[f.module] = grouped[f.module] || [];
-      grouped[f.module].push(f);
-    });
-    let html = '';
-    for (const mod of MODULES) {
-      const items = grouped[mod.id] || [];
-      if (!items.length) continue;
-      html += `<div class="result-group-header" style="color:${mod.accent}">${mod.icon} ${esc(mod.name)} (${items.length})</div>`;
-      html += items.map(f => `
-        <a class="list-card" href="${favHref(f)}" style="border-left:4px solid ${mod.accent}">
-          <div style="flex:1;min-width:0">
-            <div class="title">${esc(f.title || f.id)}</div>
-            <div class="meta">${new Date(f.ts).toLocaleDateString()}</div>
-          </div>
-          <button class="fav-btn active" data-fav-module="${esc(f.module)}" data-fav-id="${esc(f.id)}" data-fav-title="${escAttr(f.title || '')}">⭐</button>
-        </a>
-      `).join('');
-    }
-    viewEl().innerHTML = html;
+    const sorted = state.favorites.slice().sort((a, b) => (b.ts || 0) - (a.ts || 0));
+    const rows = sorted.map(f => `
+      <a class="cs-result" href="${favHref(f)}">
+        <div class="cs-result-meta">
+          <span class="cs-mod-pill cs-mod-pill-${esc(f.module)}">${MODULE_LABEL[f.module] || f.module.toUpperCase()}</span>
+          <span class="cs-where">${relTimeShort(f.ts)}</span>
+        </div>
+        <div class="cs-result-title">${esc(f.title || f.id)}</div>
+      </a>
+    `).join('');
+    viewEl().innerHTML = `
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+        <div class="cl-mod-eyebrow">FAVORITES</div>
+        <h2 class="cl-title">Saved items</h2>
+        <div class="cl-meta">${state.favorites.length} ${state.favorites.length === 1 ? 'item' : 'items'}</div>
+      </div>
+      <div class="cl-body">
+        ${rows}
+      </div>
+    `;
     bindFavButtons();
+  }
+
+  function relTimeShort(ts) {
+    if (!ts) return '—';
+    const diff = Date.now() - ts;
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return 'just now';
+    if (mins < 60) return mins + 'm ago';
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h ago';
+    const days = Math.floor(hrs / 24);
+    if (days < 7) return days + 'd ago';
+    return new Date(ts).toLocaleDateString();
   }
 
   function favHref(f) {
