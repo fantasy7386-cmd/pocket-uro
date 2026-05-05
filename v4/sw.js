@@ -3,7 +3,7 @@
 // Pocket URO v4 Service Worker — scope: /pocket-uro/v4/
 // Shares parent (/pocket-uro/) data + images via cross-path fetch interception.
 
-const CACHE_VERSION = 'pocket-uro-v4.1.0-clinical-phase3';
+const CACHE_VERSION = 'pocket-uro-v4.1.0-clinical-phase4';
 // v3.7.1: evict oldest entries when cache.put fails with QuotaExceededError.
 // iOS Safari quota is ~50MB per origin. Without this, once full, new writes
 // silently fail and fresh content never reaches the cache.
