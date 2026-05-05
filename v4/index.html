@@ -1835,6 +1835,90 @@
       word-break: break-all;
     }
     .cl-source a { color: var(--primary); }
+
+    /* ============================================================
+       Clinical Settings (Phase 7) — info banners, segmented controls,
+       sync-panel restyle to match Clinical card pattern
+    ============================================================ */
+    .cl-body-settings { padding-bottom: var(--sp-12); }
+
+    .cl-info-banner {
+      padding: var(--sp-4) var(--sp-5);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      font-size: 13px;
+      color: var(--ink2);
+      margin-bottom: var(--sp-5);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--sp-3); flex-wrap: wrap;
+    }
+    .cl-info-banner-blue { background: var(--primary-soft); color: var(--ink2); border-color: #D6DEEF; }
+    .cl-info-banner-amber { background: #FFF8E1; color: #8b5a00; border-color: #F0D986; }
+    .cl-info-banner-btn {
+      padding: 6px 12px;
+      font-size: 13px; font-weight: 600;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .cl-segmented-row {
+      display: flex; align-items: center; gap: var(--sp-4);
+      margin-bottom: var(--sp-3);
+      flex-wrap: wrap;
+    }
+    .cl-segmented-label {
+      font-size: var(--fs-secondary);
+      color: var(--muted);
+      min-width: 70px;
+      font-weight: 500;
+    }
+    .cl-segmented {
+      display: inline-flex;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      padding: 2px;
+      gap: 2px;
+    }
+    .cl-segment {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink2);
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--font-system);
+      transition: background .15s, color .15s;
+    }
+    .cl-segment-active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 1px 2px rgba(11,31,58,.08);
+      font-weight: 600;
+    }
+
+    /* Restyle existing .sync-panel to match Clinical cards */
+    .sync-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-card);
+      padding: var(--sp-6);
+      margin-bottom: var(--sp-5);
+      box-shadow: none;
+    }
+    .sync-panel h3 {
+      font-size: var(--fs-title-row);
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      color: var(--ink);
+      margin: 0 0 var(--sp-4);
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   </style>
 </head>
 <body>
@@ -5458,31 +5542,40 @@
     const dirty = dirtyDatasets();
     const hasToken = !!localStorage.getItem(LS.TOKEN);
     viewEl().innerHTML = `
-      <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
+      <div class="cl-header">
+        <a class="ct-back-link" href="#/">${ICON.back(16, 'var(--primary)')}<span>Home</span></a>
+        <div class="cl-mod-eyebrow">SETTINGS${admin ? ' · SYNC' : ''}</div>
+        <h2 class="cl-title">${admin ? 'Settings &amp; sync' : 'Settings'}</h2>
+      </div>
+      <div class="cl-body cl-body-settings">
       ${isRealView ? `
-        <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
+        <div class="cl-info-banner cl-info-banner-blue">
           Viewer mode — browse everything, no sign-in needed. Admin sign-in (below) unlocks editing + GitHub sync.
         </div>
       ` : ''}
       ${isPreviewing ? `
-        <div style="padding:10px 14px;background:#fff5d6;border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div class="cl-info-banner cl-info-banner-amber">
           <span>👁 Preview as viewer — admin-only settings are hidden. Signed in as <code>${esc(currentCode())}</code>.</span>
-          <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
+          <button class="cl-info-banner-btn" onclick="window.__toggleAdmin()">Back to admin</button>
         </div>
       ` : ''}
       <div class="sync-panel">
         <h3>Appearance</h3>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
-          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Theme:</span>
-          ${['light','dark','auto'].map(m => `
-            <button class="btn ${currentTheme()===m?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:6px 14px;font-size:13px" onclick="window.__setThemeClick('${m}')">${m==='light'?'☀️ Light':m==='dark'?'🌙 Dark':'🤖 Auto'}</button>
-          `).join('')}
+        <div class="cl-segmented-row">
+          <span class="cl-segmented-label">Theme</span>
+          <div class="cl-segmented">
+            ${['light','dark','auto'].map(m => `
+              <button class="cl-segment ${currentTheme()===m?'cl-segment-active':''}" onclick="window.__setThemeClick('${m}')">${m==='light'?'☀ Light':m==='dark'?'☾ Dark':'⚙ Auto'}</button>
+            `).join('')}
+          </div>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-          <span style="font-size:12px;color:var(--c-text-muted);min-width:60px">Text size:</span>
-          ${[['small','A',13],['normal','A',15],['large','A',17],['xlarge','A',19]].map(([k,L,px]) => `
-            <button class="btn ${currentFontScale()===k?'btn-primary':'btn-secondary'}" style="min-height:unset;padding:4px 10px;font-size:${px}px" onclick="window.__setFontClick('${k}')">${L}</button>
-          `).join('')}
+        <div class="cl-segmented-row">
+          <span class="cl-segmented-label">Text size</span>
+          <div class="cl-segmented">
+            ${[['small','A',13],['normal','A',15],['large','A',17],['xlarge','A',19]].map(([k,L,px]) => `
+              <button class="cl-segment ${currentFontScale()===k?'cl-segment-active':''}" style="font-size:${px}px;padding:4px 10px" onclick="window.__setFontClick('${k}')">${L}</button>
+            `).join('')}
+          </div>
         </div>
       </div>
       <div class="sync-panel">
@@ -5594,6 +5687,7 @@
         </div>
       </div>
       ` : ''}
+      </div>
     `;
   }
 
