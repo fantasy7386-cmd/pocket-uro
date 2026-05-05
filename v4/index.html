@@ -1213,6 +1213,114 @@
       gap: var(--sp-4);
     }
     .ch-footer a { color: var(--muted); text-decoration: underline; }
+
+    /* ============================================================
+       Clinical search (Phase 3) — focus ring, filter chips, result cards
+    ============================================================ */
+    .cs-bar {
+      display: flex; align-items: center; gap: var(--sp-4);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-input);
+      padding: var(--sp-4) var(--sp-5);
+      margin: var(--sp-7) var(--sp-7) 0;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .cs-bar.cs-bar-focused, .cs-bar:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-soft);
+    }
+    .cs-input {
+      flex: 1;
+      border: none; outline: none; background: transparent;
+      font-size: var(--fs-body); color: var(--ink);
+      font-family: var(--font-system);
+      min-width: 0;
+    }
+    .cs-input::placeholder { color: var(--muted); }
+    .cs-result-count { color: var(--muted); font-size: var(--fs-secondary); white-space: nowrap; }
+
+    .cs-chips {
+      display: flex; gap: var(--sp-2);
+      margin: var(--sp-5) var(--sp-7) 0;
+      overflow-x: auto;
+      padding-bottom: var(--sp-1);
+      -webkit-overflow-scrolling: touch;
+    }
+    .cs-chips::-webkit-scrollbar { display: none; }
+    .cs-chip {
+      font-size: var(--fs-secondary);
+      padding: 5px 10px;
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--ink2);
+      border: 1px solid var(--line);
+      white-space: nowrap;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: var(--font-system);
+    }
+    .cs-chip-active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .cs-loadall {
+      margin: var(--sp-3) var(--sp-7) 0;
+      padding: var(--sp-4) var(--sp-5);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-button);
+      font-size: var(--fs-secondary);
+      color: var(--muted);
+      display: flex; align-items: center; gap: var(--sp-3); justify-content: space-between;
+    }
+    .cs-loadall button {
+      padding: 6px 10px;
+      font-size: var(--fs-secondary);
+      font-weight: 600;
+      border-radius: var(--r-button);
+      background: var(--primary-soft);
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .cs-result {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-input);
+      padding: var(--sp-6);
+      margin: var(--sp-3) var(--sp-7);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s;
+    }
+    .cs-result:active { border-color: var(--primary); }
+    .cs-result-meta { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-2); flex-wrap: wrap; }
+    .cs-mod-pill {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+      padding: 2px 6px; border-radius: 3px;
+      background: #fff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .cs-mod-pill-tips      { color: var(--mod-tips);      border: 1px solid var(--mod-tips); }
+    .cs-mod-pill-textbook  { color: var(--mod-textbook);  border: 1px solid var(--mod-textbook); }
+    .cs-mod-pill-notes     { color: var(--mod-notes);     border: 1px solid var(--mod-notes); }
+    .cs-mod-pill-education { color: var(--mod-education); border: 1px solid var(--mod-education); }
+    .cs-where { font-size: var(--fs-caption-mono); color: var(--muted); }
+    .cs-result-title { font-size: var(--fs-body); font-weight: 600; letter-spacing: -0.2px; margin-bottom: var(--sp-1); color: var(--ink); }
+    .cs-result-preview { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .cs-more { font-size: var(--fs-secondary); color: var(--muted); text-align: center; padding: var(--sp-2); }
+    .cs-tip { font-size: var(--fs-caption-mono); color: var(--muted); text-align: center; padding: var(--sp-5) var(--sp-7); }
+    .cs-empty { padding: var(--sp-12) var(--sp-8); text-align: center; color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: var(--sp-3); }
+    .cs-empty-icon { opacity: 0.6; }
+    .cs-empty strong { font-size: var(--fs-title-row); color: var(--ink); }
+    .cs-empty small { font-size: var(--fs-secondary); }
+
+    /* Override default mark.highlight to use Clinical yellow */
+    mark.highlight { background: #FFF3BF; color: var(--ink); padding: 0 2px; border-radius: 2px; }
   </style>
 </head>
 <body>
@@ -4335,26 +4443,23 @@
   function renderSearch(q, onlyModule) {
     setHeader('Search', { label: 'Home', href: '#/' });
     const only = onlyModule || '';
-    const filterChips = MODULES.map(m => `
-      <button class="search-filter-chip ${only === m.id ? 'active' : ''}" style="--chip-accent:${m.accent}" onclick="window.__setSearchFilter('${m.id}')">
-        ${m.icon} ${esc(m.name)}
-      </button>
-    `).join('') + `
-      <button class="search-filter-chip ${!only ? 'active' : ''}" style="--chip-accent:var(--c-header)" onclick="window.__setSearchFilter('')">All</button>
-    `;
 
     const unloadedChapters = TB_CHAPTER_IDS.filter(tbId => !state.tb[tbId]);
     const loadAllBar = unloadedChapters.length ? `
-      <div style="margin:8px 0;padding:10px 12px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:var(--radius-sm);font-size:12px;display:flex;align-items:center;gap:8px;justify-content:space-between">
-        <span style="color:var(--c-text-muted)">📦 Textbook: ${TB_CHAPTER_IDS.length - unloadedChapters.length}/${TB_CHAPTER_IDS.length} chapters indexed. Load rest to search all.</span>
-        <button class="btn btn-secondary" style="min-height:unset;padding:6px 10px;font-size:12px" onclick="window.__loadAllChapters()">Load all</button>
+      <div class="cs-loadall">
+        <span>📦 Textbook: ${TB_CHAPTER_IDS.length - unloadedChapters.length}/${TB_CHAPTER_IDS.length} chapters indexed</span>
+        <button onclick="window.__loadAllChapters()">Load all</button>
       </div>
     ` : '';
 
     viewEl().innerHTML = `
-      <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
-      <div class="search-filters">${filterChips}</div>
-      ${loadAllBar}
+      <div class="cs-bar ${q ? 'cs-bar-focused' : ''}">
+        ${ICON.search(18, q ? 'var(--primary)' : 'var(--muted)')}
+        <input class="cs-input" id="search-input" value="${escAttr(q)}" placeholder="Search across all modules" autocomplete="off" autofocus>
+        <span class="cs-result-count" id="cs-result-count"></span>
+      </div>
+      <div class="cs-chips" id="cs-chips"></div>
+      <div id="cs-loadall-host">${loadAllBar}</div>
       <div id="search-results"></div>
     `;
     const input = el('search-input');
@@ -4373,10 +4478,39 @@
         if (location.hash !== hash) {
           history.replaceState(null, '', (location.pathname + location.search + hash));
         }
+        const bar = input.closest('.cs-bar');
+        if (bar) bar.classList.toggle('cs-bar-focused', !!v);
         doSearch(v, only);
       }, 220);
     });
     doSearch(q, only);
+  }
+
+  // Module mono pill labels (for Clinical search results)
+  const MODULE_LABEL = { education: 'EDU', notes: 'NOTE', tips: 'TIPS', textbook: 'TEXT' };
+
+  function renderSearchChips(only, counts, total) {
+    const host = el('cs-chips');
+    if (!host) return;
+    const items = [
+      { id: '', label: 'All', count: total },
+      { id: 'tips', label: 'Tips', count: counts.tips },
+      { id: 'textbook', label: 'Textbook', count: counts.textbook },
+      { id: 'notes', label: 'Notes', count: counts.notes },
+      { id: 'education', label: 'Edu', count: counts.education },
+    ];
+    host.innerHTML = items.map(it => `
+      <button class="cs-chip ${only === it.id ? 'cs-chip-active' : ''}" onclick="window.__setSearchFilter('${it.id}')">${esc(it.label)} · ${it.count}</button>
+    `).join('');
+    const cntEl = el('cs-result-count');
+    if (cntEl) cntEl.textContent = total ? (total + (total === 1 ? ' result' : ' results')) : '';
+  }
+
+  function splitBreadcrumb(combinedTitle) {
+    // "1. 結石 › Acute flank pain" → { breadcrumb: '1. 結石', title: 'Acute flank pain' }
+    const idx = combinedTitle.lastIndexOf(' › ');
+    if (idx === -1) return { breadcrumb: '', title: combinedTitle };
+    return { breadcrumb: combinedTitle.slice(0, idx), title: combinedTitle.slice(idx + 3) };
   }
 
   window.__setSearchFilter = function(moduleId) {
@@ -4504,34 +4638,49 @@
       }
     }
 
+    // Counts per module (across all results, not filtered) — drives chip labels.
+    const counts = {
+      education: results.education.length,
+      notes: results.notes.length,
+      tips: results.tips.length,
+      textbook: results.textbook.length,
+    };
+    const totalAll = counts.education + counts.notes + counts.tips + counts.textbook;
+    renderSearchChips(only, counts, totalAll);
+
     // Apply module filter
     let visibleModules = MODULES;
     if (only) visibleModules = MODULES.filter(m => m.id === only);
     const visibleIds = visibleModules.map(m => m.id);
-
     const total = visibleIds.reduce((a, id) => a + results[id].length, 0);
+
     if (total === 0) {
-      host.innerHTML = '<div class="placeholder"><div class="big">🔍</div><strong>No results' + (only ? ' in ' + esc(only) : '') + '</strong><small>for "' + esc(q) + '"</small></div>';
+      host.innerHTML = '<div class="cs-empty"><div class="cs-empty-icon">' + ICON.search(28, 'var(--muted)') + '</div><strong>No results' + (only ? ' in ' + esc(only) : '') + '</strong><small>for "' + esc(q) + '"</small></div>';
       return;
     }
-    let html = '<div style="font-size:13px;color:var(--c-text-muted);margin:8px 0">' + total + ' result' + (total > 1 ? 's' : '') + ' for "' + esc(q) + '"' + (only ? ' in ' + esc(only) : '') + '</div>';
+
+    let html = '';
     for (const mod of visibleModules) {
       const list = results[mod.id];
       if (!list.length) continue;
-      html += `<div class="result-group-header" style="color:${mod.accent}">${mod.icon} ${esc(mod.name)} (${list.length})</div>`;
-      html += list.slice(0, 20).map(r => `
-        <a class="list-card" href="${r.href}" style="border-left:4px solid ${mod.accent}">
-          <div style="flex:1;min-width:0">
-            <div class="title">${highlightText(r.title, q)}</div>
-            ${r.preview ? `<div class="meta" style="margin-top:4px">${r.preview}</div>` : ''}
-          </div>
-        </a>
-      `).join('');
+      html += list.slice(0, 20).map(r => {
+        const split = splitBreadcrumb(r.title);
+        return `
+          <a class="cs-result" href="${r.href}">
+            <div class="cs-result-meta">
+              <span class="cs-mod-pill cs-mod-pill-${mod.id}">${MODULE_LABEL[mod.id]}</span>
+              ${split.breadcrumb ? `<span class="cs-where">${esc(split.breadcrumb)}</span>` : ''}
+            </div>
+            <div class="cs-result-title">${highlightText(split.title, q)}</div>
+            ${r.preview ? `<div class="cs-result-preview">${r.preview}</div>` : ''}
+          </a>
+        `;
+      }).join('');
       if (list.length > 20) {
-        html += `<div style="font-size:12px;color:var(--c-text-muted);text-align:center;padding:4px">…${list.length - 20} more in ${mod.name}</div>`;
+        html += `<div class="cs-more">…${list.length - 20} more in ${esc(mod.name)}</div>`;
       }
     }
-    html += '<div style="font-size:11px;color:var(--c-text-muted);text-align:center;padding:12px">Tip: textbook search only covers loaded chapters. Open a chapter first to index it.</div>';
+    html += '<div class="cs-tip">Tip: textbook search only covers loaded chapters. Open a chapter first to index it.</div>';
     host.innerHTML = html;
   }
 
