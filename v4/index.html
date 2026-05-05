@@ -1176,6 +1176,45 @@
     }
     .ch-row-warning .ch-row-title { color: var(--warning); }
 
+    /* Recent rows (Phase 9) — smaller dot, time stamp on right */
+    .ch-recent-row {
+      display: flex; align-items: center;
+      padding: var(--sp-5) var(--sp-6);
+      border-bottom: 1px solid var(--line2);
+      text-decoration: none;
+      color: inherit;
+      gap: var(--sp-5);
+    }
+    .ch-recent-row:last-child { border-bottom: none; }
+    .ch-recent-row:active { background: var(--line2); }
+    .ch-recent-dot {
+      width: 6px; height: 6px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .ch-recent-title {
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--ink);
+    }
+    .ch-recent-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ch-recent-time {
+      flex-shrink: 0;
+      font-size: 11px;
+      color: var(--muted);
+      font-feature-settings: "tnum";
+    }
+
     .ch-role-row {
       display: flex; align-items: center; justify-content: space-between;
       gap: var(--sp-4);
@@ -2612,6 +2651,45 @@
   }
 
   /* ======================================================
+     Recent items (Phase 9) — track last 20 opened content entries
+     across modules. Surfaced on home; pruned to MAX_RECENTS in FIFO.
+  ====================================================== */
+  const RECENTS_KEY = 'puro_recents';
+  const MAX_RECENTS = 20;
+
+  function loadRecents() {
+    try {
+      const raw = localStorage.getItem(RECENTS_KEY);
+      if (!raw) return [];
+      const arr = JSON.parse(raw);
+      return Array.isArray(arr) ? arr : [];
+    } catch { return []; }
+  }
+
+  function recordOpen(module, id, title, breadcrumb, href) {
+    if (!module || !id) return;
+    let arr = loadRecents();
+    arr = arr.filter(r => !(r.module === module && r.id === id));
+    arr.unshift({ module, id, title: title || id, breadcrumb: breadcrumb || '', href: href || '', ts: Date.now() });
+    if (arr.length > MAX_RECENTS) arr = arr.slice(0, MAX_RECENTS);
+    try { localStorage.setItem(RECENTS_KEY, JSON.stringify(arr)); }
+    catch (e) { /* quota — silently drop oldest */ }
+  }
+
+  function relativeTimeShort(ts) {
+    if (!ts) return '';
+    const diff = Date.now() - ts;
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return 'now';
+    if (mins < 60) return mins + 'm';
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h';
+    const days = Math.floor(hrs / 24);
+    if (days < 7) return days + 'd';
+    return new Date(ts).toLocaleDateString().slice(5);
+  }
+
+  /* ======================================================
      Data loading
   ====================================================== */
   async function loadJSON(path) {
@@ -3429,6 +3507,26 @@
         `).join('')}
       </div>
 
+      ${(() => {
+        const recents = loadRecents().slice(0, 3);
+        if (!recents.length) return '';
+        return `
+          <div class="ch-section-eyebrow">Recent</div>
+          <div class="ch-list-card">
+            ${recents.map(r => `
+              <a class="ch-recent-row" href="${escAttr(r.href || '#/')}">
+                <div class="ch-recent-dot" style="background:var(--mod-${esc(r.module)})"></div>
+                <div class="ch-row-body">
+                  <div class="ch-recent-title">${esc(r.title)}</div>
+                  <div class="ch-recent-sub">${esc(r.breadcrumb || '')}</div>
+                </div>
+                <div class="ch-recent-time">${relativeTimeShort(r.ts)}</div>
+              </a>
+            `).join('')}
+          </div>
+        `;
+      })()}
+
       <div class="ch-section-eyebrow">Quick</div>
       <div class="ch-list-card">
         <a class="ch-row" href="#/hjh">
@@ -3599,6 +3697,7 @@
     if (!a) return renderNotFound();
     const cat = state.data.categories.find(c => c.id === a.category);
     setHeader(a.title, { label: cat ? cat.name_en : 'Articles', href: '#/education/c/' + a.category });
+    recordOpen('education', a.id, a.title, cat ? cat.name_en : a.category, '#/education/a/' + a.id);
     const fav = isFav('education', a.id);
     const bodyHTML = '<div class="markdown-body">' + renderMd(a.text || '') + '</div>';
     const attachmentsHTML = renderAttachments(a.images);
@@ -3833,6 +3932,7 @@
     const s = state.notes.sections.find(x => x.id === sid);
     if (!s) return renderNotFound();
     setHeader(s.full_title, { label: 'PPu Notes', href: '#/notes' });
+    recordOpen('notes', s.id, s.title, 'PPu Notes · ' + (s.number || ''), '#/notes/s/' + s.id);
     const fav = isFav('notes', sid);
     let body = '';
     for (const sub of s.subsections) {
@@ -4145,6 +4245,7 @@
     const sub = chapter && chapter.subsections.find(x => x.id === subId);
     if (!chapter || !sub) return renderNotFound();
     setHeader(titlePlain(sub.title), { label: titlePlain(chapter.title), href: '#/tips/s/' + chapterId });
+    recordOpen('tips', sub.id, titlePlain(sub.title), 'Tips · ' + (chapter.number || '') + '. ' + titlePlain(chapter.title), '#/tips/sub/' + chapterId + '/' + sub.id);
     const admin = isAdmin();
     const fav = isFav('tips', subId);
     const bodyHtml = postProcessTipsHtml(renderMd(sub.markdown || ''));
@@ -4482,6 +4583,7 @@
     if (!found) return renderNotFound();
     const { ch, sec, secIdx, topic } = found;
     setHeader(topic.title, { label: sec.title, href: '#/textbook/c/' + tbId + '/s/' + secIdx });
+    recordOpen('textbook', topic.id, topic.title, 'Textbook · ' + (ch.number || '') + ' ' + ch.title, '#/textbook/t/' + tbId + '/' + topic.id);
     const fav = isFav('textbook', topicId);
     const admin = isAdmin();
 
