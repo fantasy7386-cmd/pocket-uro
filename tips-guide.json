@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-04",
+  "updated": "2026-05-05",
   "total_sections": 13,
-  "total_subsections": 59,
+  "total_subsections": 62,
   "sections": [
     {
       "id": "tg_01",
@@ -302,6 +302,21 @@
           "id": "tg_09_05",
           "title": "HIFU",
           "markdown": "- 1 小時燒 **10 g**\n- AP **不能超過 4 公分**"
+        },
+        {
+          "id": "tg_09_06",
+          "title": "Urolift Implant `[士庭]`",
+          "markdown": "1. **Implant 發射**時要跟**手術台平行**"
+        },
+        {
+          "id": "tg_09_07",
+          "title": "Microultrasound Biopsy `[士庭]`",
+          "markdown": "1. **探頭頻率**：normal TRUSP 約 **6–9 MHz**，**mUS 是 29 MHz**\n2. **助手**：不用穿手術衣，戴無菌手套即可\n3. **Trocar**：14 Fr Cath 或 coaxial needle 作為 trocar（coaxial 阻力大，要 **hold 著**）\n4. **取樣**：lesion + bilateral anterior / medial / lateral，**共 7 罐**\n5. **Condom**：放入 **4 包 jelly**\n6. **消毒**：用**粉色 chlorhexidine**"
+        },
+        {
+          "id": "tg_09_08",
+          "title": "SpaceOAR `[士庭]`",
+          "markdown": "1. **支架**若有，要用 **alcohol 消**\n2. **AB 膠**方式調配\n3. **助手**：不用穿手術衣，戴無菌手套即可\n4. **消毒**：用**粉色 chlorhexidine**"
         }
       ]
     },
