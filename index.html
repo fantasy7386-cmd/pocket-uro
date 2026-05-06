@@ -963,7 +963,7 @@
       z-index: 2000;
       display: flex; align-items: center; justify-content: center;
       padding: 0;
-      touch-action: pinch-zoom;
+      touch-action: manipulation;
       -webkit-user-select: none; user-select: none;
     }
     .lightbox.hidden { display: none; }
@@ -1003,7 +1003,7 @@
       max-width: 100vw;
       max-height: 100vh;
       object-fit: contain;
-      touch-action: pinch-zoom;
+      touch-action: manipulation;
       transition: transform .2s ease;
       transform-origin: center center;
       cursor: zoom-in;
@@ -2390,7 +2390,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.6</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.7</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
