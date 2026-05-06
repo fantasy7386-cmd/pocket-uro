@@ -2441,7 +2441,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.13</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.14</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -3351,6 +3351,11 @@
   function renderTbChapter(tbId, accent) {
     const ch = state.tb[tbId];
     if (!ch) return renderNotFound();
+    // Single-section shortcut: skip the (redundant) section list and render topics directly.
+    // Saves a tap for chapters that only have one section anyway.
+    if ((ch.sections || []).length === 1) {
+      return renderTbSection(tbId, 0, accent);
+    }
     setHeader(ch.title, { label: 'Textbook', href: '#/textbook' });
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
@@ -3375,7 +3380,12 @@
     const ch = state.tb[tbId];
     const sec = ch && ch.sections && ch.sections[secIdx];
     if (!sec) return renderNotFound();
-    setHeader(sec.title, { label: ch.title, href: '#/textbook/c/' + tbId });
+    // Single-section chapter: parent-link bypasses the (skipped) section list and goes back to the chapter list.
+    // Multi-section chapter: parent-link goes to the chapter view's section list.
+    const isOnlySection = (ch.sections || []).length === 1;
+    const backHref = isOnlySection ? '#/textbook' : '#/textbook/c/' + tbId;
+    const backLabel = isOnlySection ? 'Textbook' : ch.title;
+    setHeader(sec.title, { label: backLabel, href: backHref });
     const admin = isAdmin();
     const dirty = state.sources.tb[tbId] === 'local';
     viewEl().innerHTML = `
