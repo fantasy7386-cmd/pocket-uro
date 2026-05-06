@@ -48,6 +48,10 @@
       --c-hjh-note-bg: #fffaed;
       --c-hjh-card-bg: #fffbe6;
 
+      /* Inline code (doctor-tags `[名]`) — light theme defaults, dark theme overrides below */
+      --c-code-bg: rgba(230,126,34,.12);
+      --c-code-fg: #b06418;
+
       /* Typography */
       --font-read: 15px;         /* body text / markdown / articles */
       --font-read-lg: 17px;      /* list-card titles when enlarged */
@@ -63,7 +67,12 @@
       --shadow-md: 0 2px 6px rgba(0,0,0,.08);
     }
 
-    /* Dark theme override */
+    /* Dark theme override — re-evaluated 2026-05-06 for less-jarring text colors:
+       - Module accents lightened + desaturated (vs raw light values which are too vivid on dark)
+       - Semantic colors (danger/warning/success) lightened
+       - HJH gold toned down from #ffd85a to #e8c46a
+       - Highlight background reduced saturation
+       - .markdown-body code (doctor-tag inline code) gets dedicated token pair */
     body[data-theme="dark"] {
       --c-bg: #0f1419;
       --c-surface: #1a1f2e;
@@ -73,19 +82,41 @@
       --c-border: #2a3040;
       --c-header: #000000;
       --c-header-text: #e8eaed;
-      --c-info: #5dade2;
-      --c-highlight-bg: #d4a413;
+
+      /* Module accents — lightened + slightly desaturated for dark bg */
+      --c-patient-ed: #5fa8d8;
+      --c-ppu-notes:  #54c785;
+      --c-tips:       #e89958;
+      --c-textbook:   #b885d4;
+
+      /* Semantic — lighter/softer for dark */
+      --c-danger:  #ff6f6f;
+      --c-success: #54c785;
+      --c-warning: #f0b350;
+      --c-info:    #5dade2;
+      --c-accent:  var(--c-info);
+
+      /* Highlight (search match) — less saturated mustard, easier on eyes */
+      --c-highlight-bg: #b89438;
       --c-highlight-fg: #1a1a2e;
+
+      /* HJH — toned down golden */
       --c-hjh-bg-start: #3d3018;
-      --c-hjh-bg-end: #5a4520;
-      --c-hjh-fg: #ffd85a;
-      --c-hjh-border: #5a4520;
-      --c-hjh-accent: #ffd85a;
-      --c-hjh-note-bg: #1f1a0e;
-      --c-hjh-card-bg: #1a1810;
+      --c-hjh-bg-end:   #5a4520;
+      --c-hjh-fg:       #e8c46a;
+      --c-hjh-border:   #5a4520;
+      --c-hjh-accent:   #e8c46a;
+      --c-hjh-note-bg:  #1f1a0e;
+      --c-hjh-card-bg:  #1a1810;
+
+      /* Inline code (doctor-tags `[名]`) — dark-mode specific */
+      --c-code-bg: rgba(232,153,88,.16);
+      --c-code-fg: #f0b88a;
+
       --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
       --shadow-md: 0 2px 6px rgba(0,0,0,.4);
     }
+
 
     /* Font scale variants */
     body[data-font-scale="small"]  { --font-read: 13px; --font-read-lg: 15px; --font-ui: 14px; }
@@ -488,8 +519,8 @@
       box-sizing: border-box;
     }
     .markdown-body code {
-      background: rgba(230,126,34,.12);
-      color: #b06418;
+      background: var(--c-code-bg);
+      color: var(--c-code-fg);
       padding: 1px 6px;
       border-radius: 4px;
       font-size: 90%;
