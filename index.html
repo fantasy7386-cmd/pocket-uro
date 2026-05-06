@@ -4187,30 +4187,53 @@
     ` : '';
 
     viewEl().innerHTML = `
-      <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
+      <div class="search-bar-wrap">
+        <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
+        <button class="search-clear" id="search-clear" type="button" aria-label="Clear search"${q ? '' : ' hidden'}>×</button>
+      </div>
       <div class="search-filters">${filterChips}</div>
       ${loadAllBar}
       <div id="search-results"></div>
     `;
     const input = el('search-input');
+    const clearBtn = el('search-clear');
     let searchTimer = null;
+    const syncQueryAndSearch = (v) => {
+      const params = [];
+      if (v) params.push('q=' + encodeURIComponent(v));
+      if (only) params.push('only=' + only);
+      const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
+      // Use history.replaceState (does NOT fire hashchange) instead of
+      // location.replace (fires hashchange → router → renderSearch → input
+      // DOM replaced → focus lost mid-typing). doSearch re-renders only
+      // #search-results so the input element stays intact.
+      if (location.hash !== hash) {
+        history.replaceState(null, '', (location.pathname + location.search + hash));
+      }
+      doSearch(v, only);
+    };
     input.addEventListener('input', () => {
+      clearBtn.hidden = !input.value;
       clearTimeout(searchTimer);
-      searchTimer = setTimeout(() => {
-        const v = input.value.trim();
-        const params = [];
-        if (v) params.push('q=' + encodeURIComponent(v));
-        if (only) params.push('only=' + only);
-        const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
-        // Use history.replaceState (does NOT fire hashchange) instead of
-        // location.replace (fires hashchange → router → renderSearch → input
-        // DOM replaced → focus lost mid-typing). doSearch re-renders only
-        // #search-results so the input element stays intact.
-        if (location.hash !== hash) {
-          history.replaceState(null, '', (location.pathname + location.search + hash));
-        }
-        doSearch(v, only);
-      }, 220);
+      searchTimer = setTimeout(() => syncQueryAndSearch(input.value.trim()), 220);
+    });
+    // Escape key — desktop convention
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        input.value = '';
+        clearBtn.hidden = true;
+        clearTimeout(searchTimer);
+        syncQueryAndSearch('');
+      }
+    });
+    // X button — iOS-style instant clear
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.hidden = true;
+      clearTimeout(searchTimer);
+      syncQueryAndSearch('');
+      input.focus();
     });
     doSearch(q, only);
   }
