@@ -281,6 +281,32 @@
       background: var(--c-surface); margin-bottom: 16px;
       -webkit-appearance: none; appearance: none;
     }
+    /* Search bar with iOS-style clear button (×) */
+    .search-bar-wrap {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .search-bar-wrap .search-bar {
+      margin-bottom: 0;
+      padding-right: 42px;
+    }
+    .search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--c-text-muted);
+      color: var(--c-surface);
+      font-size: 14px; line-height: 1; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; border: none; padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      opacity: 0.7;
+    }
+    .search-clear:active { opacity: 1; }
+    .search-clear[hidden] { display: none; }
 
     .home-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
@@ -2441,7 +2467,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.15</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.16</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
