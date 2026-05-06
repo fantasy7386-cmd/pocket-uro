@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-05",
+  "updated": "2026-05-06",
   "total_sections": 13,
-  "total_subsections": 62,
+  "total_subsections": 63,
   "sections": [
     {
       "id": "tg_01",
@@ -269,6 +269,11 @@
           "id": "tg_08_07",
           "title": "補膀胱",
           "markdown": "- Mucosa：**3-0 mono continuous**\n- 外層：**2-0 vicryl or mono**"
+        },
+        {
+          "id": "tg_08_08",
+          "title": "Partial Penectomy `[宗頤]`",
+          "markdown": "1. **Marking 定位**：避免包皮滑來滑去 → **戴無菌手套當印記**直接縫固定到 **Bucks fascia**\n2. **Margin** ≥ **2 cm**\n3. **Corpus spongiosum urethra** 留 **1–1.5 cm** for spatulation（**ventral side 切開**）\n4. 切起來側面會像個**梯形**形狀（CS urethra 會長一些些）\n5. **Urethra**：先用 **12 Fr Foley** 定位 → 最後放 **14 or 16 Fr Foley**\n6. **Tunica 一定要縫好**避免出血 → 建議 **PDS or prolene (2-0)**\n7. **止血**：可用單導管在 **root 綁住**\n8. **皮膚縫合**：**4-0 monocryl**"
         }
       ]
     },
