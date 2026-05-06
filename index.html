@@ -2441,7 +2441,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.14</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.15</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4261,54 +4261,43 @@
         }
       }
     }
-    // Textbook (loaded chapters only) — per-slide granularity + AND-term matching.
-    // Hidden (PPT-skipped) slides ARE included — knowledge points shouldn't be
-    // excluded from search just because they were skipped in lecture; they get a
-    // 補充 tag in result title.
+    // Textbook (loaded chapters only) — per-slide granularity.
+    // 2026-05-07 fix: previously collapsed multiple matching slides in the same
+    // topic into ONE result (using the first match only). Now pushes one result
+    // PER matching slide so users see all hit locations. Topic-level match
+    // (title/notes/markdown only, no slide hits) still pushes a single result.
     for (const tbId of Object.keys(state.tb)) {
       const ch = state.tb[tbId];
       for (const sec of (ch.sections || [])) {
         for (const t of (sec.topics || [])) {
-          let preview = '';
-          let matchedSlideIdx = -1;
-          let matched = false;
-          let matchedIsHidden = false;
-
-          const topicHay = t.title + ' ' + stripDataUrls(t.notes) + ' ' + stripDataUrls(t.markdown_content);
-          if (matchAllTerms(topicHay, terms)) {
-            matched = true;
-            preview = previewAround(topicHay, terms);
-          }
+          let slideMatchCount = 0;
 
           if (t.type !== 'text_only') {
             const slidesAll = t.slides || [];
             for (let si = 0; si < slidesAll.length; si++) {
               const s = slidesAll[si];
               const slideHay = (s.text || []).join(' ') + ' ' + (s.ocr_text || '');
-              if (matchAllTerms(slideHay, terms)) {
-                matched = true;
-                if (matchedSlideIdx === -1) {
-                  matchedSlideIdx = si;
-                  matchedIsHidden = !!s.hidden;
-                  preview = previewAround(slideHay, terms);
-                }
-              }
+              if (!matchAllTerms(slideHay, terms)) continue;
+              slideMatchCount++;
+              const hjhTag = isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
+              const hidTag = s.hidden ? ' <span class="topic-badge" style="font-size:10px;padding:1px 5px;background:rgba(44,62,80,.6);color:#fff">📎 補充</span>' : '';
+              const title = ch.number + '. ' + ch.title + ' › ' + t.title + ` — slide ${si + 1}${hjhTag}${hidTag}`;
+              const preview = previewAround(slideHay, terms);
+              const href = '#/textbook/t/' + esc(tbId) + '/' + esc(t.id) + '?slide=' + si + '&q=' + encodeURIComponent(q);
+              results.textbook.push({ id: t.id + ':' + si, title, preview, href });
             }
           }
 
-          if (matched) {
-            let title = ch.number + '. ' + ch.title + ' › ' + t.title;
-            if (matchedSlideIdx >= 0) {
-              const s = (t.slides || [])[matchedSlideIdx];
-              const hjhTag = s && isHJHSlide(s) ? ' <span class="topic-badge hjh" style="font-size:10px;padding:1px 5px">HJH</span>' : '';
-              const hidTag = matchedIsHidden ? ' <span class="topic-badge" style="font-size:10px;padding:1px 5px;background:rgba(44,62,80,.6);color:#fff">📎 補充</span>' : '';
-              title += ` — slide ${matchedSlideIdx + 1}${hjhTag}${hidTag}`;
+          // Topic-level match (title/notes/markdown_content). Push ONE result
+          // only if no slide-level matches were already pushed (avoid duplication).
+          if (slideMatchCount === 0) {
+            const topicHay = t.title + ' ' + stripDataUrls(t.notes) + ' ' + stripDataUrls(t.markdown_content);
+            if (matchAllTerms(topicHay, terms)) {
+              const title = ch.number + '. ' + ch.title + ' › ' + t.title;
+              const preview = previewAround(topicHay, terms);
+              const href = '#/textbook/t/' + esc(tbId) + '/' + esc(t.id) + '?q=' + encodeURIComponent(q);
+              results.textbook.push({ id: t.id + ':topic', title, preview, href });
             }
-            const params = [];
-            if (matchedSlideIdx >= 0) params.push('slide=' + matchedSlideIdx);
-            params.push('q=' + encodeURIComponent(q));
-            const href = '#/textbook/t/' + tbId + '/' + t.id + '?' + params.join('&');
-            results.textbook.push({ id: t.id + ':' + matchedSlideIdx, title, preview, href });
           }
         }
       }
