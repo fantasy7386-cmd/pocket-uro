@@ -3434,12 +3434,12 @@
     const hjhLabels = hjhSlideLabels(visibleSlides);
     const hjhSummary = hjhLabels.length ? `
       <details class="hjh-summary" style="margin-bottom:10px">
-        <summary style="padding:8px 12px;background:#fff5d6;border:1px solid #f0d986;border-radius:var(--radius-sm);font-size:13px;color:#8b5a00;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
+        <summary style="padding:8px 12px;background:var(--c-hjh-bg-start);border:1px solid var(--c-hjh-border);border-radius:var(--radius-sm);font-size:13px;color:var(--c-hjh-fg);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
           <span><strong>${hjhLabels.length} HJH slide${hjhLabels.length > 1 ? 's' : ''}</strong> in this topic</span>
           <span style="font-size:11px;opacity:.7">tap to show ▸</span>
         </summary>
         <div style="padding:8px 4px;display:flex;flex-wrap:wrap;gap:6px">
-          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="padding:4px 10px;background:#ffe680;color:#8b5a00;border-radius:8px;font-weight:700;text-decoration:none;font-size:12px">${esc(String(s.slide_num))}</a>` : '').join('')}
+          ${visibleSlides.map((s, i) => isHJHSlide(s) ? `<a href="#/textbook/t/${esc(tbId)}/${esc(topicId)}?slide=${i}" style="padding:4px 10px;background:var(--c-hjh-bg-end);color:var(--c-hjh-fg);border-radius:8px;font-weight:700;text-decoration:none;font-size:12px">${esc(String(s.slide_num))}</a>` : '').join('')}
         </div>
       </details>
     ` : '';
