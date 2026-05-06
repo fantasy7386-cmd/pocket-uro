@@ -2390,7 +2390,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.5</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.6</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4400,12 +4400,12 @@
     viewEl().innerHTML = `
       <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
       ${isRealView ? `
-        <div style="padding:10px 14px;background:var(--c-role-viewer-bg);border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
+        <div style="padding:10px 14px;background:var(--c-surface);border:1px solid var(--c-border);border-left:3px solid var(--c-text-muted);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
           Viewer mode — browse everything, no sign-in needed. Admin sign-in (below) unlocks editing + GitHub sync.
         </div>
       ` : ''}
       ${isPreviewing ? `
-        <div style="padding:10px 14px;background:var(--c-hjh-bg-start);border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div style="padding:10px 14px;background:var(--c-surface);border:1px solid var(--c-border);border-left:3px solid var(--c-hjh-accent);border-radius:var(--radius);font-size:13px;color:var(--c-text);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
           <span>👁 Preview as viewer — admin-only settings are hidden. Signed in as <code>${esc(currentCode())}</code>.</span>
           <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
         </div>
