@@ -2390,7 +2390,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.4</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.5</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2413,9 +2413,9 @@
           ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
         </div>
       </div>
-      <div style="margin-top:10px;padding:12px 14px;background:${admin ? 'var(--c-hjh-bg-start)' : 'var(--c-role-viewer-bg)'};border:1px solid ${admin ? 'var(--c-hjh-border)' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
+      <div style="margin-top:10px;padding:12px 14px;background:var(--c-surface);border:1px solid var(--c-border);border-left:3px solid ${admin ? 'var(--c-hjh-accent)' : 'var(--c-text-muted)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
         <div style="font-size:13px">
-          <strong style="color:${admin ? 'var(--c-hjh-fg)' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
+          <strong style="color:var(--c-text)">${admin ? 'Editor mode' : 'Viewer mode'}</strong>
           <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
             Code: <code>${esc(currentCode())}</code> ·
             ${isAdminCode() ? (admin ? 'Your code grants admin. Edit / +New / Delete enabled.' : 'Preview as viewer — tap to restore admin.') : 'Shared code — read-only, cannot enable editing.'}
