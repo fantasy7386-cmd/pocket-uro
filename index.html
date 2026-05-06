@@ -52,6 +52,9 @@
       --c-code-bg: rgba(230,126,34,.12);
       --c-code-fg: #b06418;
 
+      /* Role indicator (viewer banner bg — light theme) */
+      --c-role-viewer-bg: #eef4fa;
+
       /* Typography */
       --font-read: 15px;         /* body text / markdown / articles */
       --font-read-lg: 17px;      /* list-card titles when enlarged */
@@ -112,6 +115,9 @@
       /* Inline code (doctor-tags `[名]`) — dark-mode specific */
       --c-code-bg: rgba(232,153,88,.16);
       --c-code-fg: #f0b88a;
+
+      /* Role indicator (viewer banner bg — dark variant: soft navy tint) */
+      --c-role-viewer-bg: #1a2440;
 
       --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
       --shadow-md: 0 2px 6px rgba(0,0,0,.4);
@@ -2384,7 +2390,7 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-name">Pocket URO</div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.3</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.4</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2407,9 +2413,9 @@
           ${dirty.length ? `<a href="#/sync" style="color:var(--c-warning)">⚠ ${dirty.length} unsynced</a>` : ''}
         </div>
       </div>
-      <div style="margin-top:10px;padding:12px 14px;background:${admin ? '#fff5d6' : '#eef4fa'};border:1px solid ${admin ? '#f0d986' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
+      <div style="margin-top:10px;padding:12px 14px;background:${admin ? 'var(--c-hjh-bg-start)' : 'var(--c-role-viewer-bg)'};border:1px solid ${admin ? 'var(--c-hjh-border)' : 'var(--c-border)'};border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:8px">
         <div style="font-size:13px">
-          <strong style="color:${admin ? '#8b5a00' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
+          <strong style="color:${admin ? 'var(--c-hjh-fg)' : 'var(--c-text)'}">Role: ${admin ? 'ADMIN (full access)' : 'Viewer (read-only)'}</strong>
           <div style="color:var(--c-text-muted);font-size:12px;margin-top:2px">
             Code: <code>${esc(currentCode())}</code> ·
             ${isAdminCode() ? (admin ? 'Your code grants admin. Edit / +New / Delete enabled.' : 'Preview as viewer — tap to restore admin.') : 'Shared code — read-only, cannot enable editing.'}
@@ -4394,12 +4400,12 @@
     viewEl().innerHTML = `
       <h2 style="font-size:22px;margin-bottom:12px">${admin ? 'Sync to GitHub' : 'Settings'}</h2>
       ${isRealView ? `
-        <div style="padding:10px 14px;background:#eef4fa;border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
+        <div style="padding:10px 14px;background:var(--c-role-viewer-bg);border:1px solid var(--c-border);border-radius:var(--radius);font-size:13px;color:var(--c-text-muted);margin-bottom:12px">
           Viewer mode — browse everything, no sign-in needed. Admin sign-in (below) unlocks editing + GitHub sync.
         </div>
       ` : ''}
       ${isPreviewing ? `
-        <div style="padding:10px 14px;background:#fff5d6;border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <div style="padding:10px 14px;background:var(--c-hjh-bg-start);border:1px solid var(--c-hjh-border);border-radius:var(--radius);font-size:13px;color:var(--c-hjh-fg);margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
           <span>👁 Preview as viewer — admin-only settings are hidden. Signed in as <code>${esc(currentCode())}</code>.</span>
           <button class="btn btn-secondary" style="min-height:unset;padding:6px 12px;font-size:13px" onclick="window.__toggleAdmin()">Back to admin</button>
         </div>
@@ -4424,9 +4430,9 @@
         ${adminCode ? `
           <div style="font-size:13px;color:var(--c-text-muted);margin-bottom:8px">
             Signed in as <strong><code>${esc(currentCode())}</code></strong>
-            <span style="padding:1px 8px;background:#fff5d6;color:#8b5a00;border-radius:8px;font-size:11px;margin-left:4px">admin</span>
+            <span style="padding:1px 8px;background:var(--c-hjh-bg-start);color:var(--c-hjh-fg);border-radius:8px;font-size:11px;margin-left:4px">admin</span>
             <br>
-            Current role: <strong style="color:${isAdmin() ? '#8b5a00' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer (preview)'}</strong>.
+            Current role: <strong style="color:${isAdmin() ? 'var(--c-hjh-fg)' : 'var(--c-text)'}">${isAdmin() ? 'ADMIN' : 'Viewer (preview)'}</strong>.
             ${isAdmin() ? 'All edit/sync buttons enabled.' : 'Previewing as viewer — toggle below to restore admin.'}
           </div>
           <div class="action-bar" style="margin:0;gap:8px">
