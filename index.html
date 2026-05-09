@@ -270,7 +270,7 @@
     /* ============ Home ============ */
     .brand {
       display: flex; flex-direction: column;
-      padding: 6px 0 14px;
+      padding: 24px 0 14px;
       gap: 2px;
     }
     .brand-row { display: flex; align-items: center; gap: 12px; }
@@ -278,9 +278,9 @@
       display: flex; line-height: 0; flex-shrink: 0;
     }
     .brand-icon svg { display: block; }
-    .brand-icon img { display: block; width: 48px; height: 48px; }
+    .brand-icon img { display: block; width: 56px; height: 56px; transform: translateY(14px); }
     .brand-name { font-size: 26px; font-weight: 700; letter-spacing: -0.4px; }
-    .brand-tag { font-size: 12px; color: var(--c-text-muted); margin-left: 60px; }
+    .brand-tag { font-size: 12px; color: var(--c-text-muted); margin-left: 68px; }
 
     .search-bar {
       width: 100%; padding: 12px 16px; border: 1px solid var(--c-border);
@@ -2474,10 +2474,10 @@
     viewEl().innerHTML = `
       <div class="brand">
         <div class="brand-row">
-          <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="48" height="48"></span>
+          <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.20</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.21</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
