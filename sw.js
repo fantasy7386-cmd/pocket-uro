@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v3.7.22';
+const CACHE_VERSION = 'pocket-uro-v3.7.23';
 // v3.7.1: evict oldest entries when cache.put fails with QuotaExceededError.
 // iOS Safari quota is ~50MB per origin. Without this, once full, new writes
 // silently fail and fresh content never reaches the cache.
@@ -9,10 +9,10 @@ const MAX_EVICT_PER_FAILURE = 20;
 const CORE_ASSETS = [
   './',
   './index.html',
-  './manifest.json?v=4',
-  './icon-192.png?v=4',
-  './icon-512.png?v=4',
-  './apple-touch-icon.png?v=4',
+  './manifest.json?v=5',
+  './icon-192.png?v=5',
+  './icon-512.png?v=5',
+  './apple-touch-icon.png?v=5',
   './brand-icon.png?v=4',
   './lib/marked.min.js?v=3',
   './data.json',
