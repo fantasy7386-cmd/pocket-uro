@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "updated": "2026-04-20",
+  "updated": "2026-05-10",
   "author": "PPu Teaching Faculty",
-  "total_sections": 13,
+  "total_sections": 14,
   "sections": [
     {
       "id": "tn_00",
@@ -448,10 +448,24 @@
       ]
     },
     {
-      "id": "tn_12",
+      "id": "tn_1778395222236",
       "number": "XIII",
+      "title": "血尿（ER）",
+      "full_title": "XIII. 血尿（ER）",
+      "subsections": [
+        {
+          "title": "",
+          "items": []
+        }
+      ],
+      "notes": "可以停掉沖洗，觀察有沒有再血尿。如果沒有血尿，把尿管拔掉，解小便看看，測一下殘尿。\n\n病人電療以後，一輩子都有可能會有血尿，這個病人血尿嚴重嗎？會造成尿不出來嗎？\n\n我們應該曾經衛教他，血尿的時候，所有的活動要停下來，最好坐下來或躺下來休息減少活動，減少腹部用力的機會。\n\n不要帶著尿管回家，這個等於把尿管丟給門診的人處理。",
+      "images": []
+    },
+    {
+      "id": "tn_12",
+      "number": "XIV",
       "title": "快速複習版",
-      "full_title": "XIII. 快速複習版",
+      "full_title": "XIV. 快速複習版",
       "subsections": [
         {
           "title": "",
