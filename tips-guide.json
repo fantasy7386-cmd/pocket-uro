@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-08",
+  "updated": "2026-05-12",
   "total_sections": 13,
   "total_subsections": 63,
   "sections": [
@@ -173,7 +173,8 @@
         {
           "id": "tg_05_08",
           "title": "H. Allium Stent",
-          "markdown": "- Stricture site 起碼要**離 UO above 3 cm** 才不用突進 bladder\n- **3 週** allium stent 可擴張完全\n- **不要 in-line 放** allium → in-line 的話要 25 Fr sheath → 不然就像放 URS 那樣"
+          "markdown": "- Stricture site 起碼要**離 UO above 3 cm** 才不用突進 bladder\n- 上下各3公分+狹窄長度 評估12 or 20 cm\n- **3 週** allium stent 可擴張完全\n- **不要 in-line 放** allium → in-line 的話要 25 Fr sheath → 不然就像放 URS 那樣\n- 最好不要突進bladder才不會reflux",
+          "images": []
         }
       ]
     },
