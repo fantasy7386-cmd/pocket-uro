@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-12",
+  "updated": "2026-05-13",
   "total_sections": 13,
   "total_subsections": 64,
   "sections": [
@@ -180,7 +180,7 @@
         {
           "id": "tg_05_1778560250037",
           "title": "I. Cystoscopic Botox",
-          "markdown": "- IC 類型的打submucosal; detrusor muscle 像DO的那種打intramuscular (針全入後再外拔一些）\n- 總共20-22針打在posterior wall （董哥會diffused 打）\n\n- **注射針不好打！右手針先伸出來，固定好，左手用鏡頭跟著撞進去！只用右手會戳不進去！要靠跟著鏡子一起撞進去。**\n- Urethral 也可以打；用12度鏡",
+          "markdown": "- IC 類型的打submucosal; detrusor muscle 像DO的那種打intramuscular (針全入後再外拔一些）\n- 總共20-22針打在posterior wall （董哥會diffused 打）\n\n- **注射針不好打！右手針先伸出來，固定好，左手用鏡頭跟著撞進去！只用右手會戳不進去！要靠跟著鏡子一起撞進去。**\n- 鏡頭貼進mucosa; 距離不能太遠。再進行突刺。\n- Urethral 也可以打；用12度鏡",
           "images": []
         }
       ]
