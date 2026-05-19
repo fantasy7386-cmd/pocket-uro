@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-13",
+  "updated": "2026-05-19",
   "total_sections": 13,
-  "total_subsections": 64,
+  "total_subsections": 65,
   "sections": [
     {
       "id": "tg_01",
@@ -78,6 +78,12 @@
           "id": "tg_02_07",
           "title": "膀胱鏡術前抗生素",
           "markdown": "- Cefuroxime 2 tab Q12H × one day"
+        },
+        {
+          "id": "tg_02_1779193656460",
+          "title": "Bladder spasm",
+          "markdown": "[蒲] 給destruction (buscopan GI 副作用太多）\n\n[華哥] Buscopan + morphine",
+          "images": []
         }
       ]
     },
