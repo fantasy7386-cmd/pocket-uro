@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-20",
+  "updated": "2026-05-26",
   "total_sections": 13,
   "total_subsections": 65,
   "sections": [
@@ -342,7 +342,8 @@
         {
           "id": "tg_09_07",
           "title": "Microultrasound Biopsy `[士庭]`",
-          "markdown": "1. **探頭頻率**：normal TRUSP 約 **6–9 MHz**，**mUS 是 29 MHz**\n2. **助手**：不用穿手術衣，戴無菌手套即可\n3. **Trocar**：14 Fr Cath 或 coaxial needle 作為 trocar（coaxial 阻力大，要 **hold 著**）\n4. **取樣**：lesion + bilateral anterior / medial / lateral，**共 7 罐**\n5. **Condom**：放入 **4 包 jelly**\n6. **消毒**：用**粉色 chlorhexidine**"
+          "markdown": "1. **探頭頻率**：normal TRUSP 約 **6–9 MHz**，**mUS 是 29 MHz**\n2. **助手**：不用穿手術衣，戴無菌手套即可 （Stin自己有時也不穿）\n3. **Trocar**：14 Fr Cath 或 coaxial needle 作為 trocar（coaxial 阻力大，要 **hold 著**）\n4. **取樣**：lesion + bilateral anterior / medial / lateral，**共 7 罐**\n5. **Condom**：放入 **4 包 jelly**\n6. **消毒**：用**粉色 chlorhexidine**\n7. 藥biopsy gun之前會再消毒一次",
+          "images": []
         },
         {
           "id": "tg_09_08",
