@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "total_sections": 13,
-  "total_subsections": 65,
+  "total_subsections": 67,
   "sections": [
     {
       "id": "tg_01",
@@ -164,7 +164,7 @@
         {
           "id": "tg_05_05",
           "title": "E. TURP",
-          "markdown": "#### Traction 止血位置\n- `[郭名捷]`：traction 是止血在 **bladder neck**\n- `[蒲P]`：止血在 **prostate fossa**？\n\n#### 22 3-way Foley Balloon 充氣指引\n| Balloon volume | 效果 |\n|----------------|------|\n| 打到 10 ml | 寬度到達**第一階段** |\n| 10–40 ml | **延伸長度** |\n| > 40 ml | 繼續增加**寬度** |\n| > 80 ml | 寬度差別不大，繼續增加**長度**（會變成蘋果樣） |\n\n- `[郭醫師]` 覺得不大需要打 over 80 ml\n\n#### 其他\n- Post-TURP hematuria → 可考慮用 **Proscar** `[闕P]`\n- `[主任]` TURP 要用三條奇怪布膠先黏\n\n手術技巧：\n[闕P]\n- Bipolar 可以用button使用cutting 作為vaporization (燙熨斗）\n- 往外刮的時候，不要一個往下壓動作，不然會像狗啃\n\n[董哥]\n- TUIP 從兩側UO跟veru連線刮; 不要超過veru \n- 深度刮到fat\n- 刮完再來止血",
+          "markdown": "#### Traction 止血位置\n- `[郭名捷]`：traction 是止血在 **bladder neck**\n- `[蒲P]`：止血在 **prostate fossa**？\n\n#### 22 3-way Foley Balloon 充氣指引\n| Balloon volume | 效果 |\n|----------------|------|\n| 打到 10 ml | 寬度到達**第一階段** |\n| 10–40 ml | **延伸長度** |\n| > 40 ml | 繼續增加**寬度** |\n| > 80 ml | 寬度差別不大，繼續增加**長度**（會變成蘋果樣） |\n\n- `[郭醫師]` 覺得不大需要打 over 80 ml\n\n#### 其他\n- Post-TURP hematuria → 可考慮用 **Proscar** `[闕P]`\n- `[主任]` TURP 要用三條奇怪布膠先黏\n\n手術技巧：\n[闕P]\n- Bipolar 可以用button使用cutting 作為vaporization (燙熨斗）\n- 往外刮的時候，不要一個往下壓動作，不然會像狗啃\n\n[董哥]\n- TUIP 從兩側UO跟veru連線刮; 不要超過veru \n- 深度刮到fat\n- 刮完再來止血\n\n#### 開檯設置 `[新哥]`\n- 光源、水、CCD 線**夾起來走中間**\n- 排水（下水道）管接長，**延伸到另一個水桶**\n- 只用 **N/S**，**不用 distilled water**\n- **Bipolar 器械也先接好**",
           "images": []
         },
         {
@@ -233,7 +233,7 @@
         {
           "id": "tg_07_04",
           "title": "D. RALPN",
-          "markdown": "#### 淵哥 RALPN `[淵哥]`\n- **要打 CVC**\n\n#### 阿貓 Single Port RALPN `[阿貓]`\n1. **平躺**；IV 手可出(靠機器手臂這側）；**胸約**（下面不一定要約）\n2. Single port 的 arm **不可以垂直，要傾斜**\n3. 如果要**平移** → 按把手\n4. 頭上的**大轉盤**用旋轉\n5. **粗面朝外**\n6. 要 **approach to retroperitoneum** → 到 **psoas**\n7. Psoas 放在底下，**往上分上去找血管**\n8. 要用airseal; 壓力12\n9. 阿貓畫刀的時候會站在「患側對側」\n10. 機器手臂會從患側對側進來。Docking 要先對準camera mark\n11. 畫刀：ASIS跟肚臍連線；外1/3的點；沿著skin畫大約4公分傷口",
+          "markdown": "#### 淵哥 RALPN `[淵哥]`\n- **要打 CVC**\n\n#### 阿貓 Single Port RALPN `[阿貓]`\n1. **平躺**；IV 手可出(靠機器手臂這側）；**胸約**（下面不一定要約）\n2. Single port 的 arm **不可以垂直，要傾斜**\n3. 如果要**平移** → 按把手\n4. 頭上的**大轉盤**用旋轉\n5. **粗面朝外**\n6. 要 **approach to retroperitoneum** → 到 **psoas**\n7. Psoas 放在底下，**往上分上去找血管**\n8. 要用airseal; 壓力12\n9. 阿貓畫刀的時候會站在「患側對側」\n10. 機器手臂會從患側對側進來。Docking 要先對準camera mark\n11. 畫刀：ASIS跟肚臍連線；外1/3的點；沿著skin畫大約4公分傷口\n12. **開右側**時，注意是否需**多一個 5 mm port** 用來**頂肝**",
           "images": []
         }
       ]
@@ -297,6 +297,12 @@
               "caption": "手術圖"
             }
           ]
+        },
+        {
+          "id": "tg_08_09",
+          "title": "Inguinal Hernia Repair（Open）`[皓哥]`",
+          "markdown": "#### 切開\n- **傷口會比想像中垂直！**\n- 分到 **aponeurosis** 後用**剪的**；上下共**夾 4 支 pean**\n\n#### Sac 處理\n- 分 sac 用**電刀燒**！搭配 **smooth（無齒鑷）夾 tissue** 著分\n\n#### 修補\n- **一定都做 Bassini posterior wall repair**\n- **Mesh 剪得不要太大塊**；從**外側**放，上支**穿過 cord 到對面**\n- **Pubic tubercle 的 bone 要釘！**",
+          "images": []
         }
       ]
     },
@@ -349,6 +355,12 @@
           "id": "tg_09_08",
           "title": "SpaceOAR `[士庭]`",
           "markdown": "1. **支架**若有，要用 **alcohol 消**\n2. **AB 膠**方式調配 (防呆顏色對應）\n3. **助手**：不用穿手術衣，戴無菌手套即可\n4. **消毒**：用**粉色 chlorhexidine**\n5. 腳不要架太高！會rectal hump",
+          "images": []
+        },
+        {
+          "id": "tg_09_09",
+          "title": "Aquablation `[闕P]`",
+          "markdown": "#### 器械設置 `[闕P]`\n- 準備**兩個 Ellik**\n- 電刀設定 **220 / 180**\n- 一定要有 **button**（作為 evaporation 作用）\n\n#### 灌 Floseal 止血\n- 配 **18 Fr Foley** ＋ **10 號抽痰管**\n- Balloon 打 **45 mL**\n- Floseal **只能打 8 下**",
           "images": []
         }
       ]
