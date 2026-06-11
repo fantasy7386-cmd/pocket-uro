@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-26",
+  "updated": "2026-06-11",
   "total_sections": 13,
   "total_subsections": 65,
   "sections": [
@@ -348,7 +348,8 @@
         {
           "id": "tg_09_08",
           "title": "SpaceOAR `[士庭]`",
-          "markdown": "1. **支架**若有，要用 **alcohol 消**\n2. **AB 膠**方式調配\n3. **助手**：不用穿手術衣，戴無菌手套即可\n4. **消毒**：用**粉色 chlorhexidine**"
+          "markdown": "1. **支架**若有，要用 **alcohol 消**\n2. **AB 膠**方式調配 (防呆顏色對應）\n3. **助手**：不用穿手術衣，戴無菌手套即可\n4. **消毒**：用**粉色 chlorhexidine**\n5. 腳不要架太高！會rectal hump",
+          "images": []
         }
       ]
     },
