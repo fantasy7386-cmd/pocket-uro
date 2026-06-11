@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v3.7.23';
+const CACHE_VERSION = 'pocket-uro-v3.7.24';
 // v3.7.1: evict oldest entries when cache.put fails with QuotaExceededError.
 // iOS Safari quota is ~50MB per origin. Without this, once full, new writes
 // silently fail and fresh content never reaches the cache.
@@ -29,12 +29,16 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
+  // NOTE: intentionally NO self.clients.claim(). Claiming the open page mid-session
+  // fires `controllerchange` in index.html, whose handler reloaded the page and aborted
+  // the in-flight 5.7 MB data.json boot fetch -> state.data = null -> blank / "Load failed".
+  // Without claim(), a newly installed SW takes control on the NEXT navigation instead,
+  // so the current load finishes from the network uninterrupted.
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(
         keys.filter(k => k !== CACHE_VERSION).map(k => caches.delete(k))
       ))
-      .then(() => self.clients.claim())
   );
 });
 
@@ -116,7 +120,15 @@ function staleWhileRevalidate(request) {
         putWithQuotaFallback(request, resp.clone());
       }
       return resp;
-    }).catch(() => cached);
-    return cached || fresh;
+    });
+    // With a cached copy: serve it now, refresh in the background, swallow bg errors.
+    // Without a cache: await the network and let a genuine failure reject naturally —
+    // returning `cached` (undefined) here made respondWith() throw
+    // "FetchEvent.respondWith received an error: TypeError: Load failed".
+    if (cached) {
+      fresh.catch(() => {});
+      return cached;
+    }
+    return fresh;
   });
 }

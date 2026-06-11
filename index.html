@@ -1743,6 +1743,12 @@
       loadJSON('teaching-notes.json'),
       loadJSON('tips-guide.json'),
     ]);
+    // Defense-in-depth: a partial/aborted load must surface as a graceful, retryable
+    // "Load failed" (handled by boot()'s catch) rather than letting null/incomplete data
+    // reach the render path, where `state.data.categories` would throw -> blank white screen.
+    if (!dataSrv || !Array.isArray(dataSrv.categories)) throw new Error('data.json did not load fully — please reload');
+    if (!notesSrv || !Array.isArray(notesSrv.sections)) throw new Error('teaching-notes.json did not load fully — please reload');
+    if (!tipsSrv || !Array.isArray(tipsSrv.sections)) throw new Error('tips-guide.json did not load fully — please reload');
     const dOv = loadLocalOverride(LS.DATA, dataSrv);
     state.data = dOv.data; state.sources.data = dOv.source;
     const nOv = loadLocalOverride(LS.NOTES, notesSrv);
@@ -2477,7 +2483,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.23</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.24</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4869,12 +4875,10 @@
         });
       }).catch(err => console.warn('SW registration failed', err));
     });
-    let reloadingForUpdate = false;
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-      if (reloadingForUpdate) return;
-      reloadingForUpdate = true;
-      location.reload();
-    });
+    // NOTE: intentionally NO auto-reload on `controllerchange`. It used to force
+    // location.reload() the instant a new SW took control, which raced the boot-time
+    // 5.7 MB data.json fetch and left the app blank / on "Load failed". Updates now apply
+    // on the next natural navigation, or when the user taps the update banner below.
   }
   el('btn-update-reload').addEventListener('click', () => {
     navigator.serviceWorker.getRegistration().then(reg => {
