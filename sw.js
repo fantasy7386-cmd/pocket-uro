@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v3.7.25';
+const CACHE_VERSION = 'pocket-uro-v3.8.0';
 // v3.7.1: evict oldest entries when cache.put fails with QuotaExceededError.
 // iOS Safari quota is ~50MB per origin. Without this, once full, new writes
 // silently fail and fresh content never reaches the cache.
@@ -63,6 +63,14 @@ self.addEventListener('fetch', (event) => {
   if (url.origin === location.origin &&
       url.pathname.includes('/images/textbook/') &&
       url.pathname.endsWith('.webp')) {
+    event.respondWith(cacheFirst(request));
+    return;
+  }
+
+  // Cache-first for content-addressed article/notes/tips images.
+  // Filename = content hash, so the asset is immutable -> safe to cache forever.
+  if (url.origin === location.origin &&
+      url.pathname.includes('/images/content/')) {
     event.respondWith(cacheFirst(request));
     return;
   }

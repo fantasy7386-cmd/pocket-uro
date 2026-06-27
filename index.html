@@ -1845,7 +1845,7 @@
     return token;
   }
 
-  async function ghPutFile(path, obj, message) {
+  async function ghPutFile(path, obj, message, opts) {
     const token = await ensureToken();
     if (!token) throw new Error('No token');
     const headers = {
@@ -1868,8 +1868,11 @@
     } else if (getResp.status !== 404) {
       throw new Error('Get SHA failed: ' + getResp.status);
     }
-    const payload = JSON.stringify(obj, null, 2);
-    const content = btoa(unescape(encodeURIComponent(payload)));
+    // opts.rawBase64: obj is already a base64 string (image bytes) — push as-is.
+    // Otherwise obj is a JS value serialized to pretty JSON then base64-encoded.
+    const content = (opts && opts.rawBase64)
+      ? obj
+      : btoa(unescape(encodeURIComponent(JSON.stringify(obj, null, 2))));
     const putBody = { message, content };
     if (sha) putBody.sha = sha;
     const putResp = await fetch(
@@ -1881,6 +1884,53 @@
       throw new Error('Push failed: ' + (err.message || putResp.status));
     }
     return true;
+  }
+
+  // ---- Image asset sync (v3.8.0): pending base64 images -> content-addressed files ----
+  async function sha256Hex(bytes) {
+    const buf = await crypto.subtle.digest('SHA-256', bytes);
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+  function dataUriParts(uri) {
+    const m = /^data:image\/([A-Za-z0-9.+-]+);base64,(.+)$/s.exec(uri || '');
+    if (!m) return null;
+    let ext = m[1].toLowerCase();
+    ext = ext === 'jpeg' ? 'jpg' : (ext === 'svg+xml' ? 'svg' : ext);
+    return { ext, b64: m[2] };
+  }
+  function collectImages(node, out) {
+    if (Array.isArray(node)) { for (const x of node) collectImages(x, out); }
+    else if (node && typeof node === 'object') {
+      if (Array.isArray(node.images)) for (const img of node.images) if (img && typeof img === 'object') out.push(img);
+      for (const v of Object.values(node)) if (v && typeof v === 'object') collectImages(v, out);
+    }
+  }
+  // Upload every {data, no ref} image to images/content/<hash>.<ext>, then set img.ref.
+  // Keeps img.data so the admin's current view doesn't 404 before GitHub Pages rebuilds.
+  // Throws on any upload failure BEFORE the dataset JSON is pushed -> JSON never references a missing file.
+  async function uploadPendingImages(payload) {
+    const imgs = []; collectImages(payload, imgs);
+    let n = 0;
+    for (const img of imgs) {
+      if (img.ref || !img.data) continue;
+      const p = dataUriParts(img.data);
+      if (!p) continue;
+      const bytes = Uint8Array.from(atob(p.b64), c => c.charCodeAt(0));
+      const hash = (await sha256Hex(bytes)).slice(0, 16);
+      const ref = 'images/content/' + hash + '.' + p.ext;
+      await ghPutFile(ref, p.b64, 'Add image ' + hash, { rawBase64: true });
+      img.ref = ref;
+      n++;
+    }
+    return n;
+  }
+  // For the JSON payload we push: drop base64 from any image that already has a ref (slim it).
+  function stripSyncedImageData(node) {
+    if (Array.isArray(node)) { for (const x of node) stripSyncedImageData(x); }
+    else if (node && typeof node === 'object') {
+      if (Array.isArray(node.images)) for (const img of node.images) if (img && img.ref && img.data) delete img.data;
+      for (const v of Object.values(node)) if (v && typeof v === 'object') stripSyncedImageData(v);
+    }
   }
 
   async function syncAll() {
@@ -1899,8 +1949,13 @@
         else if (d.id === 'notes') payload = state.notes;
         else if (d.id === 'tips')  payload = state.tips;
         else if (d.id.startsWith('tb_')) payload = state.tb[d.id];
+        // Atomic ordering: upload pending base64 images first; only push the
+        // dataset JSON after they all succeed, so the JSON never references a
+        // content file that isn't in the repo yet.
+        await uploadPendingImages(payload);
         const clone = JSON.parse(JSON.stringify(payload));
         delete clone._updated_at;
+        stripSyncedImageData(clone);
         await ghPutFile(d.path, clone, 'Update ' + d.label + ' ' + today);
         // Clear local override for this one
         if (d.id === 'data')       { localStorage.removeItem(LS.DATA);    state.sources.data = 'server'; }
@@ -2094,11 +2149,17 @@
   // Edit-session image buffer. Populated on edit screen open, consumed on save.
   let _editorImages = [];
   function setEditorImages(arr) {
-    _editorImages = Array.isArray(arr) ? arr.map(x => ({ data: x.data || '', alt: x.alt || '', caption: x.caption || '' })) : [];
+    // Keep BOTH ref (synced, content-addressed file) and data (legacy/unsynced base64).
+    // An image is "pending upload" iff it has data but no ref.
+    _editorImages = Array.isArray(arr) ? arr.map(x => ({ data: x.data || '', ref: x.ref || '', alt: x.alt || '', caption: x.caption || '' })) : [];
     renderEditorImageGallery();
   }
   function getEditorImages() {
-    return _editorImages.filter(x => x && x.data).map(x => ({ data: x.data, alt: x.alt || '', caption: x.caption || '' }));
+    return _editorImages.filter(x => x && (x.ref || x.data)).map(x => {
+      const o = { alt: x.alt || '', caption: x.caption || '' };
+      if (x.ref) o.ref = x.ref; else o.data = x.data;  // ref wins; data only when not yet synced
+      return o;
+    });
   }
   function editorImageGalleryHTML() {
     return `
@@ -2122,7 +2183,7 @@
     }
     host.innerHTML = _editorImages.map((img, i) => `
       <div class="edit-image-item">
-        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data || img.ref)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         <input type="text" placeholder="caption (optional)" value="${escAttr(img.caption || '')}" oninput="window.__editImgCap(${i}, this.value)">
         <button class="btn btn-danger" onclick="window.__rmEditorImg(${i})" style="min-height:unset;padding:4px 8px;font-size:12px;width:100%;margin-top:4px">✕ Remove</button>
       </div>
@@ -2143,7 +2204,7 @@
     if (!images || !images.length) return '';
     return '<div class="attachments">' + images.map(img => `
       <figure class="attachment">
-        <img src="${escAttr(img.data)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data || img.ref)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         ${img.caption ? `<figcaption>${esc(img.caption)}</figcaption>` : ''}
       </figure>
     `).join('') + '</div>';
@@ -2492,7 +2553,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.25</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.0</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4825,7 +4886,13 @@
         }
       }
     }
-    status.textContent = 'Caching ' + images.length + ' slide images…';
+    // Also cache content-addressed article/notes/tips images (v3.8.0 image separation)
+    const contentImgs = [];
+    collectImages(state.data, contentImgs);
+    collectImages(state.notes, contentImgs);
+    collectImages(state.tips, contentImgs);
+    for (const img of contentImgs) if (img.ref) images.push(img.ref);
+    status.textContent = 'Caching ' + images.length + ' images…';
     // Phase 3: Parallel fetch in batches — track ok vs fail
     const BATCH = 16;
     let done = 0, imgOk = 0, imgFail = 0;
