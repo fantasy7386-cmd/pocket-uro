@@ -1237,6 +1237,11 @@
   /* ======================================================
      State
   ====================================================== */
+  // Gates router() until loadCore() has populated state. Without it, an iOS PWA
+  // restoring its last hash on cold start fires hashchange -> router() mid-boot,
+  // before data is loaded, and render throws on null state. This was the v3.7.25
+  // white-screen ("null is not an object (evaluating 'state.tips.sections')").
+  let coreReady = false;
   const state = {
     data: null,       // {categories, articles, glossary, ...}
     notes: null,      // {sections, ...}
@@ -2266,6 +2271,10 @@
   }
 
   function router() {
+    // Boot race guard: ignore hashchange-driven routing until core data is ready.
+    // boot() invokes router() itself once loadCore() resolves, so the correct route
+    // (incl. an iOS-restored hash) still renders — just after state exists.
+    if (!coreReady) return;
     const { parts, query } = parseHash();
     const module = parts[0];
 
@@ -2483,7 +2492,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.24</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.7.25</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4917,6 +4926,7 @@
   ====================================================== */
   async function boot() {
     loadFavs();
+    viewEl().innerHTML = '<div class="placeholder"><div class="big">⏳</div><small>載入中…</small></div>';
     try {
       await loadCore();
     } catch (e) {
@@ -4924,6 +4934,7 @@
       console.error(e);
       return;
     }
+    coreReady = true;
     router();
   }
 
