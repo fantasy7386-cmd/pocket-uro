@@ -2342,7 +2342,7 @@
     try {
       if (!module) return renderHome();
       if (module === 'favorites') return renderFavorites();
-      if (module === 'search') return renderSearch(query.q || '', query.only || '');
+      if (module === 'search') return renderSearch(query.q || '', query.only || '', query.scope || '');
       if (module === 'sync') return renderSyncPanel();
       if (module === 'hjh') return renderHJHBrowse();
       if (module === 'education') return routeEducation(parts.slice(1), query);
@@ -2553,7 +2553,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.0</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.1</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2628,6 +2628,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('edu')}
         <div class="list-section">
           ${cats.map(c => `
             <a class="list-card" href="#/education/c/${esc(c.id)}">
@@ -2656,6 +2657,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('edu:' + catId)}
         <h2 style="font-size:20px;margin-bottom:4px">${esc(cat.name_en)}</h2>
         <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${esc(cat.name_zh)} · ${articles.length} articles</div>
         <div class="list-section">
@@ -2865,6 +2867,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('notes')}
         ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
         <div class="list-section">
           ${sections.map((s, i) => `
@@ -3174,6 +3177,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('tips')}
         ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
         <div class="list-section">
           ${state.tips.sections.map(s => `
@@ -3200,6 +3204,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('tips:' + chapterId)}
         <h2 style="font-size:20px;margin-bottom:12px">${titleWithTags(chapter.full_title)}</h2>
         <div class="list-section">
           ${subs.map((sub, i) => `
@@ -3472,6 +3477,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('tb:' + tbId)}
         <h2 style="font-size:21px;margin-bottom:12px;display:flex;align-items:center;gap:10px"><span style="color:var(--accent)">${TB_CHAPTER_ICONS[tbId] || ''}</span><span>${esc(ch.number)}. ${esc(ch.title)}</span></h2>
         <div class="list-section">
           ${(ch.sections || []).map((s, i) => `
@@ -3503,6 +3509,7 @@
     viewEl().innerHTML = `
       <div class="module-view" style="--module-accent:${accent}">
         <div class="module-header-strip" style="--accent:${accent}"></div>
+        ${scopeSearchBox('tb:' + tbId + ':' + secIdx)}
         <h2 style="font-size:20px;margin-bottom:4px">${esc(sec.title)}</h2>
         ${dirty ? '<div style="color:var(--c-warning);font-size:12px;margin-bottom:8px">⚠ Local changes (unsynced)</div>' : ''}
         <div style="color:var(--c-text-muted);font-size:13px;margin-bottom:12px">${(sec.topics || []).length} topics · from ${esc(sec.source_file || '')}</div>
@@ -4253,9 +4260,11 @@
   /* ======================================================
      Global search
   ====================================================== */
-  function renderSearch(q, onlyModule) {
+  function renderSearch(q, onlyModule, scope) {
     setHeader('Search', { label: 'Home', href: '#/' });
     const only = onlyModule || '';
+    const scopeStr = scope || '';
+    const scLabel = scopeLabel(scopeStr);
     const filterChips = MODULES.map(m => `
       <button class="search-filter-chip ${only === m.id ? 'active' : ''}" style="--chip-accent:${m.accent}" onclick="window.__setSearchFilter('${m.id}')">
         ${m.icon} ${esc(m.name)}
@@ -4272,12 +4281,20 @@
       </div>
     ` : '';
 
+    const scopeChipHtml = scopeStr ? `
+      <div style="margin:8px 0;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--c-text-muted)">範圍:</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:14px;padding:3px 6px 3px 10px;font-size:12px;font-weight:600">
+          ${esc(scLabel)}
+          <button onclick="window.__clearSearchScope()" title="移除範圍,搜尋全部" style="border:none;background:none;cursor:pointer;font-size:15px;line-height:1;color:var(--c-text-muted);padding:0 2px">×</button>
+        </span>
+      </div>` : '';
     viewEl().innerHTML = `
       <div class="search-bar-wrap">
-        <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="Search all modules… (multi-word = AND)" autocomplete="off" autofocus>
+        <input class="search-bar" id="search-input" value="${escAttr(q)}" placeholder="${scopeStr ? '在「' + escAttr(scLabel) + '」內搜尋…' : 'Search all modules… (multi-word = AND)'}" autocomplete="off" autofocus>
         <button class="search-clear" id="search-clear" type="button" aria-label="Clear search"${q ? '' : ' hidden'}>×</button>
       </div>
-      <div class="search-filters">${filterChips}</div>
+      ${scopeStr ? scopeChipHtml : '<div class="search-filters">' + filterChips + '</div>'}
       ${loadAllBar}
       <div id="search-results"></div>
     `;
@@ -4288,6 +4305,7 @@
       const params = [];
       if (v) params.push('q=' + encodeURIComponent(v));
       if (only) params.push('only=' + only);
+      if (scopeStr) params.push('scope=' + encodeURIComponent(scopeStr));
       const hash = '#/search' + (params.length ? '?' + params.join('&') : '');
       // Use history.replaceState (does NOT fire hashchange) instead of
       // location.replace (fires hashchange → router → renderSearch → input
@@ -4296,7 +4314,7 @@
       if (location.hash !== hash) {
         history.replaceState(null, '', (location.pathname + location.search + hash));
       }
-      doSearch(v, only);
+      doSearch(v, only, scopeStr);
     };
     input.addEventListener('input', () => {
       clearBtn.hidden = !input.value;
@@ -4321,8 +4339,16 @@
       syncQueryAndSearch('');
       input.focus();
     });
-    doSearch(q, only);
+    doSearch(q, only, scopeStr);
   }
+
+  window.__clearSearchScope = function() {
+    const cur = new URLSearchParams(location.hash.split('?')[1] || '');
+    const qs = new URLSearchParams();
+    if (cur.get('q')) qs.set('q', cur.get('q'));
+    const s = qs.toString();
+    location.hash = '#/search' + (s ? '?' + s : '');
+  };
 
   window.__setSearchFilter = function(moduleId) {
     const qs = new URLSearchParams();
@@ -4345,10 +4371,53 @@
     router();
   };
 
-  function doSearch(q, onlyModule) {
+  // Scoped search (v3.8.1): scope = "<kind>[:<id1>[:<id2>]]"
+  //   edu | edu:<catId> | notes | tips | tips:<chapterId> | tb:<tbId> | tb:<tbId>:<secIdx>
+  const SCOPE_MOD = { edu: 'education', notes: 'notes', tips: 'tips', tb: 'textbook' };
+  function parseScope(scope) {
+    if (!scope) return null;
+    const p = String(scope).split(':');
+    if (!SCOPE_MOD[p[0]]) return null;
+    return { kind: p[0], mod: SCOPE_MOD[p[0]], id1: p[1] || '', id2: p[2] };
+  }
+  function scopeLabel(scope) {
+    const sc = parseScope(scope);
+    if (!sc) return '';
+    if (sc.kind === 'edu') {
+      if (!sc.id1) return 'Patient Education';
+      const c = (state.data.categories || []).find(x => x.id === sc.id1);
+      return 'Patient Ed › ' + (c ? (c.name || c.name_en || sc.id1) : sc.id1);
+    }
+    if (sc.kind === 'notes') return 'PPu Notes';
+    if (sc.kind === 'tips') {
+      if (!sc.id1) return 'Tips & Guide';
+      const ch = (state.tips.sections || []).find(s => s.id === sc.id1);
+      return 'Tips › ' + (ch ? titlePlain(ch.title) : sc.id1);
+    }
+    if (sc.kind === 'tb') {
+      const ch = state.tb[sc.id1];
+      const name = ch ? ch.title : sc.id1;
+      if (sc.id2 === undefined) return 'Textbook › ' + name;
+      const sec = ch && ch.sections && ch.sections[parseInt(sc.id2, 10)];
+      return 'Textbook › ' + name + (sec ? ' › ' + sec.title : '');
+    }
+    return '';
+  }
+
+  // A tap-target that looks like a search field; jumps to the search page pre-scoped.
+  function scopeSearchBox(scope) {
+    return '<button onclick="window.__goScopeSearch(\'' + escAttr(scope) + '\')" style="width:100%;display:flex;align-items:center;gap:8px;padding:9px 12px;margin-bottom:10px;background:var(--c-surface-alt);border:1px solid var(--c-border);border-radius:8px;color:var(--c-text-muted);font-size:13px;cursor:pointer;text-align:left">'
+      + '<span style="font-size:15px">🔎</span><span>在「' + esc(scopeLabel(scope)) + '」內搜尋…</span></button>';
+  }
+  window.__goScopeSearch = function(scope) {
+    location.hash = '#/search?scope=' + encodeURIComponent(scope);
+  };
+
+  function doSearch(q, onlyModule, scope) {
     const host = el('search-results');
     if (!host) return;
     const only = onlyModule || '';
+    const sc = parseScope(scope);
     if (!q || q.length < 2) {
       host.innerHTML = '<div class="placeholder"><div class="big">🔎</div><strong>Type 2+ characters to search</strong><small>Multi-word query = AND match (all words must appear)</small></div>';
       return;
@@ -4362,7 +4431,8 @@
     // Strip data URLs (from embedded images) from search haystack so base64
     // doesn't pollute matches or preview snippets.
     const stripDataUrls = (s) => (s || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '[image]');
-    for (const a of state.data.articles) {
+    if (!sc || sc.kind === 'edu') for (const a of state.data.articles) {
+      if (sc && sc.id1 && a.category !== sc.id1) continue;
       const textForSearch = stripDataUrls(a.text);
       const hay = a.title + ' ' + textForSearch + ' ' + (a.keywords || []).join(' ');
       if (matchAllTerms(hay, terms)) {
@@ -4375,7 +4445,7 @@
       }
     }
     // PPu Notes
-    for (const s of state.notes.sections) {
+    if (!sc || sc.kind === 'notes') for (const s of state.notes.sections) {
       const notesForSearch = stripDataUrls(s.notes);
       const flat = s.full_title + ' ' + (s.subsections || []).map(sub => sub.title + ' ' + (sub.items || []).join(' ')).join(' ') + ' ' + notesForSearch;
       if (matchAllTerms(flat, terms)) {
@@ -4383,7 +4453,8 @@
       }
     }
     // Tips & Guide
-    for (const chapter of state.tips.sections) {
+    if (!sc || sc.kind === 'tips') for (const chapter of state.tips.sections) {
+      if (sc && sc.id1 && chapter.id !== sc.id1) continue;
       for (const sub of (chapter.subsections || [])) {
         const subMdForSearch = stripDataUrls(sub.markdown);
         const hay = sub.title + ' ' + subMdForSearch;
@@ -4401,9 +4472,13 @@
     // topic into ONE result (using the first match only). Now pushes one result
     // PER matching slide so users see all hit locations. Topic-level match
     // (title/notes/markdown only, no slide hits) still pushes a single result.
-    for (const tbId of Object.keys(state.tb)) {
+    if (!sc || sc.kind === 'tb') for (const tbId of Object.keys(state.tb)) {
+      if (sc && sc.id1 && tbId !== sc.id1) continue;
       const ch = state.tb[tbId];
-      for (const sec of (ch.sections || [])) {
+      const secs = ch.sections || [];
+      for (let seci = 0; seci < secs.length; seci++) {
+        if (sc && sc.id2 !== undefined && seci !== parseInt(sc.id2, 10)) continue;
+        const sec = secs[seci];
         for (const t of (sec.topics || [])) {
           let slideMatchCount = 0;
 
@@ -4438,9 +4513,10 @@
       }
     }
 
-    // Apply module filter
+    // Apply scope (finer) or module filter
     let visibleModules = MODULES;
-    if (only) visibleModules = MODULES.filter(m => m.id === only);
+    if (sc) visibleModules = MODULES.filter(m => m.id === sc.mod);
+    else if (only) visibleModules = MODULES.filter(m => m.id === only);
     const visibleIds = visibleModules.map(m => m.id);
 
     const total = visibleIds.reduce((a, id) => a + results[id].length, 0);
