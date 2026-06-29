@@ -2553,7 +2553,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.2</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.3</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -4779,10 +4779,10 @@
           Loaded chapters: <strong>${Object.keys(state.tb).length} / ${TB_CHAPTER_IDS.length}</strong>
         </div>
         <div class="action-bar" style="margin:0">
-          <button class="btn btn-primary btn-block" id="btn-download-all" onclick="window.__downloadAll()">Download all for offline</button>
+          <button class="btn btn-primary btn-block" id="btn-download-all" onclick="window.__downloadAll()">${localStorage.getItem('puro_offline_dl') ? '✓ Offline ready · Re-download' : 'Download all for offline'}</button>
         </div>
         <div class="dl-progress" id="dl-progress" style="display:none"><div class="dl-progress-bar" id="dl-progress-bar"></div></div>
-        <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px"></div>
+        <div id="dl-status" style="font-size:12px;color:var(--c-text-muted);margin-top:6px">${localStorage.getItem('puro_offline_dl') ? esc(localStorage.getItem('puro_offline_dl')) : ''}</div>
       </div>
       ${admin ? `
       <div class="sync-panel">
@@ -4957,7 +4957,7 @@
       for (const sec of (ch.sections || [])) {
         for (const t of (sec.topics || [])) {
           for (const s of (t.slides || [])) {
-            if (!s.hidden && s.slide_image) images.push(s.slide_image);
+            if (s.slide_image) images.push(s.slide_image);  // include hidden(補充) slides so they cache offline too
           }
         }
       }
@@ -4987,11 +4987,13 @@
     const summary = '✓ ' + imgOk + ' images cached' +
       (imgFail ? ' · ⚠ ' + imgFail + ' failed' : '') +
       (jsonFail ? ' · ⚠ ' + jsonFail + ' chapter JSONs failed' : '');
-    status.textContent = summary + '. App offline-ready.';
+    const stamp = summary + ' · ' + new Date().toLocaleString();
+    status.textContent = stamp;
+    try { localStorage.setItem('puro_offline_dl', stamp); } catch (e) {}
     if (imgFail + jsonFail === 0) showToast('Offline cache complete', 'success');
     else showToast('Cache partial — ' + (imgFail + jsonFail) + ' failures', 'error', { duration: 4000 });
     btn.disabled = false;
-    btn.textContent = '✓ Done — redownload';
+    btn.textContent = '✓ Offline ready · Re-download';
   };
 
   window.__exportJSON = function(key) {
