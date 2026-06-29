@@ -1,6 +1,12 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v3.8.1';
+const CACHE_VERSION = 'pocket-uro-v3.8.2';
+// Immutable, content-addressed assets (textbook webp + images/content/*). Kept in a
+// SEPARATE, unversioned cache that SURVIVES version bumps — so updating the app no
+// longer wipes the user's downloaded-for-offline images. Before v3.8.2 everything
+// shared CACHE_VERSION, so every bump (v3.7.24→v3.8.1 was 4 of them) deleted the
+// ~155 MB of downloaded slides and forced a full re-download.
+const ASSET_CACHE = 'pocket-uro-assets';
 // v3.7.1: evict oldest entries when cache.put fails with QuotaExceededError.
 // iOS Safari quota is ~50MB per origin. Without this, once full, new writes
 // silently fail and fresh content never reaches the cache.
@@ -37,7 +43,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(
-        keys.filter(k => k !== CACHE_VERSION).map(k => caches.delete(k))
+        // Delete old versioned caches, but KEEP the immutable asset cache so
+        // downloaded offline images persist across app updates.
+        keys.filter(k => k !== CACHE_VERSION && k !== ASSET_CACHE).map(k => caches.delete(k))
       ))
   );
 });
@@ -89,14 +97,15 @@ self.addEventListener('fetch', (event) => {
   }
 });
 
-async function putWithQuotaFallback(request, response) {
+async function putWithQuotaFallback(request, response, cacheName) {
+  const name = cacheName || CACHE_VERSION;
   try {
-    const cache = await caches.open(CACHE_VERSION);
+    const cache = await caches.open(name);
     await cache.put(request, response);
   } catch (e) {
     // Quota exceeded: evict oldest entries (FIFO by match order) then retry once.
     try {
-      const cache = await caches.open(CACHE_VERSION);
+      const cache = await caches.open(name);
       const keys = await cache.keys();
       const evictTargets = keys.slice(0, MAX_EVICT_PER_FAILURE);
       await Promise.all(evictTargets.map(k => cache.delete(k)));
@@ -114,7 +123,8 @@ function cacheFirst(request) {
     if (cached) return cached;
     return fetch(request).then(resp => {
       if (resp.ok) {
-        putWithQuotaFallback(request, resp.clone());
+        // Immutable assets go to the persistent ASSET_CACHE (survives version bumps).
+        putWithQuotaFallback(request, resp.clone(), ASSET_CACHE);
       }
       return resp;
     });
@@ -125,7 +135,7 @@ function staleWhileRevalidate(request) {
   return caches.match(request).then(cached => {
     const fresh = fetch(request).then(resp => {
       if (resp.ok) {
-        putWithQuotaFallback(request, resp.clone());
+        putWithQuotaFallback(request, resp.clone(), CACHE_VERSION);
       }
       return resp;
     });
