@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-13",
+  "updated": "2026-07-14",
   "total_sections": 13,
   "total_subsections": 68,
   "sections": [
@@ -218,7 +218,8 @@
         {
           "id": "tg_07_01",
           "title": "A. TEP（腹股溝疝氣修補）",
-          "markdown": "#### 新哥 TEP `[新哥]`\n1. **術前 Foley**\n2. 立正，**bending 15°**\n3. **不 towel clip**\n4. **Mono Hook**\n5. 30° 鏡 → 開右邊的話**從左下往右上看**\n6. 棒棒只打一些些\n7. 傷口是**橫的**\n\n#### 小黃 TEP `[小黃]`\n1. Midline 有 **fat**，兩側是**肌肉**\n2. **Arcuate line 以下**沒有 posterior sheath\n3. Dissection **從血管底下**\n4. 5 mm 傷口**不關 subQ**\n\n#### 袁醫師 TEP `[袁醫師]`\n1. 傷口劃開之後用 **10 的 trocar** 搭配鏡子 **blunt dissect**\n2.（小黃是用棒棒）"
+          "markdown": "#### 新哥 TEP `[新哥]`\n1. **術前 Foley**\n2. 立正，**bending 15°**\n3. **不 towel clip**\n4. **Mono Hook**\n5. 30° 鏡 → 開右邊的話**從左下往右上看**\n6. 棒棒只打一些些\n7. 傷口是**橫的**\n\n#### 小黃 TEP `[小黃]`\n1. Midline 有 **fat**，兩側是**肌肉**\n2. **Arcuate line 以下**沒有 posterior sheath\n3. Dissection **從血管底下**\n4. 5 mm 傷口**不關 subQ**\n\n#### 袁醫師 TEP `[袁醫師]`\n1. 傷口劃開之後用 **10 的 trocar** 搭配鏡子 **blunt dissect**\n2. 小黃是用棒棒",
+          "images": []
         },
         {
           "id": "tg_07_02",
