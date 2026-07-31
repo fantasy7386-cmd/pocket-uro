@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "updated": "2026-07-31",
   "total_sections": 13,
-  "total_subsections": 68,
+  "total_subsections": 69,
   "sections": [
     {
       "id": "tg_01",
@@ -149,17 +149,20 @@
         {
           "id": "tg_05_02",
           "title": "B. URS",
-          "markdown": "#### 進入技巧\n- URS 進去的時候要有點 **hyperextension**（手往病人頭側進）\n\n#### URS 操作 `[小黃]`\n1. 膀胱鏡用**短橋**\n2. 放 urethral catheter **不用斷頭**；guidewire 留著，用膀胱鏡放，直接走旁邊（膀胱鏡也不用穿 guidewire）"
+          "markdown": "#### 進入技巧\n- URS 進去的時候要有點 **hyperextension**（手往病人頭側進）\n- 進UO時有點向外再向內\n\n#### URS 操作 `[小黃]`\n1. 膀胱鏡用**短橋**\n2. 放 urethral catheter **不用斷頭**；guidewire 留著，用膀胱鏡放，直接走旁邊（膀胱鏡也不用穿 guidewire）",
+          "images": []
         },
         {
           "id": "tg_05_03",
           "title": "C. URSSM `[小黃]` — 16 條操作要點",
-          "markdown": "1. Guidewire **不要進太多**（UO），黑頭 junction 進一些就好 → 進太多鏡子就無法壓著進去（因為 guidewire 是硬的，只有前頭是軟的）\n2. 進 UO 時 **rotate** 到一個可以看到 lumen 的角度進去\n3. 一進去就要**往外側走**；往上翹鏡子的時候不要原地翹，要**同時有前後的位移**\n4. 有石頭**不要用針筒打水！**\n5. **水的收放很重要**：看到石頭可以開一點水打 → 打到粉塵很多時可以放水（放水的 timing 也能打）→ 但不要放到扁掉\n6. 重新開水的時候**也不要開太快**\n7. 雷射在打的時候 operator **要閉氣**（像相機快門防手震一樣）\n8. **只要有糊就不要打**\n9. 輸尿管結石瓦數：**1J 10Hz 開始**；慢慢上調，最好**不要超過 15–18 W**\n10. **壓著打**；如果都碎碎的，可以把 fiber 放在中間打（像 RIRS 的 popcorn effect）\n11. 打到跟 fiber 略相同大的碎石即可\n12. **配合病人的呼吸打**\n13. 磨到 mucosa 抖一抖，不一定要用針筒打，**用針筒反抽也可以！**\n14. CCD **請用 free**\n15. 石頭**不要在 fold 的地方打**；可考慮推上去\n16. 放 DBJ 膀胱不要太脹\n\n#### 補充雷射參數\n- 輸尿管雷射基本上就是 **1 × 10** 能量，不要 over 1.2"
+          "markdown": "1. Guidewire **不要進太多**（UO），黑頭 junction 進一些就好 → 進太多鏡子就無法壓著進去（因為 guidewire 是硬的，只有前頭是軟的）\n2. 進 UO 時 **rotate** 到一個可以看到 lumen 的角度進去\n3. 一進去就要**往外側走**；往上翹鏡子的時候不要原地翹，要**同時有前後的位移**\n4. 有石頭**不要用針筒打水！**\n5. **水的收放很重要**：看到石頭可以開一點水打 → 打到粉塵很多時可以放水（放水的 timing 也能打）→ 但不要放到扁掉\n6. 重新開水的時候**也不要開太快**\n7. 雷射在打的時候 operator **要閉氣**（像相機快門防手震一樣）\n8. **只要有糊就不要打**\n9. 輸尿管結石瓦數：**1J 10Hz 開始**；慢慢上調，最好**不要超過 15–18 W**\n10. **壓著打**；如果都碎碎的，可以把 fiber 放在中間打（像 RIRS 的 popcorn effect）\n11. 打到跟 fiber 略相同大的碎石即可\n12. **配合病人的呼吸打**\n13. 磨到 mucosa 抖一抖，不一定要用針筒打，**用針筒反抽也可以！**\n14. CCD **請用 free**\n15. 石頭**不要在 fold 的地方打**；可考慮推上去\n16. 放 DBJ 膀胱不要太脹\n17. 旋轉URS, 讓laser 從12點鐘出來，壓著stone\n\n#### 補充雷射參數\n- 輸尿管雷射基本上就是 **1 × 10** 能量，不要 over 1.2",
+          "images": []
         },
         {
           "id": "tg_05_04",
           "title": "D. RIRS",
-          "markdown": "- **時間限制**：最好不要 over **1 hr**；endoscope surgery 最好不要 over **2 hr**\n- **水壓**：從 **150** start，不要 over **300**\n- PUL 量：大約 **2.5–3.0 cm**（Veru 到 bladder neck） `[闕P]`"
+          "markdown": "- **時間限制**：最好不要 over **1 hr**；endoscope surgery 最好不要 over **2 hr**\n- **水壓**：從 **150** start，不要 over **300** mmHg\n- PUL 量：大約 **2.5–3.0 cm**（Veru 到 bladder neck） `[闕P]`",
+          "images": []
         },
         {
           "id": "tg_05_05",
@@ -175,7 +178,8 @@
         {
           "id": "tg_05_07",
           "title": "G. 膀胱碎石 `[小黃]`",
-          "markdown": "1. 用 **lithoclast**；用**拿鉛筆的手勢**\n2. **24 Fr Sheath** 直接 engage；前端 sharp → 如果用看進去的會磨傷\n3. 用 sheath & litho **夾住石頭**；中間敲碎，敲出不光滑面；litho **不要伸出去太長**"
+          "markdown": "1. 用 **lithoclast**；用**拿鉛筆的手勢**\n2. **24 Fr Sheath** 直接 engage；前端 sharp → 如果用看進去的會磨傷\n3. 用 sheath & litho **夾住石頭**；中間敲碎，敲出不光滑面；litho **不要伸出去太長**\n\n雷射：\n1. 去雕刻；不用要壓著石頭\n2. 注意不要一直壓著不然背後mucosa會一直磨",
+          "images": []
         },
         {
           "id": "tg_05_08",
@@ -249,6 +253,12 @@
               "ref": "images/content/a08bf8090bc18024.jpg"
             }
           ]
+        },
+        {
+          "id": "tg_07_1785511207656",
+          "title": "RALNUx",
+          "markdown": "1. 打洞同PN\n2. 找gonadol and ureter",
+          "images": []
         }
       ]
     },
