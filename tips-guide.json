@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-14",
+  "updated": "2026-07-31",
   "total_sections": 13,
   "total_subsections": 68,
   "sections": [
@@ -205,7 +205,8 @@
         {
           "id": "tg_06_02",
           "title": "PCNL",
-          "markdown": "#### 苑如 PCNL `[苑如]`\n1. **Bulls eye puncture** with 壓克力板（needle holder）\n2. 14 cm − 量的深度 = 要來 mark 的長度\n   - Dilator 要 mark\n   - Balloon 的 balloon mark（**並非從 tip**）\n   - 30 Fr 的吸管標記深度（**從 tip**）\n   - OP site 貼紙留一小段\n3. Amplatz **8-10-12 Fr** dilator, and **balloon to 20 atm for 3 min** → release to **5 atm**\n4. Cook single J 組裝：guide wire 從硬頭進 → 夾住 → pusher → 夾住\n5. Spogosan：加水 **8 ml** 開始搖 → 放入 **10 ml** 空針\n6. **10 Fr 小兒 Foley** 放到 renal pelvis 塞住 → 在 Foley and Amplatz 之間打入 Spogosan\n\n#### 小黃 PCNL `[小黃]`\n1. 要 **C-arm**\n2. 病人要**往下拉**，才能照"
+          "markdown": "#### 苑如 PCNL `[苑如]`\n1. **Bulls eye puncture** with 壓克力板（needle holder）\n2. 14 cm − 量的深度 = 要來 mark 的長度\n   - Dilator 要 mark\n   - Balloon 的 balloon mark（**並非從 tip**）\n   - 30 Fr 的吸管標記深度（**從 tip**）\n   - OP site 貼紙留一小段\n3. Amplatz **8-10-12 Fr** dilator, and **balloon to 20 atm for 3 min** → release to **5 atm**\n4. Cook single J 組裝：guide wire 從硬頭進 → 夾住 → pusher → 夾住\n5. Spogosan：加水 **8 ml** 開始搖 → 放入 **10 ml** 空針\n6. **10 Fr 小兒 Foley** 放到 renal pelvis 塞住 → 在 Foley and Amplatz 之間打入 Spogosan\n\n#### 小黃 PCNL `[小黃]`\n1. 要 **C-arm**（for residual stone)\n2. 病人要**往下拉**，才能照。脂肪墊要靠施作的那一側。\n3. 雲林都是先放7Fr DBJ + 18 Fr 3-way Foley(Foley 要綁）；打進renal pelvis 後再鬆開\n4. Puncture site 抓12 肋末端的tip (但還是看術前KUB看相對位置）\n5. 最好還是從upper calyx進。puncture needle進之後，guide wire留著，走URS，確定tract, 在腎臟內再把guide wire重新放到UPJ(如果可以，為了確保路可以進；放到upper ureter更好）。\n6. Dilate 從8-10-12-14；放14之前要有內管藍硬條。接著用balloon dilator to 20 atm\n7. Amplaz長度從tip算；balloon長度只量balloon\n8. 腎臟鏡的camera要up side down\n9. 要適時旋轉Amplaz去壓迫bleeders (30 Fr)\n10. 傷口要斜劃1cm;刀背頂著guide wire; 上方的切口較長",
+          "images": []
         }
       ]
     },
