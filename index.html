@@ -2274,21 +2274,74 @@
       breaks: false,
       tables: true,
     });
+    // GFM strikethrough accepts a SINGLE tilde (`~text~`), but our Chinese
+    // patient-education text uses `~` as a numeric range separator ("術後2~3天",
+    // "1~2 小時"). Two of those in one paragraph silently struck out everything
+    // between them. This inline extension runs before the built-in `del`
+    // tokenizer and consumes a lone `~` as a literal character; a proper
+    // `~~strikethrough~~` is passed through untouched.
+    marked.use({
+      extensions: [{
+        name: 'literalTilde',
+        level: 'inline',
+        start(src) { const i = src.indexOf('~'); return i < 0 ? undefined : i; },
+        tokenizer(src) {
+          if (/^~~(?=[^\s~])/.test(src)) return;  // real strikethrough — let `del` handle it
+          if (src[0] === '~') return { type: 'literalTilde', raw: '~', text: '~' };
+        },
+        renderer() { return '~'; },
+      }],
+    });
     markedConfigured = true;
+  }
+  // Patient-education articles are plain text lifted from printed NTUH handouts,
+  // where a line-leading "1." is the handout's own numbering, not Markdown list
+  // syntax. Parsing it as Markdown merged the TURP handout's four separately
+  // numbered sections into one <ol> and renumbered it 1-41, so "肆、出院後 1."
+  // reached the patient as "30." — a patient following step "30." is reading the
+  // wrong instruction. Escaping the marker keeps the printed numbering exact.
+  // Only ORDERED markers are escaped: "-" bullets carry no numbering to corrupt,
+  // and 71 of them are real Markdown in the hand-written 專題系列 articles.
+  // "---" is untouched (no space after the dash) so it still becomes <hr>.
+  // PDF extraction also stranded lone "➢" bullets on their own line (7 times, all
+  // in the 凱格爾運動 section). Now that single newlines are honoured those would
+  // render as an empty bullet row above its own sentence, so rejoin them —
+  // display-only repair of a source defect, same as normalizeData() does for the
+  // PPu Notes roman numbering. Markdown's own -*+ markers are excluded.
+  const ORPHAN_BULLET = /^[ \t]*[▶➢●○■□•‣⁃·◆◇★☆]{1,2}[ \t]*$/;
+  function escapeSourceLayout(md) {
+    const lines = md.split('\n');
+    const out = [];
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      if (ORPHAN_BULLET.test(line) && lines[i + 1] && lines[i + 1].trim()) {
+        line = line.trim() + ' ' + lines[i + 1].trim();
+        i++;
+      }
+      out.push(line.replace(/^([ \t]*)(\d{1,9})([.)])(?=[ \t])/, '$1$2\\$3'));
+    }
+    return out.join('\n');
   }
   // Cache last parse result. Helps when same content re-renders on back/forward
   // or after an image add doesn't change the markdown. Cache size 1 is enough
   // because view mode shows one doc at a time.
-  let _renderMdCache = { md: null, html: null };
-  function renderMd(md) {
+  let _renderMdCache = { key: null, html: null };
+  function renderMd(md, opts) {
     if (typeof marked === 'undefined') return '<pre>' + esc(md) + '</pre>';
-    if (md === _renderMdCache.md) return _renderMdCache.html;
+    const literal = !!(opts && opts.literal);
+    const key = (literal ? 'L\n' : 'M\n') + md;
+    if (key === _renderMdCache.key) return _renderMdCache.html;
     configureMarked();
-    const parsed = marked.parse(md || '');
-    const html = parsed.replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) => {
+    // Literal mode also honours the source's single newlines (breaks) and skips
+    // the [name] doctor-tag chip — that's a Tips & Guide convention and it
+    // mis-fires on handout prose like "[角色] 化學治療在…".
+    const parsed = literal
+      ? marked.parse(escapeSourceLayout(md || ''), { breaks: true })
+      : marked.parse(md || '');
+    const html = literal ? parsed : parsed.replace(/\[([^\[\]\n]{1,12})\]/g, (m, txt) => {
       return '<span class="doctor-tag">' + esc(txt) + '</span>';
     });
-    _renderMdCache = { md, html };
+    _renderMdCache = { key, html };
     return html;
   }
 
@@ -2553,7 +2606,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.3</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.4</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
@@ -2707,7 +2760,7 @@
     // Patient Ed body is Markdown (v3.6.3+); images stored separately in
     // a.images[] (v3.7.0+). Legacy inline data URLs (from v3.6.2-v3.6.7) are
     // migrated to a.images on first edit but still render inline if present.
-    const bodyHTML = '<div class="markdown-body">' + renderMd(a.text || '') + '</div>';
+    const bodyHTML = '<div class="markdown-body">' + renderMd(a.text || '', { literal: true }) + '</div>';
     const attachmentsHTML = renderAttachments(a.images);
     const titleHTML = highlight ? highlightText(a.title, highlight) : esc(a.title);
     const textCharCount = (a.text || '').replace(/!\[[^\]]*\]\(data:[^)]+\)/g, '').length;
