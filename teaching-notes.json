@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-05-10",
+  "updated": "2026-08-02",
   "author": "PPu Teaching Faculty",
   "total_sections": 14,
   "sections": [
@@ -439,13 +439,15 @@
           "title": "3. PHI Cutoff Values (Evidence-Based, Updated 2026)",
           "items": [
             "PHI = (p2PSA / fPSA) × √tPSA. FDA approved (2012) for PSA 4-10 ng/mL with negative DRE.",
-            "**EAU 2025:** PHI &gt; 30 as MRI/biopsy threshold (avoids 25% unnecessary MRI, misses 8% GG2+).",
+            "**EAU 2025:** PHI > 30 as MRI/biopsy threshold (avoids 25% unnecessary MRI, misses 8% GG2+).",
             "**Meta-analysis (2022, n=14,255):** Sensitivity 0.874, Specificity 0.569 for csPCa. AUC 0.76.",
             "**PHID (PHI density = PHI / prostate volume):** Emerging marker. Taiwan multicenter studies (Chang 2024, Chiu 2021) showed PHID superior to PHI for csPCa detection.",
             "**Consensus:** NCCN, AUA, EAU all emphasize PHI should be combined with MRI, DRE, and clinical parameters for shared decision-making — not used in isolation."
           ]
         }
-      ]
+      ],
+      "notes": "",
+      "images": []
     },
     {
       "id": "tn_1778395222236",
