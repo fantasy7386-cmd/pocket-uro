@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-31",
+  "updated": "2026-08-03",
   "total_sections": 13,
   "total_subsections": 69,
   "sections": [
@@ -204,7 +204,8 @@
         {
           "id": "tg_06_01",
           "title": "PCN（經皮腎造廔術）",
-          "markdown": "#### 適應症\n1. Stone with fever\n2. Hydro with fever\n3. Hydro with AKI\n\n#### 禁忌症\n1. Anticoagulant and low platelet\n\n#### 操作要點\n- PCN 圈起來 25 cm，放硬管 30 cm\n- 推 guide wire：大約推 **5 次**，每次 **5 公分**（共 25 cm）\n- 更換 PCN 時：鐵條再入 **7–8 公分**時拔除，勾勾 **5–7 公分**\n\n#### 更換原則\n- Nephrostomy 的 PCN → **隨時都能換**\n- Bladder 的 → 至少等 **6 months** 再直接換（不然要加上 guidewire）"
+          "markdown": "#### 適應症\n1. Stone with fever\n2. Hydro with fever\n3. Hydro with AKI\n\n#### 禁忌症\n1. Anticoagulant and low platelet\n\n#### 操作要點\n- PCN 圈起來 25 cm，放硬管 30 cm\n- 推 guide wire：大約推 **5 次**，每次 **5 公分**（共 25 cm）\n- 更換 PCN 時：鐵條再入 **7–8 公分**時拔除，勾勾 **5–7 公分**\n\n#### 更換原則\n- Nephrostomy 的 PCN → **隨時都能換**\n- Bladder 的 → 至少等 **6 weeks** 再直接換（不然要加上 guidewire）",
+          "images": []
         },
         {
           "id": "tg_06_02",
