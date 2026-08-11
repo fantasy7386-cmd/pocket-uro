@@ -1887,7 +1887,16 @@
   }
 
   // ---- Image asset sync (v3.8.0): pending base64 images -> content-addressed files ----
-  async function sha256Hex(bytes) {
+  // v3.8.5: renamed from sha256Hex to sha256HexBytes. v3.8.0 introduced this
+  // Uint8Array variant under the SAME name as the string-hashing sha256Hex()
+  // used by verifyAdminAuth() (~line 1152). Both are plain function declarations
+  // in one scope, so this later one silently WON — and verifyAdminAuth() then
+  // handed a string to crypto.subtle.digest(), which throws
+  // "2nd argument is not instance of ArrayBuffer...". Admin password sign-in has
+  // therefore been broken since v3.8.0; nobody noticed because an already-stored
+  // puro_admin_unlocked='yes' skips the password path entirely. Clearing site
+  // data or reinstalling the PWA would have locked the admin out.
+  async function sha256HexBytes(bytes) {
     const buf = await crypto.subtle.digest('SHA-256', bytes);
     return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
   }
@@ -1905,20 +1914,32 @@
       for (const v of Object.values(node)) if (v && typeof v === 'object') collectImages(v, out);
     }
   }
+  // v3.8.5: upload ONE base64 data URL to its content-addressed path and return
+  // the ref. Extracted from uploadPendingImages so the image picker can upload
+  // eagerly (see __mdImage) — that keeps base64 out of localStorage entirely.
+  // Returns null when the input isn't a base64 image data URL (caller decides
+  // whether that's fatal); throws on an actual upload failure.
+  async function uploadImageData(dataUrl) {
+    const p = dataUriParts(dataUrl);
+    if (!p) return null;
+    const bytes = Uint8Array.from(atob(p.b64), c => c.charCodeAt(0));
+    const hash = (await sha256HexBytes(bytes)).slice(0, 16);
+    const ref = 'images/content/' + hash + '.' + p.ext;
+    await ghPutFile(ref, p.b64, 'Add image ' + hash, { rawBase64: true });
+    return ref;
+  }
   // Upload every {data, no ref} image to images/content/<hash>.<ext>, then set img.ref.
   // Keeps img.data so the admin's current view doesn't 404 before GitHub Pages rebuilds.
   // Throws on any upload failure BEFORE the dataset JSON is pushed -> JSON never references a missing file.
+  // Still needed after the eager-upload change: images added while offline, or
+  // whose eager upload failed, arrive here with data and no ref.
   async function uploadPendingImages(payload) {
     const imgs = []; collectImages(payload, imgs);
     let n = 0;
     for (const img of imgs) {
       if (img.ref || !img.data) continue;
-      const p = dataUriParts(img.data);
-      if (!p) continue;
-      const bytes = Uint8Array.from(atob(p.b64), c => c.charCodeAt(0));
-      const hash = (await sha256Hex(bytes)).slice(0, 16);
-      const ref = 'images/content/' + hash + '.' + p.ext;
-      await ghPutFile(ref, p.b64, 'Add image ' + hash, { rawBase64: true });
+      const ref = await uploadImageData(img.data);
+      if (!ref) continue;
       img.ref = ref;
       n++;
     }
@@ -2132,15 +2153,24 @@
   }
 
   // Dedup helper: merge an array from entity.images[] with freshly-migrated
-  // images, skipping duplicates by data URL. Used in every edit screen render
-  // to prevent double-add after legacy-migrate + re-save loops.
+  // images, skipping duplicates. Used in every edit screen render to prevent
+  // double-add after legacy-migrate + re-save loops.
+  //
+  // v3.8.5: an image is valid if it has EITHER inline base64 (`data`, not yet
+  // synced) OR a content-addressed `ref` (already synced — v3.8.0's
+  // stripSyncedImageData() DELETED its `data`). The old `if (!img.data) continue`
+  // silently dropped every synced image when an edit screen opened, and the
+  // following Save then wrote `entity.images = []` back — permanent loss.
+  // Dedup key must follow the same rule: `ref` first (it IS the content hash,
+  // so it is the stabler identity), falling back to the data URL.
   function dedupImages(arr) {
     const seen = new Set();
     const out = [];
     for (const img of (arr || [])) {
-      if (!img || !img.data) continue;
-      if (seen.has(img.data)) continue;
-      seen.add(img.data);
+      if (!img || (!img.data && !img.ref)) continue;
+      const key = img.ref || img.data;
+      if (seen.has(key)) continue;
+      seen.add(key);
       out.push(img);
     }
     return out;
@@ -2239,10 +2269,30 @@
         }
         const kb = Math.round(dataUrl.length * 0.75 / 1024);
         const alt = (file.name || 'image').replace(/\.[^.]+$/, '').slice(0, 40);
-        _editorImages.push({ data: dataUrl, alt, caption: '' });
+        // v3.8.5: upload NOW rather than at Sync time. A 1600px JPEG is ~0.5-1 MB
+        // as base64 and iOS caps localStorage around 5 MB, so 4-6 photos used to
+        // throw QuotaExceededError on Save ("localStorage 額度已滿"). Once the
+        // image has a ref, getEditorImages() persists ~40 bytes for it instead of
+        // the whole base64 string. Only attempted when a token is ALREADY stored
+        // (never prompts for a token mid-picker); any failure — offline, bad
+        // token, API error — silently falls back to the previous base64-only
+        // behaviour, and uploadPendingImages() retries it during Sync.
+        let ref = '';
+        if (localStorage.getItem(LS.TOKEN)) {
+          showToast('上傳圖片中…（' + kb + ' KB）');
+          try { ref = (await uploadImageData(dataUrl)) || ''; } catch (e) { ref = ''; }
+          // The upload is a network round-trip — re-check the buffer once more.
+          if (capturedBuffer !== _editorImages) {
+            showToast('編輯頁已切換，圖片未加入。', 'error', { duration: 4000 });
+            return;
+          }
+        }
+        _editorImages.push({ data: dataUrl, ref, alt, caption: '' });
         renderEditorImageGallery();
         markEditorDirty();
-        showToast('圖片已加入（約 ' + kb + ' KB），文字區不受影響', 'success');
+        showToast(ref
+          ? '圖片已上傳（約 ' + kb + ' KB），不佔本機容量'
+          : '圖片已加入（約 ' + kb + ' KB），將於 Sync 時上傳', 'success');
       } catch (err) {
         showToast('圖片插入失敗：' + (err.message || err), 'error');
       }
@@ -2606,7 +2656,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.4</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.5</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
