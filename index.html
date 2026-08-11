@@ -2097,9 +2097,17 @@
     mdInsertAt('[' + text + '](' + url + ')');
   };
 
-  // Image picker: resize on-device (max 1600px wide, JPEG 80%) then embed as
-  // base64 data URL inside the markdown. Keeps storage in the JSON sync pipeline
-  // (no separate binary upload step). Viewer can tap image → lightbox zoom.
+  // Image picker: resize on-device then hand the base64 data URL to __mdImage,
+  // which uploads it to images/content/ and keeps the ref. Viewer can tap the
+  // image → lightbox zoom.
+  //
+  // v3.8.6: 1600px/q0.8 → 1200px/q0.65. Most uploads here are photos of
+  // handwritten operative notes, which are the WORST case for JPEG — paper
+  // fibre texture is high-frequency noise the DCT cannot discard, so "white
+  // page with a little blue ink" encoded larger than an actual clinical photo
+  // (up to 668 KB each). Measured across the 15 images then in the repo,
+  // 1200px/q65 cut them 8118 KB → 2034 KB (75%) with no visible difference in
+  // the ink at reading size, and it makes the eager upload ~4x faster too.
   function resizeImageToDataUrl(file, maxWidth, quality) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -2261,7 +2269,7 @@
       }
       try {
         showToast('處理圖片中…');
-        const dataUrl = await resizeImageToDataUrl(file, 1600, 0.8);
+        const dataUrl = await resizeImageToDataUrl(file, 1200, 0.65);
         // Guard again after async resize (user may navigate during processing)
         if (capturedBuffer !== _editorImages) {
           showToast('編輯頁已切換，圖片未加入。', 'error', { duration: 4000 });
@@ -2269,11 +2277,13 @@
         }
         const kb = Math.round(dataUrl.length * 0.75 / 1024);
         const alt = (file.name || 'image').replace(/\.[^.]+$/, '').slice(0, 40);
-        // v3.8.5: upload NOW rather than at Sync time. A 1600px JPEG is ~0.5-1 MB
-        // as base64 and iOS caps localStorage around 5 MB, so 4-6 photos used to
-        // throw QuotaExceededError on Save ("localStorage 額度已滿"). Once the
-        // image has a ref, getEditorImages() persists ~40 bytes for it instead of
-        // the whole base64 string. Only attempted when a token is ALREADY stored
+        // v3.8.5: upload NOW rather than at Sync time. At the then-current
+        // 1600px/q0.8 a photo was ~0.5-1 MB as base64 and iOS caps localStorage
+        // around 5 MB, so 4-6 photos used to throw QuotaExceededError on Save
+        // ("localStorage 額度已滿"). Once the image has a ref, getEditorImages()
+        // persists ~40 bytes for it instead of the whole base64 string. v3.8.6
+        // additionally cut the encode to 1200px/q0.65 (~1/4 the bytes), so the
+        // upload itself is much faster. Only attempted when a token is ALREADY stored
         // (never prompts for a token mid-picker); any failure — offline, bad
         // token, API error — silently falls back to the previous base64-only
         // behaviour, and uploadPendingImages() retries it during Sync.
@@ -2656,7 +2666,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.5</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.6</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
