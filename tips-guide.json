@@ -137,11 +137,11 @@
         {
           "id": "tg_05_01",
           "title": "A. 膀胱鏡技巧",
-          "markdown": "#### 軟式膀胱鏡 `[軟膀技巧]`\n1. 以 **bladder neck and anterior wall** 作為基準，下彎找 UO\n2. Retroflex：**上下顛倒，左右沒差**（螢幕右邊就是病人左邊）\n3. 軟膀進去之後**要退回洞口**\n\n#### 硬式膀胱鏡\n- 看完 UO 就看 **anterior**\n- 水繼續開，病人說漲再關\n- **貼地看！**\n\n#### High Bladder Neck\n- 定義：是否能從 veru 直接看到 bladder\n\n#### 軟膀設備提醒\n- 光源線、光源機（**光源線要合！**）\n- 打給開刀房內勤 → 要布包/碎花\n- 急診的 M07\n- 不收費的 guidewire 病房就好\n- 走急診電梯",
+          "markdown": "#### 軟式膀胱鏡 `[軟膀技巧]`\n1. 以 **bladder neck and anterior wall** 作為基準，下彎找 UO\n2. Retroflex：**上下顛倒，左右沒差**（螢幕右邊就是病人左邊）\n3. 軟膀進去之後**要退回洞口**\n\n#### 硬式膀胱鏡\n- 看完 UO 就看 **anterior**\n- 水繼續開，病人說漲再關\n- **貼地看！**\n\n#### High Bladder Neck\n- 定義：是否能從 veru 直接看到 bladder\n- PUL 量：大約 **2.5–3.0 cm**（Veru 到 bladder neck） `[闕P]`\n\n#### 軟膀設備提醒\n- 光源線、光源機（**光源線要合！**）\n- 打給開刀房內勤 → 要布包/碎花\n- 急診的 M07\n- 不收費的 guidewire 病房就好\n- 走急診電梯",
           "images": [
             {
               "alt": "IMG_1182",
-              "caption": "軟膀方位",
+              "caption": "",
               "ref": "images/content/a9a19f83d62f58d3.jpg"
             }
           ]
@@ -161,8 +161,14 @@
         {
           "id": "tg_05_04",
           "title": "D. RIRS",
-          "markdown": "- **時間限制**：最好不要 over **1 hr**；endoscope surgery 最好不要 over **2 hr**\n- **水壓**：從 **150** start，不要 over **300** mmHg\n- PUL 量：大約 **2.5–3.0 cm**（Veru 到 bladder neck） `[闕P]`",
-          "images": []
+          "markdown": "- **時間限制**：最好不要 over **1 hr**；endoscope surgery 最好不要 over **2 hr**\n- **水壓**：從 **150** start，不要 over **300** mmHg",
+          "images": [
+            {
+              "alt": "IMG_1659",
+              "caption": "",
+              "ref": "images/content/51c14ed56a510b6f.jpg"
+            }
+          ]
         },
         {
           "id": "tg_05_05",
@@ -205,7 +211,13 @@
           "id": "tg_06_01",
           "title": "PCN（經皮腎造廔術）",
           "markdown": "#### 適應症\n1. Stone with fever\n2. Hydro with fever\n3. Hydro with AKI\n\n#### 禁忌症\n1. Anticoagulant and low platelet\n\n#### 操作要點\n- PCN 圈起來 25 cm，放硬管 30 cm\n- 推 guide wire：大約推 **5 次**，每次 **5 公分**（共 25 cm）\n- 更換 PCN 時：鐵條再入 **7–8 公分**時拔除，勾勾 **5–7 公分**\n\n#### 更換原則\n- Nephrostomy 的 PCN → **隨時都能換**\n- Bladder 的 → 至少等 **6 weeks** 再直接換（不然要加上 guidewire）",
-          "images": []
+          "images": [
+            {
+              "alt": "IMG_1656",
+              "caption": "",
+              "ref": "images/content/e99bea7d946a2390.jpg"
+            }
+          ]
         },
         {
           "id": "tg_06_02",
