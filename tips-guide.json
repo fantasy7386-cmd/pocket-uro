@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-08-05",
+  "updated": "2026-08-11",
   "total_sections": 13,
   "total_subsections": 69,
   "sections": [
@@ -82,7 +82,7 @@
         {
           "id": "tg_02_1779193656460",
           "title": "Bladder spasm",
-          "markdown": "[蒲] 給destruction (buscopan GI 副作用太多）\n\n[華哥] Buscopan + morphine",
+          "markdown": "[蒲] 給detrusitol (buscopan GI 副作用太多）\n\n[華哥] Buscopan + morphine\n\nDetrusitol 4級胺；Oxybu 3級胺比較容易進BBB",
           "images": []
         }
       ]
@@ -272,12 +272,22 @@
         {
           "id": "tg_08_01",
           "title": "包皮手術",
-          "markdown": "#### 雷射割包皮 `[小黃]`\n- **雷射不需要 mark**\n\n#### 包槍 `[小黃]`\n1. 小蚊鉗先夾 mark 在 **corona 前端 0.5–1 cm**\n2. **Dorsal slit** 11 & 1 點夾，中間剪開（腹側夾 5 and 7 點）\n3. 五天不碰水；傷口之後沒事就過關\n4. Marking 位置是 **bell 上緣**\n5. 打 local：**neutral position**，看著 bone 跟 root 打入\n6. Mosquito 夾**三點**（3/9/6）\n7. 一般雷射夾 **1/11/5/7** 四個點\n\n#### 割包（另一種）`[小黃]`\n1. Local **斜著** bone and root\n2. **拉著皮打麻藥**\n3. 上面一隻，下面一隻\n\n#### 割包 `[州哥]`\n- 要切的點用**小文鉗**抓在 edge\n- **往上提**，再切切削削",
+          "markdown": "#### 雷射割包皮 `[小黃]`\n- **雷射不需要 用筆 mark**\n- 小蚊鉗先夾 mark 在 **corona 前端 0.5–1 cm**\n- Dorsal slit** 11 & 1 點夾，中間剪開（腹側夾 5 and 7 點）\n\n#### 包槍 `[小黃]`\n1. 筆 mark 在 **corona 前端 0.5–1 cm**\n2. Dorsal slit 用電刀切\n3. 五天不碰水；傷口之後沒事就過關\n4. Marking 位置是 **bell 上緣**\n5. 打 local：**neutral position**，看著 bone 跟 root 打入\n6. Mosquito 夾**三點**（1/11/6）\n7. 一般雷射夾 **1/11/5/7** 四個點\n\n#### 割包（打麻藥）`[小黃]`\n1. Local **斜著** bone and root\n2. **拉著皮打麻藥**\n3. 上面一隻，下面一隻\n\n#### 割包 `[州哥]`\n- 要切的點用**小文鉗**抓在 edge\n- **往上提**，再切切削削",
           "images": [
             {
-              "alt": "IMG_0327",
-              "caption": "小黃雷射包皮示意圖",
-              "ref": "images/content/bd813d2b503beb2b.jpg"
+              "alt": "IMG_7948",
+              "caption": "小黃雷射夾法",
+              "ref": "images/content/dc7c2df21979f22b.jpg"
+            },
+            {
+              "alt": "IMG_1657",
+              "caption": "小黃雷射",
+              "ref": "images/content/40a12d9bda786bdd.jpg"
+            },
+            {
+              "alt": "IMG_1655",
+              "caption": "小黃包槍",
+              "ref": "images/content/3e8552459034659d.jpg"
             }
           ]
         },
