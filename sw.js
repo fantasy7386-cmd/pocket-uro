@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 'pocket-uro-v3.8.6';
+const CACHE_VERSION = 'pocket-uro-v3.8.7';
 // Immutable, content-addressed assets (textbook webp + images/content/*). Kept in a
 // SEPARATE, unversioned cache that SURVIVES version bumps — so updating the app no
 // longer wipes the user's downloaded-for-offline images. Before v3.8.2 everything

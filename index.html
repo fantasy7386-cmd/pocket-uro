@@ -1919,6 +1919,31 @@
   // eagerly (see __mdImage) — that keeps base64 out of localStorage entirely.
   // Returns null when the input isn't a base64 image data URL (caller decides
   // whether that's fatal); throws on an actual upload failure.
+  // v3.8.7: seed the service worker's persistent asset cache with the bytes we
+  // already hold in memory. GitHub Pages needs 1-3 min to rebuild after a commit
+  // (measured 2m19s on 2026-08-20: image committed 17:49:49, first served
+  // 17:52:08), and getEditorImages() drops an image's base64 the moment it has a
+  // ref -- so between Save and that rebuild the <img> pointed at a URL that still
+  // 404'd, showing a broken-image icon with no retry until a manual reload.
+  // The SW is cache-first for /images/content/, so priming the cache makes the
+  // render read these bytes and never touch the not-yet-deployed URL. Writing to
+  // ASSET_CACHE (not CACHE_VERSION) keeps it across app updates, and the filename
+  // is the content hash, so a cached entry can never be stale.
+  const ASSET_CACHE = 'pocket-uro-assets';
+  const IMG_MIME = { jpg: 'image/jpeg', png: 'image/png', gif: 'image/gif', webp: 'image/webp', svg: 'image/svg+xml' };
+  async function primeImageCache(ref, bytes, ext) {
+    if (typeof caches === 'undefined') return;
+    try {
+      const cache = await caches.open(ASSET_CACHE);
+      await cache.put(
+        new Request(new URL(ref, location.href).href),
+        new Response(bytes, { status: 200, headers: { 'Content-Type': IMG_MIME[ext] || 'application/octet-stream' } })
+      );
+    } catch (e) {
+      // Best-effort only (quota, private mode, no SW): the image still appears
+      // once Pages finishes rebuilding, and __imgRefFallback covers the gap.
+    }
+  }
   async function uploadImageData(dataUrl) {
     const p = dataUriParts(dataUrl);
     if (!p) return null;
@@ -1926,6 +1951,7 @@
     const hash = (await sha256HexBytes(bytes)).slice(0, 16);
     const ref = 'images/content/' + hash + '.' + p.ext;
     await ghPutFile(ref, p.b64, 'Add image ' + hash, { rawBase64: true });
+    await primeImageCache(ref, bytes, p.ext);
     return ref;
   }
   // Upload every {data, no ref} image to images/content/<hash>.<ext>, then set img.ref.
@@ -2184,6 +2210,27 @@
     return out;
   }
 
+  // v3.8.7: second line of defence for the Pages-rebuild window (see
+  // primeImageCache). If a content URL still 404s -- cache miss, a different
+  // device, SW not yet registered, cache evicted under quota -- retry once via
+  // raw.githubusercontent.com, which serves a blob the instant it is committed
+  // and needs no Pages build at all. The SW deliberately passes
+  // githubusercontent.com through, so this goes straight to the network.
+  // Guarded by a dataset flag so a genuinely missing file fails once, not in a loop.
+  window.__imgRefFallback = function(el) {
+    const ref = el.getAttribute('data-ref');
+    if (!ref || el.dataset.refFallback) return;
+    el.dataset.refFallback = '1';
+    el.src = 'https://raw.githubusercontent.com/' + GH_REPO + '/main/' + ref;
+  };
+  // Only images actually rendered FROM a ref need the fallback; a base64 `data`
+  // src cannot 404.
+  function imgRefFallbackAttrs(img) {
+    return (!img.data && img.ref)
+      ? ' data-ref="' + escAttr(img.ref) + '" onerror="window.__imgRefFallback(this)"'
+      : '';
+  }
+
   // Edit-session image buffer. Populated on edit screen open, consumed on save.
   let _editorImages = [];
   function setEditorImages(arr) {
@@ -2221,7 +2268,7 @@
     }
     host.innerHTML = _editorImages.map((img, i) => `
       <div class="edit-image-item">
-        <img src="${escAttr(img.data || img.ref)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data || img.ref)}"${imgRefFallbackAttrs(img)} alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         <input type="text" placeholder="caption (optional)" value="${escAttr(img.caption || '')}" oninput="window.__editImgCap(${i}, this.value)">
         <button class="btn btn-danger" onclick="window.__rmEditorImg(${i})" style="min-height:unset;padding:4px 8px;font-size:12px;width:100%;margin-top:4px">✕ Remove</button>
       </div>
@@ -2242,7 +2289,7 @@
     if (!images || !images.length) return '';
     return '<div class="attachments">' + images.map(img => `
       <figure class="attachment">
-        <img src="${escAttr(img.data || img.ref)}" alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
+        <img src="${escAttr(img.data || img.ref)}"${imgRefFallbackAttrs(img)} alt="${escAttr(img.alt || '')}" loading="lazy" decoding="async" onclick="window.__openLightbox(this.src, this.alt)">
         ${img.caption ? `<figcaption>${esc(img.caption)}</figcaption>` : ''}
       </figure>
     `).join('') + '</div>';
@@ -2666,7 +2713,7 @@
           <span class="brand-icon" aria-hidden="true"><img src="brand-icon.png?v=4" alt="" width="56" height="56"></span>
           <div class="brand-name">Pocket URO</div>
         </div>
-        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.6</div>
+        <div class="brand-tag" id="brand-tag">Urology reference · v3.8.7</div>
       </div>
       <input class="search-bar" id="home-search" placeholder="Search all modules…" autocomplete="off">
       <div class="home-grid">
