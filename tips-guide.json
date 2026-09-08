@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-08-20",
+  "updated": "2026-09-08",
   "total_sections": 13,
   "total_subsections": 70,
   "sections": [
@@ -179,7 +179,14 @@
         {
           "id": "tg_05_06",
           "title": "F. TURBT — Mono vs Bipolar 選擇",
-          "markdown": "沒有一定，隨心所選：\n1. **血尿多** → 選 mono\n2. **Lateral wall 怕 jerk** → 選 bipolar\n3. **Bipolar 可以切得更薄**；wall 薄怕破的也可以選 bipolar\n\n不同觀點：\n- `[小黃]`：TURBT **mono 可以切得更薄！！！** 他喜歡用 mono。而且 **dis water 會把 tumor cell 脹破**\n- `[育誠]`：覺得 **bipolar 利**，對於 re-TURBT 的好用，也可以用 bipolar **在 dis water 中止血**\n\n#### 電刀包分類\n- **A 包**：mono\n- **IN 包**：bipolar"
+          "markdown": "沒有一定，隨心所選：\n1. **血尿多** → 選 mono\n2. **Lateral wall 怕 jerk** → 選 bipolar\n3. **Bipolar 可以切得更薄**；wall 薄怕破的也可以選 bipolar\n\n不同觀點：\n- `[小黃]`：TURBT **mono 可以切得更薄！！！** 他喜歡用 mono。而且 **dis water 會把 tumor cell 脹破**\n- `[育誠]`：覺得 **bipolar 利**，對於 re-TURBT 的好用，也可以用 bipolar **在 dis water 中止血**\n\n#### 電刀包分類\n- **A 包**：mono\n- **IN 包**：bipolar",
+          "images": [
+            {
+              "alt": "IMG_1760",
+              "caption": "",
+              "ref": "images/content/45a00338d5230ab4.jpg"
+            }
+          ]
         },
         {
           "id": "tg_05_07",
