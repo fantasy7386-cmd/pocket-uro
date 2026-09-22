@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-09-08",
+  "updated": "2026-09-22",
   "total_sections": 13,
   "total_subsections": 70,
   "sections": [
@@ -351,7 +351,8 @@
         {
           "id": "tg_08_05",
           "title": "Trocar Cystostomy",
-          "markdown": "#### 州哥 Trocar Cystostomy `[州哥]`\n1. 不用 optic 看 → 膀胱有脹就能打\n2. 要打 local → **骨頭上一指幅垂直入針** → 反抽有就記深度\n3. 切開皮 → **kelly dissect**\n4. Local 再 test 一次\n5. Set 扎入 → **要確定套管也有跟著進到膀胱**（不然 Foley 會進不去、balloon 打不起來）\n6. 放入 Foley\n\n#### 小黃 Trocar Cystostomy `[小黃]`\n1. **Pubic bone 上一指服**，vertical incision\n2. **Mini-lapa 開**：打開 anterior sheath → 用手撥開 muscle → 就會直接 approach 到 bladder\n3. 膀胱**要先扁** → 摸到 bladder 後開始灌水 → 用手感受 **bladder dome**\n4. 用 **needle test** → 大約 **1–2 公分**\n5. 用鋼針打進 → 趕緊放 Foley（**最大只能放到 18 Fr**）\n6. 縫 **anterior sheath** and 關 skin"
+          "markdown": "#### 州哥 Trocar Cystostomy `[州哥]`\n1. 不用 optic 看 → 膀胱有脹就能打\n2. 要打 local → **骨頭上一指幅垂直入針** → 反抽有就記深度\n3. 切開皮 → **kelly dissect**\n4. Local 再 test 一次\n5. Set 扎入 → **要確定套管也有跟著進到膀胱**（不然 Foley 會進不去、balloon 打不起來）\n6. 放入 Foley\n\n#### 小黃 Trocar Cystostomy `[小黃]`\n1. **Pubic bone 上一指服**，vertical incision\n2. **Mini-lapa 開**：打開 anterior sheath → 用手撥開 muscle → 就會直接 approach 到 bladder\n3. 膀胱**要先扁** → 摸到 bladder 後開始灌水 → 用手感受 **bladder dome**\n4. 用 **needle test** → 大約 **1–2 公分**\n5. 用鋼針打進 → 趕緊放 Foley（**最大只能放到 18 Fr**）\n6. 縫 **anterior sheath** and 關 skin\n\n\n！一定要頭低腳高！切記！",
+          "images": []
         },
         {
           "id": "tg_08_06",
